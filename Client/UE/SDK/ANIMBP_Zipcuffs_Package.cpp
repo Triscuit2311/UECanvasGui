@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Zipcuffs_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92652);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92704);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Zipcuffs_C::ExecuteUbergraph_ANIMBP_Zipcuffs(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92651);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92703);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Zipcuffs_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92650);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92702);
 		return ptr;
 	}
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -23,6 +23,21 @@ namespace SDK
 	public:
 		bool                                                         bOverrideAspectRatioAxisConstraint;                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EAspectRatioAxisConstraint                                   AspectRatioAxisConstraint;                               // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct LevelSequence.LevelSequenceAnimSequenceLinkItem
+	 * Size -> 0x0030
+	 */
+	struct FLevelSequenceAnimSequenceLinkItem
+	{
+	public:
+		struct FGuid                                                 SkelTrackGuid;                                           // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSoftObjectPath                                       PathToAnimSequence;                                      // 0x0010(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bExportTransforms;                                       // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bExportCurves;                                           // 0x0029(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRecordInWorldSpace;                                     // 0x002A(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x5];                                   // 0x002B(0x0005) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -82,21 +97,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct LevelSequence.LevelSequenceAnimSequenceLinkItem
-	 * Size -> 0x0030
-	 */
-	struct FLevelSequenceAnimSequenceLinkItem
-	{
-	public:
-		struct FGuid                                                 SkelTrackGuid;                                           // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSoftObjectPath                                       PathToAnimSequence;                                      // 0x0010(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bExportTransforms;                                       // 0x0028(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bExportCurves;                                           // 0x0029(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRecordInWorldSpace;                                     // 0x002A(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x5];                                   // 0x002B(0x0005) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct LevelSequence.LevelSequenceSnapshotSettings
 	 * Size -> 0x000C
 	 */
@@ -132,16 +132,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct LevelSequence.BoundActorProxy
-	 * Size -> 0x0001
-	 */
-	struct FBoundActorProxy
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct LevelSequence.LevelSequenceLegacyObjectReference
 	 * Size -> 0x0020
 	 */
@@ -149,6 +139,16 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct LevelSequence.BoundActorProxy
+	 * Size -> 0x0001
+	 */
+	struct FBoundActorProxy
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
 	};
 
 }

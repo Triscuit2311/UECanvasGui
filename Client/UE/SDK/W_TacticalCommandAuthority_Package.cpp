@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_MoveOverThereText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89628);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89721);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_TacticalCommandAuthority_C::Get_Command_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89627);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89720);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_ReportEvidence_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89626);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89719);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_ReportIncapacitated_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89625);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89718);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_ReportedArrestedText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89624);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89717);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_ReportDeadText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89623);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89716);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_TacticalCommandAuthority_C::Get_TOC_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89622);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89715);
 		
 		struct
 		{
@@ -189,7 +189,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_TacticalCommandAuthority_C::Get_TAC_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89621);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89714);
 		
 		struct
 		{
@@ -213,7 +213,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_ComeHereText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89620);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89713);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_GetOnTheFloorText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89619);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89712);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_HandsUpText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89618);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89711);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_TacticalCommandAuthority_C::Get_DropTheGunText_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89617);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89710);
 		
 		struct
 		{
@@ -309,7 +309,7 @@ namespace SDK
 	 */
 	void UW_TacticalCommandAuthority_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89616);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89709);
 		
 		struct
 		{
@@ -332,7 +332,7 @@ namespace SDK
 	 */
 	void UW_TacticalCommandAuthority_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89708);
 		
 		struct
 		{
@@ -358,7 +358,7 @@ namespace SDK
 	 */
 	void UW_TacticalCommandAuthority_C::ExecuteUbergraph_W_TacticalCommandAuthority(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89614);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89707);
 		
 		struct
 		{
@@ -381,7 +381,7 @@ namespace SDK
 	 */
 	UClass* UW_TacticalCommandAuthority_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89613);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89706);
 		return ptr;
 	}
 

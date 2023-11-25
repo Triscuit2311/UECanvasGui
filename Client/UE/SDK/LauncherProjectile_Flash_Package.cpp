@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Flash_C::OnDetonate_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91673);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91660);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Flash_C::ExecuteUbergraph_LauncherProjectile_Flash(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91672);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91659);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* ALauncherProjectile_Flash_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91671);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91658);
 		return ptr;
 	}
 

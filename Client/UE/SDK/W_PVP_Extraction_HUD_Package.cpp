@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::UpdateMessage(ETeamType InstigatorTeam, ETeamType PlayerTeam)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27230);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43893);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::HideMessage()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27229);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43892);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::ShowMessage(bool bHasIntel)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27228);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43891);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27227);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43890);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43889);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::ResetTimer()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43888);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_PVP_Extraction_HUD_C::ExecuteUbergraph_W_PVP_Extraction_HUD(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43887);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	UClass* UW_PVP_Extraction_HUD_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27223);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43886);
 		return ptr;
 	}
 

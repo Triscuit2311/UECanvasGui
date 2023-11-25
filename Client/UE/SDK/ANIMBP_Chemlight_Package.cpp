@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Chemlight_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90648);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90736);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Chemlight_C::ExecuteUbergraph_ANIMBP_Chemlight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90735);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Chemlight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90646);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90734);
 		return ptr;
 	}
 

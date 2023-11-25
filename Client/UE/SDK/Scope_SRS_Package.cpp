@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_SRS_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54607);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37996);
 		return ptr;
 	}
 

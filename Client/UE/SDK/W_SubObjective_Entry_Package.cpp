@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_SubObjective_Entry_C::SetState()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28627);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30729);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_SubObjective_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28626);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30728);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_SubObjective_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28625);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30727);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_SubObjective_Entry_C::Update(bool Complete, bool Failed, const class FText& ObjectiveDescription)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28624);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30726);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_SubObjective_Entry_C::ExecuteUbergraph_W_SubObjective_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28623);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30725);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	UClass* UW_SubObjective_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28622);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30724);
 		return ptr;
 	}
 

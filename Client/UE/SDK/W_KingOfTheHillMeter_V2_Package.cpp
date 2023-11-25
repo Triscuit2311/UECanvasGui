@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_V2_C::SetPercent(float Percent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58336);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_V2_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59646);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58335);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_V2_C::ExecuteUbergraph_W_KingOfTheHillMeter_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26965);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43622);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_KingOfTheHillMeter_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26964);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43621);
 		return ptr;
 	}
 

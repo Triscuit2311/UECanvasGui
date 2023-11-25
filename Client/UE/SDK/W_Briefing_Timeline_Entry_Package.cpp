@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::Hovered(bool IsHovered)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43445);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31326);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43444);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31325);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43443);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31324);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::BndEvt__btn_TimelineEntry_K2Node_ComponentBoundEvent_0_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43442);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31323);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::BndEvt__btn_TimelineEntry_K2Node_ComponentBoundEvent_1_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43441);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31322);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::BndEvt__btn_TimelineEntry_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43440);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31321);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::ExecuteUbergraph_W_Briefing_Timeline_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43439);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31320);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::TimelineEventClicked__DelegateSignature(float EventAudioStart, float EventAudioEnd, float EventAudioDuration)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43438);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31319);
 		
 		struct
 		{
@@ -214,7 +214,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::TimelineEventUnhovered__DelegateSignature(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43437);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31318);
 		
 		struct
 		{
@@ -238,7 +238,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_Entry_C::TimelineEventHovered__DelegateSignature(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43436);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31317);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Timeline_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43435);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31316);
 		return ptr;
 	}
 

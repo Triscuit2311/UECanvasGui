@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* URifle_M14_ShortBarrel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54635);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38024);
 		return ptr;
 	}
 

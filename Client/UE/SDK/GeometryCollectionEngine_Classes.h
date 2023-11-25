@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,21 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class GeometryCollectionEngine.GeometryCollectionCache
-	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-	 */
-	class UGeometryCollectionCache : public UObject
-	{
-	public:
-		struct FRecordedTransformTrack                               RecordedData;                                            // 0x0028(0x0010) NativeAccessSpecifierPrivate
-		class UGeometryCollection*                                   SupportedCollection;                                     // 0x0038(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		struct FGuid                                                 CompatibleCollectionState;                               // 0x0040(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class GeometryCollectionEngine.GeometryCollectionComponent
 	 * Size -> 0x0488 (FullSize[0x0900] - InheritedSize[0x0478])
@@ -146,28 +131,28 @@ namespace SDK
 		float                                                        NormalScale;                                             // 0x0270(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        AxisScale;                                               // 0x0274(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        ArrowScale;                                              // 0x0278(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyIdColor;                                        // 0x027C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyIdColor;                                        // 0x027C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        RigidBodyTransformScale;                                 // 0x0280(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyCollisionColor;                                 // 0x0284(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyInertiaColor;                                   // 0x0288(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyVelocityColor;                                  // 0x028C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyForceColor;                                     // 0x0290(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   RigidBodyInfoColor;                                      // 0x0294(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   TransformIndexColor;                                     // 0x0298(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyCollisionColor;                                 // 0x0284(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyInertiaColor;                                   // 0x0288(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyVelocityColor;                                  // 0x028C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyForceColor;                                     // 0x0290(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   RigidBodyInfoColor;                                      // 0x0294(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   TransformIndexColor;                                     // 0x0298(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        TransformScale;                                          // 0x029C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   LevelColor;                                              // 0x02A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   ParentColor;                                             // 0x02A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   LevelColor;                                              // 0x02A0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   ParentColor;                                             // 0x02A4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        ConnectivityEdgeThickness;                               // 0x02A8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   GeometryIndexColor;                                      // 0x02AC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   GeometryIndexColor;                                      // 0x02AC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        GeometryTransformScale;                                  // 0x02B0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   BoundingBoxColor;                                        // 0x02B4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   FaceColor;                                               // 0x02B8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   FaceIndexColor;                                          // 0x02BC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   FaceNormalColor;                                         // 0x02C0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   SingleFaceColor;                                         // 0x02C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   VertexColor;                                             // 0x02C8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   VertexIndexColor;                                        // 0x02CC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   VertexNormalColor;                                       // 0x02D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   BoundingBoxColor;                                        // 0x02B4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   FaceColor;                                               // 0x02B8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   FaceIndexColor;                                          // 0x02BC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   FaceNormalColor;                                         // 0x02C0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   SingleFaceColor;                                         // 0x02C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   VertexColor;                                             // 0x02C8(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   VertexIndexColor;                                        // 0x02CC(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   VertexNormalColor;                                       // 0x02D0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x4];                                   // 0x02D4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UBillboardComponent*                                   SpriteComponent;                                         // 0x02D8(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0003[0x28];                                  // 0x02E0(0x0028) MISSED OFFSET (PADDING)
@@ -186,6 +171,25 @@ namespace SDK
 		class AGeometryCollectionDebugDrawActor*                     GeometryCollectionDebugDrawActor;                        // 0x00B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class AGeometryCollectionRenderLevelSetActor*                GeometryCollectionRenderLevelSetActor;                   // 0x00B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x00C0(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
+	 * Size -> 0x00A0 (FullSize[0x02C0] - InheritedSize[0x0220])
+	 */
+	class AGeometryCollectionRenderLevelSetActor : public AActor
+	{
+	public:
+		class UVolumeTexture*                                        TargetVolumeTexture;                                     // 0x0220(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMaterial*                                             RayMarchMaterial;                                        // 0x0228(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SurfaceTolerance;                                        // 0x0230(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Isovalue;                                                // 0x0234(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         Enabled;                                                 // 0x0238(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         RenderVolumeBoundingBox;                                 // 0x0239(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x86];                                  // 0x023A(0x0086) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -232,25 +236,6 @@ namespace SDK
 		struct FGuid                                                 StateGuid;                                               // 0x00E0(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		int32_t                                                      BoneSelectedMaterialIndex;                               // 0x00F0(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		unsigned char                                                UnknownData_0008[0x14];                                  // 0x00F4(0x0014) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
-	 * Size -> 0x00A0 (FullSize[0x02C0] - InheritedSize[0x0220])
-	 */
-	class AGeometryCollectionRenderLevelSetActor : public AActor
-	{
-	public:
-		class UVolumeTexture*                                        TargetVolumeTexture;                                     // 0x0220(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterial*                                             RayMarchMaterial;                                        // 0x0228(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SurfaceTolerance;                                        // 0x0230(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Isovalue;                                                // 0x0234(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         Enabled;                                                 // 0x0238(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         RenderVolumeBoundingBox;                                 // 0x0239(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x86];                                  // 0x023A(0x0086) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -385,6 +370,21 @@ namespace SDK
 	public:
 		void ReceivePhysicsCollision(const struct FChaosPhysicsCollisionInfo& CollisionInfo);
 		void ForceRecreatePhysicsState();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCollectionEngine.GeometryCollectionCache
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class UGeometryCollectionCache : public UObject
+	{
+	public:
+		struct FRecordedTransformTrack                               RecordedData;                                            // 0x0028(0x0010) NativeAccessSpecifierPrivate
+		class UGeometryCollection*                                   SupportedCollection;                                     // 0x0038(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		struct FGuid                                                 CompatibleCollectionState;                               // 0x0040(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+	public:
 		static UClass* StaticClass();
 	};
 

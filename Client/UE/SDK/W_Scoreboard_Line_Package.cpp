@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_Scoreboard_Line_C::Get_Status_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88497);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88413);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Status_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88496);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88412);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Incapacitations_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88495);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88411);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_TimesArrested_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88494);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88410);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_Scoreboard_Line_C::GetCheckmarkVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88493);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88409);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Name_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88492);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88408);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_TextBlock_0_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88491);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88407);
 		
 		struct
 		{
@@ -189,7 +189,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Score_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88490);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88406);
 		
 		struct
 		{
@@ -213,7 +213,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Damage_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88489);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88405);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::GetDeathsText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88488);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88404);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Arrests_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88487);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88403);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	class FText UW_Scoreboard_Line_C::Get_Kills_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88486);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88402);
 		
 		struct
 		{
@@ -309,7 +309,7 @@ namespace SDK
 	 */
 	struct FSlateBrush UW_Scoreboard_Line_C::GetBrush_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88485);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88401);
 		
 		struct
 		{
@@ -333,7 +333,7 @@ namespace SDK
 	 */
 	void UW_Scoreboard_Line_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88484);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88400);
 		
 		struct
 		{
@@ -355,7 +355,7 @@ namespace SDK
 	 */
 	void UW_Scoreboard_Line_C::ExecuteUbergraph_W_Scoreboard_Line(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88483);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88399);
 		
 		struct
 		{
@@ -379,7 +379,7 @@ namespace SDK
 	 */
 	UClass* UW_Scoreboard_Line_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88482);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88398);
 		return ptr;
 	}
 

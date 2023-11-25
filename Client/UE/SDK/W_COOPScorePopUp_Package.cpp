@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void UW_COOPScorePopUp_C::AddScorePopup(const class FText& InScoreText, int32_t InCalculatedScore, bool bGive)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29037);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49286);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	void UW_COOPScorePopUp_C::ExecuteUbergraph_W_COOPScorePopUp(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29036);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49285);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	UClass* UW_COOPScorePopUp_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29035);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49284);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UChallenge_ArrestSomeone_C::OnChallengeInit(class AReadyOrNotGameState* gs)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88534);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88530);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UChallenge_ArrestSomeone_C::OnCharacterArrested(class AReadyOrNotCharacter* ArrestedCharacter, class AReadyOrNotCharacter* Arrester)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88533);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88529);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UChallenge_ArrestSomeone_C::OnChallengeAchieved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88532);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88528);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UChallenge_ArrestSomeone_C::ExecuteUbergraph_Challenge_ArrestSomeone(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88531);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88527);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	UClass* UChallenge_ArrestSomeone_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88530);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88526);
 		return ptr;
 	}
 

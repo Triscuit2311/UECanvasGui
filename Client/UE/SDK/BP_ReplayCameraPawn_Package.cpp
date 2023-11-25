@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABP_ReplayCameraPawn_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24701);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30463);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ABP_ReplayCameraPawn_C::ExecuteUbergraph_BP_ReplayCameraPawn(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24700);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30462);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* ABP_ReplayCameraPawn_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24699);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30461);
 		return ptr;
 	}
 

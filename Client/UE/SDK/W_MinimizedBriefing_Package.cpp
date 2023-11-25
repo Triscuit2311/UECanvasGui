@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MinimizedBriefing_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54762);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31392);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_MinimizedBriefing_C::Initialize(const struct FMissionAudio& MissionAudio, TMap<float, struct FTimelineEvent> EventEntries)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54761);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31391);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_MinimizedBriefing_C::ExecuteUbergraph_W_MinimizedBriefing(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54760);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31390);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	UClass* UW_MinimizedBriefing_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54759);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31389);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_Makarov_C::DestroyPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86630);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86455);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ASecondary_Makarov_C::SpawnPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86629);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86454);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void ASecondary_Makarov_C::ExecuteUbergraph_Secondary_Makarov(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86628);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86453);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_Makarov_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86627);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86452);
 		return ptr;
 	}
 

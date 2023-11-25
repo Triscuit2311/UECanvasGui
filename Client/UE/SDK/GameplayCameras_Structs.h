@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -48,30 +48,6 @@ namespace SDK
 	// # Structs
 	// --------------------------------------------------
 	/**
-	 * ScriptStruct GameplayCameras.PerlinNoiseShaker
-	 * Size -> 0x0008
-	 */
-	struct FPerlinNoiseShaker
-	{
-	public:
-		float                                                        Amplitude;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct GameplayCameras.WaveOscillator
-	 * Size -> 0x000C
-	 */
-	struct FWaveOscillator
-	{
-	public:
-		float                                                        Amplitude;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInitialWaveOscillatorOffsetType                             InitialOffsetType;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct GameplayCameras.FOscillator
 	 * Size -> 0x000C
 	 */
@@ -107,6 +83,30 @@ namespace SDK
 		struct FFOscillator                                          X;                                                       // 0x0000(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
 		struct FFOscillator                                          Y;                                                       // 0x000C(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
 		struct FFOscillator                                          Z;                                                       // 0x0018(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct GameplayCameras.PerlinNoiseShaker
+	 * Size -> 0x0008
+	 */
+	struct FPerlinNoiseShaker
+	{
+	public:
+		float                                                        Amplitude;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct GameplayCameras.WaveOscillator
+	 * Size -> 0x000C
+	 */
+	struct FWaveOscillator
+	{
+	public:
+		float                                                        Amplitude;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInitialWaveOscillatorOffsetType                             InitialOffsetType;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
 	};
 
 }

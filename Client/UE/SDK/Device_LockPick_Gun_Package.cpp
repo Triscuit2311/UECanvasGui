@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* ADevice_LockPick_Gun_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92748);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92841);
 		return ptr;
 	}
 

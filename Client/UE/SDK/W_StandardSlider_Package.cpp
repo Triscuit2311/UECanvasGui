@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::SetDLSSQualityValue(int32_t NewQuality)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59790);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30575);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::AddIntegralValue(int32_t Value, int32_t* NewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59789);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30574);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::AddFloatValue(float Value, float* NewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30573);
 		
 		struct
 		{
@@ -103,7 +103,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::SetResolutionValue(const class FString& Resolution)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30572);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::SetQualityValue(int32_t NewQuality)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59786);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30571);
 		
 		struct
 		{
@@ -152,7 +152,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::SetIntegralValue(int32_t NewInteger, int32_t* NewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59785);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30570);
 		
 		struct
 		{
@@ -181,7 +181,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::SetFloatValue(float NewFloat, float* NewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59784);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30569);
 		
 		struct
 		{
@@ -208,7 +208,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::UpdateSliderText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59783);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30568);
 		
 		struct
 		{
@@ -230,7 +230,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59782);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30567);
 		
 		struct
 		{
@@ -253,7 +253,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59781);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30566);
 		
 		struct
 		{
@@ -275,7 +275,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::BndEvt__TheSlider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59780);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30565);
 		
 		struct
 		{
@@ -298,7 +298,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::BndEvt__TheSlider_K2Node_ComponentBoundEvent_1_OnMouseCaptureBeginEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59779);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30564);
 		
 		struct
 		{
@@ -319,7 +319,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::BndEvt__TheSlider_K2Node_ComponentBoundEvent_2_OnMouseCaptureEndEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59778);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30563);
 		
 		struct
 		{
@@ -341,7 +341,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::ExecuteUbergraph_W_StandardSlider(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59777);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30562);
 		
 		struct
 		{
@@ -366,7 +366,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::OnDlssValueChanged__DelegateSignature(int32_t NewIntegerValue, float NewSliderValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59776);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30561);
 		
 		struct
 		{
@@ -393,7 +393,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::OnResolutionValueChanged__DelegateSignature(const class FString& NewResolutionValue, float NewSliderValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59775);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30560);
 		
 		struct
 		{
@@ -420,7 +420,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::OnQualityValueChanged__DelegateSignature(int32_t NewQualityValue, float NewSliderValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59774);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30559);
 		
 		struct
 		{
@@ -447,7 +447,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::OnIntegralValueChanged__DelegateSignature(int32_t NewIntegerValue, float NewSliderValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28329);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30558);
 		
 		struct
 		{
@@ -474,7 +474,7 @@ namespace SDK
 	 */
 	void UW_StandardSlider_C::OnFloatValueChanged__DelegateSignature(float NewFloatValue, float NewSliderValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28328);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30557);
 		
 		struct
 		{
@@ -499,7 +499,7 @@ namespace SDK
 	 */
 	UClass* UW_StandardSlider_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28327);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30556);
 		return ptr;
 	}
 

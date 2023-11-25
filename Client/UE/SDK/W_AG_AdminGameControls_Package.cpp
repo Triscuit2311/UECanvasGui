@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_AG_AdminGameControls_C::HasPlayerInList(class APlayerState* PlayerState, bool* Exists)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90147);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void UW_AG_AdminGameControls_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90146);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_AG_AdminGameControls_C::UpdatePlayerList()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90145);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_AG_AdminGameControls_C::BndEvt__W_AG_AdminGameControls_W_Button_K2Node_ComponentBoundEvent_8_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90144);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_AG_AdminGameControls_C::ExecuteUbergraph_W_AG_AdminGameControls(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90143);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	UClass* UW_AG_AdminGameControls_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90049);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90142);
 		return ptr;
 	}
 

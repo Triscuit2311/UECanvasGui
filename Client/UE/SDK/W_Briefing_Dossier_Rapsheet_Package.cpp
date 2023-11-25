@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43378);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31261);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_C::Initialize(TArray<struct FCriminalRecord> CriminalRecord)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43377);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31260);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_C::ExecuteUbergraph_W_Briefing_Dossier_Rapsheet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43376);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31259);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Dossier_Rapsheet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43375);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31258);
 		return ptr;
 	}
 

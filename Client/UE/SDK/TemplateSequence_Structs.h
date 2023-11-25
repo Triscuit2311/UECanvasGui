@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -29,6 +29,18 @@ namespace SDK
 	// # Structs
 	// --------------------------------------------------
 	/**
+	 * ScriptStruct TemplateSequence.TemplateSequenceBindingOverrideData
+	 * Size -> 0x000C
+	 */
+	struct FTemplateSequenceBindingOverrideData
+	{
+	public:
+		TWeakObjectPtr<class UObject>                                Object;                                                  // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bOverridesDefault;                                       // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct TemplateSequence.TemplateSectionPropertyScale
 	 * Size -> 0x00C8
 	 */
@@ -39,18 +51,6 @@ namespace SDK
 		struct FMovieScenePropertyBinding                            PropertyBinding;                                         // 0x0010(0x0014) NoDestructor, NativeAccessSpecifierPublic
 		ETemplateSectionPropertyScaleType                            PropertyScaleType;                                       // 0x0024(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FMovieSceneFloatChannel                               FloatChannel;                                            // 0x0028(0x00A0) NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct TemplateSequence.TemplateSequenceBindingOverrideData
-	 * Size -> 0x000C
-	 */
-	struct FTemplateSequenceBindingOverrideData
-	{
-	public:
-		TWeakObjectPtr<class UObject>                                Object;                                                  // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bOverridesDefault;                                       // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
 	};
 
 }

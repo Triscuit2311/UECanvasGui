@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,29 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum InteractiveToolsFramework.EInputCaptureRequestType
+	 */
+	enum class EInputCaptureRequestType : uint8_t
+	{
+		Begin  = 0,
+		Ignore = 1,
+		MAX    = 2
+	};
+
+	/**
+	 * Enum InteractiveToolsFramework.EInputCaptureSide
+	 */
+	enum class EInputCaptureSide : uint8_t
+	{
+		None  = 0,
+		Left  = 1,
+		Right = 2,
+		Both  = 3,
+		Any   = 4,
+		MAX   = 5
+	};
+
 	/**
 	 * Enum InteractiveToolsFramework.EInputDevices
 	 */
@@ -86,15 +109,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum InteractiveToolsFramework.EStandardToolContextMaterials
-	 */
-	enum class EStandardToolContextMaterials : uint8_t
-	{
-		VertexColorMaterial = 0,
-		MAX                 = 1
-	};
-
-	/**
 	 * Enum InteractiveToolsFramework.EViewInteractionState
 	 */
 	enum class EViewInteractionState : uint8_t
@@ -103,19 +117,6 @@ namespace SDK
 		Hovered = 1,
 		Focused = 2,
 		MAX     = 3
-	};
-
-	/**
-	 * Enum InteractiveToolsFramework.ESceneSnapQueryTargetType
-	 */
-	enum class ESceneSnapQueryTargetType : uint8_t
-	{
-		None       = 0,
-		MeshVertex = 1,
-		MeshEdge   = 2,
-		Grid       = 3,
-		All        = 4,
-		MAX        = 5
 	};
 
 	/**
@@ -128,16 +129,6 @@ namespace SDK
 		Remove  = 2,
 		Clear   = 3,
 		MAX     = 4
-	};
-
-	/**
-	 * Enum InteractiveToolsFramework.ESceneSnapQueryType
-	 */
-	enum class ESceneSnapQueryType : uint8_t
-	{
-		Position = 0,
-		Rotation = 1,
-		MAX      = 2
 	};
 
 	/**
@@ -164,6 +155,38 @@ namespace SDK
 	};
 
 	/**
+	 * Enum InteractiveToolsFramework.EStandardToolContextMaterials
+	 */
+	enum class EStandardToolContextMaterials : uint8_t
+	{
+		VertexColorMaterial = 0,
+		MAX                 = 1
+	};
+
+	/**
+	 * Enum InteractiveToolsFramework.ESceneSnapQueryTargetType
+	 */
+	enum class ESceneSnapQueryTargetType : uint8_t
+	{
+		None       = 0,
+		MeshVertex = 1,
+		MeshEdge   = 2,
+		Grid       = 3,
+		All        = 4,
+		MAX        = 5
+	};
+
+	/**
+	 * Enum InteractiveToolsFramework.ESceneSnapQueryType
+	 */
+	enum class ESceneSnapQueryType : uint8_t
+	{
+		Position = 0,
+		Rotation = 1,
+		MAX      = 2
+	};
+
+	/**
 	 * Enum InteractiveToolsFramework.EInputCaptureState
 	 */
 	enum class EInputCaptureState : uint8_t
@@ -173,29 +196,6 @@ namespace SDK
 		End      = 2,
 		Ignore   = 3,
 		MAX      = 4
-	};
-
-	/**
-	 * Enum InteractiveToolsFramework.EInputCaptureRequestType
-	 */
-	enum class EInputCaptureRequestType : uint8_t
-	{
-		Begin  = 0,
-		Ignore = 1,
-		MAX    = 2
-	};
-
-	/**
-	 * Enum InteractiveToolsFramework.EInputCaptureSide
-	 */
-	enum class EInputCaptureSide : uint8_t
-	{
-		None  = 0,
-		Left  = 1,
-		Right = 2,
-		Both  = 3,
-		Any   = 4,
-		MAX   = 5
 	};
 
 	// --------------------------------------------------

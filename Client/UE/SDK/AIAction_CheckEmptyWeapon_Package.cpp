@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UAIAction_CheckEmptyWeapon_C::ShouldPerformAction()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95073);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94998);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UAIAction_CheckEmptyWeapon_C::BeginAction_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95072);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94997);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UAIAction_CheckEmptyWeapon_C::Tick_Blueprint(float DeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95071);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94996);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UAIAction_CheckEmptyWeapon_C::ExecuteUbergraph_AIAction_CheckEmptyWeapon(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85304);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84184);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	UClass* UAIAction_CheckEmptyWeapon_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85303);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84183);
 		return ptr;
 	}
 

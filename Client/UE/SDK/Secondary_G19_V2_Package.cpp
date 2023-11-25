@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_G19_V2_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45137);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33266);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ASecondary_G19_V2_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45136);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33265);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ASecondary_G19_V2_C::ExecuteUbergraph_Secondary_G19_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45135);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33264);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_G19_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(45134);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(33263);
 		return ptr;
 	}
 

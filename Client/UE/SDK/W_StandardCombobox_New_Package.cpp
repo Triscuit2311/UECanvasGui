@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	struct FLinearColor UW_StandardCombobox_New_C::Get_BackGroundImg_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32429);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51512);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::GetCurrentOptionAsString(class FString* OptionAsString)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32428);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51511);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::ClearOptions()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32427);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51510);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::DeleteOptionString(const class FString& StringValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28355);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38206);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::DeleteOptionIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28354);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38205);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::InsertOption(int32_t Index, const class FString& OptionString, const class FText& OptionName, const class FText& OptionDescription)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28353);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38204);
 		
 		struct
 		{
@@ -176,7 +176,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::AddOption(const class FString& OptionString, const class FText& OptionName, const class FText& OptionDescription)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28352);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38203);
 		
 		struct
 		{
@@ -204,7 +204,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::SetStringOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28351);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38202);
 		
 		struct
 		{
@@ -228,7 +228,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::SetOption(int32_t NewOption)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28350);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38201);
 		
 		struct
 		{
@@ -251,7 +251,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::UpdateOptionText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28349);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38200);
 		
 		struct
 		{
@@ -273,7 +273,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::ReceivedOptionClickedSignal(const class FString& OptionAsString)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28348);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38199);
 		
 		struct
 		{
@@ -296,7 +296,7 @@ namespace SDK
 	 */
 	class UWidget* UW_StandardCombobox_New_C::GetAnchorMenuContent()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28347);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38198);
 		
 		struct
 		{
@@ -320,7 +320,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::BndEvt__ComboboxButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28346);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38197);
 		
 		struct
 		{
@@ -341,7 +341,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::BndEvt__ComboboxButton_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28345);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38196);
 		
 		struct
 		{
@@ -362,7 +362,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::BndEvt__ComboboxButton_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28344);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38195);
 		
 		struct
 		{
@@ -383,7 +383,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::BndEvt__ComboboxButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28343);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38194);
 		
 		struct
 		{
@@ -404,7 +404,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::BndEvt__ComboboxButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28342);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38193);
 		
 		struct
 		{
@@ -426,7 +426,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28341);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38192);
 		
 		struct
 		{
@@ -449,7 +449,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28340);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38191);
 		
 		struct
 		{
@@ -470,7 +470,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::Reconstruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28339);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38190);
 		
 		struct
 		{
@@ -492,7 +492,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::ExecuteUbergraph_W_StandardCombobox_New(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28338);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38189);
 		
 		struct
 		{
@@ -515,7 +515,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28337);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38188);
 		
 		struct
 		{
@@ -536,7 +536,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28336);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38187);
 		
 		struct
 		{
@@ -557,7 +557,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28335);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38186);
 		
 		struct
 		{
@@ -578,7 +578,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28334);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38185);
 		
 		struct
 		{
@@ -600,7 +600,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnNewOptionSelected__DelegateSignature(int32_t NewOption)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28333);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38184);
 		
 		struct
 		{
@@ -623,7 +623,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnOptionMenuClosed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28332);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38183);
 		
 		struct
 		{
@@ -644,7 +644,7 @@ namespace SDK
 	 */
 	void UW_StandardCombobox_New_C::OnOptionMenuOpened__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28331);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38182);
 		
 		struct
 		{
@@ -665,7 +665,7 @@ namespace SDK
 	 */
 	UClass* UW_StandardCombobox_New_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28330);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38181);
 		return ptr;
 	}
 

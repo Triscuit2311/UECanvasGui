@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::UnhighlightBorder()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54264);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57822);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::HighlightBorder()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54263);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57821);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::UpdateAttachmentName()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54262);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57820);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::SimulateClicked()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54261);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57819);
 		
 		struct
 		{
@@ -104,7 +104,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::SimulateUnhover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54260);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57818);
 		
 		struct
 		{
@@ -125,7 +125,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::SimulateHover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54259);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57817);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::Deselect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54258);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57816);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::Select()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54257);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57815);
 		
 		struct
 		{
@@ -188,7 +188,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_AttachmentItem_C::Get_ItemClassName_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54256);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57814);
 		
 		struct
 		{
@@ -212,7 +212,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54255);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57813);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54254);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57812);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54253);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57811);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_4_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54252);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57810);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_5_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54251);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57809);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54250);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57808);
 		
 		struct
 		{
@@ -344,7 +344,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57807);
 		
 		struct
 		{
@@ -365,7 +365,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::OnGunCleaned()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57806);
 		
 		struct
 		{
@@ -387,7 +387,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::ExecuteUbergraph_W_AttachmentItem(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57805);
 		
 		struct
 		{
@@ -412,7 +412,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::OnButtonUnhovered__DelegateSignature(class UW_AttachmentItem_C* AttachmentItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54246);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57804);
 		
 		struct
 		{
@@ -436,7 +436,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::OnButtonHovered__DelegateSignature(class UW_AttachmentItem_C* AttachmentItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54245);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57803);
 		
 		struct
 		{
@@ -460,7 +460,7 @@ namespace SDK
 	 */
 	void UW_AttachmentItem_C::OnButtonClicked__DelegateSignature(class UW_AttachmentItem_C* AttachmentItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54244);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39359);
 		
 		struct
 		{
@@ -483,7 +483,7 @@ namespace SDK
 	 */
 	UClass* UW_AttachmentItem_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54243);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39358);
 		return ptr;
 	}
 

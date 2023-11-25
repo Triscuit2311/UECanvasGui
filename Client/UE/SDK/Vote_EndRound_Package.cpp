@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AVote_EndRound_C::OnReferendumPassed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88518);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88514);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void AVote_EndRound_C::ExecuteUbergraph_Vote_EndRound(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88517);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88513);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	UClass* AVote_EndRound_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88516);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88512);
 		return ptr;
 	}
 

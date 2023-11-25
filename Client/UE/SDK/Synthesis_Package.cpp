@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,208 +21,6 @@ namespace SDK
 	UClass* UModularSynthPresetBank::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(145);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UModularSynthPresetBank*                     InBank                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModularSynthPreset                         Preset                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      PresetName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthPresetBank* InBank, const struct FModularSynthPreset& Preset, const class FString& PresetName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12381);
-		
-		struct
-		{
-			class UModularSynthPresetBank*                     InBank;
-			struct FModularSynthPreset                         Preset;
-			class FString                                      PresetName;
-		} params;
-		params.InBank = InBank;
-		params.Preset = Preset;
-		params.PresetName = PresetName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModularSynthLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModularSynthLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(146);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectBitCrusherBaseSettings         Settings                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherBaseSettings& Settings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12446);
-		
-		struct
-		{
-			struct FSourceEffectBitCrusherBaseSettings         Settings;
-		} params;
-		params.Settings = Settings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetSampleRateModulator(class USoundModulatorBase* Modulator)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12445);
-		
-		struct
-		{
-			class USoundModulatorBase*                         Modulator;
-		} params;
-		params.Modulator = Modulator;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              SampleRate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12444);
-		
-		struct
-		{
-			float                                              SampleRate;
-		} params;
-		params.SampleRate = SampleRate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectBitCrusherSettings             ModulationSettings                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEffectBitCrusherSettings& ModulationSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12443);
-		
-		struct
-		{
-			struct FSourceEffectBitCrusherSettings             ModulationSettings;
-		} params;
-		params.ModulationSettings = ModulationSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetBits
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Bits                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetBits(float Bits)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12442);
-		
-		struct
-		{
-			float                                              Bits;
-		} params;
-		params.Bits = Bits;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectBitCrusherPreset::SetBitModulator(class USoundModulatorBase* Modulator)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12441);
-		
-		struct
-		{
-			class USoundModulatorBase*                         Modulator;
-		} params;
-		params.Modulator = Modulator;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectBitCrusherPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectBitCrusherPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(150);
 		return ptr;
 	}
 
@@ -1733,21 +1531,27 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
+	 * 		Name   -> Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSourceEffectDynamicsProcessorSettings      InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		class UModularSynthPresetBank*                     InBank                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModularSynthPreset                         Preset                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      PresetName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffectDynamicsProcessorSettings& InSettings)
+	void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthPresetBank* InBank, const struct FModularSynthPreset& Preset, const class FString& PresetName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12461);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12381);
 		
 		struct
 		{
-			struct FSourceEffectDynamicsProcessorSettings      InSettings;
+			class UModularSynthPresetBank*                     InBank;
+			struct FModularSynthPreset                         Preset;
+			class FString                                      PresetName;
 		} params;
-		params.InSettings = InSettings;
+		params.InBank = InBank;
+		params.Preset = Preset;
+		params.PresetName = PresetName;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -1757,14 +1561,172 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectDynamicsProcessorPreset.StaticClass
+	 * 		Name   -> PredefinedFunction UModularSynthLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USourceEffectDynamicsProcessorPreset::StaticClass()
+	UClass* UModularSynthLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(152);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(146);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectBitCrusherBaseSettings         Settings                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCrusherBaseSettings& Settings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12446);
+		
+		struct
+		{
+			struct FSourceEffectBitCrusherBaseSettings         Settings;
+		} params;
+		params.Settings = Settings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetSampleRateModulator(class USoundModulatorBase* Modulator)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12445);
+		
+		struct
+		{
+			class USoundModulatorBase*                         Modulator;
+		} params;
+		params.Modulator = Modulator;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              SampleRate                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12444);
+		
+		struct
+		{
+			float                                              SampleRate;
+		} params;
+		params.SampleRate = SampleRate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectBitCrusherSettings             ModulationSettings                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEffectBitCrusherSettings& ModulationSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12443);
+		
+		struct
+		{
+			struct FSourceEffectBitCrusherSettings             ModulationSettings;
+		} params;
+		params.ModulationSettings = ModulationSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetBits
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Bits                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetBits(float Bits)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12442);
+		
+		struct
+		{
+			float                                              Bits;
+		} params;
+		params.Bits = Bits;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class USoundModulatorBase*                         Modulator                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectBitCrusherPreset::SetBitModulator(class USoundModulatorBase* Modulator)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12441);
+		
+		struct
+		{
+			class USoundModulatorBase*                         Modulator;
+		} params;
+		params.Modulator = Modulator;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectBitCrusherPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectBitCrusherPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(150);
 		return ptr;
 	}
 
@@ -2121,6 +2083,120 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectEQPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectEQSettings                     InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectEQPreset::SetSettings(const struct FSourceEffectEQSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12465);
+		
+		struct
+		{
+			struct FSourceEffectEQSettings                     InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectEQPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectEQPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(155);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectDynamicsProcessorSettings      InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffectDynamicsProcessorSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12461);
+		
+		struct
+		{
+			struct FSourceEffectDynamicsProcessorSettings      InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectDynamicsProcessorPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectDynamicsProcessorPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(152);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectFilterPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectFilterPreset::SetSettings(const struct FSourceEffectFilterSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12466);
+		
+		struct
+		{
+			struct FSourceEffectFilterSettings                 InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectFilterPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectFilterPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(156);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2221,19 +2297,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectFilterPreset.SetSettings
+	 * 		Name   -> Function Synthesis.SourceEffectRingModulationPreset.SetSettings
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSourceEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FSourceEffectRingModulationSettings         InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USourceEffectFilterPreset::SetSettings(const struct FSourceEffectFilterSettings& InSettings)
+	void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRingModulationSettings& InSettings)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12466);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12471);
 		
 		struct
 		{
-			struct FSourceEffectFilterSettings                 InSettings;
+			struct FSourceEffectRingModulationSettings         InSettings;
 		} params;
 		params.InSettings = InSettings;
 		
@@ -2245,52 +2321,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectFilterPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectRingModulationPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USourceEffectFilterPreset::StaticClass()
+	UClass* USourceEffectRingModulationPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(156);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectEQPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectEQSettings                     InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectEQPreset::SetSettings(const struct FSourceEffectEQSettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12465);
-		
-		struct
-		{
-			struct FSourceEffectEQSettings                     InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectEQPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectEQPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(155);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(161);
 		return ptr;
 	}
 
@@ -2335,44 +2373,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectPhaserPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectPhaserSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectPhaserPreset::SetSettings(const struct FSourceEffectPhaserSettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12470);
-		
-		struct
-		{
-			struct FSourceEffectPhaserSettings                 InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectPhaserPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectPhaserPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(160);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2405,158 +2405,6 @@ namespace SDK
 	UClass* USourceEffectMidSideSpreaderPreset::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(158);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectRingModulationPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectRingModulationSettings         InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRingModulationSettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12471);
-		
-		struct
-		{
-			struct FSourceEffectRingModulationSettings         InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectRingModulationPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectRingModulationPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(161);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectSimpleDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectSimpleDelayPreset::SetSettings(const struct FSourceEffectSimpleDelaySettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12472);
-		
-		struct
-		{
-			struct FSourceEffectSimpleDelaySettings            InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectSimpleDelayPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectSimpleDelayPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(162);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectStereoDelayPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStereoDelaySettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12473);
-		
-		struct
-		{
-			struct FSourceEffectStereoDelaySettings            InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectStereoDelayPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectStereoDelayPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(163);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SourceEffectWaveShaperPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSourceEffectWaveShaperSettings             InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USourceEffectWaveShaperPreset::SetSettings(const struct FSourceEffectWaveShaperSettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12474);
-		
-		struct
-		{
-			struct FSourceEffectWaveShaperSettings             InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USourceEffectWaveShaperPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USourceEffectWaveShaperPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(164);
 		return ptr;
 	}
 
@@ -2601,14 +2449,76 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAudioImpulseResponse.StaticClass
+	 * 		Name   -> Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectSimpleDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectSimpleDelayPreset::SetSettings(const struct FSourceEffectSimpleDelaySettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12472);
+		
+		struct
+		{
+			struct FSourceEffectSimpleDelaySettings            InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectSimpleDelayPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UAudioImpulseResponse::StaticClass()
+	UClass* USourceEffectSimpleDelayPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(165);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(162);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectPhaserPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectPhaserSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectPhaserPreset::SetSettings(const struct FSourceEffectPhaserSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12470);
+		
+		struct
+		{
+			struct FSourceEffectPhaserSettings                 InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectPhaserPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectPhaserPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(160);
 		return ptr;
 	}
 
@@ -2677,19 +2587,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings
+	 * 		Name   -> Function Synthesis.SourceEffectWaveShaperPreset.SetSettings
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSubmixEffectFlexiverbSettings              InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FSourceEffectWaveShaperSettings             InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexiverbSettings& InSettings)
+	void USourceEffectWaveShaperPreset::SetSettings(const struct FSourceEffectWaveShaperSettings& InSettings)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12488);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12474);
 		
 		struct
 		{
-			struct FSubmixEffectFlexiverbSettings              InSettings;
+			struct FSourceEffectWaveShaperSettings             InSettings;
 		} params;
 		params.InSettings = InSettings;
 		
@@ -2701,52 +2611,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USubmixEffectFlexiverbPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USourceEffectWaveShaperPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USubmixEffectFlexiverbPreset::StaticClass()
+	UClass* USourceEffectWaveShaperPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(170);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSubmixEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12490);
-		
-		struct
-		{
-			struct FSubmixEffectStereoDelaySettings            InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USubmixEffectStereoDelayPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USubmixEffectStereoDelayPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(172);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(164);
 		return ptr;
 	}
 
@@ -2857,6 +2729,278 @@ namespace SDK
 	UClass* USubmixEffectDelayPreset::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(168);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAudioImpulseResponse.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAudioImpulseResponse::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(165);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSubmixEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12490);
+		
+		struct
+		{
+			struct FSubmixEffectStereoDelaySettings            InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USubmixEffectStereoDelayPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USubmixEffectStereoDelayPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(172);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSubmixEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetSettings(const struct FSubmixEffectFilterSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12487);
+		
+		struct
+		{
+			struct FSubmixEffectFilterSettings                 InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterType
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESubmixFilterType                                  InType                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterType(ESubmixFilterType InType)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12486);
+		
+		struct
+		{
+			ESubmixFilterType                                  InType;
+		} params;
+		params.InType = InType;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterQMod(float InQ)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12485);
+		
+		struct
+		{
+			float                                              InQ;
+		} params;
+		params.InQ = InQ;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterQ
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterQ(float InQ)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12484);
+		
+		struct
+		{
+			float                                              InQ;
+		} params;
+		params.InQ = InQ;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(float InFrequency)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12483);
+		
+		struct
+		{
+			float                                              InFrequency;
+		} params;
+		params.InFrequency = InFrequency;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12482);
+		
+		struct
+		{
+			float                                              InFrequency;
+		} params;
+		params.InFrequency = InFrequency;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESubmixFilterAlgorithm                             InAlgorithm                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12481);
+		
+		struct
+		{
+			ESubmixFilterAlgorithm                             InAlgorithm;
+		} params;
+		params.InAlgorithm = InAlgorithm;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USubmixEffectFilterPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USubmixEffectFilterPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(169);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SourceEffectStereoDelayPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSourceEffectStereoDelaySettings            InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStereoDelaySettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12473);
+		
+		struct
+		{
+			struct FSourceEffectStereoDelaySettings            InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USourceEffectStereoDelayPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USourceEffectStereoDelayPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(163);
 		return ptr;
 	}
 
@@ -3081,19 +3225,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetSettings
+	 * 		Name   -> Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSubmixEffectFilterSettings                 InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FSubmixEffectFlexiverbSettings              InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USubmixEffectFilterPreset::SetSettings(const struct FSubmixEffectFilterSettings& InSettings)
+	void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexiverbSettings& InSettings)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12487);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12488);
 		
 		struct
 		{
-			struct FSubmixEffectFilterSettings                 InSettings;
+			struct FSubmixEffectFlexiverbSettings              InSettings;
 		} params;
 		params.InSettings = InSettings;
 		
@@ -3105,354 +3249,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterType
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESubmixFilterType                                  InType                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterType(ESubmixFilterType InType)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12486);
-		
-		struct
-		{
-			ESubmixFilterType                                  InType;
-		} params;
-		params.InType = InType;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterQMod(float InQ)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12485);
-		
-		struct
-		{
-			float                                              InQ;
-		} params;
-		params.InQ = InQ;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterQ
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InQ                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterQ(float InQ)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12484);
-		
-		struct
-		{
-			float                                              InQ;
-		} params;
-		params.InQ = InQ;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(float InFrequency)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12483);
-		
-		struct
-		{
-			float                                              InFrequency;
-		} params;
-		params.InFrequency = InFrequency;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12482);
-		
-		struct
-		{
-			float                                              InFrequency;
-		} params;
-		params.InFrequency = InFrequency;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESubmixFilterAlgorithm                             InAlgorithm                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12481);
-		
-		struct
-		{
-			ESubmixFilterAlgorithm                             InAlgorithm;
-		} params;
-		params.InAlgorithm = InAlgorithm;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USubmixEffectFilterPreset.StaticClass
+	 * 		Name   -> PredefinedFunction USubmixEffectFlexiverbPreset.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USubmixEffectFilterPreset::StaticClass()
+	UClass* USubmixEffectFlexiverbPreset::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(169);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSubmixEffectMultibandCompressorSettings    InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEffectMultibandCompressorSettings& InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12489);
-		
-		struct
-		{
-			struct FSubmixEffectMultibandCompressorSettings    InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USubmixEffectMultibandCompressorPreset.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USubmixEffectMultibandCompressorPreset::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(171);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynth2DSlider::SetValue(const struct FVector2D& InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12504);
-		
-		struct
-		{
-			struct FVector2D                      InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.SetStepSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynth2DSlider::SetStepSize(float InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12503);
-		
-		struct
-		{
-			float                                              InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.SetSliderHandleColor
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynth2DSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12502);
-		
-		struct
-		{
-			struct FLinearColor                                InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.SetLocked
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynth2DSlider::SetLocked(bool InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12501);
-		
-		struct
-		{
-			bool                                               InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.SetIndentHandle
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynth2DSlider::SetIndentHandle(bool InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12500);
-		
-		struct
-		{
-			bool                                               InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.Synth2DSlider.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D USynth2DSlider::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12499);
-		
-		struct
-		{
-			struct FVector2D                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USynth2DSlider.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USynth2DSlider::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(177);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(170);
 		return ptr;
 	}
 
@@ -3974,6 +3778,547 @@ namespace SDK
 	UClass* UGranularSynth::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(178);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSubmixEffectMultibandCompressorSettings    InSettings                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEffectMultibandCompressorSettings& InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12489);
+		
+		struct
+		{
+			struct FSubmixEffectMultibandCompressorSettings    InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USubmixEffectMultibandCompressorPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USubmixEffectMultibandCompressorPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(171);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector2D                      InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynth2DSlider::SetValue(const struct FVector2D& InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12504);
+		
+		struct
+		{
+			struct FVector2D                      InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.SetStepSize
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynth2DSlider::SetStepSize(float InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12503);
+		
+		struct
+		{
+			float                                              InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.SetSliderHandleColor
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FLinearColor                                InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynth2DSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12502);
+		
+		struct
+		{
+			struct FLinearColor                                InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.SetLocked
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynth2DSlider::SetLocked(bool InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12501);
+		
+		struct
+		{
+			bool                                               InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.SetIndentHandle
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynth2DSlider::SetIndentHandle(bool InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12500);
+		
+		struct
+		{
+			bool                                               InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.Synth2DSlider.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D USynth2DSlider::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12499);
+		
+		struct
+		{
+			struct FVector2D                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USynth2DSlider.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USynth2DSlider::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(177);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMonoWaveTableSynthPreset.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMonoWaveTableSynthPreset::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(179);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetSoundWave
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class USoundWave*                                  InSoundWave                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthSamplePlayer::SetSoundWave(class USoundWave* InSoundWave)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12579);
+		
+		struct
+		{
+			class USoundWave*                                  InSoundWave;
+		} params;
+		params.InSoundWave = InSoundWave;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InScrubTimeWidthSec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthSamplePlayer::SetScrubTimeWidth(float InScrubTimeWidthSec)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12578);
+		
+		struct
+		{
+			float                                              InScrubTimeWidthSec;
+		} params;
+		params.InScrubTimeWidthSec = InScrubTimeWidthSec;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetScrubMode
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bScrubMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthSamplePlayer::SetScrubMode(bool bScrubMode)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12577);
+		
+		struct
+		{
+			bool                                               bScrubMode;
+		} params;
+		params.bScrubMode = bScrubMode;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetPitch
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InPitch                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              TimeSec                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthSamplePlayer::SetPitch(float InPitch, float TimeSec)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12576);
+		
+		struct
+		{
+			float                                              InPitch;
+			float                                              TimeSec;
+		} params;
+		params.InPitch = InPitch;
+		params.TimeSec = TimeSec;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SeekToTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              TimeSec                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESamplePlayerSeekType                              SeekType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bWrap                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthSamplePlayer::SeekToTime(float TimeSec, ESamplePlayerSeekType SeekType, bool bWrap)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12575);
+		
+		struct
+		{
+			float                                              TimeSec;
+			ESamplePlayerSeekType                              SeekType;
+			bool                                               bWrap;
+		} params;
+		params.TimeSec = TimeSec;
+		params.SeekType = SeekType;
+		params.bWrap = bWrap;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.IsLoaded
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool USynthSamplePlayer::IsLoaded()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12574);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetSampleDuration
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USynthSamplePlayer::GetSampleDuration()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12573);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USynthSamplePlayer::GetCurrentPlaybackProgressTime()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12572);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USynthSamplePlayer::GetCurrentPlaybackProgressPercent()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12571);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USynthSamplePlayer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USynthSamplePlayer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(182);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InLinearValue                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InDomainMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InDomainMax                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(float InLinearValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12581);
+		
+		struct
+		{
+			float                                              InLinearValue;
+			float                                              InDomainMin;
+			float                                              InDomainMax;
+			float                                              InRangeMin;
+			float                                              InRangeMax;
+			float                                              ReturnValue;
+		} params;
+		params.InLinearValue = InLinearValue;
+		params.InDomainMin = InDomainMin;
+		params.InDomainMax = InDomainMax;
+		params.InRangeMin = InRangeMin;
+		params.InRangeMax = InRangeMax;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InLogFrequencyValue                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InDomainMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InDomainMax                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLinearFrequency(float InLogFrequencyValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12580);
+		
+		struct
+		{
+			float                                              InLogFrequencyValue;
+			float                                              InDomainMin;
+			float                                              InDomainMax;
+			float                                              InRangeMin;
+			float                                              InRangeMax;
+			float                                              ReturnValue;
+		} params;
+		params.InLogFrequencyValue = InLogFrequencyValue;
+		params.InDomainMin = InDomainMin;
+		params.InDomainMax = InDomainMax;
+		params.InRangeMin = InRangeMin;
+		params.InRangeMax = InRangeMax;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USynthesisUtilitiesBlueprintFunctionLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USynthesisUtilitiesBlueprintFunctionLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(183);
 		return ptr;
 	}
 
@@ -5079,399 +5424,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetSoundWave
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class USoundWave*                                  InSoundWave                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthSamplePlayer::SetSoundWave(class USoundWave* InSoundWave)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12579);
-		
-		struct
-		{
-			class USoundWave*                                  InSoundWave;
-		} params;
-		params.InSoundWave = InSoundWave;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InScrubTimeWidthSec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthSamplePlayer::SetScrubTimeWidth(float InScrubTimeWidthSec)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12578);
-		
-		struct
-		{
-			float                                              InScrubTimeWidthSec;
-		} params;
-		params.InScrubTimeWidthSec = InScrubTimeWidthSec;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetScrubMode
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bScrubMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthSamplePlayer::SetScrubMode(bool bScrubMode)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12577);
-		
-		struct
-		{
-			bool                                               bScrubMode;
-		} params;
-		params.bScrubMode = bScrubMode;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SetPitch
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InPitch                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              TimeSec                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthSamplePlayer::SetPitch(float InPitch, float TimeSec)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12576);
-		
-		struct
-		{
-			float                                              InPitch;
-			float                                              TimeSec;
-		} params;
-		params.InPitch = InPitch;
-		params.TimeSec = TimeSec;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.SeekToTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              TimeSec                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESamplePlayerSeekType                              SeekType                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bWrap                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthSamplePlayer::SeekToTime(float TimeSec, ESamplePlayerSeekType SeekType, bool bWrap)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12575);
-		
-		struct
-		{
-			float                                              TimeSec;
-			ESamplePlayerSeekType                              SeekType;
-			bool                                               bWrap;
-		} params;
-		params.TimeSec = TimeSec;
-		params.SeekType = SeekType;
-		params.bWrap = bWrap;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.IsLoaded
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool USynthSamplePlayer::IsLoaded()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12574);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetSampleDuration
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USynthSamplePlayer::GetSampleDuration()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12573);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USynthSamplePlayer::GetCurrentPlaybackProgressTime()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12572);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USynthSamplePlayer::GetCurrentPlaybackProgressPercent()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12571);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USynthSamplePlayer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USynthSamplePlayer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(182);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthComponentToneGenerator.SetVolume
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InVolume                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthComponentToneGenerator::SetVolume(float InVolume)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12570);
-		
-		struct
-		{
-			float                                              InVolume;
-		} params;
-		params.InVolume = InVolume;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthComponentToneGenerator.SetFrequency
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USynthComponentToneGenerator::SetFrequency(float InFrequency)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12569);
-		
-		struct
-		{
-			float                                              InFrequency;
-		} params;
-		params.InFrequency = InFrequency;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USynthComponentToneGenerator.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USynthComponentToneGenerator::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(181);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InLinearValue                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InDomainMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InDomainMax                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(float InLinearValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12581);
-		
-		struct
-		{
-			float                                              InLinearValue;
-			float                                              InDomainMin;
-			float                                              InDomainMax;
-			float                                              InRangeMin;
-			float                                              InRangeMax;
-			float                                              ReturnValue;
-		} params;
-		params.InLinearValue = InLinearValue;
-		params.InDomainMin = InDomainMin;
-		params.InDomainMax = InDomainMax;
-		params.InRangeMin = InRangeMin;
-		params.InRangeMax = InRangeMax;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InLogFrequencyValue                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InDomainMin                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InDomainMax                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InRangeMin                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InRangeMax                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USynthesisUtilitiesBlueprintFunctionLibrary::GetLinearFrequency(float InLogFrequencyValue, float InDomainMin, float InDomainMax, float InRangeMin, float InRangeMax)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12580);
-		
-		struct
-		{
-			float                                              InLogFrequencyValue;
-			float                                              InDomainMin;
-			float                                              InDomainMax;
-			float                                              InRangeMin;
-			float                                              InRangeMax;
-			float                                              ReturnValue;
-		} params;
-		params.InLogFrequencyValue = InLogFrequencyValue;
-		params.InDomainMin = InDomainMin;
-		params.InDomainMax = InDomainMax;
-		params.InRangeMin = InRangeMin;
-		params.InRangeMax = InRangeMax;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USynthesisUtilitiesBlueprintFunctionLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USynthesisUtilitiesBlueprintFunctionLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(183);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Synthesis.SynthKnob.SetValue
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -5582,14 +5534,62 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMonoWaveTableSynthPreset.StaticClass
+	 * 		Name   -> Function Synthesis.SynthComponentToneGenerator.SetVolume
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InVolume                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthComponentToneGenerator::SetVolume(float InVolume)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12570);
+		
+		struct
+		{
+			float                                              InVolume;
+		} params;
+		params.InVolume = InVolume;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Synthesis.SynthComponentToneGenerator.SetFrequency
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InFrequency                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USynthComponentToneGenerator::SetFrequency(float InFrequency)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12569);
+		
+		struct
+		{
+			float                                              InFrequency;
+		} params;
+		params.InFrequency = InFrequency;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USynthComponentToneGenerator.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMonoWaveTableSynthPreset::StaticClass()
+	UClass* USynthComponentToneGenerator::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(179);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(181);
 		return ptr;
 	}
 

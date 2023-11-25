@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "engine_hooks.hpp"
+#include "client_lib.hpp"
+#include "engine_renderer.hpp"
 
 namespace engine_hooks
 {
@@ -85,17 +87,120 @@ namespace engine_hooks
 		return pv;
 
 	}
-
 	void PostRenderHook::pre_func(SDK::UGameViewportClient* viewport, SDK::UCanvas* canvas)
 	{
 		if (!canvas) {
 			return;
 		}
 
-		auto cw = float(canvas->SizeX / 2);
-		auto ch = float(canvas->SizeY / 2);
-		canvas->K2_DrawLine({ cw - 2,ch }, { cw + 2,ch }, 1, { 0,1,1,255 });
-		canvas->K2_DrawLine({ cw,ch - 2 }, { cw,ch + 2 }, 1, { 0,1,1,255 });
+		// auto cw = float(canvas->SizeX / 2);
+		// auto ch = float(canvas->SizeY / 2);
+		// canvas->K2_DrawLine({ cw - 2,ch }, { cw + 2,ch }, 1, { 0,1,1,255 });
+		// canvas->K2_DrawLine({ cw,ch - 2 }, { cw,ch + 2 }, 1, { 0,1,1,255 });
+		//
+		//
+		SDK::FVector2D pos_a{ 300.0f, 300.0f }; // X,Y
+		SDK::FVector2D pos_b{ 200.0f, 200.0f }; // X,Y
+		
+		SDK::FVector2D size_a{ 100.0f, 100.0f }; // X,Y
+
+		SDK::FLinearColor color_1{ 1.0f, 0.2f, 0.2f, 1.0f }; // R,G,B,A 0.0f-1.0f
+		SDK::FLinearColor color_2{ 0.2f, 1.0f, 0.2f, 1.0f }; // R,G,B,A 0.0f-1.0f
+		float thickness = 5.0f;
+		
+		//canvas->K2_DrawBox(pos_a, size_a, thickness, color_1);
+		//canvas->K2_DrawLine(pos_a, pos_b, thickness, color_1);
+		// for (auto kvp : engine_renderer::fonts_map)
+		// {
+		// 	// std::wstring ws(kvp.first.size(), L' '); // Overestimate number of code points.
+		// 	// ws.resize(std::mbstowcs(&ws[0], kvp.first.c_str(), kvp.first.size())); // Shrink to fit.
+		//
+		// 	canvas->K2_DrawText(kvp.second, ws.c_str() , pos_a, { 1,1 }, color_1, 1, color_2, { 5,5 }, false, false, false, color_2);
+		// 	//pos_a.Y += 30;
+		// }
+
+
+
+		if(client_lib::modules::renderer->default_font != nullptr)
+		{
+			canvas->K2_DrawText(
+				client_lib::modules::renderer->default_font,	//font
+				L"Bordered",									// wstr/ FString
+				pos_a,		// pos
+				{ 1.0f,1.0f },	// scale
+				client_lib::modules::renderer->col.indigo,		// col
+				1,			// kerning
+				client_lib::modules::renderer->col.none,		// shadow col
+				{ 0,0 },	// shadow offset
+				false,		// center on X axis
+				false,		// center on Y axis
+				true, //true,		// outlined
+				client_lib::modules::renderer->col.black			// outline col
+			);
+			pos_a.Y += 30;
+			canvas->K2_DrawText(
+				client_lib::modules::renderer->default_font,	//font
+				L"Bordered 0 Kerning",							// wstr/ FString
+				pos_a,		// pos
+				{ 1.0f,1.0f },	// scale
+				client_lib::modules::renderer->col.indigo,		// col
+				0,			// kerning
+				client_lib::modules::renderer->col.none,		// shadow col
+				{ 0,0 },	// shadow offset
+				false,		// center on X axis
+				false,		// center on Y axis
+				true, //true,		// outlined
+				client_lib::modules::renderer->col.black		// outline col
+			);
+
+			pos_a.Y += 30;
+			canvas->K2_DrawText(
+				client_lib::modules::renderer->default_font,	//font
+				L"Bordered 5 Kerning",									// wstr/ FString
+				pos_a,		// pos
+				{ 1.0f,1.0f },	// scale
+				client_lib::modules::renderer->col.indigo,		// col
+				5,			// kerning
+				client_lib::modules::renderer->col.none,		// shadow col
+				{ 0,0 },	// shadow offset
+				false,		// center on X axis
+				false,		// center on Y axis
+				true, //true,		// outlined
+				client_lib::modules::renderer->col.black			// outline col
+			);
+			pos_a.Y += 30;
+			canvas->K2_DrawText(
+				client_lib::modules::renderer->default_font,	//font
+				L"No Border",									// wstr/ FString
+				pos_a,		// pos
+				{ 1.0f,1.0f },	// scale
+				client_lib::modules::renderer->col.indigo,		// col
+				1,			// kerning
+				client_lib::modules::renderer->col.none,		// shadow col
+				{ 0,0 },	// shadow offset
+				false,		// center on X axis
+				false,		// center on Y axis
+				false, //true,		// outlined
+				client_lib::modules::renderer->col.black			// outline col
+			);
+			pos_a.Y += 30;
+			canvas->K2_DrawText(
+				client_lib::modules::renderer->default_font,	//font
+				L"No Border 0 Kerning",									// wstr/ FString
+				pos_a,		// pos
+				{ 1.0f,1.0f },	// scale
+				client_lib::modules::renderer->col.indigo,		// col
+				0,			// kerning
+				client_lib::modules::renderer->col.none,		// shadow col
+				{ 0,0 },	// shadow offset
+				false,		// center on X axis
+				false,		// center on Y axis
+				false, //true,		// outlined
+				client_lib::modules::renderer->col.black			// outline col
+			);
+
+
+		}
 
 	}
 

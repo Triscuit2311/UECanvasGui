@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABP_ReplayController_C::InpActEvt_H_K2Node_InputKeyEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24709);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30471);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void ABP_ReplayController_C::ToggleHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24708);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30470);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void ABP_ReplayController_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24707);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30469);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void ABP_ReplayController_C::ExecuteUbergraph_BP_ReplayController(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24706);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30468);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	UClass* ABP_ReplayController_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24705);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30467);
 		return ptr;
 	}
 

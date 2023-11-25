@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -1016,48 +1016,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction INavigationPathGenerator.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* INavigationPathGenerator::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3121);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AAbstractNavData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AAbstractNavData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3108);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavLinkRenderingComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavLinkRenderingComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3127);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UNavArea_Default.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1066,362 +1024,6 @@ namespace SDK
 	UClass* UNavArea_Default::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3109);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ANavigationTestingActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ANavigationTestingActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3123);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavigationSystemModuleConfig.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavigationSystemModuleConfig::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3122);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavArea_LowHeight.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavArea_LowHeight::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3110);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function NavigationSystem.NavModifierComponent.SetAreaClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UNavArea*                                    NewAreaClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UNavModifierComponent::SetAreaClass(class UNavArea* NewAreaClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20085);
-		
-		struct
-		{
-			class UNavArea*                                    NewAreaClass;
-		} params;
-		params.NewAreaClass = NewAreaClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavModifierComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavModifierComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3131);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavArea_Null.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavArea_Null::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3111);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavLinkComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavLinkComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3124);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function NavigationSystem.NavModifierVolume.SetAreaClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UNavArea*                                    NewAreaClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void ANavModifierVolume::SetAreaClass(class UNavArea* NewAreaClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20086);
-		
-		struct
-		{
-			class UNavArea*                                    NewAreaClass;
-		} params;
-		params.NewAreaClass = NewAreaClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ANavModifierVolume.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ANavModifierVolume::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3132);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavArea_Obstacle.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavArea_Obstacle::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3112);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavLinkTrivial.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavLinkTrivial::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3128);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction INavNodeInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* INavNodeInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3133);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavAreaMeta.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavAreaMeta::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3113);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ANavMeshBoundsVolume.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ANavMeshBoundsVolume::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3129);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ANavSystemConfigOverride.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ANavSystemConfigOverride::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3134);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction INavLinkCustomInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* INavLinkCustomInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3125);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavAreaMeta_SwitchByAgent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavAreaMeta_SwitchByAgent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3114);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavMeshRenderingComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavMeshRenderingComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3130);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavTestRenderingComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavTestRenderingComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3135);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNavCollision.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNavCollision::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3115);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction INavLinkHostInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* INavLinkHostInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3126);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URecastFilter_UseDefaultArea.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* URecastFilter_UseDefaultArea::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3136);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ANavigationGraph.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ANavigationGraph::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3116);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URecastNavMeshDataChunk.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* URecastNavMeshDataChunk::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3137);
 		return ptr;
 	}
 
@@ -1442,6 +1044,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavArea_LowHeight.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavArea_LowHeight::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3110);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UNavigationGraphNodeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1456,6 +1072,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavArea_Null.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavArea_Null::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3111);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UNavigationInvokerComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1464,6 +1094,20 @@ namespace SDK
 	UClass* UNavigationInvokerComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3119);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavArea_Obstacle.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavArea_Obstacle::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3112);
 		return ptr;
 	}
 
@@ -1674,6 +1318,362 @@ namespace SDK
 	UClass* UNavigationPath::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3120);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavAreaMeta.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavAreaMeta::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3113);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction INavigationPathGenerator.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* INavigationPathGenerator::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3121);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AAbstractNavData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AAbstractNavData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3108);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavAreaMeta_SwitchByAgent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavAreaMeta_SwitchByAgent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3114);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavigationSystemModuleConfig.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavigationSystemModuleConfig::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3122);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavCollision.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavCollision::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3115);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ANavigationTestingActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ANavigationTestingActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3123);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction INavLinkCustomInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* INavLinkCustomInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3125);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavLinkComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavLinkComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3124);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ANavigationGraph.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ANavigationGraph::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3116);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction INavLinkHostInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* INavLinkHostInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3126);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavLinkRenderingComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavLinkRenderingComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3127);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavLinkTrivial.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavLinkTrivial::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3128);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ANavMeshBoundsVolume.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ANavMeshBoundsVolume::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3129);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavMeshRenderingComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavMeshRenderingComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3130);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function NavigationSystem.NavModifierComponent.SetAreaClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UNavArea*                                    NewAreaClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UNavModifierComponent::SetAreaClass(class UNavArea* NewAreaClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20085);
+		
+		struct
+		{
+			class UNavArea*                                    NewAreaClass;
+		} params;
+		params.NewAreaClass = NewAreaClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavModifierComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavModifierComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3131);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function NavigationSystem.NavModifierVolume.SetAreaClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UNavArea*                                    NewAreaClass                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void ANavModifierVolume::SetAreaClass(class UNavArea* NewAreaClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20086);
+		
+		struct
+		{
+			class UNavArea*                                    NewAreaClass;
+		} params;
+		params.NewAreaClass = NewAreaClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ANavModifierVolume.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ANavModifierVolume::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3132);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction INavNodeInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* INavNodeInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3133);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ANavSystemConfigOverride.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ANavSystemConfigOverride::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3134);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNavTestRenderingComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNavTestRenderingComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3135);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URecastFilter_UseDefaultArea.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URecastFilter_UseDefaultArea::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3136);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URecastNavMeshDataChunk.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URecastNavMeshDataChunk::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3137);
 		return ptr;
 	}
 

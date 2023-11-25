@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ADevice_S590_Breach_v2_C::DoReloadComplete_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92820);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92913);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ADevice_S590_Breach_v2_C::ExecuteUbergraph_Device_S590_Breach_v2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92819);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92912);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* ADevice_S590_Breach_v2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92818);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92911);
 		return ptr;
 	}
 

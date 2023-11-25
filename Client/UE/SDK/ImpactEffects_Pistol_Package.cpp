@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* AImpactEffects_Pistol_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54528);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37946);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	struct FLinearColor UW_RadialIcon_MapMarking_C::Get_Icon_ColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55388);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30773);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55387);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30772);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55386);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30771);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55385);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30770);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::OnUnhighlight(bool Unselected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30769);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::Selected()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30768);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::OnHighlight(bool Selected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55382);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30767);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_RadialIcon_MapMarking_C::ExecuteUbergraph_W_RadialIcon_MapMarking(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55381);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30766);
 		
 		struct
 		{
@@ -209,7 +209,7 @@ namespace SDK
 	 */
 	UClass* UW_RadialIcon_MapMarking_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55380);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30765);
 		return ptr;
 	}
 

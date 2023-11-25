@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Objective_C::UpdateDescription()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28638);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49141);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Objective_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28637);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49140);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UW_Objective_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28636);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49139);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_Objective_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28635);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49138);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_Objective_C::ExecuteUbergraph_W_Objective(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28634);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49137);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	UClass* UW_Objective_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28633);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49136);
 		return ptr;
 	}
 

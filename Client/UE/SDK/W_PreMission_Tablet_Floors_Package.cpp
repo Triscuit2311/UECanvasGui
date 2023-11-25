@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::UpdateFloorInfo(const struct FLevelFloorData& FloorData, int32_t FloorLevel)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55490);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30925);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::Finished_0C5D35C04B4E8BC0D2A659AEE498EAEB()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55489);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30924);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55488);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30923);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::ShowFloorInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55487);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30922);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::HideFloorInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55486);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30921);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::BndEvt__W_PreMission_Tablet_Floors_btn_UpFloor_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55485);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30920);
 		
 		struct
 		{
@@ -157,7 +157,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::BndEvt__W_PreMission_Tablet_Floors_btn_DnFloor_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55484);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30919);
 		
 		struct
 		{
@@ -181,7 +181,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::ExecuteUbergraph_W_PreMission_Tablet_Floors(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55483);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30918);
 		
 		struct
 		{
@@ -204,7 +204,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::OnFloorDown__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55482);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30917);
 		
 		struct
 		{
@@ -225,7 +225,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Floors_C::OnFloorUp__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55481);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30916);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_Floors_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55480);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30915);
 		return ptr;
 	}
 

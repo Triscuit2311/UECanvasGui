@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,18 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum GooglePAD.EGooglePADCellularDataConfirmStatus
+	 */
+	enum class EGooglePADCellularDataConfirmStatus : uint8_t
+	{
+		AssetPack_CONFIRM_UNKNOWN       = 0,
+		AssetPack_CONFIRM_PENDING       = 1,
+		AssetPack_CONFIRM_USER_APPROVED = 2,
+		AssetPack_CONFIRM_USER_CANCELED = 3,
+		AssetPack_CONFIRM_MAX           = 4
+	};
+
 	/**
 	 * Enum GooglePAD.EGooglePADStorageMethod
 	 */
@@ -45,18 +57,6 @@ namespace SDK
 		AssetPack_REMOVAL_PENDING    = 11,
 		AssetPack_REMOVAL_FAILED     = 12,
 		AssetPack_MAX                = 13
-	};
-
-	/**
-	 * Enum GooglePAD.EGooglePADCellularDataConfirmStatus
-	 */
-	enum class EGooglePADCellularDataConfirmStatus : uint8_t
-	{
-		AssetPack_CONFIRM_UNKNOWN       = 0,
-		AssetPack_CONFIRM_PENDING       = 1,
-		AssetPack_CONFIRM_USER_APPROVED = 2,
-		AssetPack_CONFIRM_USER_CANCELED = 3,
-		AssetPack_CONFIRM_MAX           = 4
 	};
 
 	/**

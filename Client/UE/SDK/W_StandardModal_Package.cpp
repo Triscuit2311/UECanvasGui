@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::SetDescriptionText(const class FText& ModalDescription)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28560);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49020);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::DisplayWarningText(const class FText& WarningText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28559);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49019);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::CancelConfirmTextEntry()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28558);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49018);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::ConfirmTextEntry(const class FText& ConfirmTitleText, const class FText& ConfirmDescriptionText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28557);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49017);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	bool UW_StandardModal_C::Get_OkButton_bIsEnabled_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28556);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49016);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::OnUserScrolled_Event_1(float CurrentOffset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28555);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49015);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28554);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49014);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28553);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49013);
 		
 		struct
 		{
@@ -209,7 +209,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28552);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49012);
 		
 		struct
 		{
@@ -231,7 +231,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::BndEvt__W_StandardModal_CancelButton2_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28551);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49011);
 		
 		struct
 		{
@@ -255,7 +255,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::BndEvt__W_StandardModal_OkButton2_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28544);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49010);
 		
 		struct
 		{
@@ -279,7 +279,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::BndEvt__W_StandardModal_ApplyButton2_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28543);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49009);
 		
 		struct
 		{
@@ -304,7 +304,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::BndEvt__W_StandardModal_EditableTextBox_80_K2Node_ComponentBoundEvent_6_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28542);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49002);
 		
 		struct
 		{
@@ -330,7 +330,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::ExecuteUbergraph_W_StandardModal(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28541);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49001);
 		
 		struct
 		{
@@ -355,7 +355,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::OnTextCommitted__DelegateSignature(class UW_StandardModal_C* CallingModal, const class FText& TextEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28540);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49000);
 		
 		struct
 		{
@@ -382,7 +382,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::OnApplyClicked__DelegateSignature(class UW_StandardModal_C* CallingModal, const class FText& TextEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28539);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48999);
 		
 		struct
 		{
@@ -408,7 +408,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::OnCancelClicked__DelegateSignature(class UW_StandardModal_C* CallingModal)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28538);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48998);
 		
 		struct
 		{
@@ -433,7 +433,7 @@ namespace SDK
 	 */
 	void UW_StandardModal_C::OnOkClicked__DelegateSignature(class UW_StandardModal_C* CallingModal, const class FText& TextEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28537);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48997);
 		
 		struct
 		{
@@ -458,7 +458,7 @@ namespace SDK
 	 */
 	UClass* UW_StandardModal_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28536);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48996);
 		return ptr;
 	}
 

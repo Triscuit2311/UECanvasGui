@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -37,14 +37,6 @@ namespace SDK
 	{
 	public:
 		int32_t                                                      IDValue;                                                 // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-	};
-
-	/**
-	 * ScriptStruct MeshDescription.EdgeID
-	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
-	 */
-	struct FEdgeID : public FElementID
-	{
 	};
 
 	/**
@@ -84,6 +76,14 @@ namespace SDK
 	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
 	 */
 	struct FVertexInstanceID : public FElementID
+	{
+	};
+
+	/**
+	 * ScriptStruct MeshDescription.EdgeID
+	 * Size -> 0x0000 (FullSize[0x0004] - InheritedSize[0x0004])
+	 */
+	struct FEdgeID : public FElementID
 	{
 	};
 

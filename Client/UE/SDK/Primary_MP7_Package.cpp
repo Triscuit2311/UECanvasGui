@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void APrimary_MP7_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47886);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35172);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void APrimary_MP7_C::ExecuteUbergraph_Primary_MP7(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47885);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35171);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* APrimary_MP7_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(47884);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(35170);
 		return ptr;
 	}
 

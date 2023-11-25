@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalkerEntry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88317);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88329);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalkerEntry_C::OnVoiceChannelChanged_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88316);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88328);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalkerEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88315);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88327);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalkerEntry_C::ExecuteUbergraph_W_VOIPTalkerEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88314);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88326);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* UW_VOIPTalkerEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88313);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88325);
 		return ptr;
 	}
 

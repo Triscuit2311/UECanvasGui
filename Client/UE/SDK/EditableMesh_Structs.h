@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,27 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum EditableMesh.ETriangleTessellationMode
-	 */
-	enum class ETriangleTessellationMode : uint8_t
-	{
-		ThreeTriangles = 0,
-		FourTriangles  = 1,
-		MAX            = 2
-	};
-
-	/**
-	 * Enum EditableMesh.EInsetPolygonsMode
-	 */
-	enum class EInsetPolygonsMode : uint8_t
-	{
-		All               = 0,
-		CenterPolygonOnly = 1,
-		SidePolygonsOnly  = 2,
-		MAX               = 3
-	};
-
 	/**
 	 * Enum EditableMesh.EPolygonEdgeHardness
 	 */
@@ -84,6 +63,27 @@ namespace SDK
 		MAX          = 3
 	};
 
+	/**
+	 * Enum EditableMesh.ETriangleTessellationMode
+	 */
+	enum class ETriangleTessellationMode : uint8_t
+	{
+		ThreeTriangles = 0,
+		FourTriangles  = 1,
+		MAX            = 2
+	};
+
+	/**
+	 * Enum EditableMesh.EInsetPolygonsMode
+	 */
+	enum class EInsetPolygonsMode : uint8_t
+	{
+		All               = 0,
+		CenterPolygonOnly = 1,
+		SidePolygonsOnly  = 2,
+		MAX               = 3
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
@@ -118,52 +118,6 @@ namespace SDK
 	{
 	public:
 		TArray<struct FMeshElementAttributeData>                     Attributes;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EditableMesh.VertexAttributesForPolygonHole
-	 * Size -> 0x0010
-	 */
-	struct FVertexAttributesForPolygonHole
-	{
-	public:
-		TArray<struct FMeshElementAttributeList>                     VertexAttributeList;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EditableMesh.AttributesForEdge
-	 * Size -> 0x0018
-	 */
-	struct FAttributesForEdge
-	{
-	public:
-		struct FEdgeID                                               EdgeID;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FMeshElementAttributeList                             EdgeAttributes;                                          // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EditableMesh.AttributesForVertexInstance
-	 * Size -> 0x0018
-	 */
-	struct FAttributesForVertexInstance
-	{
-	public:
-		struct FVertexInstanceID                                     VertexInstanceID;                                        // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FMeshElementAttributeList                             VertexInstanceAttributes;                                // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EditableMesh.VertexAndAttributes
-	 * Size -> 0x0018
-	 */
-	struct FVertexAndAttributes
-	{
-	public:
-		struct FVertexInstanceID                                     VertexInstanceID;                                        // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVertexID                                             VertexID;                                                // 0x0004(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FMeshElementAttributeList                             PolygonVertexAttributes;                                 // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -202,6 +156,18 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct EditableMesh.VertexAndAttributes
+	 * Size -> 0x0018
+	 */
+	struct FVertexAndAttributes
+	{
+	public:
+		struct FVertexInstanceID                                     VertexInstanceID;                                        // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVertexID                                             VertexID;                                                // 0x0004(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FMeshElementAttributeList                             PolygonVertexAttributes;                                 // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct EditableMesh.PolygonToCreate
 	 * Size -> 0x0020
 	 */
@@ -231,22 +197,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct EditableMesh.SubdividedQuadVertex
-	 * Size -> 0x0034
-	 */
-	struct FSubdividedQuadVertex
-	{
-	public:
-		int32_t                                                      VertexPositionIndex;                                     // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                TextureCoordinate0;                                      // 0x0004(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                TextureCoordinate1;                                      // 0x000C(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   VertexColor;                                             // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  VertexNormal;                                            // 0x0018(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  VertexTangent;                                           // 0x0024(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        VertexBinormalSign;                                      // 0x0030(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct EditableMesh.VertexInstanceToCreate
 	 * Size -> 0x0020
 	 */
@@ -258,19 +208,6 @@ namespace SDK
 		struct FMeshElementAttributeList                             VertexInstanceAttributes;                                // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
 		struct FVertexInstanceID                                     OriginalVertexInstanceID;                                // 0x0018(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct EditableMesh.RenderingPolygonGroup
-	 * Size -> 0x0048
-	 */
-	struct FRenderingPolygonGroup
-	{
-	public:
-		uint32_t                                                     RenderingSectionIndex;                                   // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MaterialIndex;                                           // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MaxTriangles;                                            // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3C];                                  // 0x000C(0x003C) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -286,15 +223,19 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct EditableMesh.RenderingPolygon
-	 * Size -> 0x0018
+	 * ScriptStruct EditableMesh.SubdividedQuadVertex
+	 * Size -> 0x0034
 	 */
-	struct FRenderingPolygon
+	struct FSubdividedQuadVertex
 	{
 	public:
-		struct FPolygonGroupID                                       PolygonGroupID;                                          // 0x0000(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FTriangleID>                                   TriangulatedPolygonTriangleIndices;                      // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int32_t                                                      VertexPositionIndex;                                     // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                TextureCoordinate0;                                      // 0x0004(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                TextureCoordinate1;                                      // 0x000C(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   VertexColor;                                             // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  VertexNormal;                                            // 0x0018(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  VertexTangent;                                           // 0x0024(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        VertexBinormalSign;                                      // 0x0030(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -342,6 +283,31 @@ namespace SDK
 		TArray<struct FVector>                          VertexPositions;                                         // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<struct FSubdivisionLimitSection>                      Sections;                                                // 0x0010(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<struct FSubdividedWireEdge>                           SubdividedWireEdges;                                     // 0x0020(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct EditableMesh.RenderingPolygonGroup
+	 * Size -> 0x0048
+	 */
+	struct FRenderingPolygonGroup
+	{
+	public:
+		uint32_t                                                     RenderingSectionIndex;                                   // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MaterialIndex;                                           // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MaxTriangles;                                            // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3C];                                  // 0x000C(0x003C) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct EditableMesh.RenderingPolygon
+	 * Size -> 0x0018
+	 */
+	struct FRenderingPolygon
+	{
+	public:
+		struct FPolygonGroupID                                       PolygonGroupID;                                          // 0x0000(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FTriangleID>                                   TriangulatedPolygonTriangleIndices;                      // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -446,6 +412,16 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct EditableMesh.VertexAttributesForPolygonHole
+	 * Size -> 0x0010
+	 */
+	struct FVertexAttributesForPolygonHole
+	{
+	public:
+		TArray<struct FMeshElementAttributeList>                     VertexAttributeList;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct EditableMesh.VertexAttributesForPolygon
 	 * Size -> 0x0028
 	 */
@@ -456,6 +432,30 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FMeshElementAttributeList>                     PerimeterVertexAttributeLists;                           // 0x0008(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<struct FVertexAttributesForPolygonHole>               VertexAttributeListsForEachHole;                         // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct EditableMesh.AttributesForEdge
+	 * Size -> 0x0018
+	 */
+	struct FAttributesForEdge
+	{
+	public:
+		struct FEdgeID                                               EdgeID;                                                  // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FMeshElementAttributeList                             EdgeAttributes;                                          // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct EditableMesh.AttributesForVertexInstance
+	 * Size -> 0x0018
+	 */
+	struct FAttributesForVertexInstance
+	{
+	public:
+		struct FVertexInstanceID                                     VertexInstanceID;                                        // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FMeshElementAttributeList                             VertexInstanceAttributes;                                // 0x0008(0x0010) BlueprintVisible, NativeAccessSpecifierPublic
 	};
 
 }

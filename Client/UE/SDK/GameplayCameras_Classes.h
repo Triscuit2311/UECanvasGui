@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,27 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class GameplayCameras.MatineeCameraShakePattern
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMatineeCameraShakePattern : public UCameraShakePattern
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GameplayCameras.MatineeCameraShakeFunctionLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMatineeCameraShakeFunctionLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		class UMatineeCameraShake* Conv_MatineeCameraShake(class UCameraShakeBase* CameraShake);
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class GameplayCameras.SimpleCameraShakePattern
 	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
@@ -66,48 +45,13 @@ namespace SDK
 	};
 
 	/**
-	 * Class GameplayCameras.PerlinNoiseCameraShakePattern
-	 * Size -> 0x0080 (FullSize[0x00B8] - InheritedSize[0x0038])
+	 * Class GameplayCameras.TestCameraShake
+	 * Size -> 0x0004 (FullSize[0x00B0] - InheritedSize[0x00AC])
 	 */
-	class UPerlinNoiseCameraShakePattern : public USimpleCameraShakePattern
+	class UTestCameraShake : public UCameraShakeBase
 	{
 	public:
-		float                                                        LocationAmplitudeMultiplier;                             // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        LocationFrequencyMultiplier;                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    X;                                                       // 0x0040(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    Y;                                                       // 0x0048(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    Z;                                                       // 0x0050(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		float                                                        RotationAmplitudeMultiplier;                             // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RotationFrequencyMultiplier;                             // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    Pitch;                                                   // 0x0060(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    Yaw;                                                     // 0x0068(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    Roll;                                                    // 0x0070(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FPerlinNoiseShaker                                    FOV;                                                     // 0x0078(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0080(0x0038) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GameplayCameras.WaveOscillatorCameraShakePattern
-	 * Size -> 0x00A0 (FullSize[0x00D8] - InheritedSize[0x0038])
-	 */
-	class UWaveOscillatorCameraShakePattern : public USimpleCameraShakePattern
-	{
-	public:
-		float                                                        LocationAmplitudeMultiplier;                             // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        LocationFrequencyMultiplier;                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       X;                                                       // 0x0040(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       Y;                                                       // 0x004C(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       Z;                                                       // 0x0058(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		float                                                        RotationAmplitudeMultiplier;                             // 0x0064(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RotationFrequencyMultiplier;                             // 0x0068(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       Pitch;                                                   // 0x006C(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       Yaw;                                                     // 0x0078(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       Roll;                                                    // 0x0084(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FWaveOscillator                                       FOV;                                                     // 0x0090(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3C];                                  // 0x009C(0x003C) MISSED OFFSET (PADDING)
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00AC(0x0004) Fix Super Size
 
 	public:
 		static UClass* StaticClass();
@@ -128,23 +72,10 @@ namespace SDK
 	};
 
 	/**
-	 * Class GameplayCameras.TestCameraShake
-	 * Size -> 0x0004 (FullSize[0x00B0] - InheritedSize[0x00AC])
-	 */
-	class UTestCameraShake : public UCameraShakeBase
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00AC(0x0004) Fix Super Size
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GameplayCameras.MovieSceneMatineeCameraShakeEvaluator
+	 * Class GameplayCameras.MatineeCameraShakePattern
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UMovieSceneMatineeCameraShakeEvaluator : public UMovieSceneCameraShakeEvaluator
+	class UMatineeCameraShakePattern : public UCameraShakePattern
 	{
 	public:
 		static UClass* StaticClass();
@@ -198,6 +129,75 @@ namespace SDK
 		void ReceivePlayShake(float Scale);
 		bool ReceiveIsFinished();
 		void BlueprintUpdateCameraShake(float DeltaTime, float Alpha, const struct FMinimalViewInfo& POV, struct FMinimalViewInfo* ModifiedPOV);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayCameras.MovieSceneMatineeCameraShakeEvaluator
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMovieSceneMatineeCameraShakeEvaluator : public UMovieSceneCameraShakeEvaluator
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayCameras.MatineeCameraShakeFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMatineeCameraShakeFunctionLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		class UMatineeCameraShake* Conv_MatineeCameraShake(class UCameraShakeBase* CameraShake);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayCameras.PerlinNoiseCameraShakePattern
+	 * Size -> 0x0080 (FullSize[0x00B8] - InheritedSize[0x0038])
+	 */
+	class UPerlinNoiseCameraShakePattern : public USimpleCameraShakePattern
+	{
+	public:
+		float                                                        LocationAmplitudeMultiplier;                             // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        LocationFrequencyMultiplier;                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    X;                                                       // 0x0040(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    Y;                                                       // 0x0048(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    Z;                                                       // 0x0050(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		float                                                        RotationAmplitudeMultiplier;                             // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RotationFrequencyMultiplier;                             // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    Pitch;                                                   // 0x0060(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    Yaw;                                                     // 0x0068(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    Roll;                                                    // 0x0070(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FPerlinNoiseShaker                                    FOV;                                                     // 0x0078(0x0008) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0080(0x0038) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayCameras.WaveOscillatorCameraShakePattern
+	 * Size -> 0x00A0 (FullSize[0x00D8] - InheritedSize[0x0038])
+	 */
+	class UWaveOscillatorCameraShakePattern : public USimpleCameraShakePattern
+	{
+	public:
+		float                                                        LocationAmplitudeMultiplier;                             // 0x0038(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        LocationFrequencyMultiplier;                             // 0x003C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       X;                                                       // 0x0040(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       Y;                                                       // 0x004C(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       Z;                                                       // 0x0058(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		float                                                        RotationAmplitudeMultiplier;                             // 0x0064(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RotationFrequencyMultiplier;                             // 0x0068(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       Pitch;                                                   // 0x006C(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       Yaw;                                                     // 0x0078(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       Roll;                                                    // 0x0084(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FWaveOscillator                                       FOV;                                                     // 0x0090(0x000C) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3C];                                  // 0x009C(0x003C) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 

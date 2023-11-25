@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -99,20 +99,6 @@ namespace SDK
 		void DeleteClockByName(class UObject* WorldContextObject, const class FName& ClockName);
 		void DeleteClockByHandle(class UObject* WorldContextObject, class UQuartzClockHandle** InClockHandle);
 		class UQuartzClockHandle* CreateNewClock(class UObject* WorldContextObject, const class FName& ClockName, const struct FQuartzClockSettings& InSettings, bool bOverrideSettingsIfClockExists, bool bUseAudioEngineClockManager);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AudioMixer.SynthSound
-	 * Size -> 0x0020 (FullSize[0x03E0] - InheritedSize[0x03C0])
-	 */
-	class USynthSound : public USoundWaveProcedural
-	{
-	public:
-		class USynthComponent*                                       OwningSynthComponent;                                    // 0x03C0(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x03C8(0x0018) MISSED OFFSET (PADDING)
-
-	public:
 		static UClass* StaticClass();
 	};
 
@@ -247,6 +233,20 @@ namespace SDK
 	public:
 		void SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);
 		void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AudioMixer.SynthSound
+	 * Size -> 0x0020 (FullSize[0x03E0] - InheritedSize[0x03C0])
+	 */
+	class USynthSound : public USoundWaveProcedural
+	{
+	public:
+		class USynthComponent*                                       OwningSynthComponent;                                    // 0x03C0(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x03C8(0x0018) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::GetTitle(class FText* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58111);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39757);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::SetDebugItemValue(int32_t Index, const class FText& DebugText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58110);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39756);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::AddDebugItems(int32_t Num)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58109);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39755);
 		
 		struct
 		{
@@ -100,7 +100,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::AddDebugItem(const class FText& Label, const class FText& Value)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58108);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39754);
 		
 		struct
 		{
@@ -125,7 +125,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::Clear()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58107);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39753);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::Refresh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58106);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39752);
 		
 		struct
 		{
@@ -168,7 +168,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::GetNumDebugEntries(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58105);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39751);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::GetDebugItemName(const class FText& DebugName, class UW_DebugInfo_C** DebugInfoWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58104);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39750);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::GetDebugItemIndex(int32_t Index, class UW_DebugInfo_C** DebugInfoWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58103);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39749);
 		
 		struct
 		{
@@ -253,7 +253,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58102);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39748);
 		
 		struct
 		{
@@ -277,7 +277,7 @@ namespace SDK
 	 */
 	void UW_DebugInfoContainer_C::ExecuteUbergraph_W_DebugInfoContainer(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58101);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39747);
 		
 		struct
 		{
@@ -300,7 +300,7 @@ namespace SDK
 	 */
 	UClass* UW_DebugInfoContainer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(58100);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39746);
 		return ptr;
 	}
 

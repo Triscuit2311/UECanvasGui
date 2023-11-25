@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Credit_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24535);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30737);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_Credit_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24534);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30736);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_Credit_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24533);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30735);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_Credit_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24532);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30734);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_Credit_C::ExecuteUbergraph_W_Credit(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24531);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30733);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	UClass* UW_Credit_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24530);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30732);
 		return ptr;
 	}
 

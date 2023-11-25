@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_TabScreen_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28970);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49219);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_TabScreen_C::ExecuteUbergraph_W_TabScreen(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28969);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49218);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_TabScreen_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28968);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49217);
 		return ptr;
 	}
 

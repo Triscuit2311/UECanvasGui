@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -216,66 +216,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TScriptInterface<class ITurnBasedMatchInterface>   MatchActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            MinPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            MaxPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            PlayerGroup                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ShowExistingMatches                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UFindTurnBasedMatchCallbackProxy*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class ITurnBasedMatchInterface>& MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11794);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			TScriptInterface<class ITurnBasedMatchInterface>   MatchActor;
-			int32_t                                            MinPlayers;
-			int32_t                                            MaxPlayers;
-			int32_t                                            PlayerGroup;
-			bool                                               ShowExistingMatches;
-			unsigned char                                      UnknownData_0000[0x3];
-			class UFindTurnBasedMatchCallbackProxy*            ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		params.MatchActor = MatchActor;
-		params.MinPlayers = MinPlayers;
-		params.MaxPlayers = MaxPlayers;
-		params.PlayerGroup = PlayerGroup;
-		params.ShowExistingMatches = ShowExistingMatches;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UFindTurnBasedMatchCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UFindTurnBasedMatchCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(33);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchaseUnprocessedPurchases
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -418,50 +358,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<class FString>                              ProductIdentifiers                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class UInAppPurchaseQueryCallbackProxy2*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11800);
-		
-		struct
-		{
-			class APlayerController*                           PlayerController;
-			TArray<class FString>                              ProductIdentifiers;
-			class UInAppPurchaseQueryCallbackProxy2*           ReturnValue;
-		} params;
-		params.PlayerController = PlayerController;
-		params.ProductIdentifiers = ProductIdentifiers;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInAppPurchaseQueryCallbackProxy2.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInAppPurchaseQueryCallbackProxy2::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(37);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -500,6 +396,110 @@ namespace SDK
 	UClass* UInAppPurchaseRestoreCallbackProxy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(38);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TScriptInterface<class ITurnBasedMatchInterface>   MatchActor                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            MinPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            MaxPlayers                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            PlayerGroup                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ShowExistingMatches                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UFindTurnBasedMatchCallbackProxy*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class ITurnBasedMatchInterface>& MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11794);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			TScriptInterface<class ITurnBasedMatchInterface>   MatchActor;
+			int32_t                                            MinPlayers;
+			int32_t                                            MaxPlayers;
+			int32_t                                            PlayerGroup;
+			bool                                               ShowExistingMatches;
+			unsigned char                                      UnknownData_0000[0x3];
+			class UFindTurnBasedMatchCallbackProxy*            ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		params.MatchActor = MatchActor;
+		params.MinPlayers = MinPlayers;
+		params.MaxPlayers = MaxPlayers;
+		params.PlayerGroup = PlayerGroup;
+		params.ShowExistingMatches = ShowExistingMatches;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UFindTurnBasedMatchCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UFindTurnBasedMatchCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(33);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class FString>                              ProductIdentifiers                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class UInAppPurchaseQueryCallbackProxy2*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11800);
+		
+		struct
+		{
+			class APlayerController*                           PlayerController;
+			TArray<class FString>                              ProductIdentifiers;
+			class UInAppPurchaseQueryCallbackProxy2*           ReturnValue;
+		} params;
+		params.PlayerController = PlayerController;
+		params.ProductIdentifiers = ProductIdentifiers;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInAppPurchaseQueryCallbackProxy2.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInAppPurchaseQueryCallbackProxy2::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37);
 		return ptr;
 	}
 
@@ -597,6 +597,50 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        SessionName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class ULeaderboardFlushCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const class FName& SessionName)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11805);
+		
+		struct
+		{
+			class APlayerController*                           PlayerController;
+			class FName                                        SessionName;
+			class ULeaderboardFlushCallbackProxy*              ReturnValue;
+		} params;
+		params.PlayerController = PlayerController;
+		params.SessionName = SessionName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULeaderboardFlushCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULeaderboardFlushCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -638,64 +682,6 @@ namespace SDK
 	UClass* ULeaderboardBlueprintLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(41);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UIpConnection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UIpConnection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(13);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        SessionName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class ULeaderboardFlushCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const class FName& SessionName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11805);
-		
-		struct
-		{
-			class APlayerController*                           PlayerController;
-			class FName                                        SessionName;
-			class ULeaderboardFlushCallbackProxy*              ReturnValue;
-		} params;
-		params.PlayerController = PlayerController;
-		params.SessionName = SessionName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULeaderboardFlushCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULeaderboardFlushCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(42);
 		return ptr;
 	}
 
@@ -804,20 +790,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AOnlineBeaconHost.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AOnlineBeaconHost::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(48);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -853,6 +825,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AOnlineBeaconHost.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AOnlineBeaconHost::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UOnlineEngineInterfaceImpl.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -867,14 +853,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UIpNetDriver.StaticClass
+	 * 		Name   -> PredefinedFunction UOnlinePIESettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UIpNetDriver::StaticClass()
+	UClass* UOnlinePIESettings::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(16);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(54);
 		return ptr;
 	}
 
@@ -1162,6 +1148,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPartyBeaconState.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPartyBeaconState::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(59);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1216,48 +1216,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPartyBeaconState.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPartyBeaconState::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(59);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UOnlinePIESettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UOnlinePIESettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ASpectatorBeaconHost.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ASpectatorBeaconHost::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(63);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1296,76 +1254,6 @@ namespace SDK
 	UClass* UShowLoginUICallbackProxy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(61);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USpectatorBeaconState.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USpectatorBeaconState::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(64);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.TestBeaconClient.ServerPong
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void ATestBeaconClient::ServerPong()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11827);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.TestBeaconClient.ClientPing
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void ATestBeaconClient::ClientPing()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11826);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ATestBeaconClient.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ATestBeaconClient::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(65);
 		return ptr;
 	}
 
@@ -1530,6 +1418,48 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USpectatorBeaconState.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USpectatorBeaconState::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(64);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ASpectatorBeaconHost.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ASpectatorBeaconHost::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(63);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ATestBeaconHost.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ATestBeaconHost::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(66);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1683,14 +1613,56 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ATestBeaconHost.StaticClass
+	 * 		Name   -> Function OnlineSubsystemUtils.TestBeaconClient.ServerPong
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void ATestBeaconClient::ServerPong()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11827);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function OnlineSubsystemUtils.TestBeaconClient.ClientPing
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void ATestBeaconClient::ClientPing()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11826);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ATestBeaconClient.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ATestBeaconHost::StaticClass()
+	UClass* ATestBeaconClient::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(66);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(65);
 		return ptr;
 	}
 
@@ -1729,6 +1701,34 @@ namespace SDK
 	UClass* UVoipListenerSynthComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(72);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UIpConnection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UIpConnection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(13);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UIpNetDriver.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UIpNetDriver::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(16);
 		return ptr;
 	}
 
@@ -1915,6 +1915,50 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UConnectionCallbackProxy*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11784);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			class UConnectionCallbackProxy*                    ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UConnectionCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UConnectionCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(27);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1962,50 +2006,6 @@ namespace SDK
 	UClass* UAchievementWriteCallbackProxy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(26);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UConnectionCallbackProxy*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11784);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			class UConnectionCallbackProxy*                    ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UConnectionCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UConnectionCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27);
 		return ptr;
 	}
 

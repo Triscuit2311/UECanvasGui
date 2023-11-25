@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_CurrentMatchRound_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27017);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43661);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_CurrentMatchRound_C::ExecuteUbergraph_W_CurrentMatchRound(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27016);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43660);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_CurrentMatchRound_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27015);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43659);
 		return ptr;
 	}
 

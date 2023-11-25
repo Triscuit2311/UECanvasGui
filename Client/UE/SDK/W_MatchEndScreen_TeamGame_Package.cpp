@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_MatchEndScreen_TeamGame_C::GetVisibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89362);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89455);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	class FText UW_MatchEndScreen_TeamGame_C::GetMatchWinnerTextSimple()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89361);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89454);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_MatchEndScreen_TeamGame_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89360);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89453);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	class FText UW_MatchEndScreen_TeamGame_C::GetRoundWinnerText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89359);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89452);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_MatchEndScreen_TeamGame_C::GetRoundWinnerColor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89358);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89451);
 		
 		struct
 		{
@@ -147,7 +147,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_MatchEndScreen_TeamGame_C::GetMatchWinnerColor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89357);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89450);
 		
 		struct
 		{
@@ -171,7 +171,7 @@ namespace SDK
 	 */
 	class FText UW_MatchEndScreen_TeamGame_C::GetMatchWinnerText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89356);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89449);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	class FText UW_MatchEndScreen_TeamGame_C::GetRoundCounterText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89355);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89448);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_MatchEndScreen_TeamGame_C::GetRoundCounterVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89354);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89447);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	class FText UW_MatchEndScreen_TeamGame_C::GetNextGameCountdownText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89353);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89446);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_MatchEndScreen_TeamGame_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89352);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89445);
 		
 		struct
 		{
@@ -295,7 +295,7 @@ namespace SDK
 	 */
 	void UW_MatchEndScreen_TeamGame_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89351);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89444);
 		
 		struct
 		{
@@ -317,7 +317,7 @@ namespace SDK
 	 */
 	void UW_MatchEndScreen_TeamGame_C::OnSequenceStarted_Event_1(class ULevelSequence* LevelSequence)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89350);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89443);
 		
 		struct
 		{
@@ -340,7 +340,7 @@ namespace SDK
 	 */
 	void UW_MatchEndScreen_TeamGame_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89349);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89442);
 		
 		struct
 		{
@@ -362,7 +362,7 @@ namespace SDK
 	 */
 	void UW_MatchEndScreen_TeamGame_C::ExecuteUbergraph_W_MatchEndScreen_TeamGame(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89348);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89441);
 		
 		struct
 		{
@@ -386,7 +386,7 @@ namespace SDK
 	 */
 	UClass* UW_MatchEndScreen_TeamGame_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89347);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89440);
 		return ptr;
 	}
 

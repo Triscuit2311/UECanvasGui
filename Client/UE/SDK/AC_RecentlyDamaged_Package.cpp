@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	float UAC_RecentlyDamaged_C::Score(const struct FAIActionDecisionContext& Context, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85391);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84271);
 		
 		struct
 		{
@@ -53,7 +53,7 @@ namespace SDK
 	 */
 	UClass* UAC_RecentlyDamaged_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85390);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84270);
 		return ptr;
 	}
 

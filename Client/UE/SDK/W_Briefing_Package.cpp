@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::GetObjectives(TArray<TSoftClassPtr<class AObjective>>* Objectives, TArray<TSoftClassPtr<class UChallenge>>* Challenges)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58074);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39710);
 		
 		struct
 		{
@@ -52,7 +52,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::GetBriefingAudio(TArray<struct FMissionAudio>* Audio, TArray<struct FTimelineEvent>* TimelineEvents)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58073);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39709);
 		
 		struct
 		{
@@ -80,7 +80,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::Original()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58072);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39708);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::SetBriefingTaskButtonsActive(bool Active)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58071);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39707);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_Briefing_C::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58070);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39706);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58069);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39705);
 		
 		struct
 		{
@@ -177,7 +177,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58068);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39704);
 		
 		struct
 		{
@@ -200,7 +200,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::Hide()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58067);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39703);
 		
 		struct
 		{
@@ -221,7 +221,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::Reveal()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58066);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39702);
 		
 		struct
 		{
@@ -243,7 +243,7 @@ namespace SDK
 	 */
 	void UW_Briefing_C::ExecuteUbergraph_W_Briefing(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58065);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39701);
 		
 		struct
 		{
@@ -267,7 +267,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(58064);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39700);
 		return ptr;
 	}
 

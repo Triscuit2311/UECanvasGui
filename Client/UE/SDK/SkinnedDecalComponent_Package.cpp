@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -121,14 +121,14 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FVector                        Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FQuat                          Rotation                                                   (ConstParm, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Rotation                                                   (ConstParm, Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FName                                        BoneName                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Size                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            SubUV                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t USkinnedDecalSampler::SpawnDecal(const struct FVector& Location, const struct PCoreUObject_FQuat& Rotation, const class FName& BoneName, float Size, int32_t SubUV, int32_t Index)
+	int32_t USkinnedDecalSampler::SpawnDecal(const struct FVector& Location, const struct FQuat& Rotation, const class FName& BoneName, float Size, int32_t SubUV, int32_t Index)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13551);
 		
@@ -136,7 +136,7 @@ namespace SDK
 		{
 			struct FVector                        Location;
 			unsigned char                                      UnknownData_0000[0x4];
-			struct PCoreUObject_FQuat                          Rotation;
+			struct FQuat                          Rotation;
 			class FName                                        BoneName;
 			float                                              Size;
 			int32_t                                            SubUV;

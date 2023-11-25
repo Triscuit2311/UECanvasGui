@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -35,7 +35,7 @@ namespace SDK
 		struct FST_Style_Text                                        FontStyleHovered;                                        // 0x0848(0x00A0) Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash
 		struct FST_Style_Text                                        FontStylePressed;                                        // 0x08E8(0x00A0) Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash
 		struct FST_Style_Text                                        FontStyleDisabled;                                       // 0x0988(0x00A0) Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash
-		class UDataTable*                                            StyleGuide;                                              // 0x0A28(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
+		class UDataTable*                                            Styleguide;                                              // 0x0A28(0x0008) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash
 		bool                                                         bHovered;                                                // 0x0A30(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor
 		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0A31(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UMulticastInlineDelegate                               Clicked;                                                 // 0x0A38(0x0001) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable

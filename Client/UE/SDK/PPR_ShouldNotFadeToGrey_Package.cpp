@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_ShouldNotFadeToGrey_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56748);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42704);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_ShouldNotFadeToGrey_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56747);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42703);
 		return ptr;
 	}
 

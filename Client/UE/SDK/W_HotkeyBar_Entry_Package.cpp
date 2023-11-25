@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24882);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40415);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24881);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40414);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::SetBinding(const struct Fst_HotkeySettings& Hotkey)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24880);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40413);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::BndEvt__W_HotkeyBar_Entry_W_Button_K2Node_ComponentBoundEvent_0_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24879);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40412);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::BndEvt__W_HotkeyBar_Entry_W_Button_K2Node_ComponentBoundEvent_1_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24878);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40411);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::BndEvt__W_HotkeyBar_Entry_W_Button_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24877);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40410);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::BndEvt__W_HotkeyBar_Entry_W_Button_K2Node_ComponentBoundEvent_3_Pressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24876);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40409);
 		
 		struct
 		{
@@ -179,7 +179,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::BndEvt__W_HotkeyBar_Entry_W_Button_K2Node_ComponentBoundEvent_4_Released__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24875);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40408);
 		
 		struct
 		{
@@ -201,7 +201,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::ExecuteUbergraph_W_HotkeyBar_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24874);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40407);
 		
 		struct
 		{
@@ -226,7 +226,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_Entry_C::OnHotkeyButtonClicked__DelegateSignature(class UW_HotkeyBar_Entry_C* TriggeringHotkeyEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24873);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40406);
 		
 		struct
 		{
@@ -249,7 +249,7 @@ namespace SDK
 	 */
 	UClass* UW_HotkeyBar_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24872);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40405);
 		return ptr;
 	}
 

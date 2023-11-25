@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,62 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UChaosClothConfig.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UChaosClothConfig::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(555);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UChaosClothSharedSimConfig.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UChaosClothSharedSimConfig::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(557);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UChaosClothingSimulationInteractor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UChaosClothingSimulationInteractor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(563);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UChaosClothingSimulationFactory.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UChaosClothingSimulationFactory::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(559);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -382,6 +326,62 @@ namespace SDK
 	UClass* UChaosClothingInteractor::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(561);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UChaosClothingSimulationFactory.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UChaosClothingSimulationFactory::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(559);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UChaosClothConfig.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UChaosClothConfig::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(555);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UChaosClothSharedSimConfig.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UChaosClothSharedSimConfig::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(557);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UChaosClothingSimulationInteractor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UChaosClothingSimulationInteractor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(563);
 		return ptr;
 	}
 

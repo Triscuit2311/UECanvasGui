@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool UAG_NumActiveAI_C::CanOpen(const struct FAIActionDecisionContext& Context)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85332);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84212);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	UClass* UAG_NumActiveAI_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85331);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84211);
 		return ptr;
 	}
 

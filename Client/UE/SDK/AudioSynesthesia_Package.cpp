@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -27,6 +27,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAudioSynesthesiaNRT.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAudioSynesthesiaNRT::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(191);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UConstantQNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -35,6 +49,84 @@ namespace SDK
 	UClass* UConstantQNRTSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(192);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UConstantQNRT::GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12587);
+		
+		struct
+		{
+			float                                              InSeconds;
+			int32_t                                            InChannel;
+			TArray<float>                                      OutConstantQ;
+		} params;
+		params.InSeconds = InSeconds;
+		params.InChannel = InChannel;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (OutConstantQ != nullptr)
+			*OutConstantQ = params.OutConstantQ;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UConstantQNRT::GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12586);
+		
+		struct
+		{
+			float                                              InSeconds;
+			int32_t                                            InChannel;
+			TArray<float>                                      OutConstantQ;
+		} params;
+		params.InSeconds = InSeconds;
+		params.InChannel = InChannel;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (OutConstantQ != nullptr)
+			*OutConstantQ = params.OutConstantQ;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UConstantQNRT.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UConstantQNRT::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(193);
 		return ptr;
 	}
 
@@ -55,14 +147,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAudioSynesthesiaNRT.StaticClass
+	 * 		Name   -> PredefinedFunction UOnsetNRTSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UAudioSynesthesiaNRT::StaticClass()
+	UClass* UOnsetNRTSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(191);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(196);
 		return ptr;
 	}
 
@@ -199,98 +291,6 @@ namespace SDK
 	UClass* ULoudnessNRT::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(195);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AudioSynesthesia.ConstantQNRT.GetNormalizedChannelConstantQAtTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UConstantQNRT::GetNormalizedChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12587);
-		
-		struct
-		{
-			float                                              InSeconds;
-			int32_t                                            InChannel;
-			TArray<float>                                      OutConstantQ;
-		} params;
-		params.InSeconds = InSeconds;
-		params.InChannel = InChannel;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (OutConstantQ != nullptr)
-			*OutConstantQ = params.OutConstantQ;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InSeconds                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InChannel                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<float>                                      OutConstantQ                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UConstantQNRT::GetChannelConstantQAtTime(float InSeconds, int32_t InChannel, TArray<float>* OutConstantQ)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12586);
-		
-		struct
-		{
-			float                                              InSeconds;
-			int32_t                                            InChannel;
-			TArray<float>                                      OutConstantQ;
-		} params;
-		params.InSeconds = InSeconds;
-		params.InChannel = InChannel;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (OutConstantQ != nullptr)
-			*OutConstantQ = params.OutConstantQ;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UConstantQNRT.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UConstantQNRT::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(193);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UOnsetNRTSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UOnsetNRTSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(196);
 		return ptr;
 	}
 

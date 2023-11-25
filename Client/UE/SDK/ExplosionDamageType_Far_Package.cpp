@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UExplosionDamageType_Far_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91374);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91467);
 		return ptr;
 	}
 

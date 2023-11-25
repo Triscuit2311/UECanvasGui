@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_HealthStatus_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27033);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43679);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_HealthStatus_C::ExecuteUbergraph_W_HealthStatus(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27032);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43678);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_HealthStatus_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27031);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43677);
 		return ptr;
 	}
 

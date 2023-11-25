@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UBP_M9_Brake_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54688);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38077);
 		return ptr;
 	}
 

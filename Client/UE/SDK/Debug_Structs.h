@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,57 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum Debug.EDebugLogDataUnit
-	 */
-	enum class EDebugLogDataUnit : uint8_t
-	{
-		DLDU_Bit      = 0,
-		DLDU_Byte     = 1,
-		DLDU_Kilobyte = 2,
-		DLDU_Megabyte = 3,
-		DLDU_Gigabyte = 4,
-		DLDU_Terabyte = 5,
-		DLDU_Petabyte = 6,
-		DLDU_MAX      = 7
-	};
-
-	/**
-	 * Enum Debug.EDebugLogVolumeUnit
-	 */
-	enum class EDebugLogVolumeUnit : uint8_t
-	{
-		DLVU_Litre      = 0,
-		DLVU_Millilitre = 1,
-		DLVU_Gallon     = 2,
-		DLVU_Pint       = 3,
-		DLVU_Quart      = 4,
-		DLVU_MAX        = 5
-	};
-
-	/**
-	 * Enum Debug.EDebugLogTemperatureUnit
-	 */
-	enum class EDebugLogTemperatureUnit : uint8_t
-	{
-		DLTU_Celsius    = 0,
-		DLTU_Fahrenheit = 1,
-		DLTU_Kelvin     = 2
-	};
-
-	/**
-	 * Enum Debug.EDebugLogNumberSystems
-	 */
-	enum class EDebugLogNumberSystems : uint8_t
-	{
-		DLNS_Decimal = 0,
-		DLNS_Binary  = 1,
-		DLNS_Hex     = 2,
-		DLNS_Octal   = 3,
-		DLNS_Roman   = 4,
-		DLNS_MAX     = 5
-	};
-
 	/**
 	 * Enum Debug.ELoggingOptions
 	 */
@@ -88,6 +37,19 @@ namespace SDK
 		DL_Error   = 3,
 		DL_Fatal   = 4,
 		DL_MAX     = 5
+	};
+
+	/**
+	 * Enum Debug.EDebugLogNumberSystems
+	 */
+	enum class EDebugLogNumberSystems : uint8_t
+	{
+		DLNS_Decimal = 0,
+		DLNS_Binary  = 1,
+		DLNS_Hex     = 2,
+		DLNS_Octal   = 3,
+		DLNS_Roman   = 4,
+		DLNS_MAX     = 5
 	};
 
 	/**
@@ -229,6 +191,44 @@ namespace SDK
 		DLLU_NauticalMile = 8,
 		DLLU_Yard         = 9,
 		DLLU_Lightyears   = 10
+	};
+
+	/**
+	 * Enum Debug.EDebugLogDataUnit
+	 */
+	enum class EDebugLogDataUnit : uint8_t
+	{
+		DLDU_Bit      = 0,
+		DLDU_Byte     = 1,
+		DLDU_Kilobyte = 2,
+		DLDU_Megabyte = 3,
+		DLDU_Gigabyte = 4,
+		DLDU_Terabyte = 5,
+		DLDU_Petabyte = 6,
+		DLDU_MAX      = 7
+	};
+
+	/**
+	 * Enum Debug.EDebugLogVolumeUnit
+	 */
+	enum class EDebugLogVolumeUnit : uint8_t
+	{
+		DLVU_Litre      = 0,
+		DLVU_Millilitre = 1,
+		DLVU_Gallon     = 2,
+		DLVU_Pint       = 3,
+		DLVU_Quart      = 4,
+		DLVU_MAX        = 5
+	};
+
+	/**
+	 * Enum Debug.EDebugLogTemperatureUnit
+	 */
+	enum class EDebugLogTemperatureUnit : uint8_t
+	{
+		DLTU_Celsius    = 0,
+		DLTU_Fahrenheit = 1,
+		DLTU_Kelvin     = 2
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UC_Generic_Fire_Shaky_MPX_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37285);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45199);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UC_Generic_Fire_Shaky_MPX_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(37284);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(45198);
 		return ptr;
 	}
 

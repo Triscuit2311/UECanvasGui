@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_2DMap_C::GetDynMat(class UMaterialInstanceDynamic** MapDynMat)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55115);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31579);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_2DMap_C::SetDynMat(class UMaterialInstance* Material, class UMaterialInstanceDynamic** MapDynMat)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55114);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31578);
 		
 		struct
 		{
@@ -77,7 +77,7 @@ namespace SDK
 	 */
 	void UW_2DMap_C::SetFloorTexture(class UMaterialInstance* MapMaterialInstance, class UTexture2D* LayoutTexture)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55113);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31577);
 		
 		struct
 		{
@@ -103,7 +103,7 @@ namespace SDK
 	 */
 	void UW_2DMap_C::ExecuteUbergraph_W_2DMap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55112);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31576);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	UClass* UW_2DMap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55111);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31575);
 		return ptr;
 	}
 

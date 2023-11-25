@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SetCenterCoordinates(const struct FVector2D& CenterCoordinates)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55430);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30815);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateMaterialColors(const struct FLinearColor& CursorColor, const struct FLinearColor& HighlightColor, const struct FLinearColor& TintColor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55429);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30814);
 		
 		struct
 		{
@@ -74,7 +74,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateMaterialVisuals()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55428);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30813);
 		
 		struct
 		{
@@ -97,7 +97,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::GetCustomInput(struct FVector2D* Input, bool* Valid)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55427);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30812);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SetCustomInput(const struct FVector2D& CustomInput)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55426);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30811);
 		
 		struct
 		{
@@ -150,7 +150,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateDirectionWithCustomInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55425);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30810);
 		
 		struct
 		{
@@ -172,7 +172,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::RemoveChildIndexFromRadialMenu(int32_t IndexToRemove)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55424);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30809);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::RemoveChildWidgetFromRadialMenu(class UUserWidget* ItemToFind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55423);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30808);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	class FText UUMG_RadialMenu_C::DebugIndex()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55422);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30807);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	struct FVector2D UUMG_RadialMenu_C::FixInputRotation(const struct FVector2D& Input)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55421);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30806);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::FixMainRotation()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55420);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30805);
 		
 		struct
 		{
@@ -291,7 +291,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::AutoRegisterToInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55419);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30804);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55418);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30803);
 		
 		struct
 		{
@@ -335,7 +335,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::RegisterPlayerInput(class APlayerController* Controller, bool* Success)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55417);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30802);
 		
 		struct
 		{
@@ -363,7 +363,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateDirectionWithJoystick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55416);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30801);
 		
 		struct
 		{
@@ -386,7 +386,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::GetCurrentIndex(int32_t* Index, bool* Valid)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55415);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30800);
 		
 		struct
 		{
@@ -417,7 +417,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::GetChild(int32_t Index, class UUserWidget** Output, bool* Success)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55414);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30799);
 		
 		struct
 		{
@@ -449,7 +449,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::GetRadialMaterial(class UMaterialInstanceDynamic** RadialMaterial)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55413);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30798);
 		
 		struct
 		{
@@ -476,7 +476,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SetIndex(int32_t Index, bool Force)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55412);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30797);
 		
 		struct
 		{
@@ -502,7 +502,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateAllChildrenPositions()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30796);
 		
 		struct
 		{
@@ -524,7 +524,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateChildPosition(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30795);
 		
 		struct
 		{
@@ -547,7 +547,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::ClearChildren()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30794);
 		
 		struct
 		{
@@ -569,7 +569,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::GetSelectedWidget(class UUserWidget** Output)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55408);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30793);
 		
 		struct
 		{
@@ -596,7 +596,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::AddChildToRadialMenu(class UUserWidget* Content, bool* Success)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55407);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30792);
 		
 		struct
 		{
@@ -624,7 +624,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateDirectionWithMouseCursor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55406);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30791);
 		
 		struct
 		{
@@ -645,7 +645,7 @@ namespace SDK
 	 */
 	float UUMG_RadialMenu_C::GetSectionDegreeSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30790);
 		
 		struct
 		{
@@ -670,7 +670,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SetInputDirection(const struct FVector2D& Direction)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55404);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30789);
 		
 		struct
 		{
@@ -693,7 +693,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55403);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30788);
 		
 		struct
 		{
@@ -715,7 +715,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateSegments(int32_t Segments)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55402);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30787);
 		
 		struct
 		{
@@ -739,7 +739,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::InDeadZone(bool InDeadZone)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55401);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30786);
 		
 		struct
 		{
@@ -762,7 +762,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::UpdateMaterials()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55400);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30785);
 		
 		struct
 		{
@@ -784,7 +784,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55399);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30784);
 		
 		struct
 		{
@@ -808,7 +808,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::ExecuteUbergraph_UMG_RadialMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55398);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30783);
 		
 		struct
 		{
@@ -832,7 +832,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SelectionSubmitted__DelegateSignature(int32_t SelectionIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55397);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30782);
 		
 		struct
 		{
@@ -855,7 +855,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::ExitedDeadzone__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55396);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30781);
 		
 		struct
 		{
@@ -876,7 +876,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::EnteredDeadzone__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55395);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30780);
 		
 		struct
 		{
@@ -899,7 +899,7 @@ namespace SDK
 	 */
 	void UUMG_RadialMenu_C::SelectionChanged__DelegateSignature(int32_t NewSelection, int32_t OldSelection)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55394);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30779);
 		
 		struct
 		{
@@ -924,7 +924,7 @@ namespace SDK
 	 */
 	UClass* UUMG_RadialMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55393);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30778);
 		return ptr;
 	}
 

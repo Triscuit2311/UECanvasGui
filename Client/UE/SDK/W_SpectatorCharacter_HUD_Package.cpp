@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetReinforcementsTextVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89670);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89763);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetVoteHotkeyVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89669);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89762);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetVoteHotkeyText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89668);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89761);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetVoteVotersText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89667);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89760);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetVoteTimeLeftText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89666);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89759);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetVoteName()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89665);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89758);
 		
 		struct
 		{
@@ -166,7 +166,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetVoteCallerName()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89664);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89757);
 		
 		struct
 		{
@@ -190,7 +190,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetVoteDisplayVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89663);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89756);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetEvidenceLeftText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89662);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89755);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetReportsLeftText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89661);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89754);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetMissionEndedVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89660);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89753);
 		
 		struct
 		{
@@ -288,7 +288,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetReinforcementsTimeRemainingText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89659);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89752);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetReinforcementsVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89658);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89751);
 		
 		struct
 		{
@@ -337,7 +337,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SpectatorCharacter_HUD_C::GetMissionCompleteFailedVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89657);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89750);
 		
 		struct
 		{
@@ -361,7 +361,7 @@ namespace SDK
 	 */
 	struct FSlateColor UW_SpectatorCharacter_HUD_C::GetMissionCompleteFailedColor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89656);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89749);
 		
 		struct
 		{
@@ -385,7 +385,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetMissionCompleteFailedText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89655);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89748);
 		
 		struct
 		{
@@ -409,7 +409,7 @@ namespace SDK
 	 */
 	class FText UW_SpectatorCharacter_HUD_C::GetControlsPrompt()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89654);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89747);
 		
 		struct
 		{
@@ -434,7 +434,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::OnNewCharacterViewed(class APlayerCharacter* NewViewTarget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89653);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89746);
 		
 		struct
 		{
@@ -459,7 +459,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89652);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89745);
 		
 		struct
 		{
@@ -484,7 +484,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::TeamChatPressed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89651);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89744);
 		
 		struct
 		{
@@ -505,7 +505,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::ChatPressed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89650);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89743);
 		
 		struct
 		{
@@ -526,7 +526,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89649);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89742);
 		
 		struct
 		{
@@ -547,7 +547,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::BndEvt__W_COOPDeathScreen_K2Node_ComponentBoundEvent_1_OnSpectateButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89648);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89741);
 		
 		struct
 		{
@@ -571,7 +571,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::CenterPrint(const class FName& MessageType, float Duration, class APlayerCharacter* Other)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89740);
 		
 		struct
 		{
@@ -602,7 +602,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::OnCenterPrint(const class FName& MessageType, float Duration, class APlayerCharacter* Other)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89646);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89739);
 		
 		struct
 		{
@@ -630,7 +630,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::CheckifInDeploy()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89645);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89738);
 		
 		struct
 		{
@@ -652,7 +652,7 @@ namespace SDK
 	 */
 	void UW_SpectatorCharacter_HUD_C::ExecuteUbergraph_W_SpectatorCharacter_HUD(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89644);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89737);
 		
 		struct
 		{
@@ -676,7 +676,7 @@ namespace SDK
 	 */
 	UClass* UW_SpectatorCharacter_HUD_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89643);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89736);
 		return ptr;
 	}
 

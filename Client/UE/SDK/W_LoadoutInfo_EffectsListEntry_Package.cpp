@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::SetInfo(const struct FST_ItemEffects& Effect)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46472);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26792);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46471);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26791);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46470);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26790);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46469);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26789);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46468);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46467);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46466);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26786);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46465);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26785);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46464);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsListEntry_C::ExecuteUbergraph_W_LoadoutInfo_EffectsListEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26784);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46463);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutInfo_EffectsListEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26783);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46462);
 		return ptr;
 	}
 

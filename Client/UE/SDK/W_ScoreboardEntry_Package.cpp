@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_ScoreboardEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28956);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49205);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_ScoreboardEntry_C::ExecuteUbergraph_W_ScoreboardEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28955);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49204);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	UClass* UW_ScoreboardEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28954);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49203);
 		return ptr;
 	}
 

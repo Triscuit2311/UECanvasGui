@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	int32_t UBulletImpactDebug_C::AddDebugText(const class FString& NewText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89005);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89098);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	void UBulletImpactDebug_C::SetDebugTitle(const class FString& NewTitle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89004);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89097);
 		
 		struct
 		{
@@ -74,7 +74,7 @@ namespace SDK
 	 */
 	void UBulletImpactDebug_C::SetDebugText(int32_t ID, const class FString& NewText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89003);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89096);
 		
 		struct
 		{
@@ -101,7 +101,7 @@ namespace SDK
 	 */
 	void UBulletImpactDebug_C::ExecuteUbergraph_BulletImpactDebug(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89002);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89095);
 		
 		struct
 		{
@@ -124,7 +124,7 @@ namespace SDK
 	 */
 	UClass* UBulletImpactDebug_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89001);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89094);
 		return ptr;
 	}
 

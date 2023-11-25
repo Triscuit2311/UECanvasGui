@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,36 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class ClothingSystemRuntimeNv.ClothingSimulationInteractorNv
-	 * Size -> 0x0010 (FullSize[0x00A0] - InheritedSize[0x0090])
-	 */
-	class UClothingSimulationInteractorNv : public UClothingSimulationInteractor
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0090(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		void SetAnimDriveDamperStiffness(float InStiffness);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy
-	 * Size -> 0x0040 (FullSize[0x0120] - InheritedSize[0x00E0])
-	 */
-	class UClothPhysicalMeshDataNv_Legacy : public UClothPhysicalMeshDataBase_Legacy
-	{
-	public:
-		TArray<float>                                                MaxDistances;                                            // 0x00E0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<float>                                                BackstopDistances;                                       // 0x00F0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<float>                                                BackstopRadiuses;                                        // 0x0100(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<float>                                                AnimDriveMultipliers;                                    // 0x0110(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class ClothingSystemRuntimeNv.ClothConfigNv
 	 * Size -> 0x0118 (FullSize[0x0140] - InheritedSize[0x0028])
@@ -97,6 +67,36 @@ namespace SDK
 	 */
 	class UClothingSimulationFactoryNv : public UClothingSimulationFactory
 	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class ClothingSystemRuntimeNv.ClothingSimulationInteractorNv
+	 * Size -> 0x0010 (FullSize[0x00A0] - InheritedSize[0x0090])
+	 */
+	class UClothingSimulationInteractorNv : public UClothingSimulationInteractor
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0090(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		void SetAnimDriveDamperStiffness(float InStiffness);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy
+	 * Size -> 0x0040 (FullSize[0x0120] - InheritedSize[0x00E0])
+	 */
+	class UClothPhysicalMeshDataNv_Legacy : public UClothPhysicalMeshDataBase_Legacy
+	{
+	public:
+		TArray<float>                                                MaxDistances;                                            // 0x00E0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<float>                                                BackstopDistances;                                       // 0x00F0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<float>                                                BackstopRadiuses;                                        // 0x0100(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<float>                                                AnimDriveMultipliers;                                    // 0x0110(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
 	public:
 		static UClass* StaticClass();
 	};

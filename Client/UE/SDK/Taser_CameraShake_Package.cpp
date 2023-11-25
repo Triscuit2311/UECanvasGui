@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UTaser_CameraShake_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52120);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38833);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UTaser_CameraShake_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(52119);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38832);
 		return ptr;
 	}
 

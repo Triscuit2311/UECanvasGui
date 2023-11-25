@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UArmor_Hit_Shake_Right_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55744);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41351);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UArmor_Hit_Shake_Right_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55743);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(41350);
 		return ptr;
 	}
 

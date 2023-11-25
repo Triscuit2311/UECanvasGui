@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43372);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31255);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43371);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31254);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_Entry_C::Reveal()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43370);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31253);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_Entry_C::Hide()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43369);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31252);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Rapsheet_Entry_C::ExecuteUbergraph_W_Briefing_Dossier_Rapsheet_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43368);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31251);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Dossier_Rapsheet_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43367);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31250);
 		return ptr;
 	}
 

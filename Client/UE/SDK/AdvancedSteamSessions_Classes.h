@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -56,18 +56,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class AdvancedSteamSessions.AdvancedSteamWorkshopLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UAdvancedSteamWorkshopLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		TArray<struct FBPSteamWorkshopID> GetSubscribedWorkshopItems(int32_t* NumberOfItems);
-		void GetNumSubscribedWorkshopItems(int32_t* NumberOfItems);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class AdvancedSteamSessions.SteamWSRequestUGCDetailsCallbackProxy
 	 * Size -> 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
 	 */
@@ -82,6 +70,18 @@ namespace SDK
 
 	public:
 		class USteamWSRequestUGCDetailsCallbackProxy* GetWorkshopItemDetails(class UObject* WorldContextObject, const struct FBPSteamWorkshopID& WorkShopID);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AdvancedSteamSessions.AdvancedSteamWorkshopLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UAdvancedSteamWorkshopLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		TArray<struct FBPSteamWorkshopID> GetSubscribedWorkshopItems(int32_t* NumberOfItems);
+		void GetNumSubscribedWorkshopItems(int32_t* NumberOfItems);
 		static UClass* StaticClass();
 	};
 

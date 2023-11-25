@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56441);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42308);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::GetPlayerCharacter(class APlayerCharacter** PlayerCharacter)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56440);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42307);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_NVG_AnimGraphNode_ModifyBone_4369C15F4C1308D1A6E87DB0C364A0F1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56439);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42306);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56438);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42305);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::AnimNotify_HideFPMesh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56437);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42304);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::AnimNotify_ShowFPMesh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56436);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42303);
 		
 		struct
 		{
@@ -160,7 +160,7 @@ namespace SDK
 	 */
 	void UANIMBP_NVG_C::ExecuteUbergraph_ANIMBP_NVG(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56435);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42302);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_NVG_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56434);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42301);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -418,7 +418,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.Transform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     InTransform                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     InTransform                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bFormat                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -427,13 +427,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::Transform(const struct PCoreUObject_FTransform& InTransform, const class FString& Prefix, bool bFormat, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	void ULog::Transform(const struct FTransform& InTransform, const class FString& Prefix, bool bFormat, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12861);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     InTransform;
+			struct FTransform                     InTransform;
 			class FString                                      Prefix;
 			bool                                               bFormat;
 			ELoggingOptions                                    LoggingOption;
@@ -806,7 +806,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.Quat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FQuat                          Quaternion                                                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Quaternion                                                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCompact                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Suffix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -816,13 +816,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::Quat(const struct PCoreUObject_FQuat& Quaternion, bool bCompact, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	void ULog::Quat(const struct FQuat& Quaternion, bool bCompact, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12852);
 		
 		struct
 		{
-			struct PCoreUObject_FQuat                          Quaternion;
+			struct FQuat                          Quaternion;
 			bool                                               bCompact;
 			unsigned char                                      UnknownData_0029[0x7];
 			class FString                                      Prefix;
@@ -2121,7 +2121,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.DateTime
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FDateTime                      InDateTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      InDateTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Suffix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2130,13 +2130,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::DateTime(const struct PCoreUObject_FDateTime& InDateTime, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	void ULog::DateTime(const struct FDateTime& InDateTime, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12818);
 		
 		struct
 		{
-			struct PCoreUObject_FDateTime                      InDateTime;
+			struct FDateTime                      InDateTime;
 			class FString                                      Prefix;
 			class FString                                      Suffix;
 			ELoggingOptions                                    LoggingOption;
@@ -2623,8 +2623,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertValue_DateTime
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FDateTime                      Actual                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      Expected                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      Actual                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      Expected                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EDebugLogComparisonMethod                          ShouldBe                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2634,14 +2634,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertValue_DateTime(const struct PCoreUObject_FDateTime& Actual, const struct PCoreUObject_FDateTime& Expected, EDebugLogComparisonMethod ShouldBe, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertValue_DateTime(const struct FDateTime& Actual, const struct FDateTime& Expected, EDebugLogComparisonMethod ShouldBe, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12804);
 		
 		struct
 		{
-			struct PCoreUObject_FDateTime                      Actual;
-			struct PCoreUObject_FDateTime                      Expected;
+			struct FDateTime                      Actual;
+			struct FDateTime                      Expected;
 			EDebugLogComparisonMethod                          ShouldBe;
 			unsigned char                                      UnknownData_0088[0x7];
 			class FString                                      Message;
@@ -2774,8 +2774,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertNotEqual_Transform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bNoScale                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2785,14 +2785,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertNotEqual_Transform(const struct PCoreUObject_FTransform& Actual, const struct PCoreUObject_FTransform& Expected, const class FString& Message, bool bNoScale, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertNotEqual_Transform(const struct FTransform& Actual, const struct FTransform& Expected, const class FString& Message, bool bNoScale, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12801);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     Actual;
-			struct PCoreUObject_FTransform                     Expected;
+			struct FTransform                     Actual;
+			struct FTransform                     Expected;
 			class FString                                      Message;
 			bool                                               bNoScale;
 			bool                                               bCrashOnFailure;
@@ -2924,8 +2924,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertNotEqual_Quat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FQuat                          Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FQuat                          Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2934,14 +2934,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertNotEqual_Quat(const struct PCoreUObject_FQuat& Actual, const struct PCoreUObject_FQuat& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertNotEqual_Quat(const struct FQuat& Actual, const struct FQuat& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12798);
 		
 		struct
 		{
-			struct PCoreUObject_FQuat                          Actual;
-			struct PCoreUObject_FQuat                          Expected;
+			struct FQuat                          Actual;
+			struct FQuat                          Expected;
 			class FString                                      Message;
 			bool                                               bCrashOnFailure;
 			ELoggingOptions                                    LoggingOption;
@@ -3071,8 +3071,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertNotEqual_Color
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FColor                         Actual                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         Expected                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         Actual                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         Expected                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3081,14 +3081,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertNotEqual_Color(const struct PCoreUObject_FColor& Actual, const struct PCoreUObject_FColor& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertNotEqual_Color(const struct FColor& Actual, const struct FColor& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12795);
 		
 		struct
 		{
-			struct PCoreUObject_FColor                         Actual;
-			struct PCoreUObject_FColor                         Expected;
+			struct FColor                         Actual;
+			struct FColor                         Expected;
 			class FString                                      Message;
 			bool                                               bCrashOnFailure;
 			ELoggingOptions                                    LoggingOption;
@@ -3218,8 +3218,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertEqual_Transform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bNoScale                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3229,14 +3229,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertEqual_Transform(const struct PCoreUObject_FTransform& Actual, const struct PCoreUObject_FTransform& Expected, const class FString& Message, bool bNoScale, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertEqual_Transform(const struct FTransform& Actual, const struct FTransform& Expected, const class FString& Message, bool bNoScale, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12792);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     Actual;
-			struct PCoreUObject_FTransform                     Expected;
+			struct FTransform                     Actual;
+			struct FTransform                     Expected;
 			class FString                                      Message;
 			bool                                               bNoScale;
 			bool                                               bCrashOnFailure;
@@ -3368,8 +3368,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertEqual_Quat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FQuat                          Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FQuat                          Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Actual                                                     (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          Expected                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3378,14 +3378,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertEqual_Quat(const struct PCoreUObject_FQuat& Actual, const struct PCoreUObject_FQuat& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertEqual_Quat(const struct FQuat& Actual, const struct FQuat& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12789);
 		
 		struct
 		{
-			struct PCoreUObject_FQuat                          Actual;
-			struct PCoreUObject_FQuat                          Expected;
+			struct FQuat                          Actual;
+			struct FQuat                          Expected;
 			class FString                                      Message;
 			bool                                               bCrashOnFailure;
 			ELoggingOptions                                    LoggingOption;
@@ -3613,8 +3613,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertEqual_DateTime
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FDateTime                      Actual                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      Expected                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      Actual                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      Expected                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3623,14 +3623,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertEqual_DateTime(const struct PCoreUObject_FDateTime& Actual, const struct PCoreUObject_FDateTime& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertEqual_DateTime(const struct FDateTime& Actual, const struct FDateTime& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12784);
 		
 		struct
 		{
-			struct PCoreUObject_FDateTime                      Actual;
-			struct PCoreUObject_FDateTime                      Expected;
+			struct FDateTime                      Actual;
+			struct FDateTime                      Expected;
 			class FString                                      Message;
 			bool                                               bCrashOnFailure;
 			ELoggingOptions                                    LoggingOption;
@@ -3662,8 +3662,8 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.AssertEqual_Color
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FColor                         Actual                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         Expected                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         Actual                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         Expected                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Message                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCrashOnFailure                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3672,14 +3672,14 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool ULog::AssertEqual_Color(const struct PCoreUObject_FColor& Actual, const struct PCoreUObject_FColor& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
+	bool ULog::AssertEqual_Color(const struct FColor& Actual, const struct FColor& Expected, const class FString& Message, bool bCrashOnFailure, ELoggingOptions LoggingOption, float TimeToDisplay, const class FName& ViewportKeyName, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12783);
 		
 		struct
 		{
-			struct PCoreUObject_FColor                         Actual;
-			struct PCoreUObject_FColor                         Expected;
+			struct FColor                         Actual;
+			struct FColor                         Expected;
 			class FString                                      Message;
 			bool                                               bCrashOnFailure;
 			ELoggingOptions                                    LoggingOption;
@@ -3989,7 +3989,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.Array_Transform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TArray<struct PCoreUObject_FTransform>             inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FTransform>             inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Suffix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3997,13 +3997,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::Array_Transform(TArray<struct PCoreUObject_FTransform> inArray, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
+	void ULog::Array_Transform(TArray<struct FTransform> inArray, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12776);
 		
 		struct
 		{
-			TArray<struct PCoreUObject_FTransform>             inArray;
+			TArray<struct FTransform>             inArray;
 			class FString                                      Prefix;
 			class FString                                      Suffix;
 			ELoggingOptions                                    LoggingOption;
@@ -4153,7 +4153,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.Array_Quat
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TArray<struct PCoreUObject_FQuat>                  inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FQuat>                  inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCompact                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Suffix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4162,13 +4162,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::Array_Quat(TArray<struct PCoreUObject_FQuat> inArray, bool bCompact, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
+	void ULog::Array_Quat(TArray<struct FQuat> inArray, bool bCompact, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12772);
 		
 		struct
 		{
-			TArray<struct PCoreUObject_FQuat>                  inArray;
+			TArray<struct FQuat>                  inArray;
 			bool                                               bCompact;
 			unsigned char                                      UnknownData_0127[0x7];
 			class FString                                      Prefix;
@@ -4397,7 +4397,7 @@ namespace SDK
 	 * 		Name   -> Function Debug.Log.Array_DateTime
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TArray<struct PCoreUObject_FDateTime>              inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FDateTime>              inArray                                                    (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Prefix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		class FString                                      Suffix                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ELoggingOptions                                    LoggingOption                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4405,13 +4405,13 @@ namespace SDK
 	 * 		class UObject*                                     ContextObject                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ULog::Array_DateTime(TArray<struct PCoreUObject_FDateTime> inArray, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
+	void ULog::Array_DateTime(TArray<struct FDateTime> inArray, const class FString& Prefix, const class FString& Suffix, ELoggingOptions LoggingOption, float TimeToDisplay, class UObject* ContextObject)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12766);
 		
 		struct
 		{
-			TArray<struct PCoreUObject_FDateTime>              inArray;
+			TArray<struct FDateTime>              inArray;
 			class FString                                      Prefix;
 			class FString                                      Suffix;
 			ELoggingOptions                                    LoggingOption;

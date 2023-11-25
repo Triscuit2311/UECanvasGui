@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,61 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMatineeCameraShakePattern.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMatineeCameraShakePattern::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(508);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayCameras.MatineeCameraShakeFunctionLibrary.Conv_MatineeCameraShake
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UCameraShakeBase*                            CameraShake                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMatineeCameraShake*                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMatineeCameraShake* UMatineeCameraShakeFunctionLibrary::Conv_MatineeCameraShake(class UCameraShakeBase* CameraShake)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13889);
-		
-		struct
-		{
-			class UCameraShakeBase*                            CameraShake;
-			class UMatineeCameraShake*                         ReturnValue;
-		} params;
-		params.CameraShake = CameraShake;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMatineeCameraShakeFunctionLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMatineeCameraShakeFunctionLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(512);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -96,28 +41,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPerlinNoiseCameraShakePattern.StaticClass
+	 * 		Name   -> PredefinedFunction UTestCameraShake.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPerlinNoiseCameraShakePattern::StaticClass()
+	UClass* UTestCameraShake::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(513);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWaveOscillatorCameraShakePattern.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWaveOscillatorCameraShakePattern::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(514);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(502);
 		return ptr;
 	}
 
@@ -138,28 +69,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTestCameraShake.StaticClass
+	 * 		Name   -> PredefinedFunction UMatineeCameraShakePattern.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UTestCameraShake::StaticClass()
+	UClass* UMatineeCameraShakePattern::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(502);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMatineeCameraShakeEvaluator.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneMatineeCameraShakeEvaluator::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(511);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(508);
 		return ptr;
 	}
 
@@ -381,6 +298,89 @@ namespace SDK
 	UClass* UMatineeCameraShake::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(507);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMatineeCameraShakeEvaluator.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMatineeCameraShakeEvaluator::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(511);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayCameras.MatineeCameraShakeFunctionLibrary.Conv_MatineeCameraShake
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UCameraShakeBase*                            CameraShake                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMatineeCameraShake*                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMatineeCameraShake* UMatineeCameraShakeFunctionLibrary::Conv_MatineeCameraShake(class UCameraShakeBase* CameraShake)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13889);
+		
+		struct
+		{
+			class UCameraShakeBase*                            CameraShake;
+			class UMatineeCameraShake*                         ReturnValue;
+		} params;
+		params.CameraShake = CameraShake;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMatineeCameraShakeFunctionLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMatineeCameraShakeFunctionLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(512);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPerlinNoiseCameraShakePattern.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPerlinNoiseCameraShakePattern::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(513);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWaveOscillatorCameraShakePattern.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWaveOscillatorCameraShakePattern::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(514);
 		return ptr;
 	}
 

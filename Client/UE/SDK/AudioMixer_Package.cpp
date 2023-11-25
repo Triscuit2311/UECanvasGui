@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -779,20 +779,6 @@ namespace SDK
 	UClass* UQuartzSubsystem::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2093);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USynthSound.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USynthSound::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2096);
 		return ptr;
 	}
 
@@ -2886,6 +2872,20 @@ namespace SDK
 	UClass* USubmixEffectReverbPreset::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2092);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USynthSound.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USynthSound::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2096);
 		return ptr;
 	}
 

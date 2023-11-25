@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_StandardText_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49079);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36535);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_StandardText_C::ExecuteUbergraph_W_StandardText(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49078);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36534);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_StandardText_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(49077);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36533);
 		return ptr;
 	}
 

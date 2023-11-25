@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,16 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
+	 * Enum Slate.ETextWrappingPolicy
+	 */
+	enum class ETextWrappingPolicy : uint8_t
+	{
+		DefaultWrapping           = 0,
+		AllowPerCharacterWrapping = 1,
+		MAX                       = 2
+	};
+
+	/**
 	 * Enum Slate.ETextJustify
 	 */
 	enum class ETextJustify : uint8_t
@@ -23,16 +33,6 @@ namespace SDK
 		Center = 1,
 		Right  = 2,
 		MAX    = 3
-	};
-
-	/**
-	 * Enum Slate.ETextWrappingPolicy
-	 */
-	enum class ETextWrappingPolicy : uint8_t
-	{
-		DefaultWrapping           = 0,
-		AllowPerCharacterWrapping = 1,
-		MAX                       = 2
 	};
 
 	/**

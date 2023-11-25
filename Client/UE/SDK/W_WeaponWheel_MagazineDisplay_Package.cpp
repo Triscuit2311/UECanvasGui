@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::PopulateSlotIndexToMagsMap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90204);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90297);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	int32_t UW_WeaponWheel_MagazineDisplay_C::GetMaxSlots()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90203);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90296);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	class UW_WeaponWheel_MagazineSlot_C* UW_WeaponWheel_MagazineDisplay_C::CreateMagSlot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90202);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90295);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::UpdateMagIcon(int32_t MagIndex, float CurrentAmmo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90201);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90294);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::Initialize(class ABaseMagazineWeapon* InMagazineWeapon, float IconSize)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90200);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90293);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::CreateMags()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90199);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90292);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::CreateMagOutline(class UW_WeaponWheel_MagazineSlot_C** MagSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90198);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90291);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::CreateMag(class UW_WeaponWheel_MagazineSlot_C** MagSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90197);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90290);
 		
 		struct
 		{
@@ -218,7 +218,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90289);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90195);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90288);
 		
 		struct
 		{
@@ -268,7 +268,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MagazineDisplay_C::ExecuteUbergraph_W_WeaponWheel_MagazineDisplay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90194);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90287);
 		
 		struct
 		{
@@ -291,7 +291,7 @@ namespace SDK
 	 */
 	UClass* UW_WeaponWheel_MagazineDisplay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90193);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90286);
 		return ptr;
 	}
 

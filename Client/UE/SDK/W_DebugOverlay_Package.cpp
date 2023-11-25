@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::HideDebugElements()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90023);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90116);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::UpdateDebugPanel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90022);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90115);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90021);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90114);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90020);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90113);
 		
 		struct
 		{
@@ -106,7 +106,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90019);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90112);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::ShowBounceVertical()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90018);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90111);
 		
 		struct
 		{
@@ -152,7 +152,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::HideBounceVertical()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90017);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90110);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90016);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90109);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	void UW_DebugOverlay_C::ExecuteUbergraph_W_DebugOverlay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90015);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90108);
 		
 		struct
 		{
@@ -218,7 +218,7 @@ namespace SDK
 	 */
 	UClass* UW_DebugOverlay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90014);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90107);
 		return ptr;
 	}
 

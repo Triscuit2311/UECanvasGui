@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -22,7 +22,7 @@ namespace SDK
 	{
 	public:
 		bool PutSecureVector(const class FString& Key, const struct FVector& DataToStore);
-		bool PutSecureTransform(const class FString& Key, const struct PCoreUObject_FTransform& DataToStore);
+		bool PutSecureTransform(const class FString& Key, const struct FTransform& DataToStore);
 		bool PutSecureString(const class FString& Key, const class FString& DataToStore);
 		bool PutSecureSaveGame(const class FString& Key, class USaveGame* ObjectToStore);
 		bool PutSecureRotator(const class FString& Key, const struct FRotator& DataToStore);
@@ -33,7 +33,7 @@ namespace SDK
 		bool PutSecureBool(const class FString& Key, bool DataToStore);
 		bool PutSecureArray(const class FString& Key, TArray<int32_t> DataToStore);
 		bool GetSecureVector(const class FString& Key, struct FVector* DataToRetrieve);
-		bool GetSecureTransform(const class FString& Key, struct PCoreUObject_FTransform* DataToRetrieve);
+		bool GetSecureTransform(const class FString& Key, struct FTransform* DataToRetrieve);
 		bool GetSecureString(const class FString& Key, class FString* DataToRetrieve);
 		bool GetSecureSaveGame(const class FString& Key, class USaveGame** ObjectToRetrieve);
 		bool GetSecureRotator(const class FString& Key, struct FRotator* DataToRetrieve);

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool UAG_AIConfigValue_TimeSinceGameStart_C::CanOpen(const struct FAIActionDecisionContext& Context)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(128527);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(113119);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	UClass* UAG_AIConfigValue_TimeSinceGameStart_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(128528);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(113120);
 		return ptr;
 	}
 

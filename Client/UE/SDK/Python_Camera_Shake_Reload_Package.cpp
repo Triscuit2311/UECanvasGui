@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UPython_Camera_Shake_Reload_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91790);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91883);
 		return ptr;
 	}
 

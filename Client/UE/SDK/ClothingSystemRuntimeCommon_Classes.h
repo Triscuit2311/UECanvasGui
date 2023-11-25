@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -35,6 +35,27 @@ namespace SDK
 	};
 
 	/**
+	 * Class ClothingSystemRuntimeCommon.ClothingAssetCommon
+	 * Size -> 0x00A8 (FullSize[0x00F0] - InheritedSize[0x0048])
+	 */
+	class UClothingAssetCommon : public UClothingAssetBase
+	{
+	public:
+		class UPhysicsAsset*                                         PhysicsAsset;                                            // 0x0048(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TMap<class FName, class UClothConfigBase*>                   ClothConfigs;                                            // 0x0050(0x0050) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, EditFixedSize, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic
+		TArray<struct FClothLODDataCommon>                           LODData;                                                 // 0x00A0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<int32_t>                                              LodMap;                                                  // 0x00B0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class FName>                                          UsedBoneNames;                                           // 0x00C0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<int32_t>                                              UsedBoneIndices;                                         // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int32_t                                                      ReferenceBoneIndex;                                      // 0x00E0(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UClothingAssetCustomData*                              CustomData;                                              // 0x00E8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
 	 * Size -> 0x0160 (FullSize[0x0188] - InheritedSize[0x0028])
 	 */
@@ -56,27 +77,6 @@ namespace SDK
 	 */
 	class UClothingAssetCustomData : public UObject
 	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ClothingSystemRuntimeCommon.ClothingAssetCommon
-	 * Size -> 0x00A8 (FullSize[0x00F0] - InheritedSize[0x0048])
-	 */
-	class UClothingAssetCommon : public UClothingAssetBase
-	{
-	public:
-		class UPhysicsAsset*                                         PhysicsAsset;                                            // 0x0048(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FName, class UClothConfigBase*>                   ClothConfigs;                                            // 0x0050(0x0050) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, EditFixedSize, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic
-		TArray<struct FClothLODDataCommon>                           LODData;                                                 // 0x00A0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<int32_t>                                              LodMap;                                                  // 0x00B0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class FName>                                          UsedBoneNames;                                           // 0x00C0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<int32_t>                                              UsedBoneIndices;                                         // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		int32_t                                                      ReferenceBoneIndex;                                      // 0x00E0(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00E4(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UClothingAssetCustomData*                              CustomData;                                              // 0x00E8(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
 	public:
 		static UClass* StaticClass();
 	};

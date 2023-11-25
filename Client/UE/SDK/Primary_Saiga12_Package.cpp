@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void APrimary_Saiga12_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46424);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34535);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void APrimary_Saiga12_C::ExecuteUbergraph_Primary_Saiga12(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46423);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34534);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* APrimary_Saiga12_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(46422);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(34533);
 		return ptr;
 	}
 

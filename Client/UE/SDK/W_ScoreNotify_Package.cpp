@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::DestroyWidget()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30493);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::OnInitialized()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28614);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30492);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::PlayRewardAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28613);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30491);
 		
 		struct
 		{
@@ -84,7 +84,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28612);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30490);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::InitScoreData(const class FText& InScoreText, int32_t InScore, bool bGive)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28611);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30489);
 		
 		struct
 		{
@@ -139,7 +139,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28610);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30488);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28609);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30487);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28608);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30486);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_ScoreNotify_C::ExecuteUbergraph_W_ScoreNotify(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28607);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30485);
 		
 		struct
 		{
@@ -231,7 +231,7 @@ namespace SDK
 	 */
 	UClass* UW_ScoreNotify_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28606);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30484);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UG19_Camera_Reload_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45112);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33241);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UG19_Camera_Reload_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(45111);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(33240);
 		return ptr;
 	}
 

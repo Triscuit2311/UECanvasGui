@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,36 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class PhysXVehicles.TireConfig
+	 * Size -> 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
+	 */
+	class UTireConfig : public UDataAsset
+	{
+	public:
+		float                                                        FrictionScale;                                           // 0x0030(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FTireConfigMaterialFriction>                   TireFrictionScales;                                      // 0x0038(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0048(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class PhysXVehicles.WheeledVehicle
+	 * Size -> 0x0010 (FullSize[0x0290] - InheritedSize[0x0280])
+	 */
+	class AWheeledVehicle : public APawn
+	{
+	public:
+		class USkeletalMeshComponent*                                Mesh;                                                    // 0x0280(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class UWheeledVehicleMovementComponent*                      VehicleMovement;                                         // 0x0288(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+
+	public:
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class PhysXVehicles.WheeledVehicleMovementComponent
 	 * Size -> 0x0158 (FullSize[0x0290] - InheritedSize[0x0138])
@@ -109,29 +139,17 @@ namespace SDK
 	};
 
 	/**
-	 * Class PhysXVehicles.SimpleWheeledVehicleMovementComponent
-	 * Size -> 0x0000 (FullSize[0x0290] - InheritedSize[0x0290])
+	 * Class PhysXVehicles.WheeledVehicleMovementComponent4W
+	 * Size -> 0x0178 (FullSize[0x0408] - InheritedSize[0x0290])
 	 */
-	class USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent
+	class UWheeledVehicleMovementComponent4W : public UWheeledVehicleMovementComponent
 	{
 	public:
-		void SetSteerAngle(float SteerAngle, int32_t WheelIndex);
-		void SetDriveTorque(float DriveTorque, int32_t WheelIndex);
-		void SetBrakeTorque(float BrakeTorque, int32_t WheelIndex);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class PhysXVehicles.TireConfig
-	 * Size -> 0x0020 (FullSize[0x0050] - InheritedSize[0x0030])
-	 */
-	class UTireConfig : public UDataAsset
-	{
-	public:
-		float                                                        FrictionScale;                                           // 0x0030(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FTireConfigMaterialFriction>                   TireFrictionScales;                                      // 0x0038(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0048(0x0008) MISSED OFFSET (PADDING)
+		struct FVehicleEngineData                                    EngineSetup;                                             // 0x0290(0x00A0) Edit, NativeAccessSpecifierPublic
+		struct FVehicleDifferential4WData                            DifferentialSetup;                                       // 0x0330(0x001C) Edit, NoDestructor, NativeAccessSpecifierPublic
+		float                                                        AckermannAccuracy;                                       // 0x034C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVehicleTransmissionData                              TransmissionSetup;                                       // 0x0350(0x0030) Edit, NativeAccessSpecifierPublic
+		struct FRuntimeFloatCurve                                    SteeringCurve;                                           // 0x0380(0x0088) Edit, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -211,33 +229,15 @@ namespace SDK
 	};
 
 	/**
-	 * Class PhysXVehicles.WheeledVehicle
-	 * Size -> 0x0010 (FullSize[0x0290] - InheritedSize[0x0280])
+	 * Class PhysXVehicles.SimpleWheeledVehicleMovementComponent
+	 * Size -> 0x0000 (FullSize[0x0290] - InheritedSize[0x0290])
 	 */
-	class AWheeledVehicle : public APawn
+	class USimpleWheeledVehicleMovementComponent : public UWheeledVehicleMovementComponent
 	{
 	public:
-		class USkeletalMeshComponent*                                Mesh;                                                    // 0x0280(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class UWheeledVehicleMovementComponent*                      VehicleMovement;                                         // 0x0288(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class PhysXVehicles.WheeledVehicleMovementComponent4W
-	 * Size -> 0x0178 (FullSize[0x0408] - InheritedSize[0x0290])
-	 */
-	class UWheeledVehicleMovementComponent4W : public UWheeledVehicleMovementComponent
-	{
-	public:
-		struct FVehicleEngineData                                    EngineSetup;                                             // 0x0290(0x00A0) Edit, NativeAccessSpecifierPublic
-		struct FVehicleDifferential4WData                            DifferentialSetup;                                       // 0x0330(0x001C) Edit, NoDestructor, NativeAccessSpecifierPublic
-		float                                                        AckermannAccuracy;                                       // 0x034C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVehicleTransmissionData                              TransmissionSetup;                                       // 0x0350(0x0030) Edit, NativeAccessSpecifierPublic
-		struct FRuntimeFloatCurve                                    SteeringCurve;                                           // 0x0380(0x0088) Edit, NativeAccessSpecifierPublic
-
-	public:
+		void SetSteerAngle(float SteerAngle, int32_t WheelIndex);
+		void SetDriveTorque(float DriveTorque, int32_t WheelIndex);
+		void SetBrakeTorque(float BrakeTorque, int32_t WheelIndex);
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::Populate(TArray<struct FST_ItemEffects>* Effects)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27344);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46490);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::GetIsNullAttachment(class UWeaponAttachment* AttachmentData, bool* IsNull)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27343);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46489);
 		
 		struct
 		{
@@ -76,7 +76,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::Finished_001C63E74329714F2226218E06608382()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27342);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46488);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27341);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46487);
 		
 		struct
 		{
@@ -125,7 +125,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27340);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46486);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27339);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46485);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27338);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46484);
 		
 		struct
 		{
@@ -197,7 +197,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27337);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46483);
 		
 		struct
 		{
@@ -221,7 +221,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27336);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46482);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27335);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46481);
 		
 		struct
 		{
@@ -266,7 +266,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::RefreshList(TArray<struct FST_ItemEffects>* Effects)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27334);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46480);
 		
 		struct
 		{
@@ -292,7 +292,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27333);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46479);
 		
 		struct
 		{
@@ -316,7 +316,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::ExecuteUbergraph_W_LoadoutInfo_EffectsList(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27332);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46478);
 		
 		struct
 		{
@@ -340,7 +340,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::OnAttachmentItemClicked__DelegateSignature(class UW_LoadoutInfo_AttachmentListEntry_C* TriggeringListEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27331);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46477);
 		
 		struct
 		{
@@ -364,7 +364,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_EffectsList_C::OnModifyWeaponButtonClick__DelegateSignature(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27330);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46476);
 		
 		struct
 		{
@@ -387,7 +387,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutInfo_EffectsList_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27329);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46475);
 		return ptr;
 	}
 

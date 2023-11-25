@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetAmmoCategoryText(class UObject* ItemData, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49114);
 		
 		struct
 		{
@@ -55,7 +55,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::UpdateCurrent_LoadoutUI_Slot(class UObject* WorldContextObject, class UW_LoadoutSlot_C* CurrentSlot, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49113);
 		
 		struct
 		{
@@ -85,7 +85,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetItemType(class ABaseItem* BaseItemClass, class UObject* __WorldContext, EItemType* ItemType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49112);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetItemDataTableInfo(class ABaseItem* BaseItemClass, class UObject* __WorldContext, bool* DataFound, struct FItemLookupTable* ItemLookupData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49111);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetAttachmentSlotText(EWeaponAttachmentType AttachmentType, class UObject* __WorldContext, class FText* SlotText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28220);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49110);
 		
 		struct
 		{
@@ -188,7 +188,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetItemClassText(EItemClass ItemCategory, class UObject* __WorldContext, class FText* CategoryText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28219);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49109);
 		
 		struct
 		{
@@ -221,7 +221,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::GetLoadoutCategoryText(EItemCategory ItemCategory, class UObject* __WorldContext, class FText* CategoryText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28218);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49108);
 		
 		struct
 		{
@@ -256,7 +256,7 @@ namespace SDK
 	 */
 	void UBPF_UI_C::RemoveSpacesFromString(const class FString& String, class UObject* __WorldContext, class FString* ReturnString, class FText* ReturnText, class FName* ReturnName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28217);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49107);
 		
 		struct
 		{
@@ -291,7 +291,7 @@ namespace SDK
 	 */
 	UClass* UBPF_UI_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28216);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49106);
 		return ptr;
 	}
 

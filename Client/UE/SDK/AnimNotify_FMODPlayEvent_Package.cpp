@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	class FString UAnimNotify_FMODPlayEvent_C::GetNotifyName()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37211);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41266);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	bool UAnimNotify_FMODPlayEvent_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37210);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41265);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	UClass* UAnimNotify_FMODPlayEvent_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(37209);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(41264);
 		return ptr;
 	}
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,44 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class CinematicCamera.CineCameraComponent
-	 * Size -> 0x0100 (FullSize[0x08D0] - InheritedSize[0x07D0])
-	 */
-	class UCineCameraComponent : public UCameraComponent
-	{
-	public:
-		struct FCameraFilmbackSettings                               FilmbackSettings;                                        // 0x07D0(0x000C) Deprecated, NoDestructor, NativeAccessSpecifierPublic
-		struct FCameraFilmbackSettings                               Filmback;                                                // 0x07DC(0x000C) Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic
-		struct FCameraLensSettings                                   LensSettings;                                            // 0x07E8(0x0018) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FCameraFocusSettings                                  FocusSettings;                                           // 0x0800(0x0058) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		float                                                        CurrentFocalLength;                                      // 0x0858(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CurrentAperture;                                         // 0x085C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CurrentFocusDistance;                                    // 0x0860(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0864(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FNamedFilmbackPreset>                          FilmbackPresets;                                         // 0x0870(0x0010) ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected
-		TArray<struct FNamedLensPreset>                              LensPresets;                                             // 0x0880(0x0010) ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected
-		class FString                                                DefaultFilmbackPresetName;                               // 0x0890(0x0010) ZeroConstructor, Config, Deprecated, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		class FString                                                DefaultFilmbackPreset;                                   // 0x08A0(0x0010) ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		class FString                                                DefaultLensPresetName;                                   // 0x08B0(0x0010) ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        DefaultLensFocalLength;                                  // 0x08C0(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        DefaultLensFStop;                                        // 0x08C4(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x08C8(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		void SetLensPresetByName(const class FString& InPresetName);
-		void SetFilmbackPresetByName(const class FString& InPresetName);
-		void SetCurrentFocalLength(float InFocalLength);
-		float GetVerticalFieldOfView();
-		TArray<struct FNamedLensPreset> GetLensPresetsCopy();
-		class FString GetLensPresetName();
-		float GetHorizontalFieldOfView();
-		TArray<struct FNamedFilmbackPreset> GetFilmbackPresetsCopy();
-		class FString GetFilmbackPresetName();
-		class FString GetDefaultFilmbackPresetName();
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class CinematicCamera.CameraRig_Crane
 	 * Size -> 0x0030 (FullSize[0x0250] - InheritedSize[0x0220])
@@ -105,6 +67,44 @@ namespace SDK
 
 	public:
 		class UCineCameraComponent* GetCineCameraComponent();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class CinematicCamera.CineCameraComponent
+	 * Size -> 0x0100 (FullSize[0x08D0] - InheritedSize[0x07D0])
+	 */
+	class UCineCameraComponent : public UCameraComponent
+	{
+	public:
+		struct FCameraFilmbackSettings                               FilmbackSettings;                                        // 0x07D0(0x000C) Deprecated, NoDestructor, NativeAccessSpecifierPublic
+		struct FCameraFilmbackSettings                               Filmback;                                                // 0x07DC(0x000C) Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic
+		struct FCameraLensSettings                                   LensSettings;                                            // 0x07E8(0x0018) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FCameraFocusSettings                                  FocusSettings;                                           // 0x0800(0x0058) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		float                                                        CurrentFocalLength;                                      // 0x0858(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CurrentAperture;                                         // 0x085C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CurrentFocusDistance;                                    // 0x0860(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0864(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FNamedFilmbackPreset>                          FilmbackPresets;                                         // 0x0870(0x0010) ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected
+		TArray<struct FNamedLensPreset>                              LensPresets;                                             // 0x0880(0x0010) ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected
+		class FString                                                DefaultFilmbackPresetName;                               // 0x0890(0x0010) ZeroConstructor, Config, Deprecated, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		class FString                                                DefaultFilmbackPreset;                                   // 0x08A0(0x0010) ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		class FString                                                DefaultLensPresetName;                                   // 0x08B0(0x0010) ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        DefaultLensFocalLength;                                  // 0x08C0(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        DefaultLensFStop;                                        // 0x08C4(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x08C8(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		void SetLensPresetByName(const class FString& InPresetName);
+		void SetFilmbackPresetByName(const class FString& InPresetName);
+		void SetCurrentFocalLength(float InFocalLength);
+		float GetVerticalFieldOfView();
+		TArray<struct FNamedLensPreset> GetLensPresetsCopy();
+		class FString GetLensPresetName();
+		float GetHorizontalFieldOfView();
+		TArray<struct FNamedFilmbackPreset> GetFilmbackPresetsCopy();
+		class FString GetFilmbackPresetName();
+		class FString GetDefaultFilmbackPresetName();
 		static UClass* StaticClass();
 	};
 

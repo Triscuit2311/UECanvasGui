@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AHelmet_NVG_V2_C::OnNightvisionDeactivated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57489);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43251);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void AHelmet_NVG_V2_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57488);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43250);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void AHelmet_NVG_V2_C::OnNightvisionActivated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57487);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43249);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void AHelmet_NVG_V2_C::ExecuteUbergraph_Helmet_NVG_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57486);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43248);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	UClass* AHelmet_NVG_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57485);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43247);
 		return ptr;
 	}
 

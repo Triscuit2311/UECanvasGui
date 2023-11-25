@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -48,6 +48,73 @@ namespace SDK
 	};
 
 	/**
+	 * Class SequencerScripting.MovieSceneScriptingByteChannel
+	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 */
+	class UMovieSceneScriptingByteChannel : public UMovieSceneScriptingChannel
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
+	public:
+		void SetDefault(uint8_t InDefaultValue);
+		void RemoveKey(class UMovieSceneScriptingKey* Key);
+		void RemoveDefault();
+		bool HasDefault();
+		TArray<class UMovieSceneScriptingKey*> GetKeys();
+		uint8_t GetDefault();
+		class UMovieSceneScriptingByteKey* AddKey(const struct FFrameNumber& InTime, uint8_t NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneScriptingKey
+	 * Size -> 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
+	 */
+	class UMovieSceneScriptingKey : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0028(0x0018) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneScriptingBoolKey
+	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
+	 */
+	class UMovieSceneScriptingBoolKey : public UMovieSceneScriptingKey
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		void SetValue(bool InNewValue);
+		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
+		bool GetValue();
+		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneScriptingEventKey
+	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
+	 */
+	class UMovieSceneScriptingEventKey : public UMovieSceneScriptingKey
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		void SetValue(const struct FMovieSceneEvent& InNewValue);
+		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
+		struct FMovieSceneEvent GetValue();
+		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class SequencerScripting.MovieSceneBindingExtensions
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -76,142 +143,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class SequencerScripting.MovieSceneScriptingKey
-	 * Size -> 0x0018 (FullSize[0x0040] - InheritedSize[0x0028])
-	 */
-	class UMovieSceneScriptingKey : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0028(0x0018) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingByteKey
-	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
-	 */
-	class UMovieSceneScriptingByteKey : public UMovieSceneScriptingKey
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		void SetValue(uint8_t InNewValue);
-		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		uint8_t GetValue();
-		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingBoolKey
-	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
-	 */
-	class UMovieSceneScriptingBoolKey : public UMovieSceneScriptingKey
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		void SetValue(bool InNewValue);
-		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		bool GetValue();
-		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneEventTrackExtensions
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMovieSceneEventTrackExtensions : public UBlueprintFunctionLibrary
-	{
-	public:
-		class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);
-		class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingByteChannel
-	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
-	 */
-	class UMovieSceneScriptingByteChannel : public UMovieSceneScriptingChannel
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
-
-	public:
-		void SetDefault(uint8_t InDefaultValue);
-		void RemoveKey(class UMovieSceneScriptingKey* Key);
-		void RemoveDefault();
-		bool HasDefault();
-		TArray<class UMovieSceneScriptingKey*> GetKeys();
-		uint8_t GetDefault();
-		class UMovieSceneScriptingByteKey* AddKey(const struct FFrameNumber& InTime, uint8_t NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingIntegerKey
-	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
-	 */
-	class UMovieSceneScriptingIntegerKey : public UMovieSceneScriptingKey
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		void SetValue(int32_t InNewValue);
-		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		int32_t GetValue();
-		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingEventKey
-	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
-	 */
-	class UMovieSceneScriptingEventKey : public UMovieSceneScriptingKey
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		void SetValue(const struct FMovieSceneEvent& InNewValue);
-		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		struct FMovieSceneEvent GetValue();
-		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneFolderExtensions
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMovieSceneFolderExtensions : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool SetFolderName(class UMovieSceneFolder* folder, const class FName& InFolderName);
-		bool SetFolderColor(class UMovieSceneFolder* folder, const struct PCoreUObject_FColor& InFolderColor);
-		bool RemoveChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding);
-		bool RemoveChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack);
-		bool RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove);
-		class FName GetFolderName(class UMovieSceneFolder* folder);
-		struct PCoreUObject_FColor GetFolderColor(class UMovieSceneFolder* folder);
-		TArray<struct FSequencerBindingProxy> GetChildObjectBindings(class UMovieSceneFolder* folder);
-		TArray<class UMovieSceneTrack*> GetChildMasterTracks(class UMovieSceneFolder* folder);
-		TArray<class UMovieSceneFolder*> GetChildFolders(class UMovieSceneFolder* folder);
-		bool AddChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding);
-		bool AddChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack);
-		bool AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class SequencerScripting.MovieSceneScriptingIntegerChannel
 	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
 	 */
@@ -232,6 +163,29 @@ namespace SDK
 	};
 
 	/**
+	 * Class SequencerScripting.MovieSceneScriptingBoolChannel
+	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 */
+	class UMovieSceneScriptingBoolChannel : public UMovieSceneScriptingChannel
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
+	public:
+		void SetDefault(bool InDefaultValue);
+		void RemoveKey(class UMovieSceneScriptingKey* Key);
+		void RemoveDefault();
+		bool HasDefault();
+		int32_t GetNumKeys();
+		TArray<class UMovieSceneScriptingKey*> GetKeys();
+		bool GetDefault();
+		TArray<bool> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate);
+		struct FSequencerScriptingRange ComputeEffectiveRange();
+		class UMovieSceneScriptingBoolKey* AddKey(const struct FFrameNumber& InTime, bool NewValue, float SubFrame, ESequenceTimeUnit TimeUnit);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class SequencerScripting.MovieSceneScriptingEventChannel
 	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
 	 */
@@ -244,6 +198,62 @@ namespace SDK
 		void RemoveKey(class UMovieSceneScriptingKey* Key);
 		TArray<class UMovieSceneScriptingKey*> GetKeys();
 		class UMovieSceneScriptingEventKey* AddKey(const struct FFrameNumber& InTime, const struct FMovieSceneEvent& NewValue, float SubFrame, ESequenceTimeUnit TimeUnit);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneScriptingFloatChannel
+	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 */
+	class UMovieSceneScriptingFloatChannel : public UMovieSceneScriptingChannel
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
+	public:
+		void SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
+		void SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
+		void SetDefault(float InDefaultValue);
+		void RemoveKey(class UMovieSceneScriptingKey* Key);
+		void RemoveDefault();
+		bool HasDefault();
+		ERichCurveExtrapolation GetPreInfinityExtrapolation();
+		ERichCurveExtrapolation GetPostInfinityExtrapolation();
+		int32_t GetNumKeys();
+		TArray<class UMovieSceneScriptingKey*> GetKeys();
+		float GetDefault();
+		TArray<float> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate);
+		struct FSequencerScriptingRange ComputeEffectiveRange();
+		class UMovieSceneScriptingFloatKey* AddKey(const struct FFrameNumber& InTime, float NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneEventTrackExtensions
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMovieSceneEventTrackExtensions : public UBlueprintFunctionLibrary
+	{
+	public:
+		class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);
+		class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class SequencerScripting.MovieSceneScriptingObjectPathKey
+	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
+	 */
+	class UMovieSceneScriptingObjectPathKey : public UMovieSceneScriptingKey
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		void SetValue(class UObject* InNewValue);
+		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
+		class UObject* GetValue();
+		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
 		static UClass* StaticClass();
 	};
 
@@ -279,41 +289,42 @@ namespace SDK
 	};
 
 	/**
-	 * Class SequencerScripting.MovieScenePropertyTrackExtensions
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class SequencerScripting.MovieSceneScriptingByteKey
+	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
 	 */
-	class UMovieScenePropertyTrackExtensions : public UBlueprintFunctionLibrary
+	class UMovieSceneScriptingByteKey : public UMovieSceneScriptingKey
 	{
 	public:
-		void SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, const class FName& InPropertyName, const class FString& InPropertyPath);
-		void SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UObject* PropertyClass);
-		class FName GetUniqueTrackName(class UMovieScenePropertyTrack* Track);
-		class FString GetPropertyPath(class UMovieScenePropertyTrack* Track);
-		class FName GetPropertyName(class UMovieScenePropertyTrack* Track);
-		class UObject* GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track);
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		void SetValue(uint8_t InNewValue);
+		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
+		uint8_t GetValue();
+		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class SequencerScripting.MovieSceneScriptingBoolChannel
-	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 * Class SequencerScripting.MovieSceneFolderExtensions
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UMovieSceneScriptingBoolChannel : public UMovieSceneScriptingChannel
+	class UMovieSceneFolderExtensions : public UBlueprintFunctionLibrary
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
-
-	public:
-		void SetDefault(bool InDefaultValue);
-		void RemoveKey(class UMovieSceneScriptingKey* Key);
-		void RemoveDefault();
-		bool HasDefault();
-		int32_t GetNumKeys();
-		TArray<class UMovieSceneScriptingKey*> GetKeys();
-		bool GetDefault();
-		TArray<bool> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate);
-		struct FSequencerScriptingRange ComputeEffectiveRange();
-		class UMovieSceneScriptingBoolKey* AddKey(const struct FFrameNumber& InTime, bool NewValue, float SubFrame, ESequenceTimeUnit TimeUnit);
+		bool SetFolderName(class UMovieSceneFolder* folder, const class FName& InFolderName);
+		bool SetFolderColor(class UMovieSceneFolder* folder, const struct FColor& InFolderColor);
+		bool RemoveChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding);
+		bool RemoveChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack);
+		bool RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove);
+		class FName GetFolderName(class UMovieSceneFolder* folder);
+		struct FColor GetFolderColor(class UMovieSceneFolder* folder);
+		TArray<struct FSequencerBindingProxy> GetChildObjectBindings(class UMovieSceneFolder* folder);
+		TArray<class UMovieSceneTrack*> GetChildMasterTracks(class UMovieSceneFolder* folder);
+		TArray<class UMovieSceneFolder*> GetChildFolders(class UMovieSceneFolder* folder);
+		bool AddChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding);
+		bool AddChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack);
+		bool AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd);
 		static UClass* StaticClass();
 	};
 
@@ -335,18 +346,18 @@ namespace SDK
 	};
 
 	/**
-	 * Class SequencerScripting.MovieSceneScriptingObjectPathKey
+	 * Class SequencerScripting.MovieSceneScriptingIntegerKey
 	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
 	 */
-	class UMovieSceneScriptingObjectPathKey : public UMovieSceneScriptingKey
+	class UMovieSceneScriptingIntegerKey : public UMovieSceneScriptingKey
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
 
 	public:
-		void SetValue(class UObject* InNewValue);
+		void SetValue(int32_t InNewValue);
 		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		class UObject* GetValue();
+		int32_t GetValue();
 		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
 		static UClass* StaticClass();
 	};
@@ -372,46 +383,61 @@ namespace SDK
 	};
 
 	/**
-	 * Class SequencerScripting.MovieSceneScriptingFloatChannel
-	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 * Class SequencerScripting.MovieScenePropertyTrackExtensions
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UMovieSceneScriptingFloatChannel : public UMovieSceneScriptingChannel
+	class UMovieScenePropertyTrackExtensions : public UBlueprintFunctionLibrary
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
-
-	public:
-		void SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
-		void SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation);
-		void SetDefault(float InDefaultValue);
-		void RemoveKey(class UMovieSceneScriptingKey* Key);
-		void RemoveDefault();
-		bool HasDefault();
-		ERichCurveExtrapolation GetPreInfinityExtrapolation();
-		ERichCurveExtrapolation GetPostInfinityExtrapolation();
-		int32_t GetNumKeys();
-		TArray<class UMovieSceneScriptingKey*> GetKeys();
-		float GetDefault();
-		TArray<float> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate);
-		struct FSequencerScriptingRange ComputeEffectiveRange();
-		class UMovieSceneScriptingFloatKey* AddKey(const struct FFrameNumber& InTime, float NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation);
+		void SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, const class FName& InPropertyName, const class FString& InPropertyPath);
+		void SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UObject* PropertyClass);
+		class FName GetUniqueTrackName(class UMovieScenePropertyTrack* Track);
+		class FString GetPropertyPath(class UMovieScenePropertyTrack* Track);
+		class FName GetPropertyName(class UMovieScenePropertyTrack* Track);
+		class UObject* GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track);
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class SequencerScripting.MovieSceneScriptingActorReferenceKey
-	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
+	 * Class SequencerScripting.SequencerScriptingRangeExtensions
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UMovieSceneScriptingActorReferenceKey : public UMovieSceneScriptingKey
+	class USequencerScriptingRangeExtensions : public UBlueprintFunctionLibrary
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+		void SetStartSeconds(struct FSequencerScriptingRange* Range, float Start);
+		void SetStartFrame(struct FSequencerScriptingRange* Range, int32_t Start);
+		void SetEndSeconds(struct FSequencerScriptingRange* Range, float End);
+		void SetEndFrame(struct FSequencerScriptingRange* Range, int32_t End);
+		void RemoveStart(struct FSequencerScriptingRange* Range);
+		void RemoveEnd(struct FSequencerScriptingRange* Range);
+		bool HasStart(const struct FSequencerScriptingRange& Range);
+		bool HasEnd(const struct FSequencerScriptingRange& Range);
+		float GetStartSeconds(const struct FSequencerScriptingRange& Range);
+		int32_t GetStartFrame(const struct FSequencerScriptingRange& Range);
+		float GetEndSeconds(const struct FSequencerScriptingRange& Range);
+		int32_t GetEndFrame(const struct FSequencerScriptingRange& Range);
+		static UClass* StaticClass();
+	};
 
+	/**
+	 * Class SequencerScripting.MovieSceneTrackExtensions
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMovieSceneTrackExtensions : public UBlueprintFunctionLibrary
+	{
 	public:
-		void SetValue(const struct FMovieSceneObjectBindingID& InNewValue);
-		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
-		struct FMovieSceneObjectBindingID GetValue();
-		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
+		void SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder);
+		void SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);
+		void SetDisplayName(class UMovieSceneTrack* Track, const class FText& InName);
+		void SetColorTint(class UMovieSceneTrack* Track, const struct FColor& ColorTint);
+		void RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);
+		int32_t GetSortingOrder(class UMovieSceneTrack* Track);
+		class UMovieSceneSection* GetSectionToKey(class UMovieSceneTrack* Track);
+		TArray<class UMovieSceneSection*> GetSections(class UMovieSceneTrack* Track);
+		class FText GetDisplayName(class UMovieSceneTrack* Track);
+		struct FColor GetColorTint(class UMovieSceneTrack* Track);
+		class UMovieSceneSection* AddSection(class UMovieSceneTrack* Track);
 		static UClass* StaticClass();
 	};
 
@@ -439,47 +465,6 @@ namespace SDK
 		int32_t GetEndFrame(class UMovieSceneSection* Section);
 		TArray<class UMovieSceneScriptingChannel*> GetChannels(class UMovieSceneSection* Section);
 		TArray<class UMovieSceneScriptingChannel*> FindChannelsByType(class UMovieSceneSection* Section, class UMovieSceneScriptingChannel* ChannelType);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneTrackExtensions
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMovieSceneTrackExtensions : public UBlueprintFunctionLibrary
-	{
-	public:
-		void SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder);
-		void SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);
-		void SetDisplayName(class UMovieSceneTrack* Track, const class FText& InName);
-		void SetColorTint(class UMovieSceneTrack* Track, const struct PCoreUObject_FColor& ColorTint);
-		void RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section);
-		int32_t GetSortingOrder(class UMovieSceneTrack* Track);
-		class UMovieSceneSection* GetSectionToKey(class UMovieSceneTrack* Track);
-		TArray<class UMovieSceneSection*> GetSections(class UMovieSceneTrack* Track);
-		class FText GetDisplayName(class UMovieSceneTrack* Track);
-		struct PCoreUObject_FColor GetColorTint(class UMovieSceneTrack* Track);
-		class UMovieSceneSection* AddSection(class UMovieSceneTrack* Track);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class SequencerScripting.MovieSceneScriptingObjectPathChannel
-	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
-	 */
-	class UMovieSceneScriptingObjectPathChannel : public UMovieSceneScriptingChannel
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
-
-	public:
-		void SetDefault(class UObject* InDefaultValue);
-		void RemoveKey(class UMovieSceneScriptingKey* Key);
-		void RemoveDefault();
-		bool HasDefault();
-		TArray<class UMovieSceneScriptingKey*> GetKeys();
-		class UObject* GetDefault();
-		class UMovieSceneScriptingObjectPathKey* AddKey(const struct FFrameNumber& InTime, class UObject* NewValue, float SubFrame, ESequenceTimeUnit TimeUnit);
 		static UClass* StaticClass();
 	};
 
@@ -555,6 +540,23 @@ namespace SDK
 	};
 
 	/**
+	 * Class SequencerScripting.MovieSceneScriptingActorReferenceKey
+	 * Size -> 0x0020 (FullSize[0x0060] - InheritedSize[0x0040])
+	 */
+	class UMovieSceneScriptingActorReferenceKey : public UMovieSceneScriptingKey
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0040(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		void SetValue(const struct FMovieSceneObjectBindingID& InNewValue);
+		void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit);
+		struct FMovieSceneObjectBindingID GetValue();
+		struct FFrameTime GetTime(ESequenceTimeUnit TimeUnit);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class SequencerScripting.MovieSceneVectorTrackExtensions
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -567,24 +569,22 @@ namespace SDK
 	};
 
 	/**
-	 * Class SequencerScripting.SequencerScriptingRangeExtensions
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class SequencerScripting.MovieSceneScriptingObjectPathChannel
+	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
 	 */
-	class USequencerScriptingRangeExtensions : public UBlueprintFunctionLibrary
+	class UMovieSceneScriptingObjectPathChannel : public UMovieSceneScriptingChannel
 	{
 	public:
-		void SetStartSeconds(struct FSequencerScriptingRange* Range, float Start);
-		void SetStartFrame(struct FSequencerScriptingRange* Range, int32_t Start);
-		void SetEndSeconds(struct FSequencerScriptingRange* Range, float End);
-		void SetEndFrame(struct FSequencerScriptingRange* Range, int32_t End);
-		void RemoveStart(struct FSequencerScriptingRange* Range);
-		void RemoveEnd(struct FSequencerScriptingRange* Range);
-		bool HasStart(const struct FSequencerScriptingRange& Range);
-		bool HasEnd(const struct FSequencerScriptingRange& Range);
-		float GetStartSeconds(const struct FSequencerScriptingRange& Range);
-		int32_t GetStartFrame(const struct FSequencerScriptingRange& Range);
-		float GetEndSeconds(const struct FSequencerScriptingRange& Range);
-		int32_t GetEndFrame(const struct FSequencerScriptingRange& Range);
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0030(0x0030) MISSED OFFSET (PADDING)
+
+	public:
+		void SetDefault(class UObject* InDefaultValue);
+		void RemoveKey(class UMovieSceneScriptingKey* Key);
+		void RemoveDefault();
+		bool HasDefault();
+		TArray<class UMovieSceneScriptingKey*> GetKeys();
+		class UObject* GetDefault();
+		class UMovieSceneScriptingObjectPathKey* AddKey(const struct FFrameNumber& InTime, class UObject* NewValue, float SubFrame, ESequenceTimeUnit TimeUnit);
 		static UClass* StaticClass();
 	};
 

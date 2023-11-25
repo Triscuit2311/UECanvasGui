@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54061);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40716);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40715);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::AnimNotify_ArrestComplete()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40714);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::AnimNotify_PlayFootstep()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54058);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40713);
 		
 		struct
 		{
@@ -112,7 +112,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::AnimNotify_CaptureSnapshot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54057);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40712);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::AnimNotify_ExplodeVest()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54056);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40711);
 		
 		struct
 		{
@@ -154,7 +154,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_AI_MoveStyle_Base_AnimGraphNode_BlendListByBool_9528B87B43E424C25BA8BC87EBD5CF8E()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54055);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40710);
 		
 		struct
 		{
@@ -175,7 +175,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_AI_MoveStyle_Base_AnimGraphNode_BlendListByBool_96A47EA341AD120E0E97819CDA871E8B()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40709);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_AI_MoveStyle_Base_AnimGraphNode_BlendListByBool_C853EF064063205E0FAD61A2746077AB()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40708);
 		
 		struct
 		{
@@ -218,7 +218,7 @@ namespace SDK
 	 */
 	void UANIMBP_AI_MoveStyle_Base_C::ExecuteUbergraph_ANIMBP_AI_MoveStyle_Base(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40707);
 		
 		struct
 		{
@@ -242,7 +242,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_AI_MoveStyle_Base_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54051);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40706);
 		return ptr;
 	}
 

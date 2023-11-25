@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68841);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69721);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::OnLoaded_D4F5A5144B9DC22B2187F784FA6E5D04(class UObject* Loaded)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68840);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69720);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::BndEvt__SM_Glass_DM_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68839);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69719);
 		
 		struct
 		{
@@ -109,7 +109,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::FirstHitPositionObject(int32_t FirstPositionBox, int32_t TextureY, int32_t TextureX, const struct FVector& HitPosition, const struct FVector& ObjectiveDirection, float DamageRadius, bool bFirstHitCanBreakIt, float CharacterVelocityToBreak)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69718);
 		
 		struct
 		{
@@ -148,7 +148,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::DestructibleHit(const struct FVector& Location)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69717);
 		
 		struct
 		{
@@ -172,7 +172,7 @@ namespace SDK
 	 */
 	void ABP_BreakableGlass_C::ExecuteUbergraph_BP_BreakableGlass(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68836);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69716);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	UClass* ABP_BreakableGlass_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(68835);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(69715);
 		return ptr;
 	}
 

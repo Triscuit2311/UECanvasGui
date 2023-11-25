@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::CanApplyDamage(class UDamageType* InDamageType, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88210);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88222);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::ExplodeTrap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88209);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88221);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::Server_ApplyDamage(class AReadyOrNotCharacter* InTriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88208);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88220);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::OnTrapTriggered(class AReadyOrNotCharacter* TriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88207);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88219);
 		
 		struct
 		{
@@ -129,7 +129,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::ReceivePointDamage(float Damage, class UDamageType* DamageType, const struct FVector& HitLocation, const struct FVector& HitNormal, class UPrimitiveComponent* HitComponent, const class FName& BoneName, const struct FVector& ShotFromDirection, class AController* InstigatedBy, class AActor* DamageCauser, const struct FHitResult& HitInfo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88206);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88218);
 		
 		struct
 		{
@@ -178,7 +178,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::ReceiveRadialDamage(float DamageReceived, class UDamageType* DamageType, const struct FVector& Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88205);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88217);
 		
 		struct
 		{
@@ -214,7 +214,7 @@ namespace SDK
 	 */
 	void ABP_AttachedGrenadeTrap_C::ExecuteUbergraph_BP_AttachedGrenadeTrap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88204);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88216);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	UClass* ABP_AttachedGrenadeTrap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88203);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88215);
 		return ptr;
 	}
 

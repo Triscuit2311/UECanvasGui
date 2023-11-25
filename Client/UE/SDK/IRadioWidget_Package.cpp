@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void IIRadioWidget_C::Equals(const TScriptInterface<class IIRadioWidget_C>& Other, bool* Result)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28267);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30500);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	void IIRadioWidget_C::OnRadioDeselected()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28266);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30499);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void IIRadioWidget_C::OnRadioSelected()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28265);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30498);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	UClass* IIRadioWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28264);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30497);
 		return ptr;
 	}
 

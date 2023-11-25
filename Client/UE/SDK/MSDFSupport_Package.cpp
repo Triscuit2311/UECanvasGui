@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,20 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMSDFAssetData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMSDFAssetData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(465);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -70,20 +84,6 @@ namespace SDK
 	UClass* USVGToSDFFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(468);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMSDFAssetData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMSDFAssetData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(465);
 		return ptr;
 	}
 

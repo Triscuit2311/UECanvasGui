@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_Tablet_MapMarker_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55455);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30878);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	bool UW_PreMission_Tablet_MapMarker_C::HasAngleChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55454);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30877);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::HasRotation(bool* Rotates)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55453);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30876);
 		
 		struct
 		{
@@ -101,7 +101,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::SetRotation(float NewRotation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55452);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30875);
 		
 		struct
 		{
@@ -124,7 +124,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::SetStyle()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55451);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30874);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55450);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30873);
 		
 		struct
 		{
@@ -171,7 +171,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::SetupMarker(const class FName& NewParam, float NewParam2)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55449);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30872);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55448);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30871);
 		
 		struct
 		{
@@ -223,7 +223,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::BndEvt__W_PreMission_Tablet_MapMarker_Button_1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55447);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30870);
 		
 		struct
 		{
@@ -245,7 +245,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MapMarker_C::ExecuteUbergraph_W_PreMission_Tablet_MapMarker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55446);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30869);
 		
 		struct
 		{
@@ -268,7 +268,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_MapMarker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55445);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30868);
 		return ptr;
 	}
 

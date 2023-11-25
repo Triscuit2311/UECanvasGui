@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,42 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class AssetRegistry.AssetRegistryImpl
-	 * Size -> 0x0828 (FullSize[0x0850] - InheritedSize[0x0028])
-	 */
-	class UAssetRegistryImpl : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x828];                                 // 0x0028(0x0828) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AssetRegistry.AssetRegistryHelpers
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UAssetRegistryHelpers : public UObject
-	{
-	public:
-		struct FSoftObjectPath ToSoftObjectPath(const struct FAssetData& InAssetData);
-		struct FARFilter SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
-		bool IsValid(const struct FAssetData& InAssetData);
-		bool IsUAsset(const struct FAssetData& InAssetData);
-		bool IsRedirector(const struct FAssetData& InAssetData);
-		bool IsAssetLoaded(const struct FAssetData& InAssetData);
-		bool GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue);
-		class FString GetFullName(const struct FAssetData& InAssetData);
-		class FString GetExportTextName(const struct FAssetData& InAssetData);
-		class UObject* GetClass(const struct FAssetData& InAssetData);
-		TScriptInterface<class IAssetRegistry> GetAssetRegistry();
-		class UObject* GetAsset(const struct FAssetData& InAssetData);
-		struct FAssetData CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class AssetRegistry.AssetRegistry
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -77,6 +41,42 @@ namespace SDK
 		struct FAssetData GetAssetByObjectPath(const class FName& ObjectPath, bool bIncludeOnlyOnDiskAssets);
 		void GetAllCachedPaths(TArray<class FString>* OutPathList);
 		bool GetAllAssets(TArray<struct FAssetData>* OutAssetData, bool bIncludeOnlyOnDiskAssets);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AssetRegistry.AssetRegistryHelpers
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UAssetRegistryHelpers : public UObject
+	{
+	public:
+		struct FSoftObjectPath ToSoftObjectPath(const struct FAssetData& InAssetData);
+		struct FARFilter SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
+		bool IsValid(const struct FAssetData& InAssetData);
+		bool IsUAsset(const struct FAssetData& InAssetData);
+		bool IsRedirector(const struct FAssetData& InAssetData);
+		bool IsAssetLoaded(const struct FAssetData& InAssetData);
+		bool GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue);
+		class FString GetFullName(const struct FAssetData& InAssetData);
+		class FString GetExportTextName(const struct FAssetData& InAssetData);
+		class UObject* GetClass(const struct FAssetData& InAssetData);
+		TScriptInterface<class IAssetRegistry> GetAssetRegistry();
+		class UObject* GetAsset(const struct FAssetData& InAssetData);
+		struct FAssetData CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AssetRegistry.AssetRegistryImpl
+	 * Size -> 0x0828 (FullSize[0x0850] - InheritedSize[0x0028])
+	 */
+	class UAssetRegistryImpl : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x828];                                 // 0x0028(0x0828) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 

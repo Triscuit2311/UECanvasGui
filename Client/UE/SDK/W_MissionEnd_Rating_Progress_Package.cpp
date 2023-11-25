@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::SequenceEvent__ENTRYPOINTW_MissionEnd_Rating_Progress_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88625);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88630);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::UpdateSound()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88624);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88629);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::SetDebug(const class FText& DebugText1, const class FText& DebugText2, const class FText& DebugText3)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88623);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88628);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::AddToScore()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88622);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88627);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::UpdateProgressMeter(int32_t CurrentScore)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88621);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88626);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::gradeSound()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88620);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88625);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88619);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88624);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88618);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88623);
 		
 		struct
 		{
@@ -205,7 +205,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88617);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88622);
 		
 		struct
 		{
@@ -231,7 +231,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::UpdateScore(const struct FScoreGroup& ScoreData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88616);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88621);
 		
 		struct
 		{
@@ -255,7 +255,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::UpdatePenalty(const struct FScorePenaltyData& PenaltyData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88620);
 		
 		struct
 		{
@@ -279,7 +279,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::RevealGrade(const class FString& Grade)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88614);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88619);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88613);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88618);
 		
 		struct
 		{
@@ -324,7 +324,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_Rating_Progress_C::ExecuteUbergraph_W_MissionEnd_Rating_Progress(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88612);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88617);
 		
 		struct
 		{
@@ -347,7 +347,7 @@ namespace SDK
 	 */
 	UClass* UW_MissionEnd_Rating_Progress_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88611);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88616);
 		return ptr;
 	}
 

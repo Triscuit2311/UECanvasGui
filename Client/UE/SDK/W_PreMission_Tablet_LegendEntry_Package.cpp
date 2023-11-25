@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_LegendEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55466);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30898);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_LegendEntry_C::ExecuteUbergraph_W_PreMission_Tablet_LegendEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55465);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30897);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_LegendEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55464);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30896);
 		return ptr;
 	}
 

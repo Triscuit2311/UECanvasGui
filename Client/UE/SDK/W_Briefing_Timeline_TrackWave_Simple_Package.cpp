@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Playing(float CurrentPlayTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54794);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31424);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::EventListener()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31423);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Scrubbed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54792);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31422);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::paused()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54791);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31421);
 		
 		struct
 		{
@@ -107,7 +107,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Clear()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54790);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31420);
 		
 		struct
 		{
@@ -128,7 +128,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Restart()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54789);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31419);
 		
 		struct
 		{
@@ -150,7 +150,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31418);
 		
 		struct
 		{
@@ -175,7 +175,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31417);
 		
 		struct
 		{
@@ -202,7 +202,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::Initialize(class USoundWave* SoundWave, TMap<float, struct FTimelineEvent> EventEntries)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54786);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31416);
 		
 		struct
 		{
@@ -227,7 +227,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::DemoMode()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54785);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31415);
 		
 		struct
 		{
@@ -249,7 +249,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::ExecuteUbergraph_W_Briefing_Timeline_TrackWave_Simple(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54784);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31414);
 		
 		struct
 		{
@@ -274,7 +274,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::TimelineEventEnded__DelegateSignature(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54783);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31413);
 		
 		struct
 		{
@@ -298,7 +298,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWave_Simple_C::TimelineEventFired__DelegateSignature(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54782);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31412);
 		
 		struct
 		{
@@ -321,7 +321,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Timeline_TrackWave_Simple_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54781);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31411);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::GetJoystickDirection(EJoystickTypes Stick, struct FVector2D* StickInput)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29169);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49420);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::HideEscapeMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29168);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49419);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_Slash_K2Node_InputKeyEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29167);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49418);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_End_K2Node_InputKeyEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29166);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49417);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_Equals_K2Node_InputKeyEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29165);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49416);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::OnFailure_E5236F624136A216FC80949690426E05()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29164);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49415);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::OnSuccess_E5236F624136A216FC80949690426E05()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29163);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49414);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_ViewScoreboard_K2Node_InputActionEvent_4(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29162);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49413);
 		
 		struct
 		{
@@ -210,7 +210,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_ViewScoreboard_K2Node_InputActionEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29161);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49412);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_VoteYes_K2Node_InputActionEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29160);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49411);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::InpActEvt_VoteNo_K2Node_InputActionEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29159);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49410);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::Server_FreeCamera()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29158);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49409);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::SpawnEscapeMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29157);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49408);
 		
 		struct
 		{
@@ -324,7 +324,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::BP_ClientWasKicked(const class FText& KickReason)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29156);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49407);
 		
 		struct
 		{
@@ -348,7 +348,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::ServerPossesPawn(class APawn* Pawn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29155);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49406);
 		
 		struct
 		{
@@ -371,7 +371,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::CloseDeployMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29154);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49405);
 		
 		struct
 		{
@@ -393,7 +393,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::ShowCoopScoreChangeWidget(float ScoreChangeValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29153);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49404);
 		
 		struct
 		{
@@ -417,7 +417,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::RequestVoteInput(const struct FVoteData& CurrentVoteData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29152);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49403);
 		
 		struct
 		{
@@ -441,7 +441,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::SetUpVoteWidget(class UW_VotePopUp_C* Widget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29151);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49402);
 		
 		struct
 		{
@@ -464,7 +464,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::StopVoteInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29150);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49401);
 		
 		struct
 		{
@@ -486,7 +486,7 @@ namespace SDK
 	 */
 	void ABP_BaseController_C::ExecuteUbergraph_BP_BaseController(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29149);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49400);
 		
 		struct
 		{
@@ -509,7 +509,7 @@ namespace SDK
 	 */
 	UClass* ABP_BaseController_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29148);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49399);
 		return ptr;
 	}
 

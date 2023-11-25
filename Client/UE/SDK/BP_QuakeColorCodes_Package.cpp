@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void UBP_QuakeColorCodes_C::Quake_ConvertColorCodes(const class FString& StrIn, class UObject* __WorldContext, class FString* StrOut)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28605);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30483);
 		
 		struct
 		{
@@ -52,7 +52,7 @@ namespace SDK
 	 */
 	UClass* UBP_QuakeColorCodes_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28604);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30482);
 		return ptr;
 	}
 

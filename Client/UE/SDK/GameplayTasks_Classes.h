@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -48,33 +48,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class GameplayTasks.GameplayTaskOwnerInterface
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class IGameplayTaskOwnerInterface : public IInterface
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GameplayTasks.GameplayTaskResource
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UGameplayTaskResource : public UObject
-	{
-	public:
-		int32_t                                                      ManualResourceID;                                        // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int8_t                                                       AutoResourceID;                                          // 0x002C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         bManuallySetID : 1;                                      // 0x0030(0x0001) BIT_FIELD Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class GameplayTasks.GameplayTask_SpawnActor
 	 * Size -> 0x0040 (FullSize[0x00A8] - InheritedSize[0x0068])
 	 */
@@ -92,31 +65,6 @@ namespace SDK
 		class UGameplayTask_SpawnActor* SpawnActor(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class AActor* Class, bool bSpawnOnlyOnAuthority);
 		void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);
 		bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GameplayTasks.GameplayTasksComponent
-	 * Size -> 0x0070 (FullSize[0x0120] - InheritedSize[0x00B0])
-	 */
-	class UGameplayTasksComponent : public UActorComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0xC];                                   // 0x00B0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         UnknownData_0001 : 1;                                    // 0x00BC(0x0001) BIT_FIELD (PADDING)
-		bool                                                         bIsNetDirty : 1;                                         // 0x00BC(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x3];                                   // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UGameplayTask*>                                 SimulatedTasks;                                          // 0x00C0(0x0010) Net, ZeroConstructor, RepNotify, Protected, NativeAccessSpecifierProtected
-		TArray<class UGameplayTask*>                                 TaskPriorityQueue;                                       // 0x00D0(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0003[0x10];                                  // 0x00E0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UGameplayTask*>                                 TickingTasks;                                            // 0x00F0(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		TArray<class UGameplayTask*>                                 KnownTasks;                                              // 0x0100(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
-		class UMulticastInlineDelegate                               OnClaimedResourcesChange;                                // 0x0110(0x0001) ELEMENT_SIZE_MISMATCH BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0004[0xF];                                   // 0x0111(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-
-	public:
-		void OnRep_SimulatedTasks();
-		EGameplayTaskRunResult K2_RunGameplayTask(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, uint8_t Priority, TArray<class UGameplayTaskResource*> AdditionalRequiredResources, TArray<class UGameplayTaskResource*> AdditionalClaimedResources);
 		static UClass* StaticClass();
 	};
 
@@ -151,6 +99,58 @@ namespace SDK
 	public:
 		class UGameplayTask_WaitDelay* TaskWaitDelay(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, float Time, uint8_t Priority);
 		void TaskDelayDelegate__DelegateSignature();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayTasks.GameplayTaskOwnerInterface
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class IGameplayTaskOwnerInterface : public IInterface
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayTasks.GameplayTaskResource
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class UGameplayTaskResource : public UObject
+	{
+	public:
+		int32_t                                                      ManualResourceID;                                        // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int8_t                                                       AutoResourceID;                                          // 0x002C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x002D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         bManuallySetID : 1;                                      // 0x0030(0x0001) BIT_FIELD Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GameplayTasks.GameplayTasksComponent
+	 * Size -> 0x0070 (FullSize[0x0120] - InheritedSize[0x00B0])
+	 */
+	class UGameplayTasksComponent : public UActorComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0xC];                                   // 0x00B0(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         UnknownData_0001 : 1;                                    // 0x00BC(0x0001) BIT_FIELD (PADDING)
+		bool                                                         bIsNetDirty : 1;                                         // 0x00BC(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x3];                                   // 0x00BD(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UGameplayTask*>                                 SimulatedTasks;                                          // 0x00C0(0x0010) Net, ZeroConstructor, RepNotify, Protected, NativeAccessSpecifierProtected
+		TArray<class UGameplayTask*>                                 TaskPriorityQueue;                                       // 0x00D0(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0003[0x10];                                  // 0x00E0(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UGameplayTask*>                                 TickingTasks;                                            // 0x00F0(0x0010) ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		TArray<class UGameplayTask*>                                 KnownTasks;                                              // 0x0100(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
+		class UMulticastInlineDelegate                               OnClaimedResourcesChange;                                // 0x0110(0x0001) ELEMENT_SIZE_MISMATCH BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0004[0xF];                                   // 0x0111(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+
+	public:
+		void OnRep_SimulatedTasks();
+		EGameplayTaskRunResult K2_RunGameplayTask(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, uint8_t Priority, TArray<class UGameplayTaskResource*> AdditionalRequiredResources, TArray<class UGameplayTaskResource*> AdditionalClaimedResources);
 		static UClass* StaticClass();
 	};
 

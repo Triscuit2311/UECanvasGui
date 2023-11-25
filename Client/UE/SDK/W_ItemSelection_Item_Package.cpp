@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::StopFadeOutAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26849);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43503);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::StopConfirmAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26848);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43502);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ConfirmSelection()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26847);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43501);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::Deselect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26846);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43500);
 		
 		struct
 		{
@@ -104,7 +104,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::Select()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26845);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43499);
 		
 		struct
 		{
@@ -125,7 +125,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::FadeOut()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26844);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43498);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ChangeIconsIfBuildIsPirated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26843);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43497);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::OnAnimFadeOut_Finished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26842);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43496);
 		
 		struct
 		{
@@ -190,7 +190,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::Initialize(const struct FSlateBrush& InBrush, bool bIsVisible)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26841);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43495);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ResetSelectionIndicator()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26840);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43494);
 		
 		struct
 		{
@@ -236,7 +236,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26839);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43493);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ReInitialize(bool bVisible)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43492);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43491);
 		
 		struct
 		{
@@ -303,7 +303,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26836);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43490);
 		
 		struct
 		{
@@ -326,7 +326,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26835);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43489);
 		
 		struct
 		{
@@ -348,7 +348,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ExecuteUbergraph_W_ItemSelection_Item(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26834);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43488);
 		
 		struct
 		{
@@ -371,7 +371,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ED_OnAnimSelectFinished__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26833);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43487);
 		
 		struct
 		{
@@ -392,7 +392,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_Item_C::ED_OnAnimFadeOutFinished__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26832);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43486);
 		
 		struct
 		{
@@ -413,7 +413,7 @@ namespace SDK
 	 */
 	UClass* UW_ItemSelection_Item_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26831);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43485);
 		return ptr;
 	}
 

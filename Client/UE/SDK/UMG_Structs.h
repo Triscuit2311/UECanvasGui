@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,19 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum UMG.ESlateVisibility
+	 */
+	enum class ESlateVisibility : uint8_t
+	{
+		Visible              = 0,
+		Collapsed            = 1,
+		Hidden               = 2,
+		HitTestInvisible     = 3,
+		SelfHitTestInvisible = 4,
+		MAX                  = 5
+	};
+
 	/**
 	 * Enum UMG.ESlateAccessibleBehavior
 	 */
@@ -49,16 +62,13 @@ namespace SDK
 	};
 
 	/**
-	 * Enum UMG.ESlateVisibility
+	 * Enum UMG.EWidgetTickFrequency
 	 */
-	enum class ESlateVisibility : uint8_t
+	enum class EWidgetTickFrequency : uint8_t
 	{
-		Visible              = 0,
-		Collapsed            = 1,
-		Hidden               = 2,
-		HitTestInvisible     = 3,
-		SelfHitTestInvisible = 4,
-		MAX                  = 5
+		Never = 0,
+		Auto  = 1,
+		MAX   = 2
 	};
 
 	/**
@@ -73,16 +83,6 @@ namespace SDK
 		Password     = 4,
 		AlphaNumeric = 5,
 		MAX          = 6
-	};
-
-	/**
-	 * Enum UMG.EWidgetTickFrequency
-	 */
-	enum class EWidgetTickFrequency : uint8_t
-	{
-		Never = 0,
-		Auto  = 1,
-		MAX   = 2
 	};
 
 	/**
@@ -274,28 +274,15 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct UMG.ShapedTextOptions
-	 * Size -> 0x0003
+	 * ScriptStruct UMG.SlateChildSize
+	 * Size -> 0x0008
 	 */
-	struct FShapedTextOptions
+	struct FSlateChildSize
 	{
 	public:
-		bool                                                         bOverride_TextShapingMethod : 1;                         // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bOverride_TextFlowDirection : 1;                         // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ETextShapingMethod                                           TextShapingMethod;                                       // 0x0001(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ETextFlowDirection                                           TextFlowDirection;                                       // 0x0002(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct UMG.UserWidgetPool
-	 * Size -> 0x0080
-	 */
-	struct FUserWidgetPool
-	{
-	public:
-		TArray<class UUserWidget*>                                   ActiveWidgets;                                           // 0x0000(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
-		TArray<class UUserWidget*>                                   InactiveWidgets;                                         // 0x0010(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x60];                                  // 0x0020(0x0060) MISSED OFFSET (PADDING)
+		float                                                        Value;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESlateSizeRule                                               SizeRule;                                                // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -309,15 +296,16 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct UMG.SlateChildSize
-	 * Size -> 0x0008
+	 * ScriptStruct UMG.ShapedTextOptions
+	 * Size -> 0x0003
 	 */
-	struct FSlateChildSize
+	struct FShapedTextOptions
 	{
 	public:
-		float                                                        Value;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESlateSizeRule                                               SizeRule;                                                // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+		bool                                                         bOverride_TextShapingMethod : 1;                         // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bOverride_TextFlowDirection : 1;                         // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ETextShapingMethod                                           TextShapingMethod;                                       // 0x0001(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ETextFlowDirection                                           TextFlowDirection;                                       // 0x0002(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -330,6 +318,20 @@ namespace SDK
 		struct FMargin                                               Offsets;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		struct FAnchors                                              Anchors;                                                 // 0x0010(0x0010) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
 		struct FVector2D                                Alignment;                                               // 0x0020(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct UMG.WidgetNavigationData
+	 * Size -> 0x0024
+	 */
+	struct FWidgetNavigationData
+	{
+	public:
+		EUINavigationRule                                            Rule;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FName                                                  WidgetToFocus;                                           // 0x0004(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TWeakObjectPtr<class UWidget>                                Widget;                                                  // 0x000C(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FScriptDelegate                                        CustomDelegate;                                          // 0x0014(0x0010) ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -348,45 +350,15 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct UMG.WidgetAnimationBinding
-	 * Size -> 0x0024
+	 * ScriptStruct UMG.UserWidgetPool
+	 * Size -> 0x0080
 	 */
-	struct FWidgetAnimationBinding
+	struct FUserWidgetPool
 	{
 	public:
-		class FName                                                  WidgetName;                                              // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  SlotWidgetName;                                          // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGuid                                                 AnimationGuid;                                           // 0x0010(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsRootWidget;                                           // 0x0020(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0021(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct UMG.WidgetNavigationData
-	 * Size -> 0x0024
-	 */
-	struct FWidgetNavigationData
-	{
-	public:
-		EUINavigationRule                                            Rule;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FName                                                  WidgetToFocus;                                           // 0x0004(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TWeakObjectPtr<class UWidget>                                Widget;                                                  // 0x000C(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FScriptDelegate                                        CustomDelegate;                                          // 0x0014(0x0010) ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct UMG.BlueprintWidgetAnimationDelegateBinding
-	 * Size -> 0x001C
-	 */
-	struct FBlueprintWidgetAnimationDelegateBinding
-	{
-	public:
-		EWidgetAnimationEvent                                        Action;                                                  // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FName                                                  AnimationToBind;                                         // 0x0004(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  FunctionNameToBind;                                      // 0x000C(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  UserTag;                                                 // 0x0014(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class UUserWidget*>                                   ActiveWidgets;                                           // 0x0000(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
+		TArray<class UUserWidget*>                                   InactiveWidgets;                                         // 0x0010(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x60];                                  // 0x0020(0x0060) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -397,7 +369,7 @@ namespace SDK
 	{
 	public:
 		struct FVector2D                                Position;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   Color;                                                   // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   Color;                                                   // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FVector2D                                UV0;                                                     // 0x000C(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FVector2D                                UV1;                                                     // 0x0014(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FVector2D                                UV2;                                                     // 0x001C(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -421,13 +393,31 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct UMG.PaintContext
-	 * Size -> 0x0030
+	 * ScriptStruct UMG.WidgetAnimationBinding
+	 * Size -> 0x0024
 	 */
-	struct FPaintContext
+	struct FWidgetAnimationBinding
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+		class FName                                                  WidgetName;                                              // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  SlotWidgetName;                                          // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FGuid                                                 AnimationGuid;                                           // 0x0010(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsRootWidget;                                           // 0x0020(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0021(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct UMG.BlueprintWidgetAnimationDelegateBinding
+	 * Size -> 0x001C
+	 */
+	struct FBlueprintWidgetAnimationDelegateBinding
+	{
+	public:
+		EWidgetAnimationEvent                                        Action;                                                  // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FName                                                  AnimationToBind;                                         // 0x0004(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  FunctionNameToBind;                                      // 0x000C(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  UserTag;                                                 // 0x0014(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -438,6 +428,16 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0xB8];                                  // 0x0000(0x00B8) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct UMG.PaintContext
+	 * Size -> 0x0030
+	 */
+	struct FPaintContext
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
 	};
 
 	/**

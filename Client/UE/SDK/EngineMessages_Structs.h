@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,38 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct EngineMessages.EngineServiceNotification
+	 * Size -> 0x0018
+	 */
+	struct FEngineServiceNotification
+	{
+	public:
+		class FString                                                Text;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		double                                                       TimeSeconds;                                             // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct EngineMessages.EngineServiceTerminate
+	 * Size -> 0x0010
+	 */
+	struct FEngineServiceTerminate
+	{
+	public:
+		class FString                                                Username;                                                // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct EngineMessages.EngineServiceExecuteCommand
+	 * Size -> 0x0020
+	 */
+	struct FEngineServiceExecuteCommand
+	{
+	public:
+		class FString                                                Command;                                                 // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Username;                                                // 0x0010(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct EngineMessages.EngineServiceAuthGrant
 	 * Size -> 0x0020
@@ -62,38 +94,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct EngineMessages.EngineServiceNotification
-	 * Size -> 0x0018
-	 */
-	struct FEngineServiceNotification
-	{
-	public:
-		class FString                                                Text;                                                    // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		double                                                       TimeSeconds;                                             // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EngineMessages.EngineServiceTerminate
-	 * Size -> 0x0010
-	 */
-	struct FEngineServiceTerminate
-	{
-	public:
-		class FString                                                Username;                                                // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct EngineMessages.EngineServiceExecuteCommand
-	 * Size -> 0x0020
-	 */
-	struct FEngineServiceExecuteCommand
-	{
-	public:
-		class FString                                                Command;                                                 // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Username;                                                // 0x0010(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

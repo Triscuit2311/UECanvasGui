@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABasePlayer_Customization_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59118);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41239);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ABasePlayer_Customization_C::ExecuteUbergraph_BasePlayer_Customization(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55718);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41238);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* ABasePlayer_Customization_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55717);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(41237);
 		return ptr;
 	}
 

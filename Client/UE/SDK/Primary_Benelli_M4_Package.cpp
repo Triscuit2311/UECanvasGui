@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void APrimary_Benelli_M4_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46678);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34837);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void APrimary_Benelli_M4_C::ExecuteUbergraph_Primary_Benelli_M4(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46677);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34836);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* APrimary_Benelli_M4_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(46676);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(34835);
 		return ptr;
 	}
 

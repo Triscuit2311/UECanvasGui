@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::SetCount(int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57700);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40238);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::SetSlotVisibility(bool IsGrenade)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57699);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40237);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	class UW_LoadoutSlot_C* UW_Loadout_MunitionSlots_Deployable_C::GetSlot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57698);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40236);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::DisplayCountControls(bool ShowCountControls)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57697);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40235);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57696);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40234);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57695);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40233);
 		
 		struct
 		{
@@ -169,7 +169,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57694);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40232);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57693);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40231);
 		
 		struct
 		{
@@ -214,7 +214,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::BndEvt__W_Loadout_MunitionSlots_Deployable_btn_Add_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57692);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40230);
 		
 		struct
 		{
@@ -238,7 +238,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::BndEvt__W_Loadout_MunitionSlots_Deployable_btn_Minus_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57691);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40229);
 		
 		struct
 		{
@@ -262,7 +262,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::LoadoutSlotClicked(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57690);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40228);
 		
 		struct
 		{
@@ -286,7 +286,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::SetItemClass(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57689);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40227);
 		
 		struct
 		{
@@ -310,7 +310,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::LoadoutSlotHovered(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57688);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40226);
 		
 		struct
 		{
@@ -334,7 +334,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::LoadoutSlotUnhovered(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57687);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40225);
 		
 		struct
 		{
@@ -358,7 +358,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::ToggleAddButton(bool Enabled)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57686);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40224);
 		
 		struct
 		{
@@ -381,7 +381,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::ForceClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57685);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40223);
 		
 		struct
 		{
@@ -403,7 +403,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::ExecuteUbergraph_W_Loadout_MunitionSlots_Deployable(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57684);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40222);
 		
 		struct
 		{
@@ -429,7 +429,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::OnDeployableSlotUnhovered__DelegateSignature(class UW_LoadoutSlot_C* LoadoutSlot, class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57683);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40221);
 		
 		struct
 		{
@@ -456,7 +456,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::OnDeployableSlotHovered__DelegateSignature(class UW_LoadoutSlot_C* LoadoutSlot, class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57682);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40220);
 		
 		struct
 		{
@@ -483,7 +483,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::OnDeployableSlotClicked__DelegateSignature(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot, class UW_LoadoutSlot_C* LoadoutSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57681);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40219);
 		
 		struct
 		{
@@ -509,7 +509,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::OnMinusClicked__DelegateSignature(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57680);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40218);
 		
 		struct
 		{
@@ -533,7 +533,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_Deployable_C::OnAddClicked__DelegateSignature(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57679);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40217);
 		
 		struct
 		{
@@ -556,7 +556,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_MunitionSlots_Deployable_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57678);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40216);
 		return ptr;
 	}
 

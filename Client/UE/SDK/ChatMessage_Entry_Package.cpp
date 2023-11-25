@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	class FText UChatMessage_Entry_C::Get_ChatType_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24719);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30479);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UChatMessage_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24718);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30478);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UChatMessage_Entry_C::ExecuteUbergraph_ChatMessage_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24717);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30477);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* UChatMessage_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24716);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30476);
 		return ptr;
 	}
 

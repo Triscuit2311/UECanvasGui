@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::UpdatePosition(const struct FVector2D& Coordinates)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57791);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31004);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_Radial_MapMarking_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57790);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31003);
 		
 		struct
 		{
@@ -76,7 +76,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_Radial_MapMarking_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57789);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31002);
 		
 		struct
 		{
@@ -106,7 +106,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_Radial_MapMarking_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31001);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Finished_344D667B4B5F9FD05121C694FD14ED92()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31000);
 		
 		struct
 		{
@@ -156,7 +156,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57786);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30999);
 		
 		struct
 		{
@@ -181,7 +181,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57785);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30998);
 		
 		struct
 		{
@@ -210,7 +210,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::AddCategory(const class FString& ID, const class FText& DisplayName, class UTexture2D* IconImage, bool HasSubCommands)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57784);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30997);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::PopulateSubmenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57783);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30996);
 		
 		struct
 		{
@@ -260,7 +260,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Populate()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57782);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30995);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57781);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30994);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::GoBack()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57780);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30993);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Submit()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57779);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30992);
 		
 		struct
 		{
@@ -344,7 +344,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::SelectionMade()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57778);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30991);
 		
 		struct
 		{
@@ -365,7 +365,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::CollapseRadial()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57777);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30990);
 		
 		struct
 		{
@@ -386,7 +386,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::CollapseSubMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57776);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30989);
 		
 		struct
 		{
@@ -407,7 +407,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::OnPageViewUpdate_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57775);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30988);
 		
 		struct
 		{
@@ -428,7 +428,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::OpenSubmenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57774);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30987);
 		
 		struct
 		{
@@ -451,7 +451,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::BndEvt__W_Radial_MapMarking_InnerRadial_K2Node_ComponentBoundEvent_0_SelectionChanged__DelegateSignature(int32_t NewSelection, int32_t OldSelection)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57773);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30986);
 		
 		struct
 		{
@@ -478,7 +478,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::BndEvt__W_Radial_MapMarking_OutterRadial_K2Node_ComponentBoundEvent_3_SelectionChanged__DelegateSignature(int32_t NewSelection, int32_t OldSelection)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57772);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30985);
 		
 		struct
 		{
@@ -504,7 +504,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::ExecuteUbergraph_W_Radial_MapMarking(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57771);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30984);
 		
 		struct
 		{
@@ -528,7 +528,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::OnSubmenuCollapse__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57770);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30983);
 		
 		struct
 		{
@@ -549,7 +549,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::OnCollapsed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57769);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30982);
 		
 		struct
 		{
@@ -570,7 +570,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::Cancel__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57768);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30981);
 		
 		struct
 		{
@@ -593,7 +593,7 @@ namespace SDK
 	 */
 	void UW_Radial_MapMarking_C::SubmenuCommit__DelegateSignature(const class FName& Category, const class FName& MarkerName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57767);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30980);
 		
 		struct
 		{
@@ -618,7 +618,7 @@ namespace SDK
 	 */
 	UClass* UW_Radial_MapMarking_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57766);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30979);
 		return ptr;
 	}
 

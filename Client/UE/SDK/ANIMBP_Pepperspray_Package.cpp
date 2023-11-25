@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Pepperspray_C::ExecuteUbergraph_ANIMBP_Pepperspray(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91159);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91241);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Pepperspray_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91158);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91240);
 		return ptr;
 	}
 

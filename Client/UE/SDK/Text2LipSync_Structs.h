@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,16 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum Text2LipSync.ELipSyncAnimType
-	 */
-	enum class ELipSyncAnimType : uint8_t
-	{
-		T_MorphTargets = 0,
-		T_AnimCurves   = 1,
-		T_Max          = 2
-	};
-
 	/**
 	 * Enum Text2LipSync.EPhoneme
 	 */
@@ -47,6 +37,16 @@ namespace SDK
 		V_OtherVowel = 15,
 		V_Pause      = 16,
 		V_Max        = 17
+	};
+
+	/**
+	 * Enum Text2LipSync.ELipSyncAnimType
+	 */
+	enum class ELipSyncAnimType : uint8_t
+	{
+		T_MorphTargets = 0,
+		T_AnimCurves   = 1,
+		T_Max          = 2
 	};
 
 	// --------------------------------------------------

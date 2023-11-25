@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,20 +21,6 @@ namespace SDK
 	UClass* ADestructibleActor::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(110);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDestructibleFractureSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDestructibleFractureSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(115);
 		return ptr;
 	}
 
@@ -166,6 +152,20 @@ namespace SDK
 	UClass* UDestructibleComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(114);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDestructibleFractureSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDestructibleFractureSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(115);
 		return ptr;
 	}
 

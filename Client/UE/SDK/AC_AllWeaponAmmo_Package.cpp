@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UAC_AllWeaponAmmo_C::GetTotalRemainingAmmoFromAllMags(class ABaseMagazineWeapon* Weapon, float* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85423);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84303);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	float UAC_AllWeaponAmmo_C::Score(const struct FAIActionDecisionContext& Context, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85422);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84302);
 		
 		struct
 		{
@@ -82,7 +82,7 @@ namespace SDK
 	 */
 	UClass* UAC_AllWeaponAmmo_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85421);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84301);
 		return ptr;
 	}
 

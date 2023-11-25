@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -24,7 +24,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::Initialize(int32_t CurrentSlotCount, int32_t AvailableSlots, int32_t MinSlots, int32_t MaxSlots)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35815);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40190);
 		
 		struct
 		{
@@ -54,7 +54,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::SetAvailableSlots(int32_t AvailableSlots)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35814);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40189);
 		
 		struct
 		{
@@ -78,7 +78,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::SetMaxSlots(int32_t MaxSlotCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35813);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40188);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::SetSlotCount(int32_t NewCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35812);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40187);
 		
 		struct
 		{
@@ -126,7 +126,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::IncrementSlotCount(int32_t Increment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35811);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40186);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::SetInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35810);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40185);
 		
 		struct
 		{
@@ -170,7 +170,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35809);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40184);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::BndEvt__W_Loadout_ArmorSlot_btn_decrease_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35808);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40183);
 		
 		struct
 		{
@@ -216,7 +216,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::BndEvt__W_Loadout_ArmorSlot_btn_increase_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35807);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40182);
 		
 		struct
 		{
@@ -241,7 +241,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::BndEvt__W_Loadout_ArmorSlot_SpinBox_SlotCount_K2Node_ComponentBoundEvent_3_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35806);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40181);
 		
 		struct
 		{
@@ -267,7 +267,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35805);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40180);
 		
 		struct
 		{
@@ -292,7 +292,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35804);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40179);
 		
 		struct
 		{
@@ -318,7 +318,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35803);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40178);
 		
 		struct
 		{
@@ -342,7 +342,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35802);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40177);
 		
 		struct
 		{
@@ -366,7 +366,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35801);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40176);
 		
 		struct
 		{
@@ -390,7 +390,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35800);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40175);
 		
 		struct
 		{
@@ -414,7 +414,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35799);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40174);
 		
 		struct
 		{
@@ -438,7 +438,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::ExecuteUbergraph_W_Loadout_MunitionCountSlot(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35798);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40173);
 		
 		struct
 		{
@@ -462,7 +462,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionCountSlot_C::OnSlotCountChanged__DelegateSignature(class UW_Loadout_MunitionCountSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35797);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40172);
 		
 		struct
 		{
@@ -485,7 +485,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_MunitionCountSlot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35796);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40171);
 		return ptr;
 	}
 

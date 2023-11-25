@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ILoadoutUI_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59765);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59865);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ILoadoutUI_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59764);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59864);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void ILoadoutUI_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28212);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49081);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void ILoadoutUI_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28211);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49080);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* ILoadoutUI_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28210);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49079);
 		return ptr;
 	}
 

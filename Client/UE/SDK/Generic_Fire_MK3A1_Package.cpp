@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UGeneric_Fire_MK3A1_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54716);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38097);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UGeneric_Fire_MK3A1_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54715);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38096);
 		return ptr;
 	}
 

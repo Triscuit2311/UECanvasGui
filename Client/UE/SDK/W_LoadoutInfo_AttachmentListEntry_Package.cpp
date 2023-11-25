@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::SetInfo(class UWeaponAttachment* AttachmentClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27362);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46508);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27361);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46507);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27360);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46506);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27359);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46505);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27358);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46504);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27357);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46503);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27356);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46502);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27355);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46501);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27354);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46500);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::BndEvt__W_LoadoutInfo_AttachmentListEntry_W_Button_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27353);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46499);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::BndEvt__W_LoadoutInfo_AttachmentListEntry_btn_Remove_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27352);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46498);
 		
 		struct
 		{
@@ -284,7 +284,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::BndEvt__W_LoadoutInfo_AttachmentListEntry_Button_0_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27351);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46497);
 		
 		struct
 		{
@@ -305,7 +305,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::BndEvt__W_LoadoutInfo_AttachmentListEntry_Button_0_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27350);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46496);
 		
 		struct
 		{
@@ -327,7 +327,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::ExecuteUbergraph_W_LoadoutInfo_AttachmentListEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27349);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46495);
 		
 		struct
 		{
@@ -352,7 +352,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::OnRemoveClicked__DelegateSignature(class UW_LoadoutInfo_AttachmentListEntry_C* TriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27348);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46494);
 		
 		struct
 		{
@@ -376,7 +376,7 @@ namespace SDK
 	 */
 	void UW_LoadoutInfo_AttachmentListEntry_C::OnClicked__DelegateSignature(class UW_LoadoutInfo_AttachmentListEntry_C* TriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27347);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46493);
 		
 		struct
 		{
@@ -399,7 +399,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutInfo_AttachmentListEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27346);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46492);
 		return ptr;
 	}
 

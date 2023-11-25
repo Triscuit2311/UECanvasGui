@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::SetButtonSubcribedState(bool Subscribed)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88766);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88851);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnThumbnailLoaded(class UTexture2DDynamic* Image)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88765);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88850);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::BndEvt__W_ModCard_CheckBox_129_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88764);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88849);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnModSet()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88763);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88848);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnModStateUpdated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88762);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88847);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnLoadingFinished(bool bSubscribed)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88761);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88846);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::BndEvt__W_ModCard_btn_Subscription_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88760);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88845);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88759);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88844);
 		
 		struct
 		{
@@ -203,7 +203,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnLoadingStarted()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88758);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88843);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::BndEvt__W_ModCard_btn_Card_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88757);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88842);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::ExecuteUbergraph_W_ModCard(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88756);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88841);
 		
 		struct
 		{
@@ -271,7 +271,7 @@ namespace SDK
 	 */
 	void UW_ModCard_C::OnCardClicked__DelegateSignature(class UModData* ModData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88755);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88840);
 		
 		struct
 		{
@@ -294,7 +294,7 @@ namespace SDK
 	 */
 	UClass* UW_ModCard_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88754);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88839);
 		return ptr;
 	}
 

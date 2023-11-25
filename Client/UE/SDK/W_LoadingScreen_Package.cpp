@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_LoadingScreen_C::Get_Loading_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29125);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49374);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	class FText UW_LoadingScreen_C::GetText_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29124);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49373);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	class FText UW_LoadingScreen_C::Get_TextLoading_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29123);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49372);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	class FText UW_LoadingScreen_C::Get_ServerName_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29122);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49371);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::UpdateLoadingScreenPercentage(float NewPercentage)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29121);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49370);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29120);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49369);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::UpdateTips()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29119);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49368);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29118);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49367);
 		
 		struct
 		{
@@ -210,7 +210,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29117);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49366);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void UW_LoadingScreen_C::ExecuteUbergraph_W_LoadingScreen(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29116);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49365);
 		
 		struct
 		{
@@ -257,7 +257,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadingScreen_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29115);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49364);
 		return ptr;
 	}
 

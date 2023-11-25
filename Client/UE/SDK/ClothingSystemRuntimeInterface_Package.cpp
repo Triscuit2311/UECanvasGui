@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,34 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UClothConfigBase.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UClothConfigBase::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(551);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UClothingInteractor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UClothingInteractor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(560);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -365,34 +393,6 @@ namespace SDK
 	UClass* UClothingSimulationFactory::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(558);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClothConfigBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClothConfigBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(551);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClothingInteractor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClothingInteractor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(560);
 		return ptr;
 	}
 

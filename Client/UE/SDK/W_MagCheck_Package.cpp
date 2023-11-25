@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92988);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92977);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92987);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92976);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_C::ExecuteUbergraph_W_MagCheck(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92986);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92975);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_MagCheck_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92985);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92974);
 		return ptr;
 	}
 

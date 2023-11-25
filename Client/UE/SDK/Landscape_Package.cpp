@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,142 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeGrassType.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeGrassType::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1762);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeSplineControlPoint.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeSplineControlPoint::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1776);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ULandscapeComponent*                         ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class ULandscapeComponent* ULandscapeHeightfieldCollisionComponent::GetRenderComponent()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17275);
+		
+		struct
+		{
+			class ULandscapeComponent*                         ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeHeightfieldCollisionComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeHeightfieldCollisionComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1763);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeInfo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeInfo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1764);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeMaterialInstanceConstant.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeMaterialInstanceConstant::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1770);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeSplineSegment.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeSplineSegment::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1777);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeMeshCollisionComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeMeshCollisionComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1771);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AControlPointMeshActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AControlPointMeshActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1752);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -343,6 +479,118 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ALandscapeStreamingProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ALandscapeStreamingProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1778);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ALandscapeMeshProxyActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ALandscapeMeshProxyActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1772);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UControlPointMeshComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UControlPointMeshComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1753);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeSubsystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeSubsystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1779);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeMeshProxyComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeMeshProxyComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1773);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeInfoMap.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeInfoMap::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1765);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeWeightmapUsage.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeWeightmapUsage::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1780);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1774);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ALandscape.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -351,6 +599,44 @@ namespace SDK
 	UClass* ALandscape::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1755);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class USplineMeshComponent*>                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17285);
+		
+		struct
+		{
+			TArray<class USplineMeshComponent*>                ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeSplinesComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeSplinesComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1775);
 		return ptr;
 	}
 
@@ -415,18 +701,18 @@ namespace SDK
 	 * 		Name   -> Function Landscape.LandscapeBlueprintBrushBase.Initialize
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     InLandscapeTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     InLandscapeTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FIntPoint                                   InLandscapeSize                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FIntPoint                                   InLandscapeRenderTargetSize                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void ALandscapeBlueprintBrushBase::Initialize(const struct PCoreUObject_FTransform& InLandscapeTransform, const struct FIntPoint& InLandscapeSize, const struct FIntPoint& InLandscapeRenderTargetSize)
+	void ALandscapeBlueprintBrushBase::Initialize(const struct FTransform& InLandscapeTransform, const struct FIntPoint& InLandscapeSize, const struct FIntPoint& InLandscapeRenderTargetSize)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17269);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     InLandscapeTransform;
+			struct FTransform                     InLandscapeTransform;
 			struct FIntPoint                                   InLandscapeSize;
 			struct FIntPoint                                   InLandscapeRenderTargetSize;
 		} params;
@@ -482,6 +768,48 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeGrassOutput.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMaterialExpressionLandscapeGrassOutput::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1782);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeLayerInfoObject.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeLayerInfoObject::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1766);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerBlend.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMaterialExpressionLandscapeLayerBlend::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1783);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ULandscapeLODStreamingProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -496,66 +824,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeGizmoRenderComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerCoords.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULandscapeGizmoRenderComponent::StaticClass()
+	UClass* UMaterialExpressionLandscapeLayerCoords::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1761);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeGrassType.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeGrassType::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1762);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ULandscapeComponent*                         ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class ULandscapeComponent* ULandscapeHeightfieldCollisionComponent::GetRenderComponent()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17275);
-		
-		struct
-		{
-			class ULandscapeComponent*                         ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeHeightfieldCollisionComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeHeightfieldCollisionComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1763);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1784);
 		return ptr;
 	}
 
@@ -665,202 +941,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeInfo.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeInfo::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1764);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeInfoMap.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeInfoMap::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1765);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeLayerInfoObject.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeLayerInfoObject::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1766);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeSplineSegment.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeSplineSegment::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1777);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ALandscapeGizmoActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ALandscapeGizmoActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1759);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ALandscapeStreamingProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ALandscapeStreamingProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1778);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeMaterialInstanceConstant.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeMaterialInstanceConstant::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1770);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeSubsystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeSubsystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1779);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ALandscapeGizmoActiveActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ALandscapeGizmoActiveActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1760);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeWeightmapUsage.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeWeightmapUsage::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1780);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeGrassOutput.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMaterialExpressionLandscapeGrassOutput::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1782);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerBlend.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMaterialExpressionLandscapeLayerBlend::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1783);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeMeshCollisionComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeMeshCollisionComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1771);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerCoords.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMaterialExpressionLandscapeLayerCoords::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1784);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeLayerSample.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -889,14 +969,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ALandscapeMeshProxyActor.StaticClass
+	 * 		Name   -> PredefinedFunction ALandscapeGizmoActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ALandscapeMeshProxyActor::StaticClass()
+	UClass* ALandscapeGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1772);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1759);
 		return ptr;
 	}
 
@@ -917,6 +997,34 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ALandscapeGizmoActiveActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ALandscapeGizmoActiveActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1760);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULandscapeGizmoRenderComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULandscapeGizmoRenderComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1761);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapePhysicalMaterialOutput.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -931,20 +1039,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeMeshProxyComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeMeshProxyComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1773);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMaterialExpressionLandscapeVisibilityMask.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -953,100 +1047,6 @@ namespace SDK
 	UClass* UMaterialExpressionLandscapeVisibilityMask::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1789);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1774);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class USplineMeshComponent*>                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshComponents()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17285);
-		
-		struct
-		{
-			TArray<class USplineMeshComponent*>                ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeSplinesComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeSplinesComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1775);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULandscapeSplineControlPoint.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULandscapeSplineControlPoint::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1776);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AControlPointMeshActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AControlPointMeshActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1752);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UControlPointMeshComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UControlPointMeshComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1753);
 		return ptr;
 	}
 

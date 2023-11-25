@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::AddFirstPersonShakeFromSuppression(float Strength)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36418);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43442);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::UpdateFirstPersonShake(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36417);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43441);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::InpActEvt_F3_K2Node_InputKeyEvent_3(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36416);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43440);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::InpActEvt_F2_K2Node_InputKeyEvent_2(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36415);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43439);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::InpActEvt_F1_K2Node_InputKeyEvent_1(const struct FKey& Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36414);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43438);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36413);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43437);
 		
 		struct
 		{
@@ -169,7 +169,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36412);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43436);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnSupression(float Strength)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43435);
 		
 		struct
 		{
@@ -218,7 +218,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnTurn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43434);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnLeanStart()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43433);
 		
 		struct
 		{
@@ -260,7 +260,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnLeanEnd()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36408);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43432);
 		
 		struct
 		{
@@ -287,7 +287,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::PlayVaultAnimation(const struct FVector& ledge, const struct FVector& ledgeWallNormal, const struct FVector& ledgeTraceDown, float ledgeZ, ELedgeWidth ledgeWidth, ELedgeHeight ledgeHeight)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36407);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43431);
 		
 		struct
 		{
@@ -321,7 +321,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36406);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43430);
 		
 		struct
 		{
@@ -346,7 +346,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnBulletImpact(float DirectionForward, float DirectionRight)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43429);
 		
 		struct
 		{
@@ -372,7 +372,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::ReceiveUnpossessed(class AController* OldController)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36404);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43428);
 		
 		struct
 		{
@@ -395,7 +395,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnJumpStart()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36403);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43427);
 		
 		struct
 		{
@@ -416,7 +416,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnJumpLand()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36402);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43426);
 		
 		struct
 		{
@@ -437,7 +437,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::OnKilledOrGoneUnconciousBP()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36401);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43425);
 		
 		struct
 		{
@@ -459,7 +459,7 @@ namespace SDK
 	 */
 	void ABasePlayer_C::ExecuteUbergraph_BasePlayer(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36400);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43424);
 		
 		struct
 		{
@@ -482,7 +482,7 @@ namespace SDK
 	 */
 	UClass* ABasePlayer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(36399);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43423);
 		return ptr;
 	}
 

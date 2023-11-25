@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,96 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ACameraRig_Crane.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ACameraRig_Crane::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2073);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class USplineComponent*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17722);
+		
+		struct
+		{
+			class USplineComponent*                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ACameraRig_Rail.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ACameraRig_Rail::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2074);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function CinematicCamera.CineCameraActor.GetCineCameraComponent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UCineCameraComponent*                        ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17724);
+		
+		struct
+		{
+			class UCineCameraComponent*                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ACineCameraActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ACineCameraActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2076);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -261,96 +351,6 @@ namespace SDK
 	UClass* UCineCameraComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2078);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ACameraRig_Crane.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ACameraRig_Crane::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2073);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class USplineComponent*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17722);
-		
-		struct
-		{
-			class USplineComponent*                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ACameraRig_Rail.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ACameraRig_Rail::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2074);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function CinematicCamera.CineCameraActor.GetCineCameraComponent
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UCineCameraComponent*                        ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17724);
-		
-		struct
-		{
-			class UCineCameraComponent*                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ACineCameraActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ACineCameraActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2076);
 		return ptr;
 	}
 

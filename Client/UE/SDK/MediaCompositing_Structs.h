@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
-	/**
-	 * ScriptStruct MediaCompositing.MovieSceneMediaPlayerPropertySectionTemplate
-	 * Size -> 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
-	 */
-	struct FMovieSceneMediaPlayerPropertySectionTemplate : public FMovieScenePropertySectionTemplate
-	{
-	public:
-		class UMediaSource*                                          MediaSource;                                             // 0x0038(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		struct FFrameNumber                                          SectionStartFrame;                                       // 0x0040(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		bool                                                         bLoop;                                                   // 0x0044(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0045(0x0003) MISSED OFFSET (PADDING)
-	};
-
 	/**
 	 * ScriptStruct MediaCompositing.MovieSceneMediaSectionParams
 	 * Size -> 0x0030
@@ -53,6 +40,19 @@ namespace SDK
 	{
 	public:
 		struct FMovieSceneMediaSectionParams                         Params;                                                  // 0x0020(0x0030) NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
+	};
+
+	/**
+	 * ScriptStruct MediaCompositing.MovieSceneMediaPlayerPropertySectionTemplate
+	 * Size -> 0x0010 (FullSize[0x0048] - InheritedSize[0x0038])
+	 */
+	struct FMovieSceneMediaPlayerPropertySectionTemplate : public FMovieScenePropertySectionTemplate
+	{
+	public:
+		class UMediaSource*                                          MediaSource;                                             // 0x0038(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		struct FFrameNumber                                          SectionStartFrame;                                       // 0x0040(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		bool                                                         bLoop;                                                   // 0x0044(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0045(0x0003) MISSED OFFSET (PADDING)
 	};
 
 }

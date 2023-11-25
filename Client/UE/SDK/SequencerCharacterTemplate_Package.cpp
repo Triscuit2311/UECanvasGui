@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::EquipLoadout(const struct FSavedLoadout& SavedLoadout, class AReadyOrNotPlayerState* PlayerState)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74181);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74180);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74246);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74179);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74245);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74178);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::OnSequenceStarted_Event_1(class ULevelSequence* LevelSequence)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74244);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74177);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void ASequencerCharacterTemplate_C::ExecuteUbergraph_SequencerCharacterTemplate(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74176);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	UClass* ASequencerCharacterTemplate_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(74242);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(74175);
 		return ptr;
 	}
 

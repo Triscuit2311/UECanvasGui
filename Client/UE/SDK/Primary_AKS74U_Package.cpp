@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void APrimary_AKS74U_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86675);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86500);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void APrimary_AKS74U_C::ExecuteUbergraph_Primary_AKS74U(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86674);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86499);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* APrimary_AKS74U_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86673);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86498);
 		return ptr;
 	}
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -51,7 +51,7 @@ namespace SDK
 	class UHeadMountedDisplayFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void UpdateExternalTrackingHMDPosition(const struct PCoreUObject_FTransform& ExternalTrackingTransform);
+		void UpdateExternalTrackingHMDPosition(const struct FTransform& ExternalTrackingTransform);
 		void SetXRTimedInputActionDelegate(const class FName& ActionName, const class FScriptDelegate& InDelegate);
 		void SetXRDisconnectDelegate(const class FScriptDelegate& InDisconnectedDelegate);
 		void SetWorldToMetersScale(class UObject* WorldContext, float NewScale);
@@ -71,7 +71,7 @@ namespace SDK
 		float GetWorldToMetersScale(class UObject* WorldContext);
 		void GetVRFocusState(bool* bUseFocus, bool* bHasFocus);
 		class FString GetVersionString();
-		struct PCoreUObject_FTransform GetTrackingToWorldTransform(class UObject* WorldContext);
+		struct FTransform GetTrackingToWorldTransform(class UObject* WorldContext);
 		void GetTrackingSensorParameters(struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive, int32_t Index);
 		EHMDTrackingOrigin GetTrackingOrigin();
 		float GetScreenPercentage();
@@ -94,7 +94,7 @@ namespace SDK
 		EXRDeviceConnectionResult ConnectRemoteXRDevice(const class FString& IpAddress, int32_t BitRate);
 		bool ConfigureGestures(const struct FXRGestureConfig& GestureConfig);
 		void ClearXRTimedInputActionDelegate(const class FName& ActionPath);
-		void CalibrateExternalTrackingToHMD(const struct PCoreUObject_FTransform& ExternalTrackingTransform);
+		void CalibrateExternalTrackingToHMD(const struct FTransform& ExternalTrackingTransform);
 		void BreakKey(const struct FKey& InKey, class FString* InteractionProfile, EControllerHand* hand, class FName* MotionSource, class FString* Indentifier, class FString* Component);
 		static UClass* StaticClass();
 	};
@@ -183,8 +183,8 @@ namespace SDK
 	class UXRAssetFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		class UPrimitiveComponent* AddNamedDeviceVisualizationComponentBlocking(class AActor* Target, const class FName& SystemName, const class FName& DeviceName, bool bManualAttachment, const struct PCoreUObject_FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId);
-		class UPrimitiveComponent* AddDeviceVisualizationComponentBlocking(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct PCoreUObject_FTransform& RelativeTransform);
+		class UPrimitiveComponent* AddNamedDeviceVisualizationComponentBlocking(class AActor* Target, const class FName& SystemName, const class FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId);
+		class UPrimitiveComponent* AddDeviceVisualizationComponentBlocking(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform);
 		static UClass* StaticClass();
 	};
 
@@ -203,8 +203,8 @@ namespace SDK
 		class UPrimitiveComponent*                                   SpawnedComponent;                                        // 0x0058(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
 	public:
-		class UAsyncTask_LoadXRDeviceVisComponent* AddNamedDeviceVisualizationComponentAsync(class AActor* Target, const class FName& SystemName, const class FName& DeviceName, bool bManualAttachment, const struct PCoreUObject_FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent);
-		class UAsyncTask_LoadXRDeviceVisComponent* AddDeviceVisualizationComponentAsync(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct PCoreUObject_FTransform& RelativeTransform, class UPrimitiveComponent** NewComponent);
+		class UAsyncTask_LoadXRDeviceVisComponent* AddNamedDeviceVisualizationComponentAsync(class AActor* Target, const class FName& SystemName, const class FName& DeviceName, bool bManualAttachment, const struct FTransform& RelativeTransform, struct FXRDeviceId* XRDeviceId, class UPrimitiveComponent** NewComponent);
+		class UAsyncTask_LoadXRDeviceVisComponent* AddDeviceVisualizationComponentAsync(class AActor* Target, const struct FXRDeviceId& XRDeviceId, bool bManualAttachment, const struct FTransform& RelativeTransform, class UPrimitiveComponent** NewComponent);
 		static UClass* StaticClass();
 	};
 

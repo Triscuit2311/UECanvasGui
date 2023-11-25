@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_Destruction_Light_02_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129734);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125607);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void ABP_Destruction_Light_02_C::OnComponentHit_Event_1(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129735);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125608);
 		
 		struct
 		{
@@ -77,7 +77,7 @@ namespace SDK
 	 */
 	void ABP_Destruction_Light_02_C::BreakLight()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129736);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125609);
 		
 		struct
 		{
@@ -103,7 +103,7 @@ namespace SDK
 	 */
 	void ABP_Destruction_Light_02_C::OnTakeAnyDamage_Event_1(class AActor* DamagedActor, float Damage, class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129737);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125610);
 		
 		struct
 		{
@@ -136,7 +136,7 @@ namespace SDK
 	 */
 	void ABP_Destruction_Light_02_C::ExecuteUbergraph_BP_Destruction_Light_02(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129738);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125611);
 		
 		struct
 		{
@@ -160,7 +160,7 @@ namespace SDK
 	 */
 	UClass* ABP_Destruction_Light_02_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(129739);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(125612);
 		return ptr;
 	}
 

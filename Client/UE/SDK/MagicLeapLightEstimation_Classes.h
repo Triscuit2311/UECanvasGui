@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,21 +15,6 @@ namespace SDK
 	// # Classes
 	// --------------------------------------------------
 	/**
-	 * Class MagicLeapLightEstimation.MagicLeapLightingTrackingComponent
-	 * Size -> 0x0010 (FullSize[0x00C0] - InheritedSize[0x00B0])
-	 */
-	class UMagicLeapLightingTrackingComponent : public UActorComponent
-	{
-	public:
-		bool                                                         UseGlobalAmbience;                                       // 0x00B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         UseColorTemp;                                            // 0x00B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xE];                                   // 0x00B2(0x000E) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -41,6 +26,21 @@ namespace SDK
 		bool GetAmbientGlobalState(struct FMagicLeapLightEstimationAmbientGlobalState* GlobalAmbientState);
 		void DestroyTracker();
 		bool CreateTracker();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MagicLeapLightEstimation.MagicLeapLightingTrackingComponent
+	 * Size -> 0x0010 (FullSize[0x00C0] - InheritedSize[0x00B0])
+	 */
+	class UMagicLeapLightingTrackingComponent : public UActorComponent
+	{
+	public:
+		bool                                                         UseGlobalAmbience;                                       // 0x00B0(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         UseColorTemp;                                            // 0x00B1(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xE];                                   // 0x00B2(0x000E) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 

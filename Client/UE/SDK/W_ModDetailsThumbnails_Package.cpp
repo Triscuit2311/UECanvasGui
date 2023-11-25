@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88451);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88489);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::BndEvt__W_ModDetailsThumbnails_btn_Thumb_K2Node_ComponentBoundEvent_0_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88450);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88488);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::BndEvt__W_ModDetailsThumbnails_btn_Thumb_K2Node_ComponentBoundEvent_1_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88449);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88487);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::Highlight(bool IsHighlighted)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88448);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88486);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::BndEvt__W_ModDetailsThumbnails_btn_Thumb_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88447);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88485);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::ExecuteUbergraph_W_ModDetailsThumbnails(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88446);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88484);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_ModDetailsThumbnails_C::OnThumbnailClicked__DelegateSignature(class UW_ModDetailsThumbnails_C* TriggeringThumbnail, int32_t ThumbIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88445);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88483);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	UClass* UW_ModDetailsThumbnails_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88444);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88482);
 		return ptr;
 	}
 

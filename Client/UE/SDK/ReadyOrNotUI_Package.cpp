@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void IReadyOrNotUI_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28586);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49030);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void IReadyOrNotUI_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28585);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49029);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	UClass* IReadyOrNotUI_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28584);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49028);
 		return ptr;
 	}
 

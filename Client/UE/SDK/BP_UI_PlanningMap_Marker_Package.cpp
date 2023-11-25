@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UBP_UI_PlanningMap_Marker_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35933);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39774);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UBP_UI_PlanningMap_Marker_C::ExecuteUbergraph_BP_UI_PlanningMap_Marker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35932);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39773);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UBP_UI_PlanningMap_Marker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35931);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39772);
 		return ptr;
 	}
 

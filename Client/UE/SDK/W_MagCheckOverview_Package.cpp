@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::UnhighlightAllMags()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27171);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43834);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::HighlightCurrentMag(class ABaseMagazineWeapon* MagazineWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27170);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43833);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::RefreshMags(class ABaseMagazineWeapon* MagazineWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27169);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43832);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27168);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43831);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::OnWeaponMagCheck_Event_1(class ABaseMagazineWeapon* MagazineWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27167);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43830);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_MagCheckOverview_C::ExecuteUbergraph_W_MagCheckOverview(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27166);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43829);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	UClass* UW_MagCheckOverview_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27165);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43828);
 		return ptr;
 	}
 

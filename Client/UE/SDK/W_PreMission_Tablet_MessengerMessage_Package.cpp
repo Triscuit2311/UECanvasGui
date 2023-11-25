@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MessengerMessage_C::GetIsSelf(bool* IsSelf)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55476);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30909);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MessengerMessage_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55475);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30908);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MessengerMessage_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55474);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30907);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_MessengerMessage_C::ExecuteUbergraph_W_PreMission_Tablet_MessengerMessage(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55473);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30906);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_MessengerMessage_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55472);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30905);
 		return ptr;
 	}
 

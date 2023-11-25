@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UBP_RadialMenuHelpers_C::CenterMousePosition(int32_t PlayerIndex, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54198);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30756);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	UClass* UBP_RadialMenuHelpers_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54197);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30755);
 		return ptr;
 	}
 

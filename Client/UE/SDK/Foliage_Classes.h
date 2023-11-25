@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,24 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class Foliage.FoliageInstancedStaticMeshComponent
-	 * Size -> 0x0038 (FullSize[0x06B0] - InheritedSize[0x0678])
-	 */
-	class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
-	{
-	public:
-		class UMulticastInlineDelegate                               OnInstanceTakePointDamage;                               // 0x0678(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0681(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnInstanceTakeRadialDamage;                              // 0x0688(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0689(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		struct FGuid                                                 GenerationGuid;                                          // 0x0698(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0002[0x8];                                   // 0x06A8(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class Foliage.FoliageStatistics
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -167,6 +149,19 @@ namespace SDK
 	};
 
 	/**
+	 * Class Foliage.ProceduralFoliageBlockingVolume
+	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
+	 */
+	class AProceduralFoliageBlockingVolume : public AVolume
+	{
+	public:
+		class AProceduralFoliageVolume*                              ProceduralFoliageVolume;                                 // 0x0258(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class Foliage.FoliageType_Actor
 	 * Size -> 0x0010 (FullSize[0x03C0] - InheritedSize[0x03B0])
 	 */
@@ -176,6 +171,23 @@ namespace SDK
 		class AActor*                                                ActorClass;                                              // 0x03B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bShouldAttachToBaseComponent;                            // 0x03B8(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x03B9(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Foliage.ProceduralFoliageComponent
+	 * Size -> 0x0028 (FullSize[0x00D8] - InheritedSize[0x00B0])
+	 */
+	class UProceduralFoliageComponent : public UActorComponent
+	{
+	public:
+		class UProceduralFoliageSpawner*                             FoliageSpawner;                                          // 0x00B0(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TileOverlap;                                             // 0x00B8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AVolume*                                               SpawningVolume;                                          // 0x00C0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		struct FGuid                                                 ProceduralGuid;                                          // 0x00C8(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 
 	public:
 		static UClass* StaticClass();
@@ -197,6 +209,26 @@ namespace SDK
 	};
 
 	/**
+	 * Class Foliage.ProceduralFoliageSpawner
+	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
+	 */
+	class UProceduralFoliageSpawner : public UObject
+	{
+	public:
+		int32_t                                                      RandomSeed;                                              // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TileSize;                                                // 0x002C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      NumUniqueTiles;                                          // 0x0030(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MinimumQuadTreeSize;                                     // 0x0034(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FFoliageTypeObject>                            FoliageTypes;                                            // 0x0040(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (PADDING)
+
+	public:
+		void Simulate(int32_t NumSteps);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class Foliage.InstancedFoliageActor
 	 * Size -> 0x0050 (FullSize[0x0270] - InheritedSize[0x0220])
 	 */
@@ -204,6 +236,35 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0220(0x0050) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Foliage.ProceduralFoliageTile
+	 * Size -> 0x0130 (FullSize[0x0158] - InheritedSize[0x0028])
+	 */
+	class UProceduralFoliageTile : public UObject
+	{
+	public:
+		class UProceduralFoliageSpawner*                             FoliageSpawner;                                          // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0xA0];                                  // 0x0030(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FProceduralFoliageInstance>                    InstancesArray;                                          // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0x78];                                  // 0x00E0(0x0078) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Foliage.ProceduralFoliageVolume
+	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
+	 */
+	class AProceduralFoliageVolume : public AVolume
+	{
+	public:
+		class UProceduralFoliageComponent*                           ProceduralComponent;                                     // 0x0258(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -251,79 +312,18 @@ namespace SDK
 	};
 
 	/**
-	 * Class Foliage.ProceduralFoliageBlockingVolume
-	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
+	 * Class Foliage.FoliageInstancedStaticMeshComponent
+	 * Size -> 0x0038 (FullSize[0x06B0] - InheritedSize[0x0678])
 	 */
-	class AProceduralFoliageBlockingVolume : public AVolume
+	class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
 	{
 	public:
-		class AProceduralFoliageVolume*                              ProceduralFoliageVolume;                                 // 0x0258(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Foliage.ProceduralFoliageComponent
-	 * Size -> 0x0028 (FullSize[0x00D8] - InheritedSize[0x00B0])
-	 */
-	class UProceduralFoliageComponent : public UActorComponent
-	{
-	public:
-		class UProceduralFoliageSpawner*                             FoliageSpawner;                                          // 0x00B0(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TileOverlap;                                             // 0x00B8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00BC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AVolume*                                               SpawningVolume;                                          // 0x00C0(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		struct FGuid                                                 ProceduralGuid;                                          // 0x00C8(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Foliage.ProceduralFoliageSpawner
-	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
-	 */
-	class UProceduralFoliageSpawner : public UObject
-	{
-	public:
-		int32_t                                                      RandomSeed;                                              // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TileSize;                                                // 0x002C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      NumUniqueTiles;                                          // 0x0030(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MinimumQuadTreeSize;                                     // 0x0034(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FFoliageTypeObject>                            FoliageTypes;                                            // 0x0040(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0x18];                                  // 0x0050(0x0018) MISSED OFFSET (PADDING)
-
-	public:
-		void Simulate(int32_t NumSteps);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Foliage.ProceduralFoliageTile
-	 * Size -> 0x0130 (FullSize[0x0158] - InheritedSize[0x0028])
-	 */
-	class UProceduralFoliageTile : public UObject
-	{
-	public:
-		class UProceduralFoliageSpawner*                             FoliageSpawner;                                          // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0xA0];                                  // 0x0030(0x00A0) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FProceduralFoliageInstance>                    InstancesArray;                                          // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0x78];                                  // 0x00E0(0x0078) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Foliage.ProceduralFoliageVolume
-	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
-	 */
-	class AProceduralFoliageVolume : public AVolume
-	{
-	public:
-		class UProceduralFoliageComponent*                           ProceduralComponent;                                     // 0x0258(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMulticastInlineDelegate                               OnInstanceTakePointDamage;                               // 0x0678(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0681(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnInstanceTakeRadialDamage;                              // 0x0688(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0689(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		struct FGuid                                                 GenerationGuid;                                          // 0x0698(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0002[0x8];                                   // 0x06A8(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54102);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40992);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_Colt1911_AnimGraphNode_BlendListByBool_6A7D8B56402439E51D649F9A89C4D725()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54101);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40991);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_Colt1911_AnimGraphNode_BlendListByBool_0947D15B4B41B2481BEAD685D38DAB76()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54100);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40990);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::AnimNotify_DropSpeedReloadMagazine()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54099);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40989);
 		
 		struct
 		{
@@ -109,7 +109,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::AnimNotify_ShowMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54098);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40988);
 		
 		struct
 		{
@@ -130,7 +130,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::AnimNotify_SlideBack()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54097);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40987);
 		
 		struct
 		{
@@ -151,7 +151,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::AnimNotify_SlideForward()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54096);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40986);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UANIMBP_Colt1911_C::ExecuteUbergraph_ANIMBP_Colt1911(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54095);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40985);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Colt1911_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54094);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40984);
 		return ptr;
 	}
 

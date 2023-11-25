@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -13,70 +13,163 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTagsManager.StaticClass
+	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FGameplayTag                                TagToCheck                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool IGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17899);
+		
+		struct
+		{
+			struct FGameplayTag                                TagToCheck;
+			bool                                               ReturnValue;
+		} params;
+		params.TagToCheck = TagToCheck;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FGameplayTagContainer                       TagContainer                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool IGameplayTagAssetInterface::HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17898);
+		
+		struct
+		{
+			struct FGameplayTagContainer                       TagContainer;
+			bool                                               ReturnValue;
+		} params;
+		params.TagContainer = TagContainer;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FGameplayTagContainer                       TagContainer                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool IGameplayTagAssetInterface::HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17897);
+		
+		struct
+		{
+			struct FGameplayTagContainer                       TagContainer;
+			bool                                               ReturnValue;
+		} params;
+		params.TagContainer = TagContainer;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FGameplayTagContainer                       TagContainer                                               (Parm, OutParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IGameplayTagAssetInterface::GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17896);
+		
+		struct
+		{
+			struct FGameplayTagContainer                       TagContainer;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (TagContainer != nullptr)
+			*TagContainer = params.TagContainer;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction IGameplayTagAssetInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGameplayTagsManager::StaticClass()
+	UClass* IGameplayTagAssetInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2114);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2105);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTagsList.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGameplayTagsList::StaticClass()
+	UClass* UEditableGameplayTagQueryExpression::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2115);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2107);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URestrictedGameplayTagsList.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_NoTagsMatch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* URestrictedGameplayTagsList::StaticClass()
+	UClass* UEditableGameplayTagQueryExpression_NoTagsMatch::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2116);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2110);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTagsSettings.StaticClass
+	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AnyExprMatch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGameplayTagsSettings::StaticClass()
+	UClass* UEditableGameplayTagQueryExpression_AnyExprMatch::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2117);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTagsDeveloperSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGameplayTagsDeveloperSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2118);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2111);
 		return ptr;
 	}
 
@@ -983,127 +1076,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FGameplayTag                                TagToCheck                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool IGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17899);
-		
-		struct
-		{
-			struct FGameplayTag                                TagToCheck;
-			bool                                               ReturnValue;
-		} params;
-		params.TagToCheck = TagToCheck;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FGameplayTagContainer                       TagContainer                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool IGameplayTagAssetInterface::HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17898);
-		
-		struct
-		{
-			struct FGameplayTagContainer                       TagContainer;
-			bool                                               ReturnValue;
-		} params;
-		params.TagContainer = TagContainer;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FGameplayTagContainer                       TagContainer                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool IGameplayTagAssetInterface::HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17897);
-		
-		struct
-		{
-			struct FGameplayTagContainer                       TagContainer;
-			bool                                               ReturnValue;
-		} params;
-		params.TagContainer = TagContainer;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FGameplayTagContainer                       TagContainer                                               (Parm, OutParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IGameplayTagAssetInterface::GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17896);
-		
-		struct
-		{
-			struct FGameplayTagContainer                       TagContainer;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (TagContainer != nullptr)
-			*TagContainer = params.TagContainer;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IGameplayTagAssetInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* IGameplayTagAssetInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2105);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UEditableGameplayTagQuery.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1112,76 +1084,6 @@ namespace SDK
 	UClass* UEditableGameplayTagQuery::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2106);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGameplayTagQueryExpression::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2107);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AnyTagsMatch.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGameplayTagQueryExpression_AnyTagsMatch::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2108);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AllTagsMatch.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGameplayTagQueryExpression_AllTagsMatch::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2109);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_NoTagsMatch.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGameplayTagQueryExpression_NoTagsMatch::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2110);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AnyExprMatch.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGameplayTagQueryExpression_AnyExprMatch::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2111);
 		return ptr;
 	}
 
@@ -1202,6 +1104,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTagsManager.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTagsManager::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2114);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_NoExprMatch.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1210,6 +1126,90 @@ namespace SDK
 	UClass* UEditableGameplayTagQueryExpression_NoExprMatch::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2113);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTagsList.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTagsList::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2115);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URestrictedGameplayTagsList.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URestrictedGameplayTagsList::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2116);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTagsSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTagsSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2117);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AnyTagsMatch.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableGameplayTagQueryExpression_AnyTagsMatch::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2108);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTagsDeveloperSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTagsDeveloperSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2118);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableGameplayTagQueryExpression_AllTagsMatch.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableGameplayTagQueryExpression_AllTagsMatch::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2109);
 		return ptr;
 	}
 

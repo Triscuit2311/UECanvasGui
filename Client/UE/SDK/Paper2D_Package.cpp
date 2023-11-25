@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,251 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMaterialExpressionSpriteTextureSampler.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMaterialExpressionSpriteTextureSampler::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(474);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction APaperFlipbookActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* APaperFlipbookActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(477);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction APaperCharacter.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* APaperCharacter::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(475);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.IsValidKeyFrameIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UPaperFlipbook::IsValidKeyFrameIndex(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13722);
+		
+		struct
+		{
+			int32_t                                            Index;
+			bool                                               ReturnValue;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetTotalDuration
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UPaperFlipbook::GetTotalDuration()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13721);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetSpriteAtTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(float Time, bool bClampToEnds)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13720);
+		
+		struct
+		{
+			float                                              Time;
+			bool                                               bClampToEnds;
+			unsigned char                                      UnknownData_0000[0x3];
+			class UPaperSprite*                                ReturnValue;
+		} params;
+		params.Time = Time;
+		params.bClampToEnds = bClampToEnds;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetSpriteAtFrame
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            FrameIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(int32_t FrameIndex)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13719);
+		
+		struct
+		{
+			int32_t                                            FrameIndex;
+			unsigned char                                      UnknownData_0001[0x4];
+			class UPaperSprite*                                ReturnValue;
+		} params;
+		params.FrameIndex = FrameIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetNumKeyFrames
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UPaperFlipbook::GetNumKeyFrames()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13718);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetNumFrames
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UPaperFlipbook::GetNumFrames()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13717);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UPaperFlipbook::GetKeyFrameIndexAtTime(float Time, bool bClampToEnds)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13716);
+		
+		struct
+		{
+			float                                              Time;
+			bool                                               bClampToEnds;
+			unsigned char                                      UnknownData_0002[0x3];
+			int32_t                                            ReturnValue;
+		} params;
+		params.Time = Time;
+		params.bClampToEnds = bClampToEnds;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperFlipbook.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperFlipbook::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(476);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -597,20 +842,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperSprite.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperSprite::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(482);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction APaperGroupedSpriteActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -619,48 +850,6 @@ namespace SDK
 	UClass* APaperGroupedSpriteActor::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(479);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction APaperSpriteActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* APaperSpriteActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(483);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperSpriteAtlas.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperSpriteAtlas::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(484);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMaterialExpressionSpriteTextureSampler.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMaterialExpressionSpriteTextureSampler::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(474);
 		return ptr;
 	}
 
@@ -714,393 +903,17 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction APaperCharacter.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* APaperCharacter::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(475);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperSpriteComponent.SetSpriteColor
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UPaperSpriteComponent::SetSpriteColor(const struct FLinearColor& NewColor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13758);
-		
-		struct
-		{
-			struct FLinearColor                                NewColor;
-		} params;
-		params.NewColor = NewColor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperSpriteComponent.SetSprite
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPaperSprite*                                NewSprite                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPaperSpriteComponent::SetSprite(class UPaperSprite* NewSprite)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13757);
-		
-		struct
-		{
-			class UPaperSprite*                                NewSprite;
-			bool                                               ReturnValue;
-		} params;
-		params.NewSprite = NewSprite;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperSpriteComponent.GetSprite
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UPaperSprite* UPaperSpriteComponent::GetSprite()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13756);
-		
-		struct
-		{
-			class UPaperSprite*                                ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperSpriteComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperSpriteComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(486);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.IsValidKeyFrameIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPaperFlipbook::IsValidKeyFrameIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13722);
-		
-		struct
-		{
-			int32_t                                            Index;
-			bool                                               ReturnValue;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetTotalDuration
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UPaperFlipbook::GetTotalDuration()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13721);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetSpriteAtTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(float Time, bool bClampToEnds)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13720);
-		
-		struct
-		{
-			float                                              Time;
-			bool                                               bClampToEnds;
-			unsigned char                                      UnknownData_0000[0x3];
-			class UPaperSprite*                                ReturnValue;
-		} params;
-		params.Time = Time;
-		params.bClampToEnds = bClampToEnds;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetSpriteAtFrame
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            FrameIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(int32_t FrameIndex)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13719);
-		
-		struct
-		{
-			int32_t                                            FrameIndex;
-			unsigned char                                      UnknownData_0001[0x4];
-			class UPaperSprite*                                ReturnValue;
-		} params;
-		params.FrameIndex = FrameIndex;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetNumKeyFrames
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UPaperFlipbook::GetNumKeyFrames()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13718);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetNumFrames
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UPaperFlipbook::GetNumFrames()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13717);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              Time                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bClampToEnds                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UPaperFlipbook::GetKeyFrameIndexAtTime(float Time, bool bClampToEnds)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13716);
-		
-		struct
-		{
-			float                                              Time;
-			bool                                               bClampToEnds;
-			unsigned char                                      UnknownData_0002[0x3];
-			int32_t                                            ReturnValue;
-		} params;
-		params.Time = Time;
-		params.bClampToEnds = bClampToEnds;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperFlipbook.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperFlipbook::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(476);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperTileLayer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperTileLayer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(492);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction APaperTerrainActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* APaperTerrainActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(487);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction APaperTileMapActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* APaperTileMapActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(494);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction APaperFlipbookActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* APaperFlipbookActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(477);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperTileSet.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperTileSet::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(496);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Paper2D.PaperGroupedSpriteComponent.UpdateInstanceTransform
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            InstanceIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     NewInstanceTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     NewInstanceTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bMarkRenderStateDirty                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bTeleport                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(int32_t InstanceIndex, const struct PCoreUObject_FTransform& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport)
+	bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(int32_t InstanceIndex, const struct FTransform& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13754);
 		
@@ -1108,7 +921,7 @@ namespace SDK
 		{
 			int32_t                                            InstanceIndex;
 			unsigned char                                      UnknownData_0000[0xC];
-			struct PCoreUObject_FTransform                     NewInstanceTransform;
+			struct FTransform                     NewInstanceTransform;
 			bool                                               bWorldSpace;
 			bool                                               bMarkRenderStateDirty;
 			bool                                               bTeleport;
@@ -1218,11 +1031,11 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            InstanceIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     OutInstanceTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     OutInstanceTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UPaperGroupedSpriteComponent::GetInstanceTransform(int32_t InstanceIndex, struct PCoreUObject_FTransform* OutInstanceTransform, bool bWorldSpace)
+	bool UPaperGroupedSpriteComponent::GetInstanceTransform(int32_t InstanceIndex, struct FTransform* OutInstanceTransform, bool bWorldSpace)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13750);
 		
@@ -1230,7 +1043,7 @@ namespace SDK
 		{
 			int32_t                                            InstanceIndex;
 			unsigned char                                      UnknownData_0001[0xC];
-			struct PCoreUObject_FTransform                     OutInstanceTransform;
+			struct FTransform                     OutInstanceTransform;
 			bool                                               bWorldSpace;
 			bool                                               ReturnValue;
 		} params;
@@ -1298,19 +1111,19 @@ namespace SDK
 	 * 		Name   -> Function Paper2D.PaperGroupedSpriteComponent.AddInstance
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     Transform                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Transform                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		class UPaperSprite*                                Sprite                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bWorldSpace                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FLinearColor                                Color                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UPaperGroupedSpriteComponent::AddInstance(const struct PCoreUObject_FTransform& Transform, class UPaperSprite* Sprite, bool bWorldSpace, const struct FLinearColor& Color)
+	int32_t UPaperGroupedSpriteComponent::AddInstance(const struct FTransform& Transform, class UPaperSprite* Sprite, bool bWorldSpace, const struct FLinearColor& Color)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13747);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     Transform;
+			struct FTransform                     Transform;
 			class UPaperSprite*                                Sprite;
 			bool                                               bWorldSpace;
 			unsigned char                                      UnknownData_0002[0x3];
@@ -1340,6 +1153,207 @@ namespace SDK
 	UClass* UPaperGroupedSpriteComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(480);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperTerrainSplineComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperTerrainSplineComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(491);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction APaperTerrainActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* APaperTerrainActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(487);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperRuntimeSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperRuntimeSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(481);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperTileLayer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperTileLayer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(492);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperSprite.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperSprite::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(482);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperSpriteComponent.SetSpriteColor
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FLinearColor                                NewColor                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UPaperSpriteComponent::SetSpriteColor(const struct FLinearColor& NewColor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13758);
+		
+		struct
+		{
+			struct FLinearColor                                NewColor;
+		} params;
+		params.NewColor = NewColor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperSpriteComponent.SetSprite
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPaperSprite*                                NewSprite                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UPaperSpriteComponent::SetSprite(class UPaperSprite* NewSprite)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13757);
+		
+		struct
+		{
+			class UPaperSprite*                                NewSprite;
+			bool                                               ReturnValue;
+		} params;
+		params.NewSprite = NewSprite;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.PaperSpriteComponent.GetSprite
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPaperSprite*                                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UPaperSprite* UPaperSpriteComponent::GetSprite()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13756);
+		
+		struct
+		{
+			class UPaperSprite*                                ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperSpriteComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperSpriteComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(486);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperTileMap.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperTileMap::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(493);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction APaperSpriteActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* APaperSpriteActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(483);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction APaperTileMapActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* APaperTileMapActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(494);
 		return ptr;
 	}
 
@@ -1378,189 +1392,6 @@ namespace SDK
 	UClass* UPaperTerrainComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(488);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.MakeTile
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            TileIndex                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPaperTileSet*                               TileSet                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipH                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipV                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipD                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FPaperTileInfo                              ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int32_t TileIndex, class UPaperTileSet* TileSet, bool bFlipH, bool bFlipV, bool bFlipD)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13880);
-		
-		struct
-		{
-			int32_t                                            TileIndex;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UPaperTileSet*                               TileSet;
-			bool                                               bFlipH;
-			bool                                               bFlipV;
-			bool                                               bFlipD;
-			unsigned char                                      UnknownData_0001[0x5];
-			struct FPaperTileInfo                              ReturnValue;
-		} params;
-		params.TileIndex = TileIndex;
-		params.TileSet = TileSet;
-		params.bFlipH = bFlipH;
-		params.bFlipV = bFlipV;
-		params.bFlipD = bFlipD;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.GetTileUserData
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FName UTileMapBlueprintLibrary::GetTileUserData(const struct FPaperTileInfo& Tile)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13879);
-		
-		struct
-		{
-			struct FPaperTileInfo                              Tile;
-			class FName                                        ReturnValue;
-		} params;
-		params.Tile = Tile;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.GetTileTransform
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct PCoreUObject_FTransform UTileMapBlueprintLibrary::GetTileTransform(const struct FPaperTileInfo& Tile)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13878);
-		
-		struct
-		{
-			struct FPaperTileInfo                              Tile;
-			struct PCoreUObject_FTransform                     ReturnValue;
-		} params;
-		params.Tile = Tile;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.BreakTile
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            TileIndex                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPaperTileSet*                               TileSet                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipH                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipV                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bFlipD                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTileMapBlueprintLibrary::BreakTile(const struct FPaperTileInfo& Tile, int32_t* TileIndex, class UPaperTileSet** TileSet, bool* bFlipH, bool* bFlipV, bool* bFlipD)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13877);
-		
-		struct
-		{
-			struct FPaperTileInfo                              Tile;
-			int32_t                                            TileIndex;
-			unsigned char                                      UnknownData_0002[0x4];
-			class UPaperTileSet*                               TileSet;
-			bool                                               bFlipH;
-			bool                                               bFlipV;
-			bool                                               bFlipD;
-		} params;
-		params.Tile = Tile;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (TileIndex != nullptr)
-			*TileIndex = params.TileIndex;
-		if (TileSet != nullptr)
-			*TileSet = params.TileSet;
-		if (bFlipH != nullptr)
-			*bFlipH = params.bFlipH;
-		if (bFlipV != nullptr)
-			*bFlipV = params.bFlipV;
-		if (bFlipD != nullptr)
-			*bFlipD = params.bFlipD;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTileMapBlueprintLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTileMapBlueprintLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(497);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperRuntimeSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperRuntimeSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(481);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperTerrainMaterial.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPaperTerrainMaterial::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(489);
 		return ptr;
 	}
 
@@ -2151,28 +1982,197 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperTileMap.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperSpriteAtlas.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPaperTileMap::StaticClass()
+	UClass* UPaperSpriteAtlas::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(493);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(484);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPaperTerrainSplineComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UPaperTileSet.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPaperTerrainSplineComponent::StaticClass()
+	UClass* UPaperTileSet::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(491);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(496);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPaperTerrainMaterial.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPaperTerrainMaterial::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(489);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.MakeTile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            TileIndex                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPaperTileSet*                               TileSet                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipH                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipV                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipD                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FPaperTileInfo                              ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int32_t TileIndex, class UPaperTileSet* TileSet, bool bFlipH, bool bFlipV, bool bFlipD)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13880);
+		
+		struct
+		{
+			int32_t                                            TileIndex;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UPaperTileSet*                               TileSet;
+			bool                                               bFlipH;
+			bool                                               bFlipV;
+			bool                                               bFlipD;
+			unsigned char                                      UnknownData_0001[0x5];
+			struct FPaperTileInfo                              ReturnValue;
+		} params;
+		params.TileIndex = TileIndex;
+		params.TileSet = TileSet;
+		params.bFlipH = bFlipH;
+		params.bFlipV = bFlipV;
+		params.bFlipD = bFlipD;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.GetTileUserData
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FName UTileMapBlueprintLibrary::GetTileUserData(const struct FPaperTileInfo& Tile)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13879);
+		
+		struct
+		{
+			struct FPaperTileInfo                              Tile;
+			class FName                                        ReturnValue;
+		} params;
+		params.Tile = Tile;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.GetTileTransform
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FTransform UTileMapBlueprintLibrary::GetTileTransform(const struct FPaperTileInfo& Tile)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13878);
+		
+		struct
+		{
+			struct FPaperTileInfo                              Tile;
+			struct FTransform                     ReturnValue;
+		} params;
+		params.Tile = Tile;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Paper2D.TileMapBlueprintLibrary.BreakTile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPaperTileInfo                              Tile                                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            TileIndex                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPaperTileSet*                               TileSet                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipH                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipV                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFlipD                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTileMapBlueprintLibrary::BreakTile(const struct FPaperTileInfo& Tile, int32_t* TileIndex, class UPaperTileSet** TileSet, bool* bFlipH, bool* bFlipV, bool* bFlipD)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13877);
+		
+		struct
+		{
+			struct FPaperTileInfo                              Tile;
+			int32_t                                            TileIndex;
+			unsigned char                                      UnknownData_0002[0x4];
+			class UPaperTileSet*                               TileSet;
+			bool                                               bFlipH;
+			bool                                               bFlipV;
+			bool                                               bFlipD;
+		} params;
+		params.Tile = Tile;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (TileIndex != nullptr)
+			*TileIndex = params.TileIndex;
+		if (TileSet != nullptr)
+			*TileSet = params.TileSet;
+		if (bFlipH != nullptr)
+			*bFlipH = params.bFlipH;
+		if (bFlipV != nullptr)
+			*bFlipV = params.bFlipV;
+		if (bFlipD != nullptr)
+			*bFlipD = params.bFlipD;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTileMapBlueprintLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTileMapBlueprintLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(497);
 		return ptr;
 	}
 

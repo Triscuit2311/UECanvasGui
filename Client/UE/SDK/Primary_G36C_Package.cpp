@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void APrimary_G36C_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36452);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46439);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void APrimary_G36C_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36451);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46438);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void APrimary_G36C_C::ExecuteUbergraph_Primary_G36C(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36450);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46437);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* APrimary_G36C_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(36449);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46436);
 		return ptr;
 	}
 

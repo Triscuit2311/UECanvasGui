@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::SetRecommendedDeployables()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55098);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31562);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::SetDesignationText(int32_t SpawnIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55097);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31561);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::Finished_B45778B942FC16674AB7A3BD06E9C36E()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55096);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31560);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::Finished_186E628046C415504DDD34A0079F53C5()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55095);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31559);
 		
 		struct
 		{
@@ -107,7 +107,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::BndEvt__btn_ClickAway_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55094);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31558);
 		
 		struct
 		{
@@ -129,7 +129,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::BndEvt__btn_SelectPoint_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55093);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31557);
 		
 		struct
 		{
@@ -153,7 +153,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::SetActiveSpawn(const struct FSpawnPoints& SpawnInfo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55092);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31556);
 		
 		struct
 		{
@@ -178,7 +178,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::UpdateInfo(const struct FSpawnPoints& SpawnInfo, int32_t SpawnIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55091);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31555);
 		
 		struct
 		{
@@ -203,7 +203,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::RevealPanel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55090);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31554);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::HidePanel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55089);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31553);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::ExecuteUbergraph_W_PlanningMap_BreachPoint_Info(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55088);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31552);
 		
 		struct
 		{
@@ -269,7 +269,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::OnDetailPanelHide__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55087);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31551);
 		
 		struct
 		{
@@ -290,7 +290,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_BreachPoint_Info_C::OnSetSpawnButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55086);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31550);
 		
 		struct
 		{
@@ -311,7 +311,7 @@ namespace SDK
 	 */
 	UClass* UW_PlanningMap_BreachPoint_Info_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55085);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31549);
 		return ptr;
 	}
 

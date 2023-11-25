@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_G19_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(83891);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84944);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_G19_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_G19_AnimGraphNode_BlendListByBool_2E3D8BC14D9FAD9D8B26C194788ED3E6()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(83890);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84943);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UANIMBP_G19_C::AnimNotify_DropSpeedReloadMagazine()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(83889);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84942);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UANIMBP_G19_C::AnimNotify_ShowMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(83888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84941);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UANIMBP_G19_C::ExecuteUbergraph_ANIMBP_G19(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(83887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84940);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_G19_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(83886);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84939);
 		return ptr;
 	}
 

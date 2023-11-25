@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27096);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43759);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::ShowMessagePrompt(bool IsFirstShowing, const class FText& Title, TArray<class FText> Content)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27095);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43758);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::HideMessagePrompt()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27094);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43757);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::UpdateMessageContent(TArray<class FText> Content)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27093);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43756);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::ClearMessages()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27092);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43755);
 		
 		struct
 		{
@@ -139,7 +139,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessagePopup_C::ExecuteUbergraph_W_TutorialMessagePopup(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27091);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43754);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	UClass* UW_TutorialMessagePopup_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27090);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43753);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UGE_PlayerNerf_IncreaseRecoil_C::ApplyEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24889);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43422);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UGE_PlayerNerf_IncreaseRecoil_C::ResetEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43421);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UGE_PlayerNerf_IncreaseRecoil_C::ExecuteUbergraph_GE_PlayerNerf_IncreaseRecoil(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43420);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	UClass* UGE_PlayerNerf_IncreaseRecoil_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24886);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43419);
 		return ptr;
 	}
 

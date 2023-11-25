@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::ConfirmSelection(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27326);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43989);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::SelectCategory(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27325);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43988);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::UpdateMenu(TArray<struct FItemSelectionGroup>* InItemGroups)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27324);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43987);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::CloseMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27323);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43986);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::OpenMenu(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27322);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43985);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::Initialize(bool bForce, TArray<struct FItemSelectionGroup> InItemSelectionGroups)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27321);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43984);
 		
 		struct
 		{
@@ -169,7 +169,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::ExecuteUbergraph_W_ItemSelectionMenu_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27320);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43983);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void UW_ItemSelectionMenu_V2_C::OnMenuOpened__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27319);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43982);
 		
 		struct
 		{
@@ -213,7 +213,7 @@ namespace SDK
 	 */
 	UClass* UW_ItemSelectionMenu_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27318);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43981);
 		return ptr;
 	}
 

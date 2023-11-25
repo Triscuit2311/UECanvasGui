@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	float ABP_LobbyLoadout_C::DetermineCurrentProgress()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27803);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59754);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	bool ABP_LobbyLoadout_C::CanInteract()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27802);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59753);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	bool ABP_LobbyLoadout_C::CanInteractThroughHitActors(const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27801);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59752);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	class FText ABP_LobbyLoadout_C::DetermineActionText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27800);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59751);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	class FName ABP_LobbyLoadout_C::DetermineAnimatedIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27799);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59750);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	EInputEvent ABP_LobbyLoadout_C::DetermineInputEvent()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27798);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59749);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	float ABP_LobbyLoadout_C::DetermineInteractionDistance()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27797);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59748);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	class UInteractableComponent* ABP_LobbyLoadout_C::GetInteractableComponent()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27796);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59747);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27795);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59746);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27794);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59745);
 		
 		struct
 		{
@@ -262,7 +262,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::OnFocusLost(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59744);
 		
 		struct
 		{
@@ -289,7 +289,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::Fire(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27792);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59743);
 		
 		struct
 		{
@@ -316,7 +316,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::EndInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27791);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59742);
 		
 		struct
 		{
@@ -343,7 +343,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::OnFocusGain(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27790);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59741);
 		
 		struct
 		{
@@ -370,7 +370,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::EndFire(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27789);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59740);
 		
 		struct
 		{
@@ -397,7 +397,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::MeleeInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59739);
 		
 		struct
 		{
@@ -424,7 +424,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::DoubleTapInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59738);
 		
 		struct
 		{
@@ -451,7 +451,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::Interact(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27786);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59737);
 		
 		struct
 		{
@@ -477,7 +477,7 @@ namespace SDK
 	 */
 	void ABP_LobbyLoadout_C::ExecuteUbergraph_BP_LobbyLoadout(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27785);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49032);
 		
 		struct
 		{
@@ -501,7 +501,7 @@ namespace SDK
 	 */
 	UClass* ABP_LobbyLoadout_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27784);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49031);
 		return ptr;
 	}
 

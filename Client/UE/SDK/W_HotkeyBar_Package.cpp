@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27619);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48830);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27618);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48829);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::UpdateHints(TArray<struct Fst_HotkeySettings> Hotkeys)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27617);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48828);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::HotkeyButtonClicked(class UW_HotkeyBar_Entry_C* TriggeringHotkeyEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27616);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48827);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::ExecuteUbergraph_W_HotkeyBar(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48826);
 		
 		struct
 		{
@@ -139,7 +139,7 @@ namespace SDK
 	 */
 	void UW_HotkeyBar_C::OnHotkeyClicked__DelegateSignature(const class FString& HotkeyID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27614);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48825);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	UClass* UW_HotkeyBar_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27613);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48824);
 		return ptr;
 	}
 

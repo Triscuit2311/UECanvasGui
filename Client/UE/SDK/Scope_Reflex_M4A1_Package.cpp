@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_Reflex_M4A1_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54608);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37997);
 		return ptr;
 	}
 

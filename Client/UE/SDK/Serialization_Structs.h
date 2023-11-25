@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -34,23 +34,6 @@ namespace SDK
 		float                                                        Float;                                                   // 0x0020(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		double                                                       Double;                                                  // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Serialization.StructSerializerByteArray
-	 * Size -> 0x0038
-	 */
-	struct FStructSerializerByteArray
-	{
-	public:
-		int32_t                                                      Dummy1;                                                  // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<uint8_t>                                              ByteArray;                                               // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		int32_t                                                      Dummy2;                                                  // 0x0018(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<int8_t>                                               Int8Array;                                               // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		int32_t                                                      Dummy3;                                                  // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -107,8 +90,8 @@ namespace SDK
 		struct FVector4                                              Vector4;                                                 // 0x0050(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FRotator                                 Rotator;                                                 // 0x0060(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FQuat                                    Quat;                                                    // 0x0070(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   Color;                                                   // 0x0080(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FQuat                                    Quat;                                                    // 0x0070(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FColor                                   Color;                                                   // 0x0080(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0xC];                                   // 0x0084(0x000C) MISSED OFFSET (PADDING)
 	};
 
@@ -171,6 +154,23 @@ namespace SDK
 		struct FStructSerializerArrayTestStruct                      Arrays;                                                  // 0x0170(0x0060) NativeAccessSpecifierPublic
 		struct FStructSerializerMapTestStruct                        Maps;                                                    // 0x01D0(0x0140) NativeAccessSpecifierPublic
 		struct FStructSerializerSetTestStruct                        Sets;                                                    // 0x0310(0x0140) NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Serialization.StructSerializerByteArray
+	 * Size -> 0x0038
+	 */
+	struct FStructSerializerByteArray
+	{
+	public:
+		int32_t                                                      Dummy1;                                                  // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<uint8_t>                                              ByteArray;                                               // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int32_t                                                      Dummy2;                                                  // 0x0018(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<int8_t>                                               Int8Array;                                               // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int32_t                                                      Dummy3;                                                  // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0034(0x0004) MISSED OFFSET (PADDING)
 	};
 
 }

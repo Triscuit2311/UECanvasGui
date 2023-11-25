@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UChaosDebugDrawComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UChaosDebugDrawComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3395);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -191,6 +177,20 @@ namespace SDK
 	UClass* UChaosSolverSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3402);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UChaosDebugDrawComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UChaosDebugDrawComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3395);
 		return ptr;
 	}
 

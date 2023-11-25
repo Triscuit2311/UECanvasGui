@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::SequenceEvent__ENTRYPOINTW_MissionEnd_RatingScoreEntry_2(class UObject* EventReceiver)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88559);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88564);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::SequenceEvent__ENTRYPOINTW_MissionEnd_RatingScoreEntry_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88558);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88563);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::Finished_0849F9E54A775090B38983909C2585B3()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88557);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88562);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::numberSound(class UObject* EventReceiver)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88556);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88561);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88555);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88560);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88554);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88559);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::revealSound()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88553);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88558);
 		
 		struct
 		{
@@ -177,7 +177,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::ExecuteUbergraph_W_MissionEnd_RatingScoreEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88552);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88557);
 		
 		struct
 		{
@@ -202,7 +202,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_RatingScoreEntry_C::ScoreEntryReady__DelegateSignature(class UW_MissionEnd_RatingScoreEntry_C* EntryWidget, int32_t Score)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88551);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88556);
 		
 		struct
 		{
@@ -227,7 +227,7 @@ namespace SDK
 	 */
 	UClass* UW_MissionEnd_RatingScoreEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88550);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88555);
 		return ptr;
 	}
 

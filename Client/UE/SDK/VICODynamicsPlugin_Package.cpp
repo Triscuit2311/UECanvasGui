@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -192,216 +192,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetVolumeConstraint
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UVDMeshVolumeConstraint*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVDMeshVolumeConstraint* UVDMeshClothComponent::GetVolumeConstraint()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13458);
-		
-		struct
-		{
-			class UVDMeshVolumeConstraint*                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetStretchConstraintsArray
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UVDParticleSpringConstraint*>         ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UVDParticleSpringConstraint*> UVDMeshClothComponent::GetStretchConstraintsArray()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13457);
-		
-		struct
-		{
-			TArray<class UVDParticleSpringConstraint*>         ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetBendConstraintsArray
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UVDParticleSpringConstraint*>         ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UVDParticleSpringConstraint*> UVDMeshClothComponent::GetBendConstraintsArray()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13456);
-		
-		struct
-		{
-			TArray<class UVDParticleSpringConstraint*>         ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDMeshClothComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDMeshClothComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(422);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDBlueprintFunctionLibrary.GetVICODynamicsSimulationInstance
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UVDSimulation*                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVDSimulation* UVDBlueprintFunctionLibrary::GetVICODynamicsSimulationInstance()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13445);
-		
-		struct
-		{
-			class UVDSimulation*                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDBlueprintFunctionLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDBlueprintFunctionLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(418);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.SetRestVolume
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewVolume                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVDMeshVolumeConstraint::SetRestVolume(float NewVolume)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13461);
-		
-		struct
-		{
-			float                                              NewVolume;
-		} params;
-		params.NewVolume = NewVolume;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.GetRestVolume
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UVDMeshVolumeConstraint::GetRestVolume()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13460);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.GetCurrentVolume
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UVDMeshVolumeConstraint::GetCurrentVolume()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13459);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDMeshVolumeConstraint.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDMeshVolumeConstraint::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(423);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function VICODynamicsPlugin.VDRopeComponent.SetNewRestLengthStartingAtParticle
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -581,6 +371,492 @@ namespace SDK
 	UClass* UVDRopeComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(420);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRopeAttached
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DistancePerSegment                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class USceneComponent*                             StartAttachedTo                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        StartSocket                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               StartSimulateTension                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class USceneComponent*                             EndAttachedTo                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        EndSocket                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               EndSimulateTension                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVDDynamicRopeComponent::RebuildRopeAttached(float DistancePerSegment, class USceneComponent* StartAttachedTo, const class FName& StartSocket, bool StartSimulateTension, class USceneComponent* EndAttachedTo, const class FName& EndSocket, bool EndSimulateTension)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13455);
+		
+		struct
+		{
+			float                                              DistancePerSegment;
+			unsigned char                                      UnknownData_0000[0x4];
+			class USceneComponent*                             StartAttachedTo;
+			class FName                                        StartSocket;
+			bool                                               StartSimulateTension;
+			unsigned char                                      UnknownData_0001[0x7];
+			class USceneComponent*                             EndAttachedTo;
+			class FName                                        EndSocket;
+			bool                                               EndSimulateTension;
+		} params;
+		params.DistancePerSegment = DistancePerSegment;
+		params.StartAttachedTo = StartAttachedTo;
+		params.StartSocket = StartSocket;
+		params.StartSimulateTension = StartSimulateTension;
+		params.EndAttachedTo = EndAttachedTo;
+		params.EndSocket = EndSocket;
+		params.EndSimulateTension = EndSimulateTension;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRopeAtPoints
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              DistancePerSegment                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector                        StartLocation                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector                        EndLocation                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bRelativeLocations                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVDDynamicRopeComponent::RebuildRopeAtPoints(float DistancePerSegment, const struct FVector& StartLocation, const struct FVector& EndLocation, bool bRelativeLocations)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13454);
+		
+		struct
+		{
+			float                                              DistancePerSegment;
+			struct FVector                        StartLocation;
+			struct FVector                        EndLocation;
+			bool                                               bRelativeLocations;
+		} params;
+		params.DistancePerSegment = DistancePerSegment;
+		params.StartLocation = StartLocation;
+		params.EndLocation = EndLocation;
+		params.bRelativeLocations = bRelativeLocations;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRope
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UVDDynamicRopeComponent::RebuildRope()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13453);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDDynamicRopeComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDDynamicRopeComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(421);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetVolumeConstraint
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UVDMeshVolumeConstraint*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVDMeshVolumeConstraint* UVDMeshClothComponent::GetVolumeConstraint()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13458);
+		
+		struct
+		{
+			class UVDMeshVolumeConstraint*                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetStretchConstraintsArray
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UVDParticleSpringConstraint*>         ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UVDParticleSpringConstraint*> UVDMeshClothComponent::GetStretchConstraintsArray()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13457);
+		
+		struct
+		{
+			TArray<class UVDParticleSpringConstraint*>         ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshClothComponent.GetBendConstraintsArray
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UVDParticleSpringConstraint*>         ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UVDParticleSpringConstraint*> UVDMeshClothComponent::GetBendConstraintsArray()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13456);
+		
+		struct
+		{
+			TArray<class UVDParticleSpringConstraint*>         ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDMeshClothComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDMeshClothComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(422);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDProceduralClothComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDProceduralClothComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(425);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.SetRestVolume
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewVolume                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVDMeshVolumeConstraint::SetRestVolume(float NewVolume)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13461);
+		
+		struct
+		{
+			float                                              NewVolume;
+		} params;
+		params.NewVolume = NewVolume;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.GetRestVolume
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UVDMeshVolumeConstraint::GetRestVolume()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13460);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDMeshVolumeConstraint.GetCurrentVolume
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UVDMeshVolumeConstraint::GetCurrentVolume()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13459);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDMeshVolumeConstraint.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDMeshVolumeConstraint::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(423);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.SetStiffness
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewStiffness                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVDParticleSpringConstraint::SetStiffness(float NewStiffness)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13468);
+		
+		struct
+		{
+			float                                              NewStiffness;
+		} params;
+		params.NewStiffness = NewStiffness;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.SetRestDistance
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewRestDistance                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVDParticleSpringConstraint::SetRestDistance(float NewRestDistance)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13467);
+		
+		struct
+		{
+			float                                              NewRestDistance;
+		} params;
+		params.NewRestDistance = NewRestDistance;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.IsConstraining
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UVDSimulatedParticle*                        Particle1                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UVDSimulatedParticle*                        Particle2                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UVDParticleSpringConstraint::IsConstraining(class UVDSimulatedParticle* Particle1, class UVDSimulatedParticle* Particle2)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13466);
+		
+		struct
+		{
+			class UVDSimulatedParticle*                        Particle1;
+			class UVDSimulatedParticle*                        Particle2;
+			bool                                               ReturnValue;
+		} params;
+		params.Particle1 = Particle1;
+		params.Particle2 = Particle2;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetStifffness
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UVDParticleSpringConstraint::GetStifffness()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13465);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetRestDistance
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UVDParticleSpringConstraint::GetRestDistance()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13464);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetParticle2
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UVDSimulatedParticle*                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVDSimulatedParticle* UVDParticleSpringConstraint::GetParticle2()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13463);
+		
+		struct
+		{
+			class UVDSimulatedParticle*                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetParticle1
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UVDSimulatedParticle*                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVDSimulatedParticle* UVDParticleSpringConstraint::GetParticle1()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13462);
+		
+		struct
+		{
+			class UVDSimulatedParticle*                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDParticleSpringConstraint.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDParticleSpringConstraint::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(424);
 		return ptr;
 	}
 
@@ -1151,222 +1427,6 @@ namespace SDK
 	UClass* UVDSimulatedObject::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(426);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.SetStiffness
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewStiffness                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVDParticleSpringConstraint::SetStiffness(float NewStiffness)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13468);
-		
-		struct
-		{
-			float                                              NewStiffness;
-		} params;
-		params.NewStiffness = NewStiffness;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.SetRestDistance
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewRestDistance                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVDParticleSpringConstraint::SetRestDistance(float NewRestDistance)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13467);
-		
-		struct
-		{
-			float                                              NewRestDistance;
-		} params;
-		params.NewRestDistance = NewRestDistance;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.IsConstraining
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UVDSimulatedParticle*                        Particle1                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UVDSimulatedParticle*                        Particle2                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UVDParticleSpringConstraint::IsConstraining(class UVDSimulatedParticle* Particle1, class UVDSimulatedParticle* Particle2)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13466);
-		
-		struct
-		{
-			class UVDSimulatedParticle*                        Particle1;
-			class UVDSimulatedParticle*                        Particle2;
-			bool                                               ReturnValue;
-		} params;
-		params.Particle1 = Particle1;
-		params.Particle2 = Particle2;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetStifffness
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UVDParticleSpringConstraint::GetStifffness()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13465);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetRestDistance
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UVDParticleSpringConstraint::GetRestDistance()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13464);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetParticle2
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UVDSimulatedParticle*                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVDSimulatedParticle* UVDParticleSpringConstraint::GetParticle2()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13463);
-		
-		struct
-		{
-			class UVDSimulatedParticle*                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDParticleSpringConstraint.GetParticle1
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UVDSimulatedParticle*                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVDSimulatedParticle* UVDParticleSpringConstraint::GetParticle1()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13462);
-		
-		struct
-		{
-			class UVDSimulatedParticle*                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDParticleSpringConstraint.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDParticleSpringConstraint::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(424);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDColliderComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDColliderComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(419);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDProceduralClothComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDProceduralClothComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(425);
 		return ptr;
 	}
 
@@ -2120,118 +2180,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRopeAttached
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DistancePerSegment                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class USceneComponent*                             StartAttachedTo                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        StartSocket                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               StartSimulateTension                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class USceneComponent*                             EndAttachedTo                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        EndSocket                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               EndSimulateTension                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVDDynamicRopeComponent::RebuildRopeAttached(float DistancePerSegment, class USceneComponent* StartAttachedTo, const class FName& StartSocket, bool StartSimulateTension, class USceneComponent* EndAttachedTo, const class FName& EndSocket, bool EndSimulateTension)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13455);
-		
-		struct
-		{
-			float                                              DistancePerSegment;
-			unsigned char                                      UnknownData_0000[0x4];
-			class USceneComponent*                             StartAttachedTo;
-			class FName                                        StartSocket;
-			bool                                               StartSimulateTension;
-			unsigned char                                      UnknownData_0001[0x7];
-			class USceneComponent*                             EndAttachedTo;
-			class FName                                        EndSocket;
-			bool                                               EndSimulateTension;
-		} params;
-		params.DistancePerSegment = DistancePerSegment;
-		params.StartAttachedTo = StartAttachedTo;
-		params.StartSocket = StartSocket;
-		params.StartSimulateTension = StartSimulateTension;
-		params.EndAttachedTo = EndAttachedTo;
-		params.EndSocket = EndSocket;
-		params.EndSimulateTension = EndSimulateTension;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRopeAtPoints
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              DistancePerSegment                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector                        StartLocation                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector                        EndLocation                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bRelativeLocations                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVDDynamicRopeComponent::RebuildRopeAtPoints(float DistancePerSegment, const struct FVector& StartLocation, const struct FVector& EndLocation, bool bRelativeLocations)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13454);
-		
-		struct
-		{
-			float                                              DistancePerSegment;
-			struct FVector                        StartLocation;
-			struct FVector                        EndLocation;
-			bool                                               bRelativeLocations;
-		} params;
-		params.DistancePerSegment = DistancePerSegment;
-		params.StartLocation = StartLocation;
-		params.EndLocation = EndLocation;
-		params.bRelativeLocations = bRelativeLocations;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VICODynamicsPlugin.VDDynamicRopeComponent.RebuildRope
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UVDDynamicRopeComponent::RebuildRope()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13453);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDDynamicRopeComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDDynamicRopeComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(421);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UVICODynamicsSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -2240,6 +2188,20 @@ namespace SDK
 	UClass* UVICODynamicsSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(434);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDSkinnedRopeComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDSkinnedRopeComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(430);
 		return ptr;
 	}
 
@@ -2796,6 +2758,44 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VICODynamicsPlugin.VDBlueprintFunctionLibrary.GetVICODynamicsSimulationInstance
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UVDSimulation*                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVDSimulation* UVDBlueprintFunctionLibrary::GetVICODynamicsSimulationInstance()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13445);
+		
+		struct
+		{
+			class UVDSimulation*                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDBlueprintFunctionLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDBlueprintFunctionLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(418);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function VICODynamicsPlugin.VDSimulationSettingsActor.GetSettings
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2834,20 +2834,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVDSkinnedRopeComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVDSkinnedRopeComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(430);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UVDSplineRopeComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -2856,6 +2842,20 @@ namespace SDK
 	UClass* UVDSplineRopeComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(431);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVDColliderComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVDColliderComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(419);
 		return ptr;
 	}
 

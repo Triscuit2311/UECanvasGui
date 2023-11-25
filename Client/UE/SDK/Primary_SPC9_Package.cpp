@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void APrimary_SPC9_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46227);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34198);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void APrimary_SPC9_C::ExecuteUbergraph_Primary_SPC9(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34197);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* APrimary_SPC9_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(46225);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(34196);
 		return ptr;
 	}
 

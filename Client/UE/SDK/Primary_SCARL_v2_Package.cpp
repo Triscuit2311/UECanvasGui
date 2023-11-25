@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* APrimary_SCARL_v2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(25332);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46410);
 		return ptr;
 	}
 

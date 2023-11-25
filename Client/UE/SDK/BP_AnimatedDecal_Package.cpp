@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABP_AnimatedDecal_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59437);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58295);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ABP_AnimatedDecal_C::SetAnimatedDecalMaterial(class UMaterialInterface* Material)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42244);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void ABP_AnimatedDecal_C::ExecuteUbergraph_BP_AnimatedDecal(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42243);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* ABP_AnimatedDecal_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56409);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42242);
 		return ptr;
 	}
 

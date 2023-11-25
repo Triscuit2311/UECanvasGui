@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -25,7 +25,7 @@ namespace SDK
 	 */
 	void ADevice_C2_Placed_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(71025);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(67363);
 		
 		struct
 		{
@@ -57,7 +57,7 @@ namespace SDK
 	 */
 	void ADevice_C2_Placed_C::ExecuteUbergraph_Device_C2_Placed(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(71024);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(67362);
 		
 		struct
 		{
@@ -81,7 +81,7 @@ namespace SDK
 	 */
 	UClass* ADevice_C2_Placed_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(71023);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(67361);
 		return ptr;
 	}
 

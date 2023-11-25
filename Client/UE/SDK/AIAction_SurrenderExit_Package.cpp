@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UAIAction_SurrenderExit_C::IsFakeExit(ESurrenderExitType ExitType, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85266);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84146);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	bool UAIAction_SurrenderExit_C::ShouldPerformAction()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85265);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84145);
 		
 		struct
 		{
@@ -73,7 +73,7 @@ namespace SDK
 	 */
 	void UAIAction_SurrenderExit_C::BeginAction_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85264);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84144);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UAIAction_SurrenderExit_C::Tick_Blueprint(float DeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85263);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84143);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	void UAIAction_SurrenderExit_C::ExecuteUbergraph_AIAction_SurrenderExit(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85262);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84142);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	UClass* UAIAction_SurrenderExit_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85261);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84141);
 		return ptr;
 	}
 

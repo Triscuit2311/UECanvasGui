@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -92,66 +92,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class VICODynamicsPlugin.VDMeshClothComponent
-	 * Size -> 0x00E8 (FullSize[0x0760] - InheritedSize[0x0678])
-	 */
-	class UVDMeshClothComponent : public UBaseVDComponent
-	{
-	public:
-		class UStaticMesh*                                           HullMesh;                                                // 0x0678(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        StretchStiffness;                                        // 0x0680(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        BendStiffness;                                           // 0x0684(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Mass;                                                    // 0x0688(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DragCoefficient;                                         // 0x068C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         PreserveVolume;                                          // 0x0690(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0691(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        CurrentVolume;                                           // 0x0694(0x0004) Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        OverrideRestVolume;                                      // 0x0698(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x069C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         UseVertexColorDataForSetup : 1;                          // 0x06A0(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x3];                                   // 0x06A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        MaxBendConstraintDistance;                               // 0x06A4(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0003[0x28];                                  // 0x06A8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UVDParticleSpringConstraint*>                   StretchConstraints;                                      // 0x06D0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		TArray<class UVDParticleSpringConstraint*>                   BendConstraints;                                         // 0x06E0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		class UVDMeshVolumeConstraint*                               VolumeConstraint;                                        // 0x06F0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0004[0x68];                                  // 0x06F8(0x0068) MISSED OFFSET (PADDING)
-
-	public:
-		class UVDMeshVolumeConstraint* GetVolumeConstraint();
-		TArray<class UVDParticleSpringConstraint*> GetStretchConstraintsArray();
-		TArray<class UVDParticleSpringConstraint*> GetBendConstraintsArray();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDBlueprintFunctionLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UVDBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		class UVDSimulation* GetVICODynamicsSimulationInstance();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDMeshVolumeConstraint
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UVDMeshVolumeConstraint : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		void SetRestVolume(float NewVolume);
-		float GetRestVolume();
-		float GetCurrentVolume();
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class VICODynamicsPlugin.VDRopeComponent
 	 * Size -> 0x0080 (FullSize[0x06F8] - InheritedSize[0x0678])
 	 */
@@ -187,6 +127,117 @@ namespace SDK
 	};
 
 	/**
+	 * Class VICODynamicsPlugin.VDDynamicRopeComponent
+	 * Size -> 0x0008 (FullSize[0x0700] - InheritedSize[0x06F8])
+	 */
+	class UVDDynamicRopeComponent : public UVDRopeComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x06F8(0x0008) Fix Super Size
+
+	public:
+		void RebuildRopeAttached(float DistancePerSegment, class USceneComponent* StartAttachedTo, const class FName& StartSocket, bool StartSimulateTension, class USceneComponent* EndAttachedTo, const class FName& EndSocket, bool EndSimulateTension);
+		void RebuildRopeAtPoints(float DistancePerSegment, const struct FVector& StartLocation, const struct FVector& EndLocation, bool bRelativeLocations);
+		void RebuildRope();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDMeshClothComponent
+	 * Size -> 0x00E8 (FullSize[0x0760] - InheritedSize[0x0678])
+	 */
+	class UVDMeshClothComponent : public UBaseVDComponent
+	{
+	public:
+		class UStaticMesh*                                           HullMesh;                                                // 0x0678(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        StretchStiffness;                                        // 0x0680(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        BendStiffness;                                           // 0x0684(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Mass;                                                    // 0x0688(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DragCoefficient;                                         // 0x068C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         PreserveVolume;                                          // 0x0690(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0691(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        CurrentVolume;                                           // 0x0694(0x0004) Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        OverrideRestVolume;                                      // 0x0698(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x069C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         UseVertexColorDataForSetup : 1;                          // 0x06A0(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x3];                                   // 0x06A1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        MaxBendConstraintDistance;                               // 0x06A4(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0003[0x28];                                  // 0x06A8(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UVDParticleSpringConstraint*>                   StretchConstraints;                                      // 0x06D0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		TArray<class UVDParticleSpringConstraint*>                   BendConstraints;                                         // 0x06E0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		class UVDMeshVolumeConstraint*                               VolumeConstraint;                                        // 0x06F0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0004[0x68];                                  // 0x06F8(0x0068) MISSED OFFSET (PADDING)
+
+	public:
+		class UVDMeshVolumeConstraint* GetVolumeConstraint();
+		TArray<class UVDParticleSpringConstraint*> GetStretchConstraintsArray();
+		TArray<class UVDParticleSpringConstraint*> GetBendConstraintsArray();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDProceduralClothComponent
+	 * Size -> 0x0078 (FullSize[0x06F0] - InheritedSize[0x0678])
+	 */
+	class UVDProceduralClothComponent : public UBaseVDComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0678(0x0004) Fix Super Size
+		float                                                        BendStiffness;                                           // 0x067C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Mass;                                                    // 0x0680(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DragCoefficient;                                         // 0x0684(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Width;                                                   // 0x0688(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Height;                                                  // 0x068C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      NumParticlesWide;                                        // 0x0690(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      NumParticlesHigh;                                        // 0x0694(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TileMaterialAlongWidth;                                  // 0x0698(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TileMaterialAlongHeight;                                 // 0x069C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x06A0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UVDParticleSpringConstraint*>                   StretchConstraints;                                      // 0x06C0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		TArray<class UVDParticleSpringConstraint*>                   BendConstraints;                                         // 0x06D0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0001[0x10];                                  // 0x06E0(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDMeshVolumeConstraint
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class UVDMeshVolumeConstraint : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		void SetRestVolume(float NewVolume);
+		float GetRestVolume();
+		float GetCurrentVolume();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDParticleSpringConstraint
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class UVDParticleSpringConstraint : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		void SetStiffness(float NewStiffness);
+		void SetRestDistance(float NewRestDistance);
+		bool IsConstraining(class UVDSimulatedParticle* Particle1, class UVDSimulatedParticle* Particle2);
+		float GetStifffness();
+		float GetRestDistance();
+		class UVDSimulatedParticle* GetParticle2();
+		class UVDSimulatedParticle* GetParticle1();
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class VICODynamicsPlugin.VDSimulatedObject
 	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
 	 */
@@ -218,70 +269,6 @@ namespace SDK
 		class UVDMeshVolumeConstraint* CreateVolumeConstraint(TArray<int32_t> IndexList, float Alpha, float RestVolume);
 		class UVDParticleSpringConstraint* CreateSpringConstraint(class UVDSimulatedParticle* Particle1, class UVDSimulatedParticle* Particle2, float RestDistance, float Stiffness);
 		class UVDSimulatedParticle* CreateParticle(const struct FVDParticleInfo& ParticleInfo);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDParticleSpringConstraint
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UVDParticleSpringConstraint : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0028(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		void SetStiffness(float NewStiffness);
-		void SetRestDistance(float NewRestDistance);
-		bool IsConstraining(class UVDSimulatedParticle* Particle1, class UVDSimulatedParticle* Particle2);
-		float GetStifffness();
-		float GetRestDistance();
-		class UVDSimulatedParticle* GetParticle2();
-		class UVDSimulatedParticle* GetParticle1();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDColliderComponent
-	 * Size -> 0x0030 (FullSize[0x00E0] - InheritedSize[0x00B0])
-	 */
-	class UVDColliderComponent : public UActorComponent
-	{
-	public:
-		class UVDSimulation*                                         SimulationInstance;                                      // 0x00B0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FComponentReference>                           AssociatedVDComponents;                                  // 0x00B8(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bAddAllComponents : 1;                                   // 0x00C8(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIgnoreConvexShapes : 1;                                 // 0x00C8(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class FName>                                          SpecificColliders;                                       // 0x00D0(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDProceduralClothComponent
-	 * Size -> 0x0078 (FullSize[0x06F0] - InheritedSize[0x0678])
-	 */
-	class UVDProceduralClothComponent : public UBaseVDComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0678(0x0004) Fix Super Size
-		float                                                        BendStiffness;                                           // 0x067C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Mass;                                                    // 0x0680(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DragCoefficient;                                         // 0x0684(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Width;                                                   // 0x0688(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Height;                                                  // 0x068C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      NumParticlesWide;                                        // 0x0690(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      NumParticlesHigh;                                        // 0x0694(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TileMaterialAlongWidth;                                  // 0x0698(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TileMaterialAlongHeight;                                 // 0x069C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x06A0(0x0020) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UVDParticleSpringConstraint*>                   StretchConstraints;                                      // 0x06C0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		TArray<class UVDParticleSpringConstraint*>                   BendConstraints;                                         // 0x06D0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0001[0x10];                                  // 0x06E0(0x0010) MISSED OFFSET (PADDING)
-
-	public:
 		static UClass* StaticClass();
 	};
 
@@ -331,22 +318,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class VICODynamicsPlugin.VDDynamicRopeComponent
-	 * Size -> 0x0008 (FullSize[0x0700] - InheritedSize[0x06F8])
-	 */
-	class UVDDynamicRopeComponent : public UVDRopeComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x06F8(0x0008) Fix Super Size
-
-	public:
-		void RebuildRopeAttached(float DistancePerSegment, class USceneComponent* StartAttachedTo, const class FName& StartSocket, bool StartSimulateTension, class USceneComponent* EndAttachedTo, const class FName& EndSocket, bool EndSimulateTension);
-		void RebuildRopeAtPoints(float DistancePerSegment, const struct FVector& StartLocation, const struct FVector& EndLocation, bool bRelativeLocations);
-		void RebuildRope();
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class VICODynamicsPlugin.VICODynamicsSettings
 	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
 	 */
@@ -375,6 +346,20 @@ namespace SDK
 		bool                                                         DrawCollisionDebug : 1;                                  // 0x0064(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bShowOnScreenStats : 1;                                  // 0x0064(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x3];                                   // 0x0065(0x0003) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDSkinnedRopeComponent
+	 * Size -> 0x0038 (FullSize[0x0730] - InheritedSize[0x06F8])
+	 */
+	class UVDSkinnedRopeComponent : public UVDRopeComponent
+	{
+	public:
+		struct FComponentReference                                   PoseableMeshRef;                                         // 0x06F8(0x0028) Edit, Protected, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0720(0x0010) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -415,6 +400,17 @@ namespace SDK
 	};
 
 	/**
+	 * Class VICODynamicsPlugin.VDBlueprintFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UVDBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		class UVDSimulation* GetVICODynamicsSimulationInstance();
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class VICODynamicsPlugin.VDSimulationSettingsActor
 	 * Size -> 0x0048 (FullSize[0x0268] - InheritedSize[0x0220])
 	 */
@@ -426,20 +422,6 @@ namespace SDK
 
 	public:
 		struct FVDSettings GetSettings();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VICODynamicsPlugin.VDSkinnedRopeComponent
-	 * Size -> 0x0038 (FullSize[0x0730] - InheritedSize[0x06F8])
-	 */
-	class UVDSkinnedRopeComponent : public UVDRopeComponent
-	{
-	public:
-		struct FComponentReference                                   PoseableMeshRef;                                         // 0x06F8(0x0028) Edit, Protected, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0720(0x0010) MISSED OFFSET (PADDING)
-
-	public:
 		static UClass* StaticClass();
 	};
 
@@ -456,6 +438,24 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0721(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        SplineLength;                                            // 0x0724(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0728(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VICODynamicsPlugin.VDColliderComponent
+	 * Size -> 0x0030 (FullSize[0x00E0] - InheritedSize[0x00B0])
+	 */
+	class UVDColliderComponent : public UActorComponent
+	{
+	public:
+		class UVDSimulation*                                         SimulationInstance;                                      // 0x00B0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FComponentReference>                           AssociatedVDComponents;                                  // 0x00B8(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bAddAllComponents : 1;                                   // 0x00C8(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIgnoreConvexShapes : 1;                                 // 0x00C8(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x00C9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class FName>                                          SpecificColliders;                                       // 0x00D0(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

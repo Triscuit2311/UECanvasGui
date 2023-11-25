@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::CreateIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57673);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40211);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::GetAmmoIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57672);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40210);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::GetAmmoName(class FText* AmmoName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57671);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40209);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	class UTexture2D* UW_Loadout_Munition_SummaryEntry_C::GetItemIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57670);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40208);
 		
 		struct
 		{
@@ -112,7 +112,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::GetAmmoInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57669);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40207);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57668);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40206);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57667);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40205);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57666);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40204);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57665);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40203);
 		
 		struct
 		{
@@ -233,7 +233,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57664);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40202);
 		
 		struct
 		{
@@ -256,7 +256,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57663);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40201);
 		
 		struct
 		{
@@ -278,7 +278,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57662);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40200);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57661);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40199);
 		
 		struct
 		{
@@ -328,7 +328,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::UpdateAmmunition(class ABaseItem* Weapon, const class FName& AmmoType, int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57660);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40198);
 		
 		struct
 		{
@@ -357,7 +357,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::UpdateItem(class ABaseItem* ItemData, int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57659);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40197);
 		
 		struct
 		{
@@ -383,7 +383,7 @@ namespace SDK
 	 */
 	void UW_Loadout_Munition_SummaryEntry_C::ExecuteUbergraph_W_Loadout_Munition_SummaryEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57658);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40196);
 		
 		struct
 		{
@@ -407,7 +407,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_Munition_SummaryEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57657);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40195);
 		return ptr;
 	}
 

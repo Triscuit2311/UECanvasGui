@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AAISpawner_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(132966);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125361);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void AAISpawner_C::ExecuteUbergraph_AISpawner(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(132967);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(125362);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* AAISpawner_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(132968);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(125363);
 		return ptr;
 	}
 

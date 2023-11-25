@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_PlaceholderTutorialMenu_C::MoveToLoadout(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89027);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89120);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_PlaceholderTutorialMenu_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89026);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89119);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_PlaceholderTutorialMenu_C::ExecuteUbergraph_W_PlaceholderTutorialMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89025);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89118);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* UW_PlaceholderTutorialMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89024);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89117);
 		return ptr;
 	}
 

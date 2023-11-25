@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UDISP_Port_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87889);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87901);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UDISP_Port_C::DispatchFadedIn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87900);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UDISP_Port_C::ExecuteUbergraph_DISP_Port(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(87899);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	UClass* UDISP_Port_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(87886);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(87898);
 		return ptr;
 	}
 

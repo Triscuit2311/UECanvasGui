@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,209 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        NotifyName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UPlayMontageCallbackProxy::OnNotifyEndReceived(const class FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17330);
+		
+		struct
+		{
+			class FName                                        NotifyName;
+			struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload;
+		} params;
+		params.NotifyName = NotifyName;
+		params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        NotifyName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const class FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17329);
+		
+		struct
+		{
+			class FName                                        NotifyName;
+			struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload;
+		} params;
+		params.NotifyName = NotifyName;
+		params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UAnimMontage*                                Montage                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bInterrupted                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17328);
+		
+		struct
+		{
+			class UAnimMontage*                                Montage;
+			bool                                               bInterrupted;
+		} params;
+		params.Montage = Montage;
+		params.bInterrupted = bInterrupted;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UAnimMontage*                                Montage                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bInterrupted                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17327);
+		
+		struct
+		{
+			class UAnimMontage*                                Montage;
+			bool                                               bInterrupted;
+		} params;
+		params.Montage = Montage;
+		params.bInterrupted = bInterrupted;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class USkeletalMeshComponent*                      InSkeletalMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UAnimMontage*                                MontageToPlay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              PlayRate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              StartingPosition                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        StartingSection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPlayMontageCallbackProxy*                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const class FName& StartingSection)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17326);
+		
+		struct
+		{
+			class USkeletalMeshComponent*                      InSkeletalMeshComponent;
+			class UAnimMontage*                                MontageToPlay;
+			float                                              PlayRate;
+			float                                              StartingPosition;
+			class FName                                        StartingSection;
+			class UPlayMontageCallbackProxy*                   ReturnValue;
+		} params;
+		params.InSkeletalMeshComponent = InSkeletalMeshComponent;
+		params.MontageToPlay = MontageToPlay;
+		params.PlayRate = PlayRate;
+		params.StartingPosition = StartingPosition;
+		params.StartingSection = StartingSection;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPlayMontageCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPlayMontageCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1855);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ISequencerAnimationSupport.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ISequencerAnimationSupport::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1856);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnimNotify_PlayMontageNotify.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnimNotify_PlayMontageNotify::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1851);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnimNotify_PlayMontageNotifyWindow.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnimNotify_PlayMontageNotifyWindow::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1852);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -190,21 +393,21 @@ namespace SDK
 	 * 		Name   -> Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     CurrentTransform                                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     CurrentTransform                                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		struct FVector                        TargetPosition                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                        LookAtVector                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               bUseUpVector                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FVector                        UpVector                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              ClampConeInDegree                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct PCoreUObject_FTransform UKismetAnimationLibrary::K2_LookAt(const struct PCoreUObject_FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
+	struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17321);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     CurrentTransform;
+			struct FTransform                     CurrentTransform;
 			struct FVector                        TargetPosition;
 			struct FVector                        LookAtVector;
 			bool                                               bUseUpVector;
@@ -212,7 +415,7 @@ namespace SDK
 			struct FVector                        UpVector;
 			float                                              ClampConeInDegree;
 			unsigned char                                      UnknownData_0002[0x4];
-			struct PCoreUObject_FTransform                     ReturnValue;
+			struct FTransform                     ReturnValue;
 		} params;
 		params.CurrentTransform = CurrentTransform;
 		params.TargetPosition = TargetPosition;
@@ -468,209 +671,6 @@ namespace SDK
 	UClass* UKismetAnimationLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1854);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FName                                        NotifyName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UPlayMontageCallbackProxy::OnNotifyEndReceived(const class FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17330);
-		
-		struct
-		{
-			class FName                                        NotifyName;
-			struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload;
-		} params;
-		params.NotifyName = NotifyName;
-		params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FName                                        NotifyName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const class FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17329);
-		
-		struct
-		{
-			class FName                                        NotifyName;
-			struct FBranchingPointNotifyPayload                BranchingPointNotifyPayload;
-		} params;
-		params.NotifyName = NotifyName;
-		params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UAnimMontage*                                Montage                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bInterrupted                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17328);
-		
-		struct
-		{
-			class UAnimMontage*                                Montage;
-			bool                                               bInterrupted;
-		} params;
-		params.Montage = Montage;
-		params.bInterrupted = bInterrupted;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UAnimMontage*                                Montage                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bInterrupted                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17327);
-		
-		struct
-		{
-			class UAnimMontage*                                Montage;
-			bool                                               bInterrupted;
-		} params;
-		params.Montage = Montage;
-		params.bInterrupted = bInterrupted;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class USkeletalMeshComponent*                      InSkeletalMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UAnimMontage*                                MontageToPlay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              PlayRate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              StartingPosition                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        StartingSection                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPlayMontageCallbackProxy*                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const class FName& StartingSection)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17326);
-		
-		struct
-		{
-			class USkeletalMeshComponent*                      InSkeletalMeshComponent;
-			class UAnimMontage*                                MontageToPlay;
-			float                                              PlayRate;
-			float                                              StartingPosition;
-			class FName                                        StartingSection;
-			class UPlayMontageCallbackProxy*                   ReturnValue;
-		} params;
-		params.InSkeletalMeshComponent = InSkeletalMeshComponent;
-		params.MontageToPlay = MontageToPlay;
-		params.PlayRate = PlayRate;
-		params.StartingPosition = StartingPosition;
-		params.StartingSection = StartingSection;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPlayMontageCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPlayMontageCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1855);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ISequencerAnimationSupport.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ISequencerAnimationSupport::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1856);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnimNotify_PlayMontageNotify.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnimNotify_PlayMontageNotify::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1851);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnimNotify_PlayMontageNotifyWindow.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnimNotify_PlayMontageNotifyWindow::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1852);
 		return ptr;
 	}
 

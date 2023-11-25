@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Mirrorgun_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92727);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92820);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Mirrorgun_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92726);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92819);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UANIMBP_Mirrorgun_C::ExecuteUbergraph_ANIMBP_Mirrorgun(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92725);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92818);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Mirrorgun_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92724);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92817);
 		return ptr;
 	}
 

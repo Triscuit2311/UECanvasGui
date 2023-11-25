@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,35 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum AdvancedSteamSessions.ESteamUserOverlayType
-	 */
-	enum class ESteamUserOverlayType : uint8_t
-	{
-		steamid             = 0,
-		chat                = 1,
-		jointrade           = 2,
-		stats               = 3,
-		achievements        = 4,
-		friendadd           = 5,
-		friendremove        = 6,
-		friendrequestaccept = 7,
-		friendrequestignore = 8,
-		MAX                 = 9
-	};
-
-	/**
-	 * Enum AdvancedSteamSessions.SteamAvatarSize
-	 */
-	enum class ESteamAvatarSize : uint8_t
-	{
-		SteamAvatarSizeSteamAvatar_INVALID = 0,
-		SteamAvatarSizeSteamAvatar_Small   = 1,
-		SteamAvatarSizeSteamAvatar_Medium  = 2,
-		SteamAvatarSizeSteamAvatar_Large   = 3,
-		SteamAvatarSizeSteamAvatar_MAX     = 4
-	};
-
 	/**
 	 * Enum AdvancedSteamSessions.FBPWorkshopFileType
 	 */
@@ -176,6 +147,35 @@ namespace SDK
 		FContext_Chat        = 2,
 		FContext_Name        = 3,
 		FContext_MAX         = 4
+	};
+
+	/**
+	 * Enum AdvancedSteamSessions.ESteamUserOverlayType
+	 */
+	enum class ESteamUserOverlayType : uint8_t
+	{
+		steamid             = 0,
+		chat                = 1,
+		jointrade           = 2,
+		stats               = 3,
+		achievements        = 4,
+		friendadd           = 5,
+		friendremove        = 6,
+		friendrequestaccept = 7,
+		friendrequestignore = 8,
+		MAX                 = 9
+	};
+
+	/**
+	 * Enum AdvancedSteamSessions.SteamAvatarSize
+	 */
+	enum class ESteamAvatarSize : uint8_t
+	{
+		SteamAvatarSizeSteamAvatar_INVALID = 0,
+		SteamAvatarSizeSteamAvatar_Small   = 1,
+		SteamAvatarSizeSteamAvatar_Medium  = 2,
+		SteamAvatarSizeSteamAvatar_Large   = 3,
+		SteamAvatarSizeSteamAvatar_MAX     = 4
 	};
 
 	// --------------------------------------------------

@@ -1,7 +1,8 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
+
 #include "pch.h"
 #include "../SDK.h"
 
@@ -860,7 +861,7 @@ namespace SDK
 	 */
 	std::string FSoftObjectPtr::GetAssetPathNameStr() const
 	{
-		return ObjectID.AssetPathName.GetNameA();
+		return ObjectID.AssetPathName.GetName();
 	}
 
 	/**

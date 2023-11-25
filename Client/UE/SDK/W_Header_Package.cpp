@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Header_C::HasAugment(bool* HasAugment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28652);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49155);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_Header_C::AddAugment(class UWidget* AugmentWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28651);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49154);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_Header_C::SetButton(bool IsButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28650);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49153);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_Header_C::SetLayout(ETextFlowDirection Layout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28649);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49152);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UW_Header_C::SetLabel(const class FText& LabelText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28648);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49151);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	void UW_Header_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49150);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_Header_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28646);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49149);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	void UW_Header_C::Initialize(const class FText& LabelText, bool IsButton, ETextFlowDirection Orientation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28645);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49148);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_Header_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28644);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49147);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_Header_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28643);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49146);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_Header_C::ExecuteUbergraph_W_Header(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28642);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49145);
 		
 		struct
 		{
@@ -293,7 +293,7 @@ namespace SDK
 	 */
 	UClass* UW_Header_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28641);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49144);
 		return ptr;
 	}
 

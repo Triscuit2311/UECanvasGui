@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMediaTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneMediaTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(783);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -63,6 +49,20 @@ namespace SDK
 	UClass* UMovieSceneMediaSection::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(782);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMediaTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMediaTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(783);
 		return ptr;
 	}
 

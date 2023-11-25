@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,28 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum GameplayTags.EGameplayTagMatchType
+	 */
+	enum class EGameplayTagMatchType : uint8_t
+	{
+		Explicit          = 0,
+		IncludeParentTags = 1,
+		MAX               = 2
+	};
+
+	/**
+	 * Enum GameplayTags.EGameplayTagSelectionType
+	 */
+	enum class EGameplayTagSelectionType : uint8_t
+	{
+		None              = 0,
+		NonRestrictedOnly = 1,
+		RestrictedOnly    = 2,
+		All               = 3,
+		MAX               = 4
+	};
+
 	/**
 	 * Enum GameplayTags.EGameplayTagSourceType
 	 */
@@ -53,31 +75,45 @@ namespace SDK
 		MAX = 2
 	};
 
-	/**
-	 * Enum GameplayTags.EGameplayTagMatchType
-	 */
-	enum class EGameplayTagMatchType : uint8_t
-	{
-		Explicit          = 0,
-		IncludeParentTags = 1,
-		MAX               = 2
-	};
-
-	/**
-	 * Enum GameplayTags.EGameplayTagSelectionType
-	 */
-	enum class EGameplayTagSelectionType : uint8_t
-	{
-		None              = 0,
-		NonRestrictedOnly = 1,
-		RestrictedOnly    = 2,
-		All               = 3,
-		MAX               = 4
-	};
-
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct GameplayTags.GameplayTag
+	 * Size -> 0x0008
+	 */
+	struct FGameplayTag
+	{
+	public:
+		class FName                                                  TagName;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, EditConst, SaveGame, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+	};
+
+	/**
+	 * ScriptStruct GameplayTags.GameplayTagContainer
+	 * Size -> 0x0020
+	 */
+	struct FGameplayTagContainer
+	{
+	public:
+		TArray<struct FGameplayTag>                                  GameplayTags;                                            // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, SaveGame, Protected, NativeAccessSpecifierProtected
+		TArray<struct FGameplayTag>                                  ParentTags;                                              // 0x0010(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
+	};
+
+	/**
+	 * ScriptStruct GameplayTags.GameplayTagQuery
+	 * Size -> 0x0048
+	 */
+	struct FGameplayTagQuery
+	{
+	public:
+		int32_t                                                      TokenStreamVersion;                                      // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FGameplayTag>                                  TagDictionary;                                           // 0x0008(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
+		TArray<uint8_t>                                              QueryTokenStream;                                        // 0x0018(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
+		class FString                                                UserDescription;                                         // 0x0028(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class FString                                                AutoDescription;                                         // 0x0038(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+	};
+
 	/**
 	 * ScriptStruct GameplayTags.GameplayTagSource
 	 * Size -> 0x0020
@@ -145,42 +181,6 @@ namespace SDK
 	public:
 		class FString                                                RestrictedConfigName;                                    // 0x0000(0x0010) Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TArray<class FString>                                        Owners;                                                  // 0x0010(0x0010) Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct GameplayTags.GameplayTag
-	 * Size -> 0x0008
-	 */
-	struct FGameplayTag
-	{
-	public:
-		class FName                                                  TagName;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, EditConst, SaveGame, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-	};
-
-	/**
-	 * ScriptStruct GameplayTags.GameplayTagQuery
-	 * Size -> 0x0048
-	 */
-	struct FGameplayTagQuery
-	{
-	public:
-		int32_t                                                      TokenStreamVersion;                                      // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FGameplayTag>                                  TagDictionary;                                           // 0x0008(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
-		TArray<uint8_t>                                              QueryTokenStream;                                        // 0x0018(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPrivate
-		class FString                                                UserDescription;                                         // 0x0028(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class FString                                                AutoDescription;                                         // 0x0038(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-	};
-
-	/**
-	 * ScriptStruct GameplayTags.GameplayTagContainer
-	 * Size -> 0x0020
-	 */
-	struct FGameplayTagContainer
-	{
-	public:
-		TArray<struct FGameplayTag>                                  GameplayTags;                                            // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, SaveGame, Protected, NativeAccessSpecifierProtected
-		TArray<struct FGameplayTag>                                  ParentTags;                                              // 0x0010(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
 	};
 
 	/**

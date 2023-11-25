@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::HighlightEntry(float EntryID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54771);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31401);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::Playing(float CurrentPlayTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54770);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31400);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54769);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31399);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::Initialize(TArray<struct FTranscript> TranscriptEvents)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54768);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31398);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::OnTranscriptEntryClicked(float EntryID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54767);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31397);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::ExecuteUbergraph_W_Briefing_Transcript(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54766);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31396);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_C::TranscriptClicked__DelegateSignature(float ClipStartTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54765);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31395);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Transcript_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54764);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31394);
 		return ptr;
 	}
 

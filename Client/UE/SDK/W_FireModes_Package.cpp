@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::IsFadingOut(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27215);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43878);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::IsFadeOutTimerActive(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27214);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43877);
 		
 		struct
 		{
@@ -73,7 +73,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::SetStyle(int32_t Option)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27213);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43876);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::FadeOut()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27212);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43875);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::UpdateAvailableFireModes(class ABaseWeapon* Weapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27211);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43874);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::Deselect(class UW_FireMode_C* FireModeWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27210);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43873);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::DeselectAll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27209);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43872);
 		
 		struct
 		{
@@ -187,7 +187,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::DeselectAllExpect(class UW_FireMode_C* FireModeWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27208);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43871);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::Select(class UW_FireMode_C* FireModeWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27207);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43870);
 		
 		struct
 		{
@@ -235,7 +235,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::SetFireMode(EFireMode newFireMode)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27206);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43869);
 		
 		struct
 		{
@@ -259,7 +259,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::OnWeaponEquipped(class ABaseWeapon* NewWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27205);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43868);
 		
 		struct
 		{
@@ -283,7 +283,7 @@ namespace SDK
 	 */
 	void UW_FireModes_C::ExecuteUbergraph_W_FireModes(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27204);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43867);
 		
 		struct
 		{
@@ -307,7 +307,7 @@ namespace SDK
 	 */
 	UClass* UW_FireModes_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27203);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43866);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* ADevice_Zipcuffs_Placed_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57450);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43212);
 		return ptr;
 	}
 

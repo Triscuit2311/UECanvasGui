@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,20 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class MediaCompositing.MovieSceneMediaTrack
-	 * Size -> 0x0018 (FullSize[0x00A8] - InheritedSize[0x0090])
-	 */
-	class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0090(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UMovieSceneSection*>                            MediaSections;                                           // 0x0098(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class MediaCompositing.MovieSceneMediaPlayerPropertySection
 	 * Size -> 0x0010 (FullSize[0x00F8] - InheritedSize[0x00E8])
@@ -72,6 +58,20 @@ namespace SDK
 		bool                                                         bUseExternalMediaPlayer;                                 // 0x0108(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0109(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UMediaPlayer*                                          ExternalMediaPlayer;                                     // 0x0110(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MediaCompositing.MovieSceneMediaTrack
+	 * Size -> 0x0018 (FullSize[0x00A8] - InheritedSize[0x0090])
+	 */
+	class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0090(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UMovieSceneSection*>                            MediaSections;                                           // 0x0098(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
 
 	public:
 		static UClass* StaticClass();

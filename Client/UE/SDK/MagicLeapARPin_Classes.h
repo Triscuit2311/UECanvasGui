@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,22 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class MagicLeapARPin.MagicLeapARPinInfoActorBase
+	 * Size -> 0x0018 (FullSize[0x0238] - InheritedSize[0x0220])
+	 */
+	class AMagicLeapARPinInfoActorBase : public AActor
+	{
+	public:
+		struct FGuid                                                 PinId;                                                   // 0x0220(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bVisibilityOverride;                                     // 0x0230(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0231(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		void OnUpdateARPinState();
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class MagicLeapARPin.MagicLeapARPinComponent
 	 * Size -> 0x01B8 (FullSize[0x03B0] - InheritedSize[0x01F8])
@@ -62,49 +78,15 @@ namespace SDK
 	};
 
 	/**
-	 * Class MagicLeapARPin.MagicLeapARPinFunctionLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class MagicLeapARPin.MagicLeapARPinContentBindings
+	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
 	 */
-	class UMagicLeapARPinFunctionLibrary : public UBlueprintFunctionLibrary
+	class UMagicLeapARPinContentBindings : public USaveGame
 	{
 	public:
-		void UnBindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate);
-		void UnBindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate);
-		EMagicLeapPassableWorldError SetGlobalQueryFilter(const struct FMagicLeapARPinQuery& InGlobalFilter);
-		void SetContentBindingSaveGameUserIndex(int32_t UserIndex);
-		EMagicLeapPassableWorldError QueryARPins(const struct FMagicLeapARPinQuery& Query, TArray<struct FGuid>* Pins);
-		bool ParseStringToARPinId(const class FString& PinIdString, struct FGuid* ARPinId);
-		bool IsTrackerValid();
-		EMagicLeapPassableWorldError GetNumAvailableARPins(int32_t* Count);
-		EMagicLeapPassableWorldError GetGlobalQueryFilter(struct FMagicLeapARPinQuery* CurrentGlobalFilter);
-		int32_t GetContentBindingSaveGameUserIndex();
-		EMagicLeapPassableWorldError GetClosestARPin(const struct FVector& SearchPoint, struct FGuid* PinId);
-		EMagicLeapPassableWorldError GetAvailableARPins(int32_t NumRequested, TArray<struct FGuid>* Pins);
-		class FString GetARPinStateToString(const struct FMagicLeapARPinState& State);
-		EMagicLeapPassableWorldError GetARPinState(const struct FGuid& PinId, struct FMagicLeapARPinState* State);
-		bool GetARPinPositionAndOrientation_TrackingSpace(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment);
-		bool GetARPinPositionAndOrientation(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment);
-		EMagicLeapPassableWorldError DestroyTracker();
-		EMagicLeapPassableWorldError CreateTracker();
-		void BindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate);
-		void BindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate);
-		class FString ARPinIdToString(const struct FGuid& ARPinId);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MagicLeapARPin.MagicLeapARPinInfoActorBase
-	 * Size -> 0x0018 (FullSize[0x0238] - InheritedSize[0x0220])
-	 */
-	class AMagicLeapARPinInfoActorBase : public AActor
-	{
-	public:
-		struct FGuid                                                 PinId;                                                   // 0x0220(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bVisibilityOverride;                                     // 0x0230(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0231(0x0007) MISSED OFFSET (PADDING)
+		TMap<struct FGuid, struct FMagicLeapARPinObjectIdList>       AllContentBindings;                                      // 0x0028(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
 
 	public:
-		void OnUpdateARPinState();
 		static UClass* StaticClass();
 	};
 
@@ -149,8 +131,8 @@ namespace SDK
 	public:
 		struct FGuid                                                 PinnedID;                                                // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               ComponentWorldTransform;                                 // 0x0040(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               PinTransform;                                            // 0x0070(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               ComponentWorldTransform;                                 // 0x0040(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               PinTransform;                                            // 0x0070(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		bool                                                         bShouldPinActor;                                         // 0x00A0(0x0001) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0xF];                                   // 0x00A1(0x000F) MISSED OFFSET (PADDING)
 
@@ -159,15 +141,33 @@ namespace SDK
 	};
 
 	/**
-	 * Class MagicLeapARPin.MagicLeapARPinContentBindings
-	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
+	 * Class MagicLeapARPin.MagicLeapARPinFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UMagicLeapARPinContentBindings : public USaveGame
+	class UMagicLeapARPinFunctionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		TMap<struct FGuid, struct FMagicLeapARPinObjectIdList>       AllContentBindings;                                      // 0x0028(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
-
-	public:
+		void UnBindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate);
+		void UnBindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate);
+		EMagicLeapPassableWorldError SetGlobalQueryFilter(const struct FMagicLeapARPinQuery& InGlobalFilter);
+		void SetContentBindingSaveGameUserIndex(int32_t UserIndex);
+		EMagicLeapPassableWorldError QueryARPins(const struct FMagicLeapARPinQuery& Query, TArray<struct FGuid>* Pins);
+		bool ParseStringToARPinId(const class FString& PinIdString, struct FGuid* ARPinId);
+		bool IsTrackerValid();
+		EMagicLeapPassableWorldError GetNumAvailableARPins(int32_t* Count);
+		EMagicLeapPassableWorldError GetGlobalQueryFilter(struct FMagicLeapARPinQuery* CurrentGlobalFilter);
+		int32_t GetContentBindingSaveGameUserIndex();
+		EMagicLeapPassableWorldError GetClosestARPin(const struct FVector& SearchPoint, struct FGuid* PinId);
+		EMagicLeapPassableWorldError GetAvailableARPins(int32_t NumRequested, TArray<struct FGuid>* Pins);
+		class FString GetARPinStateToString(const struct FMagicLeapARPinState& State);
+		EMagicLeapPassableWorldError GetARPinState(const struct FGuid& PinId, struct FMagicLeapARPinState* State);
+		bool GetARPinPositionAndOrientation_TrackingSpace(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment);
+		bool GetARPinPositionAndOrientation(const struct FGuid& PinId, struct FVector* Position, struct FRotator* Orientation, bool* PinFoundInEnvironment);
+		EMagicLeapPassableWorldError DestroyTracker();
+		EMagicLeapPassableWorldError CreateTracker();
+		void BindToOnMagicLeapContentBindingFoundDelegate(const class FScriptDelegate& Delegate);
+		void BindToOnMagicLeapARPinUpdatedDelegate(const class FScriptDelegate& Delegate);
+		class FString ARPinIdToString(const struct FGuid& ARPinId);
 		static UClass* StaticClass();
 	};
 

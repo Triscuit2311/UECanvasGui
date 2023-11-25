@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -45,16 +45,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class LiveLinkInterface.LiveLinkAnimationRole
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class ULiveLinkAnimationRole : public ULiveLinkBasicRole
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class LiveLinkInterface.LiveLinkTransformRole
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -65,20 +55,20 @@ namespace SDK
 	};
 
 	/**
-	 * Class LiveLinkInterface.LiveLinkCameraRole
+	 * Class LiveLinkInterface.LiveLinkController
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class ULiveLinkCameraRole : public ULiveLinkTransformRole
+	class ULiveLinkController : public UObject
 	{
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class LiveLinkInterface.LiveLinkController
+	 * Class LiveLinkInterface.LiveLinkCameraRole
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class ULiveLinkController : public UObject
+	class ULiveLinkCameraRole : public ULiveLinkTransformRole
 	{
 	public:
 		static UClass* StaticClass();
@@ -109,6 +99,24 @@ namespace SDK
 	{
 	public:
 		struct FLiveLinkCurveConversionSettings                      CurveConversionSettings;                                 // 0x00A0(0x0050) Edit, Config, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LiveLinkInterface.LiveLinkVirtualSubject
+	 * Size -> 0x0138 (FullSize[0x0160] - InheritedSize[0x0028])
+	 */
+	class ULiveLinkVirtualSubject : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ULiveLinkRole*                                         Role;                                                    // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		TArray<struct FLiveLinkSubjectName>                          Subjects;                                                // 0x0038(0x0010) Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected
+		TArray<class ULiveLinkFrameTranslator*>                      FrameTranslators;                                        // 0x0048(0x0010) Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected
+		bool                                                         bRebroadcastSubject;                                     // 0x0058(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0001[0x107];                                 // 0x0059(0x0107) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -174,19 +182,11 @@ namespace SDK
 	};
 
 	/**
-	 * Class LiveLinkInterface.LiveLinkVirtualSubject
-	 * Size -> 0x0138 (FullSize[0x0160] - InheritedSize[0x0028])
+	 * Class LiveLinkInterface.LiveLinkAnimationRole
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class ULiveLinkVirtualSubject : public UObject
+	class ULiveLinkAnimationRole : public ULiveLinkBasicRole
 	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class ULiveLinkRole*                                         Role;                                                    // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		TArray<struct FLiveLinkSubjectName>                          Subjects;                                                // 0x0038(0x0010) Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected
-		TArray<class ULiveLinkFrameTranslator*>                      FrameTranslators;                                        // 0x0048(0x0010) Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected
-		bool                                                         bRebroadcastSubject;                                     // 0x0058(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0001[0x107];                                 // 0x0059(0x0107) MISSED OFFSET (PADDING)
-
 	public:
 		static UClass* StaticClass();
 	};

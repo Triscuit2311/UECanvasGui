@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessageEntry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27073);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43735);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_TutorialMessageEntry_C::ExecuteUbergraph_W_TutorialMessageEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27072);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43734);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UW_TutorialMessageEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27071);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43733);
 		return ptr;
 	}
 

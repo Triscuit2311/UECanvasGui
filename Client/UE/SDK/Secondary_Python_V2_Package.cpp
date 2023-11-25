@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92801);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92894);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::OnWeaponFire_Event_1(class ABaseMagazineWeapon* Weapon, bool bServer)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92800);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92893);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::SetupBaseEvents()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92799);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92892);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92798);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92891);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92797);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92890);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void ASecondary_Python_V2_C::ExecuteUbergraph_Secondary_Python_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92796);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92889);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_Python_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92795);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92888);
 		return ptr;
 	}
 

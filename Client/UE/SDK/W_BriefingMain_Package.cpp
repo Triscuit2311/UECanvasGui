@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_BriefingMain_C::SetBriefingTaskButtonsActive(bool Active)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54848);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31468);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_BriefingMain_C::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54847);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31467);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_BriefingMain_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54846);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31466);
 		
 		struct
 		{
@@ -98,7 +98,7 @@ namespace SDK
 	 */
 	void UW_BriefingMain_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54845);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31465);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UW_BriefingMain_C::ExecuteUbergraph_W_BriefingMain(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54844);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31464);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	UClass* UW_BriefingMain_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54843);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31463);
 		return ptr;
 	}
 

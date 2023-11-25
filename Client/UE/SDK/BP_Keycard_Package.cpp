@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool ABP_Keycard_C::CanInteract()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136705);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112326);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	bool ABP_Keycard_C::CanInteractThroughHitActors(const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99013);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112327);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	class FText ABP_Keycard_C::DetermineActionText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99014);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112328);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	class FName ABP_Keycard_C::DetermineAnimatedIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99015);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112329);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	float ABP_Keycard_C::DetermineCurrentProgress()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136709);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112330);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	EInputEvent ABP_Keycard_C::DetermineInputEvent()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136710);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112331);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	float ABP_Keycard_C::DetermineInteractionDistance()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99145);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112332);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	class UInteractableComponent* ABP_Keycard_C::GetInteractableComponent()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99585);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112333);
 		
 		struct
 		{
@@ -217,7 +217,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::DoubleTapInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99586);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112334);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::EndFire(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(101681);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112335);
 		
 		struct
 		{
@@ -271,7 +271,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::EndInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(96615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112336);
 		
 		struct
 		{
@@ -298,7 +298,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::Fire(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136747);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112337);
 		
 		struct
 		{
@@ -325,7 +325,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::MeleeInteract(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136748);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112338);
 		
 		struct
 		{
@@ -352,7 +352,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::OnFocusGain(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136752);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112339);
 		
 		struct
 		{
@@ -379,7 +379,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::OnFocusLost(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136753);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112340);
 		
 		struct
 		{
@@ -404,7 +404,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136754);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112341);
 		
 		struct
 		{
@@ -427,7 +427,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::Interact(class AReadyOrNotCharacter* InteractInstigator, class UInteractableComponent* InInteractableComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136756);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112342);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	void ABP_Keycard_C::ExecuteUbergraph_BP_Keycard(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(99144);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112343);
 		
 		struct
 		{
@@ -477,7 +477,7 @@ namespace SDK
 	 */
 	UClass* ABP_Keycard_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(99765);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112344);
 		return ptr;
 	}
 

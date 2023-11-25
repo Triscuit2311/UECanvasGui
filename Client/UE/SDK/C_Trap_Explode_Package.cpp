@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UC_Trap_Explode_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90591);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90683);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UC_Trap_Explode_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90590);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90682);
 		return ptr;
 	}
 

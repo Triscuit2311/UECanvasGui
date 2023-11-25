@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,108 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum AugmentedReality.EARTrackingState
-	 */
-	enum class EARTrackingState : uint8_t
-	{
-		Unknown         = 0,
-		Tracking        = 1,
-		NotTracking     = 2,
-		StoppedTracking = 3,
-		MAX             = 4
-	};
-
-	/**
-	 * Enum AugmentedReality.EARSessionConfigFlags
-	 */
-	enum class EARSessionConfigFlags : uint8_t
-	{
-		None                         = 0,
-		GenerateMeshData             = 1,
-		RenderMeshDataInWireframe    = 2,
-		GenerateCollisionForMeshData = 3,
-		GenerateNavMeshForMeshData   = 4,
-		UseMeshDataForOcclusion      = 5,
-		MAX                          = 6
-	};
-
-	/**
-	 * Enum AugmentedReality.EARServicePermissionRequestResult
-	 */
-	enum class EARServicePermissionRequestResult : uint8_t
-	{
-		Granted = 0,
-		Denied  = 1,
-		MAX     = 2
-	};
-
-	/**
-	 * Enum AugmentedReality.EARGeoTrackingAccuracy
-	 */
-	enum class EARGeoTrackingAccuracy : uint8_t
-	{
-		Undetermined = 0,
-		Low          = 1,
-		Medium       = 2,
-		High         = 3,
-		MAX          = 4
-	};
-
-	/**
-	 * Enum AugmentedReality.EARServiceInstallRequestResult
-	 */
-	enum class EARServiceInstallRequestResult : uint8_t
-	{
-		Installed                = 0,
-		DeviceNotCompatible      = 1,
-		UserDeclinedInstallation = 2,
-		FatalError               = 3,
-		MAX                      = 4
-	};
-
-	/**
-	 * Enum AugmentedReality.EGeoAnchorComponentDebugMode
-	 */
-	enum class EGeoAnchorComponentDebugMode : uint8_t
-	{
-		None        = 0,
-		ShowGeoData = 1,
-		MAX         = 2
-	};
-
-	/**
-	 * Enum AugmentedReality.EARGeoTrackingStateReason
-	 */
-	enum class EARGeoTrackingStateReason : uint8_t
-	{
-		None                        = 0,
-		NotAvailableAtLocation      = 1,
-		NeedLocationPermissions     = 2,
-		DevicePointedTooLow         = 3,
-		WorldTrackingUnstable       = 4,
-		WaitingForLocation          = 5,
-		GeoDataNotLoaded            = 6,
-		VisualLocalizationFailed    = 7,
-		WaitingForAvailabilityCheck = 8,
-		MAX                         = 9
-	};
-
-	/**
-	 * Enum AugmentedReality.EARServiceAvailability
-	 */
-	enum class EARServiceAvailability : uint8_t
-	{
-		UnknownError                = 0,
-		UnknownChecking             = 1,
-		UnknownTimedOut             = 2,
-		UnsupportedDeviceNotCapable = 3,
-		SupportedNotInstalled       = 4,
-		SupportedVersionTooOld      = 5,
-		SupportedInstalled          = 6,
-		MAX                         = 7
-	};
-
 	/**
 	 * Enum AugmentedReality.EARGeoTrackingState
 	 */
@@ -137,16 +35,6 @@ namespace SDK
 		MeshOnly               = 1,
 		MeshWithClassification = 2,
 		MAX                    = 3
-	};
-
-	/**
-	 * Enum AugmentedReality.EPoseComponentDebugMode
-	 */
-	enum class EPoseComponentDebugMode : uint8_t
-	{
-		None         = 0,
-		ShowSkeleton = 1,
-		MAX          = 2
 	};
 
 	/**
@@ -206,13 +94,89 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EQRCodeComponentDebugMode
+	 * Enum AugmentedReality.EARPlaneDetectionMode
 	 */
-	enum class EQRCodeComponentDebugMode : uint8_t
+	enum class EARPlaneDetectionMode : uint8_t
 	{
-		None       = 0,
-		ShowQRCode = 1,
-		MAX        = 2
+		None                     = 0,
+		HorizontalPlaneDetection = 1,
+		VerticalPlaneDetection   = 2,
+		MAX                      = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EARSessionType
+	 */
+	enum class EARSessionType : uint8_t
+	{
+		None           = 0,
+		Orientation    = 1,
+		World          = 2,
+		Face           = 3,
+		Image          = 4,
+		ObjectScanning = 5,
+		PoseTracking   = 6,
+		GeoTracking    = 7,
+		MAX            = 8
+	};
+
+	/**
+	 * Enum AugmentedReality.EARWorldAlignment
+	 */
+	enum class EARWorldAlignment : uint8_t
+	{
+		Gravity           = 0,
+		GravityAndHeading = 1,
+		Camera            = 2,
+		MAX               = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EARDepthAccuracy
+	 */
+	enum class EARDepthAccuracy : uint8_t
+	{
+		Unkown      = 0,
+		Approximate = 1,
+		Accurate    = 2,
+		MAX         = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EARDepthQuality
+	 */
+	enum class EARDepthQuality : uint8_t
+	{
+		Unkown = 0,
+		Low    = 1,
+		High   = 2,
+		MAX    = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EARTextureType
+	 */
+	enum class EARTextureType : uint8_t
+	{
+		Unknown                 = 0,
+		CameraImage             = 1,
+		CameraDepth             = 2,
+		EnvironmentCapture      = 3,
+		PersonSegmentationImage = 4,
+		PersonSegmentationDepth = 5,
+		SceneDepthMap           = 6,
+		SceneDepthConfidenceMap = 7,
+		MAX                     = 8
+	};
+
+	/**
+	 * Enum AugmentedReality.EAREye
+	 */
+	enum class EAREye : uint8_t
+	{
+		LeftEye  = 0,
+		RightEye = 1,
+		MAX      = 2
 	};
 
 	/**
@@ -285,33 +249,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EARPlaneDetectionMode
-	 */
-	enum class EARPlaneDetectionMode : uint8_t
-	{
-		None                     = 0,
-		HorizontalPlaneDetection = 1,
-		VerticalPlaneDetection   = 2,
-		MAX                      = 3
-	};
-
-	/**
-	 * Enum AugmentedReality.EARSessionType
-	 */
-	enum class EARSessionType : uint8_t
-	{
-		None           = 0,
-		Orientation    = 1,
-		World          = 2,
-		Face           = 3,
-		Image          = 4,
-		ObjectScanning = 5,
-		PoseTracking   = 6,
-		GeoTracking    = 7,
-		MAX            = 8
-	};
-
-	/**
 	 * Enum AugmentedReality.EARFaceTrackingDirection
 	 */
 	enum class EARFaceTrackingDirection : uint8_t
@@ -322,17 +259,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EARWorldAlignment
-	 */
-	enum class EARWorldAlignment : uint8_t
-	{
-		Gravity           = 0,
-		GravityAndHeading = 1,
-		Camera            = 2,
-		MAX               = 3
-	};
-
-	/**
 	 * Enum AugmentedReality.EARCandidateImageOrientation
 	 */
 	enum class EARCandidateImageOrientation : uint8_t
@@ -340,16 +266,6 @@ namespace SDK
 		Landscape = 0,
 		Portrait  = 1,
 		MAX       = 2
-	};
-
-	/**
-	 * Enum AugmentedReality.EImageComponentDebugMode
-	 */
-	enum class EImageComponentDebugMode : uint8_t
-	{
-		None              = 0,
-		ShowDetectedImage = 1,
-		MAX               = 2
 	};
 
 	/**
@@ -365,17 +281,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EARDepthAccuracy
-	 */
-	enum class EARDepthAccuracy : uint8_t
-	{
-		Unkown      = 0,
-		Approximate = 1,
-		Accurate    = 2,
-		MAX         = 3
-	};
-
-	/**
 	 * Enum AugmentedReality.EARJointTransformSpace
 	 */
 	enum class EARJointTransformSpace : uint8_t
@@ -383,17 +288,6 @@ namespace SDK
 		Model       = 0,
 		ParentJoint = 1,
 		MAX         = 2
-	};
-
-	/**
-	 * Enum AugmentedReality.EARDepthQuality
-	 */
-	enum class EARDepthQuality : uint8_t
-	{
-		Unkown = 0,
-		Low    = 1,
-		High   = 2,
-		MAX    = 3
 	};
 
 	/**
@@ -405,34 +299,6 @@ namespace SDK
 		Visible       = 1,
 		Collision     = 2,
 		MAX           = 3
-	};
-
-	/**
-	 * Enum AugmentedReality.EARTextureType
-	 */
-	enum class EARTextureType : uint8_t
-	{
-		Unknown                 = 0,
-		CameraImage             = 1,
-		CameraDepth             = 2,
-		EnvironmentCapture      = 3,
-		PersonSegmentationImage = 4,
-		PersonSegmentationDepth = 5,
-		SceneDepthMap           = 6,
-		SceneDepthConfidenceMap = 7,
-		MAX                     = 8
-	};
-
-	/**
-	 * Enum AugmentedReality.EARFaceTransformMixing
-	 */
-	enum class EARFaceTransformMixing : uint8_t
-	{
-		ComponentOnly                    = 0,
-		ComponentLocationTrackedRotation = 1,
-		ComponentWithTracked             = 2,
-		TrackingOnly                     = 3,
-		MAX                              = 4
 	};
 
 	/**
@@ -458,13 +324,13 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EAREye
+	 * Enum AugmentedReality.EGeoAnchorComponentDebugMode
 	 */
-	enum class EAREye : uint8_t
+	enum class EGeoAnchorComponentDebugMode : uint8_t
 	{
-		LeftEye  = 0,
-		RightEye = 1,
-		MAX      = 2
+		None        = 0,
+		ShowGeoData = 1,
+		MAX         = 2
 	};
 
 	/**
@@ -476,6 +342,16 @@ namespace SDK
 		Vertical   = 1,
 		Diagonal   = 2,
 		MAX        = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EPoseComponentDebugMode
+	 */
+	enum class EPoseComponentDebugMode : uint8_t
+	{
+		None         = 0,
+		ShowSkeleton = 1,
+		MAX          = 2
 	};
 
 	/**
@@ -491,14 +367,25 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EFaceComponentDebugMode
+	 * Enum AugmentedReality.EQRCodeComponentDebugMode
 	 */
-	enum class EFaceComponentDebugMode : uint8_t
+	enum class EQRCodeComponentDebugMode : uint8_t
 	{
-		None           = 0,
-		ShowEyeVectors = 1,
-		ShowFaceMesh   = 2,
-		MAX            = 3
+		None       = 0,
+		ShowQRCode = 1,
+		MAX        = 2
+	};
+
+	/**
+	 * Enum AugmentedReality.EARTrackingState
+	 */
+	enum class EARTrackingState : uint8_t
+	{
+		Unknown         = 0,
+		Tracking        = 1,
+		NotTracking     = 2,
+		StoppedTracking = 3,
+		MAX             = 4
 	};
 
 	/**
@@ -514,6 +401,16 @@ namespace SDK
 		UnsupportedConfiguration = 5,
 		Other                    = 6,
 		MAX                      = 7
+	};
+
+	/**
+	 * Enum AugmentedReality.EImageComponentDebugMode
+	 */
+	enum class EImageComponentDebugMode : uint8_t
+	{
+		None              = 0,
+		ShowDetectedImage = 1,
+		MAX               = 2
 	};
 
 	/**
@@ -543,6 +440,18 @@ namespace SDK
 	};
 
 	/**
+	 * Enum AugmentedReality.EARFaceTransformMixing
+	 */
+	enum class EARFaceTransformMixing : uint8_t
+	{
+		ComponentOnly                    = 0,
+		ComponentLocationTrackedRotation = 1,
+		ComponentWithTracked             = 2,
+		TrackingOnly                     = 3,
+		MAX                              = 4
+	};
+
+	/**
 	 * Enum AugmentedReality.EARLineTraceChannels
 	 */
 	enum class EARLineTraceChannels : uint8_t
@@ -556,14 +465,14 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AugmentedReality.EPlaneComponentDebugMode
+	 * Enum AugmentedReality.EFaceComponentDebugMode
 	 */
-	enum class EPlaneComponentDebugMode : uint8_t
+	enum class EFaceComponentDebugMode : uint8_t
 	{
-		None               = 0,
-		ShowNetworkRole    = 1,
-		ShowClassification = 2,
-		MAX                = 3
+		None           = 0,
+		ShowEyeVectors = 1,
+		ShowFaceMesh   = 2,
+		MAX            = 3
 	};
 
 	/**
@@ -579,6 +488,97 @@ namespace SDK
 		MAX                = 5
 	};
 
+	/**
+	 * Enum AugmentedReality.EPlaneComponentDebugMode
+	 */
+	enum class EPlaneComponentDebugMode : uint8_t
+	{
+		None               = 0,
+		ShowNetworkRole    = 1,
+		ShowClassification = 2,
+		MAX                = 3
+	};
+
+	/**
+	 * Enum AugmentedReality.EARSessionConfigFlags
+	 */
+	enum class EARSessionConfigFlags : uint8_t
+	{
+		None                         = 0,
+		GenerateMeshData             = 1,
+		RenderMeshDataInWireframe    = 2,
+		GenerateCollisionForMeshData = 3,
+		GenerateNavMeshForMeshData   = 4,
+		UseMeshDataForOcclusion      = 5,
+		MAX                          = 6
+	};
+
+	/**
+	 * Enum AugmentedReality.EARServicePermissionRequestResult
+	 */
+	enum class EARServicePermissionRequestResult : uint8_t
+	{
+		Granted = 0,
+		Denied  = 1,
+		MAX     = 2
+	};
+
+	/**
+	 * Enum AugmentedReality.EARServiceInstallRequestResult
+	 */
+	enum class EARServiceInstallRequestResult : uint8_t
+	{
+		Installed                = 0,
+		DeviceNotCompatible      = 1,
+		UserDeclinedInstallation = 2,
+		FatalError               = 3,
+		MAX                      = 4
+	};
+
+	/**
+	 * Enum AugmentedReality.EARServiceAvailability
+	 */
+	enum class EARServiceAvailability : uint8_t
+	{
+		UnknownError                = 0,
+		UnknownChecking             = 1,
+		UnknownTimedOut             = 2,
+		UnsupportedDeviceNotCapable = 3,
+		SupportedNotInstalled       = 4,
+		SupportedVersionTooOld      = 5,
+		SupportedInstalled          = 6,
+		MAX                         = 7
+	};
+
+	/**
+	 * Enum AugmentedReality.EARGeoTrackingAccuracy
+	 */
+	enum class EARGeoTrackingAccuracy : uint8_t
+	{
+		Undetermined = 0,
+		Low          = 1,
+		Medium       = 2,
+		High         = 3,
+		MAX          = 4
+	};
+
+	/**
+	 * Enum AugmentedReality.EARGeoTrackingStateReason
+	 */
+	enum class EARGeoTrackingStateReason : uint8_t
+	{
+		None                        = 0,
+		NotAvailableAtLocation      = 1,
+		NeedLocationPermissions     = 2,
+		DevicePointedTooLow         = 3,
+		WorldTrackingUnstable       = 4,
+		WaitingForLocation          = 5,
+		GeoDataNotLoaded            = 6,
+		VisualLocalizationFailed    = 7,
+		WaitingForAvailabilityCheck = 8,
+		MAX                         = 9
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
@@ -592,6 +592,152 @@ namespace SDK
 		int32_t                                                      FPS;                                                     // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                      Width;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                      Height;                                                  // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARSessionPayload
+	 * Size -> 0x0018
+	 */
+	struct FARSessionPayload
+	{
+	public:
+		int32_t                                                      ConfigFlags;                                             // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UMaterialInterface*                                    DefaultMeshMaterial;                                     // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMaterialInterface*                                    DefaultWireframeMeshMaterial;                            // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARImageUpdatePayload
+	 * Size -> 0x0060
+	 */
+	struct FARImageUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		class UARCandidateImage*                                     DetectedImage;                                           // 0x0050(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                EstimatedSize;                                           // 0x0058(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARObjectUpdatePayload
+	 * Size -> 0x0030
+	 */
+	struct FARObjectUpdatePayload
+	{
+	public:
+		struct FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARPlaneUpdatePayload
+	 * Size -> 0x0080
+	 */
+	struct FARPlaneUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FVector                                  Center;                                                  // 0x0050(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Extents;                                                 // 0x005C(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FVector>                          BoundaryVertices;                                        // 0x0068(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		EARObjectClassification                                      ObjectClassification;                                    // 0x0078(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0079(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARQRCodeUpdatePayload
+	 * Size -> 0x0070
+	 */
+	struct FARQRCodeUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FVector                                  Extents;                                                 // 0x0050(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                QRCode;                                                  // 0x0060(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARPointUpdatePayload
+	 * Size -> 0x0001
+	 */
+	struct FARPointUpdatePayload
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARMeshUpdatePayload
+	 * Size -> 0x0060
+	 */
+	struct FARMeshUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		EARObjectClassification                                      ObjectClassification;                                    // 0x0050(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0051(0x000F) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARPoseUpdatePayload
+	 * Size -> 0x0040
+	 */
+	struct FARPoseUpdatePayload
+	{
+	public:
+		struct FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       JointTransforms;                                         // 0x0030(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARFaceUpdatePayload
+	 * Size -> 0x0040
+	 */
+	struct FARFaceUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		struct FVector                                  LeftEyePosition;                                         // 0x0018(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  RightEyePosition;                                        // 0x0024(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  LookAtTarget;                                            // 0x0030(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.ARGeoAnchorUpdatePayload
+	 * Size -> 0x0070
+	 */
+	struct FARGeoAnchorUpdatePayload
+	{
+	public:
+		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		float                                                        Longitude;                                               // 0x0050(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Latitude;                                                // 0x0054(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AltitudeMeters;                                          // 0x0058(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EARAltitudeSource                                            AltitudeSource;                                          // 0x005C(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                AnchorName;                                              // 0x0060(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AugmentedReality.AREnvironmentProbeUpdatePayload
+	 * Size -> 0x0030
+	 */
+	struct FAREnvironmentProbeUpdatePayload
+	{
+	public:
+		struct FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -615,156 +761,10 @@ namespace SDK
 	{
 	public:
 		struct FARSkeletonDefinition                                 SkeletonDefinition;                                      // 0x0000(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       JointTransforms;                                         // 0x0028(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       JointTransforms;                                         // 0x0028(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 		TArray<bool>                                                 IsJointTracked;                                          // 0x0038(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 		EARJointTransformSpace                                       JointTransformSpace;                                     // 0x0048(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARSessionPayload
-	 * Size -> 0x0018
-	 */
-	struct FARSessionPayload
-	{
-	public:
-		int32_t                                                      ConfigFlags;                                             // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UMaterialInterface*                                    DefaultMeshMaterial;                                     // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                    DefaultWireframeMeshMaterial;                            // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARPlaneUpdatePayload
-	 * Size -> 0x0080
-	 */
-	struct FARPlaneUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                  Center;                                                  // 0x0050(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  Extents;                                                 // 0x005C(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FVector>                          BoundaryVertices;                                        // 0x0068(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		EARObjectClassification                                      ObjectClassification;                                    // 0x0078(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0079(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARPointUpdatePayload
-	 * Size -> 0x0001
-	 */
-	struct FARPointUpdatePayload
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARFaceUpdatePayload
-	 * Size -> 0x0040
-	 */
-	struct FARFaceUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                  LeftEyePosition;                                         // 0x0018(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  RightEyePosition;                                        // 0x0024(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  LookAtTarget;                                            // 0x0030(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARImageUpdatePayload
-	 * Size -> 0x0060
-	 */
-	struct FARImageUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		class UARCandidateImage*                                     DetectedImage;                                           // 0x0050(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                EstimatedSize;                                           // 0x0058(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARQRCodeUpdatePayload
-	 * Size -> 0x0070
-	 */
-	struct FARQRCodeUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                  Extents;                                                 // 0x0050(0x000C) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x005C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                QRCode;                                                  // 0x0060(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARPoseUpdatePayload
-	 * Size -> 0x0040
-	 */
-	struct FARPoseUpdatePayload
-	{
-	public:
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       JointTransforms;                                         // 0x0030(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.AREnvironmentProbeUpdatePayload
-	 * Size -> 0x0030
-	 */
-	struct FAREnvironmentProbeUpdatePayload
-	{
-	public:
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARObjectUpdatePayload
-	 * Size -> 0x0030
-	 */
-	struct FARObjectUpdatePayload
-	{
-	public:
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0000(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARMeshUpdatePayload
-	 * Size -> 0x0060
-	 */
-	struct FARMeshUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		EARObjectClassification                                      ObjectClassification;                                    // 0x0050(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0051(0x000F) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AugmentedReality.ARGeoAnchorUpdatePayload
-	 * Size -> 0x0070
-	 */
-	struct FARGeoAnchorUpdatePayload
-	{
-	public:
-		struct FARSessionPayload                                     SessionPayload;                                          // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               WorldTransform;                                          // 0x0020(0x0030) BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		float                                                        Longitude;                                               // 0x0050(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Latitude;                                                // 0x0054(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AltitudeMeters;                                          // 0x0058(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EARAltitudeSource                                            AltitudeSource;                                          // 0x005C(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x005D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                AnchorName;                                              // 0x0060(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -800,7 +800,7 @@ namespace SDK
 		float                                                        DistanceFromCamera;                                      // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		EARLineTraceChannels                                         TraceChannel;                                            // 0x0004(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		unsigned char                                                UnknownData_0000[0xB];                                   // 0x0005(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               LocalTransform;                                          // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate
+		struct FTransform                               LocalTransform;                                          // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate
 		class UARTrackedGeometry*                                    TrackedGeometry;                                         // 0x0040(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		unsigned char                                                UnknownData_0001[0x18];                                  // 0x0048(0x0018) MISSED OFFSET (PADDING)
 	};

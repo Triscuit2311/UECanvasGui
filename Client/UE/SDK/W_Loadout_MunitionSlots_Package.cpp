@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializePreviewSummary(const struct FSavedLoadout& PreviewLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36387);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40385);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GroupAmmo(const class FName& AmmoType1, int32_t AmmoCount1, const class FName& AmmoType2, int32_t AmmoCount2, TArray<class FName>* GroupedAmmo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36386);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40384);
 		
 		struct
 		{
@@ -84,7 +84,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::ReplaceSidearmAmmo(const class FName& CurrentAmmoType, const class FName& NewAmmoType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36385);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40383);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::ReplacePrimaryAmmo(const class FName& CurrentAmmoType, const class FName& NewAmmoType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40382);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::RevealSlotEditorChildren(float* Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40381);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HideSlotEditorChildren(float* Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36382);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40380);
 		
 		struct
 		{
@@ -189,7 +189,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SwapWeaponAmmo(bool Sidearm)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36381);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40379);
 		
 		struct
 		{
@@ -213,7 +213,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetTacticalAddButtonVis()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36380);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40378);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::FreeUpTacticalSlot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36379);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40377);
 		
 		struct
 		{
@@ -255,7 +255,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::AddTacticalType()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36378);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40376);
 		
 		struct
 		{
@@ -276,7 +276,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetGrenadeAddButtonVis()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36377);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40375);
 		
 		struct
 		{
@@ -297,7 +297,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetAllGrenadeTypes()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36376);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40374);
 		
 		struct
 		{
@@ -319,7 +319,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetLoadoutWidget(class UW_Loadout_C** LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36375);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40373);
 		
 		struct
 		{
@@ -344,7 +344,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::FreeUpGrenadeSlot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36374);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40372);
 		
 		struct
 		{
@@ -365,7 +365,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateGrenadeSlots()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36373);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40371);
 		
 		struct
 		{
@@ -386,7 +386,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::AddGrenadeType()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36372);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40370);
 		
 		struct
 		{
@@ -407,7 +407,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateTacticalSummary()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36371);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40369);
 		
 		struct
 		{
@@ -428,7 +428,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateGrenadeSummary()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36370);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40368);
 		
 		struct
 		{
@@ -449,7 +449,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateSidearmSummary()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36369);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40367);
 		
 		struct
 		{
@@ -470,7 +470,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdatePrimarySummary()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36368);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40366);
 		
 		struct
 		{
@@ -494,7 +494,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::CreateItemSummaryEntry(class ABaseItem* ItemData, int32_t Count, class UW_Loadout_Munition_SummaryEntry_C** EntryWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36367);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40365);
 		
 		struct
 		{
@@ -528,7 +528,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::CreateAmmoSummaryEntry(class ABaseItem* Weapon, const class FName& AmmoType, int32_t Count, class UW_Loadout_Munition_SummaryEntry_C** EntryWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36366);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40364);
 		
 		struct
 		{
@@ -560,7 +560,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateSummary()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36365);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40363);
 		
 		struct
 		{
@@ -582,7 +582,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetActiveLoadout(struct FSavedLoadout* ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36364);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40362);
 		
 		struct
 		{
@@ -609,7 +609,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetSidearmDefaultAmmoType(class FName* Output, bool* SingleAmmoType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36363);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40361);
 		
 		struct
 		{
@@ -640,7 +640,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetPrimaryDefaultAmmoType(class FName* Output, bool* SingleAmmoType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36362);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40360);
 		
 		struct
 		{
@@ -669,7 +669,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HandleRemainderSidearmAmmo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36361);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40359);
 		
 		struct
 		{
@@ -690,7 +690,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HandleRemainderPrimaryAmmo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36360);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40358);
 		
 		struct
 		{
@@ -711,7 +711,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateMunitionSlotEditor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36359);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40357);
 		
 		struct
 		{
@@ -732,7 +732,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateMunitionEditorTotalSlotCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36358);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40356);
 		
 		struct
 		{
@@ -753,7 +753,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializeMunitionSlotEditor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36357);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40355);
 		
 		struct
 		{
@@ -774,7 +774,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateTotalSidearmSlotCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36356);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40354);
 		
 		struct
 		{
@@ -795,7 +795,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateTotalPrimarySlotCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36355);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40353);
 		
 		struct
 		{
@@ -816,7 +816,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateTotalTacticalSlotCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36354);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40352);
 		
 		struct
 		{
@@ -837,7 +837,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateTotalGrenadeCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36353);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40351);
 		
 		struct
 		{
@@ -860,7 +860,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::ReplaceTactical(class ABaseItem* CurrentTactical, class ABaseItem* NewTactical)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36352);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40350);
 		
 		struct
 		{
@@ -887,7 +887,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::EquipTactical(class ABaseItem* ItemData, int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36351);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40349);
 		
 		struct
 		{
@@ -914,7 +914,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SelectTacticalType(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36350);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40348);
 		
 		struct
 		{
@@ -939,7 +939,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::ReplaceGrenades(class ABaseItem* CurrentGrenade, class ABaseItem* NewGrenade)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36349);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40347);
 		
 		struct
 		{
@@ -966,7 +966,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::EquipGrenades(class ABaseItem* ItemData, int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36348);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40346);
 		
 		struct
 		{
@@ -993,7 +993,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SelectGrenadeType(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36347);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40345);
 		
 		struct
 		{
@@ -1017,7 +1017,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::TacticalSlotMinusCount(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36346);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40344);
 		
 		struct
 		{
@@ -1041,7 +1041,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::TacticalSlotAddCount(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36345);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40343);
 		
 		struct
 		{
@@ -1066,7 +1066,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::CreateTacticalSlot(class ABaseItem* Tactical, const class FText& CategoryText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36344);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40342);
 		
 		struct
 		{
@@ -1092,7 +1092,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializeTacticals(TArray<class ABaseItem*>* Tacticals)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36343);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40341);
 		
 		struct
 		{
@@ -1118,7 +1118,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GrenadeSlotMinusCount(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36342);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40340);
 		
 		struct
 		{
@@ -1142,7 +1142,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GrenadeSlotAddCount(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36341);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40339);
 		
 		struct
 		{
@@ -1165,7 +1165,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateCurrentData()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36340);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40338);
 		
 		struct
 		{
@@ -1187,7 +1187,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetSidearmAmmoCount2(int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36339);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40337);
 		
 		struct
 		{
@@ -1211,7 +1211,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetSidearmAmmoCount1(int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36338);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40336);
 		
 		struct
 		{
@@ -1235,7 +1235,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetPrimaryAmmoCount2(int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36337);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40335);
 		
 		struct
 		{
@@ -1259,7 +1259,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetPrimaryAmmoCount1(int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36336);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40334);
 		
 		struct
 		{
@@ -1283,7 +1283,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetPrimaryAmmoType1(const class FName& AmmoType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36335);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40333);
 		
 		struct
 		{
@@ -1306,7 +1306,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateSidearmSlots()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36334);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40332);
 		
 		struct
 		{
@@ -1327,7 +1327,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdatePrimarySlots()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36333);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40331);
 		
 		struct
 		{
@@ -1348,7 +1348,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HideSidearm2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36332);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40330);
 		
 		struct
 		{
@@ -1369,7 +1369,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::DisplaySidearm2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36331);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40329);
 		
 		struct
 		{
@@ -1391,7 +1391,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializeSidearmAmmo(TArray<class FName>* AmmoTypes)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36330);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40328);
 		
 		struct
 		{
@@ -1417,7 +1417,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializePrimaryAmmo(TArray<class FName>* AmmoTypes)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36329);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40327);
 		
 		struct
 		{
@@ -1442,7 +1442,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HidePrimary2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36328);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40326);
 		
 		struct
 		{
@@ -1463,7 +1463,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::DisplayPrimary2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36327);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40325);
 		
 		struct
 		{
@@ -1487,7 +1487,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SplitSlots(int32_t TotalSlots, int32_t* NewStack, int32_t* OriginalStack)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36326);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40324);
 		
 		struct
 		{
@@ -1521,7 +1521,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::CreateDeployableSlot(bool IsGrenade, class ABaseItem* ItemData, const class FText& CategoryText, class UW_Loadout_MunitionSlots_Deployable_C** OutputPin)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36325);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40323);
 		
 		struct
 		{
@@ -1553,7 +1553,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GetAllDeployableItems()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36324);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40322);
 		
 		struct
 		{
@@ -1575,7 +1575,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializeDeployables(bool IsGrenades)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36323);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40321);
 		
 		struct
 		{
@@ -1601,7 +1601,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::InitializeMunitionSlots(bool RemotePlayer, bool Preview)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36322);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40320);
 		
 		struct
 		{
@@ -1626,7 +1626,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetupBinds()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36321);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40319);
 		
 		struct
 		{
@@ -1648,7 +1648,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36320);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40318);
 		
 		struct
 		{
@@ -1671,7 +1671,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36319);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40317);
 		
 		struct
 		{
@@ -1693,7 +1693,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36318);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40316);
 		
 		struct
 		{
@@ -1717,7 +1717,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36317);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40315);
 		
 		struct
 		{
@@ -1741,7 +1741,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Summary_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36316);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40314);
 		
 		struct
 		{
@@ -1765,7 +1765,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Minimize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36315);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40313);
 		
 		struct
 		{
@@ -1789,7 +1789,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SlotClicked(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36314);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40312);
 		
 		struct
 		{
@@ -1813,7 +1813,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SlotHovered(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36313);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40311);
 		
 		struct
 		{
@@ -1837,7 +1837,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SlotUnhovered(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36312);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40310);
 		
 		struct
 		{
@@ -1861,7 +1861,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36311);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40309);
 		
 		struct
 		{
@@ -1885,7 +1885,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_NewPrimaryAmmoType_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36310);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40308);
 		
 		struct
 		{
@@ -1909,7 +1909,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Add_PrimaryAmmo1_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36309);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40307);
 		
 		struct
 		{
@@ -1933,7 +1933,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Add_PrimaryAmmo2_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36308);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40306);
 		
 		struct
 		{
@@ -1957,7 +1957,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_NewSidearmAmmoType_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36307);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40305);
 		
 		struct
 		{
@@ -1981,7 +1981,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Add_SidearmAmmo1_K2Node_ComponentBoundEvent_6_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36306);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40304);
 		
 		struct
 		{
@@ -2005,7 +2005,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_Add_SidearmAmmo2_K2Node_ComponentBoundEvent_7_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36305);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40303);
 		
 		struct
 		{
@@ -2029,7 +2029,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36304);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40302);
 		
 		struct
 		{
@@ -2053,7 +2053,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_NewGrenadeType_K2Node_ComponentBoundEvent_8_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36303);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40301);
 		
 		struct
 		{
@@ -2078,7 +2078,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::DeployableSlotClicked(class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot, class UW_LoadoutSlot_C* LoadoutSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36302);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40300);
 		
 		struct
 		{
@@ -2105,7 +2105,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::DeployableSlotHovered(class UW_LoadoutSlot_C* LoadoutSlot, class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36301);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40299);
 		
 		struct
 		{
@@ -2132,7 +2132,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::DeployableSlotUnhovered(class UW_LoadoutSlot_C* LoadoutSlot, class UW_Loadout_MunitionSlots_Deployable_C* TriggeringDeployableSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36300);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40298);
 		
 		struct
 		{
@@ -2158,7 +2158,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_PrimaryAmmo1_K2Node_ComponentBoundEvent_9_OnSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36299);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40297);
 		
 		struct
 		{
@@ -2182,7 +2182,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_PrimaryAmmo2_K2Node_ComponentBoundEvent_10_OnSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36298);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40296);
 		
 		struct
 		{
@@ -2206,7 +2206,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_SidearmAmmo1_K2Node_ComponentBoundEvent_11_OnSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36297);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40295);
 		
 		struct
 		{
@@ -2230,7 +2230,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_SidearmAmmo2_K2Node_ComponentBoundEvent_12_OnSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36296);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40294);
 		
 		struct
 		{
@@ -2254,7 +2254,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36295);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40293);
 		
 		struct
 		{
@@ -2278,7 +2278,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_ArmorSlotPrimaryAmmoCount_K2Node_ComponentBoundEvent_13_OnSlotCountChanged__DelegateSignature(class UW_Loadout_MunitionCountSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36294);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40292);
 		
 		struct
 		{
@@ -2303,7 +2303,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36293);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40291);
 		
 		struct
 		{
@@ -2329,7 +2329,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_ArmorSlotSidearmAmmoCount_K2Node_ComponentBoundEvent_14_OnSlotCountChanged__DelegateSignature(class UW_Loadout_MunitionCountSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36292);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40290);
 		
 		struct
 		{
@@ -2353,7 +2353,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_ArmorSlotGrenadeCount_K2Node_ComponentBoundEvent_15_OnSlotCountChanged__DelegateSignature(class UW_Loadout_MunitionCountSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36291);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40289);
 		
 		struct
 		{
@@ -2377,7 +2377,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_ArmorSlotTacticalCount_K2Node_ComponentBoundEvent_16_OnSlotCountChanged__DelegateSignature(class UW_Loadout_MunitionCountSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36290);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40288);
 		
 		struct
 		{
@@ -2400,7 +2400,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::PrimaryWeaponChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36289);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40287);
 		
 		struct
 		{
@@ -2421,7 +2421,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SidearmWeaponChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36288);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40286);
 		
 		struct
 		{
@@ -2442,7 +2442,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::PrimaryAmmoChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36287);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40285);
 		
 		struct
 		{
@@ -2463,7 +2463,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SidearmAmmoChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36286);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40284);
 		
 		struct
 		{
@@ -2484,7 +2484,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::SidearmAmmoCountSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36285);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40283);
 		
 		struct
 		{
@@ -2505,7 +2505,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::PrimaryAmmoCountSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36284);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40282);
 		
 		struct
 		{
@@ -2526,7 +2526,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GrenadeCountSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36283);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40281);
 		
 		struct
 		{
@@ -2547,7 +2547,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::GrenadeEquipped()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36282);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40280);
 		
 		struct
 		{
@@ -2568,7 +2568,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::TacticalEquipped()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36281);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40279);
 		
 		struct
 		{
@@ -2589,7 +2589,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::TacticalCountSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36280);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40278);
 		
 		struct
 		{
@@ -2611,7 +2611,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_NewTacticalType_K2Node_ComponentBoundEvent_17_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36279);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40277);
 		
 		struct
 		{
@@ -2635,7 +2635,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::BndEvt__W_Loadout_MunitionSlots_btn_SlotEdit_K2Node_ComponentBoundEvent_18_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36278);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40276);
 		
 		struct
 		{
@@ -2658,7 +2658,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::RevealSlotEditor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36277);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40275);
 		
 		struct
 		{
@@ -2679,7 +2679,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::HideSlotEditor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36276);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40274);
 		
 		struct
 		{
@@ -2702,7 +2702,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::AmmoSelected(const class FName& NewAmmoType, class ABaseItem* Weapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36275);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40273);
 		
 		struct
 		{
@@ -2728,7 +2728,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::ExecuteUbergraph_W_Loadout_MunitionSlots(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36274);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40272);
 		
 		struct
 		{
@@ -2753,7 +2753,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnGrenadesChanged__DelegateSignature(TArray<class ABaseItem*>* Grenades)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36273);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40271);
 		
 		struct
 		{
@@ -2779,7 +2779,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnPrimaryAmmoChanged__DelegateSignature(TArray<class FName>* PrimaryAmmo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36272);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40270);
 		
 		struct
 		{
@@ -2805,7 +2805,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnSidearmAmmoChanged__DelegateSignature(TArray<class FName>* SidearmAmmo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36271);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40269);
 		
 		struct
 		{
@@ -2834,7 +2834,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnMunitionSlotCountChanged__DelegateSignature(int32_t PrimaryAmmoSlotCount, int32_t SidearmAmmoSlotCount, int32_t GrenadeSlotCount, int32_t TacticalSlotCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36270);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40268);
 		
 		struct
 		{
@@ -2864,7 +2864,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnMunitionSlotUnhovered__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36269);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40267);
 		
 		struct
 		{
@@ -2888,7 +2888,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnMunitionSlotHovered__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36268);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40266);
 		
 		struct
 		{
@@ -2912,7 +2912,7 @@ namespace SDK
 	 */
 	void UW_Loadout_MunitionSlots_C::OnMunitionSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36267);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40265);
 		
 		struct
 		{
@@ -2935,7 +2935,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_MunitionSlots_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(36266);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40264);
 		return ptr;
 	}
 

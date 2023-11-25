@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_VotePopUp_C::GetVoteNo_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29031);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49280);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_VotePopUp_C::CanVoteNo(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29030);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49279);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetVoteNoKeyBinding()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29029);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49278);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetVoteYesKeyBinding()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29028);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49277);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetVoteQuestion()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29027);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49276);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetText_5()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29026);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49275);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetNoVotes()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29025);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49274);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetYesVotes()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29024);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49273);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_VotePopUp_C::GetVoteVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29023);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49272);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	bool UW_VotePopUp_C::GetbIsEnabled_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29022);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49271);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::GetText_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29021);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49270);
 		
 		struct
 		{
@@ -287,7 +287,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_VotePopUp_C::VoteNo_Visibility_3()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29020);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49269);
 		
 		struct
 		{
@@ -311,7 +311,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_VotePopUp_C::VoteNo_Visibility_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29019);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49268);
 		
 		struct
 		{
@@ -335,7 +335,7 @@ namespace SDK
 	 */
 	class FText UW_VotePopUp_C::VoteReason()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29018);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49267);
 		
 		struct
 		{
@@ -359,7 +359,7 @@ namespace SDK
 	 */
 	void UW_VotePopUp_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29017);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49266);
 		
 		struct
 		{
@@ -382,7 +382,7 @@ namespace SDK
 	 */
 	void UW_VotePopUp_C::StartVote(const class FText& VoteReason, const class FText& VoteQuestion)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29016);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49265);
 		
 		struct
 		{
@@ -407,7 +407,7 @@ namespace SDK
 	 */
 	void UW_VotePopUp_C::VoteEnd()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29015);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49264);
 		
 		struct
 		{
@@ -429,7 +429,7 @@ namespace SDK
 	 */
 	void UW_VotePopUp_C::ExecuteUbergraph_W_VotePopUp(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29014);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49263);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	UClass* UW_VotePopUp_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29013);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49262);
 		return ptr;
 	}
 

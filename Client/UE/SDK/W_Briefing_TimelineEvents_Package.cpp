@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::Finished_CEF1E049428EE21AB58B96A8441038EA()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54779);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31409);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::Initialize(TMap<float, struct FTimelineEvent> EventEntries)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54778);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31408);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::AddEvent(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54777);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31407);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::EventClicked(float EventAudioStart, float EventAudioDuration)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54776);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31406);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::ExecuteUbergraph_W_Briefing_TimelineEvents(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54775);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31405);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void UW_Briefing_TimelineEvents_C::OnEventClicked__DelegateSignature(float EventAudioStart, float EventAudioDuration)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54774);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31404);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_TimelineEvents_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54773);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31403);
 		return ptr;
 	}
 

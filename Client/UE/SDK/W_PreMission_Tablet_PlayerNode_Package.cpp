@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_PlayerNode_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54159);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30859);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_PlayerNode_C::SetupWidget(int32_t NewParam, const struct FLinearColor& NewParam2)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54158);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30858);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_PlayerNode_C::ExecuteUbergraph_W_PreMission_Tablet_PlayerNode(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54157);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30857);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_PlayerNode_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54156);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30856);
 		return ptr;
 	}
 

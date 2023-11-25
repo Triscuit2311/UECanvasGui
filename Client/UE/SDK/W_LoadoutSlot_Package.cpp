@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SequenceEvent__ENTRYPOINTW_LoadoutSlot_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28201);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56756);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::DisableInteraction(bool Disabled)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28200);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56755);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetCompactLayout(bool CompactLayout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28199);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56754);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetExclusiveLock()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28198);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56753);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ApplyIcon()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28197);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56752);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::RefreshArmourMaterialInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56751);
 		
 		struct
 		{
@@ -153,7 +153,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::GetLoadoutWidget(class UW_Loadout_C** LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28195);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56750);
 		
 		struct
 		{
@@ -180,7 +180,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::GetAmmoCategoryText(class UObject* ItemData, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28194);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56749);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::RefreshAmmoInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28193);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56748);
 		
 		struct
 		{
@@ -229,7 +229,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetCountText(const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28192);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56747);
 		
 		struct
 		{
@@ -252,7 +252,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::GetInvetoryCount()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28191);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56746);
 		
 		struct
 		{
@@ -274,7 +274,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetEquipped(bool Equipped)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28190);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56745);
 		
 		struct
 		{
@@ -298,7 +298,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::GetItemIcon(TSoftObjectPtr<class UTexture2D>* Image)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28189);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56744);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::RefreshItemInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28188);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56743);
 		
 		struct
 		{
@@ -345,7 +345,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetLayout(bool MinimalLayout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28187);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56742);
 		
 		struct
 		{
@@ -369,7 +369,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::GetIsSuppressed(bool* IsSuppressed)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28186);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56741);
 		
 		struct
 		{
@@ -394,7 +394,7 @@ namespace SDK
 	 */
 	bool UW_LoadoutSlot_C::GetHoverState()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28185);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56740);
 		
 		struct
 		{
@@ -419,7 +419,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetActive(bool IsActive)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28184);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56739);
 		
 		struct
 		{
@@ -443,7 +443,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnLoaded_2301B5524398E883D7B4A9A8DD59E91D(class UObject* Loaded)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28183);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56738);
 		
 		struct
 		{
@@ -467,7 +467,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnLoaded_FCECFCDB446A3843E9F216BC9A4A7723(class UObject* Loaded)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28182);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56737);
 		
 		struct
 		{
@@ -490,7 +490,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::Finished_D51AD9A24CFA959F985A078C69194B2E()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28181);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56736);
 		
 		struct
 		{
@@ -512,7 +512,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BndEvt__W_LoadoutSlot_SlotButton_K2Node_ComponentBoundEvent_0_DoubleClicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28180);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56735);
 		
 		struct
 		{
@@ -536,7 +536,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::InitializeItemData(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28179);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56734);
 		
 		struct
 		{
@@ -559,7 +559,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::InitializeAsListItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28178);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56733);
 		
 		struct
 		{
@@ -581,7 +581,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28177);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56732);
 		
 		struct
 		{
@@ -605,7 +605,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28176);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56731);
 		
 		struct
 		{
@@ -630,7 +630,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28175);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56730);
 		
 		struct
 		{
@@ -655,7 +655,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::InitializeAsSlot()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28174);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56729);
 		
 		struct
 		{
@@ -677,7 +677,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ReinitializeItemData(class ABaseItem* ItemData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28173);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56728);
 		
 		struct
 		{
@@ -700,7 +700,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ForceClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28172);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56727);
 		
 		struct
 		{
@@ -721,7 +721,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ForceDoubleClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28171);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56726);
 		
 		struct
 		{
@@ -746,7 +746,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::InitializeAmmoData(bool Primary, const class FName& AmmoType, class ABaseItem* Weapon, int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28170);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56725);
 		
 		struct
 		{
@@ -777,7 +777,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::Collapse()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28169);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56724);
 		
 		struct
 		{
@@ -798,7 +798,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BndEvt__W_LoadoutSlot_SlotButton_K2Node_ComponentBoundEvent_3_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28168);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56723);
 		
 		struct
 		{
@@ -820,7 +820,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28167);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56722);
 		
 		struct
 		{
@@ -844,7 +844,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::InitializeArmourMaterialData(class UArmourMaterial* ArmourMaterial)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28166);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56721);
 		
 		struct
 		{
@@ -867,7 +867,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28165);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49078);
 		
 		struct
 		{
@@ -889,7 +889,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28164);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49077);
 		
 		struct
 		{
@@ -913,7 +913,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28163);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49076);
 		
 		struct
 		{
@@ -937,7 +937,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28162);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49075);
 		
 		struct
 		{
@@ -964,7 +964,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ReinitializeAmmoData(bool Primary, const class FName& AmmoType, class ABaseItem* Weapon, int32_t AmmoCount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28161);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49074);
 		
 		struct
 		{
@@ -996,7 +996,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ReinitializeArmorMaterialData(class UArmourMaterial* ArmourMaterial)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28160);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49073);
 		
 		struct
 		{
@@ -1020,7 +1020,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28159);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49072);
 		
 		struct
 		{
@@ -1043,7 +1043,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ApplyAugment()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28158);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49071);
 		
 		struct
 		{
@@ -1065,7 +1065,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::UpdateAugment(const class FText& AugmentText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28157);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49070);
 		
 		struct
 		{
@@ -1089,7 +1089,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28156);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49069);
 		
 		struct
 		{
@@ -1113,7 +1113,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BndEvt__W_LoadoutSlot_SlotButton_K2Node_ComponentBoundEvent_2_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28155);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49068);
 		
 		struct
 		{
@@ -1137,7 +1137,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::UpdateAmmoCount(int32_t Count)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28154);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49067);
 		
 		struct
 		{
@@ -1161,7 +1161,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28153);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49066);
 		
 		struct
 		{
@@ -1184,7 +1184,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BP_OnEntryReleased()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28152);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49065);
 		
 		struct
 		{
@@ -1206,7 +1206,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::BndEvt__W_LoadoutSlot_SlotButton_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28151);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49064);
 		
 		struct
 		{
@@ -1229,7 +1229,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ExpandReveal()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28150);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49063);
 		
 		struct
 		{
@@ -1251,7 +1251,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::ExecuteUbergraph_W_LoadoutSlot(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28149);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49062);
 		
 		struct
 		{
@@ -1276,7 +1276,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnSlotDoubleClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28148);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49061);
 		
 		struct
 		{
@@ -1300,7 +1300,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnSlotUnhovered__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28147);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49060);
 		
 		struct
 		{
@@ -1324,7 +1324,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnSlotHovered__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28146);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49059);
 		
 		struct
 		{
@@ -1348,7 +1348,7 @@ namespace SDK
 	 */
 	void UW_LoadoutSlot_C::OnSlotClicked__DelegateSignature(class UW_LoadoutSlot_C* TriggeringSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28145);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49058);
 		
 		struct
 		{
@@ -1371,7 +1371,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutSlot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28144);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49057);
 		return ptr;
 	}
 

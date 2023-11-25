@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_Sky_Sphere_C::RefreshMaterial()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74012);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ABP_Sky_Sphere_C::UpdateSunDirection()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74011);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void ABP_Sky_Sphere_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74010);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	UClass* ABP_Sky_Sphere_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(74221);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(74009);
 		return ptr;
 	}
 

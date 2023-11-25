@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,19 @@ namespace SDK
 	// # Classes
 	// --------------------------------------------------
 	/**
+	 * Class MagicLeapHandMeshing.MagicLeapHandMeshingComponent
+	 * Size -> 0x0000 (FullSize[0x00B0] - InheritedSize[0x00B0])
+	 */
+	class UMagicLeapHandMeshingComponent : public UActorComponent
+	{
+	public:
+		void SetUseWeightedNormals(bool bInUseWeightedNormals);
+		bool DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
+		bool ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class MagicLeapHandMeshing.MagicLeapHandMeshingFunctionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -24,19 +37,6 @@ namespace SDK
 		bool DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
 		bool DestroyClient();
 		bool CreateClient();
-		bool ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MagicLeapHandMeshing.MagicLeapHandMeshingComponent
-	 * Size -> 0x0000 (FullSize[0x00B0] - InheritedSize[0x00B0])
-	 */
-	class UMagicLeapHandMeshingComponent : public UActorComponent
-	{
-	public:
-		void SetUseWeightedNormals(bool bInUseWeightedNormals);
-		bool DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
 		bool ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr);
 		static UClass* StaticClass();
 	};

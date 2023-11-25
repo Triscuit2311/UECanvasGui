@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_DevScoreDisplay_C::UpdateText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88281);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88293);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_DevScoreDisplay_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88280);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88292);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_DevScoreDisplay_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88279);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88291);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_DevScoreDisplay_C::ExecuteUbergraph_W_DevScoreDisplay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88278);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88290);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	UClass* UW_DevScoreDisplay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88277);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88289);
 		return ptr;
 	}
 

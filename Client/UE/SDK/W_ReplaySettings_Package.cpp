@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_ReplaySettings_C::GetbIsEnabled_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32706);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56937);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	ECheckBoxState UW_ReplaySettings_C::GetCheckedState_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32705);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56936);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_Slider_0_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32704);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56935);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_SplinePathSpeedSlider_K2Node_ComponentBoundEvent_1_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32703);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56934);
 		
 		struct
 		{
@@ -121,7 +121,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_AddSplinePointButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32702);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56933);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_ClearSplinePointsButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32701);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56932);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_FollowSplineButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32700);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56931);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_RemoveSplinePointButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32699);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56930);
 		
 		struct
 		{
@@ -206,7 +206,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::BndEvt__W_ReplaySettings_CheckBox_189_K2Node_ComponentBoundEvent_5_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24698);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30460);
 		
 		struct
 		{
@@ -230,7 +230,7 @@ namespace SDK
 	 */
 	void UW_ReplaySettings_C::ExecuteUbergraph_W_ReplaySettings(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24697);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30459);
 		
 		struct
 		{
@@ -254,7 +254,7 @@ namespace SDK
 	 */
 	UClass* UW_ReplaySettings_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24696);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30458);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_BindConflictModal_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28571);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49466);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_BindConflictModal_C::ExecuteUbergraph_W_BindConflictModal(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28549);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49007);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UW_BindConflictModal_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28548);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49006);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_RenameReplay_C::BndEvt__W_RenameReplay_OkButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24682);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30451);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_RenameReplay_C::BndEvt__W_RenameReplay_CancelButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24681);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30450);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_RenameReplay_C::ExecuteUbergraph_W_RenameReplay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24680);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30449);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	UClass* UW_RenameReplay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24679);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30448);
 		return ptr;
 	}
 

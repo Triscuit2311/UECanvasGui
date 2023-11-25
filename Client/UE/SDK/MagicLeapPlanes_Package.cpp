@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,44 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMagicLeapPlanesComponent::RequestPlanesAsync()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14288);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapPlanesComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapPlanesComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(755);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -234,9 +196,9 @@ namespace SDK
 	 * Parameters:
 	 * 		class AActor*                                      ContentActor                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FMagicLeapPlaneResult                       PlaneResult                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct PCoreUObject_FTransform UMagicLeapPlanesFunctionLibrary::GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult)
+	struct FTransform UMagicLeapPlanesFunctionLibrary::GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14292);
 		
@@ -245,7 +207,7 @@ namespace SDK
 			class AActor*                                      ContentActor;
 			struct FMagicLeapPlaneResult                       PlaneResult;
 			unsigned char                                      UnknownData_0000[0x8];
-			struct PCoreUObject_FTransform                     ReturnValue;
+			struct FTransform                     ReturnValue;
 		} params;
 		params.ContentActor = ContentActor;
 		params.PlaneResult = PlaneResult;
@@ -344,6 +306,44 @@ namespace SDK
 	UClass* UMagicLeapPlanesFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(756);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMagicLeapPlanesComponent::RequestPlanesAsync()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14288);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapPlanesComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapPlanesComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(755);
 		return ptr;
 	}
 

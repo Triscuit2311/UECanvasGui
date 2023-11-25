@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -191,7 +191,7 @@ namespace SDK
 	public:
 		float                                                        DefaultCost;                                             // 0x0030(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        FixedAreaEnteringCost;                                   // 0x0034(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		struct PCoreUObject_FColor                                   DrawColor;                                               // 0x0038(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   DrawColor;                                               // 0x0038(0x0004) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FNavAgentSelector                                     SupportedAgents;                                         // 0x003C(0x0004) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
 		bool                                                         bSupportsAgent7 : 1;                                     // 0x0040(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bSupportsAgent5 : 1;                                     // 0x0040(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -303,6 +303,120 @@ namespace SDK
 	};
 
 	/**
+	 * Class NavigationSystem.NavArea_Default
+	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 */
+	class UNavArea_Default : public UNavArea
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavigationGraphNode
+	 * Size -> 0x0000 (FullSize[0x0220] - InheritedSize[0x0220])
+	 */
+	class ANavigationGraphNode : public AActor
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavArea_LowHeight
+	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 */
+	class UNavArea_LowHeight : public UNavArea
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavigationGraphNodeComponent
+	 * Size -> 0x0028 (FullSize[0x0220] - InheritedSize[0x01F8])
+	 */
+	class UNavigationGraphNodeComponent : public USceneComponent
+	{
+	public:
+		struct FNavGraphNode                                         Node;                                                    // 0x01F8(0x0018) NativeAccessSpecifierPublic
+		class UNavigationGraphNodeComponent*                         NextNodeComponent;                                       // 0x0210(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavigationGraphNodeComponent*                         PrevNodeComponent;                                       // 0x0218(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavArea_Null
+	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 */
+	class UNavArea_Null : public UNavArea
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavigationInvokerComponent
+	 * Size -> 0x0008 (FullSize[0x00B8] - InheritedSize[0x00B0])
+	 */
+	class UNavigationInvokerComponent : public UActorComponent
+	{
+	public:
+		float                                                        TileGenerationRadius;                                    // 0x00B0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        TileRemovalRadius;                                       // 0x00B4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavArea_Obstacle
+	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 */
+	class UNavArea_Obstacle : public UNavArea
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavigationPath
+	 * Size -> 0x0060 (FullSize[0x0088] - InheritedSize[0x0028])
+	 */
+	class UNavigationPath : public UObject
+	{
+	public:
+		class UMulticastInlineDelegate                               PathUpdatedNotifier;                                     // 0x0028(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0029(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		TArray<struct FVector>                          PathPoints;                                              // 0x0038(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		ENavigationOptionFlag                                        RecalculateOnInvalidation;                               // 0x0048(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3F];                                  // 0x0049(0x003F) MISSED OFFSET (PADDING)
+
+	public:
+		bool IsValid();
+		bool IsStringPulled();
+		bool IsPartial();
+		float GetPathLength();
+		float GetPathCost();
+		class FString GetDebugString();
+		void EnableRecalculationOnInvalidation(ENavigationOptionFlag DoRecalculation);
+		void EnableDebugDrawing(bool bShouldDrawDebugData, const struct FLinearColor& PathColor);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavAreaMeta
+	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 */
+	class UNavAreaMeta : public UNavArea
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class NavigationSystem.NavigationPathGenerator
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -323,21 +437,65 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavLinkRenderingComponent
-	 * Size -> 0x0000 (FullSize[0x0450] - InheritedSize[0x0450])
+	 * Class NavigationSystem.NavAreaMeta_SwitchByAgent
+	 * Size -> 0x0080 (FullSize[0x00C8] - InheritedSize[0x0048])
 	 */
-	class UNavLinkRenderingComponent : public UPrimitiveComponent
+	class UNavAreaMeta_SwitchByAgent : public UNavAreaMeta
 	{
+	public:
+		class UNavArea*                                              Agent0Area;                                              // 0x0048(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent1Area;                                              // 0x0050(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent2Area;                                              // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent3Area;                                              // 0x0060(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent4Area;                                              // 0x0068(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent5Area;                                              // 0x0070(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent6Area;                                              // 0x0078(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent7Area;                                              // 0x0080(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent8Area;                                              // 0x0088(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent9Area;                                              // 0x0090(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent10Area;                                             // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent11Area;                                             // 0x00A0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent12Area;                                             // 0x00A8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent13Area;                                             // 0x00B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent14Area;                                             // 0x00B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UNavArea*                                              Agent15Area;                                             // 0x00C0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class NavigationSystem.NavArea_Default
-	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 * Class NavigationSystem.NavigationSystemModuleConfig
+	 * Size -> 0x0008 (FullSize[0x0058] - InheritedSize[0x0050])
 	 */
-	class UNavArea_Default : public UNavArea
+	class UNavigationSystemModuleConfig : public UNavigationSystemConfig
 	{
+	public:
+		bool                                                         bStrictlyStatic : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		bool                                                         bCreateOnClient : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		bool                                                         bAutoSpawnMissingNavData : 1;                            // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		bool                                                         bSpawnNavDataInNavBoundsLevel : 1;                       // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0051(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavCollision
+	 * Size -> 0x0068 (FullSize[0x00D8] - InheritedSize[0x0070])
+	 */
+	class UNavCollision : public UNavCollisionBase
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0070(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FNavCollisionCylinder>                         CylinderCollision;                                       // 0x0080(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FNavCollisionBox>                              BoxCollision;                                            // 0x0090(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+		class UNavArea*                                              AreaClass;                                               // 0x00A0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bGatherConvexGeometry : 1;                               // 0x00A8(0x0001) BIT_FIELD Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCreateOnClient : 1;                                     // 0x00A8(0x0001) BIT_FIELD Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x2F];                                  // 0x00A9(0x002F) MISSED OFFSET (PADDING)
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -394,28 +552,93 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavigationSystemModuleConfig
-	 * Size -> 0x0008 (FullSize[0x0058] - InheritedSize[0x0050])
+	 * Class NavigationSystem.NavLinkCustomInterface
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UNavigationSystemModuleConfig : public UNavigationSystemConfig
+	class INavLinkCustomInterface : public IInterface
 	{
 	public:
-		bool                                                         bStrictlyStatic : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                         bCreateOnClient : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                         bAutoSpawnMissingNavData : 1;                            // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                         bSpawnNavDataInNavBoundsLevel : 1;                       // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0051(0x0007) MISSED OFFSET (PADDING)
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavLinkComponent
+	 * Size -> 0x0020 (FullSize[0x0470] - InheritedSize[0x0450])
+	 */
+	class UNavLinkComponent : public UPrimitiveComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0450(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FNavigationLink>                               Links;                                                   // 0x0458(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0468(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class NavigationSystem.NavArea_LowHeight
-	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
+	 * Class NavigationSystem.NavigationGraph
+	 * Size -> 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
 	 */
-	class UNavArea_LowHeight : public UNavArea
+	class ANavigationGraph : public ANavigationData
 	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavLinkHostInterface
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class INavLinkHostInterface : public IInterface
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavLinkRenderingComponent
+	 * Size -> 0x0000 (FullSize[0x0450] - InheritedSize[0x0450])
+	 */
+	class UNavLinkRenderingComponent : public UPrimitiveComponent
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavLinkTrivial
+	 * Size -> 0x0000 (FullSize[0x0050] - InheritedSize[0x0050])
+	 */
+	class UNavLinkTrivial : public UNavLinkDefinition
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavMeshBoundsVolume
+	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
+	 */
+	class ANavMeshBoundsVolume : public AVolume
+	{
+	public:
+		struct FNavAgentSelector                                     SupportedAgents;                                         // 0x0258(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x025C(0x0004) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class NavigationSystem.NavMeshRenderingComponent
+	 * Size -> 0x0010 (FullSize[0x0460] - InheritedSize[0x0450])
+	 */
+	class UNavMeshRenderingComponent : public UPrimitiveComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0450(0x0010) MISSED OFFSET (PADDING)
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -438,31 +661,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavArea_Null
-	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
-	 */
-	class UNavArea_Null : public UNavArea
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavLinkComponent
-	 * Size -> 0x0020 (FullSize[0x0470] - InheritedSize[0x0450])
-	 */
-	class UNavLinkComponent : public UPrimitiveComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0450(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FNavigationLink>                               Links;                                                   // 0x0458(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0468(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class NavigationSystem.NavModifierVolume
 	 * Size -> 0x0018 (FullSize[0x0270] - InheritedSize[0x0258])
 	 */
@@ -480,55 +678,11 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavArea_Obstacle
-	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
-	 */
-	class UNavArea_Obstacle : public UNavArea
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavLinkTrivial
-	 * Size -> 0x0000 (FullSize[0x0050] - InheritedSize[0x0050])
-	 */
-	class UNavLinkTrivial : public UNavLinkDefinition
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class NavigationSystem.NavNodeInterface
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
 	class INavNodeInterface : public IInterface
 	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavAreaMeta
-	 * Size -> 0x0000 (FullSize[0x0048] - InheritedSize[0x0048])
-	 */
-	class UNavAreaMeta : public UNavArea
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavMeshBoundsVolume
-	 * Size -> 0x0008 (FullSize[0x0260] - InheritedSize[0x0258])
-	 */
-	class ANavMeshBoundsVolume : public AVolume
-	{
-	public:
-		struct FNavAgentSelector                                     SupportedAgents;                                         // 0x0258(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x025C(0x0004) MISSED OFFSET (PADDING)
-
 	public:
 		static UClass* StaticClass();
 	};
@@ -550,90 +704,10 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavLinkCustomInterface
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class INavLinkCustomInterface : public IInterface
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavAreaMeta_SwitchByAgent
-	 * Size -> 0x0080 (FullSize[0x00C8] - InheritedSize[0x0048])
-	 */
-	class UNavAreaMeta_SwitchByAgent : public UNavAreaMeta
-	{
-	public:
-		class UNavArea*                                              Agent0Area;                                              // 0x0048(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent1Area;                                              // 0x0050(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent2Area;                                              // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent3Area;                                              // 0x0060(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent4Area;                                              // 0x0068(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent5Area;                                              // 0x0070(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent6Area;                                              // 0x0078(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent7Area;                                              // 0x0080(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent8Area;                                              // 0x0088(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent9Area;                                              // 0x0090(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent10Area;                                             // 0x0098(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent11Area;                                             // 0x00A0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent12Area;                                             // 0x00A8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent13Area;                                             // 0x00B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent14Area;                                             // 0x00B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavArea*                                              Agent15Area;                                             // 0x00C0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavMeshRenderingComponent
-	 * Size -> 0x0010 (FullSize[0x0460] - InheritedSize[0x0450])
-	 */
-	class UNavMeshRenderingComponent : public UPrimitiveComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0450(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class NavigationSystem.NavTestRenderingComponent
 	 * Size -> 0x0000 (FullSize[0x0450] - InheritedSize[0x0450])
 	 */
 	class UNavTestRenderingComponent : public UPrimitiveComponent
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavCollision
-	 * Size -> 0x0068 (FullSize[0x00D8] - InheritedSize[0x0070])
-	 */
-	class UNavCollision : public UNavCollisionBase
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0070(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FNavCollisionCylinder>                         CylinderCollision;                                       // 0x0080(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FNavCollisionBox>                              BoxCollision;                                            // 0x0090(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		class UNavArea*                                              AreaClass;                                               // 0x00A0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bGatherConvexGeometry : 1;                               // 0x00A8(0x0001) BIT_FIELD Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCreateOnClient : 1;                                     // 0x00A8(0x0001) BIT_FIELD Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x2F];                                  // 0x00A9(0x002F) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavLinkHostInterface
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class INavLinkHostInterface : public IInterface
 	{
 	public:
 		static UClass* StaticClass();
@@ -650,16 +724,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class NavigationSystem.NavigationGraph
-	 * Size -> 0x0000 (FullSize[0x0428] - InheritedSize[0x0428])
-	 */
-	class ANavigationGraph : public ANavigationData
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class NavigationSystem.RecastNavMeshDataChunk
 	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
 	 */
@@ -669,70 +733,6 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0030(0x0010) MISSED OFFSET (PADDING)
 
 	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavigationGraphNode
-	 * Size -> 0x0000 (FullSize[0x0220] - InheritedSize[0x0220])
-	 */
-	class ANavigationGraphNode : public AActor
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavigationGraphNodeComponent
-	 * Size -> 0x0028 (FullSize[0x0220] - InheritedSize[0x01F8])
-	 */
-	class UNavigationGraphNodeComponent : public USceneComponent
-	{
-	public:
-		struct FNavGraphNode                                         Node;                                                    // 0x01F8(0x0018) NativeAccessSpecifierPublic
-		class UNavigationGraphNodeComponent*                         NextNodeComponent;                                       // 0x0210(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UNavigationGraphNodeComponent*                         PrevNodeComponent;                                       // 0x0218(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavigationInvokerComponent
-	 * Size -> 0x0008 (FullSize[0x00B8] - InheritedSize[0x00B0])
-	 */
-	class UNavigationInvokerComponent : public UActorComponent
-	{
-	public:
-		float                                                        TileGenerationRadius;                                    // 0x00B0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        TileRemovalRadius;                                       // 0x00B4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class NavigationSystem.NavigationPath
-	 * Size -> 0x0060 (FullSize[0x0088] - InheritedSize[0x0028])
-	 */
-	class UNavigationPath : public UObject
-	{
-	public:
-		class UMulticastInlineDelegate                               PathUpdatedNotifier;                                     // 0x0028(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0029(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		TArray<struct FVector>                          PathPoints;                                              // 0x0038(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		ENavigationOptionFlag                                        RecalculateOnInvalidation;                               // 0x0048(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3F];                                  // 0x0049(0x003F) MISSED OFFSET (PADDING)
-
-	public:
-		bool IsValid();
-		bool IsStringPulled();
-		bool IsPartial();
-		float GetPathLength();
-		float GetPathCost();
-		class FString GetDebugString();
-		void EnableRecalculationOnInvalidation(ENavigationOptionFlag DoRecalculation);
-		void EnableDebugDrawing(bool bShouldDrawDebugData, const struct FLinearColor& PathColor);
 		static UClass* StaticClass();
 	};
 

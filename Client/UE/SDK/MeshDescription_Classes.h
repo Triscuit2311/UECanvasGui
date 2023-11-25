@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,16 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class MeshDescription.MeshDescription
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMeshDescription : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class MeshDescription.MeshDescriptionBase
 	 * Size -> 0x0368 (FullSize[0x0390] - InheritedSize[0x0028])
@@ -109,16 +119,6 @@ namespace SDK
 		void CreateEdgeWithID(const struct FEdgeID& EdgeID, const struct FVertexID& VertexID0, const struct FVertexID& VertexID1);
 		struct FEdgeID CreateEdge(const struct FVertexID& VertexID0, const struct FVertexID& VertexID1);
 		void ComputePolygonTriangulation(const struct FPolygonID& PolygonID);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MeshDescription.MeshDescription
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMeshDescription : public UObject
-	{
-	public:
 		static UClass* StaticClass();
 	};
 

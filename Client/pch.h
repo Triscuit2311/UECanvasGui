@@ -1,6 +1,7 @@
 #ifndef PCH_H
 #define PCH_H
 
+#define _CRT_SECURE_NO_WARNINGS 1
 #include "framework.h"
 
 #include <atomic>
@@ -17,7 +18,7 @@
 
 #include "UE/SDK.h"
 
-#include "logging.h"
+#include "../Shared/logging.h"
 #include "client_lib.hpp"
 
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Entry_C::SetValue(const class FText& Value)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31267);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31266);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_Entry_C::ExecuteUbergraph_W_Briefing_Dossier_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43382);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31265);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Dossier_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43381);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31264);
 		return ptr;
 	}
 

@@ -6,7 +6,6 @@ public:
 	{
 		LOG("Initializing SDK");
 		SDK::InitSdk();
-
 		LOG("SDK Init Complete");
 		SPE("\t> GObjects: 0x%011X", SDK::UObject::GObjects);
 		SPE("\t> GNames: 0x%011X", SDK::FName::GNames);

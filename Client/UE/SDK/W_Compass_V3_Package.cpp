@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_Compass_V3_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43885);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_Compass_V3_C::ExecuteUbergraph_W_Compass_V3(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43884);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	UClass* UW_Compass_V3_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27220);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43883);
 		return ptr;
 	}
 

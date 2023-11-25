@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::RemoveNonExistentFriendWidgets()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88427);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88462);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::DoesFriendExistAlready(const struct FFriend& TestFriend, bool* Exists, int32_t* Idx)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88426);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88461);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	ESlateVisibility UFriendsList_C::GetNoFriendsPlayingText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88425);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88460);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88424);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88459);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::OnSuccess_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88423);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88458);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::OnFailure_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88422);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88457);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88421);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88456);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88420);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88455);
 		
 		struct
 		{
@@ -208,7 +208,7 @@ namespace SDK
 	 */
 	void UFriendsList_C::ExecuteUbergraph_FriendsList(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88419);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88454);
 		
 		struct
 		{
@@ -232,7 +232,7 @@ namespace SDK
 	 */
 	UClass* UFriendsList_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88418);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88453);
 		return ptr;
 	}
 

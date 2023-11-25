@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_MicroT1_Raised_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54616);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38005);
 		return ptr;
 	}
 

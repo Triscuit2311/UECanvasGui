@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::SequenceEvent__ENTRYPOINTW_PVP_RoundEnd_4()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89851);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89944);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::SequenceEvent__ENTRYPOINTW_PVP_RoundEnd_3()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89850);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89943);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::SequenceEvent__ENTRYPOINTW_PVP_RoundEnd_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89849);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89942);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::SequenceEvent__ENTRYPOINTW_PVP_RoundEnd_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89848);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89941);
 		
 		struct
 		{
@@ -105,7 +105,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetWinningTaglineText(class FText* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89847);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89940);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetMLOScore(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89846);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89939);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetSWATScore(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89845);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89938);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetRoundWinningTeamText(class FText* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89844);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89937);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetLosingTeamRibbonColor(struct FLinearColor* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89843);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89936);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetLosingTeamTextColor(struct FSlateColor* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89842);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89935);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetWinningTeamRibbonColor(struct FLinearColor* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89841);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89934);
 		
 		struct
 		{
@@ -289,7 +289,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::GetWinningTeamTextColor(struct FSlateColor* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89840);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89933);
 		
 		struct
 		{
@@ -314,7 +314,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::UpdateRoundColors()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89839);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89932);
 		
 		struct
 		{
@@ -335,7 +335,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::UpdateSWATScore()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89931);
 		
 		struct
 		{
@@ -356,7 +356,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::UpdateMLOScore()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89930);
 		
 		struct
 		{
@@ -377,7 +377,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::UpdateRoundTagline()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89836);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89929);
 		
 		struct
 		{
@@ -398,7 +398,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89835);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89928);
 		
 		struct
 		{
@@ -419,7 +419,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::OnWinsUpdated_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89834);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89927);
 		
 		struct
 		{
@@ -441,7 +441,7 @@ namespace SDK
 	 */
 	void UW_PVP_RoundEnd_C::ExecuteUbergraph_W_PVP_RoundEnd(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89833);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89926);
 		
 		struct
 		{
@@ -465,7 +465,7 @@ namespace SDK
 	 */
 	UClass* UW_PVP_RoundEnd_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89832);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89925);
 		return ptr;
 	}
 

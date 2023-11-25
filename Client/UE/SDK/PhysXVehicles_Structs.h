@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -43,6 +43,18 @@ namespace SDK
 	// # Structs
 	// --------------------------------------------------
 	/**
+	 * ScriptStruct PhysXVehicles.TireConfigMaterialFriction
+	 * Size -> 0x0010
+	 */
+	struct FTireConfigMaterialFriction
+	{
+	public:
+		class UPhysicalMaterial*                                     PhysicalMaterial;                                        // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        FrictionScale;                                           // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct PhysXVehicles.WheelSetup
 	 * Size -> 0x0020
 	 */
@@ -79,18 +91,6 @@ namespace SDK
 	public:
 		float                                                        RiseRate;                                                // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        FallRate;                                                // 0x0004(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct PhysXVehicles.TireConfigMaterialFriction
-	 * Size -> 0x0010
-	 */
-	struct FTireConfigMaterialFriction
-	{
-	public:
-		class UPhysicalMaterial*                                     PhysicalMaterial;                                        // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        FrictionScale;                                           // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
 	};
 
 	/**

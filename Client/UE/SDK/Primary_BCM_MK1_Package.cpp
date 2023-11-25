@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void APrimary_BCM_MK1_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47925);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36034);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void APrimary_BCM_MK1_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47924);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36033);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void APrimary_BCM_MK1_C::ExecuteUbergraph_Primary_BCM_MK1(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47923);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36032);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* APrimary_BCM_MK1_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(47922);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36031);
 		return ptr;
 	}
 

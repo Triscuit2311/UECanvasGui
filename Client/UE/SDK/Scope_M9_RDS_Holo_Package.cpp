@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_M9_RDS_Holo_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54620);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38009);
 		return ptr;
 	}
 

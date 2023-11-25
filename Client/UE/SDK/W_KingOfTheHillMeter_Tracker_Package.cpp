@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_Tracker_C::PlayTickSound()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27010);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43654);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_Tracker_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27009);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43653);
 		
 		struct
 		{
@@ -64,7 +64,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_Tracker_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27008);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43652);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_KingOfTheHillMeter_Tracker_C::ExecuteUbergraph_W_KingOfTheHillMeter_Tracker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27007);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43651);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	UClass* UW_KingOfTheHillMeter_Tracker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27006);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43650);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,230 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULuminApplicationLifecycleComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULuminApplicationLifecycleComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(713);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5422);
+		
+		struct
+		{
+			struct FMagicLeapTrackingMeshInfo                  NewMeshInfo;
+			TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh;
+		} params;
+		params.NewMeshInfo = NewMeshInfo;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (RequestedMesh != nullptr)
+			*RequestedMesh = params.RequestedMesh;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.MagicLeapMeshTrackerComponent.OnMeshTrackerUpdated__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FGuid                                       ID                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FVector>                Vertices                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<int32_t>                                    Triangles                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FVector>                Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<float>                                      Confidence                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::OnMeshTrackerUpdated__DelegateSignature(const struct FGuid& ID, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5421);
+		
+		struct
+		{
+			struct FGuid                                       ID;
+			TArray<struct FVector>                Vertices;
+			TArray<int32_t>                                    Triangles;
+			TArray<struct FVector>                Normals;
+			TArray<float>                                      Confidence;
+		} params;
+		params.ID = ID;
+		params.Vertices = Vertices;
+		params.Triangles = Triangles;
+		params.Normals = Normals;
+		params.Confidence = Confidence;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.GetNumQueuedBlockUpdates
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UMagicLeapMeshTrackerComponent::GetNumQueuedBlockUpdates()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5420);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectMRMesh
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5419);
+		
+		struct
+		{
+			class UMRMeshComponent*                            InMRMeshPtr;
+		} params;
+		params.InMRMeshPtr = InMRMeshPtr;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectBlockSelector
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::DisconnectBlockSelector()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5418);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectMRMesh
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5417);
+		
+		struct
+		{
+			class UMRMeshComponent*                            InMRMeshPtr;
+		} params;
+		params.InMRMeshPtr = InMRMeshPtr;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectBlockSelector
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TScriptInterface<class IMagicLeapMeshBlockSelectorInterface> Selector                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapMeshTrackerComponent::ConnectBlockSelector(const TScriptInterface<class IMagicLeapMeshBlockSelectorInterface>& Selector)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5416);
+		
+		struct
+		{
+			TScriptInterface<class IMagicLeapMeshBlockSelectorInterface> Selector;
+		} params;
+		params.Selector = Selector;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapMeshTrackerComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapMeshTrackerComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(718);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(719);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -27,254 +251,111 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync
+	 * 		Name   -> Function MagicLeap.MagicLeapMeshBlockSelectorInterface.SelectMeshBlocks
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FPurchaseItemDetails                        ItemDetails                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UInAppPurchaseComponent::TryPurchaseItemAsync(const struct FPurchaseItemDetails& ItemDetails)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5412);
-		
-		struct
-		{
-			struct FPurchaseItemDetails                        ItemDetails;
-			bool                                               ReturnValue;
-		} params;
-		params.ItemDetails = ItemDetails;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryGetPurchaseHistoryAsync
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            InNumPages                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UInAppPurchaseComponent::TryGetPurchaseHistoryAsync(int32_t InNumPages)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5411);
-		
-		struct
-		{
-			int32_t                                            InNumPages;
-			bool                                               ReturnValue;
-		} params;
-		params.InNumPages = InNumPages;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryGetItemsDetailsAsync
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class FString>                              ItemIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UInAppPurchaseComponent::TryGetItemsDetailsAsync(TArray<class FString> ItemIDs)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5410);
-		
-		struct
-		{
-			TArray<class FString>                              ItemIDs;
-			bool                                               ReturnValue;
-		} params;
-		params.ItemIDs = ItemIDs;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationSuccess__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPurchaseConfirmation                       PurchaseConfirmations                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UInAppPurchaseComponent::PurchaseConfirmationSuccess__DelegateSignature(const struct FPurchaseConfirmation& PurchaseConfirmations)
+	void IMagicLeapMeshBlockSelectorInterface::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14192);
 		
 		struct
 		{
-			struct FPurchaseConfirmation                       PurchaseConfirmations;
+			struct FMagicLeapTrackingMeshInfo                  NewMeshInfo;
+			TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh;
 		} params;
-		params.PurchaseConfirmations = PurchaseConfirmations;
+		params.NewMeshInfo = NewMeshInfo;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (RequestedMesh != nullptr)
+			*RequestedMesh = params.RequestedMesh;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationFailure__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::PurchaseConfirmationFailure__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5408);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.InAppPurchaseLogMessage__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      LogMessage                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::InAppPurchaseLogMessage__DelegateSignature(const class FString& LogMessage)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5407);
-		
-		struct
-		{
-			class FString                                      LogMessage;
-		} params;
-		params.LogMessage = LogMessage;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistorySuccess__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<struct FPurchaseConfirmation>               PurchaseHistory                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::GetPurchaseHistorySuccess__DelegateSignature(TArray<struct FPurchaseConfirmation> PurchaseHistory)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5405);
-		
-		struct
-		{
-			TArray<struct FPurchaseConfirmation>               PurchaseHistory;
-		} params;
-		params.PurchaseHistory = PurchaseHistory;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistoryFailure__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::GetPurchaseHistoryFailure__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5404);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsSuccess__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<struct FPurchaseItemDetails>                ItemsDetails                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::GetItemsDetailsSuccess__DelegateSignature(TArray<struct FPurchaseItemDetails> ItemsDetails)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5401);
-		
-		struct
-		{
-			TArray<struct FPurchaseItemDetails>                ItemsDetails;
-		} params;
-		params.ItemsDetails = ItemsDetails;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsFailure__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UInAppPurchaseComponent::GetItemsDetailsFailure__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5400);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInAppPurchaseComponent.StaticClass
+	 * 		Name   -> PredefinedFunction IMagicLeapMeshBlockSelectorInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UInAppPurchaseComponent::StaticClass()
+	UClass* IMagicLeapMeshBlockSelectorInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(711);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(720);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.MagicLeapRaycastComponent.RequestRaycast
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMagicLeapRaycastQueryParams                RequestParams                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMagicLeapRaycastComponent::RequestRaycast(const struct FMagicLeapRaycastQueryParams& RequestParams, const class FScriptDelegate& ResultDelegate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5433);
+		
+		struct
+		{
+			struct FMagicLeapRaycastQueryParams                RequestParams;
+			class FScriptDelegate                              ResultDelegate;
+			bool                                               ReturnValue;
+		} params;
+		params.RequestParams = RequestParams;
+		params.ResultDelegate = ResultDelegate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.MagicLeapRaycastComponent.RaycastResultDelegate__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMagicLeapRaycastHitResult                  HitResult                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMagicLeapRaycastComponent::RaycastResultDelegate__DelegateSignature(const struct FMagicLeapRaycastHitResult& HitResult)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5430);
+		
+		struct
+		{
+			struct FMagicLeapRaycastHitResult                  HitResult;
+		} params;
+		params.HitResult = HitResult;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapRaycastComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapRaycastComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(721);
 		return ptr;
 	}
 
@@ -386,16 +467,16 @@ namespace SDK
 	 * 		Name   -> Function MagicLeap.MagicLeapHMDFunctionLibrary.SetBaseOrientation
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FQuat                          InBaseOrientation                                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FQuat                          InBaseOrientation                                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMagicLeapHMDFunctionLibrary::SetBaseOrientation(const struct PCoreUObject_FQuat& InBaseOrientation)
+	void UMagicLeapHMDFunctionLibrary::SetBaseOrientation(const struct FQuat& InBaseOrientation)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14187);
 		
 		struct
 		{
-			struct PCoreUObject_FQuat                          InBaseOrientation;
+			struct FQuat                          InBaseOrientation;
 		} params;
 		params.InBaseOrientation = InBaseOrientation;
 		
@@ -700,341 +781,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.SelectMeshBlocks
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5422);
-		
-		struct
-		{
-			struct FMagicLeapTrackingMeshInfo                  NewMeshInfo;
-			TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh;
-		} params;
-		params.NewMeshInfo = NewMeshInfo;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (RequestedMesh != nullptr)
-			*RequestedMesh = params.RequestedMesh;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.MagicLeapMeshTrackerComponent.OnMeshTrackerUpdated__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FGuid                                       ID                                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FVector>                Vertices                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<int32_t>                                    Triangles                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FVector>                Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<float>                                      Confidence                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::OnMeshTrackerUpdated__DelegateSignature(const struct FGuid& ID, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<float> Confidence)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5421);
-		
-		struct
-		{
-			struct FGuid                                       ID;
-			TArray<struct FVector>                Vertices;
-			TArray<int32_t>                                    Triangles;
-			TArray<struct FVector>                Normals;
-			TArray<float>                                      Confidence;
-		} params;
-		params.ID = ID;
-		params.Vertices = Vertices;
-		params.Triangles = Triangles;
-		params.Normals = Normals;
-		params.Confidence = Confidence;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.GetNumQueuedBlockUpdates
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UMagicLeapMeshTrackerComponent::GetNumQueuedBlockUpdates()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5420);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectMRMesh
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::DisconnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5419);
-		
-		struct
-		{
-			class UMRMeshComponent*                            InMRMeshPtr;
-		} params;
-		params.InMRMeshPtr = InMRMeshPtr;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.DisconnectBlockSelector
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::DisconnectBlockSelector()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5418);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectMRMesh
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMRMeshComponent*                            InMRMeshPtr                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::ConnectMRMesh(class UMRMeshComponent* InMRMeshPtr)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5417);
-		
-		struct
-		{
-			class UMRMeshComponent*                            InMRMeshPtr;
-		} params;
-		params.InMRMeshPtr = InMRMeshPtr;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshTrackerComponent.ConnectBlockSelector
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TScriptInterface<class IMagicLeapMeshBlockSelectorInterface> Selector                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapMeshTrackerComponent::ConnectBlockSelector(const TScriptInterface<class IMagicLeapMeshBlockSelectorInterface>& Selector)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5416);
-		
-		struct
-		{
-			TScriptInterface<class IMagicLeapMeshBlockSelectorInterface> Selector;
-		} params;
-		params.Selector = Selector;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapMeshTrackerComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapMeshTrackerComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(718);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(719);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapMeshBlockSelectorInterface.SelectMeshBlocks
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMagicLeapTrackingMeshInfo                  NewMeshInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IMagicLeapMeshBlockSelectorInterface::SelectMeshBlocks(const struct FMagicLeapTrackingMeshInfo& NewMeshInfo, TArray<struct FMagicLeapMeshBlockRequest>* RequestedMesh)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14192);
-		
-		struct
-		{
-			struct FMagicLeapTrackingMeshInfo                  NewMeshInfo;
-			TArray<struct FMagicLeapMeshBlockRequest>          RequestedMesh;
-		} params;
-		params.NewMeshInfo = NewMeshInfo;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (RequestedMesh != nullptr)
-			*RequestedMesh = params.RequestedMesh;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IMagicLeapMeshBlockSelectorInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* IMagicLeapMeshBlockSelectorInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(720);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeap.MagicLeapRaycastComponent.RequestRaycast
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMagicLeapRaycastQueryParams                RequestParams                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              ResultDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMagicLeapRaycastComponent::RequestRaycast(const struct FMagicLeapRaycastQueryParams& RequestParams, const class FScriptDelegate& ResultDelegate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5433);
-		
-		struct
-		{
-			struct FMagicLeapRaycastQueryParams                RequestParams;
-			class FScriptDelegate                              ResultDelegate;
-			bool                                               ReturnValue;
-		} params;
-		params.RequestParams = RequestParams;
-		params.ResultDelegate = ResultDelegate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeap.MagicLeapRaycastComponent.RaycastResultDelegate__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMagicLeapRaycastHitResult                  HitResult                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMagicLeapRaycastComponent::RaycastResultDelegate__DelegateSignature(const struct FMagicLeapRaycastHitResult& HitResult)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5430);
-		
-		struct
-		{
-			struct FMagicLeapRaycastHitResult                  HitResult;
-		} params;
-		params.HitResult = HitResult;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapRaycastComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapRaycastComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(721);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULuminApplicationLifecycleComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULuminApplicationLifecycleComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(713);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function MagicLeap.MagicLeapRaycastFunctionLibrary.MakeRaycastQueryParams
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1092,6 +838,260 @@ namespace SDK
 	UClass* UMagicLeapRaycastFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(722);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryPurchaseItemAsync
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPurchaseItemDetails                        ItemDetails                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UInAppPurchaseComponent::TryPurchaseItemAsync(const struct FPurchaseItemDetails& ItemDetails)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5412);
+		
+		struct
+		{
+			struct FPurchaseItemDetails                        ItemDetails;
+			bool                                               ReturnValue;
+		} params;
+		params.ItemDetails = ItemDetails;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryGetPurchaseHistoryAsync
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            InNumPages                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UInAppPurchaseComponent::TryGetPurchaseHistoryAsync(int32_t InNumPages)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5411);
+		
+		struct
+		{
+			int32_t                                            InNumPages;
+			bool                                               ReturnValue;
+		} params;
+		params.InNumPages = InNumPages;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeap.InAppPurchaseComponent.TryGetItemsDetailsAsync
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class FString>                              ItemIDs                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UInAppPurchaseComponent::TryGetItemsDetailsAsync(TArray<class FString> ItemIDs)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5410);
+		
+		struct
+		{
+			TArray<class FString>                              ItemIDs;
+			bool                                               ReturnValue;
+		} params;
+		params.ItemIDs = ItemIDs;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationSuccess__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPurchaseConfirmation                       PurchaseConfirmations                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::PurchaseConfirmationSuccess__DelegateSignature(const struct FPurchaseConfirmation& PurchaseConfirmations)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5409);
+		
+		struct
+		{
+			struct FPurchaseConfirmation                       PurchaseConfirmations;
+		} params;
+		params.PurchaseConfirmations = PurchaseConfirmations;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.PurchaseConfirmationFailure__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::PurchaseConfirmationFailure__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5408);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.InAppPurchaseLogMessage__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      LogMessage                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::InAppPurchaseLogMessage__DelegateSignature(const class FString& LogMessage)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5407);
+		
+		struct
+		{
+			class FString                                      LogMessage;
+		} params;
+		params.LogMessage = LogMessage;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistorySuccess__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<struct FPurchaseConfirmation>               PurchaseHistory                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::GetPurchaseHistorySuccess__DelegateSignature(TArray<struct FPurchaseConfirmation> PurchaseHistory)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5405);
+		
+		struct
+		{
+			TArray<struct FPurchaseConfirmation>               PurchaseHistory;
+		} params;
+		params.PurchaseHistory = PurchaseHistory;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetPurchaseHistoryFailure__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::GetPurchaseHistoryFailure__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5404);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsSuccess__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<struct FPurchaseItemDetails>                ItemsDetails                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::GetItemsDetailsSuccess__DelegateSignature(TArray<struct FPurchaseItemDetails> ItemsDetails)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5401);
+		
+		struct
+		{
+			TArray<struct FPurchaseItemDetails>                ItemsDetails;
+		} params;
+		params.ItemsDetails = ItemsDetails;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeap.InAppPurchaseComponent.GetItemsDetailsFailure__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UInAppPurchaseComponent::GetItemsDetailsFailure__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(5400);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInAppPurchaseComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInAppPurchaseComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(711);
 		return ptr;
 	}
 

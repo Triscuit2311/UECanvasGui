@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_AnimatedIcon_Imprint_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89776);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89869);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_AnimatedIcon_Imprint_C::ExecuteUbergraph_W_AnimatedIcon_Imprint(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89775);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89868);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	UClass* UW_AnimatedIcon_Imprint_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89774);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89867);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::ResetPreset(bool bResetName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55273);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57900);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::LoadPreset(const struct FWeaponPreset& PresetData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55272);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57899);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::UpdatePreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55271);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57898);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::UpdatePresetCustom(const struct FWeaponPreset& PresetData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55270);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57897);
 		
 		struct
 		{
@@ -115,7 +115,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::CanRename(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55269);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57896);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::UnhoverResetButton()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55268);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57895);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::HoverResetButton()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55267);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57894);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::Escape()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55266);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57893);
 		
 		struct
 		{
@@ -205,7 +205,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutItem_Preset_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55265);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57892);
 		
 		struct
 		{
@@ -235,7 +235,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutItem_Preset_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55264);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57891);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::StopRenaming()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55263);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57890);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::IsRenaming(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55262);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57889);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::CanReset(bool bConsiderPresetName, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55261);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57888);
 		
 		struct
 		{
@@ -341,7 +341,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::AnyAttachmentEquipped(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55260);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57887);
 		
 		struct
 		{
@@ -366,7 +366,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_LoadoutItem_Preset_C::Get_ResetButton_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55259);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57886);
 		
 		struct
 		{
@@ -390,7 +390,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::Rename()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55258);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57885);
 		
 		struct
 		{
@@ -411,7 +411,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_LoadoutItem_Preset_C::Get_CannotEdit_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55257);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57884);
 		
 		struct
 		{
@@ -435,7 +435,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::SimulateUnhover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55256);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57883);
 		
 		struct
 		{
@@ -456,7 +456,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::SimulateHover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55255);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57882);
 		
 		struct
 		{
@@ -477,7 +477,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::SimulateClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55254);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57881);
 		
 		struct
 		{
@@ -499,7 +499,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::DeselectPreset(bool bSavePreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55253);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57880);
 		
 		struct
 		{
@@ -523,7 +523,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::SelectPreset(bool bSavePreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55252);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57879);
 		
 		struct
 		{
@@ -546,7 +546,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55251);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57878);
 		
 		struct
 		{
@@ -567,7 +567,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55250);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57877);
 		
 		struct
 		{
@@ -589,7 +589,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__Button_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57876);
 		
 		struct
 		{
@@ -612,7 +612,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57875);
 		
 		struct
 		{
@@ -634,7 +634,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__EditableText_184_K2Node_ComponentBoundEvent_3_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57874);
 		
 		struct
 		{
@@ -659,7 +659,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__LoadoutItemPresetNameEdit_Text_K2Node_ComponentBoundEvent_4_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55246);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57873);
 		
 		struct
 		{
@@ -684,7 +684,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::FocusOnEditableText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55245);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57872);
 		
 		struct
 		{
@@ -706,7 +706,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55244);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57871);
 		
 		struct
 		{
@@ -730,7 +730,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57870);
 		
 		struct
 		{
@@ -755,7 +755,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55242);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57869);
 		
 		struct
 		{
@@ -780,7 +780,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_6_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55241);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57868);
 		
 		struct
 		{
@@ -801,7 +801,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_7_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55240);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57867);
 		
 		struct
 		{
@@ -823,7 +823,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::ExecuteUbergraph_W_LoadoutItem_Preset(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55239);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57866);
 		
 		struct
 		{
@@ -847,7 +847,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::OnButtonUnhovered__DelegateSignature(class UW_LoadoutItem_Preset_C* LoadoutItemPresetWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55238);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57865);
 		
 		struct
 		{
@@ -871,7 +871,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::OnButtonHovered__DelegateSignature(class UW_LoadoutItem_Preset_C* LoadoutItemPresetWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55237);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57864);
 		
 		struct
 		{
@@ -895,7 +895,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Preset_C::OnButtonClicked__DelegateSignature(class UW_LoadoutItem_Preset_C* LoadoutItemPresetWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55236);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39392);
 		
 		struct
 		{
@@ -918,7 +918,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutItem_Preset_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55235);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39391);
 		return ptr;
 	}
 

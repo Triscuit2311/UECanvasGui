@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_ModManager_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94276);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94168);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94275);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94167);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_Button_1_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89146);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89239);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::OnLoadingStarted()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89145);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89238);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::OnLoadingFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89144);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89237);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_Button_3_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89143);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89236);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_Button_2_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89142);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89235);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::AddMod(class UModData* ModData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89141);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89234);
 		
 		struct
 		{
@@ -210,7 +210,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_Button_2_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89140);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89233);
 		
 		struct
 		{
@@ -233,7 +233,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::ClearMods()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89139);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89232);
 		
 		struct
 		{
@@ -255,7 +255,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::OnProfilePictureLoaded(class UTexture2DDynamic* Image)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89138);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89231);
 		
 		struct
 		{
@@ -278,7 +278,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::ShowUserAuthenticator()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89137);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89230);
 		
 		struct
 		{
@@ -299,7 +299,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::OnUserAuthenticated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89136);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89229);
 		
 		struct
 		{
@@ -322,7 +322,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_EditableTextBox_95_K2Node_ComponentBoundEvent_5_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89135);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89228);
 		
 		struct
 		{
@@ -348,7 +348,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_Button_K2Node_ComponentBoundEvent_6_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89134);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89227);
 		
 		struct
 		{
@@ -372,7 +372,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::ShowErrorDialog(const class FString& ErrorMessage)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89133);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89226);
 		
 		struct
 		{
@@ -395,7 +395,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_W_ModErrorDialog_K2Node_ComponentBoundEvent_4_OnClosed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89132);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89225);
 		
 		struct
 		{
@@ -417,7 +417,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89131);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89224);
 		
 		struct
 		{
@@ -441,7 +441,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::OpenModDetails(class UModData* ModData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89130);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89223);
 		
 		struct
 		{
@@ -464,7 +464,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::CloseModDetails()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89129);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89222);
 		
 		struct
 		{
@@ -486,7 +486,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::BndEvt__W_ModManager_btn_Login_K2Node_ComponentBoundEvent_7_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89128);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89221);
 		
 		struct
 		{
@@ -509,7 +509,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::CloseModManager()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89127);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89220);
 		
 		struct
 		{
@@ -531,7 +531,7 @@ namespace SDK
 	 */
 	void UW_ModManager_C::ExecuteUbergraph_W_ModManager(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89126);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89219);
 		
 		struct
 		{
@@ -555,7 +555,7 @@ namespace SDK
 	 */
 	UClass* UW_ModManager_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89125);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89218);
 		return ptr;
 	}
 

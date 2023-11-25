@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void AExplosiveVestGibs_C::SetupGib(class USkeletalMeshComponent* Mesh, class UStaticMeshComponent* GibMesh, const class FName& Socket)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56376);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42209);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	void AExplosiveVestGibs_C::SetupGibsForSkeletalMesh(class USkeletalMeshComponent* Mesh)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56375);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42208);
 		
 		struct
 		{
@@ -82,7 +82,7 @@ namespace SDK
 	 */
 	void AExplosiveVestGibs_C::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56374);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42207);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void AExplosiveVestGibs_C::StopBleeds()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56373);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42206);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void AExplosiveVestGibs_C::ExecuteUbergraph_ExplosiveVestGibs(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56372);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42205);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	UClass* AExplosiveVestGibs_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56371);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42204);
 		return ptr;
 	}
 

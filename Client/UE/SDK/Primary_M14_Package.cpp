@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void APrimary_M14_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59067);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39179);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void APrimary_M14_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39178);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void APrimary_M14_C::ExecuteUbergraph_Primary_M14(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39177);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* APrimary_M14_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(53058);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39176);
 		return ptr;
 	}
 

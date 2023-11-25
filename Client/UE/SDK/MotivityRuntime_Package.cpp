@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,34 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMotivityPreprocessor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMotivityPreprocessor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(229);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMotivityTweakData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMotivityTweakData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(231);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -77,48 +49,6 @@ namespace SDK
 	UClass* UMotivityPathFollowingComp::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(228);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMotivityProcessedData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMotivityProcessedData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(230);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMotivityMoveData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMotivityMoveData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(226);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMotivityThreadManager.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMotivityThreadManager::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(234);
 		return ptr;
 	}
 
@@ -499,6 +429,48 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMotivityTweakData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMotivityTweakData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(231);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMotivityMoveData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMotivityMoveData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(226);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMotivityPreprocessor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMotivityPreprocessor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(229);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMotivityTagAnimNotifyState.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -507,6 +479,34 @@ namespace SDK
 	UClass* UMotivityTagAnimNotifyState::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(233);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMotivityThreadManager.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMotivityThreadManager::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(234);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMotivityProcessedData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMotivityProcessedData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(230);
 		return ptr;
 	}
 

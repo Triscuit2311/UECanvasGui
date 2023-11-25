@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void AHelmet_UpArmor_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57456);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43218);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void AHelmet_UpArmor_C::ExecuteUbergraph_Helmet_UpArmor(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57455);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43217);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	UClass* AHelmet_UpArmor_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57454);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43216);
 		return ptr;
 	}
 

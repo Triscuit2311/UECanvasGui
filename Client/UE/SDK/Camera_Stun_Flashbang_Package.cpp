@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UCamera_Stun_Flashbang_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(48714);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36447);
 		return ptr;
 	}
 

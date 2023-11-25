@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -512,11 +512,11 @@ namespace SDK
 	 * 		TArray<struct FVector>                Vertices                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector>                Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector2D>              UV0                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct PCoreUObject_FColor>                 VertexColors                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FColor>                 VertexColors                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FProcMeshTangent>                    Tangents                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UProceduralMeshComponent::UpdateMeshSection(int32_t SectionIndex, TArray<struct FVector> Vertices, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct PCoreUObject_FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents)
+	void UProceduralMeshComponent::UpdateMeshSection(int32_t SectionIndex, TArray<struct FVector> Vertices, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12661);
 		
@@ -527,7 +527,7 @@ namespace SDK
 			TArray<struct FVector>                Vertices;
 			TArray<struct FVector>                Normals;
 			TArray<struct FVector2D>              UV0;
-			TArray<struct PCoreUObject_FColor>                 VertexColors;
+			TArray<struct FColor>                 VertexColors;
 			TArray<struct FProcMeshTangent>                    Tangents;
 		} params;
 		params.SectionIndex = SectionIndex;
@@ -686,12 +686,12 @@ namespace SDK
 	 * 		TArray<int32_t>                                    Triangles                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector>                Normals                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FVector2D>              UV0                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct PCoreUObject_FColor>                 VertexColors                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FColor>                 VertexColors                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		TArray<struct FProcMeshTangent>                    Tangents                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	 * 		bool                                               bCreateCollision                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UProceduralMeshComponent::CreateMeshSection(int32_t SectionIndex, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct PCoreUObject_FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents, bool bCreateCollision)
+	void UProceduralMeshComponent::CreateMeshSection(int32_t SectionIndex, TArray<struct FVector> Vertices, TArray<int32_t> Triangles, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents, bool bCreateCollision)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12656);
 		
@@ -703,7 +703,7 @@ namespace SDK
 			TArray<int32_t>                                    Triangles;
 			TArray<struct FVector>                Normals;
 			TArray<struct FVector2D>              UV0;
-			TArray<struct PCoreUObject_FColor>                 VertexColors;
+			TArray<struct FColor>                 VertexColors;
 			TArray<struct FProcMeshTangent>                    Tangents;
 			bool                                               bCreateCollision;
 		} params;

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43502);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31385);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::BndEvt__W_Button_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43501);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31384);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::Reveal()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43500);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31383);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::SetActive()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43499);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31382);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::ExecuteUbergraph_W_Briefing_Transcript_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43498);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31381);
 		
 		struct
 		{
@@ -132,7 +132,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Transcript_Entry_C::TranscriptEntryClicked__DelegateSignature(float EntryID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43497);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31380);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Transcript_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43496);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31379);
 		return ptr;
 	}
 

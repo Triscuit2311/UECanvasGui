@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UArmor_Hit_Shake_Back_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55761);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41371);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UArmor_Hit_Shake_Back_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55760);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(41370);
 		return ptr;
 	}
 

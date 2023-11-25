@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_MissionEnd_redux_C::GetMissionNextMapTimerVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89163);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89256);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_MissionEnd_redux_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89162);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89255);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::AddAllPenalties()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89161);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89254);
 		
 		struct
 		{
@@ -100,7 +100,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::AddPenalty(const class FText& Name, int32_t Count, int32_t Total, int32_t Score)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89160);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89253);
 		
 		struct
 		{
@@ -130,7 +130,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::AddAllBonuses()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89159);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89252);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::AddBonus(const class FText& Name, int32_t Count, int32_t Total, int32_t Score)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89158);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89251);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	class FText UW_MissionEnd_redux_C::GetMapTimeRemaining()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89157);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89250);
 		
 		struct
 		{
@@ -209,7 +209,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_MissionEnd_redux_C::IsMultiplayerGame()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89156);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89249);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_MissionEnd_redux_C::GetRestartButtonVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89155);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89248);
 		
 		struct
 		{
@@ -260,7 +260,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::BndEvt__btn_Quit_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89154);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89247);
 		
 		struct
 		{
@@ -284,7 +284,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::BndEvt__btn_Restart_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89153);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89246);
 		
 		struct
 		{
@@ -307,7 +307,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::BndEvt__Scores_K2Node_ComponentBoundEvent_0_AllScoresAdded__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89152);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89245);
 		
 		struct
 		{
@@ -328,7 +328,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::BndEvt__Penalties_K2Node_ComponentBoundEvent_1_AllPenaltiesAdded__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89151);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89244);
 		
 		struct
 		{
@@ -350,7 +350,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::BndEvt__W_MissionEnd_redux_btn_lobby_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89150);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89243);
 		
 		struct
 		{
@@ -373,7 +373,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89149);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89242);
 		
 		struct
 		{
@@ -395,7 +395,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_redux_C::ExecuteUbergraph_W_MissionEnd_redux(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89148);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89241);
 		
 		struct
 		{
@@ -419,7 +419,7 @@ namespace SDK
 	 */
 	UClass* UW_MissionEnd_redux_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89147);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89240);
 		return ptr;
 	}
 

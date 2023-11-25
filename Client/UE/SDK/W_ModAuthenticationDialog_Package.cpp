@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::OnErrorSet(const class FString& ErrorMessage)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88743);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88747);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_EditableTextBox_95_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88742);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88746);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_W_Button_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88741);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88745);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::OnEmailRequested()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88740);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88744);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::OnSecurityCodeRequested()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88739);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88743);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_W_Button_2_K2Node_ComponentBoundEvent_4_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88738);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88742);
 		
 		struct
 		{
@@ -162,7 +162,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_W_Button_3_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88737);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88741);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_SecurityCodeSubmitButton_K2Node_ComponentBoundEvent_6_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88736);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88740);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_SecurityCodeEntryBox_K2Node_ComponentBoundEvent_7_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88735);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88739);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_EmailLogin_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88734);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88738);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_SteamLogin_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88733);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88737);
 		
 		struct
 		{
@@ -284,7 +284,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88732);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88736);
 		
 		struct
 		{
@@ -306,7 +306,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88731);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88735);
 		
 		struct
 		{
@@ -331,7 +331,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::OnTermsOfUseAcceptanceRequested(const class FString& Terms, const struct FTermsOfUse& Localization)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88730);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88734);
 		
 		struct
 		{
@@ -357,7 +357,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_SteamDecline_K2Node_ComponentBoundEvent_8_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88729);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88733);
 		
 		struct
 		{
@@ -381,7 +381,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_CancelLogin_K2Node_ComponentBoundEvent_9_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88728);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88732);
 		
 		struct
 		{
@@ -404,7 +404,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::ReturnToMethodSelect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88727);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88731);
 		
 		struct
 		{
@@ -426,7 +426,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_SteamAgree_K2Node_ComponentBoundEvent_10_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88726);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88730);
 		
 		struct
 		{
@@ -450,7 +450,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_ModioPrivacy_K2Node_ComponentBoundEvent_11_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88725);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88729);
 		
 		struct
 		{
@@ -474,7 +474,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::BndEvt__W_ModAuthenticationDialog_btn_ModioTerms_K2Node_ComponentBoundEvent_12_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88724);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88728);
 		
 		struct
 		{
@@ -498,7 +498,7 @@ namespace SDK
 	 */
 	void UW_ModAuthenticationDialog_C::ExecuteUbergraph_W_ModAuthenticationDialog(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88723);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88727);
 		
 		struct
 		{
@@ -522,7 +522,7 @@ namespace SDK
 	 */
 	UClass* UW_ModAuthenticationDialog_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88722);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88726);
 		return ptr;
 	}
 

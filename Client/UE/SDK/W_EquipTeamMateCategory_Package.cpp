@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	struct FLinearColor UW_EquipTeamMateCategory_C::GetColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55177);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38178);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	class FText UW_EquipTeamMateCategory_C::Get_GearCategory_Text_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55176);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38177);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55175);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38176);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55174);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38175);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55173);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38174);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::ExecuteUbergraph_W_EquipTeamMateCategory(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55172);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38173);
 		
 		struct
 		{
@@ -168,7 +168,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::OnButtonUnhovered__DelegateSignature(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55171);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38172);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::OnButtonHovered__DelegateSignature(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55170);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38171);
 		
 		struct
 		{
@@ -223,7 +223,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::OnLoadoutItemButtonClicked__DelegateSignature(EItemClass ItemClass, class ABaseItem* ItemObjectClass, bool bIsTactical, int32_t TacticalSlot, bool bIsMultipleTacticalSlots, int32_t MaxTacticalSlots, int32_t StartingTacticalSlot, class UW_LoadoutItem_C* LoadoutItemWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55169);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38170);
 		
 		struct
 		{
@@ -265,7 +265,7 @@ namespace SDK
 	 */
 	void UW_EquipTeamMateCategory_C::OnButtonClicked__DelegateSignature(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55168);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38169);
 		
 		struct
 		{
@@ -288,7 +288,7 @@ namespace SDK
 	 */
 	UClass* UW_EquipTeamMateCategory_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55167);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38168);
 		return ptr;
 	}
 

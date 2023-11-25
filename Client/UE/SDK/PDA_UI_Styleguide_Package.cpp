@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -26,7 +26,7 @@ namespace SDK
 	 */
 	void UPDA_UI_Styleguide_C::GetColors(float Opacity, struct FLinearColor* White, struct FLinearColor* Dark, struct FLinearColor* Red, struct FLinearColor* Yellow, struct FLinearColor* Blue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59683);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48540);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UPDA_UI_Styleguide_C::GetBlueTeamColor(float Opacity, struct FLinearColor* BlueTeam)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27422);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48539);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UPDA_UI_Styleguide_C::GetRedTeamColor(float Opacity, struct FLinearColor* RedTeam)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27421);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48538);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	UClass* UPDA_UI_Styleguide_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27420);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48537);
 		return ptr;
 	}
 

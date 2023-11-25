@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,41 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum Paper2D.ESpritePolygonMode
+	 */
+	enum class ESpritePolygonMode : uint8_t
+	{
+		SourceBoundingBox = 0,
+		TightBoundingBox  = 1,
+		ShrinkWrapped     = 2,
+		FullyCustom       = 3,
+		Diced             = 4,
+		MAX               = 5
+	};
+
+	/**
+	 * Enum Paper2D.ESpriteShapeType
+	 */
+	enum class ESpriteShapeType : uint8_t
+	{
+		Box     = 0,
+		Circle  = 1,
+		Polygon = 2,
+		MAX     = 3
+	};
+
+	/**
+	 * Enum Paper2D.ESpriteCollisionMode
+	 */
+	enum class ESpriteCollisionMode : uint8_t
+	{
+		None         = 0,
+		Use2DPhysics = 1,
+		Use3DPhysics = 2,
+		MAX          = 3
+	};
+
 	/**
 	 * Enum Paper2D.EFlipbookCollisionMode
 	 */
@@ -65,56 +100,9 @@ namespace SDK
 		MAX           = 10
 	};
 
-	/**
-	 * Enum Paper2D.ESpritePolygonMode
-	 */
-	enum class ESpritePolygonMode : uint8_t
-	{
-		SourceBoundingBox = 0,
-		TightBoundingBox  = 1,
-		ShrinkWrapped     = 2,
-		FullyCustom       = 3,
-		Diced             = 4,
-		MAX               = 5
-	};
-
-	/**
-	 * Enum Paper2D.ESpriteShapeType
-	 */
-	enum class ESpriteShapeType : uint8_t
-	{
-		Box     = 0,
-		Circle  = 1,
-		Polygon = 2,
-		MAX     = 3
-	};
-
-	/**
-	 * Enum Paper2D.ESpriteCollisionMode
-	 */
-	enum class ESpriteCollisionMode : uint8_t
-	{
-		None         = 0,
-		Use2DPhysics = 1,
-		Use3DPhysics = 2,
-		MAX          = 3
-	};
-
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
-	/**
-	 * ScriptStruct Paper2D.PaperSpriteSocket
-	 * Size -> 0x0040
-	 */
-	struct FPaperSpriteSocket
-	{
-	public:
-		struct PCoreUObject_FTransform                               LocalTransform;                                          // 0x0000(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		class FName                                                  SocketName;                                              // 0x0030(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (PADDING)
-	};
-
 	/**
 	 * ScriptStruct Paper2D.PaperFlipbookKeyFrame
 	 * Size -> 0x0010
@@ -128,6 +116,19 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Paper2D.SpriteInstanceData
+	 * Size -> 0x0050
+	 */
+	struct FSpriteInstanceData
+	{
+	public:
+		struct FMatrix                                  Transform;                                               // 0x0000(0x0040) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		class UPaperSprite*                                          SourceSprite;                                            // 0x0040(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   VertexColor;                                             // 0x0048(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MaterialIndex;                                           // 0x004C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct Paper2D.PaperTileInfo
 	 * Size -> 0x0010
 	 */
@@ -137,6 +138,18 @@ namespace SDK
 		class UPaperTileSet*                                         TileSet;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                      PackedTileIndex;                                         // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Paper2D.PaperSpriteSocket
+	 * Size -> 0x0040
+	 */
+	struct FPaperSpriteSocket
+	{
+	public:
+		struct FTransform                               LocalTransform;                                          // 0x0000(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		class FName                                                  SocketName;                                              // 0x0030(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -215,19 +228,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Paper2D.SpriteInstanceData
-	 * Size -> 0x0050
-	 */
-	struct FSpriteInstanceData
-	{
-	public:
-		struct FMatrix                                  Transform;                                               // 0x0000(0x0040) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		class UPaperSprite*                                          SourceSprite;                                            // 0x0040(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   VertexColor;                                             // 0x0048(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MaterialIndex;                                           // 0x004C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct Paper2D.PaperTerrainMaterialRule
 	 * Size -> 0x0038
 	 */
@@ -274,7 +274,7 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UTexture*                                              BaseTexture;                                             // 0x0010(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x30];                                  // 0x0018(0x0030) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FColor                                   Color;                                                   // 0x0048(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   Color;                                                   // 0x0048(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x84];                                  // 0x004C(0x0084) MISSED OFFSET (PADDING)
 	};
 

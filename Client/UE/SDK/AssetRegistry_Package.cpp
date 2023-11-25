@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,397 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAssetRegistryImpl.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAssetRegistryImpl::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2100);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FSoftObjectPath                             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17845);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			struct FSoftObjectPath                             ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FARFilter                                   InFilter                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FTagAndValue>                        InTagsAndValues                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FARFilter                                   ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17844);
-		
-		struct
-		{
-			struct FARFilter                                   InFilter;
-			TArray<struct FTagAndValue>                        InTagsAndValues;
-			struct FARFilter                                   ReturnValue;
-		} params;
-		params.InFilter = InFilter;
-		params.InTagsAndValues = InTagsAndValues;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsValid
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17843);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			bool                                               ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsUAsset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17842);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			bool                                               ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsRedirector
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17841);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			bool                                               ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17840);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			bool                                               ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetTagValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        InTagName                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      OutTagValue                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17839);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			class FName                                        InTagName;
-			class FString                                      OutTagValue;
-			bool                                               ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		params.InTagName = InTagName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (OutTagValue != nullptr)
-			*OutTagValue = params.OutTagValue;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetFullName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17838);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			class FString                                      ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17837);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			class FString                                      ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17836);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TScriptInterface<class IAssetRegistry>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 */
-	TScriptInterface<class IAssetRegistry> UAssetRegistryHelpers::GetAssetRegistry()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17835);
-		
-		struct
-		{
-			TScriptInterface<class IAssetRegistry>             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetAsset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17834);
-		
-		struct
-		{
-			struct FAssetData                                  InAssetData;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.InAssetData = InAssetData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InAsset                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAllowBlueprintClass                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FAssetData                                  ReturnValue                                                (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17833);
-		
-		struct
-		{
-			class UObject*                                     InAsset;
-			bool                                               bAllowBlueprintClass;
-			unsigned char                                      UnknownData_0000[0x7];
-			struct FAssetData                                  ReturnValue;
-		} params;
-		params.InAsset = InAsset;
-		params.bAllowBlueprintClass = bAllowBlueprintClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAssetRegistryHelpers.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAssetRegistryHelpers::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2101);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -1004,6 +613,397 @@ namespace SDK
 	UClass* IAssetRegistry::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2102);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSoftObjectPath                             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17845);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			struct FSoftObjectPath                             ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FARFilter                                   InFilter                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FTagAndValue>                        InTagsAndValues                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FARFilter                                   ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17844);
+		
+		struct
+		{
+			struct FARFilter                                   InFilter;
+			TArray<struct FTagAndValue>                        InTagsAndValues;
+			struct FARFilter                                   ReturnValue;
+		} params;
+		params.InFilter = InFilter;
+		params.InTagsAndValues = InTagsAndValues;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsValid
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17843);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			bool                                               ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsUAsset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17842);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			bool                                               ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsRedirector
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17841);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			bool                                               ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17840);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			bool                                               ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetTagValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        InTagName                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      OutTagValue                                                (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, const class FName& InTagName, class FString* OutTagValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17839);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			class FName                                        InTagName;
+			class FString                                      OutTagValue;
+			bool                                               ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		params.InTagName = InTagName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (OutTagValue != nullptr)
+			*OutTagValue = params.OutTagValue;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetFullName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17838);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			class FString                                      ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17837);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			class FString                                      ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17836);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TScriptInterface<class IAssetRegistry>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 */
+	TScriptInterface<class IAssetRegistry> UAssetRegistryHelpers::GetAssetRegistry()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17835);
+		
+		struct
+		{
+			TScriptInterface<class IAssetRegistry>             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.GetAsset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FAssetData                                  InAssetData                                                (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17834);
+		
+		struct
+		{
+			struct FAssetData                                  InAssetData;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.InAssetData = InAssetData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InAsset                                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAllowBlueprintClass                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FAssetData                                  ReturnValue                                                (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17833);
+		
+		struct
+		{
+			class UObject*                                     InAsset;
+			bool                                               bAllowBlueprintClass;
+			unsigned char                                      UnknownData_0000[0x7];
+			struct FAssetData                                  ReturnValue;
+		} params;
+		params.InAsset = InAsset;
+		params.bAllowBlueprintClass = bAllowBlueprintClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAssetRegistryHelpers.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAssetRegistryHelpers::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2101);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAssetRegistryImpl.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAssetRegistryImpl::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2100);
 		return ptr;
 	}
 

@@ -1,7 +1,8 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
+
 #include "pch.h"
 #include "../SDK.h"
 
@@ -15,6 +16,287 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		                                                   ReturnValue
+	 */
+	FVector2D::FVector2D()
+	{
+		X = 0;
+		Y = 0;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		                                                   ReturnValue
+	 * 		float                                              x
+	 * 		float                                              y
+	 */
+	FVector2D::FVector2D(float x, float y)
+	{
+		X = x;
+		Y = y;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue
+	 */
+	bool FVector2D::IsValid()
+	{
+		return X != 0.0f && Y != 0.0f;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue
+	 * 		FVector2D&                                         v
+	 */
+	float FVector2D::Distance(FVector2D& v) const
+	{
+		return powf(v.X - X, 2) + powf(v.Y - Y, 2);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D FVector2D::operator +(const FVector2D& other) const
+	{
+		return FVector2D(X + other.X, Y + other.Y);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator +(float scalar) const
+	{
+		return FVector2D(X + scalar, Y + scalar);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator -(float scalar) const
+	{
+		return FVector2D(X - scalar, Y - scalar);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D FVector2D::operator -(const FVector2D& other) const
+	{
+		return FVector2D(X - other.X, Y - other.Y);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator *(float scalar) const
+	{
+		return FVector2D(X * scalar, Y * scalar);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D FVector2D::operator *(const FVector2D& other) const
+	{
+		return FVector2D(X * other.X, Y * other.Y);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D FVector2D::operator /(float scalar) const
+	{
+		return FVector2D(X / scalar, Y / scalar);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D                                          ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D FVector2D::operator /(const FVector2D& other) const
+	{
+		return FVector2D(X / other.X, Y / other.Y);
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D& FVector2D::operator =(const FVector2D& other)
+	{
+		X = other.X;
+		Y = other.Y;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator +=(float scalar)
+	{
+		X += scalar;
+		Y += scalar;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D& FVector2D::operator +=(const FVector2D& other)
+	{
+		X += other.X;
+		Y += other.Y;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator -=(float scalar)
+	{
+		X -= scalar;
+		Y -= scalar;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D& FVector2D::operator -=(const FVector2D& other)
+	{
+		X -= other.X;
+		Y -= other.Y;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		const FVector2D&                                   other
+	 */
+	FVector2D& FVector2D::operator *=(const FVector2D& other)
+	{
+		X *= other.X;
+		Y *= other.Y;
+		return *this;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		FVector2D&                                         ReturnValue
+	 * 		float                                              scalar
+	 */
+	FVector2D& FVector2D::operator *=(float scalar)
+	{
+		X *= scalar;
+		Y *= scalar;
+		return *this;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -420,6 +702,42 @@ namespace SDK
 	 * Parameters:
 	 * 		                                                   ReturnValue
 	 */
+	FLinearColor::FLinearColor()
+	{
+		R = 0;
+		G = 0;
+		B = 0;
+		A = 0;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		                                                   ReturnValue
+	 * 		float                                              r
+	 * 		float                                              g
+	 * 		float                                              b
+	 * 		float                                              a
+	 */
+	FLinearColor::FLinearColor(float r, float g, float b, float a)
+	{
+		R = r;
+		G = g;
+		B = b;
+		A = a;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> 
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		                                                   ReturnValue
+	 */
 	FRotator::FRotator()
 	{
 		Pitch = 0.0f;
@@ -728,24 +1046,24 @@ namespace SDK
 	 * Parameters:
 	 * 		FRotator                                           ReturnValue
 	 */
-	// FRotator FRotator::Clamp() const
-	// {
-	// 	FRotator r = { Pitch, Yaw, Roll };
-	// 	if (r.Yaw > 180.0f)
-	// 		r.Yaw -= 360.0f;
-	// 	else if (r.Yaw < -180.0f)
-	// 		r.Yaw += 360.0f;
-	// 	if (r.Pitch > 180.0f)
-	// 		r.Pitch -= 360.0f;
-	// 	else if (r.Pitch < -180.0f)
-	// 		r.Pitch += 360.0f;
-	// 	if (r.Pitch < -89.0f)
-	// 		r.Pitch = -89.0f;
-	// 	else if (r.Pitch > 89.0f)
-	// 		r.Pitch = 89.0f;
-	// 	r.Roll = 0.0f;
-	// 	return r;
-	// }
+	FRotator FRotator::Clamp() const
+	{
+		FRotator r = { Pitch, Yaw, Roll };
+		if (r.Yaw > 180.0f)
+			r.Yaw -= 360.0f;
+		else if (r.Yaw < -180.0f)
+			r.Yaw += 360.0f;
+		if (r.Pitch > 180.0f)
+			r.Pitch -= 360.0f;
+		else if (r.Pitch < -180.0f)
+			r.Pitch += 360.0f;
+		if (r.Pitch < -89.0f)
+			r.Pitch = -89.0f;
+		else if (r.Pitch > 89.0f)
+			r.Pitch = 89.0f;
+		r.Roll = 0.0f;
+		return r;
+	}
 
 	/**
 	 * Function:
@@ -789,326 +1107,9 @@ namespace SDK
 	 * 		Name   -> 
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		                                                   ReturnValue
-	 */
-	FLinearColor::FLinearColor()
-	{
-		R = 0;
-		G = 0;
-		B = 0;
-		A = 0;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		                                                   ReturnValue
-	 * 		float                                              r
-	 * 		float                                              g
-	 * 		float                                              b
-	 * 		float                                              a
-	 */
-	FLinearColor::FLinearColor(float r, float g, float b, float a)
-	{
-		R = r;
-		G = g;
-		B = b;
-		A = a;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		                                                   ReturnValue
-	 */
-	FVector2D::FVector2D()
-	{
-		X = 0;
-		Y = 0;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		                                                   ReturnValue
-	 * 		float                                              x
-	 * 		float                                              y
-	 */
-	FVector2D::FVector2D(float x, float y)
-	{
-		X = x;
-		Y = y;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue
-	 */
-	bool FVector2D::IsValid()
-	{
-		return X != 0.0f && Y != 0.0f;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue
-	 * 		FVector2D&                                         v
-	 */
-	float FVector2D::Distance(FVector2D& v) const
-	{
-		return powf(v.X - X, 2) + powf(v.Y - Y, 2);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D FVector2D::operator +(const FVector2D& other) const
-	{
-		return FVector2D(X + other.X, Y + other.Y);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D FVector2D::operator +(float scalar) const
-	{
-		return FVector2D(X + scalar, Y + scalar);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D FVector2D::operator -(float scalar) const
-	{
-		return FVector2D(X - scalar, Y - scalar);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D FVector2D::operator -(const FVector2D& other) const
-	{
-		return FVector2D(X - other.X, Y - other.Y);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D FVector2D::operator *(float scalar) const
-	{
-		return FVector2D(X * scalar, Y * scalar);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D FVector2D::operator *(const FVector2D& other) const
-	{
-		return FVector2D(X * other.X, Y * other.Y);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D FVector2D::operator /(float scalar) const
-	{
-		return FVector2D(X / scalar, Y / scalar);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D                                          ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D FVector2D::operator /(const FVector2D& other) const
-	{
-		return FVector2D(X / other.X, Y / other.Y);
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D& FVector2D::operator =(const FVector2D& other)
-	{
-		X = other.X;
-		Y = other.Y;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D& FVector2D::operator +=(float scalar)
-	{
-		X += scalar;
-		Y += scalar;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D& FVector2D::operator +=(const FVector2D& other)
-	{
-		X += other.X;
-		Y += other.Y;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D& FVector2D::operator -=(float scalar)
-	{
-		X -= scalar;
-		Y -= scalar;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D& FVector2D::operator -=(const FVector2D& other)
-	{
-		X -= other.X;
-		Y -= other.Y;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		const FVector2D&                                   other
-	 */
-	FVector2D& FVector2D::operator *=(const FVector2D& other)
-	{
-		X *= other.X;
-		Y *= other.Y;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		FVector2D&                                         ReturnValue
-	 * 		float                                              scalar
-	 */
-	FVector2D& FVector2D::operator *=(float scalar)
-	{
-		X *= scalar;
-		Y *= scalar;
-		return *this;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> 
-	 * 		Flags  -> ()
-	 * Parameters:
 	 * 		FMatrix                                            ReturnValue
 	 */
-	FMatrix PCoreUObject_FTransform::ToMatrixWithScale() const
+	FMatrix FTransform::ToMatrixWithScale() const
 	{
 		FMatrix OutMatrix;
 		OutMatrix.WPlane.X = Translation.X;
@@ -1309,6 +1310,34 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction IInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* IInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(20);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTextBuffer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTextBuffer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1574);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UField.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1317,90 +1346,6 @@ namespace SDK
 	UClass* UField::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1575);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEnum.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEnum::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1585);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1591);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULinkerPlaceholderExportObject.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULinkerPlaceholderExportObject::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1587);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UObjectPropertyBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UObjectPropertyBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1594);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBoolProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UBoolProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1595);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEnumProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEnumProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1592);
 		return ptr;
 	}
 
@@ -1448,196 +1393,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULinkerPlaceholderClass.StaticClass
+	 * 		Name   -> PredefinedFunction UDynamicClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULinkerPlaceholderClass::StaticClass()
+	UClass* UDynamicClass::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1586);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGCObjectReferencer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGCObjectReferencer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1573);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UFunction.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UFunction::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1580);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULinkerPlaceholderFunction.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULinkerPlaceholderFunction::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1588);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UObjectProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UObjectProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1598);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClassProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClassProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1599);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTextBuffer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTextBuffer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1574);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UArrayProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UArrayProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1593);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMetaData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMetaData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1589);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNumericProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNumericProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1596);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDoubleProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDoubleProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1601);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDelegateProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDelegateProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1600);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UByteProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UByteProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1597);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInt8Property.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInt8Property::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1604);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1583);
 		return ptr;
 	}
 
@@ -1658,20 +1421,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UFloatProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UFloatProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1602);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UPackage.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1686,56 +1435,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UObjectRedirector.StaticClass
+	 * 		Name   -> PredefinedFunction UEnum.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UObjectRedirector::StaticClass()
+	UClass* UEnum::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1590);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1585);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInt16Property.StaticClass
+	 * 		Name   -> PredefinedFunction UFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UInt16Property::StaticClass()
+	UClass* UFunction::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1605);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UIntProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UIntProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1603);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInt64Property.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInt64Property::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1606);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1580);
 		return ptr;
 	}
 
@@ -1756,20 +1477,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInterfaceProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInterfaceProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1607);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction USparseDelegateFunction.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1778,62 +1485,6 @@ namespace SDK
 	UClass* USparseDelegateFunction::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1582);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULazyObjectProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULazyObjectProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1608);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWeakObjectProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWeakObjectProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1622);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDynamicClass.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDynamicClass::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1583);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMapProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMapProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1609);
 		return ptr;
 	}
 
@@ -1854,112 +1505,210 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMulticastDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMulticastDelegateProperty::StaticClass()
+	UClass* ULinkerPlaceholderClass::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1610);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1586);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTextProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UMetaData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UTextProperty::StaticClass()
+	UClass* UMetaData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1623);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1589);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMulticastInlineDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UObjectRedirector.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMulticastInlineDelegateProperty::StaticClass()
+	UClass* UObjectRedirector::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1611);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1590);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMulticastSparseDelegateProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMulticastSparseDelegateProperty::StaticClass()
+	UClass* UProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1612);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1591);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UBoolProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPropertyWrapper::StaticClass()
+	UClass* UBoolProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1624);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1595);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNameProperty.StaticClass
+	 * 		Name   -> PredefinedFunction UObjectPropertyBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UNameProperty::StaticClass()
+	UClass* UObjectPropertyBase::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1613);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1594);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USetProperty.StaticClass
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderExportObject.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USetProperty::StaticClass()
+	UClass* ULinkerPlaceholderExportObject::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1614);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1587);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMulticastDelegatePropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UNumericProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMulticastDelegatePropertyWrapper::StaticClass()
+	UClass* UNumericProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1625);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1596);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGCObjectReferencer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGCObjectReferencer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1573);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UObjectProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UObjectProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1598);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULinkerPlaceholderFunction.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULinkerPlaceholderFunction::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1588);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEnumProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEnumProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1592);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UByteProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UByteProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1597);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UClassProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UClassProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1599);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UArrayProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UArrayProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1593);
 		return ptr;
 	}
 
@@ -1994,28 +1743,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMulticastInlineDelegatePropertyWrapper.StaticClass
+	 * 		Name   -> PredefinedFunction UDelegateProperty.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMulticastInlineDelegatePropertyWrapper::StaticClass()
+	UClass* UDelegateProperty::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1626);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UStrProperty.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UStrProperty::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1617);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1600);
 		return ptr;
 	}
 
@@ -2036,6 +1771,76 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyWrapper.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyWrapper::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1624);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWeakObjectProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWeakObjectProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1622);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UStrProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UStrProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1617);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMulticastDelegatePropertyWrapper.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMulticastDelegatePropertyWrapper::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1625);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTextProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTextProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1623);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UUInt16Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -2044,6 +1849,34 @@ namespace SDK
 	UClass* UUInt16Property::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1619);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMulticastInlineDelegatePropertyWrapper.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMulticastInlineDelegatePropertyWrapper::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1626);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDoubleProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDoubleProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1601);
 		return ptr;
 	}
 
@@ -2064,6 +1897,34 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UFloatProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UFloatProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1602);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UIntProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UIntProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1603);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UUInt64Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -2078,14 +1939,154 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IInterface.StaticClass
+	 * 		Name   -> PredefinedFunction UInt8Property.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* IInterface::StaticClass()
+	UClass* UInt8Property::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(20);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1604);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInt16Property.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInt16Property::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1605);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInt64Property.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInt64Property::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1606);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInterfaceProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInterfaceProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1607);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULazyObjectProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULazyObjectProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1608);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMapProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMapProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1609);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMulticastDelegateProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMulticastDelegateProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1610);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMulticastInlineDelegateProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMulticastInlineDelegateProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1611);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMulticastSparseDelegateProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMulticastSparseDelegateProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1612);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNameProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNameProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1613);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USetProperty.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USetProperty::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1614);
 		return ptr;
 	}
 

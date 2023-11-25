@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_PageHeader_C::UpdateHeader(const class FText& PageName, const class FText& HeaderText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28472);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48780);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_PageHeader_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28471);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48779);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_PageHeader_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28470);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48778);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_PageHeader_C::ExecuteUbergraph_W_PageHeader(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28469);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48777);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* UW_PageHeader_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28468);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48776);
 		return ptr;
 	}
 

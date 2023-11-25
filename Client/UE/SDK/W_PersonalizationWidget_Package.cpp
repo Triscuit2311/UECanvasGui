@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::DeselectAndDisableAllIncompatibleHeads()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89098);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89191);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::DeselectAndDisableAllIncompatibleBodies()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89097);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89190);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::DeselectAllHeads(class UW_PersonalizationItem_C* Except)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89096);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89189);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::DeselectAllBodys(class UW_PersonalizationItem_C* Except)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89095);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89188);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89094);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89187);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::HeadEventClicked(class UW_PersonalizationItem_C* PersonalizationItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89093);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89186);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::BodyEventClicked(class UW_PersonalizationItem_C* PersonalizationItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89092);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89185);
 		
 		struct
 		{
@@ -183,7 +183,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::ApplyPersonalization(class UW_PersonalizationCategory_C* PersonalizationCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89091);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89184);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::CancelPersonalization(class UW_PersonalizationCategory_C* PersonalizationCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89090);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89183);
 		
 		struct
 		{
@@ -231,7 +231,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::HeadCategoryClicked(class UW_PersonalizationCategory_C* PersonalizationCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89089);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89182);
 		
 		struct
 		{
@@ -255,7 +255,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::BodyCategoryClicked(class UW_PersonalizationCategory_C* PersonalizationCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89088);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89181);
 		
 		struct
 		{
@@ -280,7 +280,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89087);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89180);
 		
 		struct
 		{
@@ -306,7 +306,7 @@ namespace SDK
 	 */
 	void UW_PersonalizationWidget_C::ExecuteUbergraph_W_PersonalizationWidget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89086);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89179);
 		
 		struct
 		{
@@ -330,7 +330,7 @@ namespace SDK
 	 */
 	UClass* UW_PersonalizationWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89085);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89178);
 		return ptr;
 	}
 

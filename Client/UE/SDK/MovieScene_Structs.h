@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,99 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum MovieScene.EUpdateClockSource
-	 */
-	enum class EUpdateClockSource : uint8_t
-	{
-		Tick             = 0,
-		Platform         = 1,
-		Audio            = 2,
-		RelativeTimecode = 3,
-		Timecode         = 4,
-		Custom           = 5,
-		MAX              = 6
-	};
-
-	/**
-	 * Enum MovieScene.EMovieSceneEvaluationType
-	 */
-	enum class EMovieSceneEvaluationType : uint8_t
-	{
-		FrameLocked   = 0,
-		WithSubFrames = 1,
-		MAX           = 2
-	};
-
-	/**
-	 * Enum MovieScene.EMovieScenePlayerStatus
-	 */
-	enum class EMovieScenePlayerStatus : uint8_t
-	{
-		Stopped   = 0,
-		Playing   = 1,
-		Scrubbing = 2,
-		Jumping   = 3,
-		Stepping  = 4,
-		Paused    = 5,
-		MAX       = 6
-	};
-
-	/**
-	 * Enum MovieScene.EMovieSceneObjectBindingSpace
-	 */
-	enum class EMovieSceneObjectBindingSpace : uint8_t
-	{
-		Local  = 0,
-		Root   = 1,
-		Unused = 2,
-		MAX    = 3
-	};
-
-	/**
-	 * Enum MovieScene.ESectionEvaluationFlags
-	 */
-	enum class ESectionEvaluationFlags : uint8_t
-	{
-		None     = 0,
-		PreRoll  = 1,
-		PostRoll = 2,
-		MAX      = 3
-	};
-
-	/**
-	 * Enum MovieScene.EMovieScenePositionType
-	 */
-	enum class EMovieScenePositionType : uint8_t
-	{
-		Frame       = 0,
-		Time        = 1,
-		MarkedFrame = 2,
-		MAX         = 3
-	};
-
-	/**
-	 * Enum MovieScene.EUpdatePositionMethod
-	 */
-	enum class EUpdatePositionMethod : uint8_t
-	{
-		Play  = 0,
-		Jump  = 1,
-		Scrub = 2,
-		MAX   = 3
-	};
-
-	/**
-	 * Enum MovieScene.ESpawnOwnership
-	 */
-	enum class ESpawnOwnership : uint8_t
-	{
-		InnerSequence  = 0,
-		MasterSequence = 1,
-		External       = 2,
-		MAX            = 3
-	};
-
 	/**
 	 * Enum MovieScene.EMovieSceneKeyInterpolation
 	 */
@@ -208,9 +115,142 @@ namespace SDK
 		MAX                = 4
 	};
 
+	/**
+	 * Enum MovieScene.EUpdateClockSource
+	 */
+	enum class EUpdateClockSource : uint8_t
+	{
+		Tick             = 0,
+		Platform         = 1,
+		Audio            = 2,
+		RelativeTimecode = 3,
+		Timecode         = 4,
+		Custom           = 5,
+		MAX              = 6
+	};
+
+	/**
+	 * Enum MovieScene.EMovieSceneEvaluationType
+	 */
+	enum class EMovieSceneEvaluationType : uint8_t
+	{
+		FrameLocked   = 0,
+		WithSubFrames = 1,
+		MAX           = 2
+	};
+
+	/**
+	 * Enum MovieScene.EMovieScenePlayerStatus
+	 */
+	enum class EMovieScenePlayerStatus : uint8_t
+	{
+		Stopped   = 0,
+		Playing   = 1,
+		Scrubbing = 2,
+		Jumping   = 3,
+		Stepping  = 4,
+		Paused    = 5,
+		MAX       = 6
+	};
+
+	/**
+	 * Enum MovieScene.EMovieSceneObjectBindingSpace
+	 */
+	enum class EMovieSceneObjectBindingSpace : uint8_t
+	{
+		Local  = 0,
+		Root   = 1,
+		Unused = 2,
+		MAX    = 3
+	};
+
+	/**
+	 * Enum MovieScene.ESectionEvaluationFlags
+	 */
+	enum class ESectionEvaluationFlags : uint8_t
+	{
+		None     = 0,
+		PreRoll  = 1,
+		PostRoll = 2,
+		MAX      = 3
+	};
+
+	/**
+	 * Enum MovieScene.EMovieScenePositionType
+	 */
+	enum class EMovieScenePositionType : uint8_t
+	{
+		Frame       = 0,
+		Time        = 1,
+		MarkedFrame = 2,
+		MAX         = 3
+	};
+
+	/**
+	 * Enum MovieScene.EUpdatePositionMethod
+	 */
+	enum class EUpdatePositionMethod : uint8_t
+	{
+		Play  = 0,
+		Jump  = 1,
+		Scrub = 2,
+		MAX   = 3
+	};
+
+	/**
+	 * Enum MovieScene.ESpawnOwnership
+	 */
+	enum class ESpawnOwnership : uint8_t
+	{
+		InnerSequence  = 0,
+		MasterSequence = 1,
+		External       = 2,
+		MAX            = 3
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct MovieScene.MovieSceneTrackEvalOptions
+	 * Size -> 0x0004
+	 */
+	struct FMovieSceneTrackEvalOptions
+	{
+	public:
+		bool                                                         bCanEvaluateNearestSection : 1;                          // 0x0000(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEvalNearestSection : 1;                                 // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEvaluateInPreroll : 1;                                  // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEvaluateInPostroll : 1;                                 // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEvaluateNearestSection : 1;                             // 0x0000(0x0001) BIT_FIELD Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneTrackEvaluationFieldEntry
+	 * Size -> 0x0020
+	 */
+	struct FMovieSceneTrackEvaluationFieldEntry
+	{
+	public:
+		class UMovieSceneSection*                                    Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FFrameNumberRange                                     Range;                                                   // 0x0008(0x0010) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FFrameNumber                                          ForcedTime;                                              // 0x0018(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESectionEvaluationFlags                                      Flags;                                                   // 0x001C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x001D(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int16_t                                                      LegacySortOrder;                                         // 0x001E(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneTrackEvaluationField
+	 * Size -> 0x0010
+	 */
+	struct FMovieSceneTrackEvaluationField
+	{
+	public:
+		TArray<struct FMovieSceneTrackEvaluationFieldEntry>          Entries;                                                 // 0x0000(0x0010) ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct MovieScene.MovieSceneSectionEvalOptions
 	 * Size -> 0x0002
@@ -260,46 +300,6 @@ namespace SDK
 	public:
 		EMovieSceneBlendType                                         BlendType;                                               // 0x0000(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bIsValid;                                                // 0x0001(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneTrackEvalOptions
-	 * Size -> 0x0004
-	 */
-	struct FMovieSceneTrackEvalOptions
-	{
-	public:
-		bool                                                         bCanEvaluateNearestSection : 1;                          // 0x0000(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEvalNearestSection : 1;                                 // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEvaluateInPreroll : 1;                                  // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEvaluateInPostroll : 1;                                 // 0x0000(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEvaluateNearestSection : 1;                             // 0x0000(0x0001) BIT_FIELD Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneTrackEvaluationFieldEntry
-	 * Size -> 0x0020
-	 */
-	struct FMovieSceneTrackEvaluationFieldEntry
-	{
-	public:
-		class UMovieSceneSection*                                    Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FFrameNumberRange                                     Range;                                                   // 0x0008(0x0010) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FFrameNumber                                          ForcedTime;                                              // 0x0018(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESectionEvaluationFlags                                      Flags;                                                   // 0x001C(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x001D(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int16_t                                                      LegacySortOrder;                                         // 0x001E(0x0002) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneTrackEvaluationField
-	 * Size -> 0x0010
-	 */
-	struct FMovieSceneTrackEvaluationField
-	{
-	public:
-		TArray<struct FMovieSceneTrackEvaluationFieldEntry>          Entries;                                                 // 0x0000(0x0010) ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -416,6 +416,42 @@ namespace SDK
 		TWeakObjectPtr<class UObject>                                Object;                                                  // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bOverridesDefault;                                       // 0x0020(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0021(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneSequenceActorPointers
+	 * Size -> 0x0018
+	 */
+	struct FMovieSceneSequenceActorPointers
+	{
+	public:
+		class AActor*                                                SequenceActor;                                           // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TScriptInterface<class IMovieSceneSequenceActor>             SequenceActorInterface;                                  // 0x0008(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneChannel
+	 * Size -> 0x0008
+	 */
+	struct FMovieSceneChannel
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneBoolChannel
+	 * Size -> 0x0088 (FullSize[0x0090] - InheritedSize[0x0008])
+	 */
+	struct FMovieSceneBoolChannel : public FMovieSceneChannel
+	{
+	public:
+		TArray<struct FFrameNumber>                                  Times;                                                   // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		bool                                                         DefaultValue;                                            // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		bool                                                         bHasDefaultValue;                                        // 0x0019(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x001A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<bool>                                                 Values;                                                  // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0x60];                                  // 0x0030(0x0060) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -821,39 +857,14 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieSceneChannel
-	 * Size -> 0x0008
+	 * ScriptStruct MovieScene.MovieSceneTrackInstanceInput
+	 * Size -> 0x0010
 	 */
-	struct FMovieSceneChannel
+	struct FMovieSceneTrackInstanceInput
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneBoolChannel
-	 * Size -> 0x0088 (FullSize[0x0090] - InheritedSize[0x0008])
-	 */
-	struct FMovieSceneBoolChannel : public FMovieSceneChannel
-	{
-	public:
-		TArray<struct FFrameNumber>                                  Times;                                                   // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		bool                                                         DefaultValue;                                            // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		bool                                                         bHasDefaultValue;                                        // 0x0019(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x001A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<bool>                                                 Values;                                                  // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0x60];                                  // 0x0030(0x0060) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneSequenceActorPointers
-	 * Size -> 0x0018
-	 */
-	struct FMovieSceneSequenceActorPointers
-	{
-	public:
-		class AActor*                                                SequenceActor;                                           // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TScriptInterface<class IMovieSceneSequenceActor>             SequenceActorInterface;                                  // 0x0008(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic
+		class UMovieSceneSection*                                    Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -921,24 +932,13 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieSceneTrackInstanceInput
-	 * Size -> 0x0010
-	 */
-	struct FMovieSceneTrackInstanceInput
-	{
-	public:
-		class UMovieSceneSection*                                    Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct MovieScene.MovieSceneSpawnable
 	 * Size -> 0x0090
 	 */
 	struct FMovieSceneSpawnable
 	{
 	public:
-		struct PCoreUObject_FTransform                               SpawnTransform;                                          // 0x0000(0x0030) Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic
+		struct FTransform                               SpawnTransform;                                          // 0x0000(0x0030) Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic
 		TArray<class FName>                                          Tags;                                                    // 0x0030(0x0010) Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic
 		bool                                                         bContinuouslyRespawn;                                    // 0x0040(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bNetAddressableName;                                     // 0x0041(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -1138,35 +1138,37 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieScenePropertySectionData
-	 * Size -> 0x0018
+	 * ScriptStruct MovieScene.MovieSceneSubSectionData
+	 * Size -> 0x001C
 	 */
-	struct FMovieScenePropertySectionData
+	struct FMovieSceneSubSectionData
 	{
 	public:
-		class FName                                                  PropertyName;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                PropertyPath;                                            // 0x0008(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TWeakObjectPtr<class UMovieSceneSubSection>                  Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FGuid                                                 ObjectBindingId;                                         // 0x0008(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESectionEvaluationFlags                                      Flags;                                                   // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieScenePropertySectionTemplate
-	 * Size -> 0x0018 (FullSize[0x0038] - InheritedSize[0x0020])
+	 * ScriptStruct MovieScene.MovieSceneKeyStruct
+	 * Size -> 0x0008
 	 */
-	struct FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate
+	struct FMovieSceneKeyStruct
 	{
 	public:
-		struct FMovieScenePropertySectionData                        PropertyData;                                            // 0x0020(0x0018) Protected, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieSceneEvaluationOperand
-	 * Size -> 0x0014
+	 * ScriptStruct MovieScene.MovieSceneKeyTimeStruct
+	 * Size -> 0x0020 (FullSize[0x0028] - InheritedSize[0x0008])
 	 */
-	struct FMovieSceneEvaluationOperand
+	struct FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
 	{
 	public:
-		struct FGuid                                                 ObjectBindingId;                                         // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FMovieSceneSequenceID                                 SequenceID;                                              // 0x0010(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FFrameNumber                                          Time;                                                    // 0x0008(0x0004) Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x1C];                                  // 0x000C(0x001C) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -1216,19 +1218,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieSceneSubSectionData
-	 * Size -> 0x001C
-	 */
-	struct FMovieSceneSubSectionData
-	{
-	public:
-		TWeakObjectPtr<class UMovieSceneSubSection>                  Section;                                                 // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FGuid                                                 ObjectBindingId;                                         // 0x0008(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESectionEvaluationFlags                                      Flags;                                                   // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct MovieScene.SectionEvaluationData
 	 * Size -> 0x000C
 	 */
@@ -1239,6 +1228,27 @@ namespace SDK
 		struct FFrameNumber                                          ForcedTime;                                              // 0x0004(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		ESectionEvaluationFlags                                      Flags;                                                   // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieScenePropertySectionData
+	 * Size -> 0x0018
+	 */
+	struct FMovieScenePropertySectionData
+	{
+	public:
+		class FName                                                  PropertyName;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                PropertyPath;                                            // 0x0008(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieScenePropertySectionTemplate
+	 * Size -> 0x0018 (FullSize[0x0038] - InheritedSize[0x0020])
+	 */
+	struct FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate
+	{
+	public:
+		struct FMovieScenePropertySectionData                        PropertyData;                                            // 0x0020(0x0018) Protected, NativeAccessSpecifierProtected
 	};
 
 	/**
@@ -1298,27 +1308,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieScene.MovieSceneKeyStruct
-	 * Size -> 0x0008
-	 */
-	struct FMovieSceneKeyStruct
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneKeyTimeStruct
-	 * Size -> 0x0020 (FullSize[0x0028] - InheritedSize[0x0008])
-	 */
-	struct FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
-	{
-	public:
-		struct FFrameNumber                                          Time;                                                    // 0x0008(0x0004) Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x1C];                                  // 0x000C(0x001C) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct MovieScene.MovieSceneTrackLabels
 	 * Size -> 0x0010
 	 */
@@ -1357,6 +1346,17 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct MovieScene.MovieSceneTimecodeSource
+	 * Size -> 0x0018
+	 */
+	struct FMovieSceneTimecodeSource
+	{
+	public:
+		struct FTimecode                                             Timecode;                                                // 0x0000(0x0014) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FFrameNumber                                          DeltaFrame;                                              // 0x0014(0x0004) Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct MovieScene.MovieSceneSubSequenceTreeEntry
 	 * Size -> 0x0018
 	 */
@@ -1374,17 +1374,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MovieScene.MovieSceneTimecodeSource
-	 * Size -> 0x0018
-	 */
-	struct FMovieSceneTimecodeSource
-	{
-	public:
-		struct FTimecode                                             Timecode;                                                // 0x0000(0x0014) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FFrameNumber                                          DeltaFrame;                                              // 0x0014(0x0004) Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -1493,6 +1482,17 @@ namespace SDK
 	{
 	public:
 		struct FMovieSceneSegmentIdentifier                          SegmentID;                                               // 0x0008(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct MovieScene.MovieSceneEvaluationOperand
+	 * Size -> 0x0014
+	 */
+	struct FMovieSceneEvaluationOperand
+	{
+	public:
+		struct FGuid                                                 ObjectBindingId;                                         // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FMovieSceneSequenceID                                 SequenceID;                                              // 0x0010(0x0004) NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -4101,723 +4101,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.RemoveChildAt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPanelWidget::RemoveChildAt(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8342);
-		
-		struct
-		{
-			int32_t                                            Index;
-			bool                                               ReturnValue;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.RemoveChild
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPanelWidget::RemoveChild(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8341);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			bool                                               ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.HasChild
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPanelWidget::HasChild(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8340);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			bool                                               ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.HasAnyChildren
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPanelWidget::HasAnyChildren()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8339);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.GetChildrenCount
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UPanelWidget::GetChildrenCount()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8338);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.GetChildIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UPanelWidget::GetChildIndex(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8337);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			int32_t                                            ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.GetChildAt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidget* UPanelWidget::GetChildAt(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8336);
-		
-		struct
-		{
-			int32_t                                            Index;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UWidget*                                     ReturnValue;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.GetAllChildren
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UWidget*>                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UWidget*> UPanelWidget::GetAllChildren()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8335);
-		
-		struct
-		{
-			TArray<class UWidget*>                             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.ClearChildren
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UPanelWidget::ClearChildren()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8334);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.PanelWidget.AddChild
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UPanelSlot*                                  ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8333);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			class UPanelSlot*                                  ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPanelWidget.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPanelWidget::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1163);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetWheelScrollMultiplier
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15531);
-		
-		struct
-		{
-			float                                              NewWheelScrollMultiplier;
-		} params;
-		params.NewWheelScrollMultiplier = NewWheelScrollMultiplier;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetScrollWhenFocusChanges
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EScrollWhenFocusChanges                            NewScrollWhenFocusChanges                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetScrollWhenFocusChanges(EScrollWhenFocusChanges NewScrollWhenFocusChanges)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15530);
-		
-		struct
-		{
-			EScrollWhenFocusChanges                            NewScrollWhenFocusChanges;
-		} params;
-		params.NewScrollWhenFocusChanges = NewScrollWhenFocusChanges;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetScrollOffset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewScrollOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetScrollOffset(float NewScrollOffset)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15529);
-		
-		struct
-		{
-			float                                              NewScrollOffset;
-		} params;
-		params.NewScrollOffset = NewScrollOffset;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetScrollBarVisibility
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESlateVisibility                                   NewScrollBarVisibility                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetScrollBarVisibility(ESlateVisibility NewScrollBarVisibility)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15528);
-		
-		struct
-		{
-			ESlateVisibility                                   NewScrollBarVisibility;
-		} params;
-		params.NewScrollBarVisibility = NewScrollBarVisibility;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetScrollbarThickness
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      NewScrollbarThickness                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetScrollbarThickness(const struct FVector2D& NewScrollbarThickness)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15527);
-		
-		struct
-		{
-			struct FVector2D                      NewScrollbarThickness;
-		} params;
-		params.NewScrollbarThickness = NewScrollbarThickness;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetScrollbarPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     NewScrollbarPadding                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetScrollbarPadding(const struct FMargin& NewScrollbarPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15526);
-		
-		struct
-		{
-			struct FMargin                                     NewScrollbarPadding;
-		} params;
-		params.NewScrollbarPadding = NewScrollbarPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetOrientation
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EOrientation                                       NewOrientation                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetOrientation(EOrientation NewOrientation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15525);
-		
-		struct
-		{
-			EOrientation                                       NewOrientation;
-		} params;
-		params.NewOrientation = NewOrientation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetConsumeMouseWheel
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EConsumeMouseWheel                                 NewConsumeMouseWheel                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15524);
-		
-		struct
-		{
-			EConsumeMouseWheel                                 NewConsumeMouseWheel;
-		} params;
-		params.NewConsumeMouseWheel = NewConsumeMouseWheel;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetAnimateWheelScrolling
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bShouldAnimateWheelScrolling                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetAnimateWheelScrolling(bool bShouldAnimateWheelScrolling)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15523);
-		
-		struct
-		{
-			bool                                               bShouldAnimateWheelScrolling;
-		} params;
-		params.bShouldAnimateWheelScrolling = bShouldAnimateWheelScrolling;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetAlwaysShowScrollbar
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               NewAlwaysShowScrollbar                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetAlwaysShowScrollbar(bool NewAlwaysShowScrollbar)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15522);
-		
-		struct
-		{
-			bool                                               NewAlwaysShowScrollbar;
-		} params;
-		params.NewAlwaysShowScrollbar = NewAlwaysShowScrollbar;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.SetAllowOverscroll
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               NewAllowOverscroll                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::SetAllowOverscroll(bool NewAllowOverscroll)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15521);
-		
-		struct
-		{
-			bool                                               NewAllowOverscroll;
-		} params;
-		params.NewAllowOverscroll = NewAllowOverscroll;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.ScrollWidgetIntoView
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     WidgetToFind                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               AnimateScroll                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EDescendantScrollDestination                       ScrollDestination                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              Padding                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll, EDescendantScrollDestination ScrollDestination, float Padding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15520);
-		
-		struct
-		{
-			class UWidget*                                     WidgetToFind;
-			bool                                               AnimateScroll;
-			EDescendantScrollDestination                       ScrollDestination;
-			unsigned char                                      UnknownData_0000[0x2];
-			float                                              Padding;
-		} params;
-		params.WidgetToFind = WidgetToFind;
-		params.AnimateScroll = AnimateScroll;
-		params.ScrollDestination = ScrollDestination;
-		params.Padding = Padding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.ScrollToStart
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::ScrollToStart()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15519);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.ScrollToEnd
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::ScrollToEnd()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15518);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.GetViewOffsetFraction
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UScrollBox::GetViewOffsetFraction()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15517);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.GetScrollOffsetOfEnd
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UScrollBox::GetScrollOffsetOfEnd()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15516);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.GetScrollOffset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UScrollBox::GetScrollOffset()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15515);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBox.EndInertialScrolling
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBox::EndInertialScrolling()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15514);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScrollBox.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UScrollBox::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1164);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UMG.WidgetComponent.SetWindowVisibility
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -5738,28 +5021,95 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyBinding.StaticClass
-	 * 		Flags  -> (Predefined, Static)
+	 * 		Name   -> Function UMG.PanelWidget.RemoveChildAt
+	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		UClass*                                            ReturnValue
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	UClass* UPropertyBinding::StaticClass()
+	bool UPanelWidget::RemoveChildAt(int32_t Index)
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1968);
-		return ptr;
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8342);
+		
+		struct
+		{
+			int32_t                                            Index;
+			bool                                               ReturnValue;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BoolBinding.GetValue
+	 * 		Name   -> Function UMG.PanelWidget.RemoveChild
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UPanelWidget::RemoveChild(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8341);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			bool                                               ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.HasChild
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UPanelWidget::HasChild(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8340);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			bool                                               ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.HasAnyChildren
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UBoolBinding::GetValue()
+	bool UPanelWidget::HasAnyChildren()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17370);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8339);
 		
 		struct
 		{
@@ -5776,14 +5126,612 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBoolBinding.StaticClass
+	 * 		Name   -> Function UMG.PanelWidget.GetChildrenCount
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UPanelWidget::GetChildrenCount()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8338);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.GetChildIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UPanelWidget::GetChildIndex(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8337);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.GetChildAt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWidget* UPanelWidget::GetChildAt(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8336);
+		
+		struct
+		{
+			int32_t                                            Index;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UWidget*                                     ReturnValue;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.GetAllChildren
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UWidget*>                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UWidget*> UPanelWidget::GetAllChildren()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8335);
+		
+		struct
+		{
+			TArray<class UWidget*>                             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.ClearChildren
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UPanelWidget::ClearChildren()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8334);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.PanelWidget.AddChild
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UPanelSlot*                                  ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8333);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			class UPanelSlot*                                  ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPanelWidget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UBoolBinding::StaticClass()
+	UClass* UPanelWidget::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1969);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1163);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetWheelScrollMultiplier
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15531);
+		
+		struct
+		{
+			float                                              NewWheelScrollMultiplier;
+		} params;
+		params.NewWheelScrollMultiplier = NewWheelScrollMultiplier;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetScrollWhenFocusChanges
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EScrollWhenFocusChanges                            NewScrollWhenFocusChanges                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetScrollWhenFocusChanges(EScrollWhenFocusChanges NewScrollWhenFocusChanges)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15530);
+		
+		struct
+		{
+			EScrollWhenFocusChanges                            NewScrollWhenFocusChanges;
+		} params;
+		params.NewScrollWhenFocusChanges = NewScrollWhenFocusChanges;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetScrollOffset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewScrollOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetScrollOffset(float NewScrollOffset)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15529);
+		
+		struct
+		{
+			float                                              NewScrollOffset;
+		} params;
+		params.NewScrollOffset = NewScrollOffset;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetScrollBarVisibility
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESlateVisibility                                   NewScrollBarVisibility                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetScrollBarVisibility(ESlateVisibility NewScrollBarVisibility)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15528);
+		
+		struct
+		{
+			ESlateVisibility                                   NewScrollBarVisibility;
+		} params;
+		params.NewScrollBarVisibility = NewScrollBarVisibility;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetScrollbarThickness
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector2D                      NewScrollbarThickness                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetScrollbarThickness(const struct FVector2D& NewScrollbarThickness)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15527);
+		
+		struct
+		{
+			struct FVector2D                      NewScrollbarThickness;
+		} params;
+		params.NewScrollbarThickness = NewScrollbarThickness;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetScrollbarPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     NewScrollbarPadding                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetScrollbarPadding(const struct FMargin& NewScrollbarPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15526);
+		
+		struct
+		{
+			struct FMargin                                     NewScrollbarPadding;
+		} params;
+		params.NewScrollbarPadding = NewScrollbarPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetOrientation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EOrientation                                       NewOrientation                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetOrientation(EOrientation NewOrientation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15525);
+		
+		struct
+		{
+			EOrientation                                       NewOrientation;
+		} params;
+		params.NewOrientation = NewOrientation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetConsumeMouseWheel
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EConsumeMouseWheel                                 NewConsumeMouseWheel                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetConsumeMouseWheel(EConsumeMouseWheel NewConsumeMouseWheel)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15524);
+		
+		struct
+		{
+			EConsumeMouseWheel                                 NewConsumeMouseWheel;
+		} params;
+		params.NewConsumeMouseWheel = NewConsumeMouseWheel;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetAnimateWheelScrolling
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bShouldAnimateWheelScrolling                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetAnimateWheelScrolling(bool bShouldAnimateWheelScrolling)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15523);
+		
+		struct
+		{
+			bool                                               bShouldAnimateWheelScrolling;
+		} params;
+		params.bShouldAnimateWheelScrolling = bShouldAnimateWheelScrolling;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetAlwaysShowScrollbar
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               NewAlwaysShowScrollbar                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetAlwaysShowScrollbar(bool NewAlwaysShowScrollbar)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15522);
+		
+		struct
+		{
+			bool                                               NewAlwaysShowScrollbar;
+		} params;
+		params.NewAlwaysShowScrollbar = NewAlwaysShowScrollbar;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.SetAllowOverscroll
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               NewAllowOverscroll                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::SetAllowOverscroll(bool NewAllowOverscroll)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15521);
+		
+		struct
+		{
+			bool                                               NewAllowOverscroll;
+		} params;
+		params.NewAllowOverscroll = NewAllowOverscroll;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.ScrollWidgetIntoView
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     WidgetToFind                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               AnimateScroll                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EDescendantScrollDestination                       ScrollDestination                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              Padding                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll, EDescendantScrollDestination ScrollDestination, float Padding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15520);
+		
+		struct
+		{
+			class UWidget*                                     WidgetToFind;
+			bool                                               AnimateScroll;
+			EDescendantScrollDestination                       ScrollDestination;
+			unsigned char                                      UnknownData_0000[0x2];
+			float                                              Padding;
+		} params;
+		params.WidgetToFind = WidgetToFind;
+		params.AnimateScroll = AnimateScroll;
+		params.ScrollDestination = ScrollDestination;
+		params.Padding = Padding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.ScrollToStart
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::ScrollToStart()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15519);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.ScrollToEnd
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::ScrollToEnd()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15518);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.GetViewOffsetFraction
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UScrollBox::GetViewOffsetFraction()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15517);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.GetScrollOffsetOfEnd
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UScrollBox::GetScrollOffsetOfEnd()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15516);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.GetScrollOffset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UScrollBox::GetScrollOffset()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15515);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBox.EndInertialScrolling
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBox::EndInertialScrolling()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(15514);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UScrollBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UScrollBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1164);
 		return ptr;
 	}
 
@@ -6157,6 +6105,58 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1968);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BoolBinding.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UBoolBinding::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17370);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UBoolBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UBoolBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1969);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UPanelSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -6257,213 +6257,18 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetText
+	 * 		Name   -> Function UMG.BrushBinding.GetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		struct FSlateBrush                                 ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	void UEditableTextBox::SetText(const class FText& InText)
+	struct FSlateBrush UBrushBinding::GetValue()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8309);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17385);
 		
 		struct
 		{
-			class FText                                        InText;
-		} params;
-		params.InText = InText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetJustification
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ETextJustify                                       InJustification                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::SetJustification(ETextJustify InJustification)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8308);
-		
-		struct
-		{
-			ETextJustify                                       InJustification;
-		} params;
-		params.InJustification = InJustification;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetIsReadOnly
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::SetIsReadOnly(bool bReadOnly)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8307);
-		
-		struct
-		{
-			bool                                               bReadOnly;
-		} params;
-		params.bReadOnly = bReadOnly;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetIsPassword
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bIsPassword                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::SetIsPassword(bool bIsPassword)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8306);
-		
-		struct
-		{
-			bool                                               bIsPassword;
-		} params;
-		params.bIsPassword = bIsPassword;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetHintText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::SetHintText(const class FText& InText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8305);
-		
-		struct
-		{
-			class FText                                        InText;
-		} params;
-		params.InText = InText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.SetError
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::SetError(const class FText& InError)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8304);
-		
-		struct
-		{
-			class FText                                        InError;
-		} params;
-		params.InError = InError;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.EditableTextBox.OnEditableTextBoxCommittedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8303);
-		
-		struct
-		{
-			class FText                                        Text;
-			ETextCommit                                        CommitMethod;
-		} params;
-		params.Text = Text;
-		params.CommitMethod = CommitMethod;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.EditableTextBox.OnEditableTextBoxChangedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8302);
-		
-		struct
-		{
-			class FText                                        Text;
-		} params;
-		params.Text = Text;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.HasError
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UEditableTextBox::HasError()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8301);
-		
-		struct
-		{
-			bool                                               ReturnValue;
+			struct FSlateBrush                                 ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -6476,59 +6281,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.GetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UEditableTextBox::GetText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8300);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.EditableTextBox.ClearError
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UEditableTextBox::ClearError()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8299);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableTextBox.StaticClass
+	 * 		Name   -> PredefinedFunction UBrushBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UEditableTextBox::StaticClass()
+	UClass* UBrushBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1987);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1972);
 		return ptr;
 	}
 
@@ -6621,813 +6381,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.SetWheelScrollMultiplier
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17494);
-		
-		struct
-		{
-			float                                              NewWheelScrollMultiplier;
-		} params;
-		params.NewWheelScrollMultiplier = NewWheelScrollMultiplier;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.SetScrollOffset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InScrollOffset                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::SetScrollOffset(float InScrollOffset)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17493);
-		
-		struct
-		{
-			float                                              InScrollOffset;
-		} params;
-		params.InScrollOffset = InScrollOffset;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.SetScrollBarVisibility
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESlateVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::SetScrollBarVisibility(ESlateVisibility InVisibility)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17492);
-		
-		struct
-		{
-			ESlateVisibility                                   InVisibility;
-		} params;
-		params.InVisibility = InVisibility;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.ScrollToTop
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::ScrollToTop()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17491);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.ScrollToBottom
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::ScrollToBottom()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17490);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.RequestRefresh
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::RequestRefresh()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17489);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.RegenerateAllEntries
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListViewBase::RegenerateAllEntries()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17488);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListViewBase.GetDisplayedEntryWidgets
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UUserWidget*>                         ReturnValue                                                (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UUserWidget*> UListViewBase::GetDisplayedEntryWidgets()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17487);
-		
-		struct
-		{
-			TArray<class UUserWidget*>                         ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UListViewBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UListViewBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2002);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.SetSelectionMode
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESelectionMode                                     SelectionMode                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::SetSelectionMode(ESelectionMode SelectionMode)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17517);
-		
-		struct
-		{
-			ESelectionMode                                     SelectionMode;
-		} params;
-		params.SelectionMode = SelectionMode;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.SetSelectedIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::SetSelectedIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17516);
-		
-		struct
-		{
-			int32_t                                            Index;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.ScrollIndexIntoView
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::ScrollIndexIntoView(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17515);
-		
-		struct
-		{
-			int32_t                                            Index;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.RemoveItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::RemoveItem(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17514);
-		
-		struct
-		{
-			class UObject*                                     Item;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.NavigateToIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::NavigateToIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17513);
-		
-		struct
-		{
-			int32_t                                            Index;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.IsRefreshPending
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UListView::IsRefreshPending()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17512);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.GetNumItems
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UListView::GetNumItems()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17511);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.GetListItems
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UObject*>                             ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UObject*> UListView::GetListItems()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17510);
-		
-		struct
-		{
-			TArray<class UObject*>                             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.GetItemAt
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UListView::GetItemAt(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17509);
-		
-		struct
-		{
-			int32_t                                            Index;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UObject*                                     ReturnValue;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.GetIndexForItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UListView::GetIndexForItem(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17508);
-		
-		struct
-		{
-			class UObject*                                     Item;
-			int32_t                                            ReturnValue;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.ClearListItems
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::ClearListItems()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17507);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_SetSelectedItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_SetSelectedItem(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17506);
-		
-		struct
-		{
-			class UObject*                                     Item;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_SetListItems
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UObject*>                             InListItems                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_SetListItems(TArray<class UObject*> InListItems)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17505);
-		
-		struct
-		{
-			TArray<class UObject*>                             InListItems;
-		} params;
-		params.InListItems = InListItems;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_SetItemSelection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bSelected                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_SetItemSelection(class UObject* Item, bool bSelected)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17504);
-		
-		struct
-		{
-			class UObject*                                     Item;
-			bool                                               bSelected;
-		} params;
-		params.Item = Item;
-		params.bSelected = bSelected;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_ScrollItemIntoView
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_ScrollItemIntoView(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17503);
-		
-		struct
-		{
-			class UObject*                                     Item;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_NavigateToItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_NavigateToItem(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17502);
-		
-		struct
-		{
-			class UObject*                                     Item;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_IsItemVisible
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UListView::BP_IsItemVisible(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17501);
-		
-		struct
-		{
-			class UObject*                                     Item;
-			bool                                               ReturnValue;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_GetSelectedItems
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UObject*>                             Items                                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UListView::BP_GetSelectedItems(TArray<class UObject*>* Items)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17500);
-		
-		struct
-		{
-			TArray<class UObject*>                             Items;
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Items != nullptr)
-			*Items = params.Items;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_GetSelectedItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UListView::BP_GetSelectedItem()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17499);
-		
-		struct
-		{
-			class UObject*                                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_GetNumItemsSelected
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UListView::BP_GetNumItemsSelected()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17498);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_ClearSelection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_ClearSelection()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17497);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.BP_CancelScrollIntoView
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::BP_CancelScrollIntoView()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17496);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ListView.AddItem
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UListView::AddItem(class UObject* Item)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17495);
-		
-		struct
-		{
-			class UObject*                                     Item;
-		} params;
-		params.Item = Item;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UListView.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UListView::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2003);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BrushBinding.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateBrush                                 ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FSlateBrush UBrushBinding::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17385);
-		
-		struct
-		{
-			struct FSlateBrush                                 ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBrushBinding.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UBrushBinding::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1972);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UMG.FloatBinding.GetValue
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -7460,386 +6413,6 @@ namespace SDK
 	UClass* UFloatBinding::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1989);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UListViewDesignerPreviewItem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UListViewDesignerPreviewItem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2004);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.GridPanel.SetRowFill
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UGridPanel::SetRowFill(int32_t ColumnIndex, float Coefficient)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17446);
-		
-		struct
-		{
-			int32_t                                            ColumnIndex;
-			float                                              Coefficient;
-		} params;
-		params.ColumnIndex = ColumnIndex;
-		params.Coefficient = Coefficient;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.GridPanel.SetColumnFill
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UGridPanel::SetColumnFill(int32_t ColumnIndex, float Coefficient)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17445);
-		
-		struct
-		{
-			int32_t                                            ColumnIndex;
-			float                                              Coefficient;
-		} params;
-		params.ColumnIndex = ColumnIndex;
-		params.Coefficient = Coefficient;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.GridPanel.AddChildToGrid
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UGridSlot*                                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17444);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			int32_t                                            InRow;
-			int32_t                                            InColumn;
-			class UGridSlot*                                   ReturnValue;
-		} params;
-		params.Content = Content;
-		params.InRow = InRow;
-		params.InColumn = InColumn;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGridPanel.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGridPanel::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1990);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.ToggleOpen
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bFocusOnOpen                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8356);
-		
-		struct
-		{
-			bool                                               bFocusOnOpen;
-		} params;
-		params.bFocusOnOpen = bFocusOnOpen;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.ShouldOpenDueToClick
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMenuAnchor::ShouldOpenDueToClick()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8355);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.SetPlacement
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EMenuPlacement                                     InPlacement                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMenuAnchor::SetPlacement(EMenuPlacement InPlacement)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8353);
-		
-		struct
-		{
-			EMenuPlacement                                     InPlacement;
-		} params;
-		params.InPlacement = InPlacement;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.Open
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bFocusMenu                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMenuAnchor::Open(bool bFocusMenu)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8352);
-		
-		struct
-		{
-			bool                                               bFocusMenu;
-		} params;
-		params.bFocusMenu = bFocusMenu;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.IsOpen
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMenuAnchor::IsOpen()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8351);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.HasOpenSubMenus
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMenuAnchor::HasOpenSubMenus()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8350);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.MenuAnchor.GetUserWidget__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UUserWidget* UMenuAnchor::GetUserWidget__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8349);
-		
-		struct
-		{
-			class UUserWidget*                                 ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.GetMenuPosition
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UMenuAnchor::GetMenuPosition()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8348);
-		
-		struct
-		{
-			struct FVector2D                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.FitInWindow
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bFit                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMenuAnchor::FitInWindow(bool bFit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8347);
-		
-		struct
-		{
-			bool                                               bFit;
-		} params;
-		params.bFit = bFit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MenuAnchor.Close
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMenuAnchor::Close()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8346);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMenuAnchor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMenuAnchor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2005);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene2DTransformPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene2DTransformPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2007);
 		return ptr;
 	}
 
@@ -8258,33 +6831,82 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMarginSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
+	 * 		Name   -> Function UMG.GridPanel.SetRowFill
+	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		UClass*                                            ReturnValue
+	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	UClass* UMovieSceneMarginSection::StaticClass()
+	void UGridPanel::SetRowFill(int32_t ColumnIndex, float Coefficient)
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2011);
-		return ptr;
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17446);
+		
+		struct
+		{
+			int32_t                                            ColumnIndex;
+			float                                              Coefficient;
+		} params;
+		params.ColumnIndex = ColumnIndex;
+		params.Coefficient = Coefficient;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MouseCursorBinding.GetValue
+	 * 		Name   -> Function UMG.GridPanel.SetColumnFill
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EMouseCursor                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ColumnIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              Coefficient                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	EMouseCursor UMouseCursorBinding::GetValue()
+	void UGridPanel::SetColumnFill(int32_t ColumnIndex, float Coefficient)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17518);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17445);
 		
 		struct
 		{
-			EMouseCursor                                       ReturnValue;
+			int32_t                                            ColumnIndex;
+			float                                              Coefficient;
 		} params;
+		params.ColumnIndex = ColumnIndex;
+		params.Coefficient = Coefficient;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.GridPanel.AddChildToGrid
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UGridSlot*                                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17444);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			int32_t                                            InRow;
+			int32_t                                            InColumn;
+			class UGridSlot*                                   ReturnValue;
+		} params;
+		params.Content = Content;
+		params.InRow = InRow;
+		params.InColumn = InColumn;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -8296,14 +6918,55 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMouseCursorBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UGridPanel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMouseCursorBinding::StaticClass()
+	UClass* UGridPanel::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2006);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1990);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.AsyncTaskDownloadImage.DownloadImage
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UAsyncTaskDownloadImage*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::DownloadImage(const class FString& URL)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17359);
+		
+		struct
+		{
+			class FString                                      URL;
+			class UAsyncTaskDownloadImage*                     ReturnValue;
+		} params;
+		params.URL = URL;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAsyncTaskDownloadImage.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAsyncTaskDownloadImage::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1963);
 		return ptr;
 	}
 
@@ -8345,120 +7008,6 @@ namespace SDK
 	UClass* UHorizontalBox::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1992);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMarginTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneMarginTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2012);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene2DTransformSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene2DTransformSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2008);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ButtonSlot.SetVerticalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UButtonSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17395);
-		
-		struct
-		{
-			EVerticalAlignment                                 InVerticalAlignment;
-		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ButtonSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UButtonSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17394);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ButtonSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UButtonSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17393);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UButtonSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UButtonSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1974);
 		return ptr;
 	}
 
@@ -8569,6 +7118,20 @@ namespace SDK
 	UClass* UHorizontalBoxSlot::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1993);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScene2DTransformPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2007);
 		return ptr;
 	}
 
@@ -8937,14 +7500,114 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneWidgetMaterialTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneWidgetMaterialTrack::StaticClass()
+	UClass* UMovieScene2DTransformSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2013);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2008);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ButtonSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UButtonSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17395);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ButtonSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UButtonSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17394);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ButtonSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UButtonSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17393);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UButtonSlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UButtonSlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1974);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScene2DTransformTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScene2DTransformTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2009);
 		return ptr;
 	}
 
@@ -8983,559 +7646,6 @@ namespace SDK
 	UClass* UTextLayoutWidget::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2014);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetTextBlockVisibility
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESlateVisibility                                   InVisibility                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetTextBlockVisibility(ESlateVisibility InVisibility)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8323);
-		
-		struct
-		{
-			ESlateVisibility                                   InVisibility;
-		} params;
-		params.InVisibility = InVisibility;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetSelectedKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FInputChord                                 InSelectedKey                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8322);
-		
-		struct
-		{
-			struct FInputChord                                 InSelectedKey;
-		} params;
-		params.InSelectedKey = InSelectedKey;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetNoKeySpecifiedText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InNoKeySpecifiedText                                       (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetNoKeySpecifiedText(const class FText& InNoKeySpecifiedText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8321);
-		
-		struct
-		{
-			class FText                                        InNoKeySpecifiedText;
-		} params;
-		params.InNoKeySpecifiedText = InNoKeySpecifiedText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetKeySelectionText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InKeySelectionText                                         (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetKeySelectionText(const class FText& InKeySelectionText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8320);
-		
-		struct
-		{
-			class FText                                        InKeySelectionText;
-		} params;
-		params.InKeySelectionText = InKeySelectionText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetEscapeKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<struct FKey>                                InKeys                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetEscapeKeys(TArray<struct FKey> InKeys)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8319);
-		
-		struct
-		{
-			TArray<struct FKey>                                InKeys;
-		} params;
-		params.InKeys = InKeys;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetAllowModifierKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInAllowModifierKeys                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8318);
-		
-		struct
-		{
-			bool                                               bInAllowModifierKeys;
-		} params;
-		params.bInAllowModifierKeys = bInAllowModifierKeys;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.SetAllowGamepadKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInAllowGamepadKeys                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::SetAllowGamepadKeys(bool bInAllowGamepadKeys)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8317);
-		
-		struct
-		{
-			bool                                               bInAllowGamepadKeys;
-		} params;
-		params.bInAllowGamepadKeys = bInAllowGamepadKeys;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.InputKeySelector.OnKeySelected__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FInputChord                                 SelectedKey                                                (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8315);
-		
-		struct
-		{
-			struct FInputChord                                 SelectedKey;
-		} params;
-		params.SelectedKey = SelectedKey;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.InputKeySelector.OnIsSelectingKeyChanged__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UInputKeySelector::OnIsSelectingKeyChanged__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8314);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.InputKeySelector.GetIsSelectingKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UInputKeySelector::GetIsSelectingKey()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8313);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInputKeySelector.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInputKeySelector::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1995);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene2DTransformTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene2DTransformTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2009);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.SetWidgetStyle
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FTextBlockStyle                             InWidgetStyle                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::SetWidgetStyle(const struct FTextBlockStyle& InWidgetStyle)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8366);
-		
-		struct
-		{
-			struct FTextBlockStyle                             InWidgetStyle;
-		} params;
-		params.InWidgetStyle = InWidgetStyle;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.SetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::SetText(const class FText& InText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8365);
-		
-		struct
-		{
-			class FText                                        InText;
-		} params;
-		params.InText = InText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.SetIsReadOnly
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::SetIsReadOnly(bool bReadOnly)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8364);
-		
-		struct
-		{
-			bool                                               bReadOnly;
-		} params;
-		params.bReadOnly = bReadOnly;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.SetHintText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::SetHintText(const class FText& InHintText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8363);
-		
-		struct
-		{
-			class FText                                        InHintText;
-		} params;
-		params.InHintText = InHintText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextCommittedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8362);
-		
-		struct
-		{
-			class FText                                        Text;
-			ETextCommit                                        CommitMethod;
-		} params;
-		params.Text = Text;
-		params.CommitMethod = CommitMethod;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextChangedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8361);
-		
-		struct
-		{
-			class FText                                        Text;
-		} params;
-		params.Text = Text;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.GetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UMultiLineEditableText::GetText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8360);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableText.GetHintText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UMultiLineEditableText::GetHintText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8359);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMultiLineEditableText.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMultiLineEditableText::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2015);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Int32Binding.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UInt32Binding::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17475);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInt32Binding.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInt32Binding::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1996);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.CanvasPanel.AddChildToCanvas
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UCanvasPanelSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17396);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			class UCanvasPanelSlot*                            ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UCanvasPanel.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UCanvasPanel::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1975);
 		return ptr;
 	}
 
@@ -9894,6 +8004,597 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.SetTextureParameter
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        TextureParameter                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void URetainerBox::SetTextureParameter(const class FName& TextureParameter)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17531);
+		
+		struct
+		{
+			class FName                                        TextureParameter;
+		} params;
+		params.TextureParameter = TextureParameter;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.SetRetainRendering
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInRetainRendering                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void URetainerBox::SetRetainRendering(bool bInRetainRendering)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17530);
+		
+		struct
+		{
+			bool                                               bInRetainRendering;
+		} params;
+		params.bInRetainRendering = bInRetainRendering;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.SetRenderingPhase
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            RenderPhase                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            TotalPhases                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void URetainerBox::SetRenderingPhase(int32_t RenderPhase, int32_t TotalPhases)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17529);
+		
+		struct
+		{
+			int32_t                                            RenderPhase;
+			int32_t                                            TotalPhases;
+		} params;
+		params.RenderPhase = RenderPhase;
+		params.TotalPhases = TotalPhases;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.SetEffectMaterial
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMaterialInterface*                          EffectMaterial                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17528);
+		
+		struct
+		{
+			class UMaterialInterface*                          EffectMaterial;
+		} params;
+		params.EffectMaterial = EffectMaterial;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.RequestRender
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void URetainerBox::RequestRender()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17527);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.RetainerBox.GetEffectMaterial
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17526);
+		
+		struct
+		{
+			class UMaterialInstanceDynamic*                    ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URetainerBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URetainerBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2023);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMarginPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMarginPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2010);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URichTextBlockDecorator.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URichTextBlockDecorator::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2025);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetTextBlockVisibility
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESlateVisibility                                   InVisibility                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetTextBlockVisibility(ESlateVisibility InVisibility)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8323);
+		
+		struct
+		{
+			ESlateVisibility                                   InVisibility;
+		} params;
+		params.InVisibility = InVisibility;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetSelectedKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FInputChord                                 InSelectedKey                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8322);
+		
+		struct
+		{
+			struct FInputChord                                 InSelectedKey;
+		} params;
+		params.InSelectedKey = InSelectedKey;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetNoKeySpecifiedText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InNoKeySpecifiedText                                       (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetNoKeySpecifiedText(const class FText& InNoKeySpecifiedText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8321);
+		
+		struct
+		{
+			class FText                                        InNoKeySpecifiedText;
+		} params;
+		params.InNoKeySpecifiedText = InNoKeySpecifiedText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetKeySelectionText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InKeySelectionText                                         (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetKeySelectionText(const class FText& InKeySelectionText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8320);
+		
+		struct
+		{
+			class FText                                        InKeySelectionText;
+		} params;
+		params.InKeySelectionText = InKeySelectionText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetEscapeKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<struct FKey>                                InKeys                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetEscapeKeys(TArray<struct FKey> InKeys)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8319);
+		
+		struct
+		{
+			TArray<struct FKey>                                InKeys;
+		} params;
+		params.InKeys = InKeys;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetAllowModifierKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInAllowModifierKeys                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8318);
+		
+		struct
+		{
+			bool                                               bInAllowModifierKeys;
+		} params;
+		params.bInAllowModifierKeys = bInAllowModifierKeys;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.SetAllowGamepadKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInAllowGamepadKeys                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::SetAllowGamepadKeys(bool bInAllowGamepadKeys)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8317);
+		
+		struct
+		{
+			bool                                               bInAllowGamepadKeys;
+		} params;
+		params.bInAllowGamepadKeys = bInAllowGamepadKeys;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.InputKeySelector.OnKeySelected__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FInputChord                                 SelectedKey                                                (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8315);
+		
+		struct
+		{
+			struct FInputChord                                 SelectedKey;
+		} params;
+		params.SelectedKey = SelectedKey;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.InputKeySelector.OnIsSelectingKeyChanged__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UInputKeySelector::OnIsSelectingKeyChanged__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8314);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.InputKeySelector.GetIsSelectingKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UInputKeySelector::GetIsSelectingKey()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8313);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInputKeySelector.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInputKeySelector::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1995);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMarginSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMarginSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2011);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction URichTextBlockImageDecorator.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* URichTextBlockImageDecorator::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2026);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Int32Binding.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UInt32Binding::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17475);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInt32Binding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInt32Binding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1996);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.CanvasPanel.AddChildToCanvas
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UCanvasPanelSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17396);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			class UCanvasPanelSlot*                            ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UCanvasPanel.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UCanvasPanel::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1975);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SafeZone.SetSidesToPad
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InPadLeft                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               InPadRight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               InPadTop                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               InPadBottom                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USafeZone::SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17546);
+		
+		struct
+		{
+			bool                                               InPadLeft;
+			bool                                               InPadRight;
+			bool                                               InPadTop;
+			bool                                               InPadBottom;
+		} params;
+		params.InPadLeft = InPadLeft;
+		params.InPadRight = InPadRight;
+		params.InPadTop = InPadTop;
+		params.InPadBottom = InPadBottom;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USafeZone.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USafeZone::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2027);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UMG.InvalidationBox.SetCanCache
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -9977,55 +8678,182 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Overlay.AddChildToOverlay
+	 * 		Name   -> Function UMG.BackgroundBlur.SetVerticalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UOverlaySlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
+	void UBackgroundBlur::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17519);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17366);
 		
 		struct
 		{
-			class UWidget*                                     Content;
-			class UOverlaySlot*                                ReturnValue;
+			EVerticalAlignment                                 InVerticalAlignment;
 		} params;
-		params.Content = Content;
+		params.InVerticalAlignment = InVerticalAlignment;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BackgroundBlur.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlur::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17365);
 		
-		return params.ReturnValue;
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UOverlay.StaticClass
-	 * 		Flags  -> (Predefined, Static)
+	 * 		Name   -> Function UMG.BackgroundBlur.SetLowQualityFallbackBrush
+	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		UClass*                                            ReturnValue
+	 * 		struct FSlateBrush                                 InBrush                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	UClass* UOverlay::StaticClass()
+	void UBackgroundBlur::SetLowQualityFallbackBrush(const struct FSlateBrush& InBrush)
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2020);
-		return ptr;
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17364);
+		
+		struct
+		{
+			struct FSlateBrush                                 InBrush;
+		} params;
+		params.InBrush = InBrush;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMarginPropertySystem.StaticClass
+	 * 		Name   -> Function UMG.BackgroundBlur.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlur::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17363);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BackgroundBlur.SetBlurStrength
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InStrength                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlur::SetBlurStrength(float InStrength)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17362);
+		
+		struct
+		{
+			float                                              InStrength;
+		} params;
+		params.InStrength = InStrength;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BackgroundBlur.SetBlurRadius
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            InBlurRadius                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlur::SetBlurRadius(int32_t InBlurRadius)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17361);
+		
+		struct
+		{
+			int32_t                                            InBlurRadius;
+		} params;
+		params.InBlurRadius = InBlurRadius;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BackgroundBlur.SetApplyAlphaToBlur
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInApplyAlphaToBlur                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlur::SetApplyAlphaToBlur(bool bInApplyAlphaToBlur)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17360);
+		
+		struct
+		{
+			bool                                               bInApplyAlphaToBlur;
+		} params;
+		params.bInApplyAlphaToBlur = bInApplyAlphaToBlur;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UBackgroundBlur.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneMarginPropertySystem::StaticClass()
+	UClass* UBackgroundBlur::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2010);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1965);
 		return ptr;
 	}
 
@@ -10115,86 +8943,128 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.OverlaySlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationTimeRangeProxyObject
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class UUMGSequencePlayer*                          Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidgetAnimation*                            InAnimation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              StartAtTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              EndAtTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            NumLoopsToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidgetAnimationPlayCallbackProxy*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UOverlaySlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17522);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17661);
 		
 		struct
 		{
-			EVerticalAlignment                                 InVerticalAlignment;
+			class UUMGSequencePlayer*                          Result;
+			class UUserWidget*                                 Widget;
+			class UWidgetAnimation*                            InAnimation;
+			float                                              StartAtTime;
+			float                                              EndAtTime;
+			int32_t                                            NumLoopsToPlay;
+			EUMGSequencePlayMode                               PlayMode;
+			unsigned char                                      UnknownData_0000[0x3];
+			float                                              PlaybackSpeed;
+			unsigned char                                      UnknownData_0001[0x4];
+			class UWidgetAnimationPlayCallbackProxy*           ReturnValue;
 		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
+		params.Widget = Widget;
+		params.InAnimation = InAnimation;
+		params.StartAtTime = StartAtTime;
+		params.EndAtTime = EndAtTime;
+		params.NumLoopsToPlay = NumLoopsToPlay;
+		params.PlayMode = PlayMode;
+		params.PlaybackSpeed = PlaybackSpeed;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Result != nullptr)
+			*Result = params.Result;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.OverlaySlot.SetPadding
+	 * 		Name   -> Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class UUMGSequencePlayer*                          Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidgetAnimation*                            InAnimation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              StartAtTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            NumLoopsToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidgetAnimationPlayCallbackProxy*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
+	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17521);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17660);
 		
 		struct
 		{
-			struct FMargin                                     InPadding;
+			class UUMGSequencePlayer*                          Result;
+			class UUserWidget*                                 Widget;
+			class UWidgetAnimation*                            InAnimation;
+			float                                              StartAtTime;
+			int32_t                                            NumLoopsToPlay;
+			EUMGSequencePlayMode                               PlayMode;
+			unsigned char                                      UnknownData_0002[0x3];
+			float                                              PlaybackSpeed;
+			class UWidgetAnimationPlayCallbackProxy*           ReturnValue;
 		} params;
-		params.InPadding = InPadding;
+		params.Widget = Widget;
+		params.InAnimation = InAnimation;
+		params.StartAtTime = StartAtTime;
+		params.NumLoopsToPlay = NumLoopsToPlay;
+		params.PlayMode = PlayMode;
+		params.PlaybackSpeed = PlaybackSpeed;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Result != nullptr)
+			*Result = params.Result;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.OverlaySlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UOverlaySlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17520);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UOverlaySlot.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetAnimationPlayCallbackProxy.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UOverlaySlot::StaticClass()
+	UClass* UWidgetAnimationPlayCallbackProxy::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2021);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2057);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USafeZoneSlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USafeZoneSlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2028);
 		return ptr;
 	}
 
@@ -10647,22 +9517,611 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UserListEntryLibrary.IsListItemSelected
+	 * 		Name   -> PredefinedFunction UMovieSceneMarginTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMarginTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2012);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.SetActiveWidgetIndex
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetSwitcher::SetActiveWidgetIndex(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17705);
+		
+		struct
+		{
+			int32_t                                            Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.SetActiveWidget
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17704);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.GetWidgetAtIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17703);
+		
+		struct
+		{
+			int32_t                                            Index;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UWidget*                                     ReturnValue;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.GetNumWidgets
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UWidgetSwitcher::GetNumWidgets()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17702);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.GetActiveWidgetIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UWidgetSwitcher::GetActiveWidgetIndex()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17701);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcher.GetActiveWidget
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWidget* UWidgetSwitcher::GetActiveWidget()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17700);
+		
+		struct
+		{
+			class UWidget*                                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWidgetSwitcher.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWidgetSwitcher::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2065);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsWrapBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWrapBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17699);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UWrapBoxSlot*                                ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsWidgetSwitcherSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWidgetSwitcherSlot*                         ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWidgetSwitcherSlot* UWidgetLayoutLibrary::SlotAsWidgetSwitcherSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17698);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UWidgetSwitcherSlot*                         ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UVerticalBoxSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVerticalBoxSlot* UWidgetLayoutLibrary::SlotAsVerticalBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17697);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UVerticalBoxSlot*                            ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UUniformGridSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UUniformGridSlot* UWidgetLayoutLibrary::SlotAsUniformGridSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17696);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UUniformGridSlot*                            ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsSizeBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class USizeBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class USizeBoxSlot* UWidgetLayoutLibrary::SlotAsSizeBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17695);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class USizeBoxSlot*                                ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsScrollBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UScrollBoxSlot*                              ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UScrollBoxSlot* UWidgetLayoutLibrary::SlotAsScrollBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17694);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UScrollBoxSlot*                              ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsScaleBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UScaleBoxSlot*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UScaleBoxSlot* UWidgetLayoutLibrary::SlotAsScaleBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17693);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UScaleBoxSlot*                               ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsSafeBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class USafeZoneSlot*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class USafeZoneSlot* UWidgetLayoutLibrary::SlotAsSafeBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17692);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class USafeZoneSlot*                               ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UOverlaySlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UOverlaySlot* UWidgetLayoutLibrary::SlotAsOverlaySlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17691);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UOverlaySlot*                                ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UHorizontalBoxSlot*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UHorizontalBoxSlot* UWidgetLayoutLibrary::SlotAsHorizontalBoxSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17690);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UHorizontalBoxSlot*                          ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsGridSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UGridSlot*                                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UGridSlot* UWidgetLayoutLibrary::SlotAsGridSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17689);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UGridSlot*                                   ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UCanvasPanelSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UCanvasPanelSlot* UWidgetLayoutLibrary::SlotAsCanvasSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17688);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UCanvasPanelSlot*                            ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UBorderSlot*                                 ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UBorderSlot* UWidgetLayoutLibrary::SlotAsBorderSlot(class UWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17687);
+		
+		struct
+		{
+			class UWidget*                                     Widget;
+			class UBorderSlot*                                 ReturnValue;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.RemoveAllWidgets
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetLayoutLibrary::RemoveAllWidgets(class UObject* WorldContextObject)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17686);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector                        WorldLocation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ScreenPosition                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bPlayerViewportRelative                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserListEntryLibrary::IsListItemSelected(const TScriptInterface<class IUserListEntry>& UserListEntry)
+	bool UWidgetLayoutLibrary::ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const struct FVector& WorldLocation, struct FVector2D* ScreenPosition, bool bPlayerViewportRelative)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17484);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17685);
 		
 		struct
 		{
-			TScriptInterface<class IUserListEntry>             UserListEntry;
+			class APlayerController*                           PlayerController;
+			struct FVector                        WorldLocation;
+			struct FVector2D                      ScreenPosition;
+			bool                                               bPlayerViewportRelative;
 			bool                                               ReturnValue;
 		} params;
-		params.UserListEntry = UserListEntry;
+		params.PlayerController = PlayerController;
+		params.WorldLocation = WorldLocation;
+		params.bPlayerViewportRelative = bPlayerViewportRelative;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (ScreenPosition != nullptr)
+			*ScreenPosition = params.ScreenPosition;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FGeometry                                   ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(class UObject* WorldContextObject)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17684);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			struct FGeometry                                   ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -10674,22 +10133,139 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UserListEntryLibrary.IsListItemExpanded
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportSize
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UWidgetLayoutLibrary::GetViewportSize(class UObject* WorldContextObject)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17683);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			struct FVector2D                      ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportScale
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UWidgetLayoutLibrary::GetViewportScale(class UObject* WorldContextObject)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17682);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			float                                              ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FGeometry                                   ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(class APlayerController* PlayerController)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17681);
+		
+		struct
+		{
+			class APlayerController*                           PlayerController;
+			struct FGeometry                                   ReturnValue;
+		} params;
+		params.PlayerController = PlayerController;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              LocationX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              LocationY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UUserListEntryLibrary::IsListItemExpanded(const TScriptInterface<class IUserListEntry>& UserListEntry)
+	bool UWidgetLayoutLibrary::GetMousePositionScaledByDPI(class APlayerController* Player, float* LocationX, float* LocationY)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17483);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17680);
 		
 		struct
 		{
-			TScriptInterface<class IUserListEntry>             UserListEntry;
+			class APlayerController*                           Player;
+			float                                              LocationX;
+			float                                              LocationY;
 			bool                                               ReturnValue;
 		} params;
-		params.UserListEntry = UserListEntry;
+		params.Player = Player;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (LocationX != nullptr)
+			*LocationX = params.LocationX;
+		if (LocationY != nullptr)
+			*LocationY = params.LocationY;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(class UObject* WorldContextObject)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17679);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			struct FVector2D                      ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -10701,258 +10277,18 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UserListEntryLibrary.GetOwningListView
+	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		class UListViewBase*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UListViewBase* UUserListEntryLibrary::GetOwningListView(const TScriptInterface<class IUserListEntry>& UserListEntry)
+	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnPlatform()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17482);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17678);
 		
 		struct
 		{
-			TScriptInterface<class IUserListEntry>             UserListEntry;
-			class UListViewBase*                               ReturnValue;
-		} params;
-		params.UserListEntry = UserListEntry;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUserListEntryLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UUserListEntryLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1999);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNativeWidgetHost.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNativeWidgetHost::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2019);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URichTextBlockDecorator.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* URichTextBlockDecorator::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2025);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetTextStyle
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FTextBlockStyle                             InTextStyle                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::SetTextStyle(const struct FTextBlockStyle& InTextStyle)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8375);
-		
-		struct
-		{
-			struct FTextBlockStyle                             InTextStyle;
-		} params;
-		params.InTextStyle = InTextStyle;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::SetText(const class FText& InText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8374);
-		
-		struct
-		{
-			class FText                                        InText;
-		} params;
-		params.InText = InText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetIsReadOnly
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::SetIsReadOnly(bool bReadOnly)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8373);
-		
-		struct
-		{
-			bool                                               bReadOnly;
-		} params;
-		params.bReadOnly = bReadOnly;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetHintText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::SetHintText(const class FText& InHintText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8372);
-		
-		struct
-		{
-			class FText                                        InHintText;
-		} params;
-		params.InHintText = InHintText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetError
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::SetError(const class FText& InError)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8371);
-		
-		struct
-		{
-			class FText                                        InError;
-		} params;
-		params.InError = InError;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8370);
-		
-		struct
-		{
-			class FText                                        Text;
-			ETextCommit                                        CommitMethod;
-		} params;
-		params.Text = Text;
-		params.CommitMethod = CommitMethod;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8369);
-		
-		struct
-		{
-			class FText                                        Text;
-		} params;
-		params.Text = Text;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.GetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UMultiLineEditableTextBox::GetText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8368);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
+			struct FVector2D                      ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -10965,73 +10301,121 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.MultiLineEditableTextBox.GetHintText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UMultiLineEditableTextBox::GetHintText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8367);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMultiLineEditableTextBox.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetLayoutLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMultiLineEditableTextBox::StaticClass()
+	UClass* UWidgetLayoutLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2016);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2063);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URichTextBlockImageDecorator.StaticClass
+	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetSwitcherSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17708);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17707);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetSwitcherSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17706);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWidgetSwitcherSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* URichTextBlockImageDecorator::StaticClass()
+	UClass* UWidgetSwitcherSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2026);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2066);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UserObjectListEntry.OnListItemObjectSet
+	 * 		Name   -> Function UMG.ScaleBox.SetUserSpecifiedScale
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UObject*                                     ListItemObject                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InUserSpecifiedScale                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void IUserObjectListEntry::OnListItemObjectSet(class UObject* ListItemObject)
+	void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17485);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17550);
 		
 		struct
 		{
-			class UObject*                                     ListItemObject;
+			float                                              InUserSpecifiedScale;
 		} params;
-		params.ListItemObject = ListItemObject;
+		params.InUserSpecifiedScale = InUserSpecifiedScale;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -11041,327 +10425,100 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IUserObjectListEntry.StaticClass
+	 * 		Name   -> Function UMG.ScaleBox.SetStretchDirection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EStretchDirection                                  InStretchDirection                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBox::SetStretchDirection(EStretchDirection InStretchDirection)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17549);
+		
+		struct
+		{
+			EStretchDirection                                  InStretchDirection;
+		} params;
+		params.InStretchDirection = InStretchDirection;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScaleBox.SetStretch
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EStretch                                           InStretch                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBox::SetStretch(EStretch InStretch)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17548);
+		
+		struct
+		{
+			EStretch                                           InStretch;
+		} params;
+		params.InStretch = InStretch;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScaleBox.SetIgnoreInheritedScale
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInIgnoreInheritedScale                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17547);
+		
+		struct
+		{
+			bool                                               bInIgnoreInheritedScale;
+		} params;
+		params.bInIgnoreInheritedScale = bInIgnoreInheritedScale;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UScaleBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* IUserObjectListEntry::StaticClass()
+	UClass* UScaleBox::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2000);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2029);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ProgressBar.SetPercent
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InPercent                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UProgressBar::SetPercent(float InPercent)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17525);
-		
-		struct
-		{
-			float                                              InPercent;
-		} params;
-		params.InPercent = InPercent;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ProgressBar.SetIsMarquee
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InbIsMarquee                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UProgressBar::SetIsMarquee(bool InbIsMarquee)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17524);
-		
-		struct
-		{
-			bool                                               InbIsMarquee;
-		} params;
-		params.InbIsMarquee = InbIsMarquee;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ProgressBar.SetFillColorAndOpacity
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FLinearColor                                InColor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17523);
-		
-		struct
-		{
-			struct FLinearColor                                InColor;
-		} params;
-		params.InColor = InColor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UProgressBar.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetNavigation.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UProgressBar::StaticClass()
+	UClass* UWidgetNavigation::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2022);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNamedSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UNamedSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2017);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UserObjectListEntryLibrary.GetListItemObject
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TScriptInterface<class IUserObjectListEntry>       UserObjectListEntry                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UUserObjectListEntryLibrary::GetListItemObject(const TScriptInterface<class IUserObjectListEntry>& UserObjectListEntry)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17486);
-		
-		struct
-		{
-			TScriptInterface<class IUserObjectListEntry>       UserObjectListEntry;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.UserObjectListEntry = UserObjectListEntry;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUserObjectListEntryLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UUserObjectListEntryLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2001);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.SetTextureParameter
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FName                                        TextureParameter                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void URetainerBox::SetTextureParameter(const class FName& TextureParameter)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17531);
-		
-		struct
-		{
-			class FName                                        TextureParameter;
-		} params;
-		params.TextureParameter = TextureParameter;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.SetRetainRendering
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInRetainRendering                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void URetainerBox::SetRetainRendering(bool bInRetainRendering)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17530);
-		
-		struct
-		{
-			bool                                               bInRetainRendering;
-		} params;
-		params.bInRetainRendering = bInRetainRendering;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.SetRenderingPhase
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            RenderPhase                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            TotalPhases                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void URetainerBox::SetRenderingPhase(int32_t RenderPhase, int32_t TotalPhases)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17529);
-		
-		struct
-		{
-			int32_t                                            RenderPhase;
-			int32_t                                            TotalPhases;
-		} params;
-		params.RenderPhase = RenderPhase;
-		params.TotalPhases = TotalPhases;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.SetEffectMaterial
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMaterialInterface*                          EffectMaterial                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17528);
-		
-		struct
-		{
-			class UMaterialInterface*                          EffectMaterial;
-		} params;
-		params.EffectMaterial = EffectMaterial;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.RequestRender
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void URetainerBox::RequestRender()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17527);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.RetainerBox.GetEffectMaterial
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17526);
-		
-		struct
-		{
-			class UMaterialInstanceDynamic*                    ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction URetainerBox.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* URetainerBox::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2023);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction INamedSlotInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* INamedSlotInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2018);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2064);
 		return ptr;
 	}
 
@@ -11574,6 +10731,92 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScaleBoxSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17553);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScaleBoxSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17552);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScaleBoxSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScaleBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17551);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UScaleBoxSlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UScaleBoxSlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2030);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UWidgetBlueprintGeneratedClass.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -11588,570 +10831,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SafeZone.SetSidesToPad
+	 * 		Name   -> Function UMG.UserListEntryLibrary.IsListItemSelected
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		bool                                               InPadLeft                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               InPadRight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               InPadTop                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               InPadBottom                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USafeZone::SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17546);
-		
-		struct
-		{
-			bool                                               InPadLeft;
-			bool                                               InPadRight;
-			bool                                               InPadTop;
-			bool                                               InPadBottom;
-		} params;
-		params.InPadLeft = InPadLeft;
-		params.InPadRight = InPadRight;
-		params.InPadTop = InPadTop;
-		params.InPadBottom = InPadBottom;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USafeZone.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USafeZone::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2027);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetValue(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8407);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMinValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMinValue(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8406);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMinSliderValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMinSliderValue(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8405);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMinFractionalDigits
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMinFractionalDigits(int32_t NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8404);
-		
-		struct
-		{
-			int32_t                                            NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMaxValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMaxValue(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8403);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMaxSliderValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMaxSliderValue(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8402);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetMaxFractionalDigits
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetMaxFractionalDigits(int32_t NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8401);
-		
-		struct
-		{
-			int32_t                                            NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetForegroundColor
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateColor                                 InForegroundColor                                          (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8400);
-		
-		struct
-		{
-			struct FSlateColor                                 InForegroundColor;
-		} params;
-		params.InForegroundColor = InForegroundColor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetDelta
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetDelta(float NewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8399);
-		
-		struct
-		{
-			float                                              NewValue;
-		} params;
-		params.NewValue = NewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.SetAlwaysUsesDeltaSnap
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::SetAlwaysUsesDeltaSnap(bool bNewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8398);
-		
-		struct
-		{
-			bool                                               bNewValue;
-		} params;
-		params.bNewValue = bNewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxValueCommittedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8397);
-		
-		struct
-		{
-			float                                              InValue;
-			ETextCommit                                        CommitMethod;
-		} params;
-		params.InValue = InValue;
-		params.CommitMethod = CommitMethod;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxValueChangedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8396);
-		
-		struct
-		{
-			float                                              InValue;
-		} params;
-		params.InValue = InValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxBeginSliderMovement__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::OnSpinBoxBeginSliderMovement__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8395);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8394);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMinValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetMinValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8393);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMinSliderValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetMinSliderValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8392);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMinFractionalDigits
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t USpinBox::GetMinFractionalDigits()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8391);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMaxValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetMaxValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8390);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMaxSliderValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetMaxSliderValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8389);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetMaxFractionalDigits
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t USpinBox::GetMaxFractionalDigits()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8388);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetDelta
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USpinBox::GetDelta()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8387);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.GetAlwaysUsesDeltaSnap
-	 * 		Flags  -> ()
-	 * Parameters:
+	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USpinBox::GetAlwaysUsesDeltaSnap()
+	bool UUserListEntryLibrary::IsListItemSelected(const TScriptInterface<class IUserListEntry>& UserListEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8386);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17484);
 		
 		struct
 		{
+			TScriptInterface<class IUserListEntry>             UserListEntry;
 			bool                                               ReturnValue;
 		} params;
+		params.UserListEntry = UserListEntry;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -12163,133 +10858,178 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.ClearMinValue
+	 * 		Name   -> Function UMG.UserListEntryLibrary.IsListItemExpanded
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		void                                               ReturnValue
+	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::ClearMinValue()
+	bool UUserListEntryLibrary::IsListItemExpanded(const TScriptInterface<class IUserListEntry>& UserListEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8385);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17483);
 		
 		struct
 		{
+			TScriptInterface<class IUserListEntry>             UserListEntry;
+			bool                                               ReturnValue;
 		} params;
+		params.UserListEntry = UserListEntry;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.ClearMinSliderValue
+	 * 		Name   -> Function UMG.UserListEntryLibrary.GetOwningListView
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		void                                               ReturnValue
+	 * 		TScriptInterface<class IUserListEntry>             UserListEntry                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		class UListViewBase*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void USpinBox::ClearMinSliderValue()
+	class UListViewBase* UUserListEntryLibrary::GetOwningListView(const TScriptInterface<class IUserListEntry>& UserListEntry)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17482);
 		
 		struct
 		{
+			TScriptInterface<class IUserListEntry>             UserListEntry;
+			class UListViewBase*                               ReturnValue;
 		} params;
+		params.UserListEntry = UserListEntry;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.ClearMaxValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::ClearMaxValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8383);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SpinBox.ClearMaxSliderValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USpinBox::ClearMaxSliderValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8382);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USpinBox.StaticClass
+	 * 		Name   -> PredefinedFunction UUserListEntryLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USpinBox::StaticClass()
+	UClass* UUserListEntryLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2040);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1999);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USafeZoneSlot.StaticClass
+	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWindowTitleBarAreaSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17714);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17713);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWindowTitleBarAreaSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17712);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWindowTitleBarAreaSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USafeZoneSlot::StaticClass()
+	UClass* UWindowTitleBarAreaSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2028);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2069);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TileView.SetEntryWidth
+	 * 		Name   -> Function UMG.ScrollBar.SetState
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		float                                              NewWidth                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InOffsetFraction                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InThumbSizeFraction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UTileView::SetEntryWidth(float NewWidth)
+	void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17626);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17554);
 		
 		struct
 		{
-			float                                              NewWidth;
+			float                                              InOffsetFraction;
+			float                                              InThumbSizeFraction;
 		} params;
-		params.NewWidth = NewWidth;
+		params.InOffsetFraction = InOffsetFraction;
+		params.InThumbSizeFraction = InThumbSizeFraction;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -12299,127 +11039,114 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TileView.SetEntryHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              NewHeight                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTileView::SetEntryHeight(float NewHeight)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17625);
-		
-		struct
-		{
-			float                                              NewHeight;
-		} params;
-		params.NewHeight = NewHeight;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TileView.GetEntryWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UTileView::GetEntryWidth()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17624);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TileView.GetEntryHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UTileView::GetEntryHeight()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17623);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTileView.StaticClass
+	 * 		Name   -> PredefinedFunction UScrollBar.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UTileView::StaticClass()
+	UClass* UScrollBar::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2044);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2031);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.AsyncTaskDownloadImage.DownloadImage
+	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetVerticalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class FString                                      URL                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UAsyncTaskDownloadImage*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::DownloadImage(const class FString& URL)
+	void UBackgroundBlurSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17359);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17369);
 		
 		struct
 		{
-			class FString                                      URL;
-			class UAsyncTaskDownloadImage*                     ReturnValue;
+			EVerticalAlignment                                 InVerticalAlignment;
 		} params;
-		params.URL = URL;
+		params.InVerticalAlignment = InVerticalAlignment;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAsyncTaskDownloadImage.StaticClass
+	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlurSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17368);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UBackgroundBlurSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17367);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UBackgroundBlurSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UAsyncTaskDownloadImage::StaticClass()
+	UClass* UBackgroundBlurSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1963);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1967);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWidgetTree.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWidgetTree::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2067);
 		return ptr;
 	}
 
@@ -12464,24 +11191,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TreeView.SetItemExpansion
+	 * 		Name   -> Function UMG.WrapBox.SetInnerSlotPadding
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bExpandItem                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UTreeView::SetItemExpansion(class UObject* Item, bool bExpandItem)
+	void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17629);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17716);
 		
 		struct
 		{
-			class UObject*                                     Item;
-			bool                                               bExpandItem;
+			struct FVector2D                      InPadding;
 		} params;
-		params.Item = Item;
-		params.bExpandItem = bExpandItem;
+		params.InPadding = InPadding;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -12491,166 +11215,79 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TreeView.ExpandAll
+	 * 		Name   -> Function UMG.WrapBox.AddChildToWrapBox
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		void                                               ReturnValue
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UWrapBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UTreeView::ExpandAll()
+	class UWrapBoxSlot* UWrapBox::AddChildToWrapBox(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17628);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17715);
 		
 		struct
 		{
+			class UWidget*                                     Content;
+			class UWrapBoxSlot*                                ReturnValue;
 		} params;
+		params.Content = Content;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TreeView.CollapseAll
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UTreeView::CollapseAll()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17627);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTreeView.StaticClass
+	 * 		Name   -> PredefinedFunction UWrapBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UTreeView::StaticClass()
+	UClass* UWrapBox::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2045);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2070);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBox.SetUserSpecifiedScale
+	 * 		Name   -> Function UMG.WidgetBinding.GetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		float                                              InUserSpecifiedScale                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
+	class UWidget* UWidgetBinding::GetValue()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17550);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17662);
 		
 		struct
 		{
-			float                                              InUserSpecifiedScale;
+			class UWidget*                                     ReturnValue;
 		} params;
-		params.InUserSpecifiedScale = InUserSpecifiedScale;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBox.SetStretchDirection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EStretchDirection                                  InStretchDirection                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScaleBox::SetStretchDirection(EStretchDirection InStretchDirection)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17549);
-		
-		struct
-		{
-			EStretchDirection                                  InStretchDirection;
-		} params;
-		params.InStretchDirection = InStretchDirection;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBox.SetStretch
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EStretch                                           InStretch                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScaleBox::SetStretch(EStretch InStretch)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17548);
-		
-		struct
-		{
-			EStretch                                           InStretch;
-		} params;
-		params.InStretch = InStretch;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBox.SetIgnoreInheritedScale
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInIgnoreInheritedScale                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17547);
-		
-		struct
-		{
-			bool                                               bInIgnoreInheritedScale;
-		} params;
-		params.bInIgnoreInheritedScale = bInIgnoreInheritedScale;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScaleBox.StaticClass
+	 * 		Name   -> PredefinedFunction UWidgetBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UScaleBox::StaticClass()
+	UClass* UWidgetBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2029);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2058);
 		return ptr;
 	}
 
@@ -14353,21 +12990,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UMGSequencePlayer.SetUserTag
+	 * 		Name   -> Function UMG.UserObjectListEntry.OnListItemObjectSet
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class FName                                        InUserTag                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ListItemObject                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UUMGSequencePlayer::SetUserTag(const class FName& InUserTag)
+	void IUserObjectListEntry::OnListItemObjectSet(class UObject* ListItemObject)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17631);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17485);
 		
 		struct
 		{
-			class FName                                        InUserTag;
+			class UObject*                                     ListItemObject;
 		} params;
-		params.InUserTag = InUserTag;
+		params.ListItemObject = ListItemObject;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -14377,53 +13014,29 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UMGSequencePlayer.GetUserTag
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FName UUMGSequencePlayer::GetUserTag()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17630);
-		
-		struct
-		{
-			class FName                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUMGSequencePlayer.StaticClass
+	 * 		Name   -> PredefinedFunction IUserObjectListEntry.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UUMGSequencePlayer::StaticClass()
+	UClass* IUserObjectListEntry::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2046);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2000);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBoxSlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.WindowTitleBarArea.SetVerticalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UScaleBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWindowTitleBarArea::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17553);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17711);
 		
 		struct
 		{
@@ -14439,15 +13052,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBoxSlot.SetPadding
+	 * 		Name   -> Function UMG.WindowTitleBarArea.SetPadding
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
+	void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17552);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17710);
 		
 		struct
 		{
@@ -14463,15 +13076,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScaleBoxSlot.SetHorizontalAlignment
+	 * 		Name   -> Function UMG.WindowTitleBarArea.SetHorizontalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UScaleBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWindowTitleBarArea::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17551);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17709);
 		
 		struct
 		{
@@ -14487,146 +13100,29 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScaleBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UWindowTitleBarArea.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UScaleBoxSlot::StaticClass()
+	UClass* UWindowTitleBarArea::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2030);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2068);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBinding.GetTextValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UTextBinding::GetTextValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17605);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBinding.GetStringValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UTextBinding::GetStringValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17604);
-		
-		struct
-		{
-			class FString                                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTextBinding.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTextBinding::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2041);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUMGSequenceTickManager.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UUMGSequenceTickManager::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2047);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBar.SetState
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InOffsetFraction                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              InThumbSizeFraction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17554);
-		
-		struct
-		{
-			float                                              InOffsetFraction;
-			float                                              InThumbSizeFraction;
-		} params;
-		params.InOffsetFraction = InOffsetFraction;
-		params.InThumbSizeFraction = InThumbSizeFraction;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScrollBar.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UScrollBar::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2031);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetVerticalAlignment
+	 * 		Name   -> Function UMG.WrapBoxSlot.SetVerticalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UBackgroundBlur::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UWrapBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17366);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17721);
 		
 		struct
 		{
@@ -14642,15 +13138,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetPadding
+	 * 		Name   -> Function UMG.WrapBoxSlot.SetPadding
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UBackgroundBlur::SetPadding(const struct FMargin& InPadding)
+	void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17365);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17720);
 		
 		struct
 		{
@@ -14666,39 +13162,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetLowQualityFallbackBrush
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateBrush                                 InBrush                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UBackgroundBlur::SetLowQualityFallbackBrush(const struct FSlateBrush& InBrush)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17364);
-		
-		struct
-		{
-			struct FSlateBrush                                 InBrush;
-		} params;
-		params.InBrush = InBrush;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetHorizontalAlignment
+	 * 		Name   -> Function UMG.WrapBoxSlot.SetHorizontalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UBackgroundBlur::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UWrapBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17363);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17719);
 		
 		struct
 		{
@@ -14714,21 +13186,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetBlurStrength
+	 * 		Name   -> Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		float                                              InStrength                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              InFillSpanWhenLessThan                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UBackgroundBlur::SetBlurStrength(float InStrength)
+	void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17362);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17718);
 		
 		struct
 		{
-			float                                              InStrength;
+			float                                              InFillSpanWhenLessThan;
 		} params;
-		params.InStrength = InStrength;
+		params.InFillSpanWhenLessThan = InFillSpanWhenLessThan;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -14738,21 +13210,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetBlurRadius
+	 * 		Name   -> Function UMG.WrapBoxSlot.SetFillEmptySpace
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		int32_t                                            InBlurRadius                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               InbFillEmptySpace                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UBackgroundBlur::SetBlurRadius(int32_t InBlurRadius)
+	void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17361);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17717);
 		
 		struct
 		{
-			int32_t                                            InBlurRadius;
+			bool                                               InbFillEmptySpace;
 		} params;
-		params.InBlurRadius = InBlurRadius;
+		params.InbFillEmptySpace = InbFillEmptySpace;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -14762,157 +13234,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlur.SetApplyAlphaToBlur
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInApplyAlphaToBlur                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UBackgroundBlur::SetApplyAlphaToBlur(bool bInApplyAlphaToBlur)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17360);
-		
-		struct
-		{
-			bool                                               bInApplyAlphaToBlur;
-		} params;
-		params.bInApplyAlphaToBlur = bInApplyAlphaToBlur;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBackgroundBlur.StaticClass
+	 * 		Name   -> PredefinedFunction UWrapBoxSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UBackgroundBlur::StaticClass()
+	UClass* UWrapBoxSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1965);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridPanel.SetSlotPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InSlotPadding                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17635);
-		
-		struct
-		{
-			struct FMargin                                     InSlotPadding;
-		} params;
-		params.InSlotPadding = InSlotPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinDesiredSlotWidth                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17634);
-		
-		struct
-		{
-			float                                              InMinDesiredSlotWidth;
-		} params;
-		params.InMinDesiredSlotWidth = InMinDesiredSlotWidth;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinDesiredSlotHeight                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17633);
-		
-		struct
-		{
-			float                                              InMinDesiredSlotHeight;
-		} params;
-		params.InMinDesiredSlotHeight = InMinDesiredSlotHeight;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridPanel.AddChildToUniformGrid
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UUniformGridSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17632);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			int32_t                                            InRow;
-			int32_t                                            InColumn;
-			class UUniformGridSlot*                            ReturnValue;
-		} params;
-		params.Content = Content;
-		params.InRow = InRow;
-		params.InColumn = InColumn;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUniformGridPanel.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UUniformGridPanel::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2048);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2071);
 		return ptr;
 	}
 
@@ -14999,902 +13328,6 @@ namespace SDK
 	UClass* UCircularThrobber::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1979);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBoxSlot.SetVerticalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17557);
-		
-		struct
-		{
-			EVerticalAlignment                                 InVerticalAlignment;
-		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBoxSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17556);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ScrollBoxSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UScrollBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17555);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScrollBoxSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UScrollBoxSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2032);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridSlot.SetVerticalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17639);
-		
-		struct
-		{
-			EVerticalAlignment                                 InVerticalAlignment;
-		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridSlot.SetRow
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridSlot::SetRow(int32_t InRow)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17638);
-		
-		struct
-		{
-			int32_t                                            InRow;
-		} params;
-		params.InRow = InRow;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17637);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.UniformGridSlot.SetColumn
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UUniformGridSlot::SetColumn(int32_t InColumn)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17636);
-		
-		struct
-		{
-			int32_t                                            InColumn;
-		} params;
-		params.InColumn = InColumn;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UUniformGridSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UUniformGridSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2049);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetTextTransformPolicy
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ETextTransformPolicy                               InTransformPolicy                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17618);
-		
-		struct
-		{
-			ETextTransformPolicy                               InTransformPolicy;
-		} params;
-		params.InTransformPolicy = InTransformPolicy;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetText(const class FText& InText)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17617);
-		
-		struct
-		{
-			class FText                                        InText;
-		} params;
-		params.InText = InText;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetStrikeBrush
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateBrush                                 InStrikeBrush                                              (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetStrikeBrush(const struct FSlateBrush& InStrikeBrush)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17616);
-		
-		struct
-		{
-			struct FSlateBrush                                 InStrikeBrush;
-		} params;
-		params.InStrikeBrush = InStrikeBrush;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetShadowOffset
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      InShadowOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetShadowOffset(const struct FVector2D& InShadowOffset)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17615);
-		
-		struct
-		{
-			struct FVector2D                      InShadowOffset;
-		} params;
-		params.InShadowOffset = InShadowOffset;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetShadowColorAndOpacity
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FLinearColor                                InShadowColorAndOpacity                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17614);
-		
-		struct
-		{
-			struct FLinearColor                                InShadowColorAndOpacity;
-		} params;
-		params.InShadowColorAndOpacity = InShadowColorAndOpacity;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetOpacity
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InOpacity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetOpacity(float InOpacity)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17613);
-		
-		struct
-		{
-			float                                              InOpacity;
-		} params;
-		params.InOpacity = InOpacity;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetMinDesiredWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17612);
-		
-		struct
-		{
-			float                                              InMinDesiredWidth;
-		} params;
-		params.InMinDesiredWidth = InMinDesiredWidth;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetFont
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateFontInfo                              InFontInfo                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17611);
-		
-		struct
-		{
-			struct FSlateFontInfo                              InFontInfo;
-		} params;
-		params.InFontInfo = InFontInfo;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetColorAndOpacity
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSlateColor                                 InColorAndOpacity                                          (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17610);
-		
-		struct
-		{
-			struct FSlateColor                                 InColorAndOpacity;
-		} params;
-		params.InColorAndOpacity = InColorAndOpacity;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.SetAutoWrapText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InAutoTextWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UTextBlock::SetAutoWrapText(bool InAutoTextWrap)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17609);
-		
-		struct
-		{
-			bool                                               InAutoTextWrap;
-		} params;
-		params.InAutoTextWrap = InAutoTextWrap;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.GetText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UTextBlock::GetText()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17608);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.GetDynamicOutlineMaterial
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMaterialInstanceDynamic* UTextBlock::GetDynamicOutlineMaterial()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17607);
-		
-		struct
-		{
-			class UMaterialInstanceDynamic*                    ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.TextBlock.GetDynamicFontMaterial
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMaterialInstanceDynamic* UTextBlock::GetDynamicFontMaterial()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17606);
-		
-		struct
-		{
-			class UMaterialInstanceDynamic*                    ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTextBlock.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTextBlock::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2042);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetWidthOverride
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InWidthOverride                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetWidthOverride(float InWidthOverride)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17573);
-		
-		struct
-		{
-			float                                              InWidthOverride;
-		} params;
-		params.InWidthOverride = InWidthOverride;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMinDesiredWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17572);
-		
-		struct
-		{
-			float                                              InMinDesiredWidth;
-		} params;
-		params.InMinDesiredWidth = InMinDesiredWidth;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMinDesiredHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17571);
-		
-		struct
-		{
-			float                                              InMinDesiredHeight;
-		} params;
-		params.InMinDesiredHeight = InMinDesiredHeight;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMinAspectRatio
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMinAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMinAspectRatio(float InMinAspectRatio)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17570);
-		
-		struct
-		{
-			float                                              InMinAspectRatio;
-		} params;
-		params.InMinAspectRatio = InMinAspectRatio;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMaxDesiredWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMaxDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17569);
-		
-		struct
-		{
-			float                                              InMaxDesiredWidth;
-		} params;
-		params.InMaxDesiredWidth = InMaxDesiredWidth;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMaxDesiredHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMaxDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17568);
-		
-		struct
-		{
-			float                                              InMaxDesiredHeight;
-		} params;
-		params.InMaxDesiredHeight = InMaxDesiredHeight;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetMaxAspectRatio
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InMaxAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17567);
-		
-		struct
-		{
-			float                                              InMaxAspectRatio;
-		} params;
-		params.InMaxAspectRatio = InMaxAspectRatio;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.SetHeightOverride
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InHeightOverride                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::SetHeightOverride(float InHeightOverride)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17566);
-		
-		struct
-		{
-			float                                              InHeightOverride;
-		} params;
-		params.InHeightOverride = InHeightOverride;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearWidthOverride
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearWidthOverride()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17565);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMinDesiredWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMinDesiredWidth()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17564);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMinDesiredHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMinDesiredHeight()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17563);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMinAspectRatio
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMinAspectRatio()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17562);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMaxDesiredWidth
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMaxDesiredWidth()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17561);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMaxDesiredHeight
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMaxDesiredHeight()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17560);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearMaxAspectRatio
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearMaxAspectRatio()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17559);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.SizeBox.ClearHeightOverride
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void USizeBox::ClearHeightOverride()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17558);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USizeBox.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USizeBox::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2033);
 		return ptr;
 	}
 
@@ -16293,41 +13726,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VerticalBox.AddChildToVerticalBox
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UVerticalBoxSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17640);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			class UVerticalBoxSlot*                            ReturnValue;
-		} params;
-		params.Content = Content;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVerticalBox.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneWidgetMaterialTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UVerticalBox::StaticClass()
+	UClass* UMovieSceneWidgetMaterialTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2050);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2013);
 		return ptr;
 	}
 
@@ -16390,6 +13796,924 @@ namespace SDK
 	UClass* UColorBinding::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1980);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBoxSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17557);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBoxSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17556);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ScrollBoxSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UScrollBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17555);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UScrollBoxSlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UScrollBoxSlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2032);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UserObjectListEntryLibrary.GetListItemObject
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TScriptInterface<class IUserObjectListEntry>       UserObjectListEntry                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UUserObjectListEntryLibrary::GetListItemObject(const TScriptInterface<class IUserObjectListEntry>& UserObjectListEntry)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17486);
+		
+		struct
+		{
+			TScriptInterface<class IUserObjectListEntry>       UserObjectListEntry;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.UserObjectListEntry = UserObjectListEntry;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UUserObjectListEntryLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UUserObjectListEntryLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2001);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetWidthOverride
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InWidthOverride                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetWidthOverride(float InWidthOverride)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17573);
+		
+		struct
+		{
+			float                                              InWidthOverride;
+		} params;
+		params.InWidthOverride = InWidthOverride;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMinDesiredWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17572);
+		
+		struct
+		{
+			float                                              InMinDesiredWidth;
+		} params;
+		params.InMinDesiredWidth = InMinDesiredWidth;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMinDesiredHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17571);
+		
+		struct
+		{
+			float                                              InMinDesiredHeight;
+		} params;
+		params.InMinDesiredHeight = InMinDesiredHeight;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMinAspectRatio
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMinAspectRatio(float InMinAspectRatio)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17570);
+		
+		struct
+		{
+			float                                              InMinAspectRatio;
+		} params;
+		params.InMinAspectRatio = InMinAspectRatio;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMaxDesiredWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMaxDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17569);
+		
+		struct
+		{
+			float                                              InMaxDesiredWidth;
+		} params;
+		params.InMaxDesiredWidth = InMaxDesiredWidth;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMaxDesiredHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMaxDesiredHeight                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17568);
+		
+		struct
+		{
+			float                                              InMaxDesiredHeight;
+		} params;
+		params.InMaxDesiredHeight = InMaxDesiredHeight;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetMaxAspectRatio
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMaxAspectRatio                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17567);
+		
+		struct
+		{
+			float                                              InMaxAspectRatio;
+		} params;
+		params.InMaxAspectRatio = InMaxAspectRatio;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.SetHeightOverride
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InHeightOverride                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::SetHeightOverride(float InHeightOverride)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17566);
+		
+		struct
+		{
+			float                                              InHeightOverride;
+		} params;
+		params.InHeightOverride = InHeightOverride;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearWidthOverride
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearWidthOverride()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17565);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMinDesiredWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMinDesiredWidth()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17564);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMinDesiredHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMinDesiredHeight()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17563);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMinAspectRatio
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMinAspectRatio()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17562);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMaxDesiredWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMaxDesiredWidth()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17561);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMaxDesiredHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMaxDesiredHeight()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17560);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearMaxAspectRatio
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearMaxAspectRatio()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17559);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SizeBox.ClearHeightOverride
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USizeBox::ClearHeightOverride()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17558);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USizeBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USizeBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2033);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.SetWidgetStyle
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FTextBlockStyle                             InWidgetStyle                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::SetWidgetStyle(const struct FTextBlockStyle& InWidgetStyle)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8366);
+		
+		struct
+		{
+			struct FTextBlockStyle                             InWidgetStyle;
+		} params;
+		params.InWidgetStyle = InWidgetStyle;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.SetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::SetText(const class FText& InText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8365);
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.SetIsReadOnly
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::SetIsReadOnly(bool bReadOnly)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8364);
+		
+		struct
+		{
+			bool                                               bReadOnly;
+		} params;
+		params.bReadOnly = bReadOnly;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.SetHintText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::SetHintText(const class FText& InHintText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8363);
+		
+		struct
+		{
+			class FText                                        InHintText;
+		} params;
+		params.InHintText = InHintText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextCommittedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8362);
+		
+		struct
+		{
+			class FText                                        Text;
+			ETextCommit                                        CommitMethod;
+		} params;
+		params.Text = Text;
+		params.CommitMethod = CommitMethod;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextChangedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8361);
+		
+		struct
+		{
+			class FText                                        Text;
+		} params;
+		params.Text = Text;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.GetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UMultiLineEditableText::GetText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8360);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableText.GetHintText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UMultiLineEditableText::GetHintText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8359);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMultiLineEditableText.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMultiLineEditableText::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2015);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.SetWheelScrollMultiplier
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewWheelScrollMultiplier                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::SetWheelScrollMultiplier(float NewWheelScrollMultiplier)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17494);
+		
+		struct
+		{
+			float                                              NewWheelScrollMultiplier;
+		} params;
+		params.NewWheelScrollMultiplier = NewWheelScrollMultiplier;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.SetScrollOffset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InScrollOffset                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::SetScrollOffset(float InScrollOffset)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17493);
+		
+		struct
+		{
+			float                                              InScrollOffset;
+		} params;
+		params.InScrollOffset = InScrollOffset;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.SetScrollBarVisibility
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESlateVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::SetScrollBarVisibility(ESlateVisibility InVisibility)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17492);
+		
+		struct
+		{
+			ESlateVisibility                                   InVisibility;
+		} params;
+		params.InVisibility = InVisibility;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.ScrollToTop
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::ScrollToTop()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17491);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.ScrollToBottom
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::ScrollToBottom()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17490);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.RequestRefresh
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::RequestRefresh()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17489);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.RegenerateAllEntries
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UListViewBase::RegenerateAllEntries()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17488);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListViewBase.GetDisplayedEntryWidgets
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UUserWidget*>                         ReturnValue                                                (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UUserWidget*> UListViewBase::GetDisplayedEntryWidgets()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17487);
+		
+		struct
+		{
+			TArray<class UUserWidget*>                         ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UListViewBase.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UListViewBase::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2002);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UComboBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UComboBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1981);
 		return ptr;
 	}
 
@@ -16482,21 +14806,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VerticalBoxSlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.ListView.SetSelectionMode
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESelectionMode                                     SelectionMode                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVerticalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UListView::SetSelectionMode(ESelectionMode SelectionMode)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17644);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17517);
 		
 		struct
 		{
-			EVerticalAlignment                                 InVerticalAlignment;
+			ESelectionMode                                     SelectionMode;
 		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
+		params.SelectionMode = SelectionMode;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -16506,1388 +14830,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VerticalBoxSlot.SetSize
+	 * 		Name   -> Function UMG.ListView.SetSelectedIndex
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSlateChildSize                             InSize                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
+	void UListView::SetSelectedIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17643);
-		
-		struct
-		{
-			struct FSlateChildSize                             InSize;
-		} params;
-		params.InSize = InSize;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VerticalBoxSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17642);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VerticalBoxSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVerticalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17641);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVerticalBoxSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVerticalBoxSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2051);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Throbber.SetNumberOfPieces
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            InNumberOfPieces                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17622);
-		
-		struct
-		{
-			int32_t                                            InNumberOfPieces;
-		} params;
-		params.InNumberOfPieces = InNumberOfPieces;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Throbber.SetAnimateVertically
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInAnimateVertically                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17621);
-		
-		struct
-		{
-			bool                                               bInAnimateVertically;
-		} params;
-		params.bInAnimateVertically = bInAnimateVertically;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Throbber.SetAnimateOpacity
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInAnimateOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17620);
-		
-		struct
-		{
-			bool                                               bInAnimateOpacity;
-		} params;
-		params.bInAnimateOpacity = bInAnimateOpacity;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Throbber.SetAnimateHorizontally
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               bInAnimateHorizontally                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17619);
-		
-		struct
-		{
-			bool                                               bInAnimateHorizontally;
-		} params;
-		params.bInAnimateHorizontally = bInAnimateHorizontally;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UThrobber.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UThrobber::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2043);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.Spawn
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class AActor*                                      ActorClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class AActor*                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class AActor* UViewport::Spawn(class AActor* ActorClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17650);
-		
-		struct
-		{
-			class AActor*                                      ActorClass;
-			class AActor*                                      ReturnValue;
-		} params;
-		params.ActorClass = ActorClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.SetViewRotation
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FRotator                       Rotation                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UViewport::SetViewRotation(const struct FRotator& Rotation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17649);
-		
-		struct
-		{
-			struct FRotator                       Rotation;
-		} params;
-		params.Rotation = Rotation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.SetViewLocation
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector                        Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UViewport::SetViewLocation(const struct FVector& Location)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17648);
-		
-		struct
-		{
-			struct FVector                        Location;
-		} params;
-		params.Location = Location;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.GetViewRotation
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FRotator                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FRotator UViewport::GetViewRotation()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17647);
-		
-		struct
-		{
-			struct FRotator                       ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.GetViewportWorld
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWorld*                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWorld* UViewport::GetViewportWorld()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17646);
-		
-		struct
-		{
-			class UWorld*                                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.Viewport.GetViewLocation
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector UViewport::GetViewLocation()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17645);
-		
-		struct
-		{
-			struct FVector                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UViewport.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UViewport::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2052);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsWrapBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWrapBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17699);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UWrapBoxSlot*                                ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsWidgetSwitcherSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidgetSwitcherSlot*                         ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidgetSwitcherSlot* UWidgetLayoutLibrary::SlotAsWidgetSwitcherSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17698);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UWidgetSwitcherSlot*                         ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UVerticalBoxSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVerticalBoxSlot* UWidgetLayoutLibrary::SlotAsVerticalBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17697);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UVerticalBoxSlot*                            ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UUniformGridSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UUniformGridSlot* UWidgetLayoutLibrary::SlotAsUniformGridSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17696);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UUniformGridSlot*                            ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsSizeBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class USizeBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class USizeBoxSlot* UWidgetLayoutLibrary::SlotAsSizeBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17695);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class USizeBoxSlot*                                ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsScrollBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UScrollBoxSlot*                              ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UScrollBoxSlot* UWidgetLayoutLibrary::SlotAsScrollBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17694);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UScrollBoxSlot*                              ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsScaleBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UScaleBoxSlot*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UScaleBoxSlot* UWidgetLayoutLibrary::SlotAsScaleBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17693);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UScaleBoxSlot*                               ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsSafeBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class USafeZoneSlot*                               ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class USafeZoneSlot* UWidgetLayoutLibrary::SlotAsSafeBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17692);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class USafeZoneSlot*                               ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UOverlaySlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UOverlaySlot* UWidgetLayoutLibrary::SlotAsOverlaySlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17691);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UOverlaySlot*                                ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UHorizontalBoxSlot*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UHorizontalBoxSlot* UWidgetLayoutLibrary::SlotAsHorizontalBoxSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17690);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UHorizontalBoxSlot*                          ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsGridSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UGridSlot*                                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UGridSlot* UWidgetLayoutLibrary::SlotAsGridSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17689);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UGridSlot*                                   ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UCanvasPanelSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UCanvasPanelSlot* UWidgetLayoutLibrary::SlotAsCanvasSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17688);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UCanvasPanelSlot*                            ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UBorderSlot*                                 ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UBorderSlot* UWidgetLayoutLibrary::SlotAsBorderSlot(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17687);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-			class UBorderSlot*                                 ReturnValue;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.RemoveAllWidgets
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetLayoutLibrary::RemoveAllWidgets(class UObject* WorldContextObject)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17686);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector                        WorldLocation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ScreenPosition                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bPlayerViewportRelative                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UWidgetLayoutLibrary::ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const struct FVector& WorldLocation, struct FVector2D* ScreenPosition, bool bPlayerViewportRelative)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17685);
-		
-		struct
-		{
-			class APlayerController*                           PlayerController;
-			struct FVector                        WorldLocation;
-			struct FVector2D                      ScreenPosition;
-			bool                                               bPlayerViewportRelative;
-			bool                                               ReturnValue;
-		} params;
-		params.PlayerController = PlayerController;
-		params.WorldLocation = WorldLocation;
-		params.bPlayerViewportRelative = bPlayerViewportRelative;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (ScreenPosition != nullptr)
-			*ScreenPosition = params.ScreenPosition;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportWidgetGeometry
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FGeometry                                   ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(class UObject* WorldContextObject)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17684);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			struct FGeometry                                   ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UWidgetLayoutLibrary::GetViewportSize(class UObject* WorldContextObject)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17683);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			struct FVector2D                      ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetViewportScale
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UWidgetLayoutLibrary::GetViewportScale(class UObject* WorldContextObject)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17682);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			float                                              ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetPlayerScreenWidgetGeometry
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FGeometry                                   ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(class APlayerController* PlayerController)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17681);
-		
-		struct
-		{
-			class APlayerController*                           PlayerController;
-			struct FGeometry                                   ReturnValue;
-		} params;
-		params.PlayerController = PlayerController;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class APlayerController*                           Player                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              LocationX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              LocationY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UWidgetLayoutLibrary::GetMousePositionScaledByDPI(class APlayerController* Player, float* LocationX, float* LocationY)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17680);
-		
-		struct
-		{
-			class APlayerController*                           Player;
-			float                                              LocationX;
-			float                                              LocationY;
-			bool                                               ReturnValue;
-		} params;
-		params.Player = Player;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (LocationX != nullptr)
-			*LocationX = params.LocationX;
-		if (LocationY != nullptr)
-			*LocationY = params.LocationY;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionOnViewport
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(class UObject* WorldContextObject)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17679);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			struct FVector2D                      ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetLayoutLibrary.GetMousePositionOnPlatform
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UWidgetLayoutLibrary::GetMousePositionOnPlatform()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17678);
-		
-		struct
-		{
-			struct FVector2D                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetLayoutLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWidgetLayoutLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2063);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UComboBox.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UComboBox::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1981);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.VisibilityBinding.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESlateVisibility                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	ESlateVisibility UVisibilityBinding::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17651);
-		
-		struct
-		{
-			ESlateVisibility                                   ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVisibilityBinding.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVisibilityBinding::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2053);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetVerticalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UBackgroundBlurSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17369);
-		
-		struct
-		{
-			EVerticalAlignment                                 InVerticalAlignment;
-		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UBackgroundBlurSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17368);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.BackgroundBlurSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UBackgroundBlurSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17367);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBackgroundBlurSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UBackgroundBlurSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1967);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.UnbindFromAnimationStarted
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::UnbindFromAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17659);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-			class FScriptDelegate                              Delegate;
-		} params;
-		params.Widget = Widget;
-		params.Delegate = Delegate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.UnbindFromAnimationFinished
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::UnbindFromAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17658);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-			class FScriptDelegate                              Delegate;
-		} params;
-		params.Widget = Widget;
-		params.Delegate = Delegate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.UnbindAllFromAnimationStarted
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::UnbindAllFromAnimationStarted(class UUserWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17657);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.UnbindAllFromAnimationFinished
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::UnbindAllFromAnimationFinished(class UUserWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17656);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.GetStartTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UWidgetAnimation::GetStartTime()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17655);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.GetEndTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UWidgetAnimation::GetEndTime()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17654);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.BindToAnimationStarted
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::BindToAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17653);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-			class FScriptDelegate                              Delegate;
-		} params;
-		params.Widget = Widget;
-		params.Delegate = Delegate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimation.BindToAnimationFinished
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetAnimation::BindToAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17652);
-		
-		struct
-		{
-			class UUserWidget*                                 Widget;
-			class FScriptDelegate                              Delegate;
-		} params;
-		params.Widget = Widget;
-		params.Delegate = Delegate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetAnimation.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWidgetAnimation::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2054);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetNavigation.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWidgetNavigation::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2064);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.SetSelectedOption
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UComboBoxString::SetSelectedOption(const class FString& Option)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8272);
-		
-		struct
-		{
-			class FString                                      Option;
-		} params;
-		params.Option = Option;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.SetSelectedIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UComboBoxString::SetSelectedIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8271);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17516);
 		
 		struct
 		{
@@ -17903,213 +14854,165 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.RemoveOption
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UComboBoxString::RemoveOption(const class FString& Option)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8270);
-		
-		struct
-		{
-			class FString                                      Option;
-			bool                                               ReturnValue;
-		} params;
-		params.Option = Option;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.RefreshOptions
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UComboBoxString::RefreshOptions()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8269);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.ComboBoxString.OnSelectionChangedEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      SelectedItem                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESelectInfo                                        SelectionType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8267);
-		
-		struct
-		{
-			class FString                                      SelectedItem;
-			ESelectInfo                                        SelectionType;
-		} params;
-		params.SelectedItem = SelectedItem;
-		params.SelectionType = SelectionType;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction UMG.ComboBoxString.OnOpeningEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UComboBoxString::OnOpeningEvent__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8266);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.IsOpen
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UComboBoxString::IsOpen()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8265);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.GetSelectedOption
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UComboBoxString::GetSelectedOption()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8264);
-		
-		struct
-		{
-			class FString                                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.GetSelectedIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UComboBoxString::GetSelectedIndex()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8263);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.GetOptionCount
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UComboBoxString::GetOptionCount()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8262);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.GetOptionAtIndex
+	 * 		Name   -> Function UMG.ListView.ScrollIndexIntoView
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class FString UComboBoxString::GetOptionAtIndex(int32_t Index)
+	void UListView::ScrollIndexIntoView(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8261);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17515);
+		
+		struct
+		{
+			int32_t                                            Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.RemoveItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::RemoveItem(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17514);
+		
+		struct
+		{
+			class UObject*                                     Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.NavigateToIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::NavigateToIndex(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17513);
+		
+		struct
+		{
+			int32_t                                            Index;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.IsRefreshPending
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UListView::IsRefreshPending()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17512);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.GetNumItems
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UListView::GetNumItems()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17511);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.GetListItems
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UObject*>                             ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UObject*> UListView::GetListItems()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17510);
+		
+		struct
+		{
+			TArray<class UObject*>                             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.GetItemAt
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UListView::GetItemAt(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17509);
 		
 		struct
 		{
 			int32_t                                            Index;
 			unsigned char                                      UnknownData_0000[0x4];
-			class FString                                      ReturnValue;
+			class UObject*                                     ReturnValue;
 		} params;
 		params.Index = Index;
 		
@@ -18123,22 +15026,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.FindOptionIndex
+	 * 		Name   -> Function UMG.ListView.GetIndexForItem
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UComboBoxString::FindOptionIndex(const class FString& Option)
+	int32_t UListView::GetIndexForItem(class UObject* Item)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8260);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17508);
 		
 		struct
 		{
-			class FString                                      Option;
+			class UObject*                                     Item;
 			int32_t                                            ReturnValue;
 		} params;
-		params.Option = Option;
+		params.Item = Item;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -18150,14 +15053,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.ClearSelection
+	 * 		Name   -> Function UMG.ListView.ClearListItems
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		void                                               ReturnValue
 	 */
-	void UComboBoxString::ClearSelection()
+	void UListView::ClearListItems()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8259);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17507);
 		
 		struct
 		{
@@ -18171,14 +15074,241 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.ClearOptions
+	 * 		Name   -> Function UMG.ListView.BP_SetSelectedItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::BP_SetSelectedItem(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17506);
+		
+		struct
+		{
+			class UObject*                                     Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_SetListItems
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UObject*>                             InListItems                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::BP_SetListItems(TArray<class UObject*> InListItems)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17505);
+		
+		struct
+		{
+			TArray<class UObject*>                             InListItems;
+		} params;
+		params.InListItems = InListItems;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_SetItemSelection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bSelected                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::BP_SetItemSelection(class UObject* Item, bool bSelected)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17504);
+		
+		struct
+		{
+			class UObject*                                     Item;
+			bool                                               bSelected;
+		} params;
+		params.Item = Item;
+		params.bSelected = bSelected;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_ScrollItemIntoView
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::BP_ScrollItemIntoView(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17503);
+		
+		struct
+		{
+			class UObject*                                     Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_NavigateToItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::BP_NavigateToItem(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17502);
+		
+		struct
+		{
+			class UObject*                                     Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_IsItemVisible
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UListView::BP_IsItemVisible(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17501);
+		
+		struct
+		{
+			class UObject*                                     Item;
+			bool                                               ReturnValue;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_GetSelectedItems
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UObject*>                             Items                                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UListView::BP_GetSelectedItems(TArray<class UObject*>* Items)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17500);
+		
+		struct
+		{
+			TArray<class UObject*>                             Items;
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Items != nullptr)
+			*Items = params.Items;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_GetSelectedItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UListView::BP_GetSelectedItem()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17499);
+		
+		struct
+		{
+			class UObject*                                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_GetNumItemsSelected
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UListView::BP_GetNumItemsSelected()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17498);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ListView.BP_ClearSelection
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		void                                               ReturnValue
 	 */
-	void UComboBoxString::ClearOptions()
+	void UListView::BP_ClearSelection()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8258);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17497);
 		
 		struct
 		{
@@ -18192,21 +15322,18 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.ComboBoxString.AddOption
+	 * 		Name   -> Function UMG.ListView.BP_CancelScrollIntoView
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UComboBoxString::AddOption(const class FString& Option)
+	void UListView::BP_CancelScrollIntoView()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8257);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17496);
 		
 		struct
 		{
-			class FString                                      Option;
 		} params;
-		params.Option = Option;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -18216,28 +15343,271 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UComboBoxString.StaticClass
+	 * 		Name   -> Function UMG.ListView.AddItem
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UListView::AddItem(class UObject* Item)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17495);
+		
+		struct
+		{
+			class UObject*                                     Item;
+		} params;
+		params.Item = Item;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UListView.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UComboBoxString::StaticClass()
+	UClass* UListView::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1982);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2003);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetAnimationDelegateBinding.StaticClass
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetTextStyle
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FTextBlockStyle                             InTextStyle                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::SetTextStyle(const struct FTextBlockStyle& InTextStyle)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8375);
+		
+		struct
+		{
+			struct FTextBlockStyle                             InTextStyle;
+		} params;
+		params.InTextStyle = InTextStyle;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::SetText(const class FText& InText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8374);
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetIsReadOnly
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::SetIsReadOnly(bool bReadOnly)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8373);
+		
+		struct
+		{
+			bool                                               bReadOnly;
+		} params;
+		params.bReadOnly = bReadOnly;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetHintText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InHintText                                                 (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::SetHintText(const class FText& InHintText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8372);
+		
+		struct
+		{
+			class FText                                        InHintText;
+		} params;
+		params.InHintText = InHintText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.SetError
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::SetError(const class FText& InError)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8371);
+		
+		struct
+		{
+			class FText                                        InError;
+		} params;
+		params.InError = InError;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8370);
+		
+		struct
+		{
+			class FText                                        Text;
+			ETextCommit                                        CommitMethod;
+		} params;
+		params.Text = Text;
+		params.CommitMethod = CommitMethod;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8369);
+		
+		struct
+		{
+			class FText                                        Text;
+		} params;
+		params.Text = Text;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.GetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UMultiLineEditableTextBox::GetText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8368);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MultiLineEditableTextBox.GetHintText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UMultiLineEditableTextBox::GetHintText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8367);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMultiLineEditableTextBox.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetAnimationDelegateBinding::StaticClass()
+	UClass* UMultiLineEditableTextBox::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2056);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2016);
 		return ptr;
 	}
 
@@ -18759,276 +16129,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationTimeRangeProxyObject
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUMGSequencePlayer*                          Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidgetAnimation*                            InAnimation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              StartAtTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              EndAtTime                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            NumLoopsToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidgetAnimationPlayCallbackProxy*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17661);
-		
-		struct
-		{
-			class UUMGSequencePlayer*                          Result;
-			class UUserWidget*                                 Widget;
-			class UWidgetAnimation*                            InAnimation;
-			float                                              StartAtTime;
-			float                                              EndAtTime;
-			int32_t                                            NumLoopsToPlay;
-			EUMGSequencePlayMode                               PlayMode;
-			unsigned char                                      UnknownData_0000[0x3];
-			float                                              PlaybackSpeed;
-			unsigned char                                      UnknownData_0001[0x4];
-			class UWidgetAnimationPlayCallbackProxy*           ReturnValue;
-		} params;
-		params.Widget = Widget;
-		params.InAnimation = InAnimation;
-		params.StartAtTime = StartAtTime;
-		params.EndAtTime = EndAtTime;
-		params.NumLoopsToPlay = NumLoopsToPlay;
-		params.PlayMode = PlayMode;
-		params.PlaybackSpeed = PlaybackSpeed;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Result != nullptr)
-			*Result = params.Result;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UUMGSequencePlayer*                          Result                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidgetAnimation*                            InAnimation                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              StartAtTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            NumLoopsToPlay                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EUMGSequencePlayMode                               PlayMode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              PlaybackSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidgetAnimationPlayCallbackProxy*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17660);
-		
-		struct
-		{
-			class UUMGSequencePlayer*                          Result;
-			class UUserWidget*                                 Widget;
-			class UWidgetAnimation*                            InAnimation;
-			float                                              StartAtTime;
-			int32_t                                            NumLoopsToPlay;
-			EUMGSequencePlayMode                               PlayMode;
-			unsigned char                                      UnknownData_0002[0x3];
-			float                                              PlaybackSpeed;
-			class UWidgetAnimationPlayCallbackProxy*           ReturnValue;
-		} params;
-		params.Widget = Widget;
-		params.InAnimation = InAnimation;
-		params.StartAtTime = StartAtTime;
-		params.NumLoopsToPlay = NumLoopsToPlay;
-		params.PlayMode = PlayMode;
-		params.PlaybackSpeed = PlaybackSpeed;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Result != nullptr)
-			*Result = params.Result;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetAnimationPlayCallbackProxy.StaticClass
+	 * 		Name   -> PredefinedFunction UListViewDesignerPreviewItem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetAnimationPlayCallbackProxy::StaticClass()
+	UClass* UListViewDesignerPreviewItem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2057);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2004);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.SetActiveWidgetIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetSwitcher::SetActiveWidgetIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17705);
-		
-		struct
-		{
-			int32_t                                            Index;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.SetActiveWidget
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17704);
-		
-		struct
-		{
-			class UWidget*                                     Widget;
-		} params;
-		params.Widget = Widget;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.GetWidgetAtIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int32_t Index)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17703);
-		
-		struct
-		{
-			int32_t                                            Index;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UWidget*                                     ReturnValue;
-		} params;
-		params.Index = Index;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.GetNumWidgets
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UWidgetSwitcher::GetNumWidgets()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17702);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.GetActiveWidgetIndex
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UWidgetSwitcher::GetActiveWidgetIndex()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17701);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcher.GetActiveWidget
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWidget* UWidgetSwitcher::GetActiveWidget()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17700);
-		
-		struct
-		{
-			class UWidget*                                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetSwitcher.StaticClass
+	 * 		Name   -> PredefinedFunction UNamedSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetSwitcher::StaticClass()
+	UClass* UNamedSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2065);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2017);
 		return ptr;
 	}
 
@@ -19049,18 +16171,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetBinding.GetValue
+	 * 		Name   -> Function UMG.MenuAnchor.ToggleOpen
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UWidget*                                     ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bFocusOnOpen                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UWidget* UWidgetBinding::GetValue()
+	void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17662);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8356);
 		
 		struct
 		{
-			class UWidget*                                     ReturnValue;
+			bool                                               bFocusOnOpen;
+		} params;
+		params.bFocusOnOpen = bFocusOnOpen;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.ShouldOpenDueToClick
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMenuAnchor::ShouldOpenDueToClick()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8355);
+		
+		struct
+		{
+			bool                                               ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -19073,14 +16219,217 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetBinding.StaticClass
+	 * 		Name   -> Function UMG.MenuAnchor.SetPlacement
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EMenuPlacement                                     InPlacement                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMenuAnchor::SetPlacement(EMenuPlacement InPlacement)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8353);
+		
+		struct
+		{
+			EMenuPlacement                                     InPlacement;
+		} params;
+		params.InPlacement = InPlacement;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.Open
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bFocusMenu                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMenuAnchor::Open(bool bFocusMenu)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8352);
+		
+		struct
+		{
+			bool                                               bFocusMenu;
+		} params;
+		params.bFocusMenu = bFocusMenu;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.IsOpen
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMenuAnchor::IsOpen()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8351);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.HasOpenSubMenus
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMenuAnchor::HasOpenSubMenus()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8350);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.MenuAnchor.GetUserWidget__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UUserWidget* UMenuAnchor::GetUserWidget__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8349);
+		
+		struct
+		{
+			class UUserWidget*                                 ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.GetMenuPosition
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UMenuAnchor::GetMenuPosition()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8348);
+		
+		struct
+		{
+			struct FVector2D                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.FitInWindow
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bFit                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMenuAnchor::FitInWindow(bool bFit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8347);
+		
+		struct
+		{
+			bool                                               bFit;
+		} params;
+		params.bFit = bFit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MenuAnchor.Close
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UMenuAnchor::Close()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8346);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMenuAnchor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetBinding::StaticClass()
+	UClass* UMenuAnchor::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2058);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2005);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction INamedSlotInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* INamedSlotInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2018);
 		return ptr;
 	}
 
@@ -19101,107 +16450,35 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.DragDropOperation.Drop
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17431);
-		
-		struct
-		{
-			struct FPointerEvent                               PointerEvent;
-		} params;
-		params.PointerEvent = PointerEvent;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.DragDropOperation.Dragged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17430);
-		
-		struct
-		{
-			struct FPointerEvent                               PointerEvent;
-		} params;
-		params.PointerEvent = PointerEvent;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.DragDropOperation.DragCancelled
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17429);
-		
-		struct
-		{
-			struct FPointerEvent                               PointerEvent;
-		} params;
-		params.PointerEvent = PointerEvent;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDragDropOperation.StaticClass
+	 * 		Name   -> PredefinedFunction UNativeWidgetHost.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDragDropOperation::StaticClass()
+	UClass* UNativeWidgetHost::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1983);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2019);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.ComboBoxString.SetSelectedOption
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UWidgetSwitcherSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UComboBoxString::SetSelectedOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17708);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8272);
 		
 		struct
 		{
-			EVerticalAlignment                                 InVerticalAlignment;
+			class FString                                      Option;
 		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
+		params.Option = Option;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -19211,21 +16488,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetPadding
+	 * 		Name   -> Function UMG.ComboBoxString.SetSelectedIndex
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            Index                                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
+	void UComboBoxString::SetSelectedIndex(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17707);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8271);
 		
 		struct
 		{
-			struct FMargin                                     InPadding;
+			int32_t                                            Index;
 		} params;
-		params.InPadding = InPadding;
+		params.Index = Index;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -19235,21 +16512,45 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment
+	 * 		Name   -> Function UMG.ComboBoxString.RemoveOption
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWidgetSwitcherSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	bool UComboBoxString::RemoveOption(const class FString& Option)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17706);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8270);
 		
 		struct
 		{
-			EHorizontalAlignment                               InHorizontalAlignment;
+			class FString                                      Option;
+			bool                                               ReturnValue;
 		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
+		params.Option = Option;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.RefreshOptions
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::RefreshOptions()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8269);
+		
+		struct
+		{
+		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -19259,14 +16560,358 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetSwitcherSlot.StaticClass
+	 * 		Name   -> DelegateFunction UMG.ComboBoxString.OnSelectionChangedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      SelectedItem                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESelectInfo                                        SelectionType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8267);
+		
+		struct
+		{
+			class FString                                      SelectedItem;
+			ESelectInfo                                        SelectionType;
+		} params;
+		params.SelectedItem = SelectedItem;
+		params.SelectionType = SelectionType;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.ComboBoxString.OnOpeningEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::OnOpeningEvent__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8266);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.IsOpen
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UComboBoxString::IsOpen()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8265);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.GetSelectedOption
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UComboBoxString::GetSelectedOption()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8264);
+		
+		struct
+		{
+			class FString                                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.GetSelectedIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UComboBoxString::GetSelectedIndex()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8263);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.GetOptionCount
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UComboBoxString::GetOptionCount()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8262);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.GetOptionAtIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            Index                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UComboBoxString::GetOptionAtIndex(int32_t Index)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8261);
+		
+		struct
+		{
+			int32_t                                            Index;
+			unsigned char                                      UnknownData_0000[0x4];
+			class FString                                      ReturnValue;
+		} params;
+		params.Index = Index;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.FindOptionIndex
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UComboBoxString::FindOptionIndex(const class FString& Option)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8260);
+		
+		struct
+		{
+			class FString                                      Option;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Option = Option;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.ClearSelection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::ClearSelection()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8259);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.ClearOptions
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::ClearOptions()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8258);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ComboBoxString.AddOption
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      Option                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UComboBoxString::AddOption(const class FString& Option)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8257);
+		
+		struct
+		{
+			class FString                                      Option;
+		} params;
+		params.Option = Option;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UComboBoxString.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetSwitcherSlot::StaticClass()
+	UClass* UComboBoxString::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2066);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1982);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.MouseCursorBinding.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EMouseCursor                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	EMouseCursor UMouseCursorBinding::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17518);
+		
+		struct
+		{
+			EMouseCursor                                       ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMouseCursorBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMouseCursorBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2006);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Overlay.AddChildToOverlay
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UOverlaySlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17519);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			class UOverlaySlot*                                ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UOverlay.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UOverlay::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2020);
 		return ptr;
 	}
 
@@ -19565,6 +17210,1498 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.OverlaySlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UOverlaySlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17522);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.OverlaySlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17521);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.OverlaySlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UOverlaySlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17520);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UOverlaySlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UOverlaySlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2021);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetValue(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8407);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMinValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMinValue(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8406);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMinSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMinSliderValue(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8405);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMinFractionalDigits
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMinFractionalDigits(int32_t NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8404);
+		
+		struct
+		{
+			int32_t                                            NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMaxValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMaxValue(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8403);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMaxSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMaxSliderValue(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8402);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetMaxFractionalDigits
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetMaxFractionalDigits(int32_t NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8401);
+		
+		struct
+		{
+			int32_t                                            NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetForegroundColor
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSlateColor                                 InForegroundColor                                          (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8400);
+		
+		struct
+		{
+			struct FSlateColor                                 InForegroundColor;
+		} params;
+		params.InForegroundColor = InForegroundColor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetDelta
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetDelta(float NewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8399);
+		
+		struct
+		{
+			float                                              NewValue;
+		} params;
+		params.NewValue = NewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.SetAlwaysUsesDeltaSnap
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bNewValue                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::SetAlwaysUsesDeltaSnap(bool bNewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8398);
+		
+		struct
+		{
+			bool                                               bNewValue;
+		} params;
+		params.bNewValue = bNewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxValueCommittedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, ETextCommit CommitMethod)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8397);
+		
+		struct
+		{
+			float                                              InValue;
+			ETextCommit                                        CommitMethod;
+		} params;
+		params.InValue = InValue;
+		params.CommitMethod = CommitMethod;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxValueChangedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InValue                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8396);
+		
+		struct
+		{
+			float                                              InValue;
+		} params;
+		params.InValue = InValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.SpinBox.OnSpinBoxBeginSliderMovement__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::OnSpinBoxBeginSliderMovement__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8395);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8394);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMinValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetMinValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8393);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMinSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetMinSliderValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8392);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMinFractionalDigits
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t USpinBox::GetMinFractionalDigits()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8391);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMaxValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetMaxValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8390);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMaxSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetMaxSliderValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8389);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetMaxFractionalDigits
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t USpinBox::GetMaxFractionalDigits()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8388);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetDelta
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USpinBox::GetDelta()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8387);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.GetAlwaysUsesDeltaSnap
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool USpinBox::GetAlwaysUsesDeltaSnap()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8386);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.ClearMinValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::ClearMinValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8385);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.ClearMinSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::ClearMinSliderValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8384);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.ClearMaxValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::ClearMaxValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8383);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.SpinBox.ClearMaxSliderValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void USpinBox::ClearMaxSliderValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8382);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USpinBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USpinBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2040);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.DragDropOperation.Drop
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17431);
+		
+		struct
+		{
+			struct FPointerEvent                               PointerEvent;
+		} params;
+		params.PointerEvent = PointerEvent;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.DragDropOperation.Dragged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17430);
+		
+		struct
+		{
+			struct FPointerEvent                               PointerEvent;
+		} params;
+		params.PointerEvent = PointerEvent;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.DragDropOperation.DragCancelled
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FPointerEvent                               PointerEvent                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17429);
+		
+		struct
+		{
+			struct FPointerEvent                               PointerEvent;
+		} params;
+		params.PointerEvent = PointerEvent;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDragDropOperation.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDragDropOperation::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1983);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBinding.GetTextValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UTextBinding::GetTextValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17605);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBinding.GetStringValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UTextBinding::GetStringValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17604);
+		
+		struct
+		{
+			class FString                                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTextBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTextBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2041);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ProgressBar.SetPercent
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InPercent                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UProgressBar::SetPercent(float InPercent)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17525);
+		
+		struct
+		{
+			float                                              InPercent;
+		} params;
+		params.InPercent = InPercent;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ProgressBar.SetIsMarquee
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InbIsMarquee                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UProgressBar::SetIsMarquee(bool InbIsMarquee)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17524);
+		
+		struct
+		{
+			bool                                               InbIsMarquee;
+		} params;
+		params.InbIsMarquee = InbIsMarquee;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.ProgressBar.SetFillColorAndOpacity
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FLinearColor                                InColor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17523);
+		
+		struct
+		{
+			struct FLinearColor                                InColor;
+		} params;
+		params.InColor = InColor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UProgressBar.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UProgressBar::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2022);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetTextTransformPolicy
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ETextTransformPolicy                               InTransformPolicy                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17618);
+		
+		struct
+		{
+			ETextTransformPolicy                               InTransformPolicy;
+		} params;
+		params.InTransformPolicy = InTransformPolicy;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetText(const class FText& InText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17617);
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetStrikeBrush
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSlateBrush                                 InStrikeBrush                                              (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetStrikeBrush(const struct FSlateBrush& InStrikeBrush)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17616);
+		
+		struct
+		{
+			struct FSlateBrush                                 InStrikeBrush;
+		} params;
+		params.InStrikeBrush = InStrikeBrush;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetShadowOffset
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector2D                      InShadowOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetShadowOffset(const struct FVector2D& InShadowOffset)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17615);
+		
+		struct
+		{
+			struct FVector2D                      InShadowOffset;
+		} params;
+		params.InShadowOffset = InShadowOffset;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetShadowColorAndOpacity
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FLinearColor                                InShadowColorAndOpacity                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17614);
+		
+		struct
+		{
+			struct FLinearColor                                InShadowColorAndOpacity;
+		} params;
+		params.InShadowColorAndOpacity = InShadowColorAndOpacity;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetOpacity
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InOpacity                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetOpacity(float InOpacity)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17613);
+		
+		struct
+		{
+			float                                              InOpacity;
+		} params;
+		params.InOpacity = InOpacity;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetMinDesiredWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinDesiredWidth                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17612);
+		
+		struct
+		{
+			float                                              InMinDesiredWidth;
+		} params;
+		params.InMinDesiredWidth = InMinDesiredWidth;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetFont
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSlateFontInfo                              InFontInfo                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17611);
+		
+		struct
+		{
+			struct FSlateFontInfo                              InFontInfo;
+		} params;
+		params.InFontInfo = InFontInfo;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetColorAndOpacity
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSlateColor                                 InColorAndOpacity                                          (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17610);
+		
+		struct
+		{
+			struct FSlateColor                                 InColorAndOpacity;
+		} params;
+		params.InColorAndOpacity = InColorAndOpacity;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.SetAutoWrapText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InAutoTextWrap                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTextBlock::SetAutoWrapText(bool InAutoTextWrap)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17609);
+		
+		struct
+		{
+			bool                                               InAutoTextWrap;
+		} params;
+		params.InAutoTextWrap = InAutoTextWrap;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.GetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UTextBlock::GetText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17608);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.GetDynamicOutlineMaterial
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMaterialInstanceDynamic* UTextBlock::GetDynamicOutlineMaterial()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17607);
+		
+		struct
+		{
+			class UMaterialInstanceDynamic*                    ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TextBlock.GetDynamicFontMaterial
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMaterialInstanceDynamic*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMaterialInstanceDynamic* UTextBlock::GetDynamicFontMaterial()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17606);
+		
+		struct
+		{
+			class UMaterialInstanceDynamic*                    ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTextBlock.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTextBlock::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2042);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Throbber.SetNumberOfPieces
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            InNumberOfPieces                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UThrobber::SetNumberOfPieces(int32_t InNumberOfPieces)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17622);
+		
+		struct
+		{
+			int32_t                                            InNumberOfPieces;
+		} params;
+		params.InNumberOfPieces = InNumberOfPieces;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Throbber.SetAnimateVertically
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInAnimateVertically                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17621);
+		
+		struct
+		{
+			bool                                               bInAnimateVertically;
+		} params;
+		params.bInAnimateVertically = bInAnimateVertically;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Throbber.SetAnimateOpacity
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInAnimateOpacity                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17620);
+		
+		struct
+		{
+			bool                                               bInAnimateOpacity;
+		} params;
+		params.bInAnimateOpacity = bInAnimateOpacity;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Throbber.SetAnimateHorizontally
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bInAnimateHorizontally                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17619);
+		
+		struct
+		{
+			bool                                               bInAnimateHorizontally;
+		} params;
+		params.bInAnimateHorizontally = bInAnimateHorizontally;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UThrobber.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UThrobber::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2043);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TileView.SetEntryWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewWidth                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTileView::SetEntryWidth(float NewWidth)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17626);
+		
+		struct
+		{
+			float                                              NewWidth;
+		} params;
+		params.NewWidth = NewWidth;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TileView.SetEntryHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              NewHeight                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTileView::SetEntryHeight(float NewHeight)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17625);
+		
+		struct
+		{
+			float                                              NewHeight;
+		} params;
+		params.NewHeight = NewHeight;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TileView.GetEntryWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UTileView::GetEntryWidth()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17624);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TileView.GetEntryHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UTileView::GetEntryHeight()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17623);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTileView.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTileView::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2044);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function UMG.DynamicEntryBoxBase.SetRadialSettings
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -19675,14 +18812,159 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWidgetTree.StaticClass
+	 * 		Name   -> Function UMG.TreeView.SetItemExpansion
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     Item                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bExpandItem                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UTreeView::SetItemExpansion(class UObject* Item, bool bExpandItem)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17629);
+		
+		struct
+		{
+			class UObject*                                     Item;
+			bool                                               bExpandItem;
+		} params;
+		params.Item = Item;
+		params.bExpandItem = bExpandItem;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TreeView.ExpandAll
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UTreeView::ExpandAll()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17628);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.TreeView.CollapseAll
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UTreeView::CollapseAll()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17627);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTreeView.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWidgetTree::StaticClass()
+	UClass* UTreeView::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2067);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2045);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UMGSequencePlayer.SetUserTag
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        InUserTag                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UUMGSequencePlayer::SetUserTag(const class FName& InUserTag)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17631);
+		
+		struct
+		{
+			class FName                                        InUserTag;
+		} params;
+		params.InUserTag = InUserTag;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UMGSequencePlayer.GetUserTag
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FName UUMGSequencePlayer::GetUserTag()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17630);
+		
+		struct
+		{
+			class FName                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UUMGSequencePlayer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UUMGSequencePlayer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2046);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UUMGSequenceTickManager.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UUMGSequenceTickManager::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2047);
 		return ptr;
 	}
 
@@ -19802,15 +19084,134 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarArea.SetVerticalAlignment
+	 * 		Name   -> Function UMG.UniformGridPanel.SetSlotPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InSlotPadding                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17635);
+		
+		struct
+		{
+			struct FMargin                                     InSlotPadding;
+		} params;
+		params.InSlotPadding = InSlotPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UniformGridPanel.SetMinDesiredSlotWidth
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinDesiredSlotWidth                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17634);
+		
+		struct
+		{
+			float                                              InMinDesiredSlotWidth;
+		} params;
+		params.InMinDesiredSlotWidth = InMinDesiredSlotWidth;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UniformGridPanel.SetMinDesiredSlotHeight
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InMinDesiredSlotHeight                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17633);
+		
+		struct
+		{
+			float                                              InMinDesiredSlotHeight;
+		} params;
+		params.InMinDesiredSlotHeight = InMinDesiredSlotHeight;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UniformGridPanel.AddChildToUniformGrid
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UUniformGridSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content, int32_t InRow, int32_t InColumn)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17632);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			int32_t                                            InRow;
+			int32_t                                            InColumn;
+			class UUniformGridSlot*                            ReturnValue;
+		} params;
+		params.Content = Content;
+		params.InRow = InRow;
+		params.InColumn = InColumn;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UUniformGridPanel.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UUniformGridPanel::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2048);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.UniformGridSlot.SetVerticalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UWindowTitleBarArea::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	void UUniformGridSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17711);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17639);
 		
 		struct
 		{
@@ -19826,21 +19227,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarArea.SetPadding
+	 * 		Name   -> Function UMG.UniformGridSlot.SetRow
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InRow                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
+	void UUniformGridSlot::SetRow(int32_t InRow)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17710);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17638);
 		
 		struct
 		{
-			struct FMargin                                     InPadding;
+			int32_t                                            InRow;
 		} params;
-		params.InPadding = InPadding;
+		params.InRow = InRow;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -19850,15 +19251,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarArea.SetHorizontalAlignment
+	 * 		Name   -> Function UMG.UniformGridSlot.SetHorizontalAlignment
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UWindowTitleBarArea::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	void UUniformGridSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17709);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17637);
 		
 		struct
 		{
@@ -19874,14 +19275,189 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWindowTitleBarArea.StaticClass
+	 * 		Name   -> Function UMG.UniformGridSlot.SetColumn
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            InColumn                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UUniformGridSlot::SetColumn(int32_t InColumn)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17636);
+		
+		struct
+		{
+			int32_t                                            InColumn;
+		} params;
+		params.InColumn = InColumn;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UUniformGridSlot.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWindowTitleBarArea::StaticClass()
+	UClass* UUniformGridSlot::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2068);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2049);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.VerticalBox.AddChildToVerticalBox
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UVerticalBoxSlot*                            ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Content)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17640);
+		
+		struct
+		{
+			class UWidget*                                     Content;
+			class UVerticalBoxSlot*                            ReturnValue;
+		} params;
+		params.Content = Content;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVerticalBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVerticalBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2050);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.VerticalBoxSlot.SetVerticalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVerticalBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17644);
+		
+		struct
+		{
+			EVerticalAlignment                                 InVerticalAlignment;
+		} params;
+		params.InVerticalAlignment = InVerticalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.VerticalBoxSlot.SetSize
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSlateChildSize                             InSize                                                     (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17643);
+		
+		struct
+		{
+			struct FSlateChildSize                             InSize;
+		} params;
+		params.InSize = InSize;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.VerticalBoxSlot.SetPadding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17642);
+		
+		struct
+		{
+			struct FMargin                                     InPadding;
+		} params;
+		params.InPadding = InPadding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.VerticalBoxSlot.SetHorizontalAlignment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVerticalBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17641);
+		
+		struct
+		{
+			EHorizontalAlignment                               InHorizontalAlignment;
+		} params;
+		params.InHorizontalAlignment = InHorizontalAlignment;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVerticalBoxSlot.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVerticalBoxSlot::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2051);
 		return ptr;
 	}
 
@@ -20097,132 +19673,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.Viewport.Spawn
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class AActor*                                      ActorClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class AActor*                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWindowTitleBarAreaSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	class AActor* UViewport::Spawn(class AActor* ActorClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17714);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17650);
 		
 		struct
 		{
-			EVerticalAlignment                                 InVerticalAlignment;
+			class AActor*                                      ActorClass;
+			class AActor*                                      ReturnValue;
 		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17713);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWindowTitleBarAreaSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17712);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWindowTitleBarAreaSlot.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UWindowTitleBarAreaSlot::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2069);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBox.SetInnerSlotPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector2D                      InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17716);
-		
-		struct
-		{
-			struct FVector2D                      InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBox.AddChildToWrapBox
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UWidget*                                     Content                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UWrapBoxSlot*                                ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UWrapBoxSlot* UWrapBox::AddChildToWrapBox(class UWidget* Content)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17715);
-		
-		struct
-		{
-			class UWidget*                                     Content;
-			class UWrapBoxSlot*                                ReturnValue;
-		} params;
-		params.Content = Content;
+		params.ActorClass = ActorClass;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -20234,148 +19700,682 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWrapBox.StaticClass
+	 * 		Name   -> Function UMG.Viewport.SetViewRotation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FRotator                       Rotation                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UViewport::SetViewRotation(const struct FRotator& Rotation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17649);
+		
+		struct
+		{
+			struct FRotator                       Rotation;
+		} params;
+		params.Rotation = Rotation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Viewport.SetViewLocation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                        Location                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UViewport::SetViewLocation(const struct FVector& Location)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17648);
+		
+		struct
+		{
+			struct FVector                        Location;
+		} params;
+		params.Location = Location;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Viewport.GetViewRotation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FRotator                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FRotator UViewport::GetViewRotation()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17647);
+		
+		struct
+		{
+			struct FRotator                       ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Viewport.GetViewportWorld
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UWorld*                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UWorld* UViewport::GetViewportWorld()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17646);
+		
+		struct
+		{
+			class UWorld*                                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.Viewport.GetViewLocation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector UViewport::GetViewLocation()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17645);
+		
+		struct
+		{
+			struct FVector                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UViewport.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWrapBox::StaticClass()
+	UClass* UViewport::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2070);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2052);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBoxSlot.SetVerticalAlignment
+	 * 		Name   -> Function UMG.VisibilityBinding.GetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		EVerticalAlignment                                 InVerticalAlignment                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		ESlateVisibility                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UWrapBoxSlot::SetVerticalAlignment(EVerticalAlignment InVerticalAlignment)
+	ESlateVisibility UVisibilityBinding::GetValue()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17721);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17651);
 		
 		struct
 		{
-			EVerticalAlignment                                 InVerticalAlignment;
+			ESlateVisibility                                   ReturnValue;
 		} params;
-		params.InVerticalAlignment = InVerticalAlignment;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBoxSlot.SetPadding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMargin                                     InPadding                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17720);
-		
-		struct
-		{
-			struct FMargin                                     InPadding;
-		} params;
-		params.InPadding = InPadding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBoxSlot.SetHorizontalAlignment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EHorizontalAlignment                               InHorizontalAlignment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWrapBoxSlot::SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17719);
-		
-		struct
-		{
-			EHorizontalAlignment                               InHorizontalAlignment;
-		} params;
-		params.InHorizontalAlignment = InHorizontalAlignment;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              InFillSpanWhenLessThan                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17718);
-		
-		struct
-		{
-			float                                              InFillSpanWhenLessThan;
-		} params;
-		params.InFillSpanWhenLessThan = InFillSpanWhenLessThan;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function UMG.WrapBoxSlot.SetFillEmptySpace
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InbFillEmptySpace                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17717);
-		
-		struct
-		{
-			bool                                               InbFillEmptySpace;
-		} params;
-		params.InbFillEmptySpace = InbFillEmptySpace;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UWrapBoxSlot.StaticClass
+	 * 		Name   -> PredefinedFunction UVisibilityBinding.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UWrapBoxSlot::StaticClass()
+	UClass* UVisibilityBinding::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2071);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2053);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.UnbindFromAnimationStarted
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::UnbindFromAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17659);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+			class FScriptDelegate                              Delegate;
+		} params;
+		params.Widget = Widget;
+		params.Delegate = Delegate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.UnbindFromAnimationFinished
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::UnbindFromAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17658);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+			class FScriptDelegate                              Delegate;
+		} params;
+		params.Widget = Widget;
+		params.Delegate = Delegate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.UnbindAllFromAnimationStarted
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::UnbindAllFromAnimationStarted(class UUserWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17657);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.UnbindAllFromAnimationFinished
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::UnbindAllFromAnimationFinished(class UUserWidget* Widget)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17656);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+		} params;
+		params.Widget = Widget;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.GetStartTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UWidgetAnimation::GetStartTime()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17655);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.GetEndTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UWidgetAnimation::GetEndTime()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17654);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.BindToAnimationStarted
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::BindToAnimationStarted(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17653);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+			class FScriptDelegate                              Delegate;
+		} params;
+		params.Widget = Widget;
+		params.Delegate = Delegate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.WidgetAnimation.BindToAnimationFinished
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UUserWidget*                                 Widget                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              Delegate                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UWidgetAnimation::BindToAnimationFinished(class UUserWidget* Widget, const class FScriptDelegate& Delegate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17652);
+		
+		struct
+		{
+			class UUserWidget*                                 Widget;
+			class FScriptDelegate                              Delegate;
+		} params;
+		params.Widget = Widget;
+		params.Delegate = Delegate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWidgetAnimation.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWidgetAnimation::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2054);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetText(const class FText& InText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8309);
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetJustification
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ETextJustify                                       InJustification                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetJustification(ETextJustify InJustification)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8308);
+		
+		struct
+		{
+			ETextJustify                                       InJustification;
+		} params;
+		params.InJustification = InJustification;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetIsReadOnly
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bReadOnly                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetIsReadOnly(bool bReadOnly)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8307);
+		
+		struct
+		{
+			bool                                               bReadOnly;
+		} params;
+		params.bReadOnly = bReadOnly;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetIsPassword
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               bIsPassword                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetIsPassword(bool bIsPassword)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8306);
+		
+		struct
+		{
+			bool                                               bIsPassword;
+		} params;
+		params.bIsPassword = bIsPassword;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetHintText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InText                                                     (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetHintText(const class FText& InText)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8305);
+		
+		struct
+		{
+			class FText                                        InText;
+		} params;
+		params.InText = InText;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.SetError
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        InError                                                    (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::SetError(const class FText& InError)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8304);
+		
+		struct
+		{
+			class FText                                        InError;
+		} params;
+		params.InError = InError;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.EditableTextBox.OnEditableTextBoxCommittedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		ETextCommit                                        CommitMethod                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8303);
+		
+		struct
+		{
+			class FText                                        Text;
+			ETextCommit                                        CommitMethod;
+		} params;
+		params.Text = Text;
+		params.CommitMethod = CommitMethod;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction UMG.EditableTextBox.OnEditableTextBoxChangedEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        Text                                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8302);
+		
+		struct
+		{
+			class FText                                        Text;
+		} params;
+		params.Text = Text;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.HasError
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UEditableTextBox::HasError()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8301);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.GetText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UEditableTextBox::GetText()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8300);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function UMG.EditableTextBox.ClearError
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UEditableTextBox::ClearError()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(8299);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableTextBox.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableTextBox::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1987);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UWidgetAnimationDelegateBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UWidgetAnimationDelegateBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2056);
 		return ptr;
 	}
 

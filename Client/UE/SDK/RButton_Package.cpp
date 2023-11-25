@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void URButton_C::ShouldInvertHoverColors(bool Invert)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29142);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49391);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void URButton_C::SetDefaultColor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29141);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49390);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void URButton_C::SetSelectedColor()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29140);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49389);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void URButton_C::BndEvt__Btn_K2Node_ComponentBoundEvent_23_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29139);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49388);
 		
 		struct
 		{
@@ -107,7 +107,7 @@ namespace SDK
 	 */
 	void URButton_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29138);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49387);
 		
 		struct
 		{
@@ -128,7 +128,7 @@ namespace SDK
 	 */
 	void URButton_C::BndEvt__Btn_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29137);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49386);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void URButton_C::OnHovered()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29136);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49385);
 		
 		struct
 		{
@@ -170,7 +170,7 @@ namespace SDK
 	 */
 	void URButton_C::OnUnhovered()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29135);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49384);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void URButton_C::ExecuteUbergraph_RButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29134);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49383);
 		
 		struct
 		{
@@ -216,7 +216,7 @@ namespace SDK
 	 */
 	UClass* URButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29133);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49382);
 		return ptr;
 	}
 

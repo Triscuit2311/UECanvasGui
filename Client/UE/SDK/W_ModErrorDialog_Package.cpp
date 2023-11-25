@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ModErrorDialog_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88703);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88707);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_ModErrorDialog_C::BndEvt__W_ModErrorDialog_W_Button_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88702);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88706);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_ModErrorDialog_C::SetError(const class FText& Message)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88701);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88705);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_ModErrorDialog_C::ExecuteUbergraph_W_ModErrorDialog(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88700);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88704);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_ModErrorDialog_C::OnClosed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88699);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88703);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	UClass* UW_ModErrorDialog_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88698);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88702);
 		return ptr;
 	}
 

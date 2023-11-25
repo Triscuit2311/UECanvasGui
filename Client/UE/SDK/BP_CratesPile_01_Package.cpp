@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* ABP_CratesPile_01_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(133140);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(126288);
 		return ptr;
 	}
 

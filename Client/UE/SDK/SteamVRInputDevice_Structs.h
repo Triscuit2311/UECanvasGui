@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,13 +15,25 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
-	 * Enum SteamVRInputDevice.ESteamVRHand
+	 * Enum SteamVRInputDevice.ESkeletalSummaryDataType
 	 */
-	enum class ESteamVRHand : uint8_t
+	enum class ESkeletalSummaryDataType : uint8_t
 	{
-		VR_Left  = 0,
-		VR_Right = 1,
-		VR_MAX   = 2
+		VR_SummaryType_FromAnimation = 0,
+		VR_SummaryType_FromDevice    = 1,
+		VR_SummaryType_MAX           = 2
+	};
+
+	/**
+	 * Enum SteamVRInputDevice.ESteamVRInputStringBits
+	 */
+	enum class ESteamVRInputStringBits : uint8_t
+	{
+		VR_InputString_Hand           = 0,
+		VR_InputString_ControllerType = 1,
+		VR_InputString_InputSource    = 2,
+		VR_InputString_All            = 3,
+		VR_InputString_MAX            = 4
 	};
 
 	/**
@@ -66,25 +78,13 @@ namespace SDK
 	};
 
 	/**
-	 * Enum SteamVRInputDevice.ESkeletalSummaryDataType
+	 * Enum SteamVRInputDevice.ESteamVRHand
 	 */
-	enum class ESkeletalSummaryDataType : uint8_t
+	enum class ESteamVRHand : uint8_t
 	{
-		VR_SummaryType_FromAnimation = 0,
-		VR_SummaryType_FromDevice    = 1,
-		VR_SummaryType_MAX           = 2
-	};
-
-	/**
-	 * Enum SteamVRInputDevice.ESteamVRInputStringBits
-	 */
-	enum class ESteamVRInputStringBits : uint8_t
-	{
-		VR_InputString_Hand           = 0,
-		VR_InputString_ControllerType = 1,
-		VR_InputString_InputSource    = 2,
-		VR_InputString_All            = 3,
-		VR_InputString_MAX            = 4
+		VR_Left  = 0,
+		VR_Right = 1,
+		VR_MAX   = 2
 	};
 
 	// --------------------------------------------------
@@ -97,37 +97,37 @@ namespace SDK
 	struct FSteamVRSkeletonTransform
 	{
 	public:
-		struct PCoreUObject_FTransform                               Root;                                                    // 0x0000(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               wrist;                                                   // 0x0030(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Thumb_1;                                                 // 0x0060(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Thumb_2;                                                 // 0x0090(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Thumb_3;                                                 // 0x00C0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Thumb_4;                                                 // 0x00F0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Index_1;                                                 // 0x0120(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Index_2;                                                 // 0x0150(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Index_3;                                                 // 0x0180(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Index_4;                                                 // 0x01B0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Index_5;                                                 // 0x01E0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Middle_1;                                                // 0x0210(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Middle_2;                                                // 0x0240(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Middle_3;                                                // 0x0270(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Middle_4;                                                // 0x02A0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Middle_5;                                                // 0x02D0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Ring_1;                                                  // 0x0300(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Ring_2;                                                  // 0x0330(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Ring_3;                                                  // 0x0360(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Ring_4;                                                  // 0x0390(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Ring_5;                                                  // 0x03C0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Pinky_1;                                                 // 0x03F0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Pinky_2;                                                 // 0x0420(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Pinky_3;                                                 // 0x0450(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Pinky_4;                                                 // 0x0480(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Pinky_5;                                                 // 0x04B0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Aux_Thumb;                                               // 0x04E0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Aux_Index;                                               // 0x0510(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Aux_Middle;                                              // 0x0540(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Aux_Ring;                                                // 0x0570(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               Aux_Pinky;                                               // 0x05A0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Root;                                                    // 0x0000(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               wrist;                                                   // 0x0030(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Thumb_1;                                                 // 0x0060(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Thumb_2;                                                 // 0x0090(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Thumb_3;                                                 // 0x00C0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Thumb_4;                                                 // 0x00F0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Index_1;                                                 // 0x0120(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Index_2;                                                 // 0x0150(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Index_3;                                                 // 0x0180(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Index_4;                                                 // 0x01B0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Index_5;                                                 // 0x01E0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Middle_1;                                                // 0x0210(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Middle_2;                                                // 0x0240(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Middle_3;                                                // 0x0270(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Middle_4;                                                // 0x02A0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Middle_5;                                                // 0x02D0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Ring_1;                                                  // 0x0300(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Ring_2;                                                  // 0x0330(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Ring_3;                                                  // 0x0360(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Ring_4;                                                  // 0x0390(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Ring_5;                                                  // 0x03C0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Pinky_1;                                                 // 0x03F0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Pinky_2;                                                 // 0x0420(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Pinky_3;                                                 // 0x0450(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Pinky_4;                                                 // 0x0480(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Pinky_5;                                                 // 0x04B0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Aux_Thumb;                                               // 0x04E0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Aux_Index;                                               // 0x0510(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Aux_Middle;                                              // 0x0540(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Aux_Ring;                                                // 0x0570(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Aux_Pinky;                                               // 0x05A0(0x0030) Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**

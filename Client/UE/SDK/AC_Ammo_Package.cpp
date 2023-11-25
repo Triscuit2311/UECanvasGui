@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	float UAC_Ammo_C::CalculateCurve(float X)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85420);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84300);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	void UAC_Ammo_C::ReloadCurve(float X, float* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85419);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84299);
 		
 		struct
 		{
@@ -78,7 +78,7 @@ namespace SDK
 	 */
 	float UAC_Ammo_C::Score(const struct FAIActionDecisionContext& Context, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85418);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84298);
 		
 		struct
 		{
@@ -109,7 +109,7 @@ namespace SDK
 	 */
 	UClass* UAC_Ammo_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85417);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84297);
 		return ptr;
 	}
 

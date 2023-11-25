@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::IsSWATDead(ESquadPosition InSquadPosition, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27129);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43792);
 		
 		struct
 		{
@@ -52,7 +52,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::IsSWATWaiting(class UBaseActivity** InActivity, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27128);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43791);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::HideDuplicateCommandStatus(class UBaseActivity** InActivityA, class UBaseActivity** InActivityB, class UW_SWATCommandStatus_C** StatusWidgetToHide)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27127);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43790);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::SetCommandStatusInfo(class UBaseActivity** InActivity, class UW_SWATCommandStatus_C** CommandStatusWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27126);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43789);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::OnActivitySoftComplete(class UBaseActivity* Activity, class ACyberneticController* Controller)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27125);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43788);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::OnQueuedActivitySoftComplete(class UBaseActivity* Activity, class ACyberneticController* Controller)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27124);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43787);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatusAllPlayerHealth()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27123);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43786);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatus()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27122);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43785);
 		
 		struct
 		{
@@ -240,7 +240,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::InitializeSWATStatus()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27121);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43784);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatusPlayerHealth(class UW_SWATCommandStatus_C* InSWATCommandStatus, ESquadPosition InSquadPosition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27120);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43783);
 		
 		struct
 		{
@@ -289,7 +289,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatusCommands()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27119);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43782);
 		
 		struct
 		{
@@ -313,7 +313,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatusCommandName(class UW_SWATCommandStatus_C* InSWATCommandWidget, class UBaseActivity** SquadActivity, ESquadPosition InSquadPosition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27118);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43781);
 		
 		struct
 		{
@@ -345,7 +345,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateSWATStatusPlayerNameFromSquadPosition(class UW_SWATCommandStatus_C* InSWATCommandWidget, ESquadPosition InSquadPosition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27117);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43780);
 		
 		struct
 		{
@@ -371,7 +371,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27116);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43779);
 		
 		struct
 		{
@@ -394,7 +394,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::OnDefaultCommandIssued(class APlayerCharacter* Issuer, ESwatCommand CommandIssued)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27115);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43778);
 		
 		struct
 		{
@@ -419,7 +419,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::UpdateStatus()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27114);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43777);
 		
 		struct
 		{
@@ -441,7 +441,7 @@ namespace SDK
 	 */
 	void UW_SWATTeamStatus_C::ExecuteUbergraph_W_SWATTeamStatus(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27113);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43776);
 		
 		struct
 		{
@@ -464,7 +464,7 @@ namespace SDK
 	 */
 	UClass* UW_SWATTeamStatus_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27112);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43775);
 		return ptr;
 	}
 

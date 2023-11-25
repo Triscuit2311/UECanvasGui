@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -11,6 +11,41 @@
 
 namespace SDK
 {
+
+	/**
+	 * PredefinedClass BasicTypes.FUObjectItem
+	 * Size -> 0x0000
+	 */
+	class FUObjectItem
+	{
+	public:
+		class UObject* Object;                                                  // 0x0000(0x0008)
+		int32_t                                                      Flags;                                                   // 0x0008(0x0004)
+		int32_t                                                      ClusterIndex;                                            // 0x000C(0x0004)
+		int32_t                                                      SerialNumber;                                            // 0x0010(0x0004)
+		unsigned char                                                pad_5110[0x04];                                          // 0x0014(0x0004)
+
+	public:
+		bool IsUnreachable() const;
+		bool IsPendingKill() const;
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.FWeakObjectPtr
+	 * Size -> 0x0000
+	 */
+	class FWeakObjectPtr
+	{
+	public:
+		int32_t                                                      ObjectIndex;                                             // 0x0000(0x0000)
+		int32_t                                                      ObjectSerialNumber;                                      // 0x0000(0x0000)
+
+	public:
+		bool SerialNumbersMatch(FUObjectItem* objectItem) const;
+		bool IsValid() const;
+		UObject* Get() const;
+	};
+	
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
@@ -18,48 +53,48 @@ namespace SDK
 	 * PredefinedClass BasicTypes.TArray
 	 * Size -> 0x0000
 	 */
-	// template<typename T>
-	// class TArray
-	// {
-	// private:
-	// 	T*                                                           _data;                                                   // 0x0000(0x0000)
-	// 	int32_t                                                      _count;                                                  // 0x0000(0x0000)
-	// 	int32_t                                                      _max;                                                    // 0x0000(0x0000)
-	//
-	// 	friend class FString;
-	//
-	// public:
-	// 	TArray()
-	// 	{
-	// 		_data = nullptr;
-	// 		_count = 0;
-	// 		_max = 0;
-	// 	}
-	// 	T* Data() const
-	// 	{
-	// 		return _data;
-	// 	}
-	// 	int32_t Count() const
-	// 	{
-	// 		return _count;
-	// 	}
-	// 	int32_t Max() const
-	// 	{
-	// 		return _max;
-	// 	}
-	// 	bool IsValidIndex(int32_t i) const
-	// 	{
-	// 		return i < _count;
-	// 	}
-	// 	T& operator[](int32_t i)
-	// 	{
-	// 		return _data[i];
-	// 	}
-	// 	const T& operator[](int32_t i) const
-	// 	{
-	// 		return _data[i];
-	// 	}
-	// };
+	template<typename T>
+	class TArray
+	{
+	private:
+		T*                                                           _data;                                                   // 0x0000(0x0000)
+		int32_t                                                      _count;                                                  // 0x0000(0x0000)
+		int32_t                                                      _max;                                                    // 0x0000(0x0000)
+
+		friend class FString;
+
+	public:
+		TArray()
+		{
+			_data = nullptr;
+			_count = 0;
+			_max = 0;
+		}
+		T* Data() const
+		{
+			return _data;
+		}
+		int32_t Count() const
+		{
+			return _count;
+		}
+		int32_t Max() const
+		{
+			return _max;
+		}
+		bool IsValidIndex(int32_t i) const
+		{
+			return i < _count;
+		}
+		T& operator[](int32_t i)
+		{
+			return _data[i];
+		}
+		const T& operator[](int32_t i) const
+		{
+			return _data[i];
+		}
+	};
 
 	/**
 	 * PredefinedClass BasicTypes.TBitArray
@@ -128,23 +163,6 @@ namespace SDK
 		std::wstring ToStringW() const;
 	};
 
-	/**
-	 * PredefinedClass BasicTypes.FUObjectItem
-	 * Size -> 0x0000
-	 */
-	class FUObjectItem
-	{
-	public:
-		class UObject*                                               Object;                                                  // 0x0000(0x0008)
-		int32_t                                                      Flags;                                                   // 0x0008(0x0004)
-		int32_t                                                      ClusterIndex;                                            // 0x000C(0x0004)
-		int32_t                                                      SerialNumber;                                            // 0x0010(0x0004)
-		unsigned char                                                pad_9383[0x04];                                          // 0x0014(0x0004)
-
-	public:
-		bool IsUnreachable() const;
-		bool IsPendingKill() const;
-	};
 
 	/**
 	 * PredefinedClass BasicTypes.TUObjectArray
@@ -477,19 +495,6 @@ namespace SDK
 		TSet<TPair<Key, Value>>                                      Data;                                                    // 0x0000(0x0000)
 	};
 
-	class FWeakObjectPtr
-	{
-	public:
-		int32_t                                                      ObjectIndex;                                             // 0x0000(0x0000)
-		int32_t                                                      ObjectSerialNumber;                                      // 0x0000(0x0000)
-
-	public:
-		bool SerialNumbersMatch(FUObjectItem* objectItem) const;
-		bool IsValid() const;
-		UObject* Get() const;
-	};
-
-
 	/**
 	 * PredefinedClass BasicTypes.TWeakObjectPtr
 	 * Size -> 0x0000
@@ -538,8 +543,15 @@ namespace SDK
 		}
 	};
 
-
-
+	/**
+	 * PredefinedClass BasicTypes.TAutoWeakObjectPtr
+	 * Size -> 0x0000
+	 */
+	template<class T>
+	class TAutoWeakObjectPtr : public TAutoPointer<T, TWeakObjectPtr<T>>
+	{
+		friend class FString;
+	};
 
 	/**
 	 * PredefinedClass BasicTypes.TPersistentObjectPtr
@@ -554,58 +566,10 @@ namespace SDK
 		TObjectID                                                    ObjectID;                                                // 0x0000(0x0000)
 	};
 
-	// /**
-	//  * PredefinedClass BasicTypes.FAssetPtr
-	//  * Size -> 0x0000
-	//  */
-	// class FAssetPtr : public TPersistentObjectPtr<FStringAssetReference_>
-	// {
-	// };
-	//
-	// /**
-	//  * PredefinedClass BasicTypes.TAssetPtr
-	//  * Size -> 0x0000
-	//  */
-	// template<typename ObjectType>
-	// class TAssetPtr : public FAssetPtr
-	// {
-	// };
-
 	/**
-	 * PredefinedClass BasicTypes.TAssetClassPtr
-	 * Size -> 0x0000
-	 */
-	template<typename ClassType>
-	class TAssetClassPtr
-	{
-	private:
-		unsigned char                                                Unknown_Data[0x20];                                      // 0x0000(0x0000)
-	};
-
-
-	/**
- * PredefinedClass BasicTypes.FLazyObjectPtr
+ * PredefinedClass BasicTypes.FStringAssetReference_
  * Size -> 0x0000
  */
-	template<typename T> 
-	class FLazyObjectPtr : public TPersistentObjectPtr<T>
-	{
-	};
-
-
-	/**
-	 * PredefinedClass BasicTypes.TLazyObjectPtr
-	 * Size -> 0x0000
-	 */
-	template<typename ObjectType>
-	class TLazyObjectPtr : public FLazyObjectPtr<ObjectType>
-	{
-	};
-
-	/**
-	 * PredefinedClass BasicTypes.FStringAssetReference_
-	 * Size -> 0x0000
-	 */
 	class FStringAssetReference_
 	{
 	private:
@@ -623,6 +587,53 @@ namespace SDK
 	};
 
 	/**
+ * PredefinedClass BasicTypes.FLazyObjectPtr
+ * Size -> 0x0000
+ */
+	class FLazyObjectPtr : public TPersistentObjectPtr<FUniqueObjectGuid_>
+	{
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.FAssetPtr
+	 * Size -> 0x0000
+	 */
+	class FAssetPtr : public TPersistentObjectPtr<FStringAssetReference_>
+	{
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.TAssetPtr
+	 * Size -> 0x0000
+	 */
+	template<typename ObjectType>
+	class TAssetPtr : public FAssetPtr
+	{
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.TAssetClassPtr
+	 * Size -> 0x0000
+	 */
+	template<typename ClassType>
+	class TAssetClassPtr
+	{
+	private:
+		unsigned char                                                Unknown_Data[0x20];                                      // 0x0000(0x0000)
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.TLazyObjectPtr
+	 * Size -> 0x0000
+	 */
+	template<typename ObjectType>
+	class TLazyObjectPtr : public FLazyObjectPtr
+	{
+	};
+
+
+
+	/**
 	 * PredefinedClass BasicTypes.FStructBaseChain
 	 * Size -> 0x0000
 	 */
@@ -633,7 +644,6 @@ namespace SDK
 		int32_t                                                      NumStructBasesInChainMinusOne;                           // 0x0000(0x0000)
 		uint8_t                                                      Padding_0[0x04];                                         // 0x0000(0x0000)
 	};
-
 
 
 
@@ -671,7 +681,7 @@ namespace SDK
 	public:
 		UEType* Get() const
 		{
-			return static_cast<UEType*>(TPersistentObjectPtr::Get());
+			return static_cast<UEType*>(TPersistentObjectPtr::WeakPtr.Get());
 		}
 		UEType* operator->() const
 		{
@@ -689,7 +699,7 @@ namespace SDK
 	public:
 		UEType* Get() const
 		{
-			return static_cast<UEType*>(TPersistentObjectPtr::Get());
+			return static_cast<UEType*>(TPersistentObjectPtr::WeakPtr.Get());
 		}
 		UEType* operator->() const
 		{
@@ -697,21 +707,7 @@ namespace SDK
 		}
 	};
 
-	/**
-	 * PredefinedClass BasicTypes.FWeakObjectPtr
-	 * Size -> 0x0000
-	 */
-	// class FWeakObjectPtr
-	// {
-	// public:
-	// 	int32_t                                                      ObjectIndex;                                             // 0x0000(0x0000)
-	// 	int32_t                                                      ObjectSerialNumber;                                      // 0x0000(0x0000)
-	//
-	// public:
-	// 	bool SerialNumbersMatch(FUObjectItem* objectItem) const;
-	// 	bool IsValid() const;
-	// 	UObject* Get() const;
-	// };
+
 
 	/**
 	 * PredefinedClass BasicTypes.ObjectNames

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void AHelmet_None_C::ExecuteUbergraph_Helmet_None(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55205);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38208);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* AHelmet_None_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55204);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38207);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULiveLinkMagicLeapHandTrackingSourceFactory.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULiveLinkMagicLeapHandTrackingSourceFactory::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(747);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -216,10 +202,10 @@ namespace SDK
 	 * Parameters:
 	 * 		EControllerHand                                    hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     Secondary                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Secondary                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandThumbTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct PCoreUObject_FTransform* Secondary)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandThumbTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Secondary)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14275);
 		
@@ -228,7 +214,7 @@ namespace SDK
 			EControllerHand                                    hand;
 			EMagicLeapGestureTransformSpace                    TransformSpace;
 			unsigned char                                      UnknownData_0003[0xE];
-			struct PCoreUObject_FTransform                     Secondary;
+			struct FTransform                     Secondary;
 			bool                                               ReturnValue;
 		} params;
 		params.hand = hand;
@@ -284,10 +270,10 @@ namespace SDK
 	 * Parameters:
 	 * 		EControllerHand                                    hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     Pointer                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Pointer                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandIndexFingerTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct PCoreUObject_FTransform* Pointer)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandIndexFingerTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Pointer)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14273);
 		
@@ -296,7 +282,7 @@ namespace SDK
 			EControllerHand                                    hand;
 			EMagicLeapGestureTransformSpace                    TransformSpace;
 			unsigned char                                      UnknownData_0004[0xE];
-			struct PCoreUObject_FTransform                     Pointer;
+			struct FTransform                     Pointer;
 			bool                                               ReturnValue;
 		} params;
 		params.hand = hand;
@@ -352,10 +338,10 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EControllerHand                                    hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     HandCenter                                                 (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     HandCenter                                                 (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenter(EControllerHand hand, struct PCoreUObject_FTransform* HandCenter)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetHandCenter(EControllerHand hand, struct FTransform* HandCenter)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14271);
 		
@@ -363,7 +349,7 @@ namespace SDK
 		{
 			EControllerHand                                    hand;
 			unsigned char                                      UnknownData_0006[0xF];
-			struct PCoreUObject_FTransform                     HandCenter;
+			struct FTransform                     HandCenter;
 			bool                                               ReturnValue;
 		} params;
 		params.hand = hand;
@@ -387,10 +373,10 @@ namespace SDK
 	 * 		EControllerHand                                    hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapHandTrackingKeypoint                     Keypoint                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		EMagicLeapGestureTransformSpace                    TransformSpace                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     Transform                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     Transform                                                  (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypointTransform(EControllerHand hand, EMagicLeapHandTrackingKeypoint Keypoint, EMagicLeapGestureTransformSpace TransformSpace, struct PCoreUObject_FTransform* Transform)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypointTransform(EControllerHand hand, EMagicLeapHandTrackingKeypoint Keypoint, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Transform)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14270);
 		
@@ -400,7 +386,7 @@ namespace SDK
 			EMagicLeapHandTrackingKeypoint                     Keypoint;
 			EMagicLeapGestureTransformSpace                    TransformSpace;
 			unsigned char                                      UnknownData_0007[0xD];
-			struct PCoreUObject_FTransform                     Transform;
+			struct FTransform                     Transform;
 			bool                                               ReturnValue;
 		} params;
 		params.hand = hand;
@@ -424,10 +410,10 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		EControllerHand                                    hand                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<struct PCoreUObject_FTransform>             Keypoints                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FTransform>             Keypoints                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypoints(EControllerHand hand, TArray<struct PCoreUObject_FTransform>* Keypoints)
+	bool UMagicLeapHandTrackingFunctionLibrary::GetGestureKeypoints(EControllerHand hand, TArray<struct FTransform>* Keypoints)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14269);
 		
@@ -435,7 +421,7 @@ namespace SDK
 		{
 			EControllerHand                                    hand;
 			unsigned char                                      UnknownData_0008[0x7];
-			TArray<struct PCoreUObject_FTransform>             Keypoints;
+			TArray<struct FTransform>             Keypoints;
 			bool                                               ReturnValue;
 		} params;
 		params.hand = hand;
@@ -567,6 +553,20 @@ namespace SDK
 	UClass* UMagicLeapHandTrackingFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(748);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULiveLinkMagicLeapHandTrackingSourceFactory.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULiveLinkMagicLeapHandTrackingSourceFactory::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(747);
 		return ptr;
 	}
 

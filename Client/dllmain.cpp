@@ -3,6 +3,7 @@
 
 BOOL APIENTRY DllMain(const HMODULE h_module, const DWORD dw_call_reason, const LPVOID lp_reserved)
 {
+
 	client_lib::globals::h_module = h_module;
 	
 	switch (dw_call_reason)

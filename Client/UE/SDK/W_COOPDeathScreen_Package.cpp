@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_COOPDeathScreen_C::ExecuteUbergraph_W_COOPDeathScreen(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88391);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_COOPDeathScreen_C::OnSpectateButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88390);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* UW_COOPDeathScreen_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88409);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88389);
 		return ptr;
 	}
 

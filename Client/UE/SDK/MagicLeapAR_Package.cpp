@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -13,14 +13,103 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULuminARSessionConfig.StaticClass
+	 * 		Name   -> Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImageEx
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UTexture2D*                                  CandidateTexture                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      FriendlyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              PhysicalWidth                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUseUnreliablePose                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EMagicLeapImageTargetOrientation                   InAxisOrientation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class ULuminARCandidateImage*                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImageEx(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary, EMagicLeapImageTargetOrientation InAxisOrientation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14198);
+		
+		struct
+		{
+			class UARSessionConfig*                            SessionConfig;
+			class UTexture2D*                                  CandidateTexture;
+			class FString                                      FriendlyName;
+			float                                              PhysicalWidth;
+			bool                                               bUseUnreliablePose;
+			bool                                               bImageIsStationary;
+			EMagicLeapImageTargetOrientation                   InAxisOrientation;
+			unsigned char                                      UnknownData_0000[0x1];
+			class ULuminARCandidateImage*                      ReturnValue;
+		} params;
+		params.SessionConfig = SessionConfig;
+		params.CandidateTexture = CandidateTexture;
+		params.FriendlyName = FriendlyName;
+		params.PhysicalWidth = PhysicalWidth;
+		params.bUseUnreliablePose = bUseUnreliablePose;
+		params.bImageIsStationary = bImageIsStationary;
+		params.InAxisOrientation = InAxisOrientation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UTexture2D*                                  CandidateTexture                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      FriendlyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              PhysicalWidth                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUseUnreliablePose                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class ULuminARCandidateImage*                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImage(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14197);
+		
+		struct
+		{
+			class UARSessionConfig*                            SessionConfig;
+			class UTexture2D*                                  CandidateTexture;
+			class FString                                      FriendlyName;
+			float                                              PhysicalWidth;
+			bool                                               bUseUnreliablePose;
+			bool                                               bImageIsStationary;
+			unsigned char                                      UnknownData_0001[0x2];
+			class ULuminARCandidateImage*                      ReturnValue;
+		} params;
+		params.SessionConfig = SessionConfig;
+		params.CandidateTexture = CandidateTexture;
+		params.FriendlyName = FriendlyName;
+		params.PhysicalWidth = PhysicalWidth;
+		params.bUseUnreliablePose = bUseUnreliablePose;
+		params.bImageIsStationary = bImageIsStationary;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULuminARImageTrackingFunctionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULuminARSessionConfig::StaticClass()
+	UClass* ULuminARImageTrackingFunctionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(731);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(726);
 		return ptr;
 	}
 
@@ -151,6 +240,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ALuminAROrigin.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ALuminAROrigin::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(729);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function MagicLeapAR.LuminARSessionFunctionLibrary.StartLuminARSession
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -271,117 +374,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImageEx
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UTexture2D*                                  CandidateTexture                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      FriendlyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              PhysicalWidth                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUseUnreliablePose                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EMagicLeapImageTargetOrientation                   InAxisOrientation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class ULuminARCandidateImage*                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImageEx(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary, EMagicLeapImageTargetOrientation InAxisOrientation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14198);
-		
-		struct
-		{
-			class UARSessionConfig*                            SessionConfig;
-			class UTexture2D*                                  CandidateTexture;
-			class FString                                      FriendlyName;
-			float                                              PhysicalWidth;
-			bool                                               bUseUnreliablePose;
-			bool                                               bImageIsStationary;
-			EMagicLeapImageTargetOrientation                   InAxisOrientation;
-			unsigned char                                      UnknownData_0000[0x1];
-			class ULuminARCandidateImage*                      ReturnValue;
-		} params;
-		params.SessionConfig = SessionConfig;
-		params.CandidateTexture = CandidateTexture;
-		params.FriendlyName = FriendlyName;
-		params.PhysicalWidth = PhysicalWidth;
-		params.bUseUnreliablePose = bUseUnreliablePose;
-		params.bImageIsStationary = bImageIsStationary;
-		params.InAxisOrientation = InAxisOrientation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapAR.LuminARImageTrackingFunctionLibrary.AddLuminRuntimeCandidateImage
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UARSessionConfig*                            SessionConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UTexture2D*                                  CandidateTexture                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      FriendlyName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              PhysicalWidth                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUseUnreliablePose                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bImageIsStationary                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class ULuminARCandidateImage*                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class ULuminARCandidateImage* ULuminARImageTrackingFunctionLibrary::AddLuminRuntimeCandidateImage(class UARSessionConfig* SessionConfig, class UTexture2D* CandidateTexture, const class FString& FriendlyName, float PhysicalWidth, bool bUseUnreliablePose, bool bImageIsStationary)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14197);
-		
-		struct
-		{
-			class UARSessionConfig*                            SessionConfig;
-			class UTexture2D*                                  CandidateTexture;
-			class FString                                      FriendlyName;
-			float                                              PhysicalWidth;
-			bool                                               bUseUnreliablePose;
-			bool                                               bImageIsStationary;
-			unsigned char                                      UnknownData_0001[0x2];
-			class ULuminARCandidateImage*                      ReturnValue;
-		} params;
-		params.SessionConfig = SessionConfig;
-		params.CandidateTexture = CandidateTexture;
-		params.FriendlyName = FriendlyName;
-		params.PhysicalWidth = PhysicalWidth;
-		params.bUseUnreliablePose = bUseUnreliablePose;
-		params.bImageIsStationary = bImageIsStationary;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULuminARImageTrackingFunctionLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction ULuminARSessionConfig.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULuminARImageTrackingFunctionLibrary::StaticClass()
+	UClass* ULuminARSessionConfig::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(726);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ALuminAROrigin.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ALuminAROrigin::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(729);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(731);
 		return ptr;
 	}
 

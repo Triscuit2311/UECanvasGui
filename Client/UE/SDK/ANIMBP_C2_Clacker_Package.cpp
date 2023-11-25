@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_C2_Clacker_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92657);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92750);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_C2_Clacker_C::ExecuteUbergraph_ANIMBP_C2_Clacker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92656);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92749);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_C2_Clacker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92655);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92748);
 		return ptr;
 	}
 

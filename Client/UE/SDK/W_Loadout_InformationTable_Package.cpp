@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateLoadoutPresetInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27511);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48674);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::SetAttachmentEffects(TArray<struct FST_ItemEffects>* Effects)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27510);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48673);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::QuickHide()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27509);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48672);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::PlayRefreshAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27508);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48671);
 		
 		struct
 		{
@@ -109,7 +109,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateAttachmentInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27507);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48670);
 		
 		struct
 		{
@@ -130,7 +130,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateArmourMaterialInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27506);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48669);
 		
 		struct
 		{
@@ -151,7 +151,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateAmmoInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27505);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48668);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::GetWeaponClassText(class FText* WeaponClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27504);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48667);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateItemInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27503);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48666);
 		
 		struct
 		{
@@ -220,7 +220,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27502);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48665);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27501);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48664);
 		
 		struct
 		{
@@ -269,7 +269,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27500);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48663);
 		
 		struct
 		{
@@ -295,7 +295,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27499);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48662);
 		
 		struct
 		{
@@ -319,7 +319,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27498);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48661);
 		
 		struct
 		{
@@ -342,7 +342,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27497);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48660);
 		
 		struct
 		{
@@ -367,7 +367,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RefreshPanelItemInfo(const struct FSavedLoadout& ActiveLoadout, class ABaseItem* ItemClass, EItemCategory LoadoutSlot, bool Restricted)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27496);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48659);
 		
 		struct
 		{
@@ -397,7 +397,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::ModifyWeaponClicked(class ABaseItem* ItemToModify)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27495);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48658);
 		
 		struct
 		{
@@ -421,7 +421,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::InitializePanel(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27494);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48657);
 		
 		struct
 		{
@@ -445,7 +445,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27493);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48656);
 		
 		struct
 		{
@@ -469,7 +469,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27492);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48655);
 		
 		struct
 		{
@@ -494,7 +494,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27491);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48654);
 		
 		struct
 		{
@@ -520,7 +520,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::AttachmentItemClicked(class UW_LoadoutInfo_AttachmentListEntry_C* AttachmentListItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27490);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48653);
 		
 		struct
 		{
@@ -545,7 +545,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RefreshPanelAmmoInfo(const class FName& AmmoType, class ABaseItem* WeaponData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27489);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48652);
 		
 		struct
 		{
@@ -571,7 +571,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RefreshPanelArmourMaterial(class UArmourMaterial* ArmourMaterial)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27488);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48651);
 		
 		struct
 		{
@@ -596,7 +596,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RefreshPanelAttachment(class UWeaponAttachment* Attachment, class ABaseItem* AttachingWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27487);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48650);
 		
 		struct
 		{
@@ -622,7 +622,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RemoveAttachmentItemClicked(class UW_LoadoutInfo_AttachmentListEntry_C* AttachmentListItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27486);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48649);
 		
 		struct
 		{
@@ -646,7 +646,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::RefreshPanelLoadoutPreset(const struct FLoadoutPreset& LoadoutPreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27485);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48648);
 		
 		struct
 		{
@@ -670,7 +670,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::ExecuteUbergraph_W_Loadout_InformationTable(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27484);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48647);
 		
 		struct
 		{
@@ -695,7 +695,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::OnInfoPanelRemoveAttachmentClicked__DelegateSignature(EWeaponAttachmentType Slot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27483);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48646);
 		
 		struct
 		{
@@ -720,7 +720,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::OnInfoPanelAttachmentClicked__DelegateSignature(EWeaponAttachmentType Slot, class UWeaponAttachment* AttachmentData)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27482);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48645);
 		
 		struct
 		{
@@ -746,7 +746,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::OnCancelRefresh__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27481);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48644);
 		
 		struct
 		{
@@ -767,7 +767,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::OnInfoPanelRemoved__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27480);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48643);
 		
 		struct
 		{
@@ -789,7 +789,7 @@ namespace SDK
 	 */
 	void UW_Loadout_InformationTable_C::OnModifyWeaponButtonClicked__DelegateSignature(class ABaseItem* ItemToModify)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27479);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48642);
 		
 		struct
 		{
@@ -812,7 +812,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_InformationTable_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27478);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48641);
 		return ptr;
 	}
 

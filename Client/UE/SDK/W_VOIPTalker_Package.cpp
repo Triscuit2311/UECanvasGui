@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::RefreshPlayerStatesIfNotExists()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88334);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88346);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88333);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88345);
 		
 		struct
 		{
@@ -64,7 +64,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88332);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88344);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::OnPreClientTravel_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88331);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88343);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88330);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88342);
 		
 		struct
 		{
@@ -132,7 +132,7 @@ namespace SDK
 	 */
 	void UW_VOIPTalker_C::ExecuteUbergraph_W_VOIPTalker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88329);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88341);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	UClass* UW_VOIPTalker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88328);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88340);
 		return ptr;
 	}
 

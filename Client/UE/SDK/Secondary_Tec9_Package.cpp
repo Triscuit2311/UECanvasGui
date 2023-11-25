@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_Tec9_C::DestroyPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86618);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86443);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ASecondary_Tec9_C::SpawnPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86617);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86442);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void ASecondary_Tec9_C::ExecuteUbergraph_Secondary_Tec9(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86616);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86441);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_Tec9_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86615);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86440);
 		return ptr;
 	}
 

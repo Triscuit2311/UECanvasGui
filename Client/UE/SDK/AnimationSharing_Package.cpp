@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnimationSharingSetup.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnimationSharingSetup::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(524);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -89,84 +75,6 @@ namespace SDK
 	UClass* UAnimSharingAdditiveInstance::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(521);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            OutState                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class AActor*                                      InActor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		uint8_t                                            CurrentState                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		uint8_t                                            OnDemandState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bShouldProcess                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UAnimationSharingStateProcessor::ProcessActorState(int32_t* OutState, class AActor* InActor, uint8_t CurrentState, uint8_t OnDemandState, bool* bShouldProcess)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13896);
-		
-		struct
-		{
-			int32_t                                            OutState;
-			unsigned char                                      UnknownData_0000[0x4];
-			class AActor*                                      InActor;
-			uint8_t                                            CurrentState;
-			uint8_t                                            OnDemandState;
-			bool                                               bShouldProcess;
-		} params;
-		params.InActor = InActor;
-		params.CurrentState = CurrentState;
-		params.OnDemandState = OnDemandState;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (OutState != nullptr)
-			*OutState = params.OutState;
-		if (bShouldProcess != nullptr)
-			*bShouldProcess = params.bShouldProcess;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UEnum*                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UEnum* UAnimationSharingStateProcessor::GetAnimationStateEnum()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13895);
-		
-		struct
-		{
-			class UEnum*                                       ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnimationSharingStateProcessor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnimationSharingStateProcessor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(525);
 		return ptr;
 	}
 
@@ -303,6 +211,98 @@ namespace SDK
 	UClass* UAnimationSharingManager::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(523);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnimationSharingSetup.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnimationSharingSetup::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(524);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimationSharing.AnimationSharingStateProcessor.ProcessActorState
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            OutState                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class AActor*                                      InActor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		uint8_t                                            CurrentState                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		uint8_t                                            OnDemandState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bShouldProcess                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UAnimationSharingStateProcessor::ProcessActorState(int32_t* OutState, class AActor* InActor, uint8_t CurrentState, uint8_t OnDemandState, bool* bShouldProcess)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13896);
+		
+		struct
+		{
+			int32_t                                            OutState;
+			unsigned char                                      UnknownData_0000[0x4];
+			class AActor*                                      InActor;
+			uint8_t                                            CurrentState;
+			uint8_t                                            OnDemandState;
+			bool                                               bShouldProcess;
+		} params;
+		params.InActor = InActor;
+		params.CurrentState = CurrentState;
+		params.OnDemandState = OnDemandState;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (OutState != nullptr)
+			*OutState = params.OutState;
+		if (bShouldProcess != nullptr)
+			*bShouldProcess = params.bShouldProcess;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UEnum*                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UEnum* UAnimationSharingStateProcessor::GetAnimationStateEnum()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13895);
+		
+		struct
+		{
+			class UEnum*                                       ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnimationSharingStateProcessor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnimationSharingStateProcessor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(525);
 		return ptr;
 	}
 

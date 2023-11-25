@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92782);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92875);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92781);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92874);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92780);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92873);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::Server_UpdateGlass(float ParamValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92779);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92872);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::BndEvt__BP_BallisticShield_FBI_ItemMesh_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92778);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92871);
 		
 		struct
 		{
@@ -150,7 +150,7 @@ namespace SDK
 	 */
 	void ABP_BallisticShield_C::ExecuteUbergraph_BP_BallisticShield(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92777);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92870);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	UClass* ABP_BallisticShield_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92776);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92869);
 		return ptr;
 	}
 

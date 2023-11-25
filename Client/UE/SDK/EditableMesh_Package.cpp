@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,93 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableMeshAdapter.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableMeshAdapter::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(270);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableGeometryCollectionAdapter.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableGeometryCollectionAdapter::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(271);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableStaticMeshAdapter.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableStaticMeshAdapter::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(274);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function EditableMesh.EditableMeshFactory.MakeEditableMesh
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UPrimitiveComponent*                         PrimitiveComponent                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            LODIndex                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UEditableMesh*                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13028);
-		
-		struct
-		{
-			class UPrimitiveComponent*                         PrimitiveComponent;
-			int32_t                                            LODIndex;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UEditableMesh*                               ReturnValue;
-		} params;
-		params.PrimitiveComponent = PrimitiveComponent;
-		params.LODIndex = LODIndex;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableMeshFactory.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableMeshFactory::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(273);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -3704,6 +3617,93 @@ namespace SDK
 	UClass* UEditableMesh::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(272);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableMeshAdapter.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableMeshAdapter::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(270);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function EditableMesh.EditableMeshFactory.MakeEditableMesh
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UPrimitiveComponent*                         PrimitiveComponent                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            LODIndex                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UEditableMesh*                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UEditableMesh* UEditableMeshFactory::MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13028);
+		
+		struct
+		{
+			class UPrimitiveComponent*                         PrimitiveComponent;
+			int32_t                                            LODIndex;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UEditableMesh*                               ReturnValue;
+		} params;
+		params.PrimitiveComponent = PrimitiveComponent;
+		params.LODIndex = LODIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableMeshFactory.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableMeshFactory::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(273);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableStaticMeshAdapter.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableStaticMeshAdapter::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(274);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableGeometryCollectionAdapter.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableGeometryCollectionAdapter::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(271);
 		return ptr;
 	}
 

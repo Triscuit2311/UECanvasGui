@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_CSGAS_V2_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90344);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90437);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_CSGAS_V2_C::ExecuteUbergraph_ANIMBP_CSGAS_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90343);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90436);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_CSGAS_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90342);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90435);
 		return ptr;
 	}
 

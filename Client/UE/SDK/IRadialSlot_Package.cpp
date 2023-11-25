@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void IIRadialSlot_C::OnUnhighlight(bool Unselected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54205);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30763);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void IIRadialSlot_C::OnHighlight(bool Selected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54204);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30762);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* IIRadialSlot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54203);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30761);
 		return ptr;
 	}
 

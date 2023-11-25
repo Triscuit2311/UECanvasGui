@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,74 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum MagicLeap.PurchaseType
+	 */
+	enum class EPurchaseType : uint8_t
+	{
+		PurchaseTypeConsumable       = 0,
+		PurchaseTypeNonconsumable    = 1,
+		PurchaseTypeUndefined        = 2,
+		PurchaseTypePurchaseType_MAX = 3
+	};
+
+	/**
+	 * Enum MagicLeap.EMagicLeapMeshVertexColorMode
+	 */
+	enum class EMagicLeapMeshVertexColorMode : uint8_t
+	{
+		None       = 0,
+		Confidence = 1,
+		Block      = 2,
+		LOD        = 3,
+		MAX        = 4
+	};
+
+	/**
+	 * Enum MagicLeap.EMagicLeapHeadTrackingMapEvent
+	 */
+	enum class EMagicLeapHeadTrackingMapEvent : uint8_t
+	{
+		Lost           = 0,
+		Recovered      = 1,
+		RecoveryFailed = 2,
+		NewSession     = 3,
+		MAX            = 4
+	};
+
+	/**
+	 * Enum MagicLeap.EMagicLeapHeadTrackingMode
+	 */
+	enum class EMagicLeapHeadTrackingMode : uint8_t
+	{
+		PositionAndOrientation = 0,
+		Unavailable            = 1,
+		Unknown                = 2,
+		MAX                    = 3
+	};
+
+	/**
+	 * Enum MagicLeap.EMagicLeapMeshType
+	 */
+	enum class EMagicLeapMeshType : uint8_t
+	{
+		Triangles  = 0,
+		PointCloud = 1,
+		MAX        = 2
+	};
+
+	/**
+	 * Enum MagicLeap.EMagicLeapHeadTrackingError
+	 */
+	enum class EMagicLeapHeadTrackingError : uint8_t
+	{
+		None              = 0,
+		NotEnoughFeatures = 1,
+		LowLight          = 2,
+		Unknown           = 3,
+		MAX               = 4
+	};
+
 	/**
 	 * Enum MagicLeap.EFocusLostReason
 	 */
@@ -47,18 +115,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum MagicLeap.EMagicLeapHeadTrackingMapEvent
-	 */
-	enum class EMagicLeapHeadTrackingMapEvent : uint8_t
-	{
-		Lost           = 0,
-		Recovered      = 1,
-		RecoveryFailed = 2,
-		NewSession     = 3,
-		MAX            = 4
-	};
-
-	/**
 	 * Enum MagicLeap.EMagicLeapMeshLOD
 	 */
 	enum class EMagicLeapMeshLOD : uint8_t
@@ -67,29 +123,6 @@ namespace SDK
 		Medium  = 1,
 		Maximum = 2,
 		MAX     = 3
-	};
-
-	/**
-	 * Enum MagicLeap.EMagicLeapHeadTrackingMode
-	 */
-	enum class EMagicLeapHeadTrackingMode : uint8_t
-	{
-		PositionAndOrientation = 0,
-		Unavailable            = 1,
-		Unknown                = 2,
-		MAX                    = 3
-	};
-
-	/**
-	 * Enum MagicLeap.EMagicLeapHeadTrackingError
-	 */
-	enum class EMagicLeapHeadTrackingError : uint8_t
-	{
-		None              = 0,
-		NotEnoughFeatures = 1,
-		LowLight          = 2,
-		Unknown           = 3,
-		MAX               = 4
 	};
 
 	/**
@@ -104,42 +137,37 @@ namespace SDK
 		MAX       = 4
 	};
 
-	/**
-	 * Enum MagicLeap.EMagicLeapMeshVertexColorMode
-	 */
-	enum class EMagicLeapMeshVertexColorMode : uint8_t
-	{
-		None       = 0,
-		Confidence = 1,
-		Block      = 2,
-		LOD        = 3,
-		MAX        = 4
-	};
-
-	/**
-	 * Enum MagicLeap.EMagicLeapMeshType
-	 */
-	enum class EMagicLeapMeshType : uint8_t
-	{
-		Triangles  = 0,
-		PointCloud = 1,
-		MAX        = 2
-	};
-
-	/**
-	 * Enum MagicLeap.PurchaseType
-	 */
-	enum class EPurchaseType : uint8_t
-	{
-		PurchaseTypeConsumable       = 0,
-		PurchaseTypeNonconsumable    = 1,
-		PurchaseTypeUndefined        = 2,
-		PurchaseTypePurchaseType_MAX = 3
-	};
-
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct MagicLeap.PurchaseItemDetails
+	 * Size -> 0x0040
+	 */
+	struct FPurchaseItemDetails
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                Price;                                                   // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Name;                                                    // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EPurchaseType                                                Type;                                                    // 0x0030(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0031(0x000F) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MagicLeap.PurchaseConfirmation
+	 * Size -> 0x0050
+	 */
+	struct FPurchaseConfirmation
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                PackageName;                                             // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x28];                                  // 0x0020(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		EPurchaseType                                                Type;                                                    // 0x0048(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (PADDING)
+	};
+
 	/**
 	 * ScriptStruct MagicLeap.MagicLeapRaycastHitResult
 	 * Size -> 0x0024
@@ -211,34 +239,6 @@ namespace SDK
 	public:
 		struct FTimespan                                             Timestamp;                                               // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TArray<struct FMagicLeapMeshBlockInfo>                       BlockData;                                               // 0x0008(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct MagicLeap.PurchaseItemDetails
-	 * Size -> 0x0040
-	 */
-	struct FPurchaseItemDetails
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                Price;                                                   // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Name;                                                    // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EPurchaseType                                                Type;                                                    // 0x0030(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0031(0x000F) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MagicLeap.PurchaseConfirmation
-	 * Size -> 0x0050
-	 */
-	struct FPurchaseConfirmation
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                PackageName;                                             // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x28];                                  // 0x0020(0x0028) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		EPurchaseType                                                Type;                                                    // 0x0048(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (PADDING)
 	};
 
 	/**

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_C::Initialize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28953);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49202);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_C::ExecuteUbergraph_W_Briefing_Objectives(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28952);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49201);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Objectives_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28951);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49200);
 		return ptr;
 	}
 

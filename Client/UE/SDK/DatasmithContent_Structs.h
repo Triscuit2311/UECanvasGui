@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,40 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum DatasmithContent.EDatasmithAreaLightActorType
+	 */
+	enum class EDatasmithAreaLightActorType : uint8_t
+	{
+		Point = 0,
+		Spot  = 1,
+		Rect  = 2,
+		MAX   = 3
+	};
+
+	/**
+	 * Enum DatasmithContent.EDatasmithAreaLightActorShape
+	 */
+	enum class EDatasmithAreaLightActorShape : uint8_t
+	{
+		Rectangle = 0,
+		Disc      = 1,
+		Sphere    = 2,
+		Cylinder  = 3,
+		None      = 4,
+		MAX       = 5
+	};
+
+	/**
+	 * Enum DatasmithContent.EDatasmithCADRetessellationRule
+	 */
+	enum class EDatasmithCADRetessellationRule : uint8_t
+	{
+		All                 = 0,
+		SkipDeletedSurfaces = 1,
+		MAX                 = 2
+	};
+
 	/**
 	 * Enum DatasmithContent.EDatasmithCADStitchingTechnique
 	 */
@@ -77,30 +111,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum DatasmithContent.EDatasmithAreaLightActorType
-	 */
-	enum class EDatasmithAreaLightActorType : uint8_t
-	{
-		Point = 0,
-		Spot  = 1,
-		Rect  = 2,
-		MAX   = 3
-	};
-
-	/**
-	 * Enum DatasmithContent.EDatasmithAreaLightActorShape
-	 */
-	enum class EDatasmithAreaLightActorShape : uint8_t
-	{
-		Rectangle = 0,
-		Disc      = 1,
-		Sphere    = 2,
-		Cylinder  = 3,
-		None      = 4,
-		MAX       = 5
-	};
-
-	/**
 	 * Enum DatasmithContent.EDatasmithImportActorPolicy
 	 */
 	enum class EDatasmithImportActorPolicy : uint8_t
@@ -109,16 +119,6 @@ namespace SDK
 		Full   = 1,
 		Ignore = 2,
 		MAX    = 3
-	};
-
-	/**
-	 * Enum DatasmithContent.EDatasmithCADRetessellationRule
-	 */
-	enum class EDatasmithCADRetessellationRule : uint8_t
-	{
-		All                 = 0,
-		SkipDeletedSurfaces = 1,
-		MAX                 = 2
 	};
 
 	/**

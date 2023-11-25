@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26774);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48492);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_M4A1_AnimGraphNode_ModifyBone_8E78BCA04BD977039EBD828BA781AE49()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26773);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48491);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26772);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48490);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::AnimNotify_DropSpeedReloadMagazine()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26771);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48489);
 		
 		struct
 		{
@@ -112,7 +112,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::AnimNotify_ShowMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26770);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48488);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_M4A1_AnimGraphNode_BlendListByBool_9B2906464D15BB2B86F012808FED91B8()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26769);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48487);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void UANIMBP_M4A1_C::ExecuteUbergraph_ANIMBP_M4A1(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26768);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48486);
 		
 		struct
 		{
@@ -178,7 +178,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_M4A1_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26767);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48485);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_TutorialMissionButton_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89018);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89111);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_TutorialMissionButton_C::UpdateTutorialMissionData(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89017);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89110);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_TutorialMissionButton_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89016);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89109);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_TutorialMissionButton_C::ExecuteUbergraph_W_TutorialMissionButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89015);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89108);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	UClass* UW_TutorialMissionButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89014);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89107);
 		return ptr;
 	}
 

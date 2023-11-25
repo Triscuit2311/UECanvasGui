@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Credits_C::CreateEndSpacer(float SpacerHeight)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24747);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39909);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_Credits_C::GetScrollboxDimensions(float* Height, float* TopMargin, float* BottomMargin)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24746);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39908);
 		
 		struct
 		{
@@ -80,7 +80,7 @@ namespace SDK
 	 */
 	void UW_Credits_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24745);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39907);
 		
 		struct
 		{
@@ -105,7 +105,7 @@ namespace SDK
 	 */
 	void UW_Credits_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24744);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39906);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	void UW_Credits_C::ExecuteUbergraph_W_Credits(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24743);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39905);
 		
 		struct
 		{
@@ -150,7 +150,7 @@ namespace SDK
 	 */
 	UClass* UW_Credits_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24742);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39904);
 		return ptr;
 	}
 

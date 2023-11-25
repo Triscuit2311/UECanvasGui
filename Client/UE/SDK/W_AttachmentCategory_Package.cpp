@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::DeselectAll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55326);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51867);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::TransformIntoCustomButton()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55325);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51866);
 		
 		struct
 		{
@@ -64,7 +64,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_AttachmentCategory_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55324);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51865);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::IsValidGridIndex(int32_t InRow, int32_t InColumn, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55323);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51864);
 		
 		struct
 		{
@@ -128,7 +128,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::FindGridIndexFromAttachmentItemWidget(class UW_AttachmentItem_C* InAttachmentItemWidget, int32_t* OutRow, int32_t* OutColumn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55322);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51863);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::FindAttachmentItemWidgetAt(int32_t InRow, int32_t InColumn, class UW_AttachmentItem_C** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55321);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51862);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_AttachmentCategory_C::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55320);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51861);
 		
 		struct
 		{
@@ -220,7 +220,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_AttachmentCategory_C::Get_SelectedItemInfo_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55319);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51860);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::UnselectAttachmentItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55318);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51859);
 		
 		struct
 		{
@@ -265,7 +265,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::SelectAttachmentItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55317);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51858);
 		
 		struct
 		{
@@ -286,7 +286,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::UnhoverAttachmentItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55316);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51857);
 		
 		struct
 		{
@@ -307,7 +307,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::HoverAttachmentItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55315);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51856);
 		
 		struct
 		{
@@ -328,7 +328,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::PreviousColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55314);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51855);
 		
 		struct
 		{
@@ -349,7 +349,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::NextColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55313);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51854);
 		
 		struct
 		{
@@ -370,7 +370,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::PreviousRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55312);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51853);
 		
 		struct
 		{
@@ -391,7 +391,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::NextRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55311);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51852);
 		
 		struct
 		{
@@ -412,7 +412,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::SimulateClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55310);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51851);
 		
 		struct
 		{
@@ -435,7 +435,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_AttachmentCategory_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55309);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51850);
 		
 		struct
 		{
@@ -463,7 +463,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::SimulateUnhover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55308);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51849);
 		
 		struct
 		{
@@ -484,7 +484,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::SimulateHover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55307);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51848);
 		
 		struct
 		{
@@ -506,7 +506,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::UpdateSelectedItemName(const class FText& InItemName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55306);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39415);
 		
 		struct
 		{
@@ -529,7 +529,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::RemoveAllAttachmentItemWidgets()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55305);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39414);
 		
 		struct
 		{
@@ -551,7 +551,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::DeselectAllChildrenExcept(class UW_AttachmentItem_C* InAttachmentItemWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55304);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39413);
 		
 		struct
 		{
@@ -575,7 +575,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::CollapseAllChildrenExcept(class UW_AttachmentCategory_C* InAttachmentCategoryWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55303);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39412);
 		
 		struct
 		{
@@ -599,7 +599,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnAttachmentItemClicked(class UW_AttachmentItem_C* AttachmentItemWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55302);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39411);
 		
 		struct
 		{
@@ -625,7 +625,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::CreateAttachmentItemWidget(class UWeaponAttachment* AttachmentItemClass, int32_t InRow, int32_t InColumn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55301);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39410);
 		
 		struct
 		{
@@ -652,7 +652,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::ExpandChildren()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55300);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39409);
 		
 		struct
 		{
@@ -673,7 +673,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::CollapseChildren()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55299);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39408);
 		
 		struct
 		{
@@ -695,7 +695,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55298);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39407);
 		
 		struct
 		{
@@ -719,7 +719,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55297);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39406);
 		
 		struct
 		{
@@ -742,7 +742,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55296);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39405);
 		
 		struct
 		{
@@ -763,7 +763,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_2_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55295);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39404);
 		
 		struct
 		{
@@ -784,7 +784,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55294);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39403);
 		
 		struct
 		{
@@ -805,7 +805,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::BndEvt__Button_K2Node_ComponentBoundEvent_4_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55293);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39402);
 		
 		struct
 		{
@@ -826,7 +826,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55292);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39401);
 		
 		struct
 		{
@@ -848,7 +848,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnAttachmentItemButtonHovered(class UW_AttachmentItem_C* AttachmentItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55291);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39400);
 		
 		struct
 		{
@@ -871,7 +871,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnGunCleaned()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55290);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39399);
 		
 		struct
 		{
@@ -893,7 +893,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::ExecuteUbergraph_W_AttachmentCategory(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55289);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39398);
 		
 		struct
 		{
@@ -917,7 +917,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnButtonUnhovered__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55288);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39397);
 		
 		struct
 		{
@@ -941,7 +941,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnButtonHovered__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55287);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39396);
 		
 		struct
 		{
@@ -965,7 +965,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnAttachmentItemButtonClicked__DelegateSignature(class UWeaponAttachment* AttachmentClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55286);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39395);
 		
 		struct
 		{
@@ -989,7 +989,7 @@ namespace SDK
 	 */
 	void UW_AttachmentCategory_C::OnButtonClicked__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55285);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39394);
 		
 		struct
 		{
@@ -1012,7 +1012,7 @@ namespace SDK
 	 */
 	UClass* UW_AttachmentCategory_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55284);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39393);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	class FText UBP_MessageDisplayBox_C::Get_MessageTxt_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59861);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56946);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59860);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56945);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59859);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56944);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::OnClicked_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59858);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30706);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59857);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30705);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::OnClicked_Event_2(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28942);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30704);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UBP_MessageDisplayBox_C::ExecuteUbergraph_BP_MessageDisplayBox(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28941);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30703);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	UClass* UBP_MessageDisplayBox_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28940);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30702);
 		return ptr;
 	}
 

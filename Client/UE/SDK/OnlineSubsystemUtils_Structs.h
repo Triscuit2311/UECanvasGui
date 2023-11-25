@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -26,18 +26,6 @@ namespace SDK
 		Purchased = 4,
 		Restored  = 5,
 		MAX       = 6
-	};
-
-	/**
-	 * Enum OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType
-	 */
-	enum class EOnlineProxyStoreOfferDiscountType : uint8_t
-	{
-		NotOnSale      = 0,
-		Percentage     = 1,
-		DiscountAmount = 2,
-		PayAmount      = 3,
-		MAX            = 4
 	};
 
 	/**
@@ -130,9 +118,34 @@ namespace SDK
 		MAX                                       = 16
 	};
 
+	/**
+	 * Enum OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType
+	 */
+	enum class EOnlineProxyStoreOfferDiscountType : uint8_t
+	{
+		NotOnSale      = 0,
+		Percentage     = 1,
+		DiscountAmount = 2,
+		PayAmount      = 3,
+		MAX            = 4
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct OnlineSubsystemUtils.PIELoginSettingsInternal
+	 * Size -> 0x0040
+	 */
+	struct FPIELoginSettingsInternal
+	{
+	public:
+		class FString                                                ID;                                                      // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Token;                                                   // 0x0010(0x0010) Edit, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Type;                                                    // 0x0020(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<uint8_t>                                              TokenBytes;                                              // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct OnlineSubsystemUtils.PlayerReservation
 	 * Size -> 0x0050
@@ -174,19 +187,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct OnlineSubsystemUtils.PIELoginSettingsInternal
-	 * Size -> 0x0040
-	 */
-	struct FPIELoginSettingsInternal
-	{
-	public:
-		class FString                                                ID;                                                      // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Token;                                                   // 0x0010(0x0010) Edit, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Type;                                                    // 0x0020(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<uint8_t>                                              TokenBytes;                                              // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct OnlineSubsystemUtils.SpectatorReservation
 	 * Size -> 0x0078
 	 */
@@ -195,6 +195,16 @@ namespace SDK
 	public:
 		struct FUniqueNetIdRepl                                      SpectatorId;                                             // 0x0000(0x0028) Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FPlayerReservation                                    Spectator;                                               // 0x0028(0x0050) Transient, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
+	 * Size -> 0x0108
+	 */
+	struct FBlueprintSessionResult
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x108];                                 // 0x0000(0x0108) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -239,33 +249,11 @@ namespace SDK
 		int32_t                                                      NumericPrice;                                            // 0x0090(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0094(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class FString                                                CurrencyCode;                                            // 0x0098(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                ReleaseDate;                                             // 0x00A8(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                ExpirationDate;                                          // 0x00B0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                ReleaseDate;                                             // 0x00A8(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                ExpirationDate;                                          // 0x00B0(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EOnlineProxyStoreOfferDiscountType                           DiscountType;                                            // 0x00B8(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x7];                                   // 0x00B9(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TMap<class FString, class FString>                           DynamicFields;                                           // 0x00C0(0x0050) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
-	 * Size -> 0x0108
-	 */
-	struct FBlueprintSessionResult
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x108];                                 // 0x0000(0x0108) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct OnlineSubsystemUtils.InAppPurchaseReceiptInfo
-	 * Size -> 0x0030
-	 */
-	struct FInAppPurchaseReceiptInfo
-	{
-	public:
-		class FString                                                ItemName;                                                // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                ItemID;                                                  // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                ValidationInfo;                                          // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -300,6 +288,18 @@ namespace SDK
 		class FString                                                ProductIdentifier;                                       // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bIsConsumable;                                           // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct OnlineSubsystemUtils.InAppPurchaseReceiptInfo
+	 * Size -> 0x0030
+	 */
+	struct FInAppPurchaseReceiptInfo
+	{
+	public:
+		class FString                                                ItemName;                                                // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                ItemID;                                                  // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                ValidationInfo;                                          // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

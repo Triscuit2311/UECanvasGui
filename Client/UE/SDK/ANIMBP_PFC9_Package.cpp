@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43775);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31883);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_PFC9_AnimGraphNode_BlendListByBool_1227339446BD815E9E1142980883F5C3()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43774);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31882);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::AnimNotify_DropSpeedReloadMagazine()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43773);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31881);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::AnimNotify_ShowMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43772);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31880);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43771);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31879);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UANIMBP_PFC9_C::ExecuteUbergraph_ANIMBP_PFC9(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43770);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31878);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_PFC9_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43769);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31877);
 		return ptr;
 	}
 

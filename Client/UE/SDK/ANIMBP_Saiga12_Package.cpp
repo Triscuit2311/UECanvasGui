@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Saiga12_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46421);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34532);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_Saiga12_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_Saiga12_AnimGraphNode_BlendListByBool_3B1098614A54A490C1EA00AE5865DD5E()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46420);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34531);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UANIMBP_Saiga12_C::AnimNotify_ReplaceMags()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46419);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34530);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UANIMBP_Saiga12_C::AnimNotify_SpawnPhysMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46418);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34529);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UANIMBP_Saiga12_C::ExecuteUbergraph_ANIMBP_Saiga12(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46417);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34528);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Saiga12_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(46416);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(34527);
 		return ptr;
 	}
 

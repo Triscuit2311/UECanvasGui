@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_RSReplayEntry_C::OnUnselected()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24667);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30436);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_RSReplayEntry_C::BndEvt__W_RSReplayEntry_SelectButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24666);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30435);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_RSReplayEntry_C::ExecuteUbergraph_W_RSReplayEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24665);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30434);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	UClass* UW_RSReplayEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24664);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30433);
 		return ptr;
 	}
 

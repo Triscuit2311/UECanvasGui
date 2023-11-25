@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::DetermineIconColor(class UImage* NextIcon, int32_t IndexToCheck)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90319);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::UnhighlightIcon(class UImage* Arrow)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90318);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::HighlightIcon(class UImage* Arrow)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90317);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::Deselect(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90316);
 		
 		struct
 		{
@@ -121,7 +121,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::Select(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90315);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::Refresh(int32_t NewAmount, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90314);
 		
 		struct
 		{
@@ -172,7 +172,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::PreviousItem(bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90220);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90313);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::NextItem(bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90219);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90312);
 		
 		struct
 		{
@@ -223,7 +223,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_MultiItem_Selection_C::CreateIndex()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90218);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90311);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	UClass* UW_WeaponWheel_MultiItem_Selection_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90217);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90310);
 		return ptr;
 	}
 

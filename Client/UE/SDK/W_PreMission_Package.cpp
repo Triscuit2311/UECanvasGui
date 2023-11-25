@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UpdateHeader(const class FText& HeaderText, const class FText& PageName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36071);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51985);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ReadyCount_Container_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36070);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51984);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ReadyUpResumeGameButton_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36069);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51983);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::AllPlayersReady(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36068);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51982);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::GetNumPlayers(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36067);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51981);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::Get_WidgetFocusButton_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36066);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51980);
 		
 		struct
 		{
@@ -171,7 +171,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SetHotkeys(EPreMissionHotkeyGroups HotkeyGroup)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36065);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51979);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UpdateHotkeyEntries(TArray<struct Fst_HotkeySettings> Hotkeys)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36064);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51978);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ExitPlanningMap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36063);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51977);
 		
 		struct
 		{
@@ -241,7 +241,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SetActiveNav(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36062);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51976);
 		
 		struct
 		{
@@ -264,7 +264,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnStartFadeToPlanningMap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36061);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51975);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnStartFadeToLoadout()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51974);
 		
 		struct
 		{
@@ -306,7 +306,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnStartFadeToBriefing()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51973);
 		
 		struct
 		{
@@ -329,7 +329,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HandleMenuWideMultiInputUp(const struct FKeyEvent& Input, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36058);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51972);
 		
 		struct
 		{
@@ -359,7 +359,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HandleMenuWideMultiInputDown(const struct FKeyEvent& Input, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36057);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51971);
 		
 		struct
 		{
@@ -387,7 +387,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnTransitionToQuartermasterFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36056);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51970);
 		
 		struct
 		{
@@ -408,7 +408,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HideHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36055);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51969);
 		
 		struct
 		{
@@ -429,7 +429,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ShowHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51968);
 		
 		struct
 		{
@@ -450,7 +450,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ReflectHUDSettings()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51967);
 		
 		struct
 		{
@@ -472,7 +472,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SmoothCountdown(float DeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51966);
 		
 		struct
 		{
@@ -496,7 +496,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::AllowTeamSwapping(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51965);
 		
 		struct
 		{
@@ -522,7 +522,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_LoadoutMenu_Switcher_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51964);
 		
 		struct
 		{
@@ -548,7 +548,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HandleMenuWideInput(const struct FKeyEvent& Input, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51963);
 		
 		struct
 		{
@@ -576,7 +576,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_HideUIButton_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36048);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51962);
 		
 		struct
 		{
@@ -600,7 +600,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_RenamePresetButton_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36047);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51961);
 		
 		struct
 		{
@@ -626,7 +626,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36046);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51960);
 		
 		struct
 		{
@@ -655,7 +655,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::IsUIHidden(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36045);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51959);
 		
 		struct
 		{
@@ -680,7 +680,7 @@ namespace SDK
 	 */
 	bool UW_PreMission_C::EnteringQuartermasterMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36044);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51958);
 		
 		struct
 		{
@@ -706,7 +706,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36043);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51957);
 		
 		struct
 		{
@@ -734,7 +734,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_MetaGameInfo_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36042);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51956);
 		
 		struct
 		{
@@ -758,7 +758,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_SwapTeams_Box_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36041);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51955);
 		
 		struct
 		{
@@ -784,7 +784,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36040);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51954);
 		
 		struct
 		{
@@ -813,7 +813,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::IsValidSelectionIndex(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36039);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51953);
 		
 		struct
 		{
@@ -838,7 +838,7 @@ namespace SDK
 	 */
 	bool UW_PreMission_C::CanUnselect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36038);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51952);
 		
 		struct
 		{
@@ -862,7 +862,7 @@ namespace SDK
 	 */
 	bool UW_PreMission_C::CanExit()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36037);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51951);
 		
 		struct
 		{
@@ -886,7 +886,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ToggleUIVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36036);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51950);
 		
 		struct
 		{
@@ -907,7 +907,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UpdateCountdownDescriptionText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36035);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51949);
 		
 		struct
 		{
@@ -928,7 +928,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ToggleMetaGameInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36034);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51948);
 		
 		struct
 		{
@@ -949,7 +949,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnselectSwapTeams()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36033);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51947);
 		
 		struct
 		{
@@ -970,7 +970,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SelectSwapTeams()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36032);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51946);
 		
 		struct
 		{
@@ -991,7 +991,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HoverSwapTeams()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36031);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51945);
 		
 		struct
 		{
@@ -1012,7 +1012,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnhoverSwapTeams()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36030);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51944);
 		
 		struct
 		{
@@ -1033,7 +1033,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SwapTeams()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36029);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51943);
 		
 		struct
 		{
@@ -1055,7 +1055,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UpdateTootipText(const class FText& NewTooltipText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36028);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51942);
 		
 		struct
 		{
@@ -1078,7 +1078,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_Tooltip_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36027);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51941);
 		
 		struct
 		{
@@ -1102,7 +1102,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnStartFadeToQuartermaster()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36026);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51940);
 		
 		struct
 		{
@@ -1123,7 +1123,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnFadeToQuartermasterFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36025);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51939);
 		
 		struct
 		{
@@ -1144,7 +1144,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ExitQuartermasterMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36024);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51938);
 		
 		struct
 		{
@@ -1165,7 +1165,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::EnterQuartermasterMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36023);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51937);
 		
 		struct
 		{
@@ -1186,7 +1186,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HideItemSelectionUI()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36022);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51936);
 		
 		struct
 		{
@@ -1207,7 +1207,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ShowItemSelectionUI()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36021);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51935);
 		
 		struct
 		{
@@ -1228,7 +1228,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_CountdownTimer_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36020);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51934);
 		
 		struct
 		{
@@ -1252,7 +1252,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UpdateWidgetStates()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36019);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51933);
 		
 		struct
 		{
@@ -1273,7 +1273,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_NightOperation_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36018);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51932);
 		
 		struct
 		{
@@ -1297,7 +1297,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_InGame_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36017);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51931);
 		
 		struct
 		{
@@ -1322,7 +1322,7 @@ namespace SDK
 	 */
 	bool UW_PreMission_C::UpdateDebugInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36016);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51930);
 		
 		struct
 		{
@@ -1346,7 +1346,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SetNavigationModeMouse()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36015);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51929);
 		
 		struct
 		{
@@ -1367,7 +1367,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SetNavigationModeKeyboard()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36014);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51928);
 		
 		struct
 		{
@@ -1388,7 +1388,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::Escape()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36013);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51927);
 		
 		struct
 		{
@@ -1409,7 +1409,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ResumeGame()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36012);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51926);
 		
 		struct
 		{
@@ -1432,7 +1432,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_C::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36011);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51925);
 		
 		struct
 		{
@@ -1460,7 +1460,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HoverReadyUp()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36010);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51924);
 		
 		struct
 		{
@@ -1481,7 +1481,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnhoverReadyUp()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36009);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51923);
 		
 		struct
 		{
@@ -1502,7 +1502,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnselectReadyUp()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36008);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51922);
 		
 		struct
 		{
@@ -1523,7 +1523,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SelectReadyUp()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36007);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51921);
 		
 		struct
 		{
@@ -1544,7 +1544,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnselectLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36006);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51920);
 		
 		struct
 		{
@@ -1565,7 +1565,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SelectLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36005);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51919);
 		
 		struct
 		{
@@ -1586,7 +1586,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnhoverLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36004);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51918);
 		
 		struct
 		{
@@ -1607,7 +1607,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HoverLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36003);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51917);
 		
 		struct
 		{
@@ -1628,7 +1628,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnselectUIElement()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36002);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51916);
 		
 		struct
 		{
@@ -1649,7 +1649,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::SelectUIElement()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36001);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51915);
 		
 		struct
 		{
@@ -1670,7 +1670,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::UnhoverUIElement()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36000);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51914);
 		
 		struct
 		{
@@ -1691,7 +1691,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HoverUIElement()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35999);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51913);
 		
 		struct
 		{
@@ -1712,7 +1712,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::PreviousColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35998);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51912);
 		
 		struct
 		{
@@ -1733,7 +1733,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::PreviousRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35997);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51911);
 		
 		struct
 		{
@@ -1754,7 +1754,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::NextColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35996);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51910);
 		
 		struct
 		{
@@ -1775,7 +1775,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::NextRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35995);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51909);
 		
 		struct
 		{
@@ -1796,7 +1796,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ReadyUpControls_BackButton_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35994);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51908);
 		
 		struct
 		{
@@ -1820,7 +1820,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ReadyUp_Controls_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35993);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51907);
 		
 		struct
 		{
@@ -1844,7 +1844,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_NavigationMouseControls_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35992);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51906);
 		
 		struct
 		{
@@ -1868,7 +1868,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_NavigationKeyboardControls_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35991);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(51905);
 		
 		struct
 		{
@@ -1892,7 +1892,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_KeyboardControls_Button_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35990);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39869);
 		
 		struct
 		{
@@ -1916,7 +1916,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_BackButton_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35989);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39868);
 		
 		struct
 		{
@@ -1942,7 +1942,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35988);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39867);
 		
 		struct
 		{
@@ -1970,7 +1970,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_GameStartTimeRemaining_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35987);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39866);
 		
 		struct
 		{
@@ -1994,7 +1994,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_MetaGame_Spacer_1_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35986);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39865);
 		
 		struct
 		{
@@ -2018,7 +2018,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ReadyCount_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35985);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39864);
 		
 		struct
 		{
@@ -2043,7 +2043,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::IsAnyoneOnMLOTeam(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35984);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39863);
 		
 		struct
 		{
@@ -2070,7 +2070,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::IsAnyoneOnSWATTeam(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35983);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39862);
 		
 		struct
 		{
@@ -2096,7 +2096,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_SWATReadyCount_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35982);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39861);
 		
 		struct
 		{
@@ -2120,7 +2120,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_SWAT_ReadyCount_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35981);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39860);
 		
 		struct
 		{
@@ -2144,7 +2144,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_MLO_ReadyCount_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35980);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39859);
 		
 		struct
 		{
@@ -2168,7 +2168,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_MLOReadyCountText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35979);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39858);
 		
 		struct
 		{
@@ -2192,7 +2192,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_PreMission_C::Get_ServerName_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35978);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39857);
 		
 		struct
 		{
@@ -2216,7 +2216,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_ServerName_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35977);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39856);
 		
 		struct
 		{
@@ -2240,7 +2240,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_MapName_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35976);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39855);
 		
 		struct
 		{
@@ -2264,7 +2264,7 @@ namespace SDK
 	 */
 	class FText UW_PreMission_C::Get_ModeName_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35975);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39854);
 		
 		struct
 		{
@@ -2288,7 +2288,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnInitialized()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35974);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39853);
 		
 		struct
 		{
@@ -2309,7 +2309,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__ReadyUpButton_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35973);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39852);
 		
 		struct
 		{
@@ -2330,7 +2330,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__ReadyUpButton_K2Node_ComponentBoundEvent_3_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35972);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39851);
 		
 		struct
 		{
@@ -2352,7 +2352,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35971);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39850);
 		
 		struct
 		{
@@ -2375,7 +2375,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__Button_91_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35970);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39849);
 		
 		struct
 		{
@@ -2396,7 +2396,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__MouseCaptureButton_K2Node_ComponentBoundEvent_4_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35969);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39848);
 		
 		struct
 		{
@@ -2417,7 +2417,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__MouseCaptureButton_K2Node_ComponentBoundEvent_5_OnButtonReleasedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35968);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39847);
 		
 		struct
 		{
@@ -2438,7 +2438,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__MouseCaptureButton_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35967);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39846);
 		
 		struct
 		{
@@ -2460,7 +2460,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__TopMenu_ReadyUpButton_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35966);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39845);
 		
 		struct
 		{
@@ -2484,7 +2484,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::FocusOnWidget(class UWidget* WidgetToFocus)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35965);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39844);
 		
 		struct
 		{
@@ -2509,7 +2509,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35964);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39843);
 		
 		struct
 		{
@@ -2534,7 +2534,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__ReadyUpButton_K2Node_ComponentBoundEvent_6_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35963);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39842);
 		
 		struct
 		{
@@ -2555,7 +2555,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__ReadyUpButton_K2Node_ComponentBoundEvent_8_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35962);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39841);
 		
 		struct
 		{
@@ -2576,7 +2576,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__SwapTeams_Button_K2Node_ComponentBoundEvent_9_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35961);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39840);
 		
 		struct
 		{
@@ -2597,7 +2597,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__SwapTeams_Button_K2Node_ComponentBoundEvent_10_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35960);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39839);
 		
 		struct
 		{
@@ -2619,7 +2619,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__SwapTeams_Button_K2Node_ComponentBoundEvent_15_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35959);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39838);
 		
 		struct
 		{
@@ -2642,7 +2642,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__SwapTeams_Button_K2Node_ComponentBoundEvent_21_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35958);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39837);
 		
 		struct
 		{
@@ -2663,7 +2663,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__SwapTeams_Button_K2Node_ComponentBoundEvent_22_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35957);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39836);
 		
 		struct
 		{
@@ -2684,7 +2684,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35956);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39835);
 		
 		struct
 		{
@@ -2705,7 +2705,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::AutoDetermineWidgetFocus()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35955);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39834);
 		
 		struct
 		{
@@ -2726,7 +2726,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35954);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39833);
 		
 		struct
 		{
@@ -2747,7 +2747,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnLoadoutItemPresetsLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35953);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39832);
 		
 		struct
 		{
@@ -2768,7 +2768,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnLoadoutItemPresetsSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35952);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39831);
 		
 		struct
 		{
@@ -2789,7 +2789,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35951);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39830);
 		
 		struct
 		{
@@ -2810,7 +2810,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnLoadoutItemAttachmentsSaved()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35950);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39829);
 		
 		struct
 		{
@@ -2831,7 +2831,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnWeaponDefaultFireModesLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35949);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39828);
 		
 		struct
 		{
@@ -2852,7 +2852,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::GoToLoadout()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35948);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39827);
 		
 		struct
 		{
@@ -2873,7 +2873,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::GoToBriefing()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35947);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39826);
 		
 		struct
 		{
@@ -2894,7 +2894,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::GoToLoadoutNoDelay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35946);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39825);
 		
 		struct
 		{
@@ -2915,7 +2915,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::GoToPlanningMap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35945);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39824);
 		
 		struct
 		{
@@ -2937,7 +2937,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__btn_Loadout_K2Node_ComponentBoundEvent_13_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35944);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39823);
 		
 		struct
 		{
@@ -2961,7 +2961,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__btn_Map_K2Node_ComponentBoundEvent_14_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35943);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39822);
 		
 		struct
 		{
@@ -2985,7 +2985,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__btn_Briefing_K2Node_ComponentBoundEvent_16_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35942);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39821);
 		
 		struct
 		{
@@ -3010,7 +3010,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__W_PlanningMap_K2Node_ComponentBoundEvent_12_PanMap__DelegateSignature(bool Pressed, const struct FVector2D& CursorPos)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35941);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39820);
 		
 		struct
 		{
@@ -3037,7 +3037,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::BndEvt__PlanningMap_K2Node_ComponentBoundEvent_17_OnZoomUpdated__DelegateSignature(float ZoomValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35940);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39819);
 		
 		struct
 		{
@@ -3060,7 +3060,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::HideBriefing()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35939);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39818);
 		
 		struct
 		{
@@ -3081,7 +3081,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35938);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39817);
 		
 		struct
 		{
@@ -3102,7 +3102,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ToggleReady()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35937);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39816);
 		
 		struct
 		{
@@ -3123,7 +3123,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::OnSwatCharacterChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35936);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39815);
 		
 		struct
 		{
@@ -3145,7 +3145,7 @@ namespace SDK
 	 */
 	void UW_PreMission_C::ExecuteUbergraph_W_PreMission(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35935);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39814);
 		
 		struct
 		{
@@ -3169,7 +3169,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35934);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39813);
 		return ptr;
 	}
 

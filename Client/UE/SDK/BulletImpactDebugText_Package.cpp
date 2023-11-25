@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UBulletImpactDebugText_C::SetData(int32_t ID, const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88996);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89089);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	UClass* UBulletImpactDebugText_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88995);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89088);
 		return ptr;
 	}
 

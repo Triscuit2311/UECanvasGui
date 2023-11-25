@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::UnhoverAllCategories()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57843);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39503);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::UnhoverAllCategoriesExcept(class UW_AttachmentCategory_C* AttachmentCategoryWIdget, class UW_SkinCategory_C* SkinCategoryWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57842);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39502);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::CollapseAllCategories()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57841);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39501);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::CollapseAllCategoriesExcept(class UW_AttachmentCategory_C* AttachmentCategoryWIdget, class UW_SkinCategory_C* SkinCategoryWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57840);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39500);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnGunCleaned()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57839);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39499);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::CanCleanGun(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39498);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_QuartermasterMenu_C::Get_CleanGun_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39497);
 		
 		struct
 		{
@@ -189,7 +189,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::AttemptCreateSkinCategory(TArray<struct FWeaponData>* WeaponDataArray, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57836);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39496);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::ScrollIntoView(class UWidget* WidgetToFind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57835);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39495);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_QuartermasterMenu_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57834);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39494);
 		
 		struct
 		{
@@ -273,7 +273,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::AnyAttachmentCategoryWidgetHovered(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57833);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39493);
 		
 		struct
 		{
@@ -299,7 +299,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::GetCurrentlyFocusedWidget(class UWidget** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57832);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39492);
 		
 		struct
 		{
@@ -327,7 +327,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::PopulateAttachmentCategory(bool bAllowAttachmentCategory, TArray<struct FAttachmentCategory>* AttachmentCategories, const struct FAttachmentCategory& AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57831);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39491);
 		
 		struct
 		{
@@ -357,7 +357,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::UnhoverAll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57830);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39490);
 		
 		struct
 		{
@@ -379,7 +379,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::FocusOnWidget(class UWidget* InWidgetToFocus)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57829);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39489);
 		
 		struct
 		{
@@ -402,7 +402,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::Escape()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57828);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39488);
 		
 		struct
 		{
@@ -423,7 +423,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::UnselectAttachmentCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57827);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39487);
 		
 		struct
 		{
@@ -444,7 +444,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::SelectAttachmentCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57826);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39486);
 		
 		struct
 		{
@@ -465,7 +465,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::UnhoverAttachmentCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57825);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39485);
 		
 		struct
 		{
@@ -486,7 +486,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::HoverAttachmentCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57824);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39484);
 		
 		struct
 		{
@@ -507,7 +507,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::PreviousRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57823);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39483);
 		
 		struct
 		{
@@ -528,7 +528,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::NextRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57822);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39482);
 		
 		struct
 		{
@@ -551,7 +551,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_QuartermasterMenu_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57821);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39481);
 		
 		struct
 		{
@@ -579,7 +579,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::Exit()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57820);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39480);
 		
 		struct
 		{
@@ -601,7 +601,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::Enter(class ABaseItem* LoadoutItemClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57819);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39479);
 		
 		struct
 		{
@@ -625,7 +625,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnAttachmentCategoryButtonClicked(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57818);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39478);
 		
 		struct
 		{
@@ -649,7 +649,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnAttachmentItemButtonClicked(class UWeaponAttachment* AttachmentClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57817);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39477);
 		
 		struct
 		{
@@ -673,7 +673,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnAttachmentCategoryButtonHovered(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57816);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39476);
 		
 		struct
 		{
@@ -697,7 +697,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnAttachmentCategoryButtonUnhovered(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57815);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39475);
 		
 		struct
 		{
@@ -721,7 +721,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnSkinCategoryButtonClicked(class UW_SkinCategory_C* SkinCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57814);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39474);
 		
 		struct
 		{
@@ -745,7 +745,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnSkinCategoryButtonHovered(class UW_SkinCategory_C* SkinCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57813);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39473);
 		
 		struct
 		{
@@ -769,7 +769,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnSkinCategoryButtonUnhovered(class UW_SkinCategory_C* SkinCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57812);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39472);
 		
 		struct
 		{
@@ -793,7 +793,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::OnSkinItemButtonClicked(class USkinComponent* SkinClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57811);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39471);
 		
 		struct
 		{
@@ -817,7 +817,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::BndEvt__CleanGun_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57810);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39470);
 		
 		struct
 		{
@@ -841,7 +841,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::BndEvt__ApplyAttachments_1_K2Node_ComponentBoundEvent_1_OnButtonClicked__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57809);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39469);
 		
 		struct
 		{
@@ -865,7 +865,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::BndEvt__DiscardAttachments_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature(class UW_AttachmentCategory_C* AttachmentCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57808);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39468);
 		
 		struct
 		{
@@ -889,7 +889,7 @@ namespace SDK
 	 */
 	void UW_QuartermasterMenu_C::ExecuteUbergraph_W_QuartermasterMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57807);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39467);
 		
 		struct
 		{
@@ -913,7 +913,7 @@ namespace SDK
 	 */
 	UClass* UW_QuartermasterMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57806);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39466);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -24,7 +24,7 @@ namespace SDK
 	 */
 	void ULibrary_UI_BriefingFunctions_C::GetTimelineEventTestData(class UObject* __WorldContext, class USoundWave** AudioAsset, TArray<struct FTimelineEvent>* Events, TMap<float, struct FTimelineEvent>* EventEntries)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43475);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31358);
 		
 		struct
 		{
@@ -57,7 +57,7 @@ namespace SDK
 	 */
 	UClass* ULibrary_UI_BriefingFunctions_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43474);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31357);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -113,107 +113,6 @@ namespace SDK
 	UClass* AMagicLeapSharedWorldGameMode::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(704);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void AMagicLeapSharedWorldGameState::OnReplicate_SharedWorldData()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10393);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void AMagicLeapSharedWorldGameState::OnReplicate_AlignmentTransforms()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10392);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void AMagicLeapSharedWorldGameState::MagicLeapSharedWorldEvent__DelegateSignature()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10391);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct PCoreUObject_FTransform AMagicLeapSharedWorldGameState::CalculateXRCameraRootTransform()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10390);
-		
-		struct
-		{
-			struct PCoreUObject_FTransform                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AMagicLeapSharedWorldGameState.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AMagicLeapSharedWorldGameState::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(707);
 		return ptr;
 	}
 
@@ -369,6 +268,107 @@ namespace SDK
 	UClass* AMagicLeapSharedWorldPlayerController::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(709);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_SharedWorldData
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void AMagicLeapSharedWorldGameState::OnReplicate_SharedWorldData()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10393);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.OnReplicate_AlignmentTransforms
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void AMagicLeapSharedWorldGameState::OnReplicate_AlignmentTransforms()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10392);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> DelegateFunction MagicLeapSharedWorld.MagicLeapSharedWorldGameState.MagicLeapSharedWorldEvent__DelegateSignature
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void AMagicLeapSharedWorldGameState::MagicLeapSharedWorldEvent__DelegateSignature()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10391);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapSharedWorld.MagicLeapSharedWorldGameState.CalculateXRCameraRootTransform
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FTransform AMagicLeapSharedWorldGameState::CalculateXRCameraRootTransform()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(10390);
+		
+		struct
+		{
+			struct FTransform                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AMagicLeapSharedWorldGameState.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AMagicLeapSharedWorldGameState::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(707);
 		return ptr;
 	}
 

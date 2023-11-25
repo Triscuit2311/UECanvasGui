@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void APrimary_BRN180_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47917);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36026);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void APrimary_BRN180_C::ExecuteUbergraph_Primary_BRN180(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(47916);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36025);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* APrimary_BRN180_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(47915);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36024);
 		return ptr;
 	}
 

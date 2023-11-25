@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,19 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class MSDFSupport.MSDFAssetData
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class UMSDFAssetData : public UAssetUserData
+	{
+	public:
+		struct FSVGConversionParams                                  ImportParameters;                                        // 0x0028(0x0028) Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class MSDFSupport.RenderMSDF
 	 * Size -> 0x0070 (FullSize[0x00B0] - InheritedSize[0x0040])
@@ -45,19 +58,6 @@ namespace SDK
 	{
 	public:
 		bool ConvertSVGToMSDFData(const class FString& FilePath, const struct FSVGConversionParams& Params, TArray<uint8_t>* Output);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MSDFSupport.MSDFAssetData
-	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-	 */
-	class UMSDFAssetData : public UAssetUserData
-	{
-	public:
-		struct FSVGConversionParams                                  ImportParameters;                                        // 0x0028(0x0028) Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-
-	public:
 		static UClass* StaticClass();
 	};
 

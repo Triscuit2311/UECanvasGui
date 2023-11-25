@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::UnhighlightBorder()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54227);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38233);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::HighlightBorder()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38232);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::UpdateSkinName()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38231);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::SimulateClicked()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38230);
 		
 		struct
 		{
@@ -104,7 +104,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::SimulateUnhover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38229);
 		
 		struct
 		{
@@ -125,7 +125,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::SimulateHover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38228);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::Deselect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38227);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::Select()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54220);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38226);
 		
 		struct
 		{
@@ -188,7 +188,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SkinItem_C::Get_ItemClassName_Text_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54219);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38225);
 		
 		struct
 		{
@@ -212,7 +212,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54218);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38224);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54217);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38223);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54216);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38222);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_4_OnHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54215);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38221);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_5_OnUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54214);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38220);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_1_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54213);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38219);
 		
 		struct
 		{
@@ -344,7 +344,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54212);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38218);
 		
 		struct
 		{
@@ -365,7 +365,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::OnGunCleaned()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54211);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38217);
 		
 		struct
 		{
@@ -387,7 +387,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::ExecuteUbergraph_W_SkinItem(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54210);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38216);
 		
 		struct
 		{
@@ -411,7 +411,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::OnButtonUnhovered__DelegateSignature(class UW_SkinItem_C* SkinItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54209);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38215);
 		
 		struct
 		{
@@ -435,7 +435,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::OnButtonHovered__DelegateSignature(class UW_SkinItem_C* SkinItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54208);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38214);
 		
 		struct
 		{
@@ -459,7 +459,7 @@ namespace SDK
 	 */
 	void UW_SkinItem_C::OnButtonClicked__DelegateSignature(class UW_SkinItem_C* SkinItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54207);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38213);
 		
 		struct
 		{
@@ -482,7 +482,7 @@ namespace SDK
 	 */
 	UClass* UW_SkinItem_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54206);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38212);
 		return ptr;
 	}
 

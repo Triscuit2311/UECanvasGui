@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ReceivePossessed(class AController* NewController)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(135559);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114387);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136795);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114388);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136796);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114389);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ReceiveUnpossessed(class AController* OldController)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136797);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114390);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ClientRemoveHUID()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136798);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114391);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::CreateHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136799);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114392);
 		
 		struct
 		{
@@ -155,7 +155,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::Client_SpecNextPlayer()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136800);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(114393);
 		
 		struct
 		{
@@ -177,7 +177,7 @@ namespace SDK
 	 */
 	void ADeadSpectator_C::ExecuteUbergraph_DeadSpectator(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(136767);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112294);
 		
 		struct
 		{
@@ -201,7 +201,7 @@ namespace SDK
 	 */
 	UClass* ADeadSpectator_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(136768);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112295);
 		return ptr;
 	}
 

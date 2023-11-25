@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -40,17 +40,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum CoreUObject.ERangeBoundTypes
-	 */
-	enum class ERangeBoundTypes : uint8_t
-	{
-		Exclusive = 0,
-		Inclusive = 1,
-		Open      = 2,
-		MAX       = 3
-	};
-
-	/**
 	 * Enum CoreUObject.EAutomationEventType
 	 */
 	enum class EAutomationEventType : uint8_t
@@ -59,6 +48,17 @@ namespace SDK
 		Warning = 1,
 		Error   = 2,
 		MAX     = 3
+	};
+
+	/**
+	 * Enum CoreUObject.ERangeBoundTypes
+	 */
+	enum class ERangeBoundTypes : uint8_t
+	{
+		Exclusive = 0,
+		Inclusive = 1,
+		Open      = 2,
+		MAX       = 3
 	};
 
 	/**
@@ -345,6 +345,67 @@ namespace SDK
 	// # Structs
 	// --------------------------------------------------
 	/**
+	 * ScriptStruct CoreUObject.Vector4
+	 * Size -> 0x0010
+	 */
+	struct FVector4
+	{
+	public:
+		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        W;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.JoinabilitySettings
+	 * Size -> 0x0014
+	 */
+	struct FJoinabilitySettings
+	{
+	public:
+		class FName                                                  SessionName;                                             // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bPublicSearchable;                                       // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAllowInvites;                                           // 0x0009(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bJoinViaPresence;                                        // 0x000A(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bJoinViaPresenceFriendsOnly;                             // 0x000B(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MaxPlayers;                                              // 0x000C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MaxPartySize;                                            // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Vector2D
+	 * Size -> 0x0008
+	 */
+	struct FVector2D
+	{
+	public:
+		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		FVector2D();
+		FVector2D(float x, float y);
+		bool IsValid();
+		float Distance(FVector2D& v) const;
+		FVector2D operator +(const FVector2D& other) const;
+		FVector2D operator +(float scalar) const;
+		FVector2D operator -(float scalar) const;
+		FVector2D operator -(const FVector2D& other) const;
+		FVector2D operator *(float scalar) const;
+		FVector2D operator *(const FVector2D& other) const;
+		FVector2D operator /(float scalar) const;
+		FVector2D operator /(const FVector2D& other) const;
+		FVector2D& operator =(const FVector2D& other);
+		FVector2D& operator +=(float scalar);
+		FVector2D& operator +=(const FVector2D& other);
+		FVector2D& operator -=(float scalar);
+		FVector2D& operator -=(const FVector2D& other);
+		FVector2D& operator *=(const FVector2D& other);
+		FVector2D& operator *=(float scalar);
+	};
+
+	/**
 	 * ScriptStruct CoreUObject.Vector
 	 * Size -> 0x000C
 	 */
@@ -382,14 +443,42 @@ namespace SDK
 		//FRotator ToRotator() const;
 		float Distance(const FVector& v) const;
 		float DistanceMeter(FVector& v) const;
-		// bool operator ==(const FVector& first, const FVector& second)
-		// {
-		// 	return first.X == second.X && first.Y == second.Y && first.Z == second.Z;
-		// }
-		// bool operator !=(const FVector& first, const FVector& second)
-		// {
-		// 	return !(first == second);
-		// }
+		friend bool operator ==(const FVector& first, const FVector& second)
+		{
+			return first.X == second.X && first.Y == second.Y && first.Z == second.Z;
+		}
+		friend bool operator !=(const FVector& first, const FVector& second)
+		{
+			return !(first == second);
+		}
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.TwoVectors
+	 * Size -> 0x0018
+	 */
+	struct FTwoVectors
+	{
+	public:
+		struct FVector                                  v1;                                                      // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  v2;                                                      // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.LinearColor
+	 * Size -> 0x0010
+	 */
+	struct FLinearColor
+	{
+	public:
+		float                                                        R;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        G;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        B;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        A;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		FLinearColor();
+		FLinearColor(float r, float g, float b, float a);
 	};
 
 	/**
@@ -403,13 +492,14 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.PackedRGB10A2N
-	 * Size -> 0x0004
+	 * ScriptStruct CoreUObject.PackedRGBA16N
+	 * Size -> 0x0008
 	 */
-	struct FPackedRGB10A2N
+	struct FPackedRGBA16N
 	{
 	public:
-		int32_t                                                      Packed;                                                  // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      XY;                                                      // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      ZW;                                                      // 0x0004(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -444,79 +534,20 @@ namespace SDK
 		FRotator& operator /=(const FRotator& other);
 		FRotator& operator /=(const float other);
 		float Size() const;
-		//FRotator Clamp() const;
+		FRotator Clamp() const;
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.PackedRGBA16N
-	 * Size -> 0x0008
-	 */
-	struct FPackedRGBA16N
-	{
-	public:
-		int32_t                                                      XY;                                                      // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      ZW;                                                      // 0x0004(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.Quat
-	 * Size -> 0x0010
-	 */
-	struct PCoreUObject_FQuat
-	{
-	public:
-		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        W;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.IntPoint
-	 * Size -> 0x0008
-	 */
-	struct FIntPoint
-	{
-	public:
-		int32_t                                                      X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.PackedNormal
-	 * Size -> 0x0004
-	 */
-	struct FPackedNormal
-	{
-	public:
-		uint8_t                                                      X;                                                       // 0x0000(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      Y;                                                       // 0x0001(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      Z;                                                       // 0x0002(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      W;                                                       // 0x0003(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.BoxSphereBounds
+	 * ScriptStruct CoreUObject.Box
 	 * Size -> 0x001C
 	 */
-	struct FBoxSphereBounds
+	struct FBox
 	{
 	public:
-		struct FVector                                  Origin;                                                  // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  BoxExtent;                                               // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SphereRadius;                                            // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.IntVector
-	 * Size -> 0x000C
-	 */
-	struct FIntVector
-	{
-	public:
-		int32_t                                                      X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Min;                                                     // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Max;                                                     // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      IsValid;                                                 // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -536,6 +567,29 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct CoreUObject.UniqueNetIdWrapper
+	 * Size -> 0x0001
+	 */
+	struct FUniqueNetIdWrapper
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Quat
+	 * Size -> 0x0010
+	 */
+	struct FQuat
+	{
+	public:
+		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        W;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct CoreUObject.Matrix
 	 * Size -> 0x0040
 	 */
@@ -552,16 +606,29 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Color
+	 * ScriptStruct CoreUObject.PackedNormal
 	 * Size -> 0x0004
 	 */
-	struct PCoreUObject_FColor
+	struct FPackedNormal
 	{
 	public:
-		uint8_t                                                      B;                                                       // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      G;                                                       // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      R;                                                       // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      A;                                                       // 0x0003(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      X;                                                       // 0x0000(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      Y;                                                       // 0x0001(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      Z;                                                       // 0x0002(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      W;                                                       // 0x0003(0x0001) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Box2D
+	 * Size -> 0x0014
+	 */
+	struct FBox2D
+	{
+	public:
+		struct FVector2D                                Min;                                                     // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                Max;                                                     // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      bIsValid;                                                // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -580,33 +647,60 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.LinearColor
-	 * Size -> 0x0010
+	 * ScriptStruct CoreUObject.IntPoint
+	 * Size -> 0x0008
 	 */
-	struct FLinearColor
+	struct FIntPoint
 	{
 	public:
-		float                                                        R;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        G;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        B;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        A;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		FLinearColor();
-		FLinearColor(float r, float g, float b, float a);
+		int32_t                                                      X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Box
-	 * Size -> 0x001C
+	 * ScriptStruct CoreUObject.PackedRGB10A2N
+	 * Size -> 0x0004
 	 */
-	struct FBox
+	struct FPackedRGB10A2N
 	{
 	public:
-		struct FVector                                  Min;                                                     // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  Max;                                                     // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      IsValid;                                                 // 0x0018(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (PADDING)
+		int32_t                                                      Packed;                                                  // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.BoxSphereBounds
+	 * Size -> 0x001C
+	 */
+	struct FBoxSphereBounds
+	{
+	public:
+		struct FVector                                  Origin;                                                  // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  BoxExtent;                                               // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SphereRadius;                                            // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Guid
+	 * Size -> 0x0010
+	 */
+	struct FGuid
+	{
+	public:
+		int32_t                                                      A;                                                       // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      B;                                                       // 0x0004(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      C;                                                       // 0x0008(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      D;                                                       // 0x000C(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.RandomStream
+	 * Size -> 0x0008
+	 */
+	struct FRandomStream
+	{
+	public:
+		int32_t                                                      InitialSeed;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Seed;                                                    // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -623,48 +717,26 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Vector2D
-	 * Size -> 0x0008
+	 * ScriptStruct CoreUObject.SoftObjectPath
+	 * Size -> 0x0018
 	 */
-	struct FVector2D
+	struct FSoftObjectPath
 	{
 	public:
-		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		FVector2D();
-		FVector2D(float x, float y);
-		bool IsValid();
-		float Distance(FVector2D& v) const;
-		FVector2D operator +(const FVector2D& other) const;
-		FVector2D operator +(float scalar) const;
-		FVector2D operator -(float scalar) const;
-		FVector2D operator -(const FVector2D& other) const;
-		FVector2D operator *(float scalar) const;
-		FVector2D operator *(const FVector2D& other) const;
-		FVector2D operator /(float scalar) const;
-		FVector2D operator /(const FVector2D& other) const;
-		FVector2D& operator =(const FVector2D& other);
-		FVector2D& operator +=(float scalar);
-		FVector2D& operator +=(const FVector2D& other);
-		FVector2D& operator -=(float scalar);
-		FVector2D& operator -=(const FVector2D& other);
-		FVector2D& operator *=(const FVector2D& other);
-		FVector2D& operator *=(float scalar);
+		class FName                                                  AssetPathName;                                           // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                SubPathString;                                           // 0x0008(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Box2D
-	 * Size -> 0x0014
+	 * ScriptStruct CoreUObject.Int32RangeBound
+	 * Size -> 0x0008
 	 */
-	struct FBox2D
+	struct FInt32RangeBound
 	{
 	public:
-		struct FVector2D                                Min;                                                     // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                Max;                                                     // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      bIsValid;                                                // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
+		ERangeBoundTypes                                             Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      Value;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 	};
 
 	/**
@@ -683,26 +755,15 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.FloatRangeBound
-	 * Size -> 0x0008
+	 * ScriptStruct CoreUObject.IntVector
+	 * Size -> 0x000C
 	 */
-	struct FFloatRangeBound
+	struct FIntVector
 	{
 	public:
-		ERangeBoundTypes                                             Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        Value;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.FloatRange
-	 * Size -> 0x0010
-	 */
-	struct FFloatRange
-	{
-	public:
-		struct FFloatRangeBound                                      LowerBound;                                              // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		struct FFloatRangeBound                                      UpperBound;                                              // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		int32_t                                                      X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -716,6 +777,14 @@ namespace SDK
 		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.SoftClassPath
+	 * Size -> 0x0000 (FullSize[0x0018] - InheritedSize[0x0018])
+	 */
+	struct FSoftClassPath : public FSoftObjectPath
+	{
 	};
 
 	/**
@@ -734,112 +803,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.InterpCurveVector
-	 * Size -> 0x0018
-	 */
-	struct FInterpCurveVector
-	{
-	public:
-		TArray<struct FInterpCurvePointVector>                       Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.InterpCurvePointQuat
-	 * Size -> 0x0050
-	 */
-	struct FInterpCurvePointQuat
-	{
-	public:
-		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0004(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FQuat                                    OutVal;                                                  // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FQuat                                    ArriveTangent;                                           // 0x0020(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FQuat                                    LeaveTangent;                                            // 0x0030(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		EInterpCurveMode                                             InterpMode;                                              // 0x0040(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.TestUninitializedScriptStructMembersTest
-	 * Size -> 0x0018
-	 */
-	struct FTestUninitializedScriptStructMembersTest
-	{
-	public:
-		class UObject*                                               UninitializedObjectReference;                            // 0x0000(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UObject*                                               InitializedObjectReference;                              // 0x0008(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        UnusedValue;                                             // 0x0010(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.Int32RangeBound
-	 * Size -> 0x0008
-	 */
-	struct FInt32RangeBound
-	{
-	public:
-		ERangeBoundTypes                                             Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      Value;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.InterpCurveQuat
-	 * Size -> 0x0018
-	 */
-	struct FInterpCurveQuat
-	{
-	public:
-		TArray<struct FInterpCurvePointQuat>                         Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.TwoVectors
-	 * Size -> 0x0018
-	 */
-	struct FTwoVectors
-	{
-	public:
-		struct FVector                                  v1;                                                      // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  v2;                                                      // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.InterpCurvePointTwoVectors
-	 * Size -> 0x0050
-	 */
-	struct FInterpCurvePointTwoVectors
-	{
-	public:
-		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FTwoVectors                                           OutVal;                                                  // 0x0004(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FTwoVectors                                           ArriveTangent;                                           // 0x001C(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FTwoVectors                                           LeaveTangent;                                            // 0x0034(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		EInterpCurveMode                                             InterpMode;                                              // 0x004C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.InterpCurveTwoVectors
-	 * Size -> 0x0018
-	 */
-	struct FInterpCurveTwoVectors
-	{
-	public:
-		TArray<struct FInterpCurvePointTwoVectors>                   Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct CoreUObject.Int32Range
 	 * Size -> 0x0010
 	 */
@@ -851,28 +814,23 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.InterpCurvePointLinearColor
-	 * Size -> 0x0038
+	 * ScriptStruct CoreUObject.DateTime
+	 * Size -> 0x0008
 	 */
-	struct FInterpCurvePointLinearColor
+	struct FDateTime
 	{
 	public:
-		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                          OutVal;                                                  // 0x0004(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                          ArriveTangent;                                           // 0x0014(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                          LeaveTangent;                                            // 0x0024(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInterpCurveMode                                             InterpMode;                                              // 0x0034(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0035(0x0003) MISSED OFFSET (PADDING)
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.InterpCurveLinearColor
+	 * ScriptStruct CoreUObject.InterpCurveVector
 	 * Size -> 0x0018
 	 */
-	struct FInterpCurveLinearColor
+	struct FInterpCurveVector
 	{
 	public:
-		TArray<struct FInterpCurvePointLinearColor>                  Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FInterpCurvePointVector>                       Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -901,41 +859,19 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Transform
-	 * Size -> 0x0030
+	 * ScriptStruct CoreUObject.InterpCurvePointQuat
+	 * Size -> 0x0050
 	 */
-	struct PCoreUObject_FTransform
+	struct FInterpCurvePointQuat
 	{
 	public:
-		struct PCoreUObject_FQuat                                    Rotation;                                                // 0x0000(0x0010) Edit, BlueprintVisible, SaveGame, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                  Translation;                                             // 0x0010(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                  Scale3D;                                                 // 0x0020(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
-
-	public:
-		FMatrix ToMatrixWithScale() const;
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.RandomStream
-	 * Size -> 0x0008
-	 */
-	struct FRandomStream
-	{
-	public:
-		int32_t                                                      InitialSeed;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Seed;                                                    // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.DateTime
-	 * Size -> 0x0008
-	 */
-	struct PCoreUObject_FDateTime
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0004(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FQuat                                    OutVal;                                                  // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FQuat                                    ArriveTangent;                                           // 0x0020(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FQuat                                    LeaveTangent;                                            // 0x0030(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		EInterpCurveMode                                             InterpMode;                                              // 0x0040(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -950,14 +886,44 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.FrameRate
-	 * Size -> 0x0008
+	 * ScriptStruct CoreUObject.Color
+	 * Size -> 0x0004
 	 */
-	struct FFrameRate
+	struct FColor
 	{
 	public:
-		int32_t                                                      Numerator;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Denominator;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      B;                                                       // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      G;                                                       // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      R;                                                       // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      A;                                                       // 0x0003(0x0001) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.InterpCurveQuat
+	 * Size -> 0x0018
+	 */
+	struct FInterpCurveQuat
+	{
+	public:
+		TArray<struct FInterpCurvePointQuat>                         Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.InterpCurvePointTwoVectors
+	 * Size -> 0x0050
+	 */
+	struct FInterpCurvePointTwoVectors
+	{
+	public:
+		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FTwoVectors                                           OutVal;                                                  // 0x0004(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTwoVectors                                           ArriveTangent;                                           // 0x001C(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTwoVectors                                           LeaveTangent;                                            // 0x0034(0x0018) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		EInterpCurveMode                                             InterpMode;                                              // 0x004C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -972,56 +938,16 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.FrameTime
-	 * Size -> 0x0008
+	 * ScriptStruct CoreUObject.InterpCurveTwoVectors
+	 * Size -> 0x0018
 	 */
-	struct FFrameTime
+	struct FInterpCurveTwoVectors
 	{
 	public:
-		struct FFrameNumber                                          FrameNumber;                                             // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SubFrame;                                                // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.JoinabilitySettings
-	 * Size -> 0x0014
-	 */
-	struct FJoinabilitySettings
-	{
-	public:
-		class FName                                                  SessionName;                                             // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bPublicSearchable;                                       // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAllowInvites;                                           // 0x0009(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bJoinViaPresence;                                        // 0x000A(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bJoinViaPresenceFriendsOnly;                             // 0x000B(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MaxPlayers;                                              // 0x000C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MaxPartySize;                                            // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.QualifiedFrameTime
-	 * Size -> 0x0010
-	 */
-	struct FQualifiedFrameTime
-	{
-	public:
-		struct FFrameTime                                            Time;                                                    // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FFrameRate                                            Rate;                                                    // 0x0008(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.Timecode
-	 * Size -> 0x0014
-	 */
-	struct FTimecode
-	{
-	public:
-		int32_t                                                      Hours;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Minutes;                                                 // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Seconds;                                                 // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Frames;                                                  // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bDropFrameFormat;                                        // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
+		TArray<struct FInterpCurvePointTwoVectors>                   Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -1036,34 +962,18 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Timespan
-	 * Size -> 0x0008
+	 * ScriptStruct CoreUObject.InterpCurvePointLinearColor
+	 * Size -> 0x0038
 	 */
-	struct FTimespan
+	struct FInterpCurvePointLinearColor
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.UniqueNetIdWrapper
-	 * Size -> 0x0001
-	 */
-	struct FUniqueNetIdWrapper
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.SoftObjectPath
-	 * Size -> 0x0018
-	 */
-	struct FSoftObjectPath
-	{
-	public:
-		class FName                                                  AssetPathName;                                           // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                SubPathString;                                           // 0x0008(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        InVal;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FLinearColor                                          OutVal;                                                  // 0x0004(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FLinearColor                                          ArriveTangent;                                           // 0x0014(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FLinearColor                                          LeaveTangent;                                            // 0x0024(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInterpCurveMode                                             InterpMode;                                              // 0x0034(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0035(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -1086,24 +996,44 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.SoftClassPath
-	 * Size -> 0x0000 (FullSize[0x0018] - InheritedSize[0x0018])
+	 * ScriptStruct CoreUObject.FrameRate
+	 * Size -> 0x0008
 	 */
-	struct FSoftClassPath : public FSoftObjectPath
+	struct FFrameRate
 	{
+	public:
+		int32_t                                                      Numerator;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Denominator;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Guid
-	 * Size -> 0x0010
+	 * ScriptStruct CoreUObject.InterpCurveLinearColor
+	 * Size -> 0x0018
 	 */
-	struct FGuid
+	struct FInterpCurveLinearColor
 	{
 	public:
-		int32_t                                                      A;                                                       // 0x0000(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      B;                                                       // 0x0004(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      C;                                                       // 0x0008(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      D;                                                       // 0x000C(0x0004) Edit, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FInterpCurvePointLinearColor>                  Points;                                                  // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bIsLooped;                                               // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        LoopKeyOffset;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Transform
+	 * Size -> 0x0030
+	 */
+	struct FTransform
+	{
+	public:
+		struct FQuat                                    Rotation;                                                // 0x0000(0x0010) Edit, BlueprintVisible, SaveGame, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FVector                                  Translation;                                             // 0x0010(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector                                  Scale3D;                                                 // 0x0020(0x000C) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+
+	public:
+		FMatrix ToMatrixWithScale() const;
 	};
 
 	/**
@@ -1114,27 +1044,6 @@ namespace SDK
 	{
 	public:
 		class FName                                                  Name;                                                    // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.PrimaryAssetId
-	 * Size -> 0x0010
-	 */
-	struct FPrimaryAssetId
-	{
-	public:
-		struct FPrimaryAssetType                                     PrimaryAssetType;                                        // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  PrimaryAssetName;                                        // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct CoreUObject.FallbackStruct
-	 * Size -> 0x0001
-	 */
-	struct FFallbackStruct
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -1152,16 +1061,35 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct CoreUObject.Vector4
+	 * ScriptStruct CoreUObject.PrimaryAssetId
 	 * Size -> 0x0010
 	 */
-	struct FVector4
+	struct FPrimaryAssetId
 	{
 	public:
-		float                                                        X;                                                       // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Y;                                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Z;                                                       // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        W;                                                       // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FPrimaryAssetType                                     PrimaryAssetType;                                        // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  PrimaryAssetName;                                        // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.FrameTime
+	 * Size -> 0x0008
+	 */
+	struct FFrameTime
+	{
+	public:
+		struct FFrameNumber                                          FrameNumber;                                             // 0x0000(0x0004) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SubFrame;                                                // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.FallbackStruct
+	 * Size -> 0x0001
+	 */
+	struct FFallbackStruct
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -1175,7 +1103,19 @@ namespace SDK
 		class FString                                                Filename;                                                // 0x0038(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int32_t                                                      LineNumber;                                              // 0x0048(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FDateTime                                Timestamp;                                               // 0x0050(0x0008) ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                Timestamp;                                               // 0x0050(0x0008) ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.FloatRangeBound
+	 * Size -> 0x0008
+	 */
+	struct FFloatRangeBound
+	{
+	public:
+		ERangeBoundTypes                                             Type;                                                    // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        Value;                                                   // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 	};
 
 	/**
@@ -1198,6 +1138,28 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct CoreUObject.QualifiedFrameTime
+	 * Size -> 0x0010
+	 */
+	struct FQualifiedFrameTime
+	{
+	public:
+		struct FFrameTime                                            Time;                                                    // 0x0000(0x0008) BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FFrameRate                                            Rate;                                                    // 0x0008(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.FloatRange
+	 * Size -> 0x0010
+	 */
+	struct FFloatRange
+	{
+	public:
+		struct FFloatRangeBound                                      LowerBound;                                              // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		struct FFloatRangeBound                                      UpperBound;                                              // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+	};
+
+	/**
 	 * ScriptStruct CoreUObject.AssetBundleEntry
 	 * Size -> 0x0018
 	 */
@@ -1206,6 +1168,21 @@ namespace SDK
 	public:
 		class FName                                                  BundleName;                                              // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TArray<struct FSoftObjectPath>                               BundleAssets;                                            // 0x0008(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Timecode
+	 * Size -> 0x0014
+	 */
+	struct FTimecode
+	{
+	public:
+		int32_t                                                      Hours;                                                   // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Minutes;                                                 // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Seconds;                                                 // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Frames;                                                  // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bDropFrameFormat;                                        // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -1231,6 +1208,29 @@ namespace SDK
 		class FName                                                  AssetName;                                               // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FName                                                  AssetClass;                                              // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0028(0x0038) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.Timespan
+	 * Size -> 0x0008
+	 */
+	struct FTimespan
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct CoreUObject.TestUninitializedScriptStructMembersTest
+	 * Size -> 0x0018
+	 */
+	struct FTestUninitializedScriptStructMembersTest
+	{
+	public:
+		class UObject*                                               UninitializedObjectReference;                            // 0x0000(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UObject*                                               InitializedObjectReference;                              // 0x0008(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        UnusedValue;                                             // 0x0010(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
 	};
 
 }

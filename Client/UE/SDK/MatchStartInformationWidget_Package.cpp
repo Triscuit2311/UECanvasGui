@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UMatchStartInformationWidget_C::Get_RoundCount_Visibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27311);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43974);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	struct FLinearColor UMatchStartInformationWidget_C::GetColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27310);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43973);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	class FText UMatchStartInformationWidget_C::GetText_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27309);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43972);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	class FText UMatchStartInformationWidget_C::GetText_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27308);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43971);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	class FText UMatchStartInformationWidget_C::Get_RoundCount_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27307);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43970);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27306);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43969);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::TryDisplayMatchStart()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27305);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43968);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::OnGameStarted()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27304);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43967);
 		
 		struct
 		{
@@ -203,7 +203,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27303);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43966);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::FadeOut()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27302);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43965);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	void UMatchStartInformationWidget_C::ExecuteUbergraph_MatchStartInformationWidget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27301);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43964);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	UClass* UMatchStartInformationWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27300);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43963);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::LoadPresetsItemClass(class ABaseItem* ItemClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55232);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57860);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::FindSelectedPreset(class ABaseItem* ItemClass, int32_t* ReturnValue, class UW_LoadoutItem_Preset_C** LoadoutItemPreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55231);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57859);
 		
 		struct
 		{
@@ -79,7 +79,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::CanRenamePreset(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55230);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57858);
 		
 		struct
 		{
@@ -106,7 +106,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::GetSelectedPresetWidget(class UW_LoadoutItem_Preset_C** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55229);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57857);
 		
 		struct
 		{
@@ -132,7 +132,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::IsRenamingPreset(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55228);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57856);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::ConflictsWithOtherPresets(class UW_LoadoutItem_Preset_C* LoadoutItemPreset, const class FText& InText, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55227);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57855);
 		
 		struct
 		{
@@ -192,7 +192,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::UnhoverAllPresetsExcept(class UW_LoadoutItem_Preset_C* LoadoutItemPreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57854);
 		
 		struct
 		{
@@ -216,7 +216,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::DeselectAllPresetsExcept(class UW_LoadoutItem_Preset_C* LoadoutItemPreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57853);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::StopRenamingPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57852);
 		
 		struct
 		{
@@ -260,7 +260,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::StartRenamingPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57851);
 		
 		struct
 		{
@@ -281,7 +281,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Enter()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57850);
 		
 		struct
 		{
@@ -302,7 +302,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Exit()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57849);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Escape()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55220);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57848);
 		
 		struct
 		{
@@ -345,7 +345,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Select(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55219);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57847);
 		
 		struct
 		{
@@ -369,7 +369,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Click()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55218);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57846);
 		
 		struct
 		{
@@ -390,7 +390,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Unhover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55217);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57845);
 		
 		struct
 		{
@@ -411,7 +411,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Hover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55216);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57844);
 		
 		struct
 		{
@@ -432,7 +432,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::PreviousRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55215);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57843);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::NextRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55214);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57842);
 		
 		struct
 		{
@@ -476,7 +476,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutItem_Presets_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55213);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57841);
 		
 		struct
 		{
@@ -506,7 +506,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutItem_Presets_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55212);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57840);
 		
 		struct
 		{
@@ -534,7 +534,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::InitializeWidget()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55211);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39390);
 		
 		struct
 		{
@@ -556,7 +556,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::OnLoadoutItemPresetButtonClicked(class UW_LoadoutItem_Preset_C* LoadoutItemPresetWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55210);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39389);
 		
 		struct
 		{
@@ -580,7 +580,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::OnLoadoutItemPresetButtonHovered(class UW_LoadoutItem_Preset_C* LoadoutItemPresetWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55209);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39388);
 		
 		struct
 		{
@@ -603,7 +603,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55208);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39387);
 		
 		struct
 		{
@@ -625,7 +625,7 @@ namespace SDK
 	 */
 	void UW_LoadoutItem_Presets_C::ExecuteUbergraph_W_LoadoutItem_Presets(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55207);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39386);
 		
 		struct
 		{
@@ -648,7 +648,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutItem_Presets_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55206);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39385);
 		return ptr;
 	}
 

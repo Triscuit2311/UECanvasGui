@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_OfficerMarker_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54151);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30891);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_OfficerMarker_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54150);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30890);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_OfficerMarker_C::ExecuteUbergraph_W_OfficerMarker(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54149);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30889);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* UW_OfficerMarker_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54148);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30888);
 		return ptr;
 	}
 

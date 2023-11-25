@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_TAC700_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57802);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_TAC700_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_TAC700_AnimGraphNode_BlendListByBool_891F13364F4DC947D429C99B1543CDB7()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52545);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38677);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UANIMBP_TAC700_C::ExecuteUbergraph_ANIMBP_TAC700(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52544);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38676);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_TAC700_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(52543);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38675);
 		return ptr;
 	}
 

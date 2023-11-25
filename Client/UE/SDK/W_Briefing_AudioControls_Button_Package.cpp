@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::SequenceEvent__ENTRYPOINTW_Briefing_AudioControls_Button_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43415);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31296);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::SequenceEvent__ENTRYPOINTW_Briefing_AudioControls_Button_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43414);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31295);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::SetHovered(bool IsHovered)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43413);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31294);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::SetActive(bool IsActive)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43412);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31293);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::AnimateHover()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31292);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_3_Pressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31291);
 		
 		struct
 		{
@@ -152,7 +152,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_4_Released__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31290);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_2_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43408);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31289);
 		
 		struct
 		{
@@ -197,7 +197,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::HoverAnim(float Duration, bool Reverse, float FPS)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43407);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31288);
 		
 		struct
 		{
@@ -226,7 +226,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_1_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43406);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31287);
 		
 		struct
 		{
@@ -250,7 +250,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31286);
 		
 		struct
 		{
@@ -274,7 +274,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43404);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31285);
 		
 		struct
 		{
@@ -298,7 +298,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::ExecuteUbergraph_W_Briefing_AudioControls_Button(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43403);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31284);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::AudioControlButtonHovered__DelegateSignature(class UW_Briefing_AudioControls_Button_C* Button, bool Hovered)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43402);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31283);
 		
 		struct
 		{
@@ -348,7 +348,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::AudioControlButtonReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43401);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31282);
 		
 		struct
 		{
@@ -369,7 +369,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::AudioControlButtonPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43400);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31281);
 		
 		struct
 		{
@@ -390,7 +390,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_Button_C::AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43399);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31280);
 		
 		struct
 		{
@@ -411,7 +411,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_AudioControls_Button_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43398);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31279);
 		return ptr;
 	}
 

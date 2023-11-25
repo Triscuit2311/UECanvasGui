@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88843);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88936);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88842);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88935);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::BndEvt__W_WorldMapPin_Button_29_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88841);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88934);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::BndEvt__W_WorldMapPin_Button_29_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88840);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88933);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::BndEvt__W_WorldMapPin_Button_29_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88839);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88932);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::BndEvt__W_WorldMapPin_Locked_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88931);
 		
 		struct
 		{
@@ -156,7 +156,7 @@ namespace SDK
 	 */
 	void UW_WorldMapPin_C::ExecuteUbergraph_W_WorldMapPin(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88930);
 		
 		struct
 		{
@@ -179,7 +179,7 @@ namespace SDK
 	 */
 	UClass* UW_WorldMapPin_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88836);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88929);
 		return ptr;
 	}
 

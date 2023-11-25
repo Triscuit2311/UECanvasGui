@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,48 @@ namespace SDK
 	// # Classes
 	// --------------------------------------------------
 	/**
+	 * Class DatasmithContent.DatasmithAreaLightActor
+	 * Size -> 0x0058 (FullSize[0x0278] - InheritedSize[0x0220])
+	 */
+	class ADatasmithAreaLightActor : public AActor
+	{
+	public:
+		EComponentMobility                                           Mobility;                                                // 0x0220(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EDatasmithAreaLightActorType                                 LightType;                                               // 0x0221(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EDatasmithAreaLightActorShape                                LightShape;                                              // 0x0222(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0223(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector2D                                Dimensions;                                              // 0x0224(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Intensity;                                               // 0x022C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ELightUnits                                                  IntensityUnits;                                          // 0x0230(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0231(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FLinearColor                                          Color;                                                   // 0x0234(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Temperature;                                             // 0x0244(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTextureLightProfile*                                  IESTexture;                                              // 0x0248(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseIESBrightness;                                       // 0x0250(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x3];                                   // 0x0251(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        IESBrightnessScale;                                      // 0x0254(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRotator                                 Rotation;                                                // 0x0258(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		float                                                        SourceRadius;                                            // 0x0264(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SourceLength;                                            // 0x0268(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AttenuationRadius;                                       // 0x026C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SpotlightInnerAngle;                                     // 0x0270(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SpotlightOuterAngle;                                     // 0x0274(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithAdditionalData
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithAdditionalData : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class DatasmithContent.DatasmithObjectTemplate
 	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
 	 */
@@ -23,6 +65,30 @@ namespace SDK
 	public:
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithActorTemplate
+	 * Size -> 0x00A0 (FullSize[0x00D0] - InheritedSize[0x0030])
+	 */
+	class UDatasmithActorTemplate : public UDatasmithObjectTemplate
+	{
+	public:
+		TSet<class FName>                                            Layers;                                                  // 0x0030(0x0050) NativeAccessSpecifierPublic
+		TSet<class FName>                                            Tags;                                                    // 0x0080(0x0050) NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithAssetImportData
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithAssetImportData : public UAssetImportData
+	{
 	public:
 		static UClass* StaticClass();
 	};
@@ -58,44 +124,10 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithActorTemplate
-	 * Size -> 0x00A0 (FullSize[0x00D0] - InheritedSize[0x0030])
-	 */
-	class UDatasmithActorTemplate : public UDatasmithObjectTemplate
-	{
-	public:
-		TSet<class FName>                                            Layers;                                                  // 0x0030(0x0050) NativeAccessSpecifierPublic
-		TSet<class FName>                                            Tags;                                                    // 0x0080(0x0050) NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithAssetImportData
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UDatasmithAssetImportData : public UAssetImportData
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class DatasmithContent.DatasmithStaticMeshImportData
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
 	class UDatasmithStaticMeshImportData : public UDatasmithAssetImportData
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithStaticMeshCADImportData
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UDatasmithStaticMeshCADImportData : public UDatasmithStaticMeshImportData
 	{
 	public:
 		static UClass* StaticClass();
@@ -112,53 +144,42 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithAdditionalData
+	 * Class DatasmithContent.DatasmithStaticMeshCADImportData
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UDatasmithAdditionalData : public UObject
+	class UDatasmithStaticMeshCADImportData : public UDatasmithStaticMeshImportData
 	{
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithAreaLightActor
-	 * Size -> 0x0058 (FullSize[0x0278] - InheritedSize[0x0220])
+	 * Class DatasmithContent.DatasmithStaticMeshIFCImportData
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 	 */
-	class ADatasmithAreaLightActor : public AActor
+	class UDatasmithStaticMeshIFCImportData : public UDatasmithStaticMeshImportData
 	{
 	public:
-		EComponentMobility                                           Mobility;                                                // 0x0220(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EDatasmithAreaLightActorType                                 LightType;                                               // 0x0221(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EDatasmithAreaLightActorShape                                LightShape;                                              // 0x0222(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0223(0x0001) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector2D                                Dimensions;                                              // 0x0224(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Intensity;                                               // 0x022C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ELightUnits                                                  IntensityUnits;                                          // 0x0230(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0231(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FLinearColor                                          Color;                                                   // 0x0234(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Temperature;                                             // 0x0244(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTextureLightProfile*                                  IESTexture;                                              // 0x0248(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseIESBrightness;                                       // 0x0250(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x3];                                   // 0x0251(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        IESBrightnessScale;                                      // 0x0254(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRotator                                 Rotation;                                                // 0x0258(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		float                                                        SourceRadius;                                            // 0x0264(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SourceLength;                                            // 0x0268(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AttenuationRadius;                                       // 0x026C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SpotlightInnerAngle;                                     // 0x0270(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SpotlightOuterAngle;                                     // 0x0274(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                SourceGlobalId;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithTranslatedSceneImportData
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class DatasmithContent.DatasmithGLTFSceneImportData
+	 * Size -> 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
 	 */
-	class UDatasmithTranslatedSceneImportData : public UDatasmithSceneImportData
+	class UDatasmithGLTFSceneImportData : public UDatasmithSceneImportData
 	{
+	public:
+		class FString                                                Generator;                                               // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Version;                                                 // 0x0038(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                Author;                                                  // 0x0040(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                License;                                                 // 0x0050(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Source;                                                  // 0x0060(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -174,11 +195,27 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithMDLSceneImportData
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class DatasmithContent.DatasmithStaticMeshGLTFImportData
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 	 */
-	class UDatasmithMDLSceneImportData : public UDatasmithSceneImportData
+	class UDatasmithStaticMeshGLTFImportData : public UDatasmithStaticMeshImportData
 	{
+	public:
+		class FString                                                SourceMeshName;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithAssetUserData
+	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
+	 */
+	class UDatasmithAssetUserData : public UAssetUserData
+	{
+	public:
+		TMap<class FName, class FString>                             MetaData;                                                // 0x0028(0x0050) Edit, BlueprintVisible, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -196,6 +233,83 @@ namespace SDK
 		uint8_t                                                      IntermediateSerialization;                               // 0x0040(0x0001) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bColorizeMaterials;                                      // 0x0041(0x0001) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x6];                                   // 0x0042(0x0006) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithTranslatedSceneImportData
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithTranslatedSceneImportData : public UDatasmithSceneImportData
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithCineCameraActorTemplate
+	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
+	 */
+	class UDatasmithCineCameraActorTemplate : public UDatasmithObjectTemplate
+	{
+	public:
+		struct FDatasmithCameraLookatTrackingSettingsTemplate        LookatTrackingSettings;                                  // 0x0030(0x0030) NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithDeltaGenAssetImportData
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithDeltaGenAssetImportData : public UDatasmithAssetImportData
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithMDLSceneImportData
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithMDLSceneImportData : public UDatasmithSceneImportData
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithCineCameraComponentTemplate
+	 * Size -> 0x0060 (FullSize[0x0090] - InheritedSize[0x0030])
+	 */
+	class UDatasmithCineCameraComponentTemplate : public UDatasmithObjectTemplate
+	{
+	public:
+		struct FDatasmithCameraFilmbackSettingsTemplate              FilmbackSettings;                                        // 0x0030(0x0008) NoDestructor, NativeAccessSpecifierPublic
+		struct FDatasmithCameraLensSettingsTemplate                  LensSettings;                                            // 0x0038(0x0004) NoDestructor, NativeAccessSpecifierPublic
+		struct FDatasmithCameraFocusSettingsTemplate                 FocusSettings;                                           // 0x003C(0x0008) NoDestructor, NativeAccessSpecifierPublic
+		float                                                        CurrentFocalLength;                                      // 0x0044(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CurrentAperture;                                         // 0x0048(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FDatasmithPostProcessSettingsTemplate                 PostProcessSettings;                                     // 0x0050(0x0040) NoDestructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithLandscapeTemplate
+	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
+	 */
+	class UDatasmithLandscapeTemplate : public UDatasmithObjectTemplate
+	{
+	public:
+		class UMaterialInterface*                                    LandscapeMaterial;                                       // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      StaticLightingLOD;                                       // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -227,11 +341,37 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithDeltaGenAssetImportData
+	 * Class DatasmithContent.DatasmithContentBlueprintLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UDatasmithDeltaGenAssetImportData : public UDatasmithAssetImportData
+	class UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary
 	{
+	public:
+		class FString GetDatasmithUserDataValueForKey(class UObject* Object, const class FName& Key);
+		void GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const class FString& StringToMatch, TArray<class FName>* OutKeys, TArray<class FString>* OutValues);
+		class UDatasmithAssetUserData* GetDatasmithUserData(class UObject* Object);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithOptionsBase
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UDatasmithOptionsBase : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DatasmithContent.DatasmithCommonTessellationOptions
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class UDatasmithCommonTessellationOptions : public UDatasmithOptionsBase
+	{
+	public:
+		struct FDatasmithTessellationOptions                         Options;                                                 // 0x0028(0x0010) Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -247,83 +387,43 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithContentBlueprintLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class DatasmithContent.DatasmithLightComponentTemplate
+	 * Size -> 0x0038 (FullSize[0x0068] - InheritedSize[0x0030])
 	 */
-	class UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary
+	class UDatasmithLightComponentTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		class FString GetDatasmithUserDataValueForKey(class UObject* Object, const class FName& Key);
-		void GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const class FString& StringToMatch, TArray<class FName>* OutKeys, TArray<class FString>* OutValues);
-		class UDatasmithAssetUserData* GetDatasmithUserData(class UObject* Object);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithGLTFSceneImportData
-	 * Size -> 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
-	 */
-	class UDatasmithGLTFSceneImportData : public UDatasmithSceneImportData
-	{
-	public:
-		class FString                                                Generator;                                               // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Version;                                                 // 0x0038(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                Author;                                                  // 0x0040(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                License;                                                 // 0x0050(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Source;                                                  // 0x0060(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bVisible : 1;                                            // 0x0030(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         CastShadows : 1;                                         // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseTemperature : 1;                                     // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseIESBrightness : 1;                                   // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        Intensity;                                               // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Temperature;                                             // 0x003C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        IESBrightnessScale;                                      // 0x0040(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FLinearColor                                          LightColor;                                              // 0x0044(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UMaterialInterface*                                    LightFunctionMaterial;                                   // 0x0058(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTextureLightProfile*                                  IESTexture;                                              // 0x0060(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithStaticMeshIFCImportData
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 * Class DatasmithContent.DatasmithMaterialInstanceTemplate
+	 * Size -> 0x0168 (FullSize[0x0198] - InheritedSize[0x0030])
 	 */
-	class UDatasmithStaticMeshIFCImportData : public UDatasmithStaticMeshImportData
+	class UDatasmithMaterialInstanceTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		class FString                                                SourceGlobalId;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithAssetUserData
-	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
-	 */
-	class UDatasmithAssetUserData : public UAssetUserData
-	{
-	public:
-		TMap<class FName, class FString>                             MetaData;                                                // 0x0028(0x0050) Edit, BlueprintVisible, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithCustomActionBase
-	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-	 */
-	class UDatasmithCustomActionBase : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithCineCameraActorTemplate
-	 * Size -> 0x0030 (FullSize[0x0060] - InheritedSize[0x0030])
-	 */
-	class UDatasmithCineCameraActorTemplate : public UDatasmithObjectTemplate
-	{
-	public:
-		struct FDatasmithCameraLookatTrackingSettingsTemplate        LookatTrackingSettings;                                  // 0x0030(0x0030) NativeAccessSpecifierPublic
+		TSoftObjectPtr<class UMaterialInterface>                     ParentMaterial;                                          // 0x0030(0x0024) ELEMENT_SIZE_MISMATCH UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0054(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		TMap<class FName, float>                                     ScalarParameterValues;                                   // 0x0058(0x0050) NativeAccessSpecifierPublic
+		TMap<class FName, struct FLinearColor>                       VectorParameterValues;                                   // 0x00A8(0x0050) NativeAccessSpecifierPublic
+		TMap<class FName, TSoftObjectPtr<class UTexture>>            TextureParameterValues;                                  // 0x00F8(0x0050) UObjectWrapper, NativeAccessSpecifierPublic
+		struct FDatasmithStaticParameterSetTemplate                  StaticParameters;                                        // 0x0148(0x0050) NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -357,34 +457,30 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithDecalComponentTemplate
-	 * Size -> 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
+	 * Class DatasmithContent.DatasmithPointLightComponentTemplate
+	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
 	 */
-	class UDatasmithDecalComponentTemplate : public UDatasmithObjectTemplate
+	class UDatasmithPointLightComponentTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		int32_t                                                      SortOrder;                                               // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  DecalSize;                                               // 0x0034(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                    Material;                                                // 0x0040(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ELightUnits                                                  IntensityUnits;                                          // 0x0030(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        SourceRadius;                                            // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SourceLength;                                            // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AttenuationRadius;                                       // 0x003C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithCineCameraComponentTemplate
-	 * Size -> 0x0060 (FullSize[0x0090] - InheritedSize[0x0030])
+	 * Class DatasmithContent.DatasmithCustomActionBase
+	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
 	 */
-	class UDatasmithCineCameraComponentTemplate : public UDatasmithObjectTemplate
+	class UDatasmithCustomActionBase : public UObject
 	{
 	public:
-		struct FDatasmithCameraFilmbackSettingsTemplate              FilmbackSettings;                                        // 0x0030(0x0008) NoDestructor, NativeAccessSpecifierPublic
-		struct FDatasmithCameraLensSettingsTemplate                  LensSettings;                                            // 0x0038(0x0004) NoDestructor, NativeAccessSpecifierPublic
-		struct FDatasmithCameraFocusSettingsTemplate                 FocusSettings;                                           // 0x003C(0x0008) NoDestructor, NativeAccessSpecifierPublic
-		float                                                        CurrentFocalLength;                                      // 0x0044(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CurrentAperture;                                         // 0x0048(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x004C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FDatasmithPostProcessSettingsTemplate                 PostProcessSettings;                                     // 0x0050(0x0040) NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -401,68 +497,14 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithImportedSequencesActor
-	 * Size -> 0x0010 (FullSize[0x0230] - InheritedSize[0x0220])
+	 * Class DatasmithContent.DatasmithStaticMeshComponentTemplate
+	 * Size -> 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
 	 */
-	class ADatasmithImportedSequencesActor : public AActor
+	class UDatasmithStaticMeshComponentTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		TArray<class ULevelSequence*>                                ImportedSequences;                                       // 0x0220(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		void PlayLevelSequence(class ULevelSequence* SequenceToPlay);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithStaticMeshGLTFImportData
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UDatasmithStaticMeshGLTFImportData : public UDatasmithStaticMeshImportData
-	{
-	public:
-		class FString                                                SourceMeshName;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithOptionsBase
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UDatasmithOptionsBase : public UObject
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithCommonTessellationOptions
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UDatasmithCommonTessellationOptions : public UDatasmithOptionsBase
-	{
-	public:
-		struct FDatasmithTessellationOptions                         Options;                                                 // 0x0028(0x0010) Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithMaterialInstanceTemplate
-	 * Size -> 0x0168 (FullSize[0x0198] - InheritedSize[0x0030])
-	 */
-	class UDatasmithMaterialInstanceTemplate : public UDatasmithObjectTemplate
-	{
-	public:
-		TSoftObjectPtr<class UMaterialInterface>                     ParentMaterial;                                          // 0x0030(0x0024) ELEMENT_SIZE_MISMATCH UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0054(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		TMap<class FName, float>                                     ScalarParameterValues;                                   // 0x0058(0x0050) NativeAccessSpecifierPublic
-		TMap<class FName, struct FLinearColor>                       VectorParameterValues;                                   // 0x00A8(0x0050) NativeAccessSpecifierPublic
-		TMap<class FName, TSoftObjectPtr<class UTexture>>            TextureParameterValues;                                  // 0x00F8(0x0050) UObjectWrapper, NativeAccessSpecifierPublic
-		struct FDatasmithStaticParameterSetTemplate                  StaticParameters;                                        // 0x0148(0x0050) NativeAccessSpecifierPublic
+		class UStaticMesh*                                           StaticMesh;                                              // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class UMaterialInterface*>                            OverrideMaterials;                                       // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -495,32 +537,14 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithPointLightComponentTemplate
-	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
+	 * Class DatasmithContent.DatasmithSceneActor
+	 * Size -> 0x0058 (FullSize[0x0278] - InheritedSize[0x0220])
 	 */
-	class UDatasmithPointLightComponentTemplate : public UDatasmithObjectTemplate
+	class ADatasmithSceneActor : public AActor
 	{
 	public:
-		ELightUnits                                                  IntensityUnits;                                          // 0x0030(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        SourceRadius;                                            // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SourceLength;                                            // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AttenuationRadius;                                       // 0x003C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithLandscapeTemplate
-	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
-	 */
-	class UDatasmithLandscapeTemplate : public UDatasmithObjectTemplate
-	{
-	public:
-		class UMaterialInterface*                                    LandscapeMaterial;                                       // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      StaticLightingLOD;                                       // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
+		class UDatasmithScene*                                       Scene;                                                   // 0x0220(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TMap<class FName, TSoftObjectPtr<class AActor>>              RelatedActors;                                           // 0x0228(0x0050) Edit, EditConst, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -543,53 +567,32 @@ namespace SDK
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithLightComponentTemplate
-	 * Size -> 0x0038 (FullSize[0x0068] - InheritedSize[0x0030])
+	 * Class DatasmithContent.DatasmithStaticMeshTemplate
+	 * Size -> 0x0078 (FullSize[0x00A8] - InheritedSize[0x0030])
 	 */
-	class UDatasmithLightComponentTemplate : public UDatasmithObjectTemplate
+	class UDatasmithStaticMeshTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		bool                                                         bVisible : 1;                                            // 0x0030(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         CastShadows : 1;                                         // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseTemperature : 1;                                     // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseIESBrightness : 1;                                   // 0x0034(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0035(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        Intensity;                                               // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Temperature;                                             // 0x003C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        IESBrightnessScale;                                      // 0x0040(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FLinearColor                                          LightColor;                                              // 0x0044(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UMaterialInterface*                                    LightFunctionMaterial;                                   // 0x0058(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTextureLightProfile*                                  IESTexture;                                              // 0x0060(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDatasmithMeshSectionInfoMapTemplate                  SectionInfoMap;                                          // 0x0030(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
+		int32_t                                                      LightMapCoordinateIndex;                                 // 0x0080(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      LightMapResolution;                                      // 0x0084(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FDatasmithMeshBuildSettingsTemplate>           BuildSettings;                                           // 0x0088(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<struct FDatasmithStaticMaterialTemplate>              StaticMaterials;                                         // 0x0098(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class DatasmithContent.DatasmithSceneActor
-	 * Size -> 0x0058 (FullSize[0x0278] - InheritedSize[0x0220])
-	 */
-	class ADatasmithSceneActor : public AActor
-	{
-	public:
-		class UDatasmithScene*                                       Scene;                                                   // 0x0220(0x0008) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class FName, TSoftObjectPtr<class AActor>>              RelatedActors;                                           // 0x0228(0x0050) Edit, EditConst, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithStaticMeshComponentTemplate
+	 * Class DatasmithContent.DatasmithDecalComponentTemplate
 	 * Size -> 0x0018 (FullSize[0x0048] - InheritedSize[0x0030])
 	 */
-	class UDatasmithStaticMeshComponentTemplate : public UDatasmithObjectTemplate
+	class UDatasmithDecalComponentTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		class UStaticMesh*                                           StaticMesh;                                              // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class UMaterialInterface*>                            OverrideMaterials;                                       // 0x0038(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		int32_t                                                      SortOrder;                                               // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  DecalSize;                                               // 0x0034(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMaterialInterface*                                    Material;                                                // 0x0040(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -609,13 +612,27 @@ namespace SDK
 	};
 
 	/**
+	 * Class DatasmithContent.DatasmithImportedSequencesActor
+	 * Size -> 0x0010 (FullSize[0x0230] - InheritedSize[0x0220])
+	 */
+	class ADatasmithImportedSequencesActor : public AActor
+	{
+	public:
+		TArray<class ULevelSequence*>                                ImportedSequences;                                       // 0x0220(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+	public:
+		void PlayLevelSequence(class ULevelSequence* SequenceToPlay);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class DatasmithContent.DatasmithSceneComponentTemplate
 	 * Size -> 0x00C0 (FullSize[0x00F0] - InheritedSize[0x0030])
 	 */
 	class UDatasmithSceneComponentTemplate : public UDatasmithObjectTemplate
 	{
 	public:
-		struct PCoreUObject_FTransform                               RelativeTransform;                                       // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               RelativeTransform;                                       // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		EComponentMobility                                           Mobility;                                                // 0x0060(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TSoftObjectPtr<class USceneComponent>                        AttachParent;                                            // 0x0068(0x0024) ELEMENT_SIZE_MISMATCH ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -624,23 +641,6 @@ namespace SDK
 		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0091(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TSet<class FName>                                            Tags;                                                    // 0x0098(0x0050) NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0003[0x8];                                   // 0x00E8(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DatasmithContent.DatasmithStaticMeshTemplate
-	 * Size -> 0x0078 (FullSize[0x00A8] - InheritedSize[0x0030])
-	 */
-	class UDatasmithStaticMeshTemplate : public UDatasmithObjectTemplate
-	{
-	public:
-		struct FDatasmithMeshSectionInfoMapTemplate                  SectionInfoMap;                                          // 0x0030(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
-		int32_t                                                      LightMapCoordinateIndex;                                 // 0x0080(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      LightMapResolution;                                      // 0x0084(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FDatasmithMeshBuildSettingsTemplate>           BuildSettings;                                           // 0x0088(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<struct FDatasmithStaticMaterialTemplate>              StaticMaterials;                                         // 0x0098(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

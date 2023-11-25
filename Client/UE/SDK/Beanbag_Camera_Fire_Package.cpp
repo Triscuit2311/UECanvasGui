@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UBeanbag_Camera_Fire_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57484);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43246);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UBeanbag_Camera_Fire_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57483);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43245);
 		return ptr;
 	}
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,40 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class ChaosCloth.ChaosClothingInteractor
+	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
+	 */
+	class UChaosClothingInteractor : public UClothingInteractor
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0030(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		void SetVelocityScale(const struct FVector& LinearVelocityScale, float AngularVelocityScale, float FictitiousAngularScale);
+		void SetMaterialLinear(float EdgeStiffness, float BendingStiffness, float AreaStiffness);
+		void SetLongRangeAttachmentLinear(float TetherStiffness);
+		void SetLongRangeAttachment(const struct FVector2D& TetherStiffness);
+		void SetGravity(float GravityScale, bool bIsGravityOverridden, const struct FVector& GravityOverride);
+		void SetDamping(float DampingCoefficient);
+		void SetCollision(float CollisionThickness, float FrictionCoefficient, bool bUseCCD, float SelfCollisionThickness);
+		void SetAnimDriveLinear(float AnimDriveStiffness);
+		void SetAnimDrive(const struct FVector2D& AnimDriveStiffness, const struct FVector2D& AnimDriveDamping);
+		void SetAerodynamics(float DragCoefficient, float LiftCoefficient, const struct FVector& WindVelocity);
+		void ResetAndTeleport(bool bReset, bool bTeleport);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class ChaosCloth.ChaosClothingSimulationFactory
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UChaosClothingSimulationFactory : public UClothingSimulationFactory
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class ChaosCloth.ChaosClothConfig
 	 * Size -> 0x00A0 (FullSize[0x00C8] - InheritedSize[0x0028])
@@ -96,40 +130,6 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0090(0x0010) MISSED OFFSET (PADDING)
 
 	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ChaosCloth.ChaosClothingSimulationFactory
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UChaosClothingSimulationFactory : public UClothingSimulationFactory
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ChaosCloth.ChaosClothingInteractor
-	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
-	 */
-	class UChaosClothingInteractor : public UClothingInteractor
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0030(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		void SetVelocityScale(const struct FVector& LinearVelocityScale, float AngularVelocityScale, float FictitiousAngularScale);
-		void SetMaterialLinear(float EdgeStiffness, float BendingStiffness, float AreaStiffness);
-		void SetLongRangeAttachmentLinear(float TetherStiffness);
-		void SetLongRangeAttachment(const struct FVector2D& TetherStiffness);
-		void SetGravity(float GravityScale, bool bIsGravityOverridden, const struct FVector& GravityOverride);
-		void SetDamping(float DampingCoefficient);
-		void SetCollision(float CollisionThickness, float FrictionCoefficient, bool bUseCCD, float SelfCollisionThickness);
-		void SetAnimDriveLinear(float AnimDriveStiffness);
-		void SetAnimDrive(const struct FVector2D& AnimDriveStiffness, const struct FVector2D& AnimDriveDamping);
-		void SetAerodynamics(float DragCoefficient, float LiftCoefficient, const struct FVector& WindVelocity);
-		void ResetAndTeleport(bool bReset, bool bTeleport);
 		static UClass* StaticClass();
 	};
 

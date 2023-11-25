@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -25,7 +25,7 @@ namespace SDK
 	 */
 	void ACybernetics_Civilian_V2_C::BndEvt__Cybernetics_Civilian_V2_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86698);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86523);
 		
 		struct
 		{
@@ -57,7 +57,7 @@ namespace SDK
 	 */
 	void ACybernetics_Civilian_V2_C::ExecuteUbergraph_Cybernetics_Civilian_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86697);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86522);
 		
 		struct
 		{
@@ -81,7 +81,7 @@ namespace SDK
 	 */
 	UClass* ACybernetics_Civilian_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86696);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86521);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UM4_Camera_Shake_Draw_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52402);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38506);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UM4_Camera_Shake_Draw_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(52401);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38505);
 		return ptr;
 	}
 

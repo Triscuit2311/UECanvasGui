@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::SelectTab(int32_t Tab)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88665);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88670);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::ShowButtonAtSlot(int32_t SlotNum, bool Show)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88664);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88669);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::GetButtonAtSlot(int32_t Slot, class UW_StandardRadioButton_C** Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88663);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88668);
 		
 		struct
 		{
@@ -105,7 +105,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::GetSlotForNumber(int32_t SlotNum, class UNamedSlot** Slot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88662);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88667);
 		
 		struct
 		{
@@ -136,7 +136,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::SetTabSlot(int32_t Tab, class UWidget* Widget, class UPanelSlot** WidgetAsPanelSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88661);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88666);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88660);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88665);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::OnRadioButtonClicked(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88659);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88664);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::ExecuteUbergraph_W_StandardTabControl(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88658);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88663);
 		
 		struct
 		{
@@ -240,7 +240,7 @@ namespace SDK
 	 */
 	void UW_StandardTabControl_C::OnTabSelected__DelegateSignature(class UW_StandardButton_C* CallingButton, int32_t NewTabIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88657);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88662);
 		
 		struct
 		{
@@ -265,7 +265,7 @@ namespace SDK
 	 */
 	UClass* UW_StandardTabControl_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88656);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88661);
 		return ptr;
 	}
 

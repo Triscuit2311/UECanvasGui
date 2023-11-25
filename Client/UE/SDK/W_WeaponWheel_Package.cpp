@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::RemoveNullItemsFromAllCategories()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92929);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94908);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::RemoveNullItemsFromCategory(const class FName& WeaponWheelCategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92928);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94907);
 		
 		struct
 		{
@@ -74,7 +74,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::IsItemAtBack(class ABaseItem* Item, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92927);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94906);
 		
 		struct
 		{
@@ -104,7 +104,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::IsItemAtFront(class ABaseItem* Item, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92926);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94905);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::IsItemAtIndex(class ABaseItem* Item, int32_t Index, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92925);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94904);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::ClearStats()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92924);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94903);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateDebugInformation()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92923);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94902);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveExecutableItemFromCategory(class UWeaponWheelScript* NewWeaponWheelScript, int32_t AtIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92922);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94901);
 		
 		struct
 		{
@@ -235,7 +235,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddExecutableItemToCategory(class UWeaponWheelScript* NewWeaponWheelScript, int32_t AtIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92921);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94900);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::ShuffleItemsInCategory(const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92920);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94899);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::GetCurrentICategorytemCount(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92919);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94898);
 		
 		struct
 		{
@@ -311,7 +311,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::GetCurrentItemSelectionIndex(int32_t* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92918);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94897);
 		
 		struct
 		{
@@ -340,7 +340,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToAnotherCategoryIndex(int32_t ItemIndex, const class FName& FromCategory, const class FName& ToCategory, int32_t NewIndexInCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92917);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94896);
 		
 		struct
 		{
@@ -372,7 +372,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToAnotherCategory(class ABaseItem* Item, const class FName& ToCategory, int32_t NewIndexInCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92916);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94895);
 		
 		struct
 		{
@@ -403,7 +403,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToNewSpotIndex(int32_t ItemIndex, const class FName& CategoryName, int32_t NewIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92915);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94894);
 		
 		struct
 		{
@@ -432,7 +432,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToNewSpot(class ABaseItem* Item, int32_t NewIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92914);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94893);
 		
 		struct
 		{
@@ -459,7 +459,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToBack(class ABaseItem* Item)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92913);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94892);
 		
 		struct
 		{
@@ -483,7 +483,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToFront(class ABaseItem* Item)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92912);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94891);
 		
 		struct
 		{
@@ -508,7 +508,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToBackIndex(int32_t ItemIndex, const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92911);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94890);
 		
 		struct
 		{
@@ -536,7 +536,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::MoveItemToFrontIndex(int32_t ItemIndex, const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92910);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94889);
 		
 		struct
 		{
@@ -563,7 +563,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveAssistant(class ABaseItem* AssistantItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92909);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94888);
 		
 		struct
 		{
@@ -587,7 +587,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveTabletDevice(class ABaseItem* TabletDeviceItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92908);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94887);
 		
 		struct
 		{
@@ -611,7 +611,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveTacticalDevices(class ABaseItem* DoorDeviceItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92907);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94886);
 		
 		struct
 		{
@@ -635,7 +635,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveGrenade(class ABaseItem* GrenadeItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92906);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94885);
 		
 		struct
 		{
@@ -659,7 +659,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveSecondaryWeapon(class ABaseItem* SecondaryWeaponItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92905);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94884);
 		
 		struct
 		{
@@ -683,7 +683,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemovePrimaryWeapon(class ABaseItem* PrimaryWeaponItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92904);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94883);
 		
 		struct
 		{
@@ -708,7 +708,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RemoveItemFromCategory(class ABaseItem* Item, const class FName& WheelCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92903);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94882);
 		
 		struct
 		{
@@ -735,7 +735,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddItemToCategory(class ABaseItem* Item, const class FName& WheelCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92902);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94881);
 		
 		struct
 		{
@@ -761,7 +761,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddTabletDevice(class ABaseItem* TabletDeviceItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92901);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94880);
 		
 		struct
 		{
@@ -785,7 +785,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddTacticalDevice(class ABaseItem* TacticalDeviceItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92900);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94879);
 		
 		struct
 		{
@@ -809,7 +809,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddAssistants(class ABaseItem* Assistants)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92899);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94878);
 		
 		struct
 		{
@@ -833,7 +833,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddGrenade(class ABaseItem* GrenadeItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92898);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94877);
 		
 		struct
 		{
@@ -857,7 +857,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddSecondaryWeapon(class ABaseItem* SecondayWeaponItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92897);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94876);
 		
 		struct
 		{
@@ -881,7 +881,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::AddPrimaryWeapon(class ABaseItem* PrimaryWeaponItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92896);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94875);
 		
 		struct
 		{
@@ -904,7 +904,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RefreshMultiItemWidget()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92895);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94874);
 		
 		struct
 		{
@@ -925,7 +925,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::IsWheelCursorVisible()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92894);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94873);
 		
 		struct
 		{
@@ -949,7 +949,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::OnRadialMenuInitialized()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92893);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94872);
 		
 		struct
 		{
@@ -976,7 +976,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::OnRadialSectorCreated(int32_t Index, float InAngle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92892);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94871);
 		
 		struct
 		{
@@ -1004,7 +1004,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::ExecuteRadial()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92891);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94870);
 		
 		struct
 		{
@@ -1028,7 +1028,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::ShowWheel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92890);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94869);
 		
 		struct
 		{
@@ -1052,7 +1052,7 @@ namespace SDK
 	 */
 	bool UW_WeaponWheel_C::HideWheel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92889);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94868);
 		
 		struct
 		{
@@ -1076,7 +1076,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::NotifyAllStatsOnWheelCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94867);
 		
 		struct
 		{
@@ -1097,7 +1097,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::NotifyAllCategoriesOnWheelCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94866);
 		
 		struct
 		{
@@ -1120,7 +1120,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::FindDataTableRowNameFromItemName(const class FName& ItemName, class FName* RowName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92886);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94865);
 		
 		struct
 		{
@@ -1149,7 +1149,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::StatEnumToName(uint8_t ItemStat, class FName* StatName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92885);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94864);
 		
 		struct
 		{
@@ -1179,7 +1179,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RefreshStats(TArray<class UUserWidget*>* ItemStats, const struct FItemLookupTable& ItemDataTable)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92884);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94863);
 		
 		struct
 		{
@@ -1210,7 +1210,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::RefreshCategory(TArray<class ABaseItem*>* NewCategoryItems, TArray<class UWeaponWheelScript*>* NewWeaponWheelScripts, const class FName& CategoryName, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92883);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94862);
 		
 		struct
 		{
@@ -1244,7 +1244,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateTabletDevices(TArray<class ABaseItem*>* NewTabletDevices, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92882);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94861);
 		
 		struct
 		{
@@ -1273,7 +1273,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateTacticalDevices(TArray<class ABaseItem*>* NewDoorDevices, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92881);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(94860);
 		
 		struct
 		{
@@ -1302,7 +1302,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateAssistants(TArray<class ABaseItem*>* NewAssistants, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92880);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92973);
 		
 		struct
 		{
@@ -1331,7 +1331,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateGrenades(TArray<class ABaseItem*>* NewGrenades, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92879);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92972);
 		
 		struct
 		{
@@ -1360,7 +1360,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdateSecondaryWeapons(TArray<class ABaseItem*>* NewSecondaryWeapons, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92878);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92971);
 		
 		struct
 		{
@@ -1389,7 +1389,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::UpdatePrimaryWeapons(TArray<class ABaseItem*>* NewPrimaryWeapons, int32_t StartingItemIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92877);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92970);
 		
 		struct
 		{
@@ -1416,7 +1416,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::PreviousItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92876);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92969);
 		
 		struct
 		{
@@ -1437,7 +1437,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::NextItem()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92875);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92968);
 		
 		struct
 		{
@@ -1458,7 +1458,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::PopulateAllCategories()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92874);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92967);
 		
 		struct
 		{
@@ -1481,7 +1481,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::PopulateCategory(TArray<class ABaseItem*>* Items, const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92873);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92966);
 		
 		struct
 		{
@@ -1510,7 +1510,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::PlaceWidgetInWheel(class UCanvasPanelSlot** CanvasSlot, const struct FVector2D& Positionn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92872);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92965);
 		
 		struct
 		{
@@ -1542,7 +1542,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::SelectItem(class UW_WeaponWheel_RadialSelection_C* ItemToSelect, bool PlayAnimation, bool PlaySound, bool RefreshStats, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92871);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92964);
 		
 		struct
 		{
@@ -1581,7 +1581,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::CreateWheelStat(class UW_WeaponWheel_ItemStat_C* ItemStatClass, float FillSpeed, EEasingFunc EasingFunction, const struct FItemLookupTable& LookupTable, class UW_WeaponWheel_ItemStat_C** ItemStatWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92870);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92963);
 		
 		struct
 		{
@@ -1618,7 +1618,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::CreateWheelCategory(int32_t Index, const class FName& CategoryName, class UCanvasPanelSlot** CanvasPanelSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92869);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92962);
 		
 		struct
 		{
@@ -1648,7 +1648,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92868);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92961);
 		
 		struct
 		{
@@ -1671,7 +1671,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92867);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92960);
 		
 		struct
 		{
@@ -1697,7 +1697,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::OnItemSelcted(bool PlayAnimation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92866);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92959);
 		
 		struct
 		{
@@ -1720,7 +1720,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::OnItemDeselected()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92865);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92958);
 		
 		struct
 		{
@@ -1742,7 +1742,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::OnSectorSelected(int32_t SelectedIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92864);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92957);
 		
 		struct
 		{
@@ -1766,7 +1766,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::OnSectorDeselected(int32_t DeselectedIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92863);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92956);
 		
 		struct
 		{
@@ -1789,7 +1789,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::OnRadialMenuCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92862);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92955);
 		
 		struct
 		{
@@ -1811,7 +1811,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92861);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92954);
 		
 		struct
 		{
@@ -1835,7 +1835,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::ExecuteUbergraph_W_WeaponWheel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92860);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92953);
 		
 		struct
 		{
@@ -1862,7 +1862,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::ItemDeselected__DelegateSignature(int32_t CategoryIndex, const class FName& CategoryName, int32_t ItemIndex, const class FName& ItemName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92859);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92952);
 		
 		struct
 		{
@@ -1895,7 +1895,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::ItemSelected__DelegateSignature(int32_t CategoryIndex, const class FName& CategoryName, int32_t ItemIndex, const class FName& ItemName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92858);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92951);
 		
 		struct
 		{
@@ -1926,7 +1926,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::CategorySelected__DelegateSignature(int32_t CategoryIndex, const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92857);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92950);
 		
 		struct
 		{
@@ -1953,7 +1953,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_C::CategoryDeselected__DelegateSignature(int32_t CategoryIndex, const class FName& CategoryName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92856);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(92949);
 		
 		struct
 		{
@@ -1978,7 +1978,7 @@ namespace SDK
 	 */
 	UClass* UW_WeaponWheel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92855);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92948);
 		return ptr;
 	}
 

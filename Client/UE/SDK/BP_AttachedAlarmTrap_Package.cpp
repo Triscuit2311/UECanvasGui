@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABP_AttachedAlarmTrap_C::OnTrapTriggered(class AReadyOrNotCharacter* TriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88240);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88252);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void ABP_AttachedAlarmTrap_C::OnTrapDisarmed(class AReadyOrNotCharacter* DisarmedBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88239);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88251);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void ABP_AttachedAlarmTrap_C::ExecuteUbergraph_BP_AttachedAlarmTrap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88238);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88250);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	UClass* ABP_AttachedAlarmTrap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88237);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88249);
 		return ptr;
 	}
 

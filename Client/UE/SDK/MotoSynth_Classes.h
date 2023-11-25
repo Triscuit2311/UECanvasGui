@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class MotoSynth.MotoSynthPreset
-	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
-	 */
-	class UMotoSynthPreset : public UObject
-	{
-	public:
-		struct FMotoSynthRuntimeSettings                             Settings;                                                // 0x0028(0x0068) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class MotoSynth.MotoSynthSource
 	 * Size -> 0x00D0 (FullSize[0x00F8] - InheritedSize[0x0028])
@@ -65,6 +52,19 @@ namespace SDK
 		void SetRPM(float InRPM, float InTimeSec);
 		bool IsEnabled();
 		void GetRPMRange(float* OutMinRPM, float* OutMaxRPM);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MotoSynth.MotoSynthPreset
+	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
+	 */
+	class UMotoSynthPreset : public UObject
+	{
+	public:
+		struct FMotoSynthRuntimeSettings                             Settings;                                                // 0x0028(0x0068) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+
+	public:
 		static UClass* StaticClass();
 	};
 

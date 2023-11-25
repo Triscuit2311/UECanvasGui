@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UNVG_Widget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55768);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41389);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UNVG_Widget_C::ExecuteUbergraph_NVG_Widget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55767);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(41388);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	UClass* UNVG_Widget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55766);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(41387);
 		return ptr;
 	}
 

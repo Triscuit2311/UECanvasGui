@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_RichChatBox_C::GetTeamChatIndicatorVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49302);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_RichChatBox_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49301);
 		
 		struct
 		{
@@ -76,7 +76,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::SetChatFocus(bool NewFocus, bool NewTeamChat)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49300);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::AddChatMessage(const class FString& Message)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49299);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::BndEvt__ChatEntry_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49298);
 		
 		struct
 		{
@@ -152,7 +152,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29048);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49297);
 		
 		struct
 		{
@@ -174,7 +174,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::OnChatMessageReceived(const struct FRChatMessage& Message)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29047);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49296);
 		
 		struct
 		{
@@ -199,7 +199,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29046);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49295);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::RetryBindChat()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29045);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49294);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29044);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49293);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_RichChatBox_C::ExecuteUbergraph_W_RichChatBox(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29043);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49292);
 		
 		struct
 		{
@@ -293,7 +293,7 @@ namespace SDK
 	 */
 	UClass* UW_RichChatBox_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29042);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49291);
 		return ptr;
 	}
 

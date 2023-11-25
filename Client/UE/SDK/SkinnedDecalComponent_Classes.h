@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -61,7 +61,7 @@ namespace SDK
 	public:
 		void UpdateInstance(class USkinnedDecalInstance* Instance);
 		void UpdateAllDecals();
-		int32_t SpawnDecal(const struct FVector& Location, const struct PCoreUObject_FQuat& Rotation, const class FName& BoneName, float Size, int32_t SubUV, int32_t Index);
+		int32_t SpawnDecal(const struct FVector& Location, const struct FQuat& Rotation, const class FName& BoneName, float Size, int32_t SubUV, int32_t Index);
 		void SetupMaterials();
 		void SetMeshComponent(class USkeletalMeshComponent* MeshComponent, bool Child);
 		void RemoveDecal(int32_t Index);

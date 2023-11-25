@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90002);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90095);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90001);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90094);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::OnStatsStarted_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90000);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90093);
 		
 		struct
 		{
@@ -85,7 +85,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::OnStatsSaved_Event_1(bool bWasSuccessful, const class FString& StatsName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89999);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90092);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::OnStatsUploadProgress_Event_1(const class FString& Filename, float Percentage)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89998);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90091);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89997);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90090);
 		
 		struct
 		{
@@ -160,7 +160,7 @@ namespace SDK
 	 */
 	void UW_PermanentOverlay_C::ExecuteUbergraph_W_PermanentOverlay(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89996);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90089);
 		
 		struct
 		{
@@ -184,7 +184,7 @@ namespace SDK
 	 */
 	UClass* UW_PermanentOverlay_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89995);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90088);
 		return ptr;
 	}
 

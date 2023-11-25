@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -53,18 +53,6 @@ namespace SDK
 		struct FVector ClosestPointOnSphereToLine(const struct FVector& SphereOrigin, float SphereRadius, const struct FVector& LineOrigin, const struct FVector& LineDir);
 		struct FVector ClosestPointOnLineSeqment(const struct FVector& Point, const struct FVector& LineStart, const struct FVector& LineEnd);
 		bool AreLineSegmentsCrossing(const struct FVector& pointA1, const struct FVector& pointA2, const struct FVector& pointB1, const struct FVector& pointB2);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class VictoryBPLibrary.VictoryBPHTML
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UVictoryBPHTML : public UBlueprintFunctionLibrary
-	{
-	public:
-		void VictoryHTML5_SetCursorVisible(bool MakeVisible);
-		bool IsHTML();
 		static UClass* StaticClass();
 	};
 
@@ -154,7 +142,7 @@ namespace SDK
 		float VerticalFOV(float HorizontalFOV, float AspectRatio);
 		struct FVector2D Vector2DInterpTo_Constant(const struct FVector2D& Current, const struct FVector2D& Target, float DeltaTime, float InterpSpeed);
 		struct FVector2D Vector2DInterpTo(const struct FVector2D& Current, const struct FVector2D& Target, float DeltaTime, float InterpSpeed);
-		void UTCToLocal(const struct PCoreUObject_FDateTime& UTCTime, struct PCoreUObject_FDateTime* LocalTime);
+		void UTCToLocal(const struct FDateTime& UTCTime, struct FDateTime* LocalTime);
 		void UnloadStreamingLevel(class ULevelStreamingDynamic* LevelInstance);
 		struct FRotator TransformVectorToActorSpaceAngle(class AActor* Actor, const struct FVector& InVector);
 		struct FVector TransformVectorToActorSpace(class AActor* Actor, const struct FVector& InVector);
@@ -244,9 +232,9 @@ namespace SDK
 		bool GetViewportPositionHitResultByChannel(class UObject* WorldContextObject, const struct FVector2D& ViewportPosition, ECollisionChannel TraceChannel, bool bTraceComplex, struct FHitResult* OutHitResult);
 		bool GetViewportPosition(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* OutViewportPosition);
 		struct FVector GetVectorRelativeLocation(const struct FVector& ParentLocation, const struct FRotator& ParentRotation, const struct FVector& ChildLocation);
-		void GetUTCFromUnixTimeStamp(int32_t UnixTimeStamp, struct PCoreUObject_FDateTime* UTCTime);
+		void GetUTCFromUnixTimeStamp(int32_t UnixTimeStamp, struct FDateTime* UTCTime);
 		void GetUserDisplayAdapterBrand(bool* IsAMD, bool* IsNvidia, bool* IsIntel, bool* IsUnknown, int32_t* UnknownId);
-		int32_t GetUnixTimeStamp(const struct PCoreUObject_FDateTime& UTCTime);
+		int32_t GetUnixTimeStamp(const struct FDateTime& UTCTime);
 		float GetTimeAlive(class AActor* Target);
 		bool GetStaticMeshVertexLocations(class UStaticMeshComponent* Comp, TArray<struct FVector>* VertexPositions);
 		struct FRotator GetRotatorRelativeRotation(const struct FRotator& ParentRotation, const struct FRotator& ChildRotation);
@@ -320,6 +308,18 @@ namespace SDK
 		class APlayerController* Accessor__GetPlayerController(class AActor* TheCharacter, bool* IsValid);
 		class FString Accessor__GetNameAsString(class UObject* TheObject);
 		class USkeletalMeshComponent* Accessor__GetCharacterSkeletalMesh(class AActor* TheCharacter, bool* IsValid);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class VictoryBPLibrary.VictoryBPHTML
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UVictoryBPHTML : public UBlueprintFunctionLibrary
+	{
+	public:
+		void VictoryHTML5_SetCursorVisible(bool MakeVisible);
+		bool IsHTML();
 		static UClass* StaticClass();
 	};
 

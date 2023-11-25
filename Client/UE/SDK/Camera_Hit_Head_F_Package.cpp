@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UCamera_Hit_Head_F_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54050);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40705);
 		return ptr;
 	}
 

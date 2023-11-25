@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void ABP_DetectHitPosition_Object_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68796);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69734);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void ABP_DetectHitPosition_Object_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68795);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69733);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ABP_DetectHitPosition_Object_C::DoHit(const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68794);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69732);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void ABP_DetectHitPosition_Object_C::ExecuteUbergraph_BP_DetectHitPosition_Object(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(68793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(69731);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	UClass* ABP_DetectHitPosition_Object_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(68792);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(69730);
 		return ptr;
 	}
 

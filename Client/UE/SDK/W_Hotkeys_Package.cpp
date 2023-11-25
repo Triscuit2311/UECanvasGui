@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27197);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43860);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::OnQuickThrowStart_Event_1(class ABaseItem* LastItemBeforeQuickThrow, class ABaseItem* QuickThrowGrenade)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43859);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::OnQuickThrowEnd_Event_1(class ABaseItem* QuickThrowGrenade)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27195);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43858);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::OnSecondarySightToggled_Event_1(bool bUsingSecondarySight, class ABaseMagazineWeapon* Weapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27194);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43857);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::OnAttachmentLightToggled_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27193);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43856);
 		
 		struct
 		{
@@ -142,7 +142,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::OnNightVisionGogglesToggled_Event_1(bool bNVGOn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27192);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43855);
 		
 		struct
 		{
@@ -165,7 +165,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::RefreshHotkeyInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27191);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43854);
 		
 		struct
 		{
@@ -187,7 +187,7 @@ namespace SDK
 	 */
 	void UW_Hotkeys_C::ExecuteUbergraph_W_Hotkeys(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27190);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43853);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	UClass* UW_Hotkeys_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27189);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43852);
 		return ptr;
 	}
 

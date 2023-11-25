@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -43,33 +43,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class TemplateSequence.TemplateSequencePlayer
-	 * Size -> 0x0008 (FullSize[0x04F0] - InheritedSize[0x04E8])
-	 */
-	class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x04E8(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		class UTemplateSequencePlayer* CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class TemplateSequence.TemplateSequencePropertyScalingInstantiatorSystem
-	 * Size -> 0x0058 (FullSize[0x0098] - InheritedSize[0x0040])
-	 */
-	class UTemplateSequencePropertyScalingInstantiatorSystem : public UMovieSceneEntitySystem
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0040(0x0058) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class TemplateSequence.SequenceCameraShakeCameraStandIn
 	 * Size -> 0x0648 (FullSize[0x0670] - InheritedSize[0x0028])
 	 */
@@ -91,33 +64,6 @@ namespace SDK
 		float                                                        CurrentAperture;                                         // 0x0624(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        CurrentFocusDistance;                                    // 0x0628(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0003[0x44];                                  // 0x062C(0x0044) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class TemplateSequence.TemplateSequencePropertyScalingEvaluatorSystem
-	 * Size -> 0x0050 (FullSize[0x0090] - InheritedSize[0x0040])
-	 */
-	class UTemplateSequencePropertyScalingEvaluatorSystem : public UMovieSceneEntitySystem
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0040(0x0050) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class TemplateSequence.TemplateSequenceSection
-	 * Size -> 0x0018 (FullSize[0x0180] - InheritedSize[0x0168])
-	 */
-	class UTemplateSequenceSection : public UMovieSceneSubSection
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0168(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FTemplateSectionPropertyScale>                 PropertyScales;                                          // 0x0170(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -163,6 +109,19 @@ namespace SDK
 	};
 
 	/**
+	 * Class TemplateSequence.TemplateSequencePropertyScalingInstantiatorSystem
+	 * Size -> 0x0058 (FullSize[0x0098] - InheritedSize[0x0040])
+	 */
+	class UTemplateSequencePropertyScalingInstantiatorSystem : public UMovieSceneEntitySystem
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0040(0x0058) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class TemplateSequence.TemplateSequenceActor
 	 * Size -> 0x0058 (FullSize[0x0278] - InheritedSize[0x0220])
 	 */
@@ -187,6 +146,33 @@ namespace SDK
 	};
 
 	/**
+	 * Class TemplateSequence.TemplateSequencePropertyScalingEvaluatorSystem
+	 * Size -> 0x0050 (FullSize[0x0090] - InheritedSize[0x0040])
+	 */
+	class UTemplateSequencePropertyScalingEvaluatorSystem : public UMovieSceneEntitySystem
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0040(0x0050) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class TemplateSequence.TemplateSequencePlayer
+	 * Size -> 0x0008 (FullSize[0x04F0] - InheritedSize[0x04E8])
+	 */
+	class UTemplateSequencePlayer : public UMovieSceneSequencePlayer
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x04E8(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		class UTemplateSequencePlayer* CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class TemplateSequence.TemplateSequenceTrack
 	 * Size -> 0x0000 (FullSize[0x00A0] - InheritedSize[0x00A0])
 	 */
@@ -204,6 +190,20 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x70];                                  // 0x0040(0x0070) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class TemplateSequence.TemplateSequenceSection
+	 * Size -> 0x0018 (FullSize[0x0180] - InheritedSize[0x0168])
+	 */
+	class UTemplateSequenceSection : public UMovieSceneSubSection
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0168(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FTemplateSectionPropertyScale>                 PropertyScales;                                          // 0x0170(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

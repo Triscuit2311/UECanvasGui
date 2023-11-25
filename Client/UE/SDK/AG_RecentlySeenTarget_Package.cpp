@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool UAG_RecentlySeenTarget_C::CanOpen(const struct FAIActionDecisionContext& Context)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85326);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84206);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	UClass* UAG_RecentlySeenTarget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85325);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84205);
 		return ptr;
 	}
 

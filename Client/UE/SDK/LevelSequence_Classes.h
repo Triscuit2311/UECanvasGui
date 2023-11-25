@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -62,42 +62,46 @@ namespace SDK
 	};
 
 	/**
-	 * Class LevelSequence.AnimSequenceLevelSequenceLink
-	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-	 */
-	class UAnimSequenceLevelSequenceLink : public UAssetUserData
-	{
-	public:
-		struct FGuid                                                 SkelTrackGuid;                                           // 0x0028(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSoftObjectPath                                       PathToLevelSequence;                                     // 0x0038(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.DefaultLevelSequenceInstanceData
-	 * Size -> 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
-	 */
-	class UDefaultLevelSequenceInstanceData : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AActor*                                                TransformOriginActor;                                    // 0x0030(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               TransformOrigin;                                         // 0x0040(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class LevelSequence.LevelSequenceMetaData
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
 	class ILevelSequenceMetaData : public IInterface
 	{
 	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.LevelSequenceAnimSequenceLink
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class ULevelSequenceAnimSequenceLink : public UAssetUserData
+	{
+	public:
+		TArray<struct FLevelSequenceAnimSequenceLinkItem>            AnimSequenceLinks;                                       // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.LevelSequenceDirector
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class ULevelSequenceDirector : public UObject
+	{
+	public:
+		class ULevelSequencePlayer*                                  Player;                                                  // 0x0028(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      SubSequenceID;                                           // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      MovieScenePlayerIndex;                                   // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		void OnCreated();
+		class UMovieSceneSequence* GetSequence();
+		TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
+		class UObject* GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding);
+		TArray<class AActor*> GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding);
+		class AActor* GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding);
 		static UClass* StaticClass();
 	};
 
@@ -121,83 +125,6 @@ namespace SDK
 		class UObject* FindOrAddMetaDataByClass(class UObject* InClass);
 		class UObject* FindMetaDataByClass(class UObject* InClass);
 		class UObject* CopyMetaData(class UObject* InMetaData);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.LevelSequenceBurnInInitSettings
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class ULevelSequenceBurnInInitSettings : public UObject
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.LevelSequenceBurnInOptions
-	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-	 */
-	class ULevelSequenceBurnInOptions : public UObject
-	{
-	public:
-		bool                                                         bUseBurnIn;                                              // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSoftClassPath                                        BurnInClass;                                             // 0x0030(0x0018) Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class ULevelSequenceBurnInInitSettings*                      Settings;                                                // 0x0048(0x0008) Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.LevelSequenceAnimSequenceLink
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class ULevelSequenceAnimSequenceLink : public UAssetUserData
-	{
-	public:
-		TArray<struct FLevelSequenceAnimSequenceLinkItem>            AnimSequenceLinks;                                       // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.LevelSequenceBurnIn
-	 * Size -> 0x00C0 (FullSize[0x0320] - InheritedSize[0x0260])
-	 */
-	class ULevelSequenceBurnIn : public UUserWidget
-	{
-	public:
-		struct FLevelSequencePlayerSnapshot                          FrameInformation;                                        // 0x0260(0x00B8) BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected
-		class ALevelSequenceActor*                                   LevelSequenceActor;                                      // 0x0318(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-
-	public:
-		void SetSettings(class UObject* InSettings);
-		class ULevelSequenceBurnInInitSettings* GetSettingsClass();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class LevelSequence.LevelSequenceDirector
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class ULevelSequenceDirector : public UObject
-	{
-	public:
-		class ULevelSequencePlayer*                                  Player;                                                  // 0x0028(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      SubSequenceID;                                           // 0x0030(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      MovieScenePlayerIndex;                                   // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		void OnCreated();
-		class UMovieSceneSequence* GetSequence();
-		TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
-		class UObject* GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding);
-		TArray<class AActor*> GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding);
-		class AActor* GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding);
 		static UClass* StaticClass();
 	};
 
@@ -247,6 +174,16 @@ namespace SDK
 	};
 
 	/**
+	 * Class LevelSequence.LevelSequenceBurnInInitSettings
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class ULevelSequenceBurnInInitSettings : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class LevelSequence.LevelSequenceMediaController
 	 * Size -> 0x0028 (FullSize[0x0248] - InheritedSize[0x0220])
 	 */
@@ -265,6 +202,69 @@ namespace SDK
 		void OnRep_ServerStartTimeSeconds();
 		class ALevelSequenceActor* GetSequence();
 		class UMediaComponent* GetMediaComponent();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.LevelSequenceBurnIn
+	 * Size -> 0x00C0 (FullSize[0x0320] - InheritedSize[0x0260])
+	 */
+	class ULevelSequenceBurnIn : public UUserWidget
+	{
+	public:
+		struct FLevelSequencePlayerSnapshot                          FrameInformation;                                        // 0x0260(0x00B8) BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected
+		class ALevelSequenceActor*                                   LevelSequenceActor;                                      // 0x0318(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+	public:
+		void SetSettings(class UObject* InSettings);
+		class ULevelSequenceBurnInInitSettings* GetSettingsClass();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.LevelSequenceBurnInOptions
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class ULevelSequenceBurnInOptions : public UObject
+	{
+	public:
+		bool                                                         bUseBurnIn;                                              // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSoftClassPath                                        BurnInClass;                                             // 0x0030(0x0018) Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class ULevelSequenceBurnInInitSettings*                      Settings;                                                // 0x0048(0x0008) Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.AnimSequenceLevelSequenceLink
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class UAnimSequenceLevelSequenceLink : public UAssetUserData
+	{
+	public:
+		struct FGuid                                                 SkelTrackGuid;                                           // 0x0028(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSoftObjectPath                                       PathToLevelSequence;                                     // 0x0038(0x0018) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class LevelSequence.DefaultLevelSequenceInstanceData
+	 * Size -> 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
+	 */
+	class UDefaultLevelSequenceInstanceData : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AActor*                                                TransformOriginActor;                                    // 0x0030(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               TransformOrigin;                                         // 0x0040(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+
+	public:
 		static UClass* StaticClass();
 	};
 

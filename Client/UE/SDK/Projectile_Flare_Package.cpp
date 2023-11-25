@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AProjectile_Flare_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54572);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48470);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void AProjectile_Flare_C::SpawnLensFlare()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54571);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48469);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void AProjectile_Flare_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54570);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48468);
 		
 		struct
 		{
@@ -84,7 +84,7 @@ namespace SDK
 	 */
 	void AProjectile_Flare_C::ExecuteUbergraph_Projectile_Flare(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54569);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48467);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	UClass* AProjectile_Flare_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54568);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48466);
 		return ptr;
 	}
 

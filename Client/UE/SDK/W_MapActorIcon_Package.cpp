@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_MapActorIcon_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(195174);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(109809);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_MapActorIcon_C::ExecuteUbergraph_W_MapActorIcon(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(195173);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(109810);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_MapActorIcon_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(195172);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(109811);
 		return ptr;
 	}
 

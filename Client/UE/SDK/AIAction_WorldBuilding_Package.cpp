@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UAIAction_WorldBuilding_C::ShouldPerformAction()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84123);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UAIAction_WorldBuilding_C::BeginAction_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85242);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84122);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UAIAction_WorldBuilding_C::Tick_Blueprint(float DeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85241);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84121);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UAIAction_WorldBuilding_C::ExecuteUbergraph_AIAction_WorldBuilding(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85240);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84120);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	UClass* UAIAction_WorldBuilding_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85239);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84119);
 		return ptr;
 	}
 

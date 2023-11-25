@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void AFaction_USVeterans_C::OnAIAdded_Blueprint(class ACyberneticCharacter* Character)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129113);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112928);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void AFaction_USVeterans_C::AlertOtherSuspectsInTeam_Blueprint(class ASuspectCharacter* Suspect, class AReadyOrNotCharacter* Enemy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129114);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112929);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void AFaction_USVeterans_C::ExecuteUbergraph_Faction_USVeterans(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(129115);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112931);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	UClass* AFaction_USVeterans_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(129116);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112932);
 		return ptr;
 	}
 

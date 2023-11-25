@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UShotgun_Extended_Tube_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54604);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37993);
 		return ptr;
 	}
 

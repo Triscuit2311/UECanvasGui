@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89111);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89204);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89110);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89203);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::OnModNameUpdated(const class FString& ModName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89109);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89202);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::OnDownloadProgressUpdated(float DownloadPercent, float ExtractionPercent, const class FText& PercentText, const class FText& RemainingText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89108);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89201);
 		
 		struct
 		{
@@ -127,7 +127,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::OnQueueProgressUpdated(int32_t CompletedMods, int32_t TotalMods)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89107);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89200);
 		
 		struct
 		{
@@ -153,7 +153,7 @@ namespace SDK
 	 */
 	void UW_ModProgressWidget_C::ExecuteUbergraph_W_ModProgressWidget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89106);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89199);
 		
 		struct
 		{
@@ -176,7 +176,7 @@ namespace SDK
 	 */
 	UClass* UW_ModProgressWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89105);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89198);
 		return ptr;
 	}
 

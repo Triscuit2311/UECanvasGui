@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class ChaosSolverEngine.ChaosDebugDrawComponent
-	 * Size -> 0x0008 (FullSize[0x00B8] - InheritedSize[0x00B0])
-	 */
-	class UChaosDebugDrawComponent : public UActorComponent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x00B0(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class ChaosSolverEngine.ChaosEventListenerComponent
 	 * Size -> 0x0008 (FullSize[0x00B8] - InheritedSize[0x00B0])
@@ -137,6 +124,19 @@ namespace SDK
 	public:
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		struct FSoftClassPath                                        DefaultChaosSolverActorClass;                            // 0x0040(0x0018) Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class ChaosSolverEngine.ChaosDebugDrawComponent
+	 * Size -> 0x0008 (FullSize[0x00B8] - InheritedSize[0x00B0])
+	 */
+	class UChaosDebugDrawComponent : public UActorComponent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x00B0(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

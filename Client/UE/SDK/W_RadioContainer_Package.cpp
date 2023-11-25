@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_RadioContainer_C::OnNewChildSelected(const TScriptInterface<class IIRadioWidget_C>& NewSelectedChild)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28578);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30635);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_RadioContainer_C::RegisterRadioChild(const TScriptInterface<class IIRadioWidget_C>& NewChild)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28577);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30634);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_RadioContainer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28576);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30633);
 		return ptr;
 	}
 

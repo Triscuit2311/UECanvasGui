@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AProjectile_Base_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26759);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48461);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void AProjectile_Base_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26758);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48460);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void AProjectile_Base_C::OnDeflect(const struct FHitResult& DeflectionHit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26757);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48459);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void AProjectile_Base_C::ExecuteUbergraph_Projectile_Base(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26756);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48458);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	UClass* AProjectile_Base_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26755);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48457);
 		return ptr;
 	}
 

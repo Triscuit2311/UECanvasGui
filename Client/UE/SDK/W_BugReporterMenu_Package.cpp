@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_BugReporterMenu_C::GetOkButtonEnabled()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28863);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30694);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_BugReporterMenu_C::BndEvt__btn_Cancel_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28862);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30693);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UW_BugReporterMenu_C::BndEvt__btn_Submit_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28861);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30692);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_BugReporterMenu_C::ExecuteUbergraph_W_BugReporterMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28860);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30691);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	UClass* UW_BugReporterMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28859);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30690);
 		return ptr;
 	}
 

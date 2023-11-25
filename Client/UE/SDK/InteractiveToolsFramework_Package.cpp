@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,62 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInputBehavior.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInputBehavior::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3306);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnyButtonInputBehavior.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnyButtonInputBehavior::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3307);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UInteractiveGizmoBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UInteractiveGizmoBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3308);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoComponentAxisSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoComponentAxisSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3317);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -55,6 +111,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UBrushBaseProperties.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UBrushBaseProperties::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3319);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMeshSurfacePointTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -83,34 +153,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInteractiveToolsContext.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInteractiveToolsContext::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3355);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInteractiveGizmoBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInteractiveGizmoBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3308);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UBrushStampIndicatorBuilder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -125,56 +167,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AInternalToolFrameworkActor.StaticClass
+	 * 		Name   -> PredefinedFunction UAxisAngleGizmoBuilder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* AInternalToolFrameworkActor::StaticClass()
+	UClass* UAxisAngleGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3331);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AGizmoActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AGizmoActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3332);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AIntervalGizmoActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AIntervalGizmoActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3356);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UBrushBaseProperties.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UBrushBaseProperties::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3319);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3309);
 		return ptr;
 	}
 
@@ -209,76 +209,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UIntervalGizmoBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UIntervalGizmoBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3357);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3306);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnyButtonInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnyButtonInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3307);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClickDragInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClickDragInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3326);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UIntervalGizmo.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UIntervalGizmo::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3358);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UInteractiveToolBuilder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -287,342 +217,6 @@ namespace SDK
 	UClass* UInteractiveToolBuilder::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3328);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USingleClickToolBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USingleClickToolBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3380);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USingleClickInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USingleClickInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3379);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USingleClickTool.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USingleClickTool::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3381);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoObjectModifyStateTarget.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoObjectModifyStateTarget::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3384);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoBaseFloatParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoBaseFloatParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3359);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoAxisRotationParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoAxisRotationParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3371);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoNilStateTarget.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoNilStateTarget::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3382);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoTransformChangeStateTarget.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoTransformChangeStateTarget::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3385);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoBaseTransformSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoBaseTransformSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3390);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoScaledTransformSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoScaledTransformSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3392);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoLambdaStateTarget.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoLambdaStateTarget::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3383);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoBaseVec2ParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoBaseVec2ParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3367);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoUniformScaleParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoUniformScaleParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3372);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoTransformProxyTransformSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoTransformProxyTransformSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3393);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoAxisScaleParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoAxisScaleParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3373);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoAxisIntervalParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoAxisIntervalParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3360);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ATransformGizmoActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ATransformGizmoActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3386);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UKeyAsModifierInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UKeyAsModifierInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3361);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTransformGizmoBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTransformGizmoBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3387);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTransformGizmo.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTransformGizmo::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3388);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULocalClickDragInputBehavior.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULocalClickDragInputBehavior::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3327);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoPlaneScaleParameterSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoPlaneScaleParameterSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3374);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMeshSurfacePointToolBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMeshSurfacePointToolBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3362);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTransformProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTransformProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3389);
 		return ptr;
 	}
 
@@ -643,42 +237,70 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMouseHoverBehavior.StaticClass
+	 * 		Name   -> PredefinedFunction UKeyAsModifierInputBehavior.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMouseHoverBehavior::StaticClass()
+	UClass* UKeyAsModifierInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3363);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3361);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPlanePositionGizmoBuilder.StaticClass
+	 * 		Name   -> PredefinedFunction UClickDragInputBehavior.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPlanePositionGizmoBuilder::StaticClass()
+	UClass* UClickDragInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3375);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3326);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMultiClickSequenceInputBehavior.StaticClass
+	 * 		Name   -> PredefinedFunction ULocalClickDragInputBehavior.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMultiClickSequenceInputBehavior::StaticClass()
+	UClass* ULocalClickDragInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3364);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3327);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMeshSurfacePointToolBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMeshSurfacePointToolBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3362);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USelectionSet.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USelectionSet::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3377);
 		return ptr;
 	}
 
@@ -699,6 +321,62 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMouseHoverBehavior.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMouseHoverBehavior::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3363);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMultiClickSequenceInputBehavior.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMultiClickSequenceInputBehavior::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3364);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTransformProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTransformProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3389);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMeshSelectionSet.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMeshSelectionSet::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3378);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMultiSelectionTool.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -713,28 +391,84 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPlanePositionGizmo.StaticClass
+	 * 		Name   -> PredefinedFunction USingleClickInputBehavior.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPlanePositionGizmo::StaticClass()
+	UClass* USingleClickInputBehavior::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3376);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3379);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoLocalFloatParameterSource.StaticClass
+	 * 		Name   -> PredefinedFunction AInternalToolFrameworkActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoLocalFloatParameterSource::StaticClass()
+	UClass* AInternalToolFrameworkActor::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3366);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3331);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTransformGizmoBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTransformGizmoBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3387);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoBaseTransformSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoBaseTransformSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3390);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAxisAngleGizmo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAxisAngleGizmo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3311);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTransformGizmo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTransformGizmo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3388);
 		return ptr;
 	}
 
@@ -749,6 +483,90 @@ namespace SDK
 	UClass* UGizmoComponentWorldTransformSource::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3391);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AGizmoActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AGizmoActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3332);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USingleClickToolBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USingleClickToolBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3380);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoScaledTransformSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoScaledTransformSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3392);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAxisPositionGizmoBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAxisPositionGizmoBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3312);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoTransformProxyTransformSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoTransformProxyTransformSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3393);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USingleClickTool.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USingleClickTool::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3381);
 		return ptr;
 	}
 
@@ -817,28 +635,70 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USelectionSet.StaticClass
+	 * 		Name   -> PredefinedFunction UGizmoBaseFloatParameterSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USelectionSet::StaticClass()
+	UClass* UGizmoBaseFloatParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3377);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3359);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoArrowComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGizmoLocalFloatParameterSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoArrowComponent::StaticClass()
+	UClass* UGizmoLocalFloatParameterSource::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3334);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3366);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAxisPositionGizmo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAxisPositionGizmo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3313);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoNilStateTarget.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoNilStateTarget::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3382);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoBaseVec2ParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoBaseVec2ParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3367);
 		return ptr;
 	}
 
@@ -859,28 +719,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMeshSelectionSet.StaticClass
+	 * 		Name   -> PredefinedFunction UGizmoArrowComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMeshSelectionSet::StaticClass()
+	UClass* UGizmoArrowComponent::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3378);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3334);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoBoxComponent.StaticClass
+	 * 		Name   -> PredefinedFunction UGizmoConstantAxisSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoBoxComponent::StaticClass()
+	UClass* UGizmoConstantAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3335);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3314);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoLambdaStateTarget.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoLambdaStateTarget::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3383);
 		return ptr;
 	}
 
@@ -901,20 +775,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoCircleComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoCircleComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3336);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UGizmoPlaneTranslationParameterSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -929,14 +789,168 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAxisAngleGizmoBuilder.StaticClass
+	 * 		Name   -> PredefinedFunction UGizmoConstantFrameAxisSource.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UAxisAngleGizmoBuilder::StaticClass()
+	UClass* UGizmoConstantFrameAxisSource::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3309);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3315);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoObjectModifyStateTarget.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoObjectModifyStateTarget::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3384);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoAxisRotationParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoAxisRotationParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3371);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoWorldAxisSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoWorldAxisSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3316);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoBoxComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoBoxComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3335);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoUniformScaleParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoUniformScaleParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3372);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoTransformChangeStateTarget.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoTransformChangeStateTarget::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3385);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoAxisScaleParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoAxisScaleParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3373);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoCircleComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoCircleComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3336);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoPlaneScaleParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoPlaneScaleParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3374);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPlanePositionGizmoBuilder.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPlanePositionGizmoBuilder::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3375);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ATransformGizmoActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ATransformGizmoActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3386);
 		return ptr;
 	}
 
@@ -946,16 +960,16 @@ namespace SDK
 	 * 		Name   -> Function InteractiveToolsFramework.GizmoTransformSource.SetTransform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     NewTransform                                               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     NewTransform                                               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void IGizmoTransformSource::SetTransform(const struct PCoreUObject_FTransform& NewTransform)
+	void IGizmoTransformSource::SetTransform(const struct FTransform& NewTransform)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20269);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     NewTransform;
+			struct FTransform                     NewTransform;
 		} params;
 		params.NewTransform = NewTransform;
 		
@@ -970,15 +984,15 @@ namespace SDK
 	 * 		Name   -> Function InteractiveToolsFramework.GizmoTransformSource.GetTransform
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct PCoreUObject_FTransform IGizmoTransformSource::GetTransform()
+	struct FTransform IGizmoTransformSource::GetTransform()
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20268);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     ReturnValue;
+			struct FTransform                     ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -999,6 +1013,20 @@ namespace SDK
 	UClass* IGizmoTransformSource::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3337);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPlanePositionGizmo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPlanePositionGizmo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3376);
 		return ptr;
 	}
 
@@ -1437,20 +1465,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAxisAngleGizmo.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAxisAngleGizmo::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3311);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UGizmoRectangleComponent.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1479,20 +1493,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAxisPositionGizmoBuilder.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAxisPositionGizmoBuilder::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3312);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UGizmoComponentHitTarget.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1515,20 +1515,6 @@ namespace SDK
 	UClass* UInputBehaviorSet::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3347);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAxisPositionGizmo.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAxisPositionGizmo::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3313);
 		return ptr;
 	}
 
@@ -1591,20 +1577,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoConstantAxisSource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGizmoConstantAxisSource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3314);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction IToolContextTransactionProvider.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1647,42 +1619,70 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoConstantFrameAxisSource.StaticClass
+	 * 		Name   -> PredefinedFunction UInteractiveToolsContext.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoConstantFrameAxisSource::StaticClass()
+	UClass* UInteractiveToolsContext::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3315);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3355);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoWorldAxisSource.StaticClass
+	 * 		Name   -> PredefinedFunction AIntervalGizmoActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoWorldAxisSource::StaticClass()
+	UClass* AIntervalGizmoActor::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3316);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3356);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGizmoComponentAxisSource.StaticClass
+	 * 		Name   -> PredefinedFunction UIntervalGizmoBuilder.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UGizmoComponentAxisSource::StaticClass()
+	UClass* UIntervalGizmoBuilder::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3317);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3357);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UIntervalGizmo.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UIntervalGizmo::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3358);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGizmoAxisIntervalParameterSource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGizmoAxisIntervalParameterSource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3360);
 		return ptr;
 	}
 

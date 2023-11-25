@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -25,6 +25,16 @@ namespace SDK
 	};
 
 	/**
+	 * Class AudioAnalyzer.AudioAnalyzerNRTSettings
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UAudioAnalyzerNRTSettings : public UAudioAnalyzerAsset
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class AudioAnalyzer.AudioAnalyzerNRT
 	 * Size -> 0x0050 (FullSize[0x0078] - InheritedSize[0x0028])
 	 */
@@ -35,16 +45,6 @@ namespace SDK
 		float                                                        DurationInSeconds;                                       // 0x0030(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x44];                                  // 0x0034(0x0044) MISSED OFFSET (PADDING)
 
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AudioAnalyzer.AudioAnalyzerNRTSettings
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UAudioAnalyzerNRTSettings : public UAudioAnalyzerAsset
-	{
 	public:
 		static UClass* StaticClass();
 	};

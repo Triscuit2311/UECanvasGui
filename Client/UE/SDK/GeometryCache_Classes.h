@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,47 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class GeometryCache.GeometryCacheCodecBase
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UGeometryCacheCodecBase : public UObject
-	{
-	public:
-		TArray<int32_t>                                              TopologyRanges;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GeometryCache.GeometryCacheTrack
-	 * Size -> 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
-	 */
-	class UGeometryCacheTrack : public UObject
-	{
-	public:
-		float                                                        Duration;                                                // 0x0028(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x2C];                                  // 0x002C(0x002C) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GeometryCache.GeometryCacheCodecRaw
-	 * Size -> 0x0008 (FullSize[0x0040] - InheritedSize[0x0038])
-	 */
-	class UGeometryCacheCodecRaw : public UGeometryCacheCodecBase
-	{
-	public:
-		int32_t                                                      DummyProperty;                                           // 0x0038(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class GeometryCache.GeometryCache
 	 * Size -> 0x0048 (FullSize[0x0070] - InheritedSize[0x0028])
@@ -69,6 +28,20 @@ namespace SDK
 		int32_t                                                      StartFrame;                                              // 0x0060(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		int32_t                                                      EndFrame;                                                // 0x0064(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		uint64_t                                                     Hash;                                                    // 0x0068(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheTrack
+	 * Size -> 0x0030 (FullSize[0x0058] - InheritedSize[0x0028])
+	 */
+	class UGeometryCacheTrack : public UObject
+	{
+	public:
+		float                                                        Duration;                                                // 0x0028(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x2C];                                  // 0x002C(0x002C) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -90,19 +63,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class GeometryCache.GeometryCacheCodecV1
-	 * Size -> 0x0008 (FullSize[0x0040] - InheritedSize[0x0038])
-	 */
-	class UGeometryCacheCodecV1 : public UGeometryCacheCodecBase
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class GeometryCache.GeometryCacheActor
 	 * Size -> 0x0008 (FullSize[0x0228] - InheritedSize[0x0220])
 	 */
@@ -113,6 +73,19 @@ namespace SDK
 
 	public:
 		class UGeometryCacheComponent* GetGeometryCacheComponent();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheCodecBase
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
+	 */
+	class UGeometryCacheCodecBase : public UObject
+	{
+	public:
+		TArray<int32_t>                                              TopologyRanges;                                          // 0x0028(0x0010) Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected
+
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -129,6 +102,61 @@ namespace SDK
 		unsigned char                                                UnknownData_0001[0xC];                                   // 0x00CC(0x000C) MISSED OFFSET (PADDING)
 
 	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheCodecRaw
+	 * Size -> 0x0008 (FullSize[0x0040] - InheritedSize[0x0038])
+	 */
+	class UGeometryCacheCodecRaw : public UGeometryCacheCodecBase
+	{
+	public:
+		int32_t                                                      DummyProperty;                                           // 0x0038(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheTrack_TransformAnimation
+	 * Size -> 0x00B0 (FullSize[0x0108] - InheritedSize[0x0058])
+	 */
+	class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0xB0];                                  // 0x0058(0x00B0) MISSED OFFSET (PADDING)
+
+	public:
+		void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheCodecV1
+	 * Size -> 0x0008 (FullSize[0x0040] - InheritedSize[0x0038])
+	 */
+	class UGeometryCacheCodecV1 : public UGeometryCacheCodecBase
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation
+	 * Size -> 0x00B0 (FullSize[0x0108] - InheritedSize[0x0058])
+	 */
+	class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0xB0];                                  // 0x0058(0x00B0) MISSED OFFSET (PADDING)
+
+	public:
+		void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
 		static UClass* StaticClass();
 	};
 
@@ -179,34 +207,6 @@ namespace SDK
 		float GetMotionVectorScale();
 		float GetDuration();
 		float GetAnimationTime();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GeometryCache.GeometryCacheTrack_TransformAnimation
-	 * Size -> 0x00B0 (FullSize[0x0108] - InheritedSize[0x0058])
-	 */
-	class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0xB0];                                  // 0x0058(0x00B0) MISSED OFFSET (PADDING)
-
-	public:
-		void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation
-	 * Size -> 0x00B0 (FullSize[0x0108] - InheritedSize[0x0058])
-	 */
-	class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0xB0];                                  // 0x0058(0x00B0) MISSED OFFSET (PADDING)
-
-	public:
-		void SetMesh(const struct FGeometryCacheMeshData& NewMeshData);
 		static UClass* StaticClass();
 	};
 

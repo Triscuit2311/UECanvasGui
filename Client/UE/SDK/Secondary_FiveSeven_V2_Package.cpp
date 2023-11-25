@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_FiveSeven_V2_C::DestroyPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(44109);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32220);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ASecondary_FiveSeven_V2_C::SpawnPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(44108);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32219);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void ASecondary_FiveSeven_V2_C::ExecuteUbergraph_Secondary_FiveSeven_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(44107);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(32218);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_FiveSeven_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(44106);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(32217);
 		return ptr;
 	}
 

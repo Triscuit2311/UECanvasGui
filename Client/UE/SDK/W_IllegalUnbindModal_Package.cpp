@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_IllegalUnbindModal_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28570);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49465);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_IllegalUnbindModal_C::ExecuteUbergraph_W_IllegalUnbindModal(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28546);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49004);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UW_IllegalUnbindModal_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28545);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49003);
 		return ptr;
 	}
 

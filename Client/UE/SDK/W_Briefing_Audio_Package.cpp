@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::SetCurrentAudioText(float CurrentTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55077);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31540);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::GetEventEntries(bool ForceUpdate, TMap<float, struct FTimelineEvent>* EventEntries1)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55076);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31539);
 		
 		struct
 		{
@@ -77,7 +77,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::SetAudioPlayProgress(class USoundWave* PlayingSoundWave, float PlaybackPercent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55075);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31538);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::SetLoop()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55074);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31537);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Restart()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55073);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31536);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Stop()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55072);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31535);
 		
 		struct
 		{
@@ -167,7 +167,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::GetTimerText(float Timesec, class FText* TimerText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55071);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31534);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Play(float StartTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55070);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31533);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_2_Loop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55069);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31532);
 		
 		struct
 		{
@@ -240,7 +240,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_4_Rewind__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55068);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31531);
 		
 		struct
 		{
@@ -261,7 +261,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_5_FastForward__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55067);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31530);
 		
 		struct
 		{
@@ -282,7 +282,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_6_Restart__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55066);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31529);
 		
 		struct
 		{
@@ -303,7 +303,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::OnAudioFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55065);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31528);
 		
 		struct
 		{
@@ -326,7 +326,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55064);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31527);
 		
 		struct
 		{
@@ -352,7 +352,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55063);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31526);
 		
 		struct
 		{
@@ -375,7 +375,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_1_Stop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55062);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31525);
 		
 		struct
 		{
@@ -396,7 +396,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_K2Node_ComponentBoundEvent_0_Play__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55061);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31524);
 		
 		struct
 		{
@@ -419,7 +419,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Initialize(const struct FMissionAudio& Audio, TArray<struct FTimelineEvent> TimelineEvents)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31523);
 		
 		struct
 		{
@@ -445,7 +445,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_Transcript_K2Node_ComponentBoundEvent_7_TranscriptClicked__DelegateSignature(float ClipStartTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31522);
 		
 		struct
 		{
@@ -468,7 +468,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_3_Play__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55058);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31521);
 		
 		struct
 		{
@@ -489,7 +489,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_8_Stop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55057);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31520);
 		
 		struct
 		{
@@ -510,7 +510,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_9_Rewind__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55056);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31519);
 		
 		struct
 		{
@@ -531,7 +531,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_10_Restart__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55055);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31518);
 		
 		struct
 		{
@@ -552,7 +552,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_11_Loop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31517);
 		
 		struct
 		{
@@ -573,7 +573,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_AudioControls_1_K2Node_ComponentBoundEvent_12_FastForward__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31516);
 		
 		struct
 		{
@@ -595,7 +595,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__W_Briefing_Timeline_TrackWave_Simple_K2Node_ComponentBoundEvent_13_TimelineEventFired__DelegateSignature(float EventId)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31515);
 		
 		struct
 		{
@@ -620,7 +620,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::BndEvt__Events_K2Node_ComponentBoundEvent_15_OnEventClicked__DelegateSignature(float EventAudioStart, float EventAudioDuration)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31514);
 		
 		struct
 		{
@@ -645,7 +645,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31513);
 		
 		struct
 		{
@@ -667,7 +667,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Audio_C::ExecuteUbergraph_W_Briefing_Audio(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31512);
 		
 		struct
 		{
@@ -690,7 +690,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Audio_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55048);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31511);
 		return ptr;
 	}
 

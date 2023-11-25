@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_ReplayBrowser_C::Get_RenameButton_bIsEnabled_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29107);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49356);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29106);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49355);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::Destruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29105);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49354);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29104);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49353);
 		
 		struct
 		{
@@ -107,7 +107,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__W_ReplayBrowser_RenameButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29103);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49352);
 		
 		struct
 		{
@@ -128,7 +128,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__W_ReplayBrowser_PlayButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29102);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49351);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__W_ReplayBrowser_DeleteButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29101);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49350);
 		
 		struct
 		{
@@ -170,7 +170,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__W_ReplayBrowser_RefreshButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29100);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49349);
 		
 		struct
 		{
@@ -191,7 +191,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::BndEvt__W_ReplayBrowser_OpenReplayFolderButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29099);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49348);
 		
 		struct
 		{
@@ -212,7 +212,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::RefreshReplayList()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29098);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49347);
 		
 		struct
 		{
@@ -234,7 +234,7 @@ namespace SDK
 	 */
 	void UW_ReplayBrowser_C::ExecuteUbergraph_W_ReplayBrowser(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29097);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49346);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	UClass* UW_ReplayBrowser_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29096);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49345);
 		return ptr;
 	}
 

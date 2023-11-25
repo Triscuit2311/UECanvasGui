@@ -2,13 +2,11 @@
 #include "client_lib.hpp"
 #include "engine_data.hpp"
 #include "engine_hooks.hpp"
+#include "engine_renderer.hpp"
 
 namespace client_lib
 {
-	namespace modules
-	{
-		std::unique_ptr<engine_data> ue;
-	}
+
 
 	namespace globals
 	{
@@ -30,10 +28,12 @@ namespace client_lib
 
 		LOG("Initializing global modules");
 		modules::ue = std::make_unique<engine_data>();
-
+		modules::renderer = std::make_unique<engine_renderer>();
 
 		LOG("Setting up game data");
-		modules::ue->init(); // init SDK/etc
+		modules::ue->init();
+		modules::renderer->init();
+
 
 		LOG("Initializing UE4 Hooks");
 		engine_hooks::PostRenderHook::apply_hook();
@@ -49,6 +49,10 @@ namespace client_lib
 		// maybe use a pool
 
 
+
+		
+
+
 		LOG("Entering main loop");
 		while (globals::running)
 		{
@@ -57,7 +61,6 @@ namespace client_lib
 			if (!modules::ue->statics.ensure()) { ERR("Can't Ensure statics"); }
 
 			if (GetAsyncKeyState(VK_END) & 1) { break; }
-
 
 			// top-level interface toggle   
 		}

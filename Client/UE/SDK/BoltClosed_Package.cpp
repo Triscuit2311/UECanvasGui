@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	bool UBoltClosed_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24609);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48092);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	UClass* UBoltClosed_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24608);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48091);
 		return ptr;
 	}
 

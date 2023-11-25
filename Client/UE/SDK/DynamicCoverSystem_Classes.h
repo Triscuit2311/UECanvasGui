@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -28,6 +28,22 @@ namespace SDK
 
 	public:
 		void GenerateCoverPoints();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class DynamicCoverSystem.CoverSystem
+	 * Size -> 0x0088 (FullSize[0x00C8] - InheritedSize[0x0040])
+	 */
+	class UCoverSystem : public UTickableWorldSubsystem
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x88];                                  // 0x0040(0x0088) MISSED OFFSET (PADDING)
+
+	public:
+		bool ReleaseCover(const struct FVector& InCoverPoint);
+		bool OccupyCover(const struct FVector& InCoverPoint);
+		bool IsCoverPointOccupied(const struct FVector& InCoverLocation);
 		static UClass* StaticClass();
 	};
 
@@ -78,22 +94,6 @@ namespace SDK
 	public:
 		void GenerateCoverPoints();
 		void DeleteAllCoverPoints();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class DynamicCoverSystem.CoverSystem
-	 * Size -> 0x0088 (FullSize[0x00C8] - InheritedSize[0x0040])
-	 */
-	class UCoverSystem : public UTickableWorldSubsystem
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x88];                                  // 0x0040(0x0088) MISSED OFFSET (PADDING)
-
-	public:
-		bool ReleaseCover(const struct FVector& InCoverPoint);
-		bool OccupyCover(const struct FVector& InCoverPoint);
-		bool IsCoverPointOccupied(const struct FVector& InCoverLocation);
 		static UClass* StaticClass();
 	};
 

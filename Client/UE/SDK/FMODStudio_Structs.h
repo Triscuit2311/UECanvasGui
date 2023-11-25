@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -207,6 +207,16 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct FMODStudio.FMODEventControlSectionTemplate
+	 * Size -> 0x0098 (FullSize[0x00B8] - InheritedSize[0x0020])
+	 */
+	struct FFMODEventControlSectionTemplate : public FMovieSceneEvalTemplate
+	{
+	public:
+		struct FFMODEventControlChannel                              ControlKeys;                                             // 0x0020(0x0098) NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct FMODStudio.FMODAssetLookupRow
 	 * Size -> 0x0020 (FullSize[0x0028] - InheritedSize[0x0008])
 	 */
@@ -238,6 +248,14 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct FMODStudio.FMODEventParameterSectionTemplate
+	 * Size -> 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
+	 */
+	struct FFMODEventParameterSectionTemplate : public FMovieSceneParameterSectionTemplate
+	{
+	};
+
+	/**
 	 * ScriptStruct FMODStudio.FMODEventInstance
 	 * Size -> 0x0008
 	 */
@@ -245,24 +263,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct FMODStudio.FMODEventControlSectionTemplate
-	 * Size -> 0x0098 (FullSize[0x00B8] - InheritedSize[0x0020])
-	 */
-	struct FFMODEventControlSectionTemplate : public FMovieSceneEvalTemplate
-	{
-	public:
-		struct FFMODEventControlChannel                              ControlKeys;                                             // 0x0020(0x0098) NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct FMODStudio.FMODEventParameterSectionTemplate
-	 * Size -> 0x0000 (FullSize[0x0080] - InheritedSize[0x0080])
-	 */
-	struct FFMODEventParameterSectionTemplate : public FMovieSceneParameterSectionTemplate
-	{
 	};
 
 }

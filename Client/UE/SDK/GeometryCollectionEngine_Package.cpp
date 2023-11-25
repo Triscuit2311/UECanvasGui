@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGeometryCollectionCache.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGeometryCollectionCache::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3434);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -274,20 +260,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGeometryCollection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGeometryCollection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3438);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction AGeometryCollectionRenderLevelSetActor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -296,6 +268,20 @@ namespace SDK
 	UClass* AGeometryCollectionRenderLevelSetActor::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3439);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGeometryCollection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGeometryCollection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3438);
 		return ptr;
 	}
 
@@ -807,6 +793,20 @@ namespace SDK
 	UClass* UStaticMeshSimulationComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3441);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGeometryCollectionCache.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGeometryCollectionCache::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3434);
 		return ptr;
 	}
 

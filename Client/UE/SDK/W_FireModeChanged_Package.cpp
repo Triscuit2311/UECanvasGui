@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_FireModeChanged_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89988);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90081);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_FireModeChanged_C::ExecuteUbergraph_W_FireModeChanged(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89987);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90080);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	UClass* UW_FireModeChanged_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89986);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90079);
 		return ptr;
 	}
 

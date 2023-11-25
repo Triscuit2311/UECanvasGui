@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,40 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class MotivityRuntime.MotivityPreprocessor
-	 * Size -> 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
-	 */
-	class UMotivityPreprocessor : public UObject
-	{
-	public:
-		float                                                        TimeStep;                                                // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FMotivityTimeData                                     PredictionData;                                          // 0x0030(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class USkeleton*                                             Skeleton;                                                // 0x0040(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         MeshPreviewOverride;                                     // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class FName>                                          ReferencedBones;                                         // 0x0050(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class UAnimSequence*>                                 ReferencedAnimations;                                    // 0x0060(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class UAnimSequence*>                                 ReferencedIdleAnimations;                                // 0x0070(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MotivityRuntime.MotivityTweakData
-	 * Size -> 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
-	 */
-	class UMotivityTweakData : public UObject
-	{
-	public:
-		struct FMotivityTimeData                                     PredictionData;                                          // 0x0028(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FMotivityCalibrationData                              CalibrationData;                                         // 0x0038(0x0048) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class MotivityRuntime.MotivityAnimInstance
 	 * Size -> 0x0028 (FullSize[0x02E0] - InheritedSize[0x02B8])
@@ -85,54 +51,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0250(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MotivityRuntime.MotivityProcessedData
-	 * Size -> 0x00B8 (FullSize[0x00E0] - InheritedSize[0x0028])
-	 */
-	class UMotivityProcessedData : public UObject
-	{
-	public:
-		float                                                        PoseInterval;                                            // 0x0028(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FMotionCandidate>                              PoseCandidates;                                          // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<struct FMotionCandidate>                              IdlePoseCandidates;                                      // 0x0040(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class FName>                                          ReferencedBones;                                         // 0x0050(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class UAnimSequence*>                                 AnimationsInMemory;                                      // 0x0060(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class UAnimSequence*>                                 IdleAnimationsInMemory;                                  // 0x0070(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		class USkeleton*                                             ReferencedSkeleton;                                      // 0x0080(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FMotivityTimeData                                     PredictionData;                                          // 0x0088(0x0010) Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic
-		struct FMotivityCalibrationData                              CalibrationData;                                         // 0x0098(0x0048) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MotivityRuntime.MotivityMoveData
-	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
-	 */
-	class UMotivityMoveData : public UDataAsset
-	{
-	public:
-		TArray<struct FMovementStyle>                                MovementStyles;                                          // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MotivityRuntime.MotivityThreadManager
-	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-	 */
-	class UMotivityThreadManager : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();
@@ -217,6 +135,53 @@ namespace SDK
 	};
 
 	/**
+	 * Class MotivityRuntime.MotivityTweakData
+	 * Size -> 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
+	 */
+	class UMotivityTweakData : public UObject
+	{
+	public:
+		struct FMotivityTimeData                                     PredictionData;                                          // 0x0028(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FMotivityCalibrationData                              CalibrationData;                                         // 0x0038(0x0048) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MotivityRuntime.MotivityMoveData
+	 * Size -> 0x0010 (FullSize[0x0040] - InheritedSize[0x0030])
+	 */
+	class UMotivityMoveData : public UDataAsset
+	{
+	public:
+		TArray<struct FMovementStyle>                                MovementStyles;                                          // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MotivityRuntime.MotivityPreprocessor
+	 * Size -> 0x0058 (FullSize[0x0080] - InheritedSize[0x0028])
+	 */
+	class UMotivityPreprocessor : public UObject
+	{
+	public:
+		float                                                        TimeStep;                                                // 0x0028(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FMotivityTimeData                                     PredictionData;                                          // 0x0030(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class USkeleton*                                             Skeleton;                                                // 0x0040(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         MeshPreviewOverride;                                     // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class FName>                                          ReferencedBones;                                         // 0x0050(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class UAnimSequence*>                                 ReferencedAnimations;                                    // 0x0060(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class UAnimSequence*>                                 ReferencedIdleAnimations;                                // 0x0070(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class MotivityRuntime.MotivityTagAnimNotifyState
 	 * Size -> 0x0008 (FullSize[0x0038] - InheritedSize[0x0030])
 	 */
@@ -224,6 +189,41 @@ namespace SDK
 	{
 	public:
 		class FName                                                  TagName;                                                 // 0x0030(0x0008) Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MotivityRuntime.MotivityThreadManager
+	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+	 */
+	class UMotivityThreadManager : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class MotivityRuntime.MotivityProcessedData
+	 * Size -> 0x00B8 (FullSize[0x00E0] - InheritedSize[0x0028])
+	 */
+	class UMotivityProcessedData : public UObject
+	{
+	public:
+		float                                                        PoseInterval;                                            // 0x0028(0x0004) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FMotionCandidate>                              PoseCandidates;                                          // 0x0030(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<struct FMotionCandidate>                              IdlePoseCandidates;                                      // 0x0040(0x0010) Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class FName>                                          ReferencedBones;                                         // 0x0050(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class UAnimSequence*>                                 AnimationsInMemory;                                      // 0x0060(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class UAnimSequence*>                                 IdleAnimationsInMemory;                                  // 0x0070(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		class USkeleton*                                             ReferencedSkeleton;                                      // 0x0080(0x0008) Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FMotivityTimeData                                     PredictionData;                                          // 0x0088(0x0010) Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic
+		struct FMotivityCalibrationData                              CalibrationData;                                         // 0x0098(0x0048) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

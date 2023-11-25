@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Explosive_C::OnDetonate_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91431);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91524);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Explosive_C::OnMeshHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91430);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91523);
 		
 		struct
 		{
@@ -78,7 +78,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Explosive_C::ExecuteUbergraph_LauncherProjectile_Explosive(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91429);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91522);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	UClass* ALauncherProjectile_Explosive_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91428);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91521);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::GetOwningPlayerCharacter(class APlayerCharacter** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27568);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48731);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowFireModes(class ABaseWeapon* Weapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27567);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48730);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowMagCheck()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27566);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48729);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnWeaponFireModeChanged(EFireMode newFireMode)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27565);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48728);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::TickCommandContext()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27564);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48727);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	class UMapActorWidget* UW_HumanCharacter_HUD_V2_C::AddMapActor(class UMapActorComponent* MapActorComponent, class UMapActorWidget* MapActorIconWidgetClass, const struct FSlateBrush& IconBrush, const struct FLinearColor& IconColor, const struct FLinearColor& IconTextColor, float RotationOffset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27563);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48726);
 		
 		struct
 		{
@@ -180,7 +180,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::PreviousTabletMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27562);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48725);
 		
 		struct
 		{
@@ -201,7 +201,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::NextTabletMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27561);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48724);
 		
 		struct
 		{
@@ -222,7 +222,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::HideTablet()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27560);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48723);
 		
 		struct
 		{
@@ -243,7 +243,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowTablet()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27559);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48722);
 		
 		struct
 		{
@@ -264,7 +264,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::HideIncriminationExtractionHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27558);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48721);
 		
 		struct
 		{
@@ -285,7 +285,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowIncriminationExtractionHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27557);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48720);
 		
 		struct
 		{
@@ -306,7 +306,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::UpdateCurrentFireMode()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27556);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48719);
 		
 		struct
 		{
@@ -327,7 +327,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::FadeInHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27555);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48718);
 		
 		struct
 		{
@@ -349,7 +349,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::InitializeItemSelectionPanel(bool bForce)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27554);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48717);
 		
 		struct
 		{
@@ -373,7 +373,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::EnabledCurvedHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27553);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48716);
 		
 		struct
 		{
@@ -394,7 +394,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::DisableCurvedHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27552);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48715);
 		
 		struct
 		{
@@ -416,7 +416,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::IsCurvedHUDEnabled(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27551);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48714);
 		
 		struct
 		{
@@ -442,7 +442,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::UpdateCurveHUDValue(float NewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27550);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48713);
 		
 		struct
 		{
@@ -465,7 +465,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ToggleCurvedHUD()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27549);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48712);
 		
 		struct
 		{
@@ -486,7 +486,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ToggleHUDSway()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27548);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48711);
 		
 		struct
 		{
@@ -507,7 +507,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27547);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48710);
 		
 		struct
 		{
@@ -530,7 +530,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27546);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48709);
 		
 		struct
 		{
@@ -555,7 +555,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ReInitializeItemSelectionMenu()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27545);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48708);
 		
 		struct
 		{
@@ -578,7 +578,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnWeaponFireModeChanged_Event_1(EFireMode newFireMode, EFireMode LastFireMode)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27544);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48707);
 		
 		struct
 		{
@@ -603,7 +603,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::InitalizeDelegateEvents()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27543);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48706);
 		
 		struct
 		{
@@ -624,7 +624,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ReflectHUDSettings()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27542);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48705);
 		
 		struct
 		{
@@ -645,7 +645,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ChatPressed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27541);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48704);
 		
 		struct
 		{
@@ -666,7 +666,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::TeamChatPressed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27540);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48703);
 		
 		struct
 		{
@@ -688,7 +688,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::RemoveMapActor(class UMapActorComponent* MapActorComponent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27539);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48702);
 		
 		struct
 		{
@@ -712,7 +712,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::UpdateMapFloors(TArray<struct FBuildingFloor> Floors)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27538);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48701);
 		
 		struct
 		{
@@ -736,7 +736,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnWeaponMagCheck_Event_1(class ABaseMagazineWeapon* MagazineWeapon)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27537);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48700);
 		
 		struct
 		{
@@ -759,7 +759,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnInventoryItemsChanged()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27536);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48699);
 		
 		struct
 		{
@@ -783,7 +783,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::AddScorePopup(const class FText& ScoreText, int32_t ScoreValue, bool bGive)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27535);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48698);
 		
 		struct
 		{
@@ -814,7 +814,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowTutorialPrompt(const class FString& MessageID, bool bFirstShowing, const class FText& MessageTitle, TArray<class FText> MessageContent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27534);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48697);
 		
 		struct
 		{
@@ -845,7 +845,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::HideTutorialPrompt(const class FString& MessageID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27533);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48696);
 		
 		struct
 		{
@@ -871,7 +871,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ShowTutorialOverview(const class FString& MessageID, const class FText& MessageTitle, TArray<class FText> MessageContent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27532);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48695);
 		
 		struct
 		{
@@ -899,7 +899,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnTeamViewSet_Event_1(class AReadyOrNotCharacter* NewViewCharacter)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27531);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48694);
 		
 		struct
 		{
@@ -922,7 +922,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnMenuOpened_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27530);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48693);
 		
 		struct
 		{
@@ -944,7 +944,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnItemEquipped_Event_1(class ABaseItem* Item)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27529);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48692);
 		
 		struct
 		{
@@ -975,7 +975,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnBodyPartDamaged_Event_1(bool bHeadDamaged, bool bBodyDamaged, bool bLeftArmDamaged, bool bRightArmDamaged, bool bLeftLegDamaged, bool bRightLegDamaged, bool bLeftFootDamaged, bool bRightFootDamaged)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27528);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48691);
 		
 		struct
 		{
@@ -1012,7 +1012,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::Reconstruct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27527);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48690);
 		
 		struct
 		{
@@ -1035,7 +1035,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnItemGroupSelection_Pressed_Event_1(int32_t GroupIndex, int32_t CategoryIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27526);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48689);
 		
 		struct
 		{
@@ -1062,7 +1062,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnItemGroupSelection_Released_Event_1(int32_t GroupIndex, int32_t CategoryIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27525);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48688);
 		
 		struct
 		{
@@ -1087,7 +1087,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::UpdateItemSelectionPanel()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27524);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48687);
 		
 		struct
 		{
@@ -1113,7 +1113,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnCharacterTakeDamage_Event_1(class AReadyOrNotCharacter* InstigatorCharacter, class AReadyOrNotCharacter* DamagedCharacter, class AActor* DamageCauser, float Damage, float HealthRemaining)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27523);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48686);
 		
 		struct
 		{
@@ -1146,7 +1146,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::OnItemGroupSelection_ItemChanged_Event_1(int32_t GroupIndex, int32_t CategoryIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27522);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48685);
 		
 		struct
 		{
@@ -1172,7 +1172,7 @@ namespace SDK
 	 */
 	void UW_HumanCharacter_HUD_V2_C::ExecuteUbergraph_W_HumanCharacter_HUD_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27521);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48684);
 		
 		struct
 		{
@@ -1195,7 +1195,7 @@ namespace SDK
 	 */
 	UClass* UW_HumanCharacter_HUD_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27520);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48683);
 		return ptr;
 	}
 

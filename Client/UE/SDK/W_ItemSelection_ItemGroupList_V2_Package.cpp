@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::GetListAtIndex(int32_t Index, class UW_ItemSelection_ItemList_V2_C** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26884);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43538);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::ResetAnimationState()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26883);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43537);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::FadeOutAllExcept(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26882);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43536);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::UpdateKeybinds(TArray<struct FItemSelectionGroup>* InItemGroups)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26881);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43535);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::SelectCategory(int32_t GroupIndex, int32_t CategoryIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26880);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43534);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::SelectList(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26879);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43533);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	void UW_ItemSelection_ItemGroupList_V2_C::Initialize(TArray<struct FItemSelectionGroup>* InItemGroupArray)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26878);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43532);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	UClass* UW_ItemSelection_ItemGroupList_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26877);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43531);
 		return ptr;
 	}
 

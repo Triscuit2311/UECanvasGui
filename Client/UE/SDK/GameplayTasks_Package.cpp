@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -180,34 +180,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IGameplayTaskOwnerInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* IGameplayTaskOwnerInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3105);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTaskResource.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGameplayTaskResource::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3106);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -321,81 +293,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UGameplayTasksComponent::OnRep_SimulatedTasks()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20076);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		class UGameplayTask*                               Task                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		uint8_t                                            Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<class UGameplayTaskResource*>               AdditionalRequiredResources                                (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		TArray<class UGameplayTaskResource*>               AdditionalClaimedResources                                 (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-	 * 		EGameplayTaskRunResult                             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, uint8_t Priority, TArray<class UGameplayTaskResource*> AdditionalRequiredResources, TArray<class UGameplayTaskResource*> AdditionalClaimedResources)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20075);
-		
-		struct
-		{
-			TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;
-			class UGameplayTask*                               Task;
-			uint8_t                                            Priority;
-			unsigned char                                      UnknownData_0000[0x7];
-			TArray<class UGameplayTaskResource*>               AdditionalRequiredResources;
-			TArray<class UGameplayTaskResource*>               AdditionalClaimedResources;
-			EGameplayTaskRunResult                             ReturnValue;
-		} params;
-		params.TaskOwner = TaskOwner;
-		params.Task = Task;
-		params.Priority = Priority;
-		params.AdditionalRequiredResources = AdditionalRequiredResources;
-		params.AdditionalClaimedResources = AdditionalClaimedResources;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGameplayTasksComponent.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGameplayTasksComponent::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3107);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UGameplayTask_TimeLimitedExecution.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -473,6 +370,109 @@ namespace SDK
 	UClass* UGameplayTask_WaitDelay::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3104);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction IGameplayTaskOwnerInterface.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* IGameplayTaskOwnerInterface::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3105);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTaskResource.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTaskResource::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3106);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UGameplayTasksComponent::OnRep_SimulatedTasks()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20076);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		class UGameplayTask*                               Task                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		uint8_t                                            Priority                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class UGameplayTaskResource*>               AdditionalRequiredResources                                (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		TArray<class UGameplayTaskResource*>               AdditionalClaimedResources                                 (Parm, ZeroConstructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+	 * 		EGameplayTaskRunResult                             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(const TScriptInterface<class IGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, uint8_t Priority, TArray<class UGameplayTaskResource*> AdditionalRequiredResources, TArray<class UGameplayTaskResource*> AdditionalClaimedResources)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(20075);
+		
+		struct
+		{
+			TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;
+			class UGameplayTask*                               Task;
+			uint8_t                                            Priority;
+			unsigned char                                      UnknownData_0000[0x7];
+			TArray<class UGameplayTaskResource*>               AdditionalRequiredResources;
+			TArray<class UGameplayTaskResource*>               AdditionalClaimedResources;
+			EGameplayTaskRunResult                             ReturnValue;
+		} params;
+		params.TaskOwner = TaskOwner;
+		params.Task = Task;
+		params.Priority = Priority;
+		params.AdditionalRequiredResources = AdditionalRequiredResources;
+		params.AdditionalClaimedResources = AdditionalClaimedResources;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGameplayTasksComponent.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGameplayTasksComponent::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3107);
 		return ptr;
 	}
 

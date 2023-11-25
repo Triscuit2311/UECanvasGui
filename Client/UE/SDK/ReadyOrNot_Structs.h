@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,21 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum ReadyOrNot.EStunType
+	 */
+	enum class EStunType : uint8_t
+	{
+		ST_None          = 0,
+		ST_Tased         = 1,
+		ST_Gassed        = 2,
+		ST_Flash         = 3,
+		ST_Stung         = 4,
+		ST_Peppersprayed = 5,
+		ST_Beanbag       = 6,
+		ST_MAX           = 7
+	};
+
 	/**
 	 * Enum ReadyOrNot.EItemCategory
 	 */
@@ -74,21 +89,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EBlockingAnimationExclusion
-	 */
-	enum class EBlockingAnimationExclusion : uint8_t
-	{
-		BAE_None       = 0,
-		BAE_Holster    = 1,
-		BAE_Draw       = 2,
-		BAE_FireSelect = 3,
-		BAE_MagCheck   = 4,
-		BAE_PullPin    = 5,
-		BAE_Throw      = 6,
-		BAE_MAX        = 7
-	};
-
-	/**
 	 * Enum ReadyOrNot.EActorOutlineType
 	 */
 	enum class EActorOutlineType : uint8_t
@@ -101,47 +101,6 @@ namespace SDK
 		Outline05   = 5,
 		Outline06   = 6,
 		Outline_MAX = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.EStunType
-	 */
-	enum class EStunType : uint8_t
-	{
-		ST_None          = 0,
-		ST_Tased         = 1,
-		ST_Gassed        = 2,
-		ST_Flash         = 3,
-		ST_Stung         = 4,
-		ST_Peppersprayed = 5,
-		ST_Beanbag       = 6,
-		ST_MAX           = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMotionBlockType
-	 */
-	enum class EMotionBlockType : uint8_t
-	{
-		MB_None      = 0,
-		MB_Rifle     = 1,
-		MB_Pistol    = 2,
-		MB_Item      = 3,
-		MB_HeavyItem = 4,
-		MB_Special   = 5,
-		MB_Unarmed   = 6,
-		MB_MAX       = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.EItemAttachment
-	 */
-	enum class EItemAttachment : uint8_t
-	{
-		IA_None       = 0,
-		IA_Flashlight = 1,
-		IA_NVG        = 2,
-		IA_MAX        = 3
 	};
 
 	/**
@@ -160,19 +119,6 @@ namespace SDK
 		WT_Special          = 8,
 		WT_Unarmed          = 9,
 		WT_MAX              = 10
-	};
-
-	/**
-	 * Enum ReadyOrNot.EDoorDamageType
-	 */
-	enum class EDoorDamageType : uint8_t
-	{
-		DDT_None        = 0,
-		DDT_Blasting    = 1,
-		DDT_Shotgunning = 2,
-		DDT_Ramming     = 3,
-		DDT_Kicking     = 4,
-		DDT_MAX         = 5
 	};
 
 	/**
@@ -215,19 +161,56 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EDoorInteraction
+	 * Enum ReadyOrNot.EItemAttachment
 	 */
-	enum class EDoorInteraction : uint8_t
+	enum class EItemAttachment : uint8_t
 	{
-		None      = 0,
-		Open      = 1,
-		Close     = 2,
-		Peek      = 3,
-		Push      = 4,
-		Kick      = 5,
-		Kick_Fail = 6,
-		Ram       = 7,
-		MAX       = 8
+		IA_None       = 0,
+		IA_Flashlight = 1,
+		IA_NVG        = 2,
+		IA_MAX        = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMotionBlockType
+	 */
+	enum class EMotionBlockType : uint8_t
+	{
+		MB_None      = 0,
+		MB_Rifle     = 1,
+		MB_Pistol    = 2,
+		MB_Item      = 3,
+		MB_HeavyItem = 4,
+		MB_Special   = 5,
+		MB_Unarmed   = 6,
+		MB_MAX       = 7
+	};
+
+	/**
+	 * Enum ReadyOrNot.EBlockingAnimationExclusion
+	 */
+	enum class EBlockingAnimationExclusion : uint8_t
+	{
+		BAE_None       = 0,
+		BAE_Holster    = 1,
+		BAE_Draw       = 2,
+		BAE_FireSelect = 3,
+		BAE_MagCheck   = 4,
+		BAE_PullPin    = 5,
+		BAE_Throw      = 6,
+		BAE_MAX        = 7
+	};
+
+	/**
+	 * Enum ReadyOrNot.EWeaponUnderbarrelAnimationType
+	 */
+	enum class EWeaponUnderbarrelAnimationType : uint8_t
+	{
+		WU_None     = 0,
+		WU_VFG      = 1,
+		WU_AFG      = 2,
+		WU_Handstop = 3,
+		WU_MAX      = 4
 	};
 
 	/**
@@ -247,27 +230,19 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EStackupGenArea
+	 * Enum ReadyOrNot.EDoorInteraction
 	 */
-	enum class EStackupGenArea : uint8_t
+	enum class EDoorInteraction : uint8_t
 	{
-		SGA_None       = 0,
-		SGA_FrontLeft  = 1,
-		SGA_FrontRight = 2,
-		SGA_BackLeft   = 3,
-		SGA_BackRight  = 4,
-		SGA_All        = 5,
-		SGA_MAX        = 6
-	};
-
-	/**
-	 * Enum ReadyOrNot.EStackupGenType
-	 */
-	enum class EStackupGenType : uint8_t
-	{
-		SG_90DegreeLine = 0,
-		SG_0DegreeLine  = 1,
-		SG_MAX          = 2
+		None      = 0,
+		Open      = 1,
+		Close     = 2,
+		Peek      = 3,
+		Push      = 4,
+		Kick      = 5,
+		Kick_Fail = 6,
+		Ram       = 7,
+		MAX       = 8
 	};
 
 	/**
@@ -293,6 +268,16 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EStackupGenType
+	 */
+	enum class EStackupGenType : uint8_t
+	{
+		SG_90DegreeLine = 0,
+		SG_0DegreeLine  = 1,
+		SG_MAX          = 2
+	};
+
+	/**
 	 * Enum ReadyOrNot.EBombState
 	 */
 	enum class EBombState : uint8_t
@@ -302,41 +287,6 @@ namespace SDK
 		BS_Disabled = 2,
 		BS_Exploded = 3,
 		BS_MAX      = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EClueState
-	 */
-	enum class EClueState : uint8_t
-	{
-		Unclaimed = 0,
-		Collected = 1,
-		Dropped   = 2,
-		MAX       = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.ETeamType
-	 */
-	enum class ETeamType : uint8_t
-	{
-		TT_NONE      = 0,
-		TT_SERT_RED  = 1,
-		TT_SERT_BLUE = 2,
-		TT_SUSPECT   = 3,
-		TT_CIVILIAN  = 4,
-		TT_SQUAD     = 5,
-		TT_MAX       = 6
-	};
-
-	/**
-	 * Enum ReadyOrNot.EVoiceType
-	 */
-	enum class EVoiceType : uint8_t
-	{
-		VT_Local = 0,
-		VT_Team  = 1,
-		VT_MAX   = 2
 	};
 
 	/**
@@ -352,17 +302,27 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ELimbType
+	 * Enum ReadyOrNot.EVoiceType
 	 */
-	enum class ELimbType : uint8_t
+	enum class EVoiceType : uint8_t
 	{
-		LT_None     = 0,
-		LT_RightLeg = 1,
-		LT_LeftLeg  = 2,
-		LT_RightArm = 3,
-		LT_LeftArm  = 4,
-		LT_Head     = 5,
-		LT_MAX      = 6
+		VT_Local = 0,
+		VT_Team  = 1,
+		VT_MAX   = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.ETeamType
+	 */
+	enum class ETeamType : uint8_t
+	{
+		TT_NONE      = 0,
+		TT_SERT_RED  = 1,
+		TT_SERT_BLUE = 2,
+		TT_SUSPECT   = 3,
+		TT_CIVILIAN  = 4,
+		TT_SQUAD     = 5,
+		TT_MAX       = 6
 	};
 
 	/**
@@ -381,6 +341,31 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EClueState
+	 */
+	enum class EClueState : uint8_t
+	{
+		Unclaimed = 0,
+		Collected = 1,
+		Dropped   = 2,
+		MAX       = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.ELimbType
+	 */
+	enum class ELimbType : uint8_t
+	{
+		LT_None     = 0,
+		LT_RightLeg = 1,
+		LT_LeftLeg  = 2,
+		LT_RightArm = 3,
+		LT_LeftArm  = 4,
+		LT_Head     = 5,
+		LT_MAX      = 6
+	};
+
+	/**
 	 * Enum ReadyOrNot.EAnimWeaponType
 	 */
 	enum class EAnimWeaponType : uint8_t
@@ -395,17 +380,29 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ECharacterEmotion
+	 * Enum ReadyOrNot.EGibAreas
 	 */
-	enum class ECharacterEmotion : uint8_t
+	enum class EGibAreas : uint8_t
 	{
-		None   = 0,
-		Angry  = 1,
-		Wince  = 2,
-		Sad    = 3,
-		Afraid = 4,
-		Alert  = 5,
-		MAX    = 6
+		GA_None     = 0,
+		GA_LeftLeg  = 1,
+		GA_RightLeg = 2,
+		GA_LeftArm  = 3,
+		GA_RightArm = 4,
+		GA_Head     = 5,
+		GA_MAX      = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.ETOCPriority
+	 */
+	enum class ETOCPriority : uint8_t
+	{
+		ETP_Flush          = 0,
+		ETP_HighPriority   = 1,
+		ETP_MediumPriority = 2,
+		ETP_LowPriority    = 3,
+		ETP_MAX            = 4
 	};
 
 	/**
@@ -420,6 +417,20 @@ namespace SDK
 		SP_Foxtrot = 4,
 		SP_NONE    = 5,
 		SP_MAX     = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.ECharacterEmotion
+	 */
+	enum class ECharacterEmotion : uint8_t
+	{
+		None   = 0,
+		Angry  = 1,
+		Wince  = 2,
+		Sad    = 3,
+		Afraid = 4,
+		Alert  = 5,
+		MAX    = 6
 	};
 
 	/**
@@ -442,17 +453,48 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EGibAreas
+	 * Enum ReadyOrNot.EFireMode
 	 */
-	enum class EGibAreas : uint8_t
+	enum class EFireMode : uint8_t
 	{
-		GA_None     = 0,
-		GA_LeftLeg  = 1,
-		GA_RightLeg = 2,
-		GA_LeftArm  = 3,
-		GA_RightArm = 4,
-		GA_Head     = 5,
-		GA_MAX      = 6
+		FM_Single     = 0,
+		FM_Auto       = 1,
+		FM_Burst      = 2,
+		FM_Continuous = 3,
+		FM_Safe       = 4,
+		FM_MAX        = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EFootConstEnum
+	 */
+	enum class EFootConstEnum : uint8_t
+	{
+		FCE_Forward = 0,
+		FCE_Inverse = 1,
+		FCE_MAX     = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.EItemSelectionInterfaceType
+	 */
+	enum class EItemSelectionInterfaceType : uint8_t
+	{
+		Wheel = 0,
+		Panel = 1,
+		MAX   = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.ELightRadialSelection
+	 */
+	enum class ELightRadialSelection : uint8_t
+	{
+		LR_None        = 0,
+		LR_NVGs        = 1,
+		LR_WeaponLight = 2,
+		LR_Chemlight   = 3,
+		LR_MAX         = 4
 	};
 
 	/**
@@ -480,55 +522,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EHolsterAnimationType
-	 */
-	enum class EHolsterAnimationType : uint8_t
-	{
-		HAT_Normal            = 0,
-		HAT_SkipHolster       = 1,
-		HAT_AlwaysPlayHolster = 2,
-		HAT_MAX               = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMultitoolFunctions
-	 */
-	enum class EMultitoolFunctions : uint8_t
-	{
-		MF_None       = 0,
-		MF_Lockpick   = 1,
-		MF_Knife      = 2,
-		MF_Wirecutter = 3,
-		MF_MAX        = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.ELightRadialSelection
-	 */
-	enum class ELightRadialSelection : uint8_t
-	{
-		LR_None        = 0,
-		LR_NVGs        = 1,
-		LR_WeaponLight = 2,
-		LR_Chemlight   = 3,
-		LR_MAX         = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMatchState
-	 */
-	enum class EMatchState : uint8_t
-	{
-		MS_None             = 0,
-		MS_Warmup           = 1,
-		MS_Playing          = 2,
-		MS_RoundEnded       = 3,
-		MS_MatchEnded       = 4,
-		MS_GoingToNextLevel = 5,
-		MS_MAX              = 6
-	};
-
-	/**
 	 * Enum ReadyOrNot.ETrapState
 	 */
 	enum class ETrapState : uint8_t
@@ -540,26 +533,14 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EAIAwarenessState
+	 * Enum ReadyOrNot.EHolsterAnimationType
 	 */
-	enum class EAIAwarenessState : uint8_t
+	enum class EHolsterAnimationType : uint8_t
 	{
-		Unalerted  = 0,
-		Suspicious = 1,
-		Alerted    = 2,
-		MAX        = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.ERonNavigationQueryResult
-	 */
-	enum class ERonNavigationQueryResult : uint8_t
-	{
-		Invalid = 0,
-		Error   = 1,
-		Fail    = 2,
-		Success = 3,
-		MAX     = 4
+		HAT_Normal            = 0,
+		HAT_SkipHolster       = 1,
+		HAT_AlwaysPlayHolster = 2,
+		HAT_MAX               = 3
 	};
 
 	/**
@@ -625,6 +606,46 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EMultitoolFunctions
+	 */
+	enum class EMultitoolFunctions : uint8_t
+	{
+		MF_None       = 0,
+		MF_Lockpick   = 1,
+		MF_Knife      = 2,
+		MF_Wirecutter = 3,
+		MF_MAX        = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMatchState
+	 */
+	enum class EMatchState : uint8_t
+	{
+		MS_None             = 0,
+		MS_Warmup           = 1,
+		MS_Playing          = 2,
+		MS_RoundEnded       = 3,
+		MS_MatchEnded       = 4,
+		MS_GoingToNextLevel = 5,
+		MS_MAX              = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.EStackupGenArea
+	 */
+	enum class EStackupGenArea : uint8_t
+	{
+		SGA_None       = 0,
+		SGA_FrontLeft  = 1,
+		SGA_FrontRight = 2,
+		SGA_BackLeft   = 3,
+		SGA_BackRight  = 4,
+		SGA_All        = 5,
+		SGA_MAX        = 6
+	};
+
+	/**
 	 * Enum ReadyOrNot.ERespawnMode
 	 */
 	enum class ERespawnMode : uint8_t
@@ -636,28 +657,38 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ESurrenderExitType
+	 * Enum ReadyOrNot.ERonNavigationQueryResult
 	 */
-	enum class ESurrenderExitType : uint8_t
+	enum class ERonNavigationQueryResult : uint8_t
 	{
-		None    = 0,
-		Default = 1,
-		Gun     = 2,
-		Knife   = 3,
+		Invalid = 0,
+		Error   = 1,
+		Fail    = 2,
+		Success = 3,
 		MAX     = 4
 	};
 
 	/**
-	 * Enum ReadyOrNot.ESelectedSpawn
+	 * Enum ReadyOrNot.EPlayerStatus
 	 */
-	enum class ESelectedSpawn : uint8_t
+	enum class EPlayerStatus : uint8_t
 	{
-		SS_None        = 0,
-		SS_FirstSpawn  = 1,
-		SS_SecondSpawn = 2,
-		SS_ThirdSpawn  = 3,
-		SS_FourthSpawn = 4,
-		SS_MAX         = 5
+		PS_None     = 0,
+		PS_NotReady = 1,
+		PS_Ready    = 2,
+		PS_Deployed = 3,
+		PS_MAX      = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EAIAwarenessState
+	 */
+	enum class EAIAwarenessState : uint8_t
+	{
+		Unalerted  = 0,
+		Suspicious = 1,
+		Alerted    = 2,
+		MAX        = 3
 	};
 
 	/**
@@ -669,17 +700,6 @@ namespace SDK
 		PLT_Red  = 1,
 		PLT_Blue = 2,
 		PLT_MAX  = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EVoteState
-	 */
-	enum class EVoteState : uint8_t
-	{
-		Undecided = 0,
-		Yes       = 1,
-		No        = 2,
-		MAX       = 3
 	};
 
 	/**
@@ -699,18 +719,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EWeaponUnderbarrelAnimationType
-	 */
-	enum class EWeaponUnderbarrelAnimationType : uint8_t
-	{
-		WU_None     = 0,
-		WU_VFG      = 1,
-		WU_AFG      = 2,
-		WU_Handstop = 3,
-		WU_MAX      = 4
-	};
-
-	/**
 	 * Enum ReadyOrNot.EKillfeedType
 	 */
 	enum class EKillfeedType : uint8_t
@@ -725,16 +733,27 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EFireMode
+	 * Enum ReadyOrNot.EVoteState
 	 */
-	enum class EFireMode : uint8_t
+	enum class EVoteState : uint8_t
 	{
-		FM_Single     = 0,
-		FM_Auto       = 1,
-		FM_Burst      = 2,
-		FM_Continuous = 3,
-		FM_Safe       = 4,
-		FM_MAX        = 5
+		Undecided = 0,
+		Yes       = 1,
+		No        = 2,
+		MAX       = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.ESelectedSpawn
+	 */
+	enum class ESelectedSpawn : uint8_t
+	{
+		SS_None        = 0,
+		SS_FirstSpawn  = 1,
+		SS_SecondSpawn = 2,
+		SS_ThirdSpawn  = 3,
+		SS_FourthSpawn = 4,
+		SS_MAX         = 5
 	};
 
 	/**
@@ -750,6 +769,39 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EDoorDamageType
+	 */
+	enum class EDoorDamageType : uint8_t
+	{
+		DDT_None        = 0,
+		DDT_Blasting    = 1,
+		DDT_Shotgunning = 2,
+		DDT_Ramming     = 3,
+		DDT_Kicking     = 4,
+		DDT_MAX         = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.ERadialMenuCloseReason
+	 */
+	enum class ERadialMenuCloseReason : uint8_t
+	{
+		MCR_UserClosed  = 0,
+		MCR_ForceClosed = 1,
+		MCR_MAX         = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.ERadialCursorBehaviour
+	 */
+	enum class ERadialCursorBehaviour : uint8_t
+	{
+		RCB_Clamped    = 0,
+		RCB_Continuous = 1,
+		RCB_MAX        = 2
+	};
+
+	/**
 	 * Enum ReadyOrNot.ELastMenuStateBeforeJoin
 	 */
 	enum class ELastMenuStateBeforeJoin : uint8_t
@@ -759,24 +811,6 @@ namespace SDK
 		LM_FromFriends   = 2,
 		LM_SinglePlayer  = 3,
 		LM_MAX           = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPersonnel
-	 */
-	enum class EPersonnel : uint8_t
-	{
-		PERS_None               = 0,
-		PERS_TruckDriver        = 1,
-		PERS_NoisemakerOperator = 2,
-		PERS_VentilationExpert  = 3,
-		PERS_Spotter            = 4,
-		PERS_Marksman           = 5,
-		PERS_Sniper             = 6,
-		PERS_FloodlightOperator = 7,
-		PERS_PowerCrew          = 8,
-		PERS_Negotiator         = 9,
-		PERS_MAX                = 10
 	};
 
 	/**
@@ -793,25 +827,254 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ERadialCursorBehaviour
+	 * Enum ReadyOrNot.EPreMissionSubCategory
 	 */
-	enum class ERadialCursorBehaviour : uint8_t
+	enum class EPreMissionSubCategory : uint8_t
 	{
-		RCB_Clamped    = 0,
-		RCB_Continuous = 1,
-		RCB_MAX        = 2
+		None          = 0,
+		Primary       = 1,
+		Secondary     = 2,
+		Tactical      = 3,
+		Appearance    = 4,
+		Protection    = 5,
+		ItemSelection = 6,
+		Grenades      = 7,
+		Clean         = 8,
+		MAX           = 9
 	};
 
 	/**
-	 * Enum ReadyOrNot.ESessionType
+	 * Enum ReadyOrNot.ELightType
 	 */
-	enum class ESessionType : uint8_t
+	enum class ELightType : uint8_t
 	{
-		ST_None         = 0,
-		ST_SinglePlayer = 1,
-		ST_Public       = 2,
-		ST_Friends      = 3,
-		ST_MAX          = 4
+		LT_None  = 0,
+		LT_Day   = 1,
+		LT_Night = 2,
+		LT_MAX   = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.ETacticalAuthorityVoice
+	 */
+	enum class ETacticalAuthorityVoice : uint8_t
+	{
+		TAV_None                = 0,
+		TAV_Surrender           = 1,
+		TAV_PickUpItem          = 2,
+		TAV_DropTheGun          = 3,
+		TAV_GetOnTheFloor       = 4,
+		TAV_ComeHere            = 5,
+		TAV_Wait                = 6,
+		TAV_PutHandsUp          = 7,
+		TAV_MoveOverThere       = 8,
+		TAV_ReportDead          = 9,
+		TAV_ReportArrested      = 10,
+		TAV_ReportIncapacitated = 11,
+		TAV_ReportEvidence      = 12,
+		TAV_MAX                 = 13
+	};
+
+	/**
+	 * Enum ReadyOrNot.EGenerationType
+	 */
+	enum class EGenerationType : uint8_t
+	{
+		GT_None            = 0,
+		GT_Scenarios       = 1,
+		GT_RandomScenarios = 2,
+		GT_MAX             = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EDroneDamageSpeed
+	 */
+	enum class EDroneDamageSpeed : uint8_t
+	{
+		DDS_10PercentSpeed = 0,
+		DDS_20PercentSpeed = 1,
+		DDS_30PercentSpeed = 2,
+		DDS_40PercentSpeed = 3,
+		DDS_50PercentSpeed = 4,
+		DDS_60PercentSpeed = 5,
+		DDS_70PercentSpeed = 6,
+		DDS_80PercentSpeed = 7,
+		DDS_90PercentSpeed = 8,
+		DDS_MAX            = 9
+	};
+
+	/**
+	 * Enum ReadyOrNot.EGameEventMetric
+	 */
+	enum class EGameEventMetric : uint8_t
+	{
+		GEM_NONE                 = 0,
+		GEM_GAME_STARTED         = 1,
+		GEM_GAME_JOINED          = 2,
+		GEM_GAME_FINISHED        = 3,
+		GEM_GAME_CRASHED         = 4,
+		GEM_PLAYER_GAME_FINISHED = 5,
+		GEM_MAX                  = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.EPlanningStage
+	 */
+	enum class EPlanningStage : uint8_t
+	{
+		PS_None      = 0,
+		PS_Planning  = 1,
+		PS_Situation = 2,
+		PS_Loadout   = 3,
+		PS_MAX       = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.ETutorialMessageContext
+	 */
+	enum class ETutorialMessageContext : uint8_t
+	{
+		Movement = 0,
+		MAX      = 1
+	};
+
+	/**
+	 * Enum ReadyOrNot.ESituationPage
+	 */
+	enum class ESituationPage : uint8_t
+	{
+		SP_None       = 0,
+		SP_Objectives = 1,
+		SP_Suspects   = 2,
+		SP_Civilians  = 3,
+		SP_Timeline   = 4,
+		SP_MAX        = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EPlanningPage
+	 */
+	enum class EPlanningPage : uint8_t
+	{
+		PP_None         = 0,
+		PP_Overview     = 1,
+		PP_Spawn        = 2,
+		PP_Deployables  = 3,
+		PP_Tactics      = 4,
+		PP_FreePlanning = 5,
+		PP_MAX          = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.ERONBuildConfiguration
+	 */
+	enum class ERONBuildConfiguration : uint8_t
+	{
+		Unknown      = 0,
+		Editor       = 1,
+		Debug        = 2,
+		Development  = 3,
+		Shipping     = 4,
+		FinalRelease = 5,
+		Test         = 6,
+		MAX          = 7
+	};
+
+	/**
+	 * Enum ReadyOrNot.ECommWheelLockOnBehaviour
+	 */
+	enum class ECommWheelLockOnBehaviour : uint8_t
+	{
+		LB_LockOnToObstruction        = 0,
+		LB_KeepLockOn                 = 1,
+		LB_CancelLockOnWhenObstructed = 2,
+		LB_MAX                        = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EIKStateEnum
+	 */
+	enum class EIKStateEnum : uint8_t
+	{
+		IKE_None     = 0,
+		IKE_Optimize = 1,
+		IKE_Full     = 2,
+		IKE_MAX      = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMedicalHealScreen
+	 */
+	enum class EMedicalHealScreen : uint8_t
+	{
+		MHS_Healer          = 0,
+		MHS_Healee          = 1,
+		MHS_MortallyWounded = 2,
+		MHS_NoBrokenLimbs   = 3,
+		MHS_MAX             = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EDoorBreachType
+	 */
+	enum class EDoorBreachType : uint8_t
+	{
+		None    = 0,
+		Open    = 1,
+		Move    = 2,
+		Kick    = 3,
+		Shotgun = 4,
+		Ram     = 5,
+		C2      = 6,
+		Custom  = 7,
+		MAX     = 8
+	};
+
+	/**
+	 * Enum ReadyOrNot.ERecoilModifierOption
+	 */
+	enum class ERecoilModifierOption : uint8_t
+	{
+		RMO_ModifyRecoil   = 0,
+		RMO_AddRecoil      = 1,
+		RMO_SubtractRecoil = 2,
+		RMO_MAX            = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EFilterMovePointGeneration
+	 */
+	enum class EFilterMovePointGeneration : uint8_t
+	{
+		FMNP_None      = 0,
+		FNMP_LeftOnly  = 1,
+		FNMP_RightOnly = 2,
+		FNMP_HardLeft  = 3,
+		FNMP_HardRight = 4,
+		MAX            = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EChangeBehaviour
+	 */
+	enum class EChangeBehaviour : uint8_t
+	{
+		CB_Add    = 0,
+		CB_Remove = 1,
+		CB_MAX    = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.EPostProcessState
+	 */
+	enum class EPostProcessState : uint8_t
+	{
+		Hold              = 0,
+		Forward           = 1,
+		Reverse           = 2,
+		WaitingForReverse = 3,
+		Ended             = 4,
+		MAX               = 5
 	};
 
 	/**
@@ -826,52 +1089,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EActorAnalyticsState
-	 */
-	enum class EActorAnalyticsState : uint8_t
-	{
-		AAS_None     = 0,
-		AAS_Wounded  = 1,
-		AAS_Dead     = 2,
-		AAS_Arrested = 3,
-		AAS_MAX      = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMusicState
-	 */
-	enum class EMusicState : uint8_t
-	{
-		MS_Preplanning = 0,
-		MS_Ambient     = 1,
-		MS_Action      = 2,
-		MS_Scripted    = 3,
-		MS_MAX         = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMirrorContactType
-	 */
-	enum class EMirrorContactType : uint8_t
-	{
-		AI     = 0,
-		Trap   = 1,
-		Custom = 2,
-		Both   = 3,
-		MAX    = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.ERadialMenuCloseReason
-	 */
-	enum class ERadialMenuCloseReason : uint8_t
-	{
-		MCR_UserClosed  = 0,
-		MCR_ForceClosed = 1,
-		MCR_MAX         = 2
-	};
-
-	/**
 	 * Enum ReadyOrNot.EScenarioImportance
 	 */
 	enum class EScenarioImportance : uint8_t
@@ -883,42 +1100,40 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EMatchmakingStatus
+	 * Enum ReadyOrNot.EPostProcessEndOptions
 	 */
-	enum class EMatchmakingStatus : uint8_t
+	enum class EPostProcessEndOptions : uint8_t
 	{
-		MS_None        = 0,
-		MS_Matchmaking = 1,
-		MS_Success     = 2,
-		MS_Failure     = 3,
-		MS_Cancelled   = 4,
-		MS_MAX         = 5
+		End     = 0,
+		Hold    = 1,
+		Loop    = 2,
+		Reverse = 3,
+		MAX     = 4
 	};
 
 	/**
-	 * Enum ReadyOrNot.EEquippingSwat
+	 * Enum ReadyOrNot.EPVPEvent
 	 */
-	enum class EEquippingSwat : uint8_t
+	enum class EPVPEvent : uint8_t
 	{
-		ES_None    = 0,
-		ES_BlueOne = 1,
-		ES_BlueTwo = 2,
-		ES_RedOne  = 3,
-		ES_RedTwo  = 4,
-		ES_MAX     = 5
-	};
-
-	/**
-	 * Enum ReadyOrNot.EThreatLevel
-	 */
-	enum class EThreatLevel : uint8_t
-	{
-		TL_None    = 0,
-		TL_Low     = 1,
-		TL_Medium  = 2,
-		TL_High    = 3,
-		TL_Extreme = 4,
-		TL_MAX     = 5
+		None             = 0,
+		PlayerKilled     = 1,
+		PlayerArrested   = 2,
+		PlayerFreed      = 3,
+		KillConfirmed    = 4,
+		ReportedEvidence = 5,
+		VIPSecured       = 6,
+		VIPArrested      = 7,
+		VIPFreed         = 8,
+		VIPKilled        = 9,
+		FlagCaptured     = 10,
+		FlagDropped      = 11,
+		IntelCollected   = 12,
+		IntelDropped     = 13,
+		IntelExtracting  = 14,
+		IntelExtracted   = 15,
+		IncrimClueFound  = 16,
+		MAX              = 17
 	};
 
 	/**
@@ -933,35 +1148,13 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EObjectiveStatus
+	 * Enum ReadyOrNot.EPostProcessPlayDirection
 	 */
-	enum class EObjectiveStatus : uint8_t
+	enum class EPostProcessPlayDirection : uint8_t
 	{
-		Objective_InProgress = 0,
-		Objective_Complete   = 1,
-		Objective_Failed     = 2,
-		Objective_MAX        = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.ETrackingStage
-	 */
-	enum class ETrackingStage : uint8_t
-	{
-		TS_FindingCover            = 0,
-		TS_InvestigatingPoints     = 1,
-		TS_ReturningToOriginalSpot = 2,
-		TS_MAX                     = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPlanningMapTool
-	 */
-	enum class EPlanningMapTool : uint8_t
-	{
-		PMT_Draw = 0,
-		PMT_Pan  = 1,
-		PMT_MAX  = 2
+		Forwards  = 0,
+		Backwards = 1,
+		MAX       = 2
 	};
 
 	/**
@@ -990,80 +1183,41 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EItemType
+	 * Enum ReadyOrNot.EPostProcessStartingState
 	 */
-	enum class EItemType : uint8_t
+	enum class EPostProcessStartingState : uint8_t
 	{
-		IT_None                    = 0,
-		IT_Rifles                  = 1,
-		IT_SubmachineGun           = 2,
-		IT_LightMachineGun         = 3,
-		IT_Shotgun                 = 4,
-		IT_Sniper                  = 5,
-		IT_PistolsLethal           = 6,
-		IT_PistolsNonLethal        = 7,
-		IT_PrimaryNonLethal        = 8,
-		IT_Launcher                = 9,
-		IT_Melee                   = 10,
-		IT_LessLethal              = 11,
-		IT_Headwear                = 12,
-		IT_BodyArmor               = 13,
-		IT_Grenade                 = 14,
-		IT_GrenadeNonLethal        = 15,
-		IT_TacticalDevice          = 16,
-		IT_TacticalDeviceNonLethal = 17,
-		IT_TacticalOne             = 18,
-		IT_TacticalTwo             = 19,
-		IT_TacticalThree           = 20,
-		IT_TacticalFour            = 21,
-		IT_TacticalFive            = 22,
-		IT_TacticalSix             = 23,
-		IT_TacticalSeven           = 24,
-		IT_TacticalEight           = 25,
-		IT_LongTactical            = 26,
-		IT_Skins                   = 27,
-		IT_Loadouts                = 28,
-		IT_MAX                     = 29
+		Forward = 0,
+		Reverse = 1,
+		MAX     = 2
 	};
 
 	/**
-	 * Enum ReadyOrNot.EPlanningMapStage
+	 * Enum ReadyOrNot.EItemOverrideRule
 	 */
-	enum class EPlanningMapStage : uint8_t
+	enum class EItemOverrideRule : uint8_t
 	{
-		PMS_Overview          = 0,
-		PMS_Spawn             = 1,
-		PMS_Deployables       = 2,
-		PMS_PersonnelMain     = 3,
-		PMS_PersonnelPoint    = 4,
-		PMS_PersonnelMapZones = 5,
-		PMS_FreeDraw          = 6,
-		PMS_MAX               = 7
+		NONE             = 0,
+		ADDITIVE_ONLY    = 1,
+		LAYERED_ONLY     = 2,
+		ADDITIVE_LAYERED = 3,
+		MAX              = 4
 	};
 
 	/**
-	 * Enum ReadyOrNot.EPlanningStage
+	 * Enum ReadyOrNot.EMoveDirectionExt
 	 */
-	enum class EPlanningStage : uint8_t
+	enum class EMoveDirectionExt : uint8_t
 	{
-		PS_None      = 0,
-		PS_Planning  = 1,
-		PS_Situation = 2,
-		PS_Loadout   = 3,
-		PS_MAX       = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.ESituationPage
-	 */
-	enum class ESituationPage : uint8_t
-	{
-		SP_None       = 0,
-		SP_Objectives = 1,
-		SP_Suspects   = 2,
-		SP_Civilians  = 3,
-		SP_Timeline   = 4,
-		SP_MAX        = 5
+		F   = 0,
+		L   = 1,
+		R   = 2,
+		B   = 3,
+		FL  = 4,
+		FR  = 5,
+		BR  = 6,
+		BL  = 7,
+		MAX = 8
 	};
 
 	/**
@@ -1074,6 +1228,176 @@ namespace SDK
 		SCP_PrioritizeCommands = 0,
 		SCP_PrioritizeThreats  = 1,
 		SCP_MAX                = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.ERoNGaitState
+	 */
+	enum class ERoNGaitState : uint8_t
+	{
+		RON_TURN   = 0,
+		RON_WALK   = 1,
+		RON_RUN    = 2,
+		RON_SPRINT = 3,
+		RON_MAX    = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EDoorCheckResult
+	 */
+	enum class EDoorCheckResult : uint8_t
+	{
+		None     = 0,
+		Unlocked = 1,
+		Locked   = 2,
+		Jammed   = 3,
+		Blocked  = 4,
+		MAX      = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.ESessionType
+	 */
+	enum class ESessionType : uint8_t
+	{
+		ST_None         = 0,
+		ST_SinglePlayer = 1,
+		ST_Public       = 2,
+		ST_Friends      = 3,
+		ST_MAX          = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EObjectiveLevel
+	 */
+	enum class EObjectiveLevel : uint8_t
+	{
+		PrimaryObjective   = 0,
+		SecondaryObjective = 1,
+		TertiaryObjective  = 2,
+		MAX                = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EItemVisualizationType
+	 */
+	enum class EItemVisualizationType : uint8_t
+	{
+		IVT_None         = 0,
+		IVT_Primary      = 1,
+		IVT_Secondary    = 2,
+		IVT_LongTactical = 3,
+		IVT_Helmet       = 4,
+		IVT_Equipped     = 5,
+		IVT_MAX          = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.EAbortCoverReason
+	 */
+	enum class EAbortCoverReason : uint8_t
+	{
+		Success               = 0,
+		Forced                = 1,
+		EnemySensed           = 2,
+		SeenEnemyApproaching  = 3,
+		HeardEnemyApproaching = 4,
+		EnemyMovingTowardsUs  = 5,
+		EnemyFiredNearUs      = 6,
+		MAX                   = 7
+	};
+
+	/**
+	 * Enum ReadyOrNot.EItemVisualizationStatus
+	 */
+	enum class EItemVisualizationStatus : uint8_t
+	{
+		IVS_None       = 0,
+		IVS_FPEquipped = 1,
+		IVS_MAX        = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMoveDirection
+	 */
+	enum class EMoveDirection : uint8_t
+	{
+		F   = 0,
+		L   = 1,
+		R   = 2,
+		B   = 3,
+		MAX = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EToggleInventoryVis
+	 */
+	enum class EToggleInventoryVis : uint8_t
+	{
+		TIV_None         = 0,
+		TIV_HideAll      = 1,
+		TIV_ShowAll      = 2,
+		TIV_HideEquipped = 3,
+		TIV_ShowEquipped = 4,
+		TIV_MAX          = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EHighScoreCategory
+	 */
+	enum class EHighScoreCategory : uint8_t
+	{
+		HSC_None        = 0,
+		HSC_COOP_DAILY  = 1,
+		HSC_COOP_SEASON = 2,
+		HSC_PVP_DAILY   = 3,
+		HSC_PVP_SEASON  = 4,
+		HSC_MAX         = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EThreatLevel
+	 */
+	enum class EThreatLevel : uint8_t
+	{
+		TL_None    = 0,
+		TL_Low     = 1,
+		TL_Medium  = 2,
+		TL_High    = 3,
+		TL_Extreme = 4,
+		TL_MAX     = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EOptiwandViewMode
+	 */
+	enum class EOptiwandViewMode : uint8_t
+	{
+		PiP        = 0,
+		Fullscreen = 1,
+		MAX        = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.ETrackingStage
+	 */
+	enum class ETrackingStage : uint8_t
+	{
+		TS_FindingCover            = 0,
+		TS_InvestigatingPoints     = 1,
+		TS_ReturningToOriginalSpot = 2,
+		TS_MAX                     = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.ECoverQueryTestPurpose
+	 */
+	enum class ECoverQueryTestPurpose : uint8_t
+	{
+		FilterOnly     = 0,
+		ScoreOnly      = 1,
+		FilterAndScore = 2,
+		MAX            = 3
 	};
 
 	/**
@@ -1094,17 +1418,14 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EPlanningPage
+	 * Enum ReadyOrNot.ECoverFireType_FirePoint
 	 */
-	enum class EPlanningPage : uint8_t
+	enum class ECoverFireType_FirePoint : uint8_t
 	{
-		PP_None         = 0,
-		PP_Overview     = 1,
-		PP_Spawn        = 2,
-		PP_Deployables  = 3,
-		PP_Tactics      = 4,
-		PP_FreePlanning = 5,
-		PP_MAX          = 6
+		CT_Front = 0,
+		CT_Left  = 1,
+		CT_Right = 2,
+		CT_MAX   = 3
 	};
 
 	/**
@@ -1125,16 +1446,15 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EDoorCheckResult
+	 * Enum ReadyOrNot.EHUDStyle
 	 */
-	enum class EDoorCheckResult : uint8_t
+	enum class EHUDStyle : uint8_t
 	{
-		None     = 0,
-		Unlocked = 1,
-		Locked   = 2,
-		Jammed   = 3,
-		Blocked  = 4,
-		MAX      = 5
+		Default   = 0,
+		Minimal   = 1,
+		Detail    = 2,
+		Immersive = 3,
+		MAX       = 4
 	};
 
 	/**
@@ -1161,20 +1481,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EItemVisualizationType
-	 */
-	enum class EItemVisualizationType : uint8_t
-	{
-		IVT_None         = 0,
-		IVT_Primary      = 1,
-		IVT_Secondary    = 2,
-		IVT_LongTactical = 3,
-		IVT_Helmet       = 4,
-		IVT_Equipped     = 5,
-		IVT_MAX          = 6
-	};
-
-	/**
 	 * Enum ReadyOrNot.EPlayerObjectiveMarkerType
 	 */
 	enum class EPlayerObjectiveMarkerType : uint8_t
@@ -1187,217 +1493,13 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EItemVisualizationStatus
+	 * Enum ReadyOrNot.EMaskMagState
 	 */
-	enum class EItemVisualizationStatus : uint8_t
+	enum class EMaskMagState : uint8_t
 	{
-		IVS_None       = 0,
-		IVS_FPEquipped = 1,
-		IVS_MAX        = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMapType
-	 */
-	enum class EMapType : uint8_t
-	{
-		Axis   = 0,
-		Action = 1,
-		Auto   = 2,
-		MAX    = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EToggleInventoryVis
-	 */
-	enum class EToggleInventoryVis : uint8_t
-	{
-		TIV_None         = 0,
-		TIV_HideAll      = 1,
-		TIV_ShowAll      = 2,
-		TIV_HideEquipped = 3,
-		TIV_ShowEquipped = 4,
-		TIV_MAX          = 5
-	};
-
-	/**
-	 * Enum ReadyOrNot.EIKStateEnum
-	 */
-	enum class EIKStateEnum : uint8_t
-	{
-		IKE_None     = 0,
-		IKE_Optimize = 1,
-		IKE_Full     = 2,
-		IKE_MAX      = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.ERecoilModifierOption
-	 */
-	enum class ERecoilModifierOption : uint8_t
-	{
-		RMO_ModifyRecoil   = 0,
-		RMO_AddRecoil      = 1,
-		RMO_SubtractRecoil = 2,
-		RMO_MAX            = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EInterfaceSoundType
-	 */
-	enum class EInterfaceSoundType : uint8_t
-	{
-		IST_None      = 0,
-		IST_Checkmark = 1,
-		IST_Button    = 2,
-		IST_MAX       = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPreMissionSubCategory
-	 */
-	enum class EPreMissionSubCategory : uint8_t
-	{
-		None          = 0,
-		Primary       = 1,
-		Secondary     = 2,
-		Tactical      = 3,
-		Appearance    = 4,
-		Protection    = 5,
-		ItemSelection = 6,
-		Grenades      = 7,
-		Clean         = 8,
-		MAX           = 9
-	};
-
-	/**
-	 * Enum ReadyOrNot.EOptiwandViewMode
-	 */
-	enum class EOptiwandViewMode : uint8_t
-	{
-		PiP        = 0,
-		Fullscreen = 1,
-		MAX        = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPostProcessState
-	 */
-	enum class EPostProcessState : uint8_t
-	{
-		Hold              = 0,
-		Forward           = 1,
-		Reverse           = 2,
-		WaitingForReverse = 3,
-		Ended             = 4,
-		MAX               = 5
-	};
-
-	/**
-	 * Enum ReadyOrNot.ECoverQueryTestPurpose
-	 */
-	enum class ECoverQueryTestPurpose : uint8_t
-	{
-		FilterOnly     = 0,
-		ScoreOnly      = 1,
-		FilterAndScore = 2,
-		MAX            = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPostProcessEndOptions
-	 */
-	enum class EPostProcessEndOptions : uint8_t
-	{
-		End     = 0,
-		Hold    = 1,
-		Loop    = 2,
-		Reverse = 3,
-		MAX     = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPostProcessStartingState
-	 */
-	enum class EPostProcessStartingState : uint8_t
-	{
-		Forward = 0,
-		Reverse = 1,
-		MAX     = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.ECoverFireType_FirePoint
-	 */
-	enum class ECoverFireType_FirePoint : uint8_t
-	{
-		CT_Front = 0,
-		CT_Left  = 1,
-		CT_Right = 2,
-		CT_MAX   = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPostProcessPlayDirection
-	 */
-	enum class EPostProcessPlayDirection : uint8_t
-	{
-		Forwards  = 0,
-		Backwards = 1,
-		MAX       = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMoveDirectionExt
-	 */
-	enum class EMoveDirectionExt : uint8_t
-	{
-		F   = 0,
-		L   = 1,
-		R   = 2,
-		B   = 3,
-		FL  = 4,
-		FR  = 5,
-		BR  = 6,
-		BL  = 7,
-		MAX = 8
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMoveDirection
-	 */
-	enum class EMoveDirection : uint8_t
-	{
-		F   = 0,
-		L   = 1,
-		R   = 2,
-		B   = 3,
-		MAX = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EHighScoreCategory
-	 */
-	enum class EHighScoreCategory : uint8_t
-	{
-		HSC_None        = 0,
-		HSC_COOP_DAILY  = 1,
-		HSC_COOP_SEASON = 2,
-		HSC_PVP_DAILY   = 3,
-		HSC_PVP_SEASON  = 4,
-		HSC_MAX         = 5
-	};
-
-	/**
-	 * Enum ReadyOrNot.EHUDStyle
-	 */
-	enum class EHUDStyle : uint8_t
-	{
-		Default   = 0,
-		Minimal   = 1,
-		Detail    = 2,
-		Immersive = 3,
-		MAX       = 4
+		Show = 0,
+		Hide = 1,
+		MAX  = 2
 	};
 
 	/**
@@ -1412,6 +1514,28 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EMapType
+	 */
+	enum class EMapType : uint8_t
+	{
+		Axis   = 0,
+		Action = 1,
+		Auto   = 2,
+		MAX    = 3
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMaskMag
+	 */
+	enum class EMaskMag : uint8_t
+	{
+		Mag01 = 0,
+		Mag02 = 1,
+		Dummy = 2,
+		MAX   = 3
+	};
+
+	/**
 	 * Enum ReadyOrNot.ENVGStyle
 	 */
 	enum class ENVGStyle : uint8_t
@@ -1422,13 +1546,26 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EMaskMagState
+	 * Enum ReadyOrNot.EAIConsiderationScoringMethod
 	 */
-	enum class EMaskMagState : uint8_t
+	enum class EAIConsiderationScoringMethod : uint8_t
 	{
-		Show = 0,
-		Hide = 1,
-		MAX  = 2
+		Additive       = 0,
+		Subtractive    = 1,
+		Multiplicative = 2,
+		Divisive       = 3,
+		MAX            = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EInterfaceSoundType
+	 */
+	enum class EInterfaceSoundType : uint8_t
+	{
+		IST_None      = 0,
+		IST_Checkmark = 1,
+		IST_Button    = 2,
+		IST_MAX       = 3
 	};
 
 	/**
@@ -1441,6 +1578,19 @@ namespace SDK
 		OnlyNegative = 2,
 		Disabled     = 3,
 		MAX          = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMatchmakingStatus
+	 */
+	enum class EMatchmakingStatus : uint8_t
+	{
+		MS_None        = 0,
+		MS_Matchmaking = 1,
+		MS_Success     = 2,
+		MS_Failure     = 3,
+		MS_Cancelled   = 4,
+		MS_MAX         = 5
 	};
 
 	/**
@@ -1464,14 +1614,55 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EMaskMag
+	 * Enum ReadyOrNot.ESuspectStateData
 	 */
-	enum class EMaskMag : uint8_t
+	enum class ESuspectStateData : uint8_t
 	{
-		Mag01 = 0,
-		Mag02 = 1,
-		Dummy = 2,
-		MAX   = 3
+		SSD_NONE                        = 0,
+		SSD_IS_TRACKING                 = 1,
+		SSD_HAS_BEST_ACTION             = 2,
+		SSD_HAS_BEST_CONTINUOUS_ACTION  = 3,
+		SSD_HAS_BEST_COMBAT_MOVE_ACTION = 4,
+		SSD_MAX                         = 5
+	};
+
+	/**
+	 * Enum ReadyOrNot.EAIAction
+	 */
+	enum class EAIAction : uint8_t
+	{
+		None             = 0,
+		FireWeapon       = 1,
+		Melee            = 2,
+		HardCover        = 3,
+		Hide             = 4,
+		Surrender        = 5,
+		FakeSurrender    = 6,
+		PlayDead         = 7,
+		Flee             = 8,
+		Rush             = 9,
+		Flank            = 10,
+		Duel             = 11,
+		Suppress         = 12,
+		Push             = 13,
+		Investigate      = 14,
+		PickUpItem       = 15,
+		Suicide          = 16,
+		NeverFakeSuicide = 17,
+		Custom           = 18,
+		MAX              = 19
+	};
+
+	/**
+	 * Enum ReadyOrNot.EActorAnalyticsState
+	 */
+	enum class EActorAnalyticsState : uint8_t
+	{
+		AAS_None     = 0,
+		AAS_Wounded  = 1,
+		AAS_Dead     = 2,
+		AAS_Arrested = 3,
+		AAS_MAX      = 4
 	};
 
 	/**
@@ -1485,6 +1676,19 @@ namespace SDK
 	};
 
 	/**
+	 * Enum ReadyOrNot.EEquippingSwat
+	 */
+	enum class EEquippingSwat : uint8_t
+	{
+		ES_None    = 0,
+		ES_BlueOne = 1,
+		ES_BlueTwo = 2,
+		ES_RedOne  = 3,
+		ES_RedTwo  = 4,
+		ES_MAX     = 5
+	};
+
+	/**
 	 * Enum ReadyOrNot.ECommandInterfaceType
 	 */
 	enum class ECommandInterfaceType : uint8_t
@@ -1492,6 +1696,33 @@ namespace SDK
 		CI_GraphicCommandInterface = 0,
 		CI_ClassicCommandInterface = 1,
 		CI_MAX                     = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.EMirrorContactType
+	 */
+	enum class EMirrorContactType : uint8_t
+	{
+		AI     = 0,
+		Trap   = 1,
+		Custom = 2,
+		Both   = 3,
+		MAX    = 4
+	};
+
+	/**
+	 * Enum ReadyOrNot.EAITeamTactic
+	 */
+	enum class EAITeamTactic : uint8_t
+	{
+		None     = 0,
+		Suppress = 1,
+		Cover    = 2,
+		Flank    = 3,
+		Push     = 4,
+		Charge   = 5,
+		Custom   = 6,
+		MAX      = 7
 	};
 
 	/**
@@ -1507,16 +1738,15 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ESuspectStateData
+	 * Enum ReadyOrNot.EMusicState
 	 */
-	enum class ESuspectStateData : uint8_t
+	enum class EMusicState : uint8_t
 	{
-		SSD_NONE                        = 0,
-		SSD_IS_TRACKING                 = 1,
-		SSD_HAS_BEST_ACTION             = 2,
-		SSD_HAS_BEST_CONTINUOUS_ACTION  = 3,
-		SSD_HAS_BEST_COMBAT_MOVE_ACTION = 4,
-		SSD_MAX                         = 5
+		MS_Preplanning = 0,
+		MS_Ambient     = 1,
+		MS_Action      = 2,
+		MS_Scripted    = 3,
+		MS_MAX         = 4
 	};
 
 	/**
@@ -1551,6 +1781,18 @@ namespace SDK
 		Look_BS_FP           = 0,
 		ENone                = 1,
 		EBaseBlendspaces_MAX = 2
+	};
+
+	/**
+	 * Enum ReadyOrNot.EAnimCardinalDirection
+	 */
+	enum class EAnimCardinalDirection : uint8_t
+	{
+		North = 0,
+		East  = 1,
+		South = 2,
+		West  = 3,
+		MAX   = 4
 	};
 
 	/**
@@ -1594,166 +1836,14 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EItemOverrideRule
+	 * Enum ReadyOrNot.EObjectiveStatus
 	 */
-	enum class EItemOverrideRule : uint8_t
+	enum class EObjectiveStatus : uint8_t
 	{
-		NONE             = 0,
-		ADDITIVE_ONLY    = 1,
-		LAYERED_ONLY     = 2,
-		ADDITIVE_LAYERED = 3,
-		MAX              = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.ERoNGaitState
-	 */
-	enum class ERoNGaitState : uint8_t
-	{
-		RON_TURN   = 0,
-		RON_WALK   = 1,
-		RON_RUN    = 2,
-		RON_SPRINT = 3,
-		RON_MAX    = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EObjectiveLevel
-	 */
-	enum class EObjectiveLevel : uint8_t
-	{
-		PrimaryObjective   = 0,
-		SecondaryObjective = 1,
-		TertiaryObjective  = 2,
-		MAX                = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EAbortCoverReason
-	 */
-	enum class EAbortCoverReason : uint8_t
-	{
-		Success               = 0,
-		Forced                = 1,
-		EnemySensed           = 2,
-		SeenEnemyApproaching  = 3,
-		HeardEnemyApproaching = 4,
-		EnemyMovingTowardsUs  = 5,
-		EnemyFiredNearUs      = 6,
-		MAX                   = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.ELightType
-	 */
-	enum class ELightType : uint8_t
-	{
-		LT_None  = 0,
-		LT_Day   = 1,
-		LT_Night = 2,
-		LT_MAX   = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EGenerationType
-	 */
-	enum class EGenerationType : uint8_t
-	{
-		GT_None            = 0,
-		GT_Scenarios       = 1,
-		GT_RandomScenarios = 2,
-		GT_MAX             = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPVPEvent
-	 */
-	enum class EPVPEvent : uint8_t
-	{
-		None             = 0,
-		PlayerKilled     = 1,
-		PlayerArrested   = 2,
-		PlayerFreed      = 3,
-		KillConfirmed    = 4,
-		ReportedEvidence = 5,
-		VIPSecured       = 6,
-		VIPArrested      = 7,
-		VIPFreed         = 8,
-		VIPKilled        = 9,
-		FlagCaptured     = 10,
-		FlagDropped      = 11,
-		IntelCollected   = 12,
-		IntelDropped     = 13,
-		IntelExtracting  = 14,
-		IntelExtracted   = 15,
-		IncrimClueFound  = 16,
-		MAX              = 17
-	};
-
-	/**
-	 * Enum ReadyOrNot.EAIConsiderationScoringMethod
-	 */
-	enum class EAIConsiderationScoringMethod : uint8_t
-	{
-		Additive       = 0,
-		Subtractive    = 1,
-		Multiplicative = 2,
-		Divisive       = 3,
-		MAX            = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EAIAction
-	 */
-	enum class EAIAction : uint8_t
-	{
-		None             = 0,
-		FireWeapon       = 1,
-		Melee            = 2,
-		HardCover        = 3,
-		Hide             = 4,
-		Surrender        = 5,
-		FakeSurrender    = 6,
-		PlayDead         = 7,
-		Flee             = 8,
-		Rush             = 9,
-		Flank            = 10,
-		Duel             = 11,
-		Suppress         = 12,
-		Push             = 13,
-		Investigate      = 14,
-		PickUpItem       = 15,
-		Suicide          = 16,
-		NeverFakeSuicide = 17,
-		Custom           = 18,
-		MAX              = 19
-	};
-
-	/**
-	 * Enum ReadyOrNot.EAITeamTactic
-	 */
-	enum class EAITeamTactic : uint8_t
-	{
-		None     = 0,
-		Suppress = 1,
-		Cover    = 2,
-		Flank    = 3,
-		Push     = 4,
-		Charge   = 5,
-		Custom   = 6,
-		MAX      = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.EAnimCardinalDirection
-	 */
-	enum class EAnimCardinalDirection : uint8_t
-	{
-		North = 0,
-		East  = 1,
-		South = 2,
-		West  = 3,
-		MAX   = 4
+		Objective_InProgress = 0,
+		Objective_Complete   = 1,
+		Objective_Failed     = 2,
+		Objective_MAX        = 3
 	};
 
 	/**
@@ -1768,6 +1858,53 @@ namespace SDK
 		Fall  = 4,
 		None  = 5,
 		MAX   = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.EItemType
+	 */
+	enum class EItemType : uint8_t
+	{
+		IT_None                    = 0,
+		IT_Rifles                  = 1,
+		IT_SubmachineGun           = 2,
+		IT_LightMachineGun         = 3,
+		IT_Shotgun                 = 4,
+		IT_Sniper                  = 5,
+		IT_PistolsLethal           = 6,
+		IT_PistolsNonLethal        = 7,
+		IT_PrimaryNonLethal        = 8,
+		IT_Launcher                = 9,
+		IT_Melee                   = 10,
+		IT_LessLethal              = 11,
+		IT_Headwear                = 12,
+		IT_BodyArmor               = 13,
+		IT_Grenade                 = 14,
+		IT_GrenadeNonLethal        = 15,
+		IT_TacticalDevice          = 16,
+		IT_TacticalDeviceNonLethal = 17,
+		IT_TacticalOne             = 18,
+		IT_TacticalTwo             = 19,
+		IT_TacticalThree           = 20,
+		IT_TacticalFour            = 21,
+		IT_TacticalFive            = 22,
+		IT_TacticalSix             = 23,
+		IT_TacticalSeven           = 24,
+		IT_TacticalEight           = 25,
+		IT_LongTactical            = 26,
+		IT_Skins                   = 27,
+		IT_Loadouts                = 28,
+		IT_MAX                     = 29
+	};
+
+	/**
+	 * Enum ReadyOrNot.EPlanningMapTool
+	 */
+	enum class EPlanningMapTool : uint8_t
+	{
+		PMT_Draw = 0,
+		PMT_Pan  = 1,
+		PMT_MAX  = 2
 	};
 
 	/**
@@ -1792,6 +1929,21 @@ namespace SDK
 		SoftComplete  = 4,
 		Complete      = 5,
 		MAX           = 6
+	};
+
+	/**
+	 * Enum ReadyOrNot.EPlanningMapStage
+	 */
+	enum class EPlanningMapStage : uint8_t
+	{
+		PMS_Overview          = 0,
+		PMS_Spawn             = 1,
+		PMS_Deployables       = 2,
+		PMS_PersonnelMain     = 3,
+		PMS_PersonnelPoint    = 4,
+		PMS_PersonnelMapZones = 5,
+		PMS_FreeDraw          = 6,
+		PMS_MAX               = 7
 	};
 
 	/**
@@ -1913,178 +2065,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.ETacticalAuthorityVoice
-	 */
-	enum class ETacticalAuthorityVoice : uint8_t
-	{
-		TAV_None                = 0,
-		TAV_Surrender           = 1,
-		TAV_PickUpItem          = 2,
-		TAV_DropTheGun          = 3,
-		TAV_GetOnTheFloor       = 4,
-		TAV_ComeHere            = 5,
-		TAV_Wait                = 6,
-		TAV_PutHandsUp          = 7,
-		TAV_MoveOverThere       = 8,
-		TAV_ReportDead          = 9,
-		TAV_ReportArrested      = 10,
-		TAV_ReportIncapacitated = 11,
-		TAV_ReportEvidence      = 12,
-		TAV_MAX                 = 13
-	};
-
-	/**
-	 * Enum ReadyOrNot.EDroneDamageSpeed
-	 */
-	enum class EDroneDamageSpeed : uint8_t
-	{
-		DDS_10PercentSpeed = 0,
-		DDS_20PercentSpeed = 1,
-		DDS_30PercentSpeed = 2,
-		DDS_40PercentSpeed = 3,
-		DDS_50PercentSpeed = 4,
-		DDS_60PercentSpeed = 5,
-		DDS_70PercentSpeed = 6,
-		DDS_80PercentSpeed = 7,
-		DDS_90PercentSpeed = 8,
-		DDS_MAX            = 9
-	};
-
-	/**
-	 * Enum ReadyOrNot.EGameEventMetric
-	 */
-	enum class EGameEventMetric : uint8_t
-	{
-		GEM_NONE                 = 0,
-		GEM_GAME_STARTED         = 1,
-		GEM_GAME_JOINED          = 2,
-		GEM_GAME_FINISHED        = 3,
-		GEM_GAME_CRASHED         = 4,
-		GEM_PLAYER_GAME_FINISHED = 5,
-		GEM_MAX                  = 6
-	};
-
-	/**
-	 * Enum ReadyOrNot.ETutorialMessageContext
-	 */
-	enum class ETutorialMessageContext : uint8_t
-	{
-		Movement = 0,
-		MAX      = 1
-	};
-
-	/**
-	 * Enum ReadyOrNot.ERONBuildConfiguration
-	 */
-	enum class ERONBuildConfiguration : uint8_t
-	{
-		Unknown      = 0,
-		Editor       = 1,
-		Debug        = 2,
-		Development  = 3,
-		Shipping     = 4,
-		FinalRelease = 5,
-		Test         = 6,
-		MAX          = 7
-	};
-
-	/**
-	 * Enum ReadyOrNot.ECommWheelLockOnBehaviour
-	 */
-	enum class ECommWheelLockOnBehaviour : uint8_t
-	{
-		LB_LockOnToObstruction        = 0,
-		LB_KeepLockOn                 = 1,
-		LB_CancelLockOnWhenObstructed = 2,
-		LB_MAX                        = 3
-	};
-
-	/**
-	 * Enum ReadyOrNot.EFootConstEnum
-	 */
-	enum class EFootConstEnum : uint8_t
-	{
-		FCE_Forward = 0,
-		FCE_Inverse = 1,
-		FCE_MAX     = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.EMedicalHealScreen
-	 */
-	enum class EMedicalHealScreen : uint8_t
-	{
-		MHS_Healer          = 0,
-		MHS_Healee          = 1,
-		MHS_MortallyWounded = 2,
-		MHS_NoBrokenLimbs   = 3,
-		MHS_MAX             = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EDoorBreachType
-	 */
-	enum class EDoorBreachType : uint8_t
-	{
-		None    = 0,
-		Open    = 1,
-		Move    = 2,
-		Kick    = 3,
-		Shotgun = 4,
-		Ram     = 5,
-		C2      = 6,
-		Custom  = 7,
-		MAX     = 8
-	};
-
-	/**
-	 * Enum ReadyOrNot.EFilterMovePointGeneration
-	 */
-	enum class EFilterMovePointGeneration : uint8_t
-	{
-		FMNP_None      = 0,
-		FNMP_LeftOnly  = 1,
-		FNMP_RightOnly = 2,
-		FNMP_HardLeft  = 3,
-		FNMP_HardRight = 4,
-		MAX            = 5
-	};
-
-	/**
-	 * Enum ReadyOrNot.EChangeBehaviour
-	 */
-	enum class EChangeBehaviour : uint8_t
-	{
-		CB_Add    = 0,
-		CB_Remove = 1,
-		CB_MAX    = 2
-	};
-
-	/**
-	 * Enum ReadyOrNot.ETOCPriority
-	 */
-	enum class ETOCPriority : uint8_t
-	{
-		ETP_Flush          = 0,
-		ETP_HighPriority   = 1,
-		ETP_MediumPriority = 2,
-		ETP_LowPriority    = 3,
-		ETP_MAX            = 4
-	};
-
-	/**
-	 * Enum ReadyOrNot.EPlayerStatus
-	 */
-	enum class EPlayerStatus : uint8_t
-	{
-		PS_None     = 0,
-		PS_NotReady = 1,
-		PS_Ready    = 2,
-		PS_Deployed = 3,
-		PS_MAX      = 4
-	};
-
-	/**
 	 * Enum ReadyOrNot.ECOOPMode
 	 */
 	enum class ECOOPMode : uint8_t
@@ -2113,18 +2093,53 @@ namespace SDK
 	};
 
 	/**
-	 * Enum ReadyOrNot.EItemSelectionInterfaceType
+	 * Enum ReadyOrNot.EPersonnel
 	 */
-	enum class EItemSelectionInterfaceType : uint8_t
+	enum class EPersonnel : uint8_t
 	{
-		Wheel = 0,
-		Panel = 1,
-		MAX   = 2
+		PERS_None               = 0,
+		PERS_TruckDriver        = 1,
+		PERS_NoisemakerOperator = 2,
+		PERS_VentilationExpert  = 3,
+		PERS_Spotter            = 4,
+		PERS_Marksman           = 5,
+		PERS_Sniper             = 6,
+		PERS_FloodlightOperator = 7,
+		PERS_PowerCrew          = 8,
+		PERS_Negotiator         = 9,
+		PERS_MAX                = 10
+	};
+
+	/**
+	 * Enum ReadyOrNot.ESurrenderExitType
+	 */
+	enum class ESurrenderExitType : uint8_t
+	{
+		None    = 0,
+		Default = 1,
+		Gun     = 2,
+		Knife   = 3,
+		MAX     = 4
 	};
 
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct ReadyOrNot.ActivityRoute
+	 * Size -> 0x0020
+	 */
+	struct FActivityRoute
+	{
+	public:
+		float                                                        TimeDoingActivity;                                       // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AWorldBuildingPlacementActor*                          WorldBuildingPlacementActor;                             // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAllowFemale;                                            // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UWorldBuildingActivityData*                            WorldBuildingActivityData;                               // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct ReadyOrNot.AIActionData_NameOnly
 	 * Size -> 0x0008
@@ -2210,21 +2225,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.ActivityRoute
-	 * Size -> 0x0020
-	 */
-	struct FActivityRoute
-	{
-	public:
-		float                                                        TimeDoingActivity;                                       // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AWorldBuildingPlacementActor*                          WorldBuildingPlacementActor;                             // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAllowFemale;                                            // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UWorldBuildingActivityData*                            WorldBuildingActivityData;                               // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.ActivityRouteCollection
 	 * Size -> 0x0030
 	 */
@@ -2232,7 +2232,7 @@ namespace SDK
 	{
 	public:
 		TArray<struct FActivityRoute>                                ActivityRoutes;                                          // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FColor                                   PathColor;                                               // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FColor                                   PathColor;                                               // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bReturnToOriginalSpot;                                   // 0x0014(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0015(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		int32_t                                                      ActivityIdx;                                             // 0x0018(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -2503,33 +2503,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.ItemVisualData
-	 * Size -> 0x0030
-	 */
-	struct FItemVisualData
-	{
-	public:
-		class UTexture2D*                                            ItemIcon;                                                // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            PremissionPlanningItemIcon;                              // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            RadialItemIcon;                                          // 0x0010(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         ItemMesh;                                                // 0x0018(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class UTexture2D*>                                    AmmoIcons;                                               // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WeightStunMultiplier
-	 * Size -> 0x0010
-	 */
-	struct FWeightStunMultiplier
-	{
-	public:
-		float                                                        MinimumWeight;                                           // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MaximumWeight;                                           // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MinimumWeightMultiplier;                                 // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MaximumWeightMultiplier;                                 // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.KillFeedData
 	 * Size -> 0x0018
 	 */
@@ -2575,7 +2548,7 @@ namespace SDK
 		class AReadyOrNotPlayerState*                                SenderPlayerState;                                       // 0x0010(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                Message;                                                 // 0x0018(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FLinearColor                                          Color;                                                   // 0x0028(0x0010) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                Timestamp;                                               // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                Timestamp;                                               // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                Args;                                                    // 0x0040(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		ETeamType                                                    AssociatedTeam;                                          // 0x0050(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bKillfeed;                                               // 0x0051(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -2638,189 +2611,49 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.PlayerDetails
-	 * Size -> 0x0010
-	 */
-	struct FPlayerDetails
-	{
-	public:
-		class FString                                                PlayerName;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SavedWeaponAttachmentData
-	 * Size -> 0x0058
-	 */
-	struct FSavedWeaponAttachmentData
-	{
-	public:
-		bool                                                         bHasSavedData;                                           // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UWeaponAttachment*                                     ScopeAttachment;                                         // 0x0008(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     MuzzleAttachment;                                        // 0x0010(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     UnderbarrelAttachment;                                   // 0x0018(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     OverbarrelAttachment;                                    // 0x0020(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     StockAttachment;                                         // 0x0028(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     GripAttachment;                                          // 0x0030(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     IlluminatorAttachment;                                   // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWeaponAttachment*                                     AmmunitionAttachment;                                    // 0x0040(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkinComponent*                                        Skin;                                                    // 0x0048(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      AmmoCount;                                               // 0x0050(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WeaponPreset
-	 * Size -> 0x0068
-	 */
-	struct FWeaponPreset
-	{
-	public:
-		bool                                                         bHasSavedData : 1;                                       // 0x0000(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSelected : 1;                                           // 0x0000(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FName                                                  PresetName;                                              // 0x0004(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSavedWeaponAttachmentData                            AttachmentData;                                          // 0x0010(0x0058) BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SavedWeaponPreset
-	 * Size -> 0x0010
-	 */
-	struct FSavedWeaponPreset
-	{
-	public:
-		TArray<struct FWeaponPreset>                                 Presets;                                                 // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.LoadoutPreset
-	 * Size -> 0x0180
-	 */
-	struct FLoadoutPreset
-	{
-	public:
-		class FName                                                  PresetName;                                              // 0x0000(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSavedLoadout                                         Loadout;                                                 // 0x0008(0x0178) BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.BuildingFloor
-	 * Size -> 0x0038
-	 */
-	struct FBuildingFloor
-	{
-	public:
-		int32_t                                                      Number;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Height;                                                  // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  Location;                                                // 0x0008(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  Extent;                                                  // 0x0014(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FText                                                  Name;                                                    // 0x0020(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ArteryData
-	 * Size -> 0x0014
-	 */
-	struct FArteryData
-	{
-	public:
-		class FName                                                  BoneName;                                                // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ZoneSize;                                                // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ZoneOffset;                                              // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DeathTime;                                               // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.GibData
+	 * ScriptStruct ReadyOrNot.ItemVisualData
 	 * Size -> 0x0030
 	 */
-	struct FGibData
+	struct FItemVisualData
 	{
 	public:
-		class UStaticMesh*                                           GibHead;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           GibArms;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           GibLegs;                                                 // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           BoneHead;                                                // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           BoneArms;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           BoneLegs;                                                // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            ItemIcon;                                                // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            PremissionPlanningItemIcon;                              // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            RadialItemIcon;                                          // 0x0010(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         ItemMesh;                                                // 0x0018(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class UTexture2D*>                                    AmmoIcons;                                               // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.LimbHealthData
-	 * Size -> 0x0034
+	 * ScriptStruct ReadyOrNot.WeightStunMultiplier
+	 * Size -> 0x0010
 	 */
-	struct FLimbHealthData
+	struct FWeightStunMultiplier
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        Health;                                                  // 0x0008(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        MaxHealth;                                               // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        MaxHealthLimit;                                          // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        LowHealthThreshold;                                      // 0x0014(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        LimbDamageMultiplier;                                    // 0x0018(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                      MaxTickets;                                              // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                      Tickets;                                                 // 0x0020(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                      MaxLimbHealthHalving;                                    // 0x0024(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        OriginalMaxHealth;                                       // 0x0028(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        LowHealth;                                               // 0x002C(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        PreviousHealth;                                          // 0x0030(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        MinimumWeight;                                           // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MaximumWeight;                                           // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MinimumWeightMultiplier;                                 // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MaximumWeightMultiplier;                                 // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.ActorSense
-	 * Size -> 0x0058
+	 * ScriptStruct ReadyOrNot.GrenadeDamage
+	 * Size -> 0x0028
 	 */
-	struct FActorSense
+	struct FGrenadeDamage
 	{
 	public:
-		class AActor*                                                Actor;                                                   // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0008(0x0050) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ExposedToNoise
-	 * Size -> 0x0020
-	 */
-	struct FExposedToNoise
-	{
-	public:
-		class AReadyOrNotCharacter*                                  Instigator;                                              // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        HeardAtDistance;                                         // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  StimulusLocation;                                        // 0x000C(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAggressive;                                             // 0x0018(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bFriendly;                                               // 0x0019(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x001A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        TimeSinceExposed;                                        // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ConversationData
-	 * Size -> 0x0068 (FullSize[0x0070] - InheritedSize[0x0008])
-	 */
-	struct FConversationData : public FTableRowBase
-	{
-	public:
-		class FName                                                  SpeakerId;                                               // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  LookAtSpeakerId;                                         // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseVoiceLineFromSpeechTable;                            // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                VoiceLineRowName;                                        // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USoundWave*                                            VoiceLineWav;                                            // 0x0030(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class ACyberneticCharacter*                                  Speaker;                                                 // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AdditionalDelayAfterVoiceLineBeforeNextSpeaker;          // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  RequiredTag;                                             // 0x0044(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ETeamType                                                    TeamType;                                                // 0x004C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        MaxDistance;                                             // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequireLineOfSight;                                     // 0x0054(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bOptionalSpeaker;                                        // 0x0055(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x2];                                   // 0x0056(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      SkipXAfterOptionalSpeakerNotFound;                       // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  GiveWorldBuildingActivityByTagOnStartConversation;       // 0x005C(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  GiveWorldBuildingActivityByTagAfterConversation;         // 0x0064(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0003[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+		class UDamageType*                                           DamageType;                                              // 0x0000(0x0008) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MaxDamageOnDetonation;                                   // 0x0008(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MinDamageOnDetonation;                                   // 0x000C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DamageInnerRadius;                                       // 0x0010(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DamageOuterRadius;                                       // 0x0014(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseSecondTrace;                                         // 0x0018(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        SecondTraceStartDistance;                                // 0x001C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SecondTraceRadiusFactor;                                 // 0x0020(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -2908,56 +2741,44 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.CoverQueryTest
-	 * Size -> 0x0050
+	 * ScriptStruct ReadyOrNot.BuildingFloor
+	 * Size -> 0x0038
 	 */
-	struct FCoverQueryTest
+	struct FBuildingFloor
 	{
 	public:
-		ECoverQueryTestPurpose                                       TestPurpose;                                             // 0x0000(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        ScoringFactor;                                           // 0x0004(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x48];                                  // 0x0008(0x0048) MISSED OFFSET (PADDING)
+		int32_t                                                      Number;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Height;                                                  // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Location;                                                // 0x0008(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Extent;                                                  // 0x0014(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FText                                                  Name;                                                    // 0x0020(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.GrenadeDamage
-	 * Size -> 0x0028
+	 * ScriptStruct ReadyOrNot.ActorSense
+	 * Size -> 0x0058
 	 */
-	struct FGrenadeDamage
+	struct FActorSense
 	{
 	public:
-		class UDamageType*                                           DamageType;                                              // 0x0000(0x0008) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MaxDamageOnDetonation;                                   // 0x0008(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MinDamageOnDetonation;                                   // 0x000C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DamageInnerRadius;                                       // 0x0010(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DamageOuterRadius;                                       // 0x0014(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseSecondTrace;                                         // 0x0018(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        SecondTraceStartDistance;                                // 0x001C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SecondTraceRadiusFactor;                                 // 0x0020(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (PADDING)
+		class AActor*                                                Actor;                                                   // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0008(0x0050) MISSED OFFSET (PADDING)
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.CharacterLookOverride
-	 * Size -> 0x00C8 (FullSize[0x00D0] - InheritedSize[0x0008])
+	 * ScriptStruct ReadyOrNot.ExposedToNoise
+	 * Size -> 0x0020
 	 */
-	struct FCharacterLookOverride : public FTableRowBase
+	struct FExposedToNoise
 	{
 	public:
-		EDLC                                                         LockedToDLC;                                             // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  FriendlyBodyName;                                        // 0x0010(0x0018) Edit, NativeAccessSpecifierPublic
-		class FString                                                SpeechCharacterName;                                     // 0x0028(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            BodyIcon;                                                // 0x0038(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FText                                                  FriendlyHeadName;                                        // 0x0040(0x0018) Edit, NativeAccessSpecifierPublic
-		class UTexture2D*                                            HeadIcon;                                                // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class ABaseArmour*, class USkeletalMesh*>               ArmorOverrideMap;                                        // 0x0060(0x0050) Edit, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         FPMeshOverride;                                          // 0x00B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         FPBodyMeshOverride;                                      // 0x00B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         FaceMeshOverride;                                        // 0x00C0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USkeletalMesh*                                         BodyMeshOverride;                                        // 0x00C8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class AReadyOrNotCharacter*                                  Instigator;                                              // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        HeardAtDistance;                                         // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  StimulusLocation;                                        // 0x000C(0x000C) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAggressive;                                             // 0x0018(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bFriendly;                                               // 0x0019(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x001A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        TimeSinceExposed;                                        // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -2985,6 +2806,27 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.CharacterLookOverride
+	 * Size -> 0x00C8 (FullSize[0x00D0] - InheritedSize[0x0008])
+	 */
+	struct FCharacterLookOverride : public FTableRowBase
+	{
+	public:
+		EDLC                                                         LockedToDLC;                                             // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  FriendlyBodyName;                                        // 0x0010(0x0018) Edit, NativeAccessSpecifierPublic
+		class FString                                                SpeechCharacterName;                                     // 0x0028(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            BodyIcon;                                                // 0x0038(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FText                                                  FriendlyHeadName;                                        // 0x0040(0x0018) Edit, NativeAccessSpecifierPublic
+		class UTexture2D*                                            HeadIcon;                                                // 0x0058(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TMap<class ABaseArmour*, class USkeletalMesh*>               ArmorOverrideMap;                                        // 0x0060(0x0050) Edit, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         FPMeshOverride;                                          // 0x00B0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         FPBodyMeshOverride;                                      // 0x00B8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         FaceMeshOverride;                                        // 0x00C0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkeletalMesh*                                         BodyMeshOverride;                                        // 0x00C8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.SuppressionData
 	 * Size -> 0x0008
 	 */
@@ -3005,115 +2847,6 @@ namespace SDK
 		uint8_t                                                      AccelXYRadians;                                          // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		uint8_t                                                      AccelXYMagnitude;                                        // 0x0001(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		int8_t                                                       AccelZ;                                                  // 0x0002(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PingData
-	 * Size -> 0x00A8
-	 */
-	struct FPingData
-	{
-	public:
-		struct FSlateBrush                                           IconBrush;                                               // 0x0000(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FText                                                  PingText;                                                // 0x0088(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		float                                                        Duration;                                                // 0x00A0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00A4(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.DoorChunkData
-	 * Size -> 0x0020
-	 */
-	struct FDoorChunkData
-	{
-	public:
-		class UStaticMesh*                                           Mesh;                                                    // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsHinge;                                                // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsDoorHandleChunk;                                      // 0x0009(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCannotKickIfDestroyed;                                  // 0x000A(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<int32_t>                                              SupportChunks;                                           // 0x0010(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.DoorData
-	 * Size -> 0x0148 (FullSize[0x0150] - InheritedSize[0x0008])
-	 */
-	struct FDoorData : public FTableRowBase
-	{
-	public:
-		float                                                        DoorMaxOpenClose;                                        // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsDestructible : 1;                                     // 0x000C(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCanMirrorUnderDoor : 1;                                 // 0x000C(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FDoorChunkData>                                DestructibleChunks;                                      // 0x0010(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           DoorMesh;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           DoorHandle;                                              // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCustomLockpickLocation : 1;                             // 0x0030(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bLockable : 1;                                           // 0x0030(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                  LockpickRelativeLocation;                                // 0x0034(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCustomDoorPeekLocation : 1;                             // 0x0040(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x3];                                   // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                  DoorPeekRelativeLocation;                                // 0x0044(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bDoorHandleFront : 1;                                    // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bDoorHandleBack : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0003[0xF];                                   // 0x0051(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               DoorHandleFrontRelativeTransform;                        // 0x0060(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               DoorHandleBackRelativeTransform;                         // 0x0090(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		int32_t                                                      NumSuccessfulKicksToBreakDown;                           // 0x00C0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DoorKickSuccessChance;                                   // 0x00C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  C2PlacementPoint_Front;                                  // 0x00C8(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  C2PlacementPoint_Back;                                   // 0x00D4(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UParticleSystem*                                       C2ExplosionParticle;                                     // 0x00E0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            OpenSound;                                               // 0x00E8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            CloseSound;                                              // 0x00F0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            PushOpenSound;                                           // 0x00F8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            PushCloseSound;                                          // 0x0100(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            ManipulateSound;                                         // 0x0108(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            LockedSound;                                             // 0x0110(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            RamSound;                                                // 0x0118(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            KickSuccessSound;                                        // 0x0120(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            KickFailSound;                                           // 0x0128(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            AlarmSound;                                              // 0x0130(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            KeycardSound;                                            // 0x0138(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            KeycardDenySound;                                        // 0x0140(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0004[0x8];                                   // 0x0148(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TrapData
-	 * Size -> 0x0048 (FullSize[0x0050] - InheritedSize[0x0008])
-	 */
-	struct FTrapData : public FTableRowBase
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               TrapRelativeTransform;                                   // 0x0010(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		class ATrapActorAttachedToDoor*                              TrapClass;                                               // 0x0040(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAttachToDoor;                                           // 0x0048(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ETrapType                                                    TrapType;                                                // 0x0049(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x6];                                   // 0x004A(0x0006) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CoverLandmarkAnimData
-	 * Size -> 0x0058
-	 */
-	struct FCoverLandmarkAnimData
-	{
-	public:
-		bool                                                         bForwardOnly : 1;                                        // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bFromTable : 1;                                          // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                ForwardAnimRowName;                                      // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                LeftAnimRowName;                                         // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                RightAnimRowName;                                        // 0x0028(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          ForwardAnim;                                             // 0x0038(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          LeftAnim;                                                // 0x0040(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          RightAnim;                                               // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AnimYawOffset;                                           // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -3186,6 +2919,327 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.ConversationData
+	 * Size -> 0x0068 (FullSize[0x0070] - InheritedSize[0x0008])
+	 */
+	struct FConversationData : public FTableRowBase
+	{
+	public:
+		class FName                                                  SpeakerId;                                               // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  LookAtSpeakerId;                                         // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseVoiceLineFromSpeechTable;                            // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                VoiceLineRowName;                                        // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundWave*                                            VoiceLineWav;                                            // 0x0030(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class ACyberneticCharacter*                                  Speaker;                                                 // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AdditionalDelayAfterVoiceLineBeforeNextSpeaker;          // 0x0040(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  RequiredTag;                                             // 0x0044(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ETeamType                                                    TeamType;                                                // 0x004C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x004D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        MaxDistance;                                             // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequireLineOfSight;                                     // 0x0054(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bOptionalSpeaker;                                        // 0x0055(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x2];                                   // 0x0056(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      SkipXAfterOptionalSpeakerNotFound;                       // 0x0058(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  GiveWorldBuildingActivityByTagOnStartConversation;       // 0x005C(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  GiveWorldBuildingActivityByTagAfterConversation;         // 0x0064(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0003[0x4];                                   // 0x006C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CoverQueryTest
+	 * Size -> 0x0050
+	 */
+	struct FCoverQueryTest
+	{
+	public:
+		ECoverQueryTestPurpose                                       TestPurpose;                                             // 0x0000(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        ScoringFactor;                                           // 0x0004(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x48];                                  // 0x0008(0x0048) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ArteryData
+	 * Size -> 0x0014
+	 */
+	struct FArteryData
+	{
+	public:
+		class FName                                                  BoneName;                                                // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ZoneSize;                                                // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ZoneOffset;                                              // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DeathTime;                                               // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.GibData
+	 * Size -> 0x0030
+	 */
+	struct FGibData
+	{
+	public:
+		class UStaticMesh*                                           GibHead;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           GibArms;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           GibLegs;                                                 // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           BoneHead;                                                // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           BoneArms;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           BoneLegs;                                                // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CoverLandmarkAnimData
+	 * Size -> 0x0058
+	 */
+	struct FCoverLandmarkAnimData
+	{
+	public:
+		bool                                                         bForwardOnly : 1;                                        // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bFromTable : 1;                                          // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                ForwardAnimRowName;                                      // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                LeftAnimRowName;                                         // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                RightAnimRowName;                                        // 0x0028(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          ForwardAnim;                                             // 0x0038(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          LeftAnim;                                                // 0x0040(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          RightAnim;                                               // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AnimYawOffset;                                           // 0x0050(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PlayerDetails
+	 * Size -> 0x0010
+	 */
+	struct FPlayerDetails
+	{
+	public:
+		class FString                                                PlayerName;                                              // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SavedWeaponAttachmentData
+	 * Size -> 0x0058
+	 */
+	struct FSavedWeaponAttachmentData
+	{
+	public:
+		bool                                                         bHasSavedData;                                           // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UWeaponAttachment*                                     ScopeAttachment;                                         // 0x0008(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     MuzzleAttachment;                                        // 0x0010(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     UnderbarrelAttachment;                                   // 0x0018(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     OverbarrelAttachment;                                    // 0x0020(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     StockAttachment;                                         // 0x0028(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     GripAttachment;                                          // 0x0030(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     IlluminatorAttachment;                                   // 0x0038(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWeaponAttachment*                                     AmmunitionAttachment;                                    // 0x0040(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USkinComponent*                                        Skin;                                                    // 0x0048(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      AmmoCount;                                               // 0x0050(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0054(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.WeaponPreset
+	 * Size -> 0x0068
+	 */
+	struct FWeaponPreset
+	{
+	public:
+		bool                                                         bHasSavedData : 1;                                       // 0x0000(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSelected : 1;                                           // 0x0000(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FName                                                  PresetName;                                              // 0x0004(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSavedWeaponAttachmentData                            AttachmentData;                                          // 0x0010(0x0058) BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SavedWeaponPreset
+	 * Size -> 0x0010
+	 */
+	struct FSavedWeaponPreset
+	{
+	public:
+		TArray<struct FWeaponPreset>                                 Presets;                                                 // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.LoadoutPreset
+	 * Size -> 0x0180
+	 */
+	struct FLoadoutPreset
+	{
+	public:
+		class FName                                                  PresetName;                                              // 0x0000(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSavedLoadout                                         Loadout;                                                 // 0x0008(0x0178) BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.LimbHealthData
+	 * Size -> 0x0034
+	 */
+	struct FLimbHealthData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        Health;                                                  // 0x0008(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        MaxHealth;                                               // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        MaxHealthLimit;                                          // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        LowHealthThreshold;                                      // 0x0014(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        LimbDamageMultiplier;                                    // 0x0018(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int32_t                                                      MaxTickets;                                              // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int32_t                                                      Tickets;                                                 // 0x0020(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int32_t                                                      MaxLimbHealthHalving;                                    // 0x0024(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        OriginalMaxHealth;                                       // 0x0028(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        LowHealth;                                               // 0x002C(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        PreviousHealth;                                          // 0x0030(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PingData
+	 * Size -> 0x00A8
+	 */
+	struct FPingData
+	{
+	public:
+		struct FSlateBrush                                           IconBrush;                                               // 0x0000(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FText                                                  PingText;                                                // 0x0088(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		float                                                        Duration;                                                // 0x00A0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x00A4(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.DoorChunkData
+	 * Size -> 0x0020
+	 */
+	struct FDoorChunkData
+	{
+	public:
+		class UStaticMesh*                                           Mesh;                                                    // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsHinge;                                                // 0x0008(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsDoorHandleChunk;                                      // 0x0009(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCannotKickIfDestroyed;                                  // 0x000A(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<int32_t>                                              SupportChunks;                                           // 0x0010(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.DoorData
+	 * Size -> 0x0148 (FullSize[0x0150] - InheritedSize[0x0008])
+	 */
+	struct FDoorData : public FTableRowBase
+	{
+	public:
+		float                                                        DoorMaxOpenClose;                                        // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsDestructible : 1;                                     // 0x000C(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCanMirrorUnderDoor : 1;                                 // 0x000C(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FDoorChunkData>                                DestructibleChunks;                                      // 0x0010(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           DoorMesh;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           DoorHandle;                                              // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCustomLockpickLocation : 1;                             // 0x0030(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bLockable : 1;                                           // 0x0030(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector                                  LockpickRelativeLocation;                                // 0x0034(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCustomDoorPeekLocation : 1;                             // 0x0040(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x3];                                   // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector                                  DoorPeekRelativeLocation;                                // 0x0044(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bDoorHandleFront : 1;                                    // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bDoorHandleBack : 1;                                     // 0x0050(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0003[0xF];                                   // 0x0051(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               DoorHandleFrontRelativeTransform;                        // 0x0060(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               DoorHandleBackRelativeTransform;                         // 0x0090(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		int32_t                                                      NumSuccessfulKicksToBreakDown;                           // 0x00C0(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DoorKickSuccessChance;                                   // 0x00C4(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  C2PlacementPoint_Front;                                  // 0x00C8(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  C2PlacementPoint_Back;                                   // 0x00D4(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UParticleSystem*                                       C2ExplosionParticle;                                     // 0x00E0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            OpenSound;                                               // 0x00E8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            CloseSound;                                              // 0x00F0(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            PushOpenSound;                                           // 0x00F8(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            PushCloseSound;                                          // 0x0100(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            ManipulateSound;                                         // 0x0108(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            LockedSound;                                             // 0x0110(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            RamSound;                                                // 0x0118(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            KickSuccessSound;                                        // 0x0120(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            KickFailSound;                                           // 0x0128(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            AlarmSound;                                              // 0x0130(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            KeycardSound;                                            // 0x0138(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            KeycardDenySound;                                        // 0x0140(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0004[0x8];                                   // 0x0148(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TrapData
+	 * Size -> 0x0048 (FullSize[0x0050] - InheritedSize[0x0008])
+	 */
+	struct FTrapData : public FTableRowBase
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               TrapRelativeTransform;                                   // 0x0010(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		class ATrapActorAttachedToDoor*                              TrapClass;                                               // 0x0040(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAttachToDoor;                                           // 0x0048(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ETrapType                                                    TrapType;                                                // 0x0049(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x6];                                   // 0x004A(0x0006) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CoverInstigatorStimulus
+	 * Size -> 0x0050
+	 */
+	struct FCoverInstigatorStimulus
+	{
+	public:
+		class AReadyOrNotCharacter*                                  InstigatorCharacter;                                     // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               ThreatTransform;                                         // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SuspectArmourData
+	 * Size -> 0x0068 (FullSize[0x0070] - InheritedSize[0x0008])
+	 */
+	struct FSuspectArmourData : public FTableRowBase
+	{
+	public:
+		TSoftClassPtr<class ASuspectArmour>                          BlueprintClass;                                          // 0x0008(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class USkeletalMesh*                                         Mesh;                                                    // 0x0030(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsHelmet;                                               // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      ArmourLevel;                                             // 0x0039(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x2];                                   // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        Durability;                                              // 0x003C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DamageMultiplier;                                        // 0x0040(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SpallingChance;                                          // 0x0044(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MovementSpeedMultiplier;                                 // 0x0048(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MovementAccelerationMultiplier;                          // 0x004C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UParticleSystem*                                       HitParticleEffect;                                       // 0x0050(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            BlockedSoundEvent;                                       // 0x0058(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            PenetratedSoundEvent;                                    // 0x0060(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            Footsteps;                                               // 0x0068(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ImpactFx
+	 * Size -> 0x0030
+	 */
+	struct FImpactFx
+	{
+	public:
+		class UParticleSystem*                                       ParticleFx;                                              // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundCue*                                             SoundFx;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMaterialInterface*                                    Decal;                                                   // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseRandomFrame;                                         // 0x0018(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      FrameMax;                                                // 0x001C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class AActor*                                                DecalMesh;                                               // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            PaintMaterialTexture;                                    // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.Friend
 	 * Size -> 0x0060
 	 */
@@ -3227,7 +3281,7 @@ namespace SDK
 	public:
 		class FString                                                UniqueId;                                                // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TArray<uint8_t>                                              SaveData;                                                // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               CharacterTransform;                                      // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               CharacterTransform;                                      // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		struct FRotator                                 ControlRotation;                                         // 0x0050(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		float                                                        Health;                                                  // 0x005C(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class ABaseItem*                                             EquippedItemClass;                                       // 0x0060(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -3245,7 +3299,7 @@ namespace SDK
 	struct FHm_CyberneticsInformation
 	{
 	public:
-		struct PCoreUObject_FTransform                               CharacterTransform;                                      // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               CharacterTransform;                                      // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		ETeamType                                                    TeamType;                                                // 0x0030(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0031(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        Health;                                                  // 0x0034(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -3266,7 +3320,7 @@ namespace SDK
 	struct FHm_DoorChunkInformation
 	{
 	public:
-		struct PCoreUObject_FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		bool                                                         bIsSimulating;                                           // 0x0030(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) MISSED OFFSET (PADDING)
 	};
@@ -3283,7 +3337,7 @@ namespace SDK
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        OpenCloseAmount;                                         // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               DoorMeshTransform;                                       // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               DoorMeshTransform;                                       // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		bool                                                         bIsSimulatingPhysics;                                    // 0x0050(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0051(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FHm_DoorChunkInformation>                      DoorChunkInformations;                                   // 0x0058(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
@@ -3310,7 +3364,7 @@ namespace SDK
 	struct FHm_BaggedEvidence
 	{
 	public:
-		struct PCoreUObject_FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -3320,7 +3374,7 @@ namespace SDK
 	struct FHm_DroppedEvidence
 	{
 	public:
-		struct PCoreUObject_FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		class ABaseItem*                                             Class;                                                   // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0038(0x0008) MISSED OFFSET (PADDING)
 	};
@@ -3335,68 +3389,6 @@ namespace SDK
 		class FString                                                Name;                                                    // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EObjectiveStatus                                             ObjectiveStatus;                                         // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SuspectArmourData
-	 * Size -> 0x0068 (FullSize[0x0070] - InheritedSize[0x0008])
-	 */
-	struct FSuspectArmourData : public FTableRowBase
-	{
-	public:
-		TSoftClassPtr<class ASuspectArmour>                          BlueprintClass;                                          // 0x0008(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x002C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class USkeletalMesh*                                         Mesh;                                                    // 0x0030(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsHelmet;                                               // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      ArmourLevel;                                             // 0x0039(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x2];                                   // 0x003A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        Durability;                                              // 0x003C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DamageMultiplier;                                        // 0x0040(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SpallingChance;                                          // 0x0044(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MovementSpeedMultiplier;                                 // 0x0048(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MovementAccelerationMultiplier;                          // 0x004C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UParticleSystem*                                       HitParticleEffect;                                       // 0x0050(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            BlockedSoundEvent;                                       // 0x0058(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            PenetratedSoundEvent;                                    // 0x0060(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            Footsteps;                                               // 0x0068(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PlayerActionPromptSlot
-	 * Size -> 0x0090
-	 */
-	struct FPlayerActionPromptSlot
-	{
-	public:
-		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FString                                                ColorLabel;                                              // 0x0028(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseCustomActionText : 1;                                // 0x0038(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  CustomActionPromptText;                                  // 0x0040(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		bool                                                         bUseCustomDisallowedActionText : 1;                      // 0x0058(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCheckForDisallowedItems : 1;                            // 0x0058(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  DisallowedItemActionText;                                // 0x0060(0x0018) Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic
-		TArray<EItemCategory>                                        DisallowedItems;                                         // 0x0078(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic
-		bool                                                         bAnimate : 1;                                            // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bLoopAnimation : 1;                                      // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCondition : 1;                                          // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0003[0x7];                                   // 0x0089(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimatedIcon
-	 * Size -> 0x0018
-	 */
-	struct FAnimatedIcon
-	{
-	public:
-		TArray<class UTexture2D*>                                    Icons;                                                   // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		float                                                        FrameRate;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -3486,6 +3478,98 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.AnalyticsStatus
+	 * Size -> 0x0070
+	 */
+	struct FAnalyticsStatus
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AttachmentUIElements
+	 * Size -> 0x0078
+	 */
+	struct FAttachmentUIElements
+	{
+	public:
+		TSoftObjectPtr<class UTexture2D>                             ImageOfScope;                                            // 0x0000(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0024(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		TSoftObjectPtr<class UTexture2D>                             SightPicture;                                            // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		TSoftObjectPtr<class UTexture2D>                             AttachmentIcon;                                          // 0x0050(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0074(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.MessagePromptContent
+	 * Size -> 0x0050
+	 */
+	struct FMessagePromptContent
+	{
+	public:
+		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		bool                                                         bIsAxisEvent;                                            // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      KeyIndex;                                                // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseCustomActionText : 1;                                // 0x0030(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  CustomActionPromptText;                                  // 0x0038(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PlayerActionPromptSlot
+	 * Size -> 0x0090
+	 */
+	struct FPlayerActionPromptSlot
+	{
+	public:
+		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FString                                                ColorLabel;                                              // 0x0028(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseCustomActionText : 1;                                // 0x0038(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  CustomActionPromptText;                                  // 0x0040(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		bool                                                         bUseCustomDisallowedActionText : 1;                      // 0x0058(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCheckForDisallowedItems : 1;                            // 0x0058(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0059(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  DisallowedItemActionText;                                // 0x0060(0x0018) Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic
+		TArray<EItemCategory>                                        DisallowedItems;                                         // 0x0078(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic
+		bool                                                         bAnimate : 1;                                            // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bLoopAnimation : 1;                                      // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCondition : 1;                                          // 0x0088(0x0001) BIT_FIELD Edit, BlueprintVisible, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0003[0x7];                                   // 0x0089(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnimatedIcon
+	 * Size -> 0x0018
+	 */
+	struct FAnimatedIcon
+	{
+	public:
+		TArray<class UTexture2D*>                                    Icons;                                                   // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		float                                                        FrameRate;                                               // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ObituaryForBone
+	 * Size -> 0x0010
+	 */
+	struct FObituaryForBone
+	{
+	public:
+		TArray<class FText>                                          DeathMessages;                                           // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.ItemChangeRequest
 	 * Size -> 0x0028
 	 */
@@ -3540,89 +3624,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.ImpactFx
-	 * Size -> 0x0030
-	 */
-	struct FImpactFx
-	{
-	public:
-		class UParticleSystem*                                       ParticleFx;                                              // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USoundCue*                                             SoundFx;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                    Decal;                                                   // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseRandomFrame;                                         // 0x0018(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      FrameMax;                                                // 0x001C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class AActor*                                                DecalMesh;                                               // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            PaintMaterialTexture;                                    // 0x0028(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AttachmentUIElements
-	 * Size -> 0x0078
-	 */
-	struct FAttachmentUIElements
-	{
-	public:
-		TSoftObjectPtr<class UTexture2D>                             ImageOfScope;                                            // 0x0000(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0024(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		TSoftObjectPtr<class UTexture2D>                             SightPicture;                                            // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		TSoftObjectPtr<class UTexture2D>                             AttachmentIcon;                                          // 0x0050(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0074(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.MusicKeyframe
-	 * Size -> 0x0018
-	 */
-	struct FMusicKeyframe
-	{
-	public:
-		float                                                        Position;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  Label;                                                   // 0x0004(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bTransitionExit;                                         // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class USoundCue*                                             TransitionPiece;                                         // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.MusicTrack
-	 * Size -> 0x0028
-	 */
-	struct FMusicTrack
-	{
-	public:
-		class USoundCue*                                             MusicPiece;                                              // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bTransitionMusic;                                        // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        FadeTime;                                                // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MinimumTime;                                             // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FMusicKeyframe>                                Keyframes;                                               // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.MusicTrackFMOD
-	 * Size -> 0x0010
-	 */
-	struct FMusicTrackFMOD
-	{
-	public:
-		class UFMODEvent*                                            PreplanningEvent;                                        // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            LevelEvent;                                              // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ObituaryForBone
-	 * Size -> 0x0010
-	 */
-	struct FObituaryForBone
-	{
-	public:
-		TArray<class FText>                                          DeathMessages;                                           // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.Loadout
 	 * Size -> 0x0020
 	 */
@@ -3656,16 +3657,6 @@ namespace SDK
 		class USoundCue*                                             Sound;                                                   // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        ChanceToPlay;                                            // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnalyticsStatus
-	 * Size -> 0x0070
-	 */
-	struct FAnalyticsStatus
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x70];                                  // 0x0000(0x0070) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -3733,53 +3724,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.SpecificWeaponRecoilMod
-	 * Size -> 0x0028
-	 */
-	struct FSpecificWeaponRecoilMod
-	{
-	public:
-		EItemClass                                                   WeaponClass;                                             // 0x0000(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        RecoilFireStrength;                                      // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilFireStrengthFirst;                                 // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilDampStrength;                                      // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilAngleStrength;                                     // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilRandomness;                                        // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilFireADSModifier;                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilBuildupADSModifier;                                // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilAngleADSModifier;                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RecoilBuildupDampStrength;                               // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.BasicLevelStats
-	 * Size -> 0x000C
-	 */
-	struct FBasicLevelStats
-	{
-	public:
-		float                                                        BestRating;                                              // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        BestTime;                                                // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      TimesCompleted;                                          // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.LevelUpData
-	 * Size -> 0x0058 (FullSize[0x0060] - InheritedSize[0x0008])
-	 */
-	struct FLevelUpData : public FTableRowBase
-	{
-	public:
-		int32_t                                                      XPtoLvl;                                                 // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TSoftObjectPtr<class ABaseItem>                              WeaponUnlock;                                            // 0x0010(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0034(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		TSoftObjectPtr<class UWeaponAttachment>                      AttachmentUnlock;                                        // 0x0038(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x005C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.MaterialPenetration
 	 * Size -> 0x0018
 	 */
@@ -3795,16 +3739,6 @@ namespace SDK
 		unsigned char                                                UnknownData_0001[0x2];                                   // 0x000E(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		float                                                        RicochetChanceMultiplier;                                // 0x0010(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        SpallingChance;                                          // 0x0014(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CharacterTPAnim
-	 * Size -> 0x0008
-	 */
-	struct FCharacterTPAnim
-	{
-	public:
-		class UAnimMontage*                                          TP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -3859,6 +3793,67 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.SpecificWeaponRecoilMod
+	 * Size -> 0x0028
+	 */
+	struct FSpecificWeaponRecoilMod
+	{
+	public:
+		EItemClass                                                   WeaponClass;                                             // 0x0000(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        RecoilFireStrength;                                      // 0x0004(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilFireStrengthFirst;                                 // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilDampStrength;                                      // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilAngleStrength;                                     // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilRandomness;                                        // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilFireADSModifier;                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilBuildupADSModifier;                                // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilAngleADSModifier;                                  // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RecoilBuildupDampStrength;                               // 0x0024(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.MusicKeyframe
+	 * Size -> 0x0018
+	 */
+	struct FMusicKeyframe
+	{
+	public:
+		float                                                        Position;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  Label;                                                   // 0x0004(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bTransitionExit;                                         // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class USoundCue*                                             TransitionPiece;                                         // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.MusicTrack
+	 * Size -> 0x0028
+	 */
+	struct FMusicTrack
+	{
+	public:
+		class USoundCue*                                             MusicPiece;                                              // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bTransitionMusic;                                        // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0009(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        FadeTime;                                                // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MinimumTime;                                             // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FMusicKeyframe>                                Keyframes;                                               // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.MusicTrackFMOD
+	 * Size -> 0x0010
+	 */
+	struct FMusicTrackFMOD
+	{
+	public:
+		class UFMODEvent*                                            PreplanningEvent;                                        // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            LevelEvent;                                              // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.CoverDirectionalTrans
 	 * Size -> 0x0030
 	 */
@@ -3905,6 +3900,77 @@ namespace SDK
 		struct FCoverTrans                                           BlindFireVTrans;                                         // 0x00B8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		class UAnimSequence*                                         BlindFireVIdlePose;                                      // 0x00C8(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class UAnimSequence*                                         AimingVIdlePose;                                         // 0x00D0(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.BasicLevelStats
+	 * Size -> 0x000C
+	 */
+	struct FBasicLevelStats
+	{
+	public:
+		float                                                        BestRating;                                              // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        BestTime;                                                // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      TimesCompleted;                                          // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CharacterTPAnim
+	 * Size -> 0x0008
+	 */
+	struct FCharacterTPAnim
+	{
+	public:
+		class UAnimMontage*                                          TP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PlanningDrawing
+	 * Size -> 0x001C (FullSize[0x0028] - InheritedSize[0x000C])
+	 */
+	struct FPlanningDrawing : public FFastArraySerializerItem
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FVector2D>                        Points;                                                  // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PlanningDrawingArray
+	 * Size -> 0x0010 (FullSize[0x0118] - InheritedSize[0x0108])
+	 */
+	struct FPlanningDrawingArray : public FFastArraySerializer
+	{
+	public:
+		TArray<struct FPlanningDrawing>                              Items;                                                   // 0x0108(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.LevelUpData
+	 * Size -> 0x0058 (FullSize[0x0060] - InheritedSize[0x0008])
+	 */
+	struct FLevelUpData : public FTableRowBase
+	{
+	public:
+		int32_t                                                      XPtoLvl;                                                 // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TSoftObjectPtr<class ABaseItem>                              WeaponUnlock;                                            // 0x0010(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x0034(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		TSoftObjectPtr<class UWeaponAttachment>                      AttachmentUnlock;                                        // 0x0038(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x005C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.OptimizationAttachmentData
+	 * Size -> 0x0040
+	 */
+	struct FOptimizationAttachmentData
+	{
+	public:
+		class FName                                                  AttachedSocketName;                                      // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USceneComponent*                                       AttachedComponent;                                       // 0x0008(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FTransform                               RelativeTransform;                                       // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -4320,76 +4386,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.MessagePromptContent
-	 * Size -> 0x0050
-	 */
-	struct FMessagePromptContent
-	{
-	public:
-		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		bool                                                         bIsAxisEvent;                                            // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      KeyIndex;                                                // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseCustomActionText : 1;                                // 0x0030(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  CustomActionPromptText;                                  // 0x0038(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.VoteData
-	 * Size -> 0x0030
-	 */
-	struct FVoteData
-	{
-	public:
-		EVoteState                                                   CurrentVoteState;                                        // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                VoteReason;                                              // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                VoteQuestion;                                            // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bVoteEnabled : 1;                                        // 0x0028(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.MirrorReflectionSettings
-	 * Size -> 0x0008
-	 */
-	struct FMirrorReflectionSettings
-	{
-	public:
-		float                                                        MirrorResolutionScale;                                   // 0x0000(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bShowAntiAliasing : 1;                                   // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bShowDecals : 1;                                         // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bShowDynamicShadows : 1;                                 // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PlanningDrawing
-	 * Size -> 0x001C (FullSize[0x0028] - InheritedSize[0x000C])
-	 */
-	struct FPlanningDrawing : public FFastArraySerializerItem
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FVector2D>                        Points;                                                  // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0020(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PlanningDrawingArray
-	 * Size -> 0x0010 (FullSize[0x0118] - InheritedSize[0x0108])
-	 */
-	struct FPlanningDrawingArray : public FFastArraySerializer
-	{
-	public:
-		TArray<struct FPlanningDrawing>                              Items;                                                   // 0x0108(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.RoNStyleIdleData
 	 * Size -> 0x0010
 	 */
@@ -4489,380 +4485,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.RoNGaitType
-	 * Size -> 0x01F0
-	 */
-	struct FRoNGaitType
-	{
-	public:
-		class FName                                                  Name;                                                    // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Speed;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Acceleration;                                            // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRoNGaitTransitionData                                TransitionData;                                          // 0x0010(0x0120) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FRoNGaitLocomotionData                                LocomotionData;                                          // 0x0130(0x00C0) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.RoNMovementStyle
-	 * Size -> 0x0088
-	 */
-	struct FRoNMovementStyle
-	{
-	public:
-		class FName                                                  Name;                                                    // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsStrafeMovement;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsLoweredSet;                                           // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EItemOverrideRule                                            ItemOverrideRule;                                        // 0x000A(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FRoNStyleIdleData                                     IdleData;                                                // 0x0010(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FRoNStyleTurnData                                     TurnData;                                                // 0x0020(0x0048) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		TArray<struct FRoNGaitType>                                  GaitEntries;                                             // 0x0068(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		class UBlendSpace*                                           StrafeBS;                                                // 0x0078(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UBlendSpace*                                           NonStrafeBS;                                             // 0x0080(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WeaponSoundData
-	 * Size -> 0x0020
-	 */
-	struct FWeaponSoundData
-	{
-	public:
-		class USoundCue*                                             Gunshot;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USoundCue*                                             Gunshot_Supressed;                                       // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USoundCue*                                             GunTail;                                                 // 0x0010(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USoundCue*                                             GunTail_Supressed;                                       // 0x0018(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScoreBonus
-	 * Size -> 0x0038
-	 */
-	struct FScoreBonus
-	{
-	public:
-		bool                                                         bEnabled : 1;                                            // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                ScoreName;                                               // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Score;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequired : 1;                                           // 0x001C(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bGiven : 1;                                              // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bWasDisplayedOnHUD : 1;                                  // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ScoreTextOnHUD;                                          // 0x0020(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScorePenalty
-	 * Size -> 0x0038
-	 */
-	struct FScorePenalty
-	{
-	public:
-		bool                                                         bEnabled : 1;                                            // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                ScoreName;                                               // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Score;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bGiven : 1;                                              // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bWasDisplayedOnHUD : 1;                                  // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ScoreTextOnHUD;                                          // 0x0020(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScoreData
-	 * Size -> 0x0030
-	 */
-	struct FScoreData
-	{
-	public:
-		TArray<struct FScoreBonus>                                   Bonuses;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FScorePenalty>                                 Penalties;                                               // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bHiddenScore : 1;                                        // 0x0020(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UScoringComponent*                                     FromScoringComponent;                                    // 0x0028(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScoreGroup
-	 * Size -> 0x0038
-	 */
-	struct FScoreGroup
-	{
-	public:
-		class FString                                                GroupName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EObjectiveLevel                                              ObjectiveLevel;                                          // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequiredToClearMission : 1;                             // 0x0011(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequiredToSoftClearMission : 1;                         // 0x0011(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      OrderPriority;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FScoreData>                                    Scores;                                                  // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
-		TArray<struct FScoreData>                                    InactiveScores;                                          // 0x0028(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScorePenaltyData
-	 * Size -> 0x0018
-	 */
-	struct FScorePenaltyData
-	{
-	public:
-		class FString                                                GroupName;                                               // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Score;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      PenaltyCount;                                            // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.OptimizationAttachmentData
-	 * Size -> 0x0040
-	 */
-	struct FOptimizationAttachmentData
-	{
-	public:
-		class FName                                                  AttachedSocketName;                                      // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USceneComponent*                                       AttachedComponent;                                       // 0x0008(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               RelativeTransform;                                       // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ObjectiveSpawn
-	 * Size -> 0x0028
-	 */
-	struct FObjectiveSpawn
-	{
-	public:
-		class FName                                                  Tag;                                                     // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FDataTableRowHandle                                   Type;                                                    // 0x0008(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
-		TArray<class AAISpawn*>                                      Spawners;                                                // 0x0018(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScenarioData
-	 * Size -> 0x00F0
-	 */
-	struct FScenarioData
-	{
-	public:
-		struct PCoreUObject_FTransform                               SpawnTransform;                                          // 0x0000(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FSpawnData                                            SpawnData;                                               // 0x0030(0x00B8) Edit, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x00E8(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScenarioDataArray
-	 * Size -> 0x0010
-	 */
-	struct FScenarioDataArray
-	{
-	public:
-		TArray<struct FScenarioData>                                 SaveData;                                                // 0x0000(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SwatCommand
-	 * Size -> 0x0078
-	 */
-	struct FSwatCommand
-	{
-	public:
-		struct FKey                                                  InputKey;                                                // 0x0000(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FText                                                  CommandText;                                             // 0x0018(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FText                                                  CommandTextAggressive;                                   // 0x0030(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class UTexture2D*                                            CommandIcon;                                             // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESwatCommand                                                 CommandType;                                             // 0x0050(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x17];                                  // 0x0051(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         bGrabContextualDataOnExecute;                            // 0x0068(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEnabled;                                                // 0x0069(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x6];                                   // 0x006A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AActor*                                                CommandTarget;                                           // 0x0070(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScopeModifications
-	 * Size -> 0x0048
-	 */
-	struct FScopeModifications
-	{
-	public:
-		class UObject*                                               WeaponClass;                                             // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        VerticalOffset;                                          // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        HorizontalOffset;                                        // 0x000C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DistanceOffset;                                          // 0x0010(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class USkeletalMesh*                                         CustomWeaponMesh;                                        // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  HideBone;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSupportsSecondarySights;                                // 0x0028(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                  MeshSpace_ADS_SecondaryPos;                              // 0x002C(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRotator                                 MeshSpace_ADS_SecondaryRot;                              // 0x0038(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SequencedVOLookup
-	 * Size -> 0x0010
-	 */
-	struct FSequencedVOLookup
-	{
-	public:
-		TArray<int32_t>                                              LookupOrder;                                             // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WeaponAnim
-	 * Size -> 0x0020
-	 */
-	struct FWeaponAnim
-	{
-	public:
-		class UAnimMontage*                                          Body_FP;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          Body_TP;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          Gun_FP;                                                  // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          Gun_TP;                                                  // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CoverInstigatorStimulus
-	 * Size -> 0x0050
-	 */
-	struct FCoverInstigatorStimulus
-	{
-	public:
-		class AReadyOrNotCharacter*                                  InstigatorCharacter;                                     // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               ThreatTransform;                                         // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x10];                                  // 0x0040(0x0010) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SWATRequestOrder
-	 * Size -> 0x00C0
-	 */
-	struct FSWATRequestOrder
-	{
-	public:
-		struct FGuid                                                 ID;                                                      // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class AActor*                                                RequestingTarget;                                        // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class ASWATCharacter*                                        RequestedByCharacter;                                    // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class ASWATCharacter*                                        ClosestSWATUponRequest;                                  // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSwatCommand                                          Command;                                                 // 0x0028(0x0078) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		class FString                                                RequestCommandString;                                    // 0x00A0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                SpeechString;                                            // 0x00B0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.QueuedSwatCommand
-	 * Size -> 0x0100
-	 */
-	struct FQueuedSwatCommand
-	{
-	public:
-		struct FSwatCommand                                          Command;                                                 // 0x0000(0x0078) NativeAccessSpecifierPublic
-		struct FHitResult                                            ContextualData;                                          // 0x0078(0x0088) IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TargetData
-	 * Size -> 0x0020
-	 */
-	struct FTargetData
-	{
-	public:
-		class AReadyOrNotCharacter*                                  Target;                                                  // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  LastKnownPosition;                                       // 0x0008(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TimeSinceLastSeenTarget;                                 // 0x0014(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bForceCanEngageAsSwat : 1;                               // 0x0018(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ExitRoute
-	 * Size -> 0x0030
-	 */
-	struct FExitRoute
-	{
-	public:
-		TArray<class ADoor*>                                         Doors;                                                   // 0x0000(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		TArray<class AThreatAwarenessActor*>                         ThreatsOnRoute;                                          // 0x0010(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		float                                                        PathCost;                                                // 0x0020(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  Location;                                                // 0x0024(0x000C) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ExitData
-	 * Size -> 0x0020
-	 */
-	struct FExitData
-	{
-	public:
-		TArray<struct FExitRoute>                                    PossibleRoutes;                                          // 0x0000(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
-		struct FVector                                  Location;                                                // 0x0010(0x000C) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TableTennisGame
-	 * Size -> 0x0024
-	 */
-	struct FTableTennisGame
-	{
-	public:
-		float                                                        TimeToStart;                                             // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        LeftPaddlePosition;                                      // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RightPaddlePosition;                                     // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                BallPosition;                                            // 0x000C(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector2D                                BallVelocity;                                            // 0x0014(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      LeftScore;                                               // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      RightScore;                                              // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TutorialMissionData
-	 * Size -> 0x0190
-	 */
-	struct FTutorialMissionData
-	{
-	public:
-		ETutorialMissionType                                         MissionType;                                             // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSpawnSWATTeam;                                          // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FSavedLoadout                                         Loadout;                                                 // 0x0008(0x0178) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FString                                                SpawnTag;                                                // 0x0180(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TOCData
-	 * Size -> 0x0018
-	 */
-	struct FTOCData
-	{
-	public:
-		class FString                                                TOCLine;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ETOCPriority                                                 QueuePriority;                                           // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsNetworked : 1;                                        // 0x0011(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TutorialActionPromptSlot
-	 * Size -> 0x0050
-	 */
-	struct FTutorialActionPromptSlot
-	{
-	public:
-		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		bool                                                         bIsAxisEvent;                                            // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      KeyIndex;                                                // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseCustomActionText : 1;                                // 0x0030(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  CustomActionPromptText;                                  // 0x0038(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.RoNStyleSlotData
 	 * Size -> 0x0250
 	 */
@@ -4922,6 +4544,19 @@ namespace SDK
 		unsigned char                                                UnknownData_0001[0x1C];                                  // 0x002C(0x001C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		class UAnimSequence*                                         PendingTurnAnim;                                         // 0x0048(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
 		unsigned char                                                UnknownData_0002[0x8];                                   // 0x0050(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.WeaponSoundData
+	 * Size -> 0x0020
+	 */
+	struct FWeaponSoundData
+	{
+	public:
+		class USoundCue*                                             Gunshot;                                                 // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundCue*                                             Gunshot_Supressed;                                       // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundCue*                                             GunTail;                                                 // 0x0010(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USoundCue*                                             GunTail_Supressed;                                       // 0x0018(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -5001,6 +4636,404 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.MirrorReflectionSettings
+	 * Size -> 0x0008
+	 */
+	struct FMirrorReflectionSettings
+	{
+	public:
+		float                                                        MirrorResolutionScale;                                   // 0x0000(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bShowAntiAliasing : 1;                                   // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bShowDecals : 1;                                         // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bShowDynamicShadows : 1;                                 // 0x0004(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScoreBonus
+	 * Size -> 0x0038
+	 */
+	struct FScoreBonus
+	{
+	public:
+		bool                                                         bEnabled : 1;                                            // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                ScoreName;                                               // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Score;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequired : 1;                                           // 0x001C(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bGiven : 1;                                              // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bWasDisplayedOnHUD : 1;                                  // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ScoreTextOnHUD;                                          // 0x0020(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScorePenalty
+	 * Size -> 0x0038
+	 */
+	struct FScorePenalty
+	{
+	public:
+		bool                                                         bEnabled : 1;                                            // 0x0000(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                ScoreName;                                               // 0x0008(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Score;                                                   // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bGiven : 1;                                              // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bWasDisplayedOnHUD : 1;                                  // 0x001C(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ScoreTextOnHUD;                                          // 0x0020(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScoreData
+	 * Size -> 0x0030
+	 */
+	struct FScoreData
+	{
+	public:
+		TArray<struct FScoreBonus>                                   Bonuses;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FScorePenalty>                                 Penalties;                                               // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bHiddenScore : 1;                                        // 0x0020(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UScoringComponent*                                     FromScoringComponent;                                    // 0x0028(0x0008) BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RoNGaitType
+	 * Size -> 0x01F0
+	 */
+	struct FRoNGaitType
+	{
+	public:
+		class FName                                                  Name;                                                    // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Speed;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Acceleration;                                            // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRoNGaitTransitionData                                TransitionData;                                          // 0x0010(0x0120) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FRoNGaitLocomotionData                                LocomotionData;                                          // 0x0130(0x00C0) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RoNMovementStyle
+	 * Size -> 0x0088
+	 */
+	struct FRoNMovementStyle
+	{
+	public:
+		class FName                                                  Name;                                                    // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsStrafeMovement;                                       // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsLoweredSet;                                           // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EItemOverrideRule                                            ItemOverrideRule;                                        // 0x000A(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x5];                                   // 0x000B(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FRoNStyleIdleData                                     IdleData;                                                // 0x0010(0x0010) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FRoNStyleTurnData                                     TurnData;                                                // 0x0020(0x0048) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		TArray<struct FRoNGaitType>                                  GaitEntries;                                             // 0x0068(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		class UBlendSpace*                                           StrafeBS;                                                // 0x0078(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UBlendSpace*                                           NonStrafeBS;                                             // 0x0080(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScoreGroup
+	 * Size -> 0x0038
+	 */
+	struct FScoreGroup
+	{
+	public:
+		class FString                                                GroupName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EObjectiveLevel                                              ObjectiveLevel;                                          // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequiredToClearMission : 1;                             // 0x0011(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequiredToSoftClearMission : 1;                         // 0x0011(0x0001) BIT_FIELD BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0012(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      OrderPriority;                                           // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FScoreData>                                    Scores;                                                  // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
+		TArray<struct FScoreData>                                    InactiveScores;                                          // 0x0028(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScorePenaltyData
+	 * Size -> 0x0018
+	 */
+	struct FScorePenaltyData
+	{
+	public:
+		class FString                                                GroupName;                                               // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Score;                                                   // 0x0010(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      PenaltyCount;                                            // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SequencedVOLookup
+	 * Size -> 0x0010
+	 */
+	struct FSequencedVOLookup
+	{
+	public:
+		TArray<int32_t>                                              LookupOrder;                                             // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ObjectiveSpawn
+	 * Size -> 0x0028
+	 */
+	struct FObjectiveSpawn
+	{
+	public:
+		class FName                                                  Tag;                                                     // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDataTableRowHandle                                   Type;                                                    // 0x0008(0x0010) Edit, NoDestructor, NativeAccessSpecifierPublic
+		TArray<class AAISpawn*>                                      Spawners;                                                // 0x0018(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.VoteData
+	 * Size -> 0x0030
+	 */
+	struct FVoteData
+	{
+	public:
+		EVoteState                                                   CurrentVoteState;                                        // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                VoteReason;                                              // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                VoteQuestion;                                            // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bVoteEnabled : 1;                                        // 0x0028(0x0001) BIT_FIELD BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SwatCommand
+	 * Size -> 0x0078
+	 */
+	struct FSwatCommand
+	{
+	public:
+		struct FKey                                                  InputKey;                                                // 0x0000(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FText                                                  CommandText;                                             // 0x0018(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FText                                                  CommandTextAggressive;                                   // 0x0030(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class UTexture2D*                                            CommandIcon;                                             // 0x0048(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESwatCommand                                                 CommandType;                                             // 0x0050(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x17];                                  // 0x0051(0x0017) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         bGrabContextualDataOnExecute;                            // 0x0068(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEnabled;                                                // 0x0069(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x6];                                   // 0x006A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AActor*                                                CommandTarget;                                           // 0x0070(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.WeaponAnim
+	 * Size -> 0x0020
+	 */
+	struct FWeaponAnim
+	{
+	public:
+		class UAnimMontage*                                          Body_FP;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          Body_TP;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          Gun_FP;                                                  // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          Gun_TP;                                                  // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SWATRequestOrder
+	 * Size -> 0x00C0
+	 */
+	struct FSWATRequestOrder
+	{
+	public:
+		struct FGuid                                                 ID;                                                      // 0x0000(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class AActor*                                                RequestingTarget;                                        // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class ASWATCharacter*                                        RequestedByCharacter;                                    // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class ASWATCharacter*                                        ClosestSWATUponRequest;                                  // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSwatCommand                                          Command;                                                 // 0x0028(0x0078) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		class FString                                                RequestCommandString;                                    // 0x00A0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                SpeechString;                                            // 0x00B0(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.QueuedSwatCommand
+	 * Size -> 0x0100
+	 */
+	struct FQueuedSwatCommand
+	{
+	public:
+		struct FSwatCommand                                          Command;                                                 // 0x0000(0x0078) NativeAccessSpecifierPublic
+		struct FHitResult                                            ContextualData;                                          // 0x0078(0x0088) IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TargetData
+	 * Size -> 0x0020
+	 */
+	struct FTargetData
+	{
+	public:
+		class AReadyOrNotCharacter*                                  Target;                                                  // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  LastKnownPosition;                                       // 0x0008(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TimeSinceLastSeenTarget;                                 // 0x0014(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bForceCanEngageAsSwat : 1;                               // 0x0018(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScenarioData
+	 * Size -> 0x00F0
+	 */
+	struct FScenarioData
+	{
+	public:
+		struct FTransform                               SpawnTransform;                                          // 0x0000(0x0030) Edit, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FSpawnData                                            SpawnData;                                               // 0x0030(0x00B8) Edit, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x00E8(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScenarioDataArray
+	 * Size -> 0x0010
+	 */
+	struct FScenarioDataArray
+	{
+	public:
+		TArray<struct FScenarioData>                                 SaveData;                                                // 0x0000(0x0010) Edit, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TutorialActionPromptSlot
+	 * Size -> 0x0050
+	 */
+	struct FTutorialActionPromptSlot
+	{
+	public:
+		class FName                                                  InputActionName;                                         // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInputEvent                                                  InputEvent;                                              // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ActionText;                                              // 0x0010(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		bool                                                         bIsAxisEvent;                                            // 0x0028(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      KeyIndex;                                                // 0x002C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseCustomActionText : 1;                                // 0x0030(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0031(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  CustomActionPromptText;                                  // 0x0038(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScopeModifications
+	 * Size -> 0x0048
+	 */
+	struct FScopeModifications
+	{
+	public:
+		class UObject*                                               WeaponClass;                                             // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        VerticalOffset;                                          // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        HorizontalOffset;                                        // 0x000C(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DistanceOffset;                                          // 0x0010(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class USkeletalMesh*                                         CustomWeaponMesh;                                        // 0x0018(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  HideBone;                                                // 0x0020(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSupportsSecondarySights;                                // 0x0028(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0029(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector                                  MeshSpace_ADS_SecondaryPos;                              // 0x002C(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRotator                                 MeshSpace_ADS_SecondaryRot;                              // 0x0038(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0044(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TOCData
+	 * Size -> 0x0018
+	 */
+	struct FTOCData
+	{
+	public:
+		class FString                                                TOCLine;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ETOCPriority                                                 QueuePriority;                                           // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsNetworked : 1;                                        // 0x0011(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0012(0x0006) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ExitRoute
+	 * Size -> 0x0030
+	 */
+	struct FExitRoute
+	{
+	public:
+		TArray<class ADoor*>                                         Doors;                                                   // 0x0000(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		TArray<class AThreatAwarenessActor*>                         ThreatsOnRoute;                                          // 0x0010(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		float                                                        PathCost;                                                // 0x0020(0x0004) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  Location;                                                // 0x0024(0x000C) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ExitData
+	 * Size -> 0x0020
+	 */
+	struct FExitData
+	{
+	public:
+		TArray<struct FExitRoute>                                    PossibleRoutes;                                          // 0x0000(0x0010) Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic
+		struct FVector                                  Location;                                                // 0x0010(0x000C) Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TableTennisGame
+	 * Size -> 0x0024
+	 */
+	struct FTableTennisGame
+	{
+	public:
+		float                                                        TimeToStart;                                             // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        LeftPaddlePosition;                                      // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RightPaddlePosition;                                     // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                BallPosition;                                            // 0x000C(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector2D                                BallVelocity;                                            // 0x0014(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      LeftScore;                                               // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      RightScore;                                              // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.TrapSpawnType
+	 * Size -> 0x0010
+	 */
+	struct FTrapSpawnType
+	{
+	public:
+		class ATrapActor*                                            SpawnClass;                                              // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Chance;                                                  // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SavedThreatAwarenessActors
+	 * Size -> 0x0060
+	 */
+	struct FSavedThreatAwarenessActors
+	{
+	public:
+		struct FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       DirectlyVisibleThreatNames;                              // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       PathableThreatNames;                                     // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		class FString                                                LinkedToDoorName;                                        // 0x0050(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.DoorSavedActors
+	 * Size -> 0x0110
+	 */
+	struct FDoorSavedActors
+	{
+	public:
+		class FString                                                DoorName;                                                // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       FrontThreatAwarenessTransform;                           // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       BackThreatAwarenessTransform;                            // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       FrontLeftStackupTransform;                               // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       FrontRightStackupTransform;                              // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       BackLeftStackupTransform;                                // 0x0050(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       BackRightStackupTransform;                               // 0x0060(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		struct FTransform                               FrontDoorThreatLocation;                                 // 0x0070(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               BackDoorThreatLocation;                                  // 0x00A0(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       RedTeamFrontClearPoints;                                 // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       BlueTeamFrontClearPoints;                                // 0x00E0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       RedTeamBackClearPoints;                                  // 0x00F0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       BlueTeamBackClearPoints;                                 // 0x0100(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.SavedCullDistanceSettings
 	 * Size -> 0x0050
 	 */
@@ -5025,50 +5058,17 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.SavedThreatAwarenessActors
-	 * Size -> 0x0060
+	 * ScriptStruct ReadyOrNot.TutorialMissionData
+	 * Size -> 0x0190
 	 */
-	struct FSavedThreatAwarenessActors
+	struct FTutorialMissionData
 	{
 	public:
-		struct PCoreUObject_FTransform                               Transform;                                               // 0x0000(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       DirectlyVisibleThreatNames;                              // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       PathableThreatNames;                                     // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		class FString                                                LinkedToDoorName;                                        // 0x0050(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.DoorSavedActors
-	 * Size -> 0x0110
-	 */
-	struct FDoorSavedActors
-	{
-	public:
-		class FString                                                DoorName;                                                // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       FrontThreatAwarenessTransform;                           // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       BackThreatAwarenessTransform;                            // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       FrontLeftStackupTransform;                               // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       FrontRightStackupTransform;                              // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       BackLeftStackupTransform;                                // 0x0050(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       BackRightStackupTransform;                               // 0x0060(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               FrontDoorThreatLocation;                                 // 0x0070(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               BackDoorThreatLocation;                                  // 0x00A0(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       RedTeamFrontClearPoints;                                 // 0x00D0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       BlueTeamFrontClearPoints;                                // 0x00E0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       RedTeamBackClearPoints;                                  // 0x00F0(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       BlueTeamBackClearPoints;                                 // 0x0100(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.TrapSpawnType
-	 * Size -> 0x0010
-	 */
-	struct FTrapSpawnType
-	{
-	public:
-		class ATrapActor*                                            SpawnClass;                                              // 0x0000(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Chance;                                                  // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (PADDING)
+		ETutorialMissionType                                         MissionType;                                             // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSpawnSWATTeam;                                          // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FSavedLoadout                                         Loadout;                                                 // 0x0008(0x0178) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FString                                                SpawnTag;                                                // 0x0180(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -5080,16 +5080,6 @@ namespace SDK
 	public:
 		class FName                                                  paramName;                                               // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        paramVal;                                                // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.NavGenerationParameters
-	 * Size -> 0x000C
-	 */
-	struct FNavGenerationParameters
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -5109,6 +5099,16 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.NavGenerationParameters
+	 * Size -> 0x000C
+	 */
+	struct FNavGenerationParameters
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0xC];                                   // 0x0000(0x000C) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.DebugData
 	 * Size -> 0x0030
 	 */
@@ -5120,6 +5120,38 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.DeploymentStatus
+	 * Size -> 0x0028
+	 */
+	struct FDeploymentStatus
+	{
+	public:
+		class FText                                                  Position;                                                // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		EPlayerStatus                                                Status;                                                  // 0x0018(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AReadyOrNotPlayerState*                                PlayerState;                                             // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.GameModeSettings
+	 * Size -> 0x0050 (FullSize[0x0058] - InheritedSize[0x0008])
+	 */
+	struct FGameModeSettings : public FTableRowBase
+	{
+	public:
+		int32_t                                                      MaxPlayers;                                              // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RoundStartTime;                                          // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ReinforcementTimer;                                      // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RespawnTimer;                                            // 0x0014(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Timelimit;                                               // 0x0018(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      RoundsPerMap;                                            // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TDMScoreLimit;                                           // 0x0020(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  MatchStartInformationSwat;                               // 0x0028(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		class FText                                                  MatchStartInformationMlo;                                // 0x0040(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.LevelStreamOptions
 	 * Size -> 0x0028
 	 */
@@ -5127,24 +5159,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ReplayData
-	 * Size -> 0x0060
-	 */
-	struct FReplayData
-	{
-	public:
-		float                                                        ReplayLength;                                            // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                LetterScore;                                             // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      NumericalScore;                                          // 0x0018(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      NumPlayers;                                              // 0x001C(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                LevelName;                                               // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                GameModeName;                                            // 0x0030(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Timestamp;                                               // 0x0040(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<struct FReplayEvent>                                  ReplayEvents;                                            // 0x0050(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -5207,44 +5221,77 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.RepGearAttach
-	 * Size -> 0x0038
-	 */
-	struct FRepGearAttach
-	{
-	public:
-		bool                                                         bEquipped;                                               // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bMeshVisibleTo1P;                                        // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bMeshVisibleTo3P;                                        // 0x0002(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x5];                                   // 0x0003(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class USceneComponent*                                       Attach1P;                                                // 0x0008(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  Socket1P;                                                // 0x0010(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USceneComponent*                                       Attach3P;                                                // 0x0018(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  Socket3P;                                                // 0x0020(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class USceneComponent*                                       ScopeAttach;                                             // 0x0028(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  ScopeSocket;                                             // 0x0030(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.HitScanInfo
+	 * ScriptStruct ReadyOrNot.AnimWeaponData
 	 * Size -> 0x0010
 	 */
-	struct FHitScanInfo
+	struct FAnimWeaponData
 	{
 	public:
-		TWeakObjectPtr<class UPrimitiveComponent>                    Component;                                               // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (PADDING)
+		TArray<class UAnimMontage*>                                  AnimMontages;                                            // 0x0000(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.SavedTransforms
-	 * Size -> 0x0040
+	 * ScriptStruct ReadyOrNot.AnimStanceData
+	 * Size -> 0x0020
 	 */
-	struct FSavedTransforms
+	struct FAnimStanceData
 	{
 	public:
-		class FString                                                Name;                                                    // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               SavedTransform;                                          // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FAnimWeaponData                                       StandingAnimData;                                        // 0x0000(0x0010) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
+		struct FAnimWeaponData                                       CrouchedAnimData;                                        // 0x0010(0x0010) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnimSectionData
+	 * Size -> 0x0008
+	 */
+	struct FAnimSectionData
+	{
+	public:
+		float                                                        SectionStart;                                            // 0x0000(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        SectionEnd;                                              // 0x0004(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AIActionDecisionContext
+	 * Size -> 0x0010
+	 */
+	struct FAIActionDecisionContext
+	{
+	public:
+		class ACyberneticController*                                 Controller;                                              // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UWorld*                                                World;                                                   // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnimCharacterMovementPredictionSnapshot
+	 * Size -> 0x0020
+	 */
+	struct FAnimCharacterMovementPredictionSnapshot
+	{
+	public:
+		float                                                        GroundFriction;                                          // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        BrakingFriction;                                         // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        BrakingFrictionFactor;                                   // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        BrakingDecelerationWalking;                              // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bUseSeparateBrakingFriction;                             // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        GravityZ;                                                // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CapsuleRadius;                                           // 0x0018(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CapsuleHalfHeight;                                       // 0x001C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CardinalDirectionBlendSpaceAnimSet
+	 * Size -> 0x0020
+	 */
+	struct FCardinalDirectionBlendSpaceAnimSet
+	{
+	public:
+		class UBlendSpace*                                           NorthAnim;                                               // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UBlendSpace*                                           EastAnim;                                                // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UBlendSpace*                                           SouthAnim;                                               // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UBlendSpace*                                           WestAnim;                                                // 0x0018(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -5277,490 +5324,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct ReadyOrNot.CoverFirePoseTable
-	 * Size -> 0x0140
-	 */
-	struct FCoverFirePoseTable
-	{
-	public:
-		TMap<class UAnimMontage*, class UAnimSequence*>              Left_ExposedFire_CoverMontageToCoverPoseMap;             // 0x0000(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TMap<class UAnimMontage*, class UAnimSequence*>              Left_BlindFire_CoverMontageToCoverPoseMap;               // 0x0050(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TMap<class UAnimMontage*, class UAnimSequence*>              Right_ExposedFire_CoverMontageToCoverPoseMap;            // 0x00A0(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TMap<class UAnimMontage*, class UAnimSequence*>              Right_BlindFire_CoverMontageToCoverPoseMap;              // 0x00F0(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.HostageDriverProperties
-	 * Size -> 0x0004
-	 */
-	struct FHostageDriverProperties
-	{
-	public:
-		float                                                        TimeToKillHostage;                                       // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ActorMemory
-	 * Size -> 0x0010
-	 */
-	struct FActorMemory
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ItemID
-	 * Size -> 0x0010
-	 */
-	struct FItemID
-	{
-	public:
-		int32_t                                                      ID;                                                      // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class ABaseItem*                                             Item;                                                    // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.MapList
-	 * Size -> 0x00A0
-	 */
-	struct FMapList
-	{
-	public:
-		class FString                                                Name;                                                    // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                GameMode;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                LoadURL;                                                 // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FText                                                  Description;                                             // 0x0030(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FText                                                  Author;                                                  // 0x0048(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FText                                                  AuthorContact;                                           // 0x0060(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FText                                                  RecommendedPlayerCount;                                  // 0x0078(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class USoundCue*                                             LoadingScreenMusic;                                      // 0x0090(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSupportsPvP;                                            // 0x0098(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSupportsCoop;                                           // 0x0099(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bVisible;                                                // 0x009A(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x5];                                   // 0x009B(0x0005) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.OutStackupData
-	 * Size -> 0x0018
-	 */
-	struct FOutStackupData
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PlayHead
-	 * Size -> 0x001C
-	 */
-	struct FPlayHead
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1C];                                  // 0x0000(0x001C) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CharacterSharedAnim
-	 * Size -> 0x0010
-	 */
-	struct FCharacterSharedAnim
-	{
-	public:
-		class UAnimMontage*                                          TP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UAnimMontage*                                          FP_Anim;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WoundData
-	 * Size -> 0x00A0
-	 */
-	struct FWoundData
-	{
-	public:
-		float                                                        WoundSize;                                               // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  WoundOffset;                                             // 0x0004(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           UpperMesh;                                               // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               UpperMeshTranform;                                       // 0x0020(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		class UStaticMesh*                                           LowerMesh;                                               // 0x0050(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0058(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               LowerMeshTranform;                                       // 0x0060(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		bool                                                         bBreaksBone;                                             // 0x0090(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0xF];                                   // 0x0091(0x000F) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CharacterFPAnim
-	 * Size -> 0x0008
-	 */
-	struct FCharacterFPAnim
-	{
-	public:
-		class UAnimMontage*                                          FP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.HealingData
-	 * Size -> 0x0020
-	 */
-	struct FHealingData
-	{
-	public:
-		float                                                        CurrentHealth;                                           // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MinHealth;                                               // 0x0004(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MaxHealth;                                               // 0x0008(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  HealerName;                                              // 0x000C(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  HealeeName;                                              // 0x0014(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EMedicalHealScreen                                           HealScreen;                                              // 0x001C(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.FootIKStruct
-	 * Size -> 0x0010
-	 */
-	struct FFootIKStruct
-	{
-	public:
-		float                                                        Offset;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRotator                                 FootRotation;                                            // 0x0004(0x000C) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.Injury
-	 * Size -> 0x000C
-	 */
-	struct FInjury
-	{
-	public:
-		class FName                                                  BoneName;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      InjuryCount;                                             // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.BoneVelocity
-	 * Size -> 0x0018
-	 */
-	struct FBoneVelocity
-	{
-	public:
-		class FName                                                  BoneName;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FVector                                  LastLocation;                                            // 0x0008(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CalculatedSpeed;                                         // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PairedInteractionTable
-	 * Size -> 0x0050 (FullSize[0x0058] - InheritedSize[0x0008])
-	 */
-	struct FPairedInteractionTable : public FTableRowBase
-	{
-	public:
-		TMap<class FName, class UInteractionsData*>                  Interactions;                                            // 0x0008(0x0050) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.UniformData
-	 * Size -> 0x0050
-	 */
-	struct FUniformData
-	{
-	public:
-		class FText                                                  Name;                                                    // 0x0000(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TSoftObjectPtr<class UTexture2D>                             Image;                                                   // 0x0018(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		EItemClass                                                   ItemClass;                                               // 0x0040(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class ABaseItem*                                             Blueprint;                                               // 0x0048(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PMap
-	 * Size -> 0x0050
-	 */
-	struct FPMap
-	{
-	public:
-		TArray<class FString>                                        BLPN;                                                    // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class FString>                                        BLPHZ;                                                   // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class FString>                                        BLWT;                                                    // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class FString>                                        BLDLLHZ;                                                 // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class FString>                                        BLDLLN;                                                  // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.GrenadeData
-	 * Size -> 0x0048
-	 */
-	struct FGrenadeData
-	{
-	public:
-		class FString                                                Name;                                                    // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TSoftObjectPtr<class UTexture2D>                             Image;                                                   // 0x0010(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0034(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		EItemClass                                                   ItemClass;                                               // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class ABaseGrenade*                                          Blueprint;                                               // 0x0040(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ChannelInfo
-	 * Size -> 0x0018
-	 */
-	struct FChannelInfo
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnalyticsSuspectState
-	 * Size -> 0x0050
-	 */
-	struct FAnalyticsSuspectState
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SteamAuthenticationToken
-	 * Size -> 0x0020
-	 */
-	struct FSteamAuthenticationToken
-	{
-	public:
-		class FString                                                rgchTokenString;                                         // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint32_t                                                     unTokenLen;                                              // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		uint64_t                                                     SteamId;                                                 // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.RelevancyTracker
-	 * Size -> 0x0004
-	 */
-	struct FRelevancyTracker
-	{
-	public:
-		float                                                        TimeUntilRecheck;                                        // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.RoNMoveStyleTable
-	 * Size -> 0x0010 (FullSize[0x0018] - InheritedSize[0x0008])
-	 */
-	struct FRoNMoveStyleTable : public FTableRowBase
-	{
-	public:
-		TArray<struct FRoNMovementStyle>                             MoveStyles;                                              // 0x0008(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.ScoringDataTable
-	 * Size -> 0x0040 (FullSize[0x0048] - InheritedSize[0x0008])
-	 */
-	struct FScoringDataTable : public FTableRowBase
-	{
-	public:
-		class FString                                                Name;                                                    // 0x0008(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EObjectiveLevel                                              ObjectiveLevel;                                          // 0x0018(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FScoreBonus>                                   Bonuses;                                                 // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FScorePenalty>                                 Penalties;                                               // 0x0030(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bRequiredToClearMission : 1;                             // 0x0040(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequiredToSoftClearMission : 1;                         // 0x0040(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      OrderPriority;                                           // 0x0044(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CharacterCollisionTemplate
-	 * Size -> 0x0090
-	 */
-	struct FCharacterCollisionTemplate
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.RonKey
-	 * Size -> 0x00A8
-	 */
-	struct FRonKey
-	{
-	public:
-		class FString                                                InputName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                AlternativeInputName;                                    // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           IconBrush;                                               // 0x0020(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.RonInputKeyTable
-	 * Size -> 0x00A8 (FullSize[0x00B0] - InheritedSize[0x0008])
-	 */
-	struct FRonInputKeyTable : public FTableRowBase
-	{
-	public:
-		struct FRonKey                                               Key;                                                     // 0x0008(0x00A8) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.SpeedRange
-	 * Size -> 0x0010
-	 */
-	struct FSpeedRange
-	{
-	public:
-		float                                                        Speed;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRandomSpeed : 1;                                        // 0x0004(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        MinSpeed;                                                // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        MaxSpeed;                                                // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.DeploymentStatus
-	 * Size -> 0x0028
-	 */
-	struct FDeploymentStatus
-	{
-	public:
-		class FText                                                  Position;                                                // 0x0000(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		EPlayerStatus                                                Status;                                                  // 0x0018(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AReadyOrNotPlayerState*                                PlayerState;                                             // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.GameModeSettings
-	 * Size -> 0x0050 (FullSize[0x0058] - InheritedSize[0x0008])
-	 */
-	struct FGameModeSettings : public FTableRowBase
-	{
-	public:
-		int32_t                                                      MaxPlayers;                                              // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RoundStartTime;                                          // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ReinforcementTimer;                                      // 0x0010(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RespawnTimer;                                            // 0x0014(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Timelimit;                                               // 0x0018(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      RoundsPerMap;                                            // 0x001C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TDMScoreLimit;                                           // 0x0020(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0024(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  MatchStartInformationSwat;                               // 0x0028(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		class FText                                                  MatchStartInformationMlo;                                // 0x0040(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CharacterPersonalizationData
-	 * Size -> 0x0050
-	 */
-	struct FCharacterPersonalizationData
-	{
-	public:
-		EDLC                                                         LockedToDLC;                                             // 0x0000(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FName                                                  RowName;                                                 // 0x0004(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  FriendlyName;                                            // 0x0010(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		TSoftObjectPtr<class UTexture2D>                             Icon;                                                    // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.LoadoutEquipOptions
-	 * Size -> 0x0018
-	 */
-	struct FLoadoutEquipOptions
-	{
-	public:
-		EItemCategory                                                EquipItemCategory;                                       // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bReplicates;                                             // 0x0001(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class AReadyOrNotPlayerState*                                OverridePlayerState;                                     // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bSanitizeLoadout;                                        // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.PromptInfo
-	 * Size -> 0x0040
-	 */
-	struct FPromptInfo
-	{
-	public:
-		ETutorialMessageContext                                      PromptContext;                                           // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FKey                                                  ActionKey;                                               // 0x0008(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EInputEvent                                                  InputType;                                               // 0x0020(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FText                                                  ActionText;                                              // 0x0028(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimatedIconTable
-	 * Size -> 0x0018 (FullSize[0x0020] - InheritedSize[0x0008])
-	 */
-	struct FAnimatedIconTable : public FTableRowBase
-	{
-	public:
-		struct FAnimatedIcon                                         AnimatedIcon;                                            // 0x0008(0x0018) Edit, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.WidgetLookupData
-	 * Size -> 0x0028 (FullSize[0x0030] - InheritedSize[0x0008])
-	 */
-	struct FWidgetLookupData : public FTableRowBase
-	{
-	public:
-		class UUserWidget*                                           WidgetClass;                                             // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Description;                                             // 0x0010(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bShowMouseCursor;                                        // 0x0020(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bMouseUIOnly;                                            // 0x0021(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAddToWidgetStack;                                       // 0x0022(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCloseOnRespawn;                                         // 0x0023(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESlateVisibility                                             VisibilityUponCreation;                                  // 0x0024(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		int32_t                                                      ZOrder;                                                  // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.InputEntry
-	 * Size -> 0x0070
-	 */
-	struct FInputEntry
-	{
-	public:
-		class FText                                                  DisplayName;                                             // 0x0000(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		class FString                                                Bind;                                                    // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FKey                                                  DefaultKeyBind1;                                         // 0x0028(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FKey                                                  DefaultKeyBind2;                                         // 0x0040(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EMapType                                                     MappingType;                                             // 0x0058(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        AxisScale;                                               // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bDisplayOnScreen;                                        // 0x0060(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class ABaseItem*                                             ShowWithEquippedItem;                                    // 0x0068(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AIActionDecisionContext
-	 * Size -> 0x0010
-	 */
-	struct FAIActionDecisionContext
-	{
-	public:
-		class ACyberneticController*                                 Controller;                                              // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UWorld*                                                World;                                                   // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct ReadyOrNot.AIFactionTable
 	 * Size -> 0x0018 (FullSize[0x0020] - InheritedSize[0x0008])
 	 */
@@ -5769,89 +5332,6 @@ namespace SDK
 	public:
 		class FString                                                Name;                                                    // 0x0008(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class AAIFactionManager*                                     Manager;                                                 // 0x0018(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimWeaponData
-	 * Size -> 0x0010
-	 */
-	struct FAnimWeaponData
-	{
-	public:
-		TArray<class UAnimMontage*>                                  AnimMontages;                                            // 0x0000(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimStanceData
-	 * Size -> 0x0020
-	 */
-	struct FAnimStanceData
-	{
-	public:
-		struct FAnimWeaponData                                       StandingAnimData;                                        // 0x0000(0x0010) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
-		struct FAnimWeaponData                                       CrouchedAnimData;                                        // 0x0010(0x0010) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimationDataTable
-	 * Size -> 0x00C0 (FullSize[0x00C8] - InheritedSize[0x0008])
-	 */
-	struct FAnimationDataTable : public FTableRowBase
-	{
-	public:
-		TMap<EAnimWeaponType, struct FAnimStanceData>                AnimData;                                                // 0x0008(0x0050) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
-		bool                                                         bRestartIfAlreadyPlaying;                                // 0x0058(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        MaxRandomDelay;                                          // 0x005C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Cooldown;                                                // 0x0060(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bNoCanPlayWhileStrafing;                                 // 0x0064(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bNoCanPlayWhileNotStrafing;                              // 0x0065(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCanQueue;                                               // 0x0066(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bCanAnimationBeInterupted;                               // 0x0067(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TMap<class ABaseItem*, class FString>                        OverrideAnimation;                                       // 0x0068(0x0050) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
-		TArray<class FString>                                        CanOnlyBeInteruptedBy;                                   // 0x00B8(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimSectionData
-	 * Size -> 0x0008
-	 */
-	struct FAnimSectionData
-	{
-	public:
-		float                                                        SectionStart;                                            // 0x0000(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        SectionEnd;                                              // 0x0004(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.AnimCharacterMovementPredictionSnapshot
-	 * Size -> 0x0020
-	 */
-	struct FAnimCharacterMovementPredictionSnapshot
-	{
-	public:
-		float                                                        GroundFriction;                                          // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        BrakingFriction;                                         // 0x0004(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        BrakingFrictionFactor;                                   // 0x0008(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        BrakingDecelerationWalking;                              // 0x000C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bUseSeparateBrakingFriction;                             // 0x0010(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        GravityZ;                                                // 0x0014(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CapsuleRadius;                                           // 0x0018(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        CapsuleHalfHeight;                                       // 0x001C(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct ReadyOrNot.CardinalDirectionBlendSpaceAnimSet
-	 * Size -> 0x0020
-	 */
-	struct FCardinalDirectionBlendSpaceAnimSet
-	{
-	public:
-		class UBlendSpace*                                           NorthAnim;                                               // 0x0000(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UBlendSpace*                                           EastAnim;                                                // 0x0008(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UBlendSpace*                                           SouthAnim;                                               // 0x0010(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UBlendSpace*                                           WestAnim;                                                // 0x0018(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -5897,6 +5377,16 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct ReadyOrNot.PlayHead
+	 * Size -> 0x001C
+	 */
+	struct FPlayHead
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1C];                                  // 0x0000(0x001C) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct ReadyOrNot.AnimInput_CapsuleLocomotion
 	 * Size -> 0x0044
 	 */
@@ -5915,6 +5405,142 @@ namespace SDK
 		bool                                                         bHasAcceleration2D;                                      // 0x0041(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		bool                                                         bAccelerationOpposesVelocity;                            // 0x0042(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		bool                                                         bIsOnGround;                                             // 0x0043(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SteamAuthenticationToken
+	 * Size -> 0x0020
+	 */
+	struct FSteamAuthenticationToken
+	{
+	public:
+		class FString                                                rgchTokenString;                                         // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint32_t                                                     unTokenLen;                                              // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		uint64_t                                                     SteamId;                                                 // 0x0018(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RelevancyTracker
+	 * Size -> 0x0004
+	 */
+	struct FRelevancyTracker
+	{
+	public:
+		float                                                        TimeUntilRecheck;                                        // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.WoundData
+	 * Size -> 0x00A0
+	 */
+	struct FWoundData
+	{
+	public:
+		float                                                        WoundSize;                                               // 0x0000(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  WoundOffset;                                             // 0x0004(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           UpperMesh;                                               // 0x0010(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               UpperMeshTranform;                                       // 0x0020(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		class UStaticMesh*                                           LowerMesh;                                               // 0x0050(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x8];                                   // 0x0058(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FTransform                               LowerMeshTranform;                                       // 0x0060(0x0030) Edit, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		bool                                                         bBreaksBone;                                             // 0x0090(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0xF];                                   // 0x0091(0x000F) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.LoadoutEquipOptions
+	 * Size -> 0x0018
+	 */
+	struct FLoadoutEquipOptions
+	{
+	public:
+		EItemCategory                                                EquipItemCategory;                                       // 0x0000(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bReplicates;                                             // 0x0001(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x0002(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class AReadyOrNotPlayerState*                                OverridePlayerState;                                     // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSanitizeLoadout;                                        // 0x0010(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0011(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnimationDataTable
+	 * Size -> 0x00C0 (FullSize[0x00C8] - InheritedSize[0x0008])
+	 */
+	struct FAnimationDataTable : public FTableRowBase
+	{
+	public:
+		TMap<EAnimWeaponType, struct FAnimStanceData>                AnimData;                                                // 0x0008(0x0050) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
+		bool                                                         bRestartIfAlreadyPlaying;                                // 0x0058(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        MaxRandomDelay;                                          // 0x005C(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Cooldown;                                                // 0x0060(0x0004) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bNoCanPlayWhileStrafing;                                 // 0x0064(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bNoCanPlayWhileNotStrafing;                              // 0x0065(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCanQueue;                                               // 0x0066(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCanAnimationBeInterupted;                               // 0x0067(0x0001) Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TMap<class ABaseItem*, class FString>                        OverrideAnimation;                                       // 0x0068(0x0050) Edit, DisableEditOnInstance, NativeAccessSpecifierPublic
+		TArray<class FString>                                        CanOnlyBeInteruptedBy;                                   // 0x00B8(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CharacterSharedAnim
+	 * Size -> 0x0010
+	 */
+	struct FCharacterSharedAnim
+	{
+	public:
+		class UAnimMontage*                                          TP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UAnimMontage*                                          FP_Anim;                                                 // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.HealingData
+	 * Size -> 0x0020
+	 */
+	struct FHealingData
+	{
+	public:
+		float                                                        CurrentHealth;                                           // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MinHealth;                                               // 0x0004(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MaxHealth;                                               // 0x0008(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  HealerName;                                              // 0x000C(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  HealeeName;                                              // 0x0014(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EMedicalHealScreen                                           HealScreen;                                              // 0x001C(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x001D(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CharacterFPAnim
+	 * Size -> 0x0008
+	 */
+	struct FCharacterFPAnim
+	{
+	public:
+		class UAnimMontage*                                          FP_Anim;                                                 // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.FootIKStruct
+	 * Size -> 0x0010
+	 */
+	struct FFootIKStruct
+	{
+	public:
+		float                                                        Offset;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRotator                                 FootRotation;                                            // 0x0004(0x000C) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.Injury
+	 * Size -> 0x000C
+	 */
+	struct FInjury
+	{
+	public:
+		class FName                                                  BoneName;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      InjuryCount;                                             // 0x0008(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -6075,17 +5701,17 @@ namespace SDK
 		float                                                        FreeAimSlowMoveTolerance;                                // 0x03EC(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bDisableMeshspaceMovement;                               // 0x03F0(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0022[0xF];                                   // 0x03F1(0x000F) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               MeshspaceTransform_Default;                              // 0x0400(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               MeshspaceTransform_Aiming;                               // 0x0430(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               MeshspaceTransform_Back;                                 // 0x0460(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               MeshspaceTransform_Default;                              // 0x0400(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               MeshspaceTransform_Aiming;                               // 0x0430(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               MeshspaceTransform_Back;                                 // 0x0460(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		struct FVector                                  MovementSpeedScale;                                      // 0x0490(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FRotator                                 MovementSpeedRotationScalePitchYawRoll;                  // 0x049C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		float                                                        MeshSpaceAimInterp;                                      // 0x04A8(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0023[0x4];                                   // 0x04AC(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               MeshspaceTransform_OnDraw;                               // 0x04B0(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               MeshspaceTransform_OnDraw;                               // 0x04B0(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		float                                                        OnDrawMeshspaceInterp;                                   // 0x04E0(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0024[0xC];                                   // 0x04E4(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               MeshspaceTransform_OnHolster;                            // 0x04F0(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               MeshspaceTransform_OnHolster;                            // 0x04F0(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		float                                                        OnHolsterMeshspaceInterp;                                // 0x0520(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        InertiaDragAimRotation;                                  // 0x0524(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        InertiaDragAimLocation;                                  // 0x0528(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
@@ -6116,6 +5742,380 @@ namespace SDK
 		float                                                        WeaponBobRotCrouchModifier;                              // 0x0594(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        WeaponBobRotADSModifier;                                 // 0x0598(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0025[0x4];                                   // 0x059C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.BoneVelocity
+	 * Size -> 0x0018
+	 */
+	struct FBoneVelocity
+	{
+	public:
+		class FName                                                  BoneName;                                                // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FVector                                  LastLocation;                                            // 0x0008(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        CalculatedSpeed;                                         // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RepGearAttach
+	 * Size -> 0x0038
+	 */
+	struct FRepGearAttach
+	{
+	public:
+		bool                                                         bEquipped;                                               // 0x0000(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bMeshVisibleTo1P;                                        // 0x0001(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bMeshVisibleTo3P;                                        // 0x0002(0x0001) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x5];                                   // 0x0003(0x0005) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class USceneComponent*                                       Attach1P;                                                // 0x0008(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  Socket1P;                                                // 0x0010(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USceneComponent*                                       Attach3P;                                                // 0x0018(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  Socket3P;                                                // 0x0020(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class USceneComponent*                                       ScopeAttach;                                             // 0x0028(0x0008) BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  ScopeSocket;                                             // 0x0030(0x0008) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.HitScanInfo
+	 * Size -> 0x0010
+	 */
+	struct FHitScanInfo
+	{
+	public:
+		TWeakObjectPtr<class UPrimitiveComponent>                    Component;                                               // 0x0000(0x0008) ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0008(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PMap
+	 * Size -> 0x0050
+	 */
+	struct FPMap
+	{
+	public:
+		TArray<class FString>                                        BLPN;                                                    // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class FString>                                        BLPHZ;                                                   // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class FString>                                        BLWT;                                                    // 0x0020(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class FString>                                        BLDLLHZ;                                                 // 0x0030(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class FString>                                        BLDLLN;                                                  // 0x0040(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ChannelInfo
+	 * Size -> 0x0018
+	 */
+	struct FChannelInfo
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SavedTransforms
+	 * Size -> 0x0040
+	 */
+	struct FSavedTransforms
+	{
+	public:
+		class FString                                                Name;                                                    // 0x0000(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FTransform                               SavedTransform;                                          // 0x0010(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PairedInteractionTable
+	 * Size -> 0x0050 (FullSize[0x0058] - InheritedSize[0x0008])
+	 */
+	struct FPairedInteractionTable : public FTableRowBase
+	{
+	public:
+		TMap<class FName, class UInteractionsData*>                  Interactions;                                            // 0x0008(0x0050) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RoNMoveStyleTable
+	 * Size -> 0x0010 (FullSize[0x0018] - InheritedSize[0x0008])
+	 */
+	struct FRoNMoveStyleTable : public FTableRowBase
+	{
+	public:
+		TArray<struct FRoNMovementStyle>                             MoveStyles;                                              // 0x0008(0x0010) Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CoverFirePoseTable
+	 * Size -> 0x0140
+	 */
+	struct FCoverFirePoseTable
+	{
+	public:
+		TMap<class UAnimMontage*, class UAnimSequence*>              Left_ExposedFire_CoverMontageToCoverPoseMap;             // 0x0000(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		TMap<class UAnimMontage*, class UAnimSequence*>              Left_BlindFire_CoverMontageToCoverPoseMap;               // 0x0050(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		TMap<class UAnimMontage*, class UAnimSequence*>              Right_ExposedFire_CoverMontageToCoverPoseMap;            // 0x00A0(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		TMap<class UAnimMontage*, class UAnimSequence*>              Right_BlindFire_CoverMontageToCoverPoseMap;              // 0x00F0(0x0050) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.UniformData
+	 * Size -> 0x0050
+	 */
+	struct FUniformData
+	{
+	public:
+		class FText                                                  Name;                                                    // 0x0000(0x0018) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		TSoftObjectPtr<class UTexture2D>                             Image;                                                   // 0x0018(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x003C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		EItemClass                                                   ItemClass;                                               // 0x0040(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0041(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ABaseItem*                                             Blueprint;                                               // 0x0048(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.HostageDriverProperties
+	 * Size -> 0x0004
+	 */
+	struct FHostageDriverProperties
+	{
+	public:
+		float                                                        TimeToKillHostage;                                       // 0x0000(0x0004) BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.GrenadeData
+	 * Size -> 0x0048
+	 */
+	struct FGrenadeData
+	{
+	public:
+		class FString                                                Name;                                                    // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TSoftObjectPtr<class UTexture2D>                             Image;                                                   // 0x0010(0x0024) ELEMENT_SIZE_MISMATCH Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0034(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		EItemClass                                                   ItemClass;                                               // 0x0038(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ABaseGrenade*                                          Blueprint;                                               // 0x0040(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ActorMemory
+	 * Size -> 0x0010
+	 */
+	struct FActorMemory
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ItemID
+	 * Size -> 0x0010
+	 */
+	struct FItemID
+	{
+	public:
+		int32_t                                                      ID;                                                      // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ABaseItem*                                             Item;                                                    // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.MapList
+	 * Size -> 0x00A0
+	 */
+	struct FMapList
+	{
+	public:
+		class FString                                                Name;                                                    // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                GameMode;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                LoadURL;                                                 // 0x0020(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FText                                                  Description;                                             // 0x0030(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FText                                                  Author;                                                  // 0x0048(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FText                                                  AuthorContact;                                           // 0x0060(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FText                                                  RecommendedPlayerCount;                                  // 0x0078(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class USoundCue*                                             LoadingScreenMusic;                                      // 0x0090(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSupportsPvP;                                            // 0x0098(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bSupportsCoop;                                           // 0x0099(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bVisible;                                                // 0x009A(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x5];                                   // 0x009B(0x0005) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.OutStackupData
+	 * Size -> 0x0018
+	 */
+	struct FOutStackupData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnalyticsSuspectState
+	 * Size -> 0x0050
+	 */
+	struct FAnalyticsSuspectState
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x50];                                  // 0x0000(0x0050) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ScoringDataTable
+	 * Size -> 0x0040 (FullSize[0x0048] - InheritedSize[0x0008])
+	 */
+	struct FScoringDataTable : public FTableRowBase
+	{
+	public:
+		class FString                                                Name;                                                    // 0x0008(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EObjectiveLevel                                              ObjectiveLevel;                                          // 0x0018(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0019(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FScoreBonus>                                   Bonuses;                                                 // 0x0020(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FScorePenalty>                                 Penalties;                                               // 0x0030(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bRequiredToClearMission : 1;                             // 0x0040(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequiredToSoftClearMission : 1;                         // 0x0040(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0041(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      OrderPriority;                                           // 0x0044(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CharacterCollisionTemplate
+	 * Size -> 0x0090
+	 */
+	struct FCharacterCollisionTemplate
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x90];                                  // 0x0000(0x0090) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RonKey
+	 * Size -> 0x00A8
+	 */
+	struct FRonKey
+	{
+	public:
+		class FString                                                InputName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                AlternativeInputName;                                    // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           IconBrush;                                               // 0x0020(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.RonInputKeyTable
+	 * Size -> 0x00A8 (FullSize[0x00B0] - InheritedSize[0x0008])
+	 */
+	struct FRonInputKeyTable : public FTableRowBase
+	{
+	public:
+		struct FRonKey                                               Key;                                                     // 0x0008(0x00A8) Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.SpeedRange
+	 * Size -> 0x0010
+	 */
+	struct FSpeedRange
+	{
+	public:
+		float                                                        Speed;                                                   // 0x0000(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRandomSpeed : 1;                                        // 0x0004(0x0001) BIT_FIELD Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0005(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        MinSpeed;                                                // 0x0008(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        MaxSpeed;                                                // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.CharacterPersonalizationData
+	 * Size -> 0x0050
+	 */
+	struct FCharacterPersonalizationData
+	{
+	public:
+		EDLC                                                         LockedToDLC;                                             // 0x0000(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FName                                                  RowName;                                                 // 0x0004(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  FriendlyName;                                            // 0x0010(0x0018) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		TSoftObjectPtr<class UTexture2D>                             Icon;                                                    // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.ReplayData
+	 * Size -> 0x0060
+	 */
+	struct FReplayData
+	{
+	public:
+		float                                                        ReplayLength;                                            // 0x0000(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                LetterScore;                                             // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      NumericalScore;                                          // 0x0018(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      NumPlayers;                                              // 0x001C(0x0004) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                LevelName;                                               // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                GameModeName;                                            // 0x0030(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Timestamp;                                               // 0x0040(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<struct FReplayEvent>                                  ReplayEvents;                                            // 0x0050(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.PromptInfo
+	 * Size -> 0x0040
+	 */
+	struct FPromptInfo
+	{
+	public:
+		ETutorialMessageContext                                      PromptContext;                                           // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0001(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FKey                                                  ActionKey;                                               // 0x0008(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EInputEvent                                                  InputType;                                               // 0x0020(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FText                                                  ActionText;                                              // 0x0028(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.AnimatedIconTable
+	 * Size -> 0x0018 (FullSize[0x0020] - InheritedSize[0x0008])
+	 */
+	struct FAnimatedIconTable : public FTableRowBase
+	{
+	public:
+		struct FAnimatedIcon                                         AnimatedIcon;                                            // 0x0008(0x0018) Edit, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.WidgetLookupData
+	 * Size -> 0x0028 (FullSize[0x0030] - InheritedSize[0x0008])
+	 */
+	struct FWidgetLookupData : public FTableRowBase
+	{
+	public:
+		class UUserWidget*                                           WidgetClass;                                             // 0x0008(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Description;                                             // 0x0010(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bShowMouseCursor;                                        // 0x0020(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bMouseUIOnly;                                            // 0x0021(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAddToWidgetStack;                                       // 0x0022(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bCloseOnRespawn;                                         // 0x0023(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESlateVisibility                                             VisibilityUponCreation;                                  // 0x0024(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		int32_t                                                      ZOrder;                                                  // 0x0028(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct ReadyOrNot.InputEntry
+	 * Size -> 0x0070
+	 */
+	struct FInputEntry
+	{
+	public:
+		class FText                                                  DisplayName;                                             // 0x0000(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		class FString                                                Bind;                                                    // 0x0018(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FKey                                                  DefaultKeyBind1;                                         // 0x0028(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FKey                                                  DefaultKeyBind2;                                         // 0x0040(0x0018) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EMapType                                                     MappingType;                                             // 0x0058(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0059(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        AxisScale;                                               // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bDisplayOnScreen;                                        // 0x0060(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0061(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class ABaseItem*                                             ShowWithEquippedItem;                                    // 0x0068(0x0008) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

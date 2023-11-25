@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_PFC9_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31901);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ASecondary_PFC9_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43792);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31900);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ASecondary_PFC9_C::ExecuteUbergraph_Secondary_PFC9(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43791);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31899);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_PFC9_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43790);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31898);
 		return ptr;
 	}
 

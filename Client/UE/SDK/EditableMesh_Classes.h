@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,59 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class EditableMesh.EditableMeshAdapter
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UEditableMeshAdapter : public UObject
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class EditableMesh.EditableGeometryCollectionAdapter
-	 * Size -> 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
-	 */
-	class UEditableGeometryCollectionAdapter : public UEditableMeshAdapter
-	{
-	public:
-		class UGeometryCollection*                                   GeometryCollection;                                      // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class UGeometryCollection*                                   OriginalGeometryCollection;                              // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                      GeometryCollectionLODIndex;                              // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0x9C];                                  // 0x003C(0x009C) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class EditableMesh.EditableStaticMeshAdapter
-	 * Size -> 0x00B8 (FullSize[0x00E0] - InheritedSize[0x0028])
-	 */
-	class UEditableStaticMeshAdapter : public UEditableMeshAdapter
-	{
-	public:
-		class UStaticMesh*                                           StaticMesh;                                              // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		class UStaticMesh*                                           OriginalStaticMesh;                                      // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                      StaticMeshLODIndex;                                      // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0000[0xA4];                                  // 0x003C(0x00A4) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class EditableMesh.EditableMeshFactory
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UEditableMeshFactory : public UObject
-	{
-	public:
-		class UEditableMesh* MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex);
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class EditableMesh.EditableMesh
 	 * Size -> 0x06E0 (FullSize[0x0708] - InheritedSize[0x0028])
@@ -213,6 +160,59 @@ namespace SDK
 		void BevelPolygons(TArray<struct FPolygonID> PolygonIDs, float BevelFixedDistance, float BevelProgressTowardCenter, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs);
 		void AssignPolygonsToPolygonGroups(TArray<struct FPolygonGroupForPolygon> PolygonGroupForPolygons, bool bDeleteOrphanedPolygonGroups);
 		bool AnyChangesToUndo();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class EditableMesh.EditableMeshAdapter
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UEditableMeshAdapter : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class EditableMesh.EditableMeshFactory
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UEditableMeshFactory : public UObject
+	{
+	public:
+		class UEditableMesh* MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int32_t LODIndex);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class EditableMesh.EditableStaticMeshAdapter
+	 * Size -> 0x00B8 (FullSize[0x00E0] - InheritedSize[0x0028])
+	 */
+	class UEditableStaticMeshAdapter : public UEditableMeshAdapter
+	{
+	public:
+		class UStaticMesh*                                           StaticMesh;                                              // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class UStaticMesh*                                           OriginalStaticMesh;                                      // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		int32_t                                                      StaticMeshLODIndex;                                      // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0xA4];                                  // 0x003C(0x00A4) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class EditableMesh.EditableGeometryCollectionAdapter
+	 * Size -> 0x00B0 (FullSize[0x00D8] - InheritedSize[0x0028])
+	 */
+	class UEditableGeometryCollectionAdapter : public UEditableMeshAdapter
+	{
+	public:
+		class UGeometryCollection*                                   GeometryCollection;                                      // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		class UGeometryCollection*                                   OriginalGeometryCollection;                              // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		int32_t                                                      GeometryCollectionLODIndex;                              // 0x0038(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0000[0x9C];                                  // 0x003C(0x009C) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 

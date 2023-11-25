@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,341 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.PropertyValue.HasRecordedData
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UPropertyValue::HasRecordedData()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13042);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.PropertyValue.GetPropertyTooltip
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UPropertyValue::GetPropertyTooltip()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13041);
-		
-		struct
-		{
-			class FText                                        ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.PropertyValue.GetFullDisplayString
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UPropertyValue::GetFullDisplayString()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13040);
-		
-		struct
-		{
-			class FString                                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValue.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValue::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(328);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueMaterial.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValueMaterial::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(332);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueColor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValueColor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(331);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueOption.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValueOption::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(333);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueVisibility.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValueVisibility::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(330);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetVariantSetByName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      VariantSetName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UVariantSet*                                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVariantSet* ULevelVariantSets::GetVariantSetByName(const class FString& VariantSetName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13035);
-		
-		struct
-		{
-			class FString                                      VariantSetName;
-			class UVariantSet*                                 ReturnValue;
-		} params;
-		params.VariantSetName = VariantSetName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetVariantSet
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            VariantSetIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UVariantSet*                                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UVariantSet* ULevelVariantSets::GetVariantSet(int32_t VariantSetIndex)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13034);
-		
-		struct
-		{
-			int32_t                                            VariantSetIndex;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UVariantSet*                                 ReturnValue;
-		} params;
-		params.VariantSetIndex = VariantSetIndex;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t ULevelVariantSets::GetNumVariantSets()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13033);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelVariantSets.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULevelVariantSets::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(325);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueSoftObject.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UPropertyValueSoftObject::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(334);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.SwitchActor.SelectOption
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            OptionIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void ASwitchActor::SelectOption(int32_t OptionIndex)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13045);
-		
-		struct
-		{
-			int32_t                                            OptionIndex;
-		} params;
-		params.OptionIndex = OptionIndex;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.SwitchActor.GetSelectedOption
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t ASwitchActor::GetSelectedOption()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13044);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VariantManagerContent.SwitchActor.GetOptions
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class AActor*>                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class AActor*> ASwitchActor::GetOptions()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13043);
-		
-		struct
-		{
-			TArray<class AActor*>                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ASwitchActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ASwitchActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(335);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -474,6 +139,213 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelVariantSetsFunctionDirector.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelVariantSetsFunctionDirector::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(327);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.PropertyValue.HasRecordedData
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UPropertyValue::HasRecordedData()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13042);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.PropertyValue.GetPropertyTooltip
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UPropertyValue::GetPropertyTooltip()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13041);
+		
+		struct
+		{
+			class FText                                        ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.PropertyValue.GetFullDisplayString
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UPropertyValue::GetFullDisplayString()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13040);
+		
+		struct
+		{
+			class FString                                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyValue.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyValue::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(328);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetVariantSetByName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      VariantSetName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UVariantSet*                                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVariantSet* ULevelVariantSets::GetVariantSetByName(const class FString& VariantSetName)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13035);
+		
+		struct
+		{
+			class FString                                      VariantSetName;
+			class UVariantSet*                                 ReturnValue;
+		} params;
+		params.VariantSetName = VariantSetName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetVariantSet
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            VariantSetIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UVariantSet*                                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UVariantSet* ULevelVariantSets::GetVariantSet(int32_t VariantSetIndex)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13034);
+		
+		struct
+		{
+			int32_t                                            VariantSetIndex;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UVariantSet*                                 ReturnValue;
+		} params;
+		params.VariantSetIndex = VariantSetIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.LevelVariantSets.GetNumVariantSets
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t ULevelVariantSets::GetNumVariantSets()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13033);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelVariantSets.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelVariantSets::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(325);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyValueTransform.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyValueTransform::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(329);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function VariantManagerContent.Variant.SwitchOn
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -568,13 +440,13 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     CameraTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     CameraTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		float                                              FOVDegrees                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MinZ                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Gamma                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVariant::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct PCoreUObject_FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
+	void UVariant::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13059);
 		
@@ -582,7 +454,7 @@ namespace SDK
 		{
 			class UObject*                                     WorldContextObject;
 			unsigned char                                      UnknownData_0000[0x8];
-			struct PCoreUObject_FTransform                     CameraTransform;
+			struct FTransform                     CameraTransform;
 			float                                              FOVDegrees;
 			float                                              MinZ;
 			float                                              Gamma;
@@ -953,28 +825,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelVariantSetsFunctionDirector.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueVisibility.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULevelVariantSetsFunctionDirector::StaticClass()
+	UClass* UPropertyValueVisibility::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(327);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(330);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVariantObjectBinding.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueColor.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UVariantObjectBinding::StaticClass()
+	UClass* UPropertyValueColor::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(337);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(331);
 		return ptr;
 	}
 
@@ -1054,13 +926,13 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     CameraTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     CameraTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		float                                              FOVDegrees                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              MinZ                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              Gamma                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVariantSet::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct PCoreUObject_FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
+	void UVariantSet::SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13071);
 		
@@ -1068,7 +940,7 @@ namespace SDK
 		{
 			class UObject*                                     WorldContextObject;
 			unsigned char                                      UnknownData_0000[0x8];
-			struct PCoreUObject_FTransform                     CameraTransform;
+			struct FTransform                     CameraTransform;
 			float                                              FOVDegrees;
 			float                                              MinZ;
 			float                                              Gamma;
@@ -1276,14 +1148,142 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UPropertyValueTransform.StaticClass
+	 * 		Name   -> PredefinedFunction UPropertyValueMaterial.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UPropertyValueTransform::StaticClass()
+	UClass* UPropertyValueMaterial::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(329);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(332);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVariantObjectBinding.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVariantObjectBinding::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(337);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyValueOption.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyValueOption::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(333);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UPropertyValueSoftObject.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UPropertyValueSoftObject::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(334);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.SwitchActor.SelectOption
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            OptionIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void ASwitchActor::SelectOption(int32_t OptionIndex)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13045);
+		
+		struct
+		{
+			int32_t                                            OptionIndex;
+		} params;
+		params.OptionIndex = OptionIndex;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.SwitchActor.GetSelectedOption
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t ASwitchActor::GetSelectedOption()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13044);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VariantManagerContent.SwitchActor.GetOptions
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class AActor*>                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class AActor*> ASwitchActor::GetOptions()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13043);
+		
+		struct
+		{
+			TArray<class AActor*>                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ASwitchActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ASwitchActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(335);
 		return ptr;
 	}
 

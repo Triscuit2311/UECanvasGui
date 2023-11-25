@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void IIRadialInput_C::GetJoystickDirection(EJoystickTypes Stick, struct FVector2D* StickInput)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30754);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	UClass* IIRadialInput_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54195);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30753);
 		return ptr;
 	}
 

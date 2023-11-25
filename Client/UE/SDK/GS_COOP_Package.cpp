@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void AGS_COOP_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88691);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88696);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void AGS_COOP_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88690);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88695);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void AGS_COOP_C::ExecuteUbergraph_GS_COOP(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88689);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88694);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* AGS_COOP_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88688);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88693);
 		return ptr;
 	}
 

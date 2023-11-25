@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,188 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum Synthesis.ESynth1PatchDestination
+	 */
+	enum class ESynth1PatchDestination : uint8_t
+	{
+		Osc1Gain        = 0,
+		Osc1Frequency   = 1,
+		Osc1Pulsewidth  = 2,
+		Osc2Gain        = 3,
+		Osc2Frequency   = 4,
+		Osc2Pulsewidth  = 5,
+		FilterFrequency = 6,
+		FilterQ         = 7,
+		Gain            = 8,
+		Pan             = 9,
+		LFO1Frequency   = 10,
+		LFO1Gain        = 11,
+		LFO2Frequency   = 12,
+		LFO2Gain        = 13,
+		Count           = 14,
+		MAX             = 15
+	};
+
+	/**
+	 * Enum Synthesis.EEnvelopeFollowerPeakMode
+	 */
+	enum class EEnvelopeFollowerPeakMode : uint8_t
+	{
+		MeanSquared     = 0,
+		RootMeanSquared = 1,
+		Peak            = 2,
+		Count           = 3,
+		MAX             = 4
+	};
+
+	/**
+	 * Enum Synthesis.EStereoDelaySourceEffect
+	 */
+	enum class EStereoDelaySourceEffect : uint8_t
+	{
+		Normal   = 0,
+		Cross    = 1,
+		PingPong = 2,
+		Count    = 3,
+		MAX      = 4
+	};
+
+	/**
+	 * Enum Synthesis.ESubmixEffectConvolutionReverbBlockSize
+	 */
+	enum class ESubmixEffectConvolutionReverbBlockSize : uint8_t
+	{
+		BlockSize256  = 0,
+		BlockSize512  = 1,
+		BlockSize1024 = 2,
+		MAX           = 3
+	};
+
+	/**
+	 * Enum Synthesis.EStereoChannelMode
+	 */
+	enum class EStereoChannelMode : uint8_t
+	{
+		MidSide   = 0,
+		LeftRight = 1,
+		count     = 2,
+		MAX       = 3
+	};
+
+	/**
+	 * Enum Synthesis.ESubmixFilterAlgorithm
+	 */
+	enum class ESubmixFilterAlgorithm : uint8_t
+	{
+		OnePole       = 0,
+		StateVariable = 1,
+		Ladder        = 2,
+		Count         = 3,
+		MAX           = 4
+	};
+
+	/**
+	 * Enum Synthesis.ESourceEffectFilterParam
+	 */
+	enum class ESourceEffectFilterParam : uint8_t
+	{
+		FilterFrequency = 0,
+		FilterResonance = 1,
+		Count           = 2,
+		MAX             = 3
+	};
+
+	/**
+	 * Enum Synthesis.ESynth1PatchSource
+	 */
+	enum class ESynth1PatchSource : uint8_t
+	{
+		LFO1         = 0,
+		LFO2         = 1,
+		Envelope     = 2,
+		BiasEnvelope = 3,
+		Count        = 4,
+		MAX          = 5
+	};
+
+	/**
+	 * Enum Synthesis.ESubmixFilterType
+	 */
+	enum class ESubmixFilterType : uint8_t
+	{
+		LowPass  = 0,
+		HighPass = 1,
+		BandPass = 2,
+		BandStop = 3,
+		Count    = 4,
+		MAX      = 5
+	};
+
+	/**
+	 * Enum Synthesis.ESynthStereoDelayMode
+	 */
+	enum class ESynthStereoDelayMode : uint8_t
+	{
+		Normal   = 0,
+		Cross    = 1,
+		PingPong = 2,
+		Count    = 3,
+		MAX      = 4
+	};
+
+	/**
+	 * Enum Synthesis.ETapLineMode
+	 */
+	enum class ETapLineMode : uint8_t
+	{
+		SendToChannel = 0,
+		Panning       = 1,
+		Disabled      = 2,
+		MAX           = 3
+	};
+
+	/**
+	 * Enum Synthesis.EPhaserLFOType
+	 */
+	enum class EPhaserLFOType : uint8_t
+	{
+		Sine             = 0,
+		UpSaw            = 1,
+		DownSaw          = 2,
+		Square           = 3,
+		Triangle         = 4,
+		Exponential      = 5,
+		RandomSampleHold = 6,
+		Count            = 7,
+		MAX              = 8
+	};
+
+	/**
+	 * Enum Synthesis.ESynthFilterAlgorithm
+	 */
+	enum class ESynthFilterAlgorithm : uint8_t
+	{
+		OnePole       = 0,
+		StateVariable = 1,
+		Ladder        = 2,
+		Count         = 3,
+		MAX           = 4
+	};
+
+	/**
+	 * Enum Synthesis.ESourceEffectFilterType
+	 */
+	enum class ESourceEffectFilterType : uint8_t
+	{
+		LowPass  = 0,
+		HighPass = 1,
+		BandPass = 2,
+		BandStop = 3,
+		Count    = 4,
+		MAX      = 5
+	};
+
 	/**
 	 * Enum Synthesis.ESynthFilterType
 	 */
@@ -28,15 +210,14 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Synthesis.ESynthLFOMode
+	 * Enum Synthesis.EGranularSynthSeekType
 	 */
-	enum class ESynthLFOMode : uint8_t
+	enum class EGranularSynthSeekType : uint8_t
 	{
-		Sync    = 0,
-		OneShot = 1,
-		Free    = 2,
-		Count   = 3,
-		MAX     = 4
+		FromBeginning       = 0,
+		FromCurrentPosition = 1,
+		Count               = 2,
+		MAX                 = 3
 	};
 
 	/**
@@ -57,19 +238,51 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Synthesis.ESynthLFOType
+	 * Enum Synthesis.ERingModulatorTypeSourceEffect
 	 */
-	enum class ESynthLFOType : uint8_t
+	enum class ERingModulatorTypeSourceEffect : uint8_t
 	{
-		Sine             = 0,
-		UpSaw            = 1,
-		DownSaw          = 2,
-		Square           = 3,
-		Triangle         = 4,
-		Exponential      = 5,
-		RandomSampleHold = 6,
-		Count            = 7,
-		MAX              = 8
+		Sine     = 0,
+		Saw      = 1,
+		Triangle = 2,
+		Square   = 3,
+		Count    = 4,
+		MAX      = 5
+	};
+
+	/**
+	 * Enum Synthesis.ESourceEffectFilterCircuit
+	 */
+	enum class ESourceEffectFilterCircuit : uint8_t
+	{
+		OnePole       = 0,
+		StateVariable = 1,
+		Ladder        = 2,
+		Count         = 3,
+		MAX           = 4
+	};
+
+	/**
+	 * Enum Synthesis.EGranularSynthEnvelopeType
+	 */
+	enum class EGranularSynthEnvelopeType : uint8_t
+	{
+		Rectangular         = 0,
+		Triangle            = 1,
+		DownwardTriangle    = 2,
+		UpwardTriangle      = 3,
+		ExponentialDecay    = 4,
+		ExponentialIncrease = 5,
+		Gaussian            = 6,
+		Hanning             = 7,
+		Lanczos             = 8,
+		Cosine              = 9,
+		CosineSquared       = 10,
+		Welch               = 11,
+		Blackman            = 12,
+		BlackmanHarris      = 13,
+		Count               = 14,
+		MAX                 = 15
 	};
 
 	/**
@@ -90,17 +303,16 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Synthesis.ESynth1OscType
+	 * Enum Synthesis.EStereoDelayFiltertype
 	 */
-	enum class ESynth1OscType : uint8_t
+	enum class EStereoDelayFiltertype : uint8_t
 	{
-		Sine     = 0,
-		Saw      = 1,
-		Triangle = 2,
-		Square   = 3,
-		Noise    = 4,
-		Count    = 5,
-		MAX      = 6
+		Lowpass  = 0,
+		Highpass = 1,
+		Bandpass = 2,
+		Notch    = 3,
+		Count    = 4,
+		MAX      = 5
 	};
 
 	/**
@@ -119,6 +331,71 @@ namespace SDK
 		PatchLFO1ToLFO2Gain      = 8,
 		Count                    = 9,
 		MAX                      = 10
+	};
+
+	/**
+	 * Enum Synthesis.CurveInterpolationType
+	 */
+	enum class ECurveInterpolationType : uint8_t
+	{
+		CurveInterpolationTypeAUTOINTERP                 = 0,
+		CurveInterpolationTypeLINEAR                     = 1,
+		CurveInterpolationTypeCONSTANT                   = 2,
+		CurveInterpolationTypeCurveInterpolationType_MAX = 3
+	};
+
+	/**
+	 * Enum Synthesis.ESynthLFOMode
+	 */
+	enum class ESynthLFOMode : uint8_t
+	{
+		Sync    = 0,
+		OneShot = 1,
+		Free    = 2,
+		Count   = 3,
+		MAX     = 4
+	};
+
+	/**
+	 * Enum Synthesis.ESynthLFOType
+	 */
+	enum class ESynthLFOType : uint8_t
+	{
+		Sine             = 0,
+		UpSaw            = 1,
+		DownSaw          = 2,
+		Square           = 3,
+		Triangle         = 4,
+		Exponential      = 5,
+		RandomSampleHold = 6,
+		Count            = 7,
+		MAX              = 8
+	};
+
+	/**
+	 * Enum Synthesis.ESamplePlayerSeekType
+	 */
+	enum class ESamplePlayerSeekType : uint8_t
+	{
+		FromBeginning       = 0,
+		FromCurrentPosition = 1,
+		FromEnd             = 2,
+		Count               = 3,
+		MAX                 = 4
+	};
+
+	/**
+	 * Enum Synthesis.ESynth1OscType
+	 */
+	enum class ESynth1OscType : uint8_t
+	{
+		Sine     = 0,
+		Saw      = 1,
+		Triangle = 2,
+		Square   = 3,
+		Noise    = 4,
+		Count    = 5,
+		MAX      = 6
 	};
 
 	/**
@@ -147,113 +424,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Synthesis.ESourceEffectFilterCircuit
-	 */
-	enum class ESourceEffectFilterCircuit : uint8_t
-	{
-		OnePole       = 0,
-		StateVariable = 1,
-		Ladder        = 2,
-		Count         = 3,
-		MAX           = 4
-	};
-
-	/**
-	 * Enum Synthesis.EEnvelopeFollowerPeakMode
-	 */
-	enum class EEnvelopeFollowerPeakMode : uint8_t
-	{
-		MeanSquared     = 0,
-		RootMeanSquared = 1,
-		Peak            = 2,
-		Count           = 3,
-		MAX             = 4
-	};
-
-	/**
-	 * Enum Synthesis.EStereoChannelMode
-	 */
-	enum class EStereoChannelMode : uint8_t
-	{
-		MidSide   = 0,
-		LeftRight = 1,
-		count     = 2,
-		MAX       = 3
-	};
-
-	/**
-	 * Enum Synthesis.ETapLineMode
-	 */
-	enum class ETapLineMode : uint8_t
-	{
-		SendToChannel = 0,
-		Panning       = 1,
-		Disabled      = 2,
-		MAX           = 3
-	};
-
-	/**
-	 * Enum Synthesis.ESourceEffectFilterParam
-	 */
-	enum class ESourceEffectFilterParam : uint8_t
-	{
-		FilterFrequency = 0,
-		FilterResonance = 1,
-		Count           = 2,
-		MAX             = 3
-	};
-
-	/**
-	 * Enum Synthesis.EPhaserLFOType
-	 */
-	enum class EPhaserLFOType : uint8_t
-	{
-		Sine             = 0,
-		UpSaw            = 1,
-		DownSaw          = 2,
-		Square           = 3,
-		Triangle         = 4,
-		Exponential      = 5,
-		RandomSampleHold = 6,
-		Count            = 7,
-		MAX              = 8
-	};
-
-	/**
-	 * Enum Synthesis.EGranularSynthSeekType
-	 */
-	enum class EGranularSynthSeekType : uint8_t
-	{
-		FromBeginning       = 0,
-		FromCurrentPosition = 1,
-		Count               = 2,
-		MAX                 = 3
-	};
-
-	/**
-	 * Enum Synthesis.EGranularSynthEnvelopeType
-	 */
-	enum class EGranularSynthEnvelopeType : uint8_t
-	{
-		Rectangular         = 0,
-		Triangle            = 1,
-		DownwardTriangle    = 2,
-		UpwardTriangle      = 3,
-		ExponentialDecay    = 4,
-		ExponentialIncrease = 5,
-		Gaussian            = 6,
-		Hanning             = 7,
-		Lanczos             = 8,
-		Cosine              = 9,
-		CosineSquared       = 10,
-		Welch               = 11,
-		Blackman            = 12,
-		BlackmanHarris      = 13,
-		Count               = 14,
-		MAX                 = 15
-	};
-
-	/**
 	 * Enum Synthesis.ESynthKnobSize
 	 */
 	enum class ESynthKnobSize : uint8_t
@@ -262,116 +432,6 @@ namespace SDK
 		Large  = 1,
 		Count  = 2,
 		MAX    = 3
-	};
-
-	/**
-	 * Enum Synthesis.ESourceEffectFilterType
-	 */
-	enum class ESourceEffectFilterType : uint8_t
-	{
-		LowPass  = 0,
-		HighPass = 1,
-		BandPass = 2,
-		BandStop = 3,
-		Count    = 4,
-		MAX      = 5
-	};
-
-	/**
-	 * Enum Synthesis.ERingModulatorTypeSourceEffect
-	 */
-	enum class ERingModulatorTypeSourceEffect : uint8_t
-	{
-		Sine     = 0,
-		Saw      = 1,
-		Triangle = 2,
-		Square   = 3,
-		Count    = 4,
-		MAX      = 5
-	};
-
-	/**
-	 * Enum Synthesis.CurveInterpolationType
-	 */
-	enum class ECurveInterpolationType : uint8_t
-	{
-		CurveInterpolationTypeAUTOINTERP                 = 0,
-		CurveInterpolationTypeLINEAR                     = 1,
-		CurveInterpolationTypeCONSTANT                   = 2,
-		CurveInterpolationTypeCurveInterpolationType_MAX = 3
-	};
-
-	/**
-	 * Enum Synthesis.EStereoDelayFiltertype
-	 */
-	enum class EStereoDelayFiltertype : uint8_t
-	{
-		Lowpass  = 0,
-		Highpass = 1,
-		Bandpass = 2,
-		Notch    = 3,
-		Count    = 4,
-		MAX      = 5
-	};
-
-	/**
-	 * Enum Synthesis.ESamplePlayerSeekType
-	 */
-	enum class ESamplePlayerSeekType : uint8_t
-	{
-		FromBeginning       = 0,
-		FromCurrentPosition = 1,
-		FromEnd             = 2,
-		Count               = 3,
-		MAX                 = 4
-	};
-
-	/**
-	 * Enum Synthesis.EStereoDelaySourceEffect
-	 */
-	enum class EStereoDelaySourceEffect : uint8_t
-	{
-		Normal   = 0,
-		Cross    = 1,
-		PingPong = 2,
-		Count    = 3,
-		MAX      = 4
-	};
-
-	/**
-	 * Enum Synthesis.ESubmixFilterType
-	 */
-	enum class ESubmixFilterType : uint8_t
-	{
-		LowPass  = 0,
-		HighPass = 1,
-		BandPass = 2,
-		BandStop = 3,
-		Count    = 4,
-		MAX      = 5
-	};
-
-	/**
-	 * Enum Synthesis.ESubmixEffectConvolutionReverbBlockSize
-	 */
-	enum class ESubmixEffectConvolutionReverbBlockSize : uint8_t
-	{
-		BlockSize256  = 0,
-		BlockSize512  = 1,
-		BlockSize1024 = 2,
-		MAX           = 3
-	};
-
-	/**
-	 * Enum Synthesis.ESubmixFilterAlgorithm
-	 */
-	enum class ESubmixFilterAlgorithm : uint8_t
-	{
-		OnePole       = 0,
-		StateVariable = 1,
-		Ladder        = 2,
-		Count         = 3,
-		MAX           = 4
 	};
 
 	/**
@@ -395,66 +455,6 @@ namespace SDK
 		Large  = 2,
 		Count  = 3,
 		MAX    = 4
-	};
-
-	/**
-	 * Enum Synthesis.ESynth1PatchDestination
-	 */
-	enum class ESynth1PatchDestination : uint8_t
-	{
-		Osc1Gain        = 0,
-		Osc1Frequency   = 1,
-		Osc1Pulsewidth  = 2,
-		Osc2Gain        = 3,
-		Osc2Frequency   = 4,
-		Osc2Pulsewidth  = 5,
-		FilterFrequency = 6,
-		FilterQ         = 7,
-		Gain            = 8,
-		Pan             = 9,
-		LFO1Frequency   = 10,
-		LFO1Gain        = 11,
-		LFO2Frequency   = 12,
-		LFO2Gain        = 13,
-		Count           = 14,
-		MAX             = 15
-	};
-
-	/**
-	 * Enum Synthesis.ESynth1PatchSource
-	 */
-	enum class ESynth1PatchSource : uint8_t
-	{
-		LFO1         = 0,
-		LFO2         = 1,
-		Envelope     = 2,
-		BiasEnvelope = 3,
-		Count        = 4,
-		MAX          = 5
-	};
-
-	/**
-	 * Enum Synthesis.ESynthStereoDelayMode
-	 */
-	enum class ESynthStereoDelayMode : uint8_t
-	{
-		Normal   = 0,
-		Cross    = 1,
-		PingPong = 2,
-		Count    = 3,
-		MAX      = 4
-	};
-
-	/**
-	 * Enum Synthesis.ESynthFilterAlgorithm
-	 */
-	enum class ESynthFilterAlgorithm : uint8_t
-	{
-		OnePole       = 0,
-		StateVariable = 1,
-		Ladder        = 2,
-		Count         = 3,
-		MAX           = 4
 	};
 
 	// --------------------------------------------------
@@ -594,29 +594,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SourceEffectDynamicsProcessorSettings
-	 * Size -> 0x0028
-	 */
-	struct FSourceEffectDynamicsProcessorSettings
-	{
-	public:
-		ESourceEffectDynamicsProcessorType                           DynamicsProcessorType;                                   // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESourceEffectDynamicsPeakMode                                PeakMode;                                                // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        LookAheadMsec;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        AttackTimeMsec;                                          // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ReleaseTimeMsec;                                         // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ThresholdDb;                                             // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Ratio;                                                   // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        KneeBandwidthDb;                                         // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        InputGainDb;                                             // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        OutputGainDb;                                            // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bStereoLinked : 1;                                       // 0x0024(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bAnalogMode : 1;                                         // 0x0024(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct Synthesis.SourceEffectChorusSettings
 	 * Size -> 0x0078
 	 */
@@ -638,17 +615,50 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SourceEffectEnvelopeFollowerSettings
-	 * Size -> 0x000C
+	 * ScriptStruct Synthesis.SourceEffectEQBand
+	 * Size -> 0x0010
 	 */
-	struct FSourceEffectEnvelopeFollowerSettings
+	struct FSourceEffectEQBand
 	{
 	public:
-		float                                                        AttackTime;                                              // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ReleaseTime;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EEnvelopeFollowerPeakMode                                    PeakMode;                                                // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bIsAnalogMode;                                           // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x000A(0x0002) MISSED OFFSET (PADDING)
+		float                                                        Frequency;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Bandwidth;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        GainDb;                                                  // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEnabled : 1;                                            // 0x000C(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SourceEffectEQSettings
+	 * Size -> 0x0010
+	 */
+	struct FSourceEffectEQSettings
+	{
+	public:
+		TArray<struct FSourceEffectEQBand>                           EQBands;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SourceEffectDynamicsProcessorSettings
+	 * Size -> 0x0028
+	 */
+	struct FSourceEffectDynamicsProcessorSettings
+	{
+	public:
+		ESourceEffectDynamicsProcessorType                           DynamicsProcessorType;                                   // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESourceEffectDynamicsPeakMode                                PeakMode;                                                // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        LookAheadMsec;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        AttackTimeMsec;                                          // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ReleaseTimeMsec;                                         // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ThresholdDb;                                             // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Ratio;                                                   // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        KneeBandwidthDb;                                         // 0x0018(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        InputGainDb;                                             // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        OutputGainDb;                                            // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bStereoLinked : 1;                                       // 0x0024(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bAnalogMode : 1;                                         // 0x0024(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -687,68 +697,17 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SourceEffectEQBand
-	 * Size -> 0x0010
-	 */
-	struct FSourceEffectEQBand
-	{
-	public:
-		float                                                        Frequency;                                               // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Bandwidth;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        GainDb;                                                  // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEnabled : 1;                                            // 0x000C(0x0001) BIT_FIELD Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x000D(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectEQSettings
-	 * Size -> 0x0010
-	 */
-	struct FSourceEffectEQSettings
-	{
-	public:
-		TArray<struct FSourceEffectEQBand>                           EQBands;                                                 // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectFoldbackDistortionSettings
+	 * ScriptStruct Synthesis.SourceEffectEnvelopeFollowerSettings
 	 * Size -> 0x000C
 	 */
-	struct FSourceEffectFoldbackDistortionSettings
+	struct FSourceEffectEnvelopeFollowerSettings
 	{
 	public:
-		float                                                        InputGainDb;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        ThresholdDb;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        OutputGainDb;                                            // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectPhaserSettings
-	 * Size -> 0x0010
-	 */
-	struct FSourceEffectPhaserSettings
-	{
-	public:
-		float                                                        WetLevel;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Feedback;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EPhaserLFOType                                               LFOType;                                                 // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         UseQuadraturePhase;                                      // 0x000D(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x000E(0x0002) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectMidSideSpreaderSettings
-	 * Size -> 0x0008
-	 */
-	struct FSourceEffectMidSideSpreaderSettings
-	{
-	public:
-		float                                                        SpreadAmount;                                            // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EStereoChannelMode                                           InputMode;                                               // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EStereoChannelMode                                           OutputMode;                                              // 0x0005(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bEqualPower;                                             // 0x0006(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0007(0x0001) MISSED OFFSET (PADDING)
+		float                                                        AttackTime;                                              // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ReleaseTime;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EEnvelopeFollowerPeakMode                                    PeakMode;                                                // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bIsAnalogMode;                                           // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x000A(0x0002) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -769,6 +728,43 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Synthesis.SourceEffectFoldbackDistortionSettings
+	 * Size -> 0x000C
+	 */
+	struct FSourceEffectFoldbackDistortionSettings
+	{
+	public:
+		float                                                        InputGainDb;                                             // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        ThresholdDb;                                             // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        OutputGainDb;                                            // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SourceEffectMidSideSpreaderSettings
+	 * Size -> 0x0008
+	 */
+	struct FSourceEffectMidSideSpreaderSettings
+	{
+	public:
+		float                                                        SpreadAmount;                                            // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EStereoChannelMode                                           InputMode;                                               // 0x0004(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EStereoChannelMode                                           OutputMode;                                              // 0x0005(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bEqualPower;                                             // 0x0006(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0007(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SourceEffectPannerSettings
+	 * Size -> 0x0008
+	 */
+	struct FSourceEffectPannerSettings
+	{
+	public:
+		float                                                        Spread;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Pan;                                                     // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct Synthesis.SourceEffectSimpleDelaySettings
 	 * Size -> 0x0018
 	 */
@@ -785,46 +781,18 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SourceEffectStereoDelaySettings
-	 * Size -> 0x0024
+	 * ScriptStruct Synthesis.SourceEffectPhaserSettings
+	 * Size -> 0x0010
 	 */
-	struct FSourceEffectStereoDelaySettings
+	struct FSourceEffectPhaserSettings
 	{
 	public:
-		EStereoDelaySourceEffect                                     DelayMode;                                               // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        DelayTimeMsec;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        WetLevel;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Frequency;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        Feedback;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DelayRatio;                                              // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        WetLevel;                                                // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DryLevel;                                                // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bFilterEnabled;                                          // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EStereoDelayFiltertype                                       FilterType;                                              // 0x0019(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x2];                                   // 0x001A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        FilterFrequency;                                         // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        FilterQ;                                                 // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectWaveShaperSettings
-	 * Size -> 0x0008
-	 */
-	struct FSourceEffectWaveShaperSettings
-	{
-	public:
-		float                                                        Amount;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        OutputGainDb;                                            // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Synthesis.SourceEffectPannerSettings
-	 * Size -> 0x0008
-	 */
-	struct FSourceEffectPannerSettings
-	{
-	public:
-		float                                                        Spread;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        Pan;                                                     // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EPhaserLFOType                                               LFOType;                                                 // 0x000C(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         UseQuadraturePhase;                                      // 0x000D(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x000E(0x0002) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -851,16 +819,26 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SubmixEffectFlexiverbSettings
-	 * Size -> 0x0010
+	 * ScriptStruct Synthesis.SourceEffectWaveShaperSettings
+	 * Size -> 0x0008
 	 */
-	struct FSubmixEffectFlexiverbSettings
+	struct FSourceEffectWaveShaperSettings
 	{
 	public:
-		float                                                        PreDelay;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DecayTime;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RoomDampening;                                           // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      Complexity;                                              // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Amount;                                                  // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        OutputGainDb;                                            // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SubmixEffectDelaySettings
+	 * Size -> 0x000C
+	 */
+	struct FSubmixEffectDelaySettings
+	{
+	public:
+		float                                                        MaximumDelayLength;                                      // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        InterpolationTime;                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DelayLength;                                             // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -885,15 +863,38 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SubmixEffectDelaySettings
+	 * ScriptStruct Synthesis.SubmixEffectFilterSettings
 	 * Size -> 0x000C
 	 */
-	struct FSubmixEffectDelaySettings
+	struct FSubmixEffectFilterSettings
 	{
 	public:
-		float                                                        MaximumDelayLength;                                      // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        InterpolationTime;                                       // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        DelayLength;                                             // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESubmixFilterType                                            FilterType;                                              // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESubmixFilterAlgorithm                                       FilterAlgorithm;                                         // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        FilterFrequency;                                         // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        FilterQ;                                                 // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SourceEffectStereoDelaySettings
+	 * Size -> 0x0024
+	 */
+	struct FSourceEffectStereoDelaySettings
+	{
+	public:
+		EStereoDelaySourceEffect                                     DelayMode;                                               // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0001(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        DelayTimeMsec;                                           // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        Feedback;                                                // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DelayRatio;                                              // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        WetLevel;                                                // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DryLevel;                                                // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bFilterEnabled;                                          // 0x0018(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EStereoDelayFiltertype                                       FilterType;                                              // 0x0019(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x2];                                   // 0x001A(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        FilterFrequency;                                         // 0x001C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        FilterQ;                                                 // 0x0020(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -925,17 +926,16 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SubmixEffectFilterSettings
-	 * Size -> 0x000C
+	 * ScriptStruct Synthesis.SubmixEffectFlexiverbSettings
+	 * Size -> 0x0010
 	 */
-	struct FSubmixEffectFilterSettings
+	struct FSubmixEffectFlexiverbSettings
 	{
 	public:
-		ESubmixFilterType                                            FilterType;                                              // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESubmixFilterAlgorithm                                       FilterAlgorithm;                                         // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x2];                                   // 0x0002(0x0002) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        FilterFrequency;                                         // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        FilterQ;                                                 // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        PreDelay;                                                // 0x0000(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        DecayTime;                                               // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RoomDampening;                                           // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      Complexity;                                              // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -1007,18 +1007,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Synthesis.SynthSlateStyle
-	 * Size -> 0x0008 (FullSize[0x0010] - InheritedSize[0x0008])
-	 */
-	struct FSynthSlateStyle : public FSlateWidgetStyle
-	{
-	public:
-		ESynthSlateSizeType                                          SizeType;                                                // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESynthSlateColorStyle                                        ColorStyle;                                              // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct Synthesis.PatchId
 	 * Size -> 0x0004
 	 */
@@ -1052,6 +1040,18 @@ namespace SDK
 		float                                                        WetLevel;                                                // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        DryLevel;                                                // 0x0010(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        Spread;                                                  // 0x0014(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Synthesis.SynthSlateStyle
+	 * Size -> 0x0008 (FullSize[0x0010] - InheritedSize[0x0008])
+	 */
+	struct FSynthSlateStyle : public FSlateWidgetStyle
+	{
+	public:
+		ESynthSlateSizeType                                          SizeType;                                                // 0x0008(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESynthSlateColorStyle                                        ColorStyle;                                              // 0x0009(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
 	};
 
 }

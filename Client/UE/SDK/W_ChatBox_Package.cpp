@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::SetInput()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29066);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49315);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::ShowChatBox(bool bTeamChat)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29065);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49314);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29064);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49313);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::BndEvt__EditableTextBox_220_K2Node_ComponentBoundEvent_25_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29063);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49312);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::OnChatMessageReceived_Event_1(const struct FRChatMessage& Message)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29062);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49311);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::HideChat()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29061);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49310);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::HideChatBox()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49309);
 		
 		struct
 		{
@@ -179,7 +179,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::UpdateHudVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49308);
 		
 		struct
 		{
@@ -201,7 +201,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29058);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49307);
 		
 		struct
 		{
@@ -225,7 +225,7 @@ namespace SDK
 	 */
 	void UW_ChatBox_C::ExecuteUbergraph_W_ChatBox(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(29057);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49306);
 		
 		struct
 		{
@@ -249,7 +249,7 @@ namespace SDK
 	 */
 	UClass* UW_ChatBox_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(29056);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49305);
 		return ptr;
 	}
 

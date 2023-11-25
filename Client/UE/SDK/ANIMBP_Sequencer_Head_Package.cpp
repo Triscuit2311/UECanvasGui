@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Sequencer_Head_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(73953);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74169);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Sequencer_Head_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(73952);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74168);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UANIMBP_Sequencer_Head_C::ExecuteUbergraph_ANIMBP_Sequencer_Head(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(73951);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(74167);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Sequencer_Head_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(73950);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(74166);
 		return ptr;
 	}
 

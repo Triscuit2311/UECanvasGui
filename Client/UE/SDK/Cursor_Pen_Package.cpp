@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UCursor_Pen_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(21603);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49424);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UCursor_Pen_C::ExecuteUbergraph_Cursor_Pen(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(21602);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49423);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	UClass* UCursor_Pen_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(21601);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49422);
 		return ptr;
 	}
 

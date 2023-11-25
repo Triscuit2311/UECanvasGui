@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -47,17 +47,17 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     DataToStore                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     DataToStore                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::PutSecureTransform(const class FString& Key, const struct PCoreUObject_FTransform& DataToStore)
+	bool UMagicLeapSecureStorage::PutSecureTransform(const class FString& Key, const struct FTransform& DataToStore)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14323);
 		
 		struct
 		{
 			class FString                                      Key;
-			struct PCoreUObject_FTransform                     DataToStore;
+			struct FTransform                     DataToStore;
 			bool                                               ReturnValue;
 		} params;
 		params.Key = Key;
@@ -379,17 +379,17 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		class FString                                      Key                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     DataToRetrieve                                             (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     DataToRetrieve                                             (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool UMagicLeapSecureStorage::GetSecureTransform(const class FString& Key, struct PCoreUObject_FTransform* DataToRetrieve)
+	bool UMagicLeapSecureStorage::GetSecureTransform(const class FString& Key, struct FTransform* DataToRetrieve)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14312);
 		
 		struct
 		{
 			class FString                                      Key;
-			struct PCoreUObject_FTransform                     DataToRetrieve;
+			struct FTransform                     DataToRetrieve;
 			bool                                               ReturnValue;
 		} params;
 		params.Key = Key;

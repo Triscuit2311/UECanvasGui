@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35831);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40252);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::PopulateOptions(TMap<class FString, class FText> Options)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35830);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40251);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OptionClicked(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35829);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40250);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::FooterOptionClicked(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35828);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40249);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OptionHovered(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35827);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40248);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::BndEvt__w_DropdownMenu_btn_Clickaway_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35826);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40247);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::ExecuteUbergraph_w_DropdownMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35825);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40246);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OnClickaway__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35824);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40245);
 		
 		struct
 		{
@@ -204,7 +204,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OnOptionHovered__DelegateSignature(const class FString& OptionID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35823);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40244);
 		
 		struct
 		{
@@ -228,7 +228,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OnFooterOptionSelected__DelegateSignature(const class FString& OptionID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35822);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40243);
 		
 		struct
 		{
@@ -252,7 +252,7 @@ namespace SDK
 	 */
 	void Uw_DropdownMenu_C::OnOptionSelected__DelegateSignature(const class FString& OptionID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35821);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40242);
 		
 		struct
 		{
@@ -275,7 +275,7 @@ namespace SDK
 	 */
 	UClass* Uw_DropdownMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35820);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40241);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -25,7 +25,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::ApplyDamageState(class UImage* InImage, bool* bDamagedLimb, bool* bFlashingLimb, float LimbHealth, const class FScriptDelegate& Event)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27257);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43920);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::SetLimbDamaged(bool* bLimb, bool* bNewlyDamaged)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27256);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43919);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::UpdatePaperdollPartToHealedColor(bool bRightArm, bool LeftArm, bool Torso, bool Head, bool RightLeg, bool LeftLeg)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27255);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43918);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::SetDamageState(bool bHeadHit, bool bBodyHit, bool bLeftArmHit, bool bRightArmHit, bool bLeftLegHit, bool bRightLegHit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27254);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43917);
 		
 		struct
 		{
@@ -169,7 +169,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetTorsoDmgVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27253);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43916);
 		
 		struct
 		{
@@ -193,7 +193,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetLegDmgRightVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27252);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43915);
 		
 		struct
 		{
@@ -217,7 +217,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetLegDmgLeftVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27251);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43914);
 		
 		struct
 		{
@@ -241,7 +241,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetHeadDmgVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27250);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43913);
 		
 		struct
 		{
@@ -265,7 +265,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetArmDmgRightVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43912);
 		
 		struct
 		{
@@ -289,7 +289,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_DamagePaperdoll_C::GetArmDmgLeftVisibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43911);
 		
 		struct
 		{
@@ -313,7 +313,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingHead()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43910);
 		
 		struct
 		{
@@ -334,7 +334,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingLeftLeg()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27246);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43909);
 		
 		struct
 		{
@@ -355,7 +355,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingRightLeg()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27245);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43908);
 		
 		struct
 		{
@@ -376,7 +376,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingLeftArm()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27244);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43907);
 		
 		struct
 		{
@@ -397,7 +397,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingRightArm()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43906);
 		
 		struct
 		{
@@ -418,7 +418,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::StopFlashingTorso()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27242);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43905);
 		
 		struct
 		{
@@ -441,7 +441,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27241);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43904);
 		
 		struct
 		{
@@ -466,7 +466,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27240);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43903);
 		
 		struct
 		{
@@ -493,7 +493,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::OnBodyPartHit(bool Head, bool bBodyHit, bool LeftArm, bool RightArm, bool LeftLeg, bool RightLeg)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27239);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43902);
 		
 		struct
 		{
@@ -527,7 +527,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::UpdateHealth(float Health)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27238);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43901);
 		
 		struct
 		{
@@ -550,7 +550,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::OnInitialized()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27237);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43900);
 		
 		struct
 		{
@@ -572,7 +572,7 @@ namespace SDK
 	 */
 	void UW_DamagePaperdoll_C::ExecuteUbergraph_W_DamagePaperdoll(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27236);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43899);
 		
 		struct
 		{
@@ -595,7 +595,7 @@ namespace SDK
 	 */
 	UClass* UW_DamagePaperdoll_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27235);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43898);
 		return ptr;
 	}
 

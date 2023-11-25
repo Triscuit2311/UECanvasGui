@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_LensFlare_FlareGun_C::InitFlare()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48687);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36417);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ABP_LensFlare_FlareGun_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48686);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36416);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void ABP_LensFlare_FlareGun_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48685);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36415);
 		
 		struct
 		{
@@ -84,7 +84,7 @@ namespace SDK
 	 */
 	void ABP_LensFlare_FlareGun_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48684);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36414);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	void ABP_LensFlare_FlareGun_C::ExecuteUbergraph_BP_LensFlare_FlareGun(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48683);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36413);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	UClass* ABP_LensFlare_FlareGun_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(48682);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36412);
 		return ptr;
 	}
 

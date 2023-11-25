@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UM1911_Camera_Holster_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54089);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40979);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UM1911_Camera_Holster_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54088);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40978);
 		return ptr;
 	}
 

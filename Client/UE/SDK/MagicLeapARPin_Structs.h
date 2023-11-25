@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,17 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum MagicLeapARPin.EMagicLeapARPinType
-	 */
-	enum class EMagicLeapARPinType : uint8_t
-	{
-		SingleUserSingleSession = 0,
-		SingleUserMultiSession  = 1,
-		MultiUserMultiSession   = 2,
-		MAX                     = 3
-	};
-
 	/**
 	 * Enum MagicLeapARPin.EMagicLeapAutoPinType
 	 */
@@ -56,9 +45,30 @@ namespace SDK
 		MAX                     = 12
 	};
 
+	/**
+	 * Enum MagicLeapARPin.EMagicLeapARPinType
+	 */
+	enum class EMagicLeapARPinType : uint8_t
+	{
+		SingleUserSingleSession = 0,
+		SingleUserMultiSession  = 1,
+		MultiUserMultiSession   = 2,
+		MAX                     = 3
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct MagicLeapARPin.MagicLeapARPinObjectIdList
+	 * Size -> 0x0050
+	 */
+	struct FMagicLeapARPinObjectIdList
+	{
+	public:
+		TSet<class FString>                                          ObjectIdList;                                            // 0x0000(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct MagicLeapARPin.MagicLeapARPinState
 	 * Size -> 0x0014
@@ -72,16 +82,6 @@ namespace SDK
 		float                                                        TranslationError;                                        // 0x000C(0x0004) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EMagicLeapARPinType                                          PinType;                                                 // 0x0010(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0011(0x0003) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MagicLeapARPin.MagicLeapARPinObjectIdList
-	 * Size -> 0x0050
-	 */
-	struct FMagicLeapARPinObjectIdList
-	{
-	public:
-		TSet<class FString>                                          ObjectIdList;                                            // 0x0000(0x0050) Edit, EditConst, NativeAccessSpecifierPublic
 	};
 
 	/**

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_ReadyRoomWidget_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27104);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43767);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_ReadyRoomWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27103);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43766);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_ReadyRoomWidget_C::ExecuteUbergraph_W_ReadyRoomWidget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27102);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43765);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_ReadyRoomWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27101);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43764);
 		return ptr;
 	}
 

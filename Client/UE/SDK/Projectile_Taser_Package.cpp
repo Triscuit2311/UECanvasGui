@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AProjectile_Taser_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54559);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39049);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void AProjectile_Taser_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54558);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39048);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void AProjectile_Taser_C::OnDeflect(const struct FHitResult& DeflectionHit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54557);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39047);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void AProjectile_Taser_C::ExecuteUbergraph_Projectile_Taser(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54556);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39046);
 		
 		struct
 		{
@@ -110,7 +110,7 @@ namespace SDK
 	 */
 	UClass* AProjectile_Taser_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54555);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39045);
 		return ptr;
 	}
 

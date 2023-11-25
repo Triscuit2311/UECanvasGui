@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,16 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class AppleImageUtils.AppleImageInterface
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class IAppleImageInterface : public IInterface
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy
 	 * Size -> 0x0060 (FullSize[0x0088] - InheritedSize[0x0028])
@@ -45,6 +35,16 @@ namespace SDK
 		class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToPNG(class UTexture* SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate);
 		class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToJPEG(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate);
 		class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToHEIF(class UTexture* SourceImage, int32_t Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AppleImageUtils.AppleImageInterface
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class IAppleImageInterface : public IInterface
+	{
+	public:
 		static UClass* StaticClass();
 	};
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -31,7 +31,7 @@ namespace SDK
 	struct FMagicLeapSharedWorldAlignmentTransforms
 	{
 	public:
-		TArray<struct PCoreUObject_FTransform>                       AlignmentTransforms;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       AlignmentTransforms;                                     // 0x0000(0x0010) BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**

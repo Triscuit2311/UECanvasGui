@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,48 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class Zeuzsdk.ZeuzApiApikey
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiApikey : public UBlueprintFunctionLibrary
+	{
+	public:
+		void DelegateApikeyUpdateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
+		void DelegateApikeyUpdateBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyUpdateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
+		void DelegateApikeySetpwhashBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
+		void DelegateApikeySetpwhashBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeySetpwhashBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
+		void DelegateApikeyRevokeBPS__DelegateSignature();
+		void DelegateApikeyRevokeBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyRevokeBP__DelegateSignature(const class FString& Error);
+		void DelegateApikeyGetBPS__DelegateSignature(TArray<struct FZeuzAPIKey> Result);
+		void DelegateApikeyGetBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyGetBP__DelegateSignature(TArray<struct FZeuzAPIKey> Result, const class FString& Error);
+		void DelegateApikeyGetallBPS__DelegateSignature(TArray<struct FZeuzAPIKey> Result);
+		void DelegateApikeyGetallBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyGetallBP__DelegateSignature(TArray<struct FZeuzAPIKey> Result, const class FString& Error);
+		void DelegateApikeyGenerateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
+		void DelegateApikeyGenerateBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyGenerateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
+		void DelegateApikeyDeleteBPS__DelegateSignature();
+		void DelegateApikeyDeleteBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyDeleteBP__DelegateSignature(const class FString& Error);
+		void DelegateApikeyCreateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
+		void DelegateApikeyCreateBPF__DelegateSignature(const class FString& Error);
+		void DelegateApikeyCreateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
+		void ApikeyUpdateBP(const struct FZeuzAPIKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeySetpwhashBP(const struct FZeuzAPIKeyPwHashIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyRevokeBP(const struct FZeuzAPIKeyDeleteIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyGetBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyGetallBP(const struct FZeuzAPIKeyGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyGenerateBP(const struct FZeuzAPIKeyGenerateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyDeleteBP(const struct FZeuzAPIKeyDeleteIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ApikeyCreateBP(const struct FZeuzAPIKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class Zeuzsdk.ZeuzApiAccount
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
@@ -207,86 +249,54 @@ namespace SDK
 	};
 
 	/**
-	 * Class Zeuzsdk.ZeuzApiApikey
+	 * Class Zeuzsdk.ZeuzApiAuth
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UZeuzApiApikey : public UBlueprintFunctionLibrary
+	class UZeuzApiAuth : public UBlueprintFunctionLibrary
 	{
 	public:
-		void DelegateApikeyUpdateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
-		void DelegateApikeyUpdateBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyUpdateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
-		void DelegateApikeySetpwhashBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
-		void DelegateApikeySetpwhashBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeySetpwhashBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
-		void DelegateApikeyRevokeBPS__DelegateSignature();
-		void DelegateApikeyRevokeBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyRevokeBP__DelegateSignature(const class FString& Error);
-		void DelegateApikeyGetBPS__DelegateSignature(TArray<struct FZeuzAPIKey> Result);
-		void DelegateApikeyGetBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyGetBP__DelegateSignature(TArray<struct FZeuzAPIKey> Result, const class FString& Error);
-		void DelegateApikeyGetallBPS__DelegateSignature(TArray<struct FZeuzAPIKey> Result);
-		void DelegateApikeyGetallBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyGetallBP__DelegateSignature(TArray<struct FZeuzAPIKey> Result, const class FString& Error);
-		void DelegateApikeyGenerateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
-		void DelegateApikeyGenerateBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyGenerateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
-		void DelegateApikeyDeleteBPS__DelegateSignature();
-		void DelegateApikeyDeleteBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyDeleteBP__DelegateSignature(const class FString& Error);
-		void DelegateApikeyCreateBPS__DelegateSignature(const struct FZeuzAPIKey& Result);
-		void DelegateApikeyCreateBPF__DelegateSignature(const class FString& Error);
-		void DelegateApikeyCreateBP__DelegateSignature(const struct FZeuzAPIKey& Result, const class FString& Error);
-		void ApikeyUpdateBP(const struct FZeuzAPIKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeySetpwhashBP(const struct FZeuzAPIKeyPwHashIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyRevokeBP(const struct FZeuzAPIKeyDeleteIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyGetBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyGetallBP(const struct FZeuzAPIKeyGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyGenerateBP(const struct FZeuzAPIKeyGenerateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyDeleteBP(const struct FZeuzAPIKeyDeleteIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ApikeyCreateBP(const struct FZeuzAPIKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateAuthSessiondelBPS__DelegateSignature();
+		void DelegateAuthSessiondelBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthSessiondelBP__DelegateSignature(const class FString& Error);
+		void DelegateAuthLogoutBPS__DelegateSignature();
+		void DelegateAuthLogoutBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthLogoutBP__DelegateSignature(const class FString& Error);
+		void DelegateAuthLoginBPS__DelegateSignature(const struct FZeuzAuthLoginResult& Result);
+		void DelegateAuthLoginBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthLoginBP__DelegateSignature(const struct FZeuzAuthLoginResult& Result, const class FString& Error);
+		void DelegateAuthCheckBPS__DelegateSignature(const struct FZeuzTimestamp& Result);
+		void DelegateAuthCheckBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthCheckBP__DelegateSignature(const struct FZeuzTimestamp& Result, const class FString& Error);
+		void DelegateAuthActivesessionsgetBPS__DelegateSignature(TArray<struct FZeuzSession> Result);
+		void DelegateAuthActivesessionsgetBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthActivesessionsgetBP__DelegateSignature(TArray<struct FZeuzSession> Result, const class FString& Error);
+		void AuthSessiondelBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void AuthLogoutBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void AuthLoginBP(const struct FZeuzAuthLoginIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void AuthCheckBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void AuthActivesessionsgetBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class Zeuzsdk.ZeuzApiImagemanager
+	 * Class Zeuzsdk.ZeuzApiKVStore
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UZeuzApiImagemanager : public UBlueprintFunctionLibrary
+	class UZeuzApiKVStore : public UBlueprintFunctionLibrary
 	{
 	public:
-		void ImagemanagerPushFileUrlBP(const struct FZeuzImageManagerPresignedFileUrlIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerPushBP(const struct FZeuzImageManagerManifest& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerPullFileUrlBP(const struct FZeuzImageManagerPresignedFileUrlIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerPullBP(const struct FZeuzImageManagerPullInput& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerPublishBP(const struct FZeuzImageManagerPublishInput& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerListBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerGetpublishstateBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ImagemanagerDiscardBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateImagemanagerPushFileUrlBPS__DelegateSignature(const class FString& Result);
-		void DelegateImagemanagerPushFileUrlBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerPushFileUrlBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateImagemanagerPushBPS__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result);
-		void DelegateImagemanagerPushBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerPushBP__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result, const class FString& Error);
-		void DelegateImagemanagerPullFileUrlBPS__DelegateSignature(const class FString& Result);
-		void DelegateImagemanagerPullFileUrlBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerPullFileUrlBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateImagemanagerPullBPS__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result);
-		void DelegateImagemanagerPullBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerPullBP__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result, const class FString& Error);
-		void DelegateImagemanagerPublishBPS__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result);
-		void DelegateImagemanagerPublishBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerPublishBP__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result, const class FString& Error);
-		void DelegateImagemanagerListBPS__DelegateSignature(TArray<struct FZeuzImageManagerListEntry> Result);
-		void DelegateImagemanagerListBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerListBP__DelegateSignature(TArray<struct FZeuzImageManagerListEntry> Result, const class FString& Error);
-		void DelegateImagemanagerGetpublishstateBPS__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result);
-		void DelegateImagemanagerGetpublishstateBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerGetpublishstateBP__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result, const class FString& Error);
-		void DelegateImagemanagerDiscardBPS__DelegateSignature();
-		void DelegateImagemanagerDiscardBPF__DelegateSignature(const class FString& Error);
-		void DelegateImagemanagerDiscardBP__DelegateSignature(const class FString& Error);
+		void KVStorePutBP(const struct FZeuzKVStorePutIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void KVStoreGetBP(const struct FZeuzKVStoreKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void KVStoreDelBP(const struct FZeuzKVStoreDelIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateKVStorePutBPS__DelegateSignature();
+		void DelegateKVStorePutBPF__DelegateSignature(const class FString& Error);
+		void DelegateKVStorePutBP__DelegateSignature(const class FString& Error);
+		void DelegateKVStoreGetBPS__DelegateSignature(const struct FZeuzKVStoreKVEntry& Result);
+		void DelegateKVStoreGetBPF__DelegateSignature(const class FString& Error);
+		void DelegateKVStoreGetBP__DelegateSignature(const struct FZeuzKVStoreKVEntry& Result, const class FString& Error);
+		void DelegateKVStoreDelBPS__DelegateSignature();
+		void DelegateKVStoreDelBPF__DelegateSignature(const class FString& Error);
+		void DelegateKVStoreDelBP__DelegateSignature(const class FString& Error);
 		static UClass* StaticClass();
 	};
 
@@ -317,50 +327,28 @@ namespace SDK
 	};
 
 	/**
-	 * Class Zeuzsdk.ZeuzApiKVStore
+	 * Class Zeuzsdk.ZeuzApiEcho
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UZeuzApiKVStore : public UBlueprintFunctionLibrary
+	class UZeuzApiEcho : public UBlueprintFunctionLibrary
 	{
 	public:
-		void KVStorePutBP(const struct FZeuzKVStorePutIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void KVStoreGetBP(const struct FZeuzKVStoreKey& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void KVStoreDelBP(const struct FZeuzKVStoreDelIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateKVStorePutBPS__DelegateSignature();
-		void DelegateKVStorePutBPF__DelegateSignature(const class FString& Error);
-		void DelegateKVStorePutBP__DelegateSignature(const class FString& Error);
-		void DelegateKVStoreGetBPS__DelegateSignature(const struct FZeuzKVStoreKVEntry& Result);
-		void DelegateKVStoreGetBPF__DelegateSignature(const class FString& Error);
-		void DelegateKVStoreGetBP__DelegateSignature(const struct FZeuzKVStoreKVEntry& Result, const class FString& Error);
-		void DelegateKVStoreDelBPS__DelegateSignature();
-		void DelegateKVStoreDelBPF__DelegateSignature(const class FString& Error);
-		void DelegateKVStoreDelBP__DelegateSignature(const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiLogsearch
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiLogsearch : public UBlueprintFunctionLibrary
-	{
-	public:
-		void LogsearchStartexportBP(const struct FZeuzLogsearchAccountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void LogsearchDownloadexportBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void LogsearchCheckexportBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void LogsearchAccountBP(const struct FZeuzLogsearchAccountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateLogsearchStartexportBPS__DelegateSignature(const class FString& Result);
-		void DelegateLogsearchStartexportBPF__DelegateSignature(const class FString& Error);
-		void DelegateLogsearchStartexportBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateLogsearchDownloadexportBPS__DelegateSignature(const class FString& Result);
-		void DelegateLogsearchDownloadexportBPF__DelegateSignature(const class FString& Error);
-		void DelegateLogsearchDownloadexportBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateLogsearchCheckexportBPS__DelegateSignature(const struct FZeuzLogsearchLogsStatus& Result);
-		void DelegateLogsearchCheckexportBPF__DelegateSignature(const class FString& Error);
-		void DelegateLogsearchCheckexportBP__DelegateSignature(const struct FZeuzLogsearchLogsStatus& Result, const class FString& Error);
-		void DelegateLogsearchAccountBPS__DelegateSignature(const struct FZeuzLogsearchAccountOut& Result);
-		void DelegateLogsearchAccountBPF__DelegateSignature(const class FString& Error);
-		void DelegateLogsearchAccountBP__DelegateSignature(const struct FZeuzLogsearchAccountOut& Result, const class FString& Error);
+		void Echo4BP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void Echo3BP(const struct FZeuzEcho3In& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void Echo2BP(const struct FZeuzEcho2In& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void Echo1BP(const struct FZeuzEchoIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateEcho4BPS__DelegateSignature(const class FString& Result);
+		void DelegateEcho4BPF__DelegateSignature(const class FString& Error);
+		void DelegateEcho4BP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateEcho3BPS__DelegateSignature(const struct FZeuzEchoOut& Result);
+		void DelegateEcho3BPF__DelegateSignature(const class FString& Error);
+		void DelegateEcho3BP__DelegateSignature(const struct FZeuzEchoOut& Result, const class FString& Error);
+		void DelegateEcho2BPS__DelegateSignature(const struct FZeuzEcho2Out& Result);
+		void DelegateEcho2BPF__DelegateSignature(const class FString& Error);
+		void DelegateEcho2BP__DelegateSignature(const struct FZeuzEcho2Out& Result, const class FString& Error);
+		void DelegateEcho1BPS__DelegateSignature(const struct FZeuzEchoOut& Result);
+		void DelegateEcho1BPF__DelegateSignature(const class FString& Error);
+		void DelegateEcho1BP__DelegateSignature(const struct FZeuzEchoOut& Result, const class FString& Error);
 		static UClass* StaticClass();
 	};
 
@@ -415,112 +403,40 @@ namespace SDK
 	};
 
 	/**
-	 * Class Zeuzsdk.ZeuzApiPayload
+	 * Class Zeuzsdk.ZeuzApiMatchmaking
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UZeuzApiPayload : public UBlueprintFunctionLibrary
+	class UZeuzApiMatchmaking : public UBlueprintFunctionLibrary
 	{
 	public:
-		void PayloadUpdateBP(const struct FZeuzPayloadUpdateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadUnreserveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadStateupdateBP(const struct FZeuzPayloadStateGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadStateinfoBP(const struct FZeuzPayloadStateGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadResumeBP(const struct FZeuzPayloadResumeIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadRestartBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadReserveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadRemoveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadGetBP(const struct FZeuzPayloadGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadCreateBP(const struct FZeuzPayloadCreateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void PayloadAllocateBP(const struct FZeuzPayloadAllocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegatePayloadUpdateBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
-		void DelegatePayloadUpdateBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadUpdateBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
-		void DelegatePayloadUnreserveBPS__DelegateSignature(bool Result);
-		void DelegatePayloadUnreserveBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadUnreserveBP__DelegateSignature(bool Result, const class FString& Error);
-		void DelegatePayloadStateupdateBPS__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result);
-		void DelegatePayloadStateupdateBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadStateupdateBP__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result, const class FString& Error);
-		void DelegatePayloadStateinfoBPS__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result);
-		void DelegatePayloadStateinfoBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadStateinfoBP__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result, const class FString& Error);
-		void DelegatePayloadResumeBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
-		void DelegatePayloadResumeBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadResumeBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
-		void DelegatePayloadRestartBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
-		void DelegatePayloadRestartBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadRestartBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
-		void DelegatePayloadReserveBPS__DelegateSignature(bool Result);
-		void DelegatePayloadReserveBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadReserveBP__DelegateSignature(bool Result, const class FString& Error);
-		void DelegatePayloadRemoveBPS__DelegateSignature();
-		void DelegatePayloadRemoveBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadRemoveBP__DelegateSignature(const class FString& Error);
-		void DelegatePayloadGetBPS__DelegateSignature(const struct FZeuzPayloadGetOut& Result);
-		void DelegatePayloadGetBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadGetBP__DelegateSignature(const struct FZeuzPayloadGetOut& Result, const class FString& Error);
-		void DelegatePayloadCreateBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
-		void DelegatePayloadCreateBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadCreateBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
-		void DelegatePayloadAllocateBPS__DelegateSignature(TArray<struct FZeuzPayloadInfo> Result);
-		void DelegatePayloadAllocateBPF__DelegateSignature(const class FString& Error);
-		void DelegatePayloadAllocateBP__DelegateSignature(TArray<struct FZeuzPayloadInfo> Result, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiEcho
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiEcho : public UBlueprintFunctionLibrary
-	{
-	public:
-		void Echo4BP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void Echo3BP(const struct FZeuzEcho3In& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void Echo2BP(const struct FZeuzEcho2In& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void Echo1BP(const struct FZeuzEchoIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateEcho4BPS__DelegateSignature(const class FString& Result);
-		void DelegateEcho4BPF__DelegateSignature(const class FString& Error);
-		void DelegateEcho4BP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateEcho3BPS__DelegateSignature(const struct FZeuzEchoOut& Result);
-		void DelegateEcho3BPF__DelegateSignature(const class FString& Error);
-		void DelegateEcho3BP__DelegateSignature(const struct FZeuzEchoOut& Result, const class FString& Error);
-		void DelegateEcho2BPS__DelegateSignature(const struct FZeuzEcho2Out& Result);
-		void DelegateEcho2BPF__DelegateSignature(const class FString& Error);
-		void DelegateEcho2BP__DelegateSignature(const struct FZeuzEcho2Out& Result, const class FString& Error);
-		void DelegateEcho1BPS__DelegateSignature(const struct FZeuzEchoOut& Result);
-		void DelegateEcho1BPF__DelegateSignature(const class FString& Error);
-		void DelegateEcho1BP__DelegateSignature(const struct FZeuzEchoOut& Result, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiAuth
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiAuth : public UBlueprintFunctionLibrary
-	{
-	public:
-		void DelegateAuthSessiondelBPS__DelegateSignature();
-		void DelegateAuthSessiondelBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthSessiondelBP__DelegateSignature(const class FString& Error);
-		void DelegateAuthLogoutBPS__DelegateSignature();
-		void DelegateAuthLogoutBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthLogoutBP__DelegateSignature(const class FString& Error);
-		void DelegateAuthLoginBPS__DelegateSignature(const struct FZeuzAuthLoginResult& Result);
-		void DelegateAuthLoginBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthLoginBP__DelegateSignature(const struct FZeuzAuthLoginResult& Result, const class FString& Error);
-		void DelegateAuthCheckBPS__DelegateSignature(const struct FZeuzTimestamp& Result);
-		void DelegateAuthCheckBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthCheckBP__DelegateSignature(const struct FZeuzTimestamp& Result, const class FString& Error);
-		void DelegateAuthActivesessionsgetBPS__DelegateSignature(TArray<struct FZeuzSession> Result);
-		void DelegateAuthActivesessionsgetBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthActivesessionsgetBP__DelegateSignature(TArray<struct FZeuzSession> Result, const class FString& Error);
-		void AuthSessiondelBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void AuthLogoutBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void AuthLoginBP(const struct FZeuzAuthLoginIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void AuthCheckBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void AuthActivesessionsgetBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingUpdateBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingStatsBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingServerrefreshBP(const struct FZeuzMatchMakingServerInfo& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingServerdestroyBP(const struct FZeuzMatchMakingServerInfo& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingCreatepartyBP(const struct FZeuzMatchMakingPartyInit& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingCreateBP(const struct FZeuzMatchMakingInit& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MatchmakingCloseBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateMatchmakingUpdateBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
+		void DelegateMatchmakingUpdateBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingUpdateBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
+		void DelegateMatchmakingStatsBPS__DelegateSignature(const struct FZeuzMatchMakingStats& Result);
+		void DelegateMatchmakingStatsBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingStatsBP__DelegateSignature(const struct FZeuzMatchMakingStats& Result, const class FString& Error);
+		void DelegateMatchmakingServerrefreshBPS__DelegateSignature();
+		void DelegateMatchmakingServerrefreshBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingServerrefreshBP__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingServerdestroyBPS__DelegateSignature();
+		void DelegateMatchmakingServerdestroyBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingServerdestroyBP__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingCreatepartyBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
+		void DelegateMatchmakingCreatepartyBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingCreatepartyBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
+		void DelegateMatchmakingCreateBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
+		void DelegateMatchmakingCreateBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingCreateBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
+		void DelegateMatchmakingCloseBPS__DelegateSignature();
+		void DelegateMatchmakingCloseBPF__DelegateSignature(const class FString& Error);
+		void DelegateMatchmakingCloseBP__DelegateSignature(const class FString& Error);
 		static UClass* StaticClass();
 	};
 
@@ -579,6 +495,364 @@ namespace SDK
 		void DelegateLocalityLocationCreateBPS__DelegateSignature(const struct FZeuzLocation& Result);
 		void DelegateLocalityLocationCreateBPF__DelegateSignature(const class FString& Error);
 		void DelegateLocalityLocationCreateBP__DelegateSignature(const struct FZeuzLocation& Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiMetrics
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiMetrics : public UBlueprintFunctionLibrary
+	{
+	public:
+		void MetricsPayloadnetworksentBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsPayloadnetworkreceivedBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsPayloadmemoryusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsPayloadcpuusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsPayloadcountBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsMachinenetworksentBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsMachinenetworkreceivedBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsMachinememoryusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MetricsMachinecpuusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateMetricsPayloadnetworksentBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsPayloadnetworksentBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsPayloadnetworksentBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsPayloadnetworkreceivedBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsPayloadnetworkreceivedBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsPayloadnetworkreceivedBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsPayloadmemoryusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsPayloadmemoryusageBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsPayloadmemoryusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsPayloadcpuusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsPayloadcpuusageBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsPayloadcpuusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsPayloadcountBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsPayloadcountBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsPayloadcountBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsMachinenetworksentBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsMachinenetworksentBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsMachinenetworksentBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsMachinenetworkreceivedBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsMachinenetworkreceivedBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsMachinenetworkreceivedBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsMachinememoryusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsMachinememoryusageBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsMachinememoryusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		void DelegateMetricsMachinecpuusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
+		void DelegateMetricsMachinecpuusageBPF__DelegateSignature(const class FString& Error);
+		void DelegateMetricsMachinecpuusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiMachine
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiMachine : public UBlueprintFunctionLibrary
+	{
+	public:
+		void MachineUpdateresourceBP(const struct FZeuzMachineResourceUpdateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineSettagsBP(TArray<struct FZeuzMachineTagsSetIn> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineResourcedeprovisionBP(const struct FZeuzMachineResourceDeprovisionIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineGettagsBP(TArray<class FString> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineGetresourcesBP(const struct FZeuzMachineResourceGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineGetinfoBP(TArray<class FString> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineGetBP(const struct FZeuzMachineGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineDeallocateBP(const struct FZeuzMachineResourceDeallocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineCountresourcesBP(const struct FZeuzMachineResourcesCountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineAllocateBP(const struct FZeuzMachineResourceAllocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void MachineAddresourceBP(const struct FZeuzMachineResourceDataIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateMachineUpdateresourceBPS__DelegateSignature(const struct FZeuzMachineResourceInfo& Result);
+		void DelegateMachineUpdateresourceBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineUpdateresourceBP__DelegateSignature(const struct FZeuzMachineResourceInfo& Result, const class FString& Error);
+		void DelegateMachineSettagsBPS__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result);
+		void DelegateMachineSettagsBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineSettagsBP__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result, const class FString& Error);
+		void DelegateMachineResourcedeprovisionBPS__DelegateSignature();
+		void DelegateMachineResourcedeprovisionBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineResourcedeprovisionBP__DelegateSignature(const class FString& Error);
+		void DelegateMachineGettagsBPS__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result);
+		void DelegateMachineGettagsBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineGettagsBP__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result, const class FString& Error);
+		void DelegateMachineGetresourcesBPS__DelegateSignature(TArray<struct FZeuzMachineResourceInfo> Result);
+		void DelegateMachineGetresourcesBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineGetresourcesBP__DelegateSignature(TArray<struct FZeuzMachineResourceInfo> Result, const class FString& Error);
+		void DelegateMachineGetinfoBPS__DelegateSignature(TArray<struct FZeuzMachineInfo> Result);
+		void DelegateMachineGetinfoBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineGetinfoBP__DelegateSignature(TArray<struct FZeuzMachineInfo> Result, const class FString& Error);
+		void DelegateMachineGetBPS__DelegateSignature(const struct FZeuzMachineGetOut& Result);
+		void DelegateMachineGetBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineGetBP__DelegateSignature(const struct FZeuzMachineGetOut& Result, const class FString& Error);
+		void DelegateMachineDeallocateBPS__DelegateSignature(TArray<class FString> Result);
+		void DelegateMachineDeallocateBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineDeallocateBP__DelegateSignature(TArray<class FString> Result, const class FString& Error);
+		void DelegateMachineCountresourcesBPS__DelegateSignature(int32_t Result);
+		void DelegateMachineCountresourcesBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineCountresourcesBP__DelegateSignature(int32_t Result, const class FString& Error);
+		void DelegateMachineAllocateBPS__DelegateSignature(TArray<struct FZeuzMachineInfo> Result);
+		void DelegateMachineAllocateBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineAllocateBP__DelegateSignature(TArray<struct FZeuzMachineInfo> Result, const class FString& Error);
+		void DelegateMachineAddresourceBPS__DelegateSignature(const struct FZeuzMachineResourceInfo& Result);
+		void DelegateMachineAddresourceBPF__DelegateSignature(const class FString& Error);
+		void DelegateMachineAddresourceBP__DelegateSignature(const struct FZeuzMachineResourceInfo& Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiLogsearch
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiLogsearch : public UBlueprintFunctionLibrary
+	{
+	public:
+		void LogsearchStartexportBP(const struct FZeuzLogsearchAccountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void LogsearchDownloadexportBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void LogsearchCheckexportBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void LogsearchAccountBP(const struct FZeuzLogsearchAccountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateLogsearchStartexportBPS__DelegateSignature(const class FString& Result);
+		void DelegateLogsearchStartexportBPF__DelegateSignature(const class FString& Error);
+		void DelegateLogsearchStartexportBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateLogsearchDownloadexportBPS__DelegateSignature(const class FString& Result);
+		void DelegateLogsearchDownloadexportBPF__DelegateSignature(const class FString& Error);
+		void DelegateLogsearchDownloadexportBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateLogsearchCheckexportBPS__DelegateSignature(const struct FZeuzLogsearchLogsStatus& Result);
+		void DelegateLogsearchCheckexportBPF__DelegateSignature(const class FString& Error);
+		void DelegateLogsearchCheckexportBP__DelegateSignature(const struct FZeuzLogsearchLogsStatus& Result, const class FString& Error);
+		void DelegateLogsearchAccountBPS__DelegateSignature(const struct FZeuzLogsearchAccountOut& Result);
+		void DelegateLogsearchAccountBPF__DelegateSignature(const class FString& Error);
+		void DelegateLogsearchAccountBP__DelegateSignature(const struct FZeuzLogsearchAccountOut& Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiServerbrowser
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiServerbrowser : public UBlueprintFunctionLibrary
+	{
+	public:
+		void ServerbrowserRefreshBP(const struct FZeuzServerBrowserStateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ServerbrowserQueryBP(const struct FZeuzServerBrowserQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ServerbrowserDestroyBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateServerbrowserRefreshBPS__DelegateSignature();
+		void DelegateServerbrowserRefreshBPF__DelegateSignature(const class FString& Error);
+		void DelegateServerbrowserRefreshBP__DelegateSignature(const class FString& Error);
+		void DelegateServerbrowserQueryBPS__DelegateSignature(const struct FZeuzServerBrowserQueryOut& Result);
+		void DelegateServerbrowserQueryBPF__DelegateSignature(const class FString& Error);
+		void DelegateServerbrowserQueryBP__DelegateSignature(const struct FZeuzServerBrowserQueryOut& Result, const class FString& Error);
+		void DelegateServerbrowserDestroyBPS__DelegateSignature();
+		void DelegateServerbrowserDestroyBPF__DelegateSignature(const class FString& Error);
+		void DelegateServerbrowserDestroyBP__DelegateSignature(const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiImagemanager
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiImagemanager : public UBlueprintFunctionLibrary
+	{
+	public:
+		void ImagemanagerPushFileUrlBP(const struct FZeuzImageManagerPresignedFileUrlIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerPushBP(const struct FZeuzImageManagerManifest& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerPullFileUrlBP(const struct FZeuzImageManagerPresignedFileUrlIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerPullBP(const struct FZeuzImageManagerPullInput& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerPublishBP(const struct FZeuzImageManagerPublishInput& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerListBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerGetpublishstateBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void ImagemanagerDiscardBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateImagemanagerPushFileUrlBPS__DelegateSignature(const class FString& Result);
+		void DelegateImagemanagerPushFileUrlBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerPushFileUrlBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateImagemanagerPushBPS__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result);
+		void DelegateImagemanagerPushBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerPushBP__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result, const class FString& Error);
+		void DelegateImagemanagerPullFileUrlBPS__DelegateSignature(const class FString& Result);
+		void DelegateImagemanagerPullFileUrlBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerPullFileUrlBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateImagemanagerPullBPS__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result);
+		void DelegateImagemanagerPullBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerPullBP__DelegateSignature(const struct FZeuzImageManagerPushPullOutput& Result, const class FString& Error);
+		void DelegateImagemanagerPublishBPS__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result);
+		void DelegateImagemanagerPublishBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerPublishBP__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result, const class FString& Error);
+		void DelegateImagemanagerListBPS__DelegateSignature(TArray<struct FZeuzImageManagerListEntry> Result);
+		void DelegateImagemanagerListBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerListBP__DelegateSignature(TArray<struct FZeuzImageManagerListEntry> Result, const class FString& Error);
+		void DelegateImagemanagerGetpublishstateBPS__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result);
+		void DelegateImagemanagerGetpublishstateBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerGetpublishstateBP__DelegateSignature(const struct FZeuzImagemanagerPublishState& Result, const class FString& Error);
+		void DelegateImagemanagerDiscardBPS__DelegateSignature();
+		void DelegateImagemanagerDiscardBPF__DelegateSignature(const class FString& Error);
+		void DelegateImagemanagerDiscardBP__DelegateSignature(const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiSimpleAuth
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiSimpleAuth : public UBlueprintFunctionLibrary
+	{
+	public:
+		class FString StringHash(const class FString& Val);
+		void SimpleProfileUsercreateBP(const struct FZeuzSimpleProfileUserCreateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateSimpleProfileUsercreateBPS__DelegateSignature(const class FString& Result);
+		void DelegateSimpleProfileUsercreateBPF__DelegateSignature(const class FString& Error);
+		void DelegateSimpleProfileUsercreateBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		void DelegateAuthLoginBPS__DelegateSignature(const struct FZeuzContext& Context);
+		void DelegateAuthLoginBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthLoginBP__DelegateSignature(const struct FZeuzContext& Context, const class FString& Error);
+		void DelegateAuthCheckSessionBPS__DelegateSignature(const struct FZeuzTimestamp& Expires);
+		void DelegateAuthCheckSessionBPF__DelegateSignature(const class FString& Error);
+		void DelegateAuthCheckSessionBP__DelegateSignature(const struct FZeuzTimestamp& Expires, const class FString& Error);
+		class FString CalcPWHash(const class FString& Login, const class FString& Password);
+		void AuthLoginBP(const struct FZeuzSimpleAuthLoginIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx, bool SaveDefaultContext);
+		void AuthCheckSessionBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiUtil
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiUtil : public UBlueprintFunctionLibrary
+	{
+	public:
+		void TimerWithString(const class FScriptDelegate& Event, float Time, const class FString& Value);
+		void TimerDynamicDelegateS__DelegateSignature(const class FString& Value);
+		bool StructToVariant(class UProperty* AnyStruct, struct FZeuzVariant* Value);
+		bool StructToByteArrayJSON(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
+		bool StructToByteArrayBin(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
+		bool StructFromVariant(class UProperty** AnyStruct, const struct FZeuzVariant& Value);
+		bool StructFromByteArrayJSON(class UProperty** AnyStruct, const struct FZeuzByteArray& Value);
+		bool StructFromByteArrayBin(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
+		bool StringNotEmpty(const class FString& String);
+		bool StringIsEmpty(const class FString& String);
+		bool SaveGameToByteArray(const class FString& Filename, struct FZeuzByteArray* Value);
+		bool SaveGameFromByteArray(const struct FZeuzByteArray& Value, const class FString& Filename);
+		bool JsonToVariant(const class FString& Json, struct FZeuzVariant* Variant);
+		bool JsonFromVariant(const struct FZeuzVariant& Variant, class FString* Json);
+		class FString GetSaveGamePath(const class FString& Name);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiPing
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiPing : public UBlueprintFunctionLibrary
+	{
+	public:
+		void DoPingBP(const class FString& Target, float Timeout, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateDoPingBPS__DelegateSignature(const class FString& Target, float Duration, const class FString& Resolved);
+		void DelegateDoPingBPF__DelegateSignature(const class FString& Error);
+		void DelegateDoPingBP__DelegateSignature(const class FString& Target, float Duration, const class FString& Resolved, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiPayload
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiPayload : public UBlueprintFunctionLibrary
+	{
+	public:
+		void PayloadUpdateBP(const struct FZeuzPayloadUpdateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadUnreserveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadStateupdateBP(const struct FZeuzPayloadStateGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadStateinfoBP(const struct FZeuzPayloadStateGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadResumeBP(const struct FZeuzPayloadResumeIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadRestartBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadReserveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadRemoveBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadGetBP(const struct FZeuzPayloadGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadCreateBP(const struct FZeuzPayloadCreateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void PayloadAllocateBP(const struct FZeuzPayloadAllocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegatePayloadUpdateBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
+		void DelegatePayloadUpdateBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadUpdateBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
+		void DelegatePayloadUnreserveBPS__DelegateSignature(bool Result);
+		void DelegatePayloadUnreserveBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadUnreserveBP__DelegateSignature(bool Result, const class FString& Error);
+		void DelegatePayloadStateupdateBPS__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result);
+		void DelegatePayloadStateupdateBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadStateupdateBP__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result, const class FString& Error);
+		void DelegatePayloadStateinfoBPS__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result);
+		void DelegatePayloadStateinfoBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadStateinfoBP__DelegateSignature(TArray<struct FZeuzPayloadStateInfo> Result, const class FString& Error);
+		void DelegatePayloadResumeBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
+		void DelegatePayloadResumeBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadResumeBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
+		void DelegatePayloadRestartBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
+		void DelegatePayloadRestartBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadRestartBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
+		void DelegatePayloadReserveBPS__DelegateSignature(bool Result);
+		void DelegatePayloadReserveBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadReserveBP__DelegateSignature(bool Result, const class FString& Error);
+		void DelegatePayloadRemoveBPS__DelegateSignature();
+		void DelegatePayloadRemoveBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadRemoveBP__DelegateSignature(const class FString& Error);
+		void DelegatePayloadGetBPS__DelegateSignature(const struct FZeuzPayloadGetOut& Result);
+		void DelegatePayloadGetBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadGetBP__DelegateSignature(const struct FZeuzPayloadGetOut& Result, const class FString& Error);
+		void DelegatePayloadCreateBPS__DelegateSignature(const struct FZeuzPayloadInfo& Result);
+		void DelegatePayloadCreateBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadCreateBP__DelegateSignature(const struct FZeuzPayloadInfo& Result, const class FString& Error);
+		void DelegatePayloadAllocateBPS__DelegateSignature(TArray<struct FZeuzPayloadInfo> Result);
+		void DelegatePayloadAllocateBPF__DelegateSignature(const class FString& Error);
+		void DelegatePayloadAllocateBP__DelegateSignature(TArray<struct FZeuzPayloadInfo> Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiContext
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiContext : public UBlueprintFunctionLibrary
+	{
+	public:
+		void SetDefaultContext(const struct FZeuzContext& Ctx);
+		struct FZeuzContext GetDefaultContext();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzApiPubIP
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzApiPubIP : public UBlueprintFunctionLibrary
+	{
+	public:
+		void GetPublicIPBP(bool v6, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
+		void DelegateGetPublicIPBPS__DelegateSignature(const class FString& Result);
+		void DelegateGetPublicIPBPF__DelegateSignature(const class FString& Error);
+		void DelegateGetPublicIPBP__DelegateSignature(const class FString& Result, const class FString& Error);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzID
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzID : public UBlueprintFunctionLibrary
+	{
+	public:
+		bool IsValid(const class FString& ID);
+		bool IsType(const class FString& ID, EZeuzIDType typ);
+		EZeuzIDType GetType(const class FString& ID);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Zeuzsdk.ZeuzTagsUtil
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UZeuzTagsUtil : public UBlueprintFunctionLibrary
+	{
+	public:
+		class FString TagsToString(const struct FZeuzTags& In);
+		void StringToTags(const class FString& In, struct FZeuzTags* Out);
 		static UClass* StaticClass();
 	};
 
@@ -697,292 +971,18 @@ namespace SDK
 	};
 
 	/**
-	 * Class Zeuzsdk.ZeuzID
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzID : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool IsValid(const class FString& ID);
-		bool IsType(const class FString& ID, EZeuzIDType typ);
-		EZeuzIDType GetType(const class FString& ID);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiServerbrowser
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiServerbrowser : public UBlueprintFunctionLibrary
-	{
-	public:
-		void ServerbrowserRefreshBP(const struct FZeuzServerBrowserStateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ServerbrowserQueryBP(const struct FZeuzServerBrowserQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void ServerbrowserDestroyBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateServerbrowserRefreshBPS__DelegateSignature();
-		void DelegateServerbrowserRefreshBPF__DelegateSignature(const class FString& Error);
-		void DelegateServerbrowserRefreshBP__DelegateSignature(const class FString& Error);
-		void DelegateServerbrowserQueryBPS__DelegateSignature(const struct FZeuzServerBrowserQueryOut& Result);
-		void DelegateServerbrowserQueryBPF__DelegateSignature(const class FString& Error);
-		void DelegateServerbrowserQueryBP__DelegateSignature(const struct FZeuzServerBrowserQueryOut& Result, const class FString& Error);
-		void DelegateServerbrowserDestroyBPS__DelegateSignature();
-		void DelegateServerbrowserDestroyBPF__DelegateSignature(const class FString& Error);
-		void DelegateServerbrowserDestroyBP__DelegateSignature(const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiMachine
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiMachine : public UBlueprintFunctionLibrary
-	{
-	public:
-		void MachineUpdateresourceBP(const struct FZeuzMachineResourceUpdateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineSettagsBP(TArray<struct FZeuzMachineTagsSetIn> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineResourcedeprovisionBP(const struct FZeuzMachineResourceDeprovisionIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineGettagsBP(TArray<class FString> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineGetresourcesBP(const struct FZeuzMachineResourceGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineGetinfoBP(TArray<class FString> In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineGetBP(const struct FZeuzMachineGetIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineDeallocateBP(const struct FZeuzMachineResourceDeallocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineCountresourcesBP(const struct FZeuzMachineResourcesCountIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineAllocateBP(const struct FZeuzMachineResourceAllocateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MachineAddresourceBP(const struct FZeuzMachineResourceDataIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateMachineUpdateresourceBPS__DelegateSignature(const struct FZeuzMachineResourceInfo& Result);
-		void DelegateMachineUpdateresourceBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineUpdateresourceBP__DelegateSignature(const struct FZeuzMachineResourceInfo& Result, const class FString& Error);
-		void DelegateMachineSettagsBPS__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result);
-		void DelegateMachineSettagsBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineSettagsBP__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result, const class FString& Error);
-		void DelegateMachineResourcedeprovisionBPS__DelegateSignature();
-		void DelegateMachineResourcedeprovisionBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineResourcedeprovisionBP__DelegateSignature(const class FString& Error);
-		void DelegateMachineGettagsBPS__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result);
-		void DelegateMachineGettagsBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineGettagsBP__DelegateSignature(TArray<struct FZeuzMachineTagsSetIn> Result, const class FString& Error);
-		void DelegateMachineGetresourcesBPS__DelegateSignature(TArray<struct FZeuzMachineResourceInfo> Result);
-		void DelegateMachineGetresourcesBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineGetresourcesBP__DelegateSignature(TArray<struct FZeuzMachineResourceInfo> Result, const class FString& Error);
-		void DelegateMachineGetinfoBPS__DelegateSignature(TArray<struct FZeuzMachineInfo> Result);
-		void DelegateMachineGetinfoBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineGetinfoBP__DelegateSignature(TArray<struct FZeuzMachineInfo> Result, const class FString& Error);
-		void DelegateMachineGetBPS__DelegateSignature(const struct FZeuzMachineGetOut& Result);
-		void DelegateMachineGetBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineGetBP__DelegateSignature(const struct FZeuzMachineGetOut& Result, const class FString& Error);
-		void DelegateMachineDeallocateBPS__DelegateSignature(TArray<class FString> Result);
-		void DelegateMachineDeallocateBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineDeallocateBP__DelegateSignature(TArray<class FString> Result, const class FString& Error);
-		void DelegateMachineCountresourcesBPS__DelegateSignature(int32_t Result);
-		void DelegateMachineCountresourcesBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineCountresourcesBP__DelegateSignature(int32_t Result, const class FString& Error);
-		void DelegateMachineAllocateBPS__DelegateSignature(TArray<struct FZeuzMachineInfo> Result);
-		void DelegateMachineAllocateBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineAllocateBP__DelegateSignature(TArray<struct FZeuzMachineInfo> Result, const class FString& Error);
-		void DelegateMachineAddresourceBPS__DelegateSignature(const struct FZeuzMachineResourceInfo& Result);
-		void DelegateMachineAddresourceBPF__DelegateSignature(const class FString& Error);
-		void DelegateMachineAddresourceBP__DelegateSignature(const struct FZeuzMachineResourceInfo& Result, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiPing
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiPing : public UBlueprintFunctionLibrary
-	{
-	public:
-		void DoPingBP(const class FString& Target, float Timeout, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateDoPingBPS__DelegateSignature(const class FString& Target, float Duration, const class FString& Resolved);
-		void DelegateDoPingBPF__DelegateSignature(const class FString& Error);
-		void DelegateDoPingBP__DelegateSignature(const class FString& Target, float Duration, const class FString& Resolved, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzTagsUtil
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzTagsUtil : public UBlueprintFunctionLibrary
-	{
-	public:
-		class FString TagsToString(const struct FZeuzTags& In);
-		void StringToTags(const class FString& In, struct FZeuzTags* Out);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiContext
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiContext : public UBlueprintFunctionLibrary
-	{
-	public:
-		void SetDefaultContext(const struct FZeuzContext& Ctx);
-		struct FZeuzContext GetDefaultContext();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiMatchmaking
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiMatchmaking : public UBlueprintFunctionLibrary
-	{
-	public:
-		void MatchmakingUpdateBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingStatsBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingServerrefreshBP(const struct FZeuzMatchMakingServerInfo& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingServerdestroyBP(const struct FZeuzMatchMakingServerInfo& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingCreatepartyBP(const struct FZeuzMatchMakingPartyInit& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingCreateBP(const struct FZeuzMatchMakingInit& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MatchmakingCloseBP(const class FString& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateMatchmakingUpdateBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
-		void DelegateMatchmakingUpdateBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingUpdateBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
-		void DelegateMatchmakingStatsBPS__DelegateSignature(const struct FZeuzMatchMakingStats& Result);
-		void DelegateMatchmakingStatsBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingStatsBP__DelegateSignature(const struct FZeuzMatchMakingStats& Result, const class FString& Error);
-		void DelegateMatchmakingServerrefreshBPS__DelegateSignature();
-		void DelegateMatchmakingServerrefreshBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingServerrefreshBP__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingServerdestroyBPS__DelegateSignature();
-		void DelegateMatchmakingServerdestroyBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingServerdestroyBP__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingCreatepartyBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
-		void DelegateMatchmakingCreatepartyBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingCreatepartyBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
-		void DelegateMatchmakingCreateBPS__DelegateSignature(const struct FZeuzMatchMakingStatus& Result);
-		void DelegateMatchmakingCreateBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingCreateBP__DelegateSignature(const struct FZeuzMatchMakingStatus& Result, const class FString& Error);
-		void DelegateMatchmakingCloseBPS__DelegateSignature();
-		void DelegateMatchmakingCloseBPF__DelegateSignature(const class FString& Error);
-		void DelegateMatchmakingCloseBP__DelegateSignature(const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiSimpleAuth
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiSimpleAuth : public UBlueprintFunctionLibrary
-	{
-	public:
-		class FString StringHash(const class FString& Val);
-		void SimpleProfileUsercreateBP(const struct FZeuzSimpleProfileUserCreateIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateSimpleProfileUsercreateBPS__DelegateSignature(const class FString& Result);
-		void DelegateSimpleProfileUsercreateBPF__DelegateSignature(const class FString& Error);
-		void DelegateSimpleProfileUsercreateBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		void DelegateAuthLoginBPS__DelegateSignature(const struct FZeuzContext& Context);
-		void DelegateAuthLoginBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthLoginBP__DelegateSignature(const struct FZeuzContext& Context, const class FString& Error);
-		void DelegateAuthCheckSessionBPS__DelegateSignature(const struct FZeuzTimestamp& Expires);
-		void DelegateAuthCheckSessionBPF__DelegateSignature(const class FString& Error);
-		void DelegateAuthCheckSessionBP__DelegateSignature(const struct FZeuzTimestamp& Expires, const class FString& Error);
-		class FString CalcPWHash(const class FString& Login, const class FString& Password);
-		void AuthLoginBP(const struct FZeuzSimpleAuthLoginIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx, bool SaveDefaultContext);
-		void AuthCheckSessionBP(const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiPubIP
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiPubIP : public UBlueprintFunctionLibrary
-	{
-	public:
-		void GetPublicIPBP(bool v6, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateGetPublicIPBPS__DelegateSignature(const class FString& Result);
-		void DelegateGetPublicIPBPF__DelegateSignature(const class FString& Error);
-		void DelegateGetPublicIPBP__DelegateSignature(const class FString& Result, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiMetrics
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiMetrics : public UBlueprintFunctionLibrary
-	{
-	public:
-		void MetricsPayloadnetworksentBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsPayloadnetworkreceivedBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsPayloadmemoryusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsPayloadcpuusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsPayloadcountBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsMachinenetworksentBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsMachinenetworkreceivedBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsMachinememoryusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void MetricsMachinecpuusageBP(const struct FZeuzMetricsQueryIn& In, const class FScriptDelegate& Callback, const class FScriptDelegate& OnSuccess, const class FScriptDelegate& OnFailure, const struct FZeuzContext& Ctx);
-		void DelegateMetricsPayloadnetworksentBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsPayloadnetworksentBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsPayloadnetworksentBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsPayloadnetworkreceivedBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsPayloadnetworkreceivedBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsPayloadnetworkreceivedBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsPayloadmemoryusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsPayloadmemoryusageBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsPayloadmemoryusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsPayloadcpuusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsPayloadcpuusageBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsPayloadcpuusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsPayloadcountBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsPayloadcountBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsPayloadcountBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsMachinenetworksentBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsMachinenetworksentBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsMachinenetworksentBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsMachinenetworkreceivedBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsMachinenetworkreceivedBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsMachinenetworkreceivedBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsMachinememoryusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsMachinememoryusageBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsMachinememoryusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		void DelegateMetricsMachinecpuusageBPS__DelegateSignature(const struct FZeuzVariant& Result);
-		void DelegateMetricsMachinecpuusageBPF__DelegateSignature(const class FString& Error);
-		void DelegateMetricsMachinecpuusageBP__DelegateSignature(const struct FZeuzVariant& Result, const class FString& Error);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class Zeuzsdk.ZeuzApiTime
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
 	class UZeuzApiTime : public UBlueprintFunctionLibrary
 	{
 	public:
-		struct PCoreUObject_FDateTime ToDateTime(const struct FZeuzTimestamp& T);
+		struct FDateTime ToDateTime(const struct FZeuzTimestamp& T);
 		struct FZeuzTimestamp Now(bool adjusted);
 		bool IsZero(const struct FZeuzTimestamp& T);
 		struct FZeuzTimestamp GetOffset();
-		struct FZeuzTimestamp FromDateTime(const struct PCoreUObject_FDateTime& T, bool adjusted);
+		struct FZeuzTimestamp FromDateTime(const struct FDateTime& T, bool adjusted);
 		void AdjustOffset(const struct FZeuzTimestamp& ofs);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Zeuzsdk.ZeuzApiUtil
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UZeuzApiUtil : public UBlueprintFunctionLibrary
-	{
-	public:
-		void TimerWithString(const class FScriptDelegate& Event, float Time, const class FString& Value);
-		void TimerDynamicDelegateS__DelegateSignature(const class FString& Value);
-		bool StructToVariant(class UProperty* AnyStruct, struct FZeuzVariant* Value);
-		bool StructToByteArrayJSON(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
-		bool StructToByteArrayBin(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
-		bool StructFromVariant(class UProperty** AnyStruct, const struct FZeuzVariant& Value);
-		bool StructFromByteArrayJSON(class UProperty** AnyStruct, const struct FZeuzByteArray& Value);
-		bool StructFromByteArrayBin(class UProperty* AnyStruct, struct FZeuzByteArray* Value);
-		bool StringNotEmpty(const class FString& String);
-		bool StringIsEmpty(const class FString& String);
-		bool SaveGameToByteArray(const class FString& Filename, struct FZeuzByteArray* Value);
-		bool SaveGameFromByteArray(const struct FZeuzByteArray& Value, const class FString& Filename);
-		bool JsonToVariant(const class FString& Json, struct FZeuzVariant* Variant);
-		bool JsonFromVariant(const struct FZeuzVariant& Variant, class FString* Json);
-		class FString GetSaveGamePath(const class FString& Name);
 		static UClass* StaticClass();
 	};
 

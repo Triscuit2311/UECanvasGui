@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -416,156 +416,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnSessionInviteReceived
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FBPUniqueNetId                              PersonInviting                                             (Parm, NativeAccessSpecifierPublic)
-	 * 		struct FBlueprintSessionResult                     SearchResult                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IAdvancedFriendsInterface::OnSessionInviteReceived(const struct FBPUniqueNetId& PersonInviting, const struct FBlueprintSessionResult& SearchResult)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11852);
-		
-		struct
-		{
-			struct FBPUniqueNetId                              PersonInviting;
-			struct FBlueprintSessionResult                     SearchResult;
-		} params;
-		params.PersonInviting = PersonInviting;
-		params.SearchResult = SearchResult;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnSessionInviteAccepted
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FBPUniqueNetId                              PersonInvited                                              (Parm, NativeAccessSpecifierPublic)
-	 * 		struct FBlueprintSessionResult                     SearchResult                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IAdvancedFriendsInterface::OnSessionInviteAccepted(const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SearchResult)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11851);
-		
-		struct
-		{
-			struct FBPUniqueNetId                              PersonInvited;
-			struct FBlueprintSessionResult                     SearchResult;
-		} params;
-		params.PersonInvited = PersonInvited;
-		params.SearchResult = SearchResult;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerVoiceStateChanged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FBPUniqueNetId                              PlayerId                                                   (Parm, NativeAccessSpecifierPublic)
-	 * 		bool                                               bIsTalking                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IAdvancedFriendsInterface::OnPlayerVoiceStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11850);
-		
-		struct
-		{
-			struct FBPUniqueNetId                              PlayerId;
-			bool                                               bIsTalking;
-		} params;
-		params.PlayerId = PlayerId;
-		params.bIsTalking = bIsTalking;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerLoginStatusChanged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EBPLoginStatus                                     PreviousStatus                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EBPLoginStatus                                     NewStatus                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPUniqueNetId                              PlayerUniqueNetID                                          (Parm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IAdvancedFriendsInterface::OnPlayerLoginStatusChanged(EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, const struct FBPUniqueNetId& PlayerUniqueNetID)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11849);
-		
-		struct
-		{
-			EBPLoginStatus                                     PreviousStatus;
-			EBPLoginStatus                                     NewStatus;
-			unsigned char                                      UnknownData_0000[0x6];
-			struct FBPUniqueNetId                              PlayerUniqueNetID;
-		} params;
-		params.PreviousStatus = PreviousStatus;
-		params.NewStatus = NewStatus;
-		params.PlayerUniqueNetID = PlayerUniqueNetID;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerLoginChanged
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            PlayerNum                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void IAdvancedFriendsInterface::OnPlayerLoginChanged(int32_t PlayerNum)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11848);
-		
-		struct
-		{
-			int32_t                                            PlayerNum;
-		} params;
-		params.PlayerNum = PlayerNum;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction IAdvancedFriendsInterface.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* IAdvancedFriendsInterface::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(77);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsLibrary.SendSessionInviteToFriends
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -766,14 +616,150 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AAdvancedGameSession.StaticClass
+	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnSessionInviteReceived
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FBPUniqueNetId                              PersonInviting                                             (Parm, NativeAccessSpecifierPublic)
+	 * 		struct FBlueprintSessionResult                     SearchResult                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IAdvancedFriendsInterface::OnSessionInviteReceived(const struct FBPUniqueNetId& PersonInviting, const struct FBlueprintSessionResult& SearchResult)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11852);
+		
+		struct
+		{
+			struct FBPUniqueNetId                              PersonInviting;
+			struct FBlueprintSessionResult                     SearchResult;
+		} params;
+		params.PersonInviting = PersonInviting;
+		params.SearchResult = SearchResult;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnSessionInviteAccepted
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FBPUniqueNetId                              PersonInvited                                              (Parm, NativeAccessSpecifierPublic)
+	 * 		struct FBlueprintSessionResult                     SearchResult                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IAdvancedFriendsInterface::OnSessionInviteAccepted(const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SearchResult)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11851);
+		
+		struct
+		{
+			struct FBPUniqueNetId                              PersonInvited;
+			struct FBlueprintSessionResult                     SearchResult;
+		} params;
+		params.PersonInvited = PersonInvited;
+		params.SearchResult = SearchResult;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerVoiceStateChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FBPUniqueNetId                              PlayerId                                                   (Parm, NativeAccessSpecifierPublic)
+	 * 		bool                                               bIsTalking                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IAdvancedFriendsInterface::OnPlayerVoiceStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11850);
+		
+		struct
+		{
+			struct FBPUniqueNetId                              PlayerId;
+			bool                                               bIsTalking;
+		} params;
+		params.PlayerId = PlayerId;
+		params.bIsTalking = bIsTalking;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerLoginStatusChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EBPLoginStatus                                     PreviousStatus                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EBPLoginStatus                                     NewStatus                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPUniqueNetId                              PlayerUniqueNetID                                          (Parm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IAdvancedFriendsInterface::OnPlayerLoginStatusChanged(EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, const struct FBPUniqueNetId& PlayerUniqueNetID)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11849);
+		
+		struct
+		{
+			EBPLoginStatus                                     PreviousStatus;
+			EBPLoginStatus                                     NewStatus;
+			unsigned char                                      UnknownData_0000[0x6];
+			struct FBPUniqueNetId                              PlayerUniqueNetID;
+		} params;
+		params.PreviousStatus = PreviousStatus;
+		params.NewStatus = NewStatus;
+		params.PlayerUniqueNetID = PlayerUniqueNetID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.AdvancedFriendsInterface.OnPlayerLoginChanged
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            PlayerNum                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void IAdvancedFriendsInterface::OnPlayerLoginChanged(int32_t PlayerNum)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11848);
+		
+		struct
+		{
+			int32_t                                            PlayerNum;
+		} params;
+		params.PlayerNum = PlayerNum;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction IAdvancedFriendsInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* AAdvancedGameSession::StaticClass()
+	UClass* IAdvancedFriendsInterface::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(81);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(77);
 		return ptr;
 	}
 
@@ -2340,6 +2326,134 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.CancelFindSessionsCallbackProxy.CancelFindSessions
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UCancelFindSessionsCallbackProxy*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UCancelFindSessionsCallbackProxy* UCancelFindSessionsCallbackProxy::CancelFindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11923);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			class UCancelFindSessionsCallbackProxy*            ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UCancelFindSessionsCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UCancelFindSessionsCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(85);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.CreateSessionCallbackProxyAdvanced.CreateAdvancedSession
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FSessionPropertyKeyPair>             ExtraSettings                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            PublicConnections                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            PrivateConnections                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUseLAN                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAllowInvites                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bIsDedicatedServer                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUsePresence                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUseLobbiesIfAvailable                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAllowJoinViaPresence                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAllowJoinViaPresenceFriendsOnly                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAntiCheatProtected                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUsesStats                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bShouldAdvertise                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UCreateSessionCallbackProxyAdvanced*         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, class APlayerController* PlayerController, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11924);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			TArray<struct FSessionPropertyKeyPair>             ExtraSettings;
+			class APlayerController*                           PlayerController;
+			int32_t                                            PublicConnections;
+			int32_t                                            PrivateConnections;
+			bool                                               bUseLAN;
+			bool                                               bAllowInvites;
+			bool                                               bIsDedicatedServer;
+			bool                                               bUsePresence;
+			bool                                               bUseLobbiesIfAvailable;
+			bool                                               bAllowJoinViaPresence;
+			bool                                               bAllowJoinViaPresenceFriendsOnly;
+			bool                                               bAntiCheatProtected;
+			bool                                               bUsesStats;
+			bool                                               bShouldAdvertise;
+			unsigned char                                      UnknownData_0000[0x6];
+			class UCreateSessionCallbackProxyAdvanced*         ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.ExtraSettings = ExtraSettings;
+		params.PlayerController = PlayerController;
+		params.PublicConnections = PublicConnections;
+		params.PrivateConnections = PrivateConnections;
+		params.bUseLAN = bUseLAN;
+		params.bAllowInvites = bAllowInvites;
+		params.bIsDedicatedServer = bIsDedicatedServer;
+		params.bUsePresence = bUsePresence;
+		params.bUseLobbiesIfAvailable = bUseLobbiesIfAvailable;
+		params.bAllowJoinViaPresence = bAllowJoinViaPresence;
+		params.bAllowJoinViaPresenceFriendsOnly = bAllowJoinViaPresenceFriendsOnly;
+		params.bAntiCheatProtected = bAntiCheatProtected;
+		params.bUsesStats = bUsesStats;
+		params.bShouldAdvertise = bShouldAdvertise;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UCreateSessionCallbackProxyAdvanced.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UCreateSessionCallbackProxyAdvanced::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.AdvancedVoiceLibrary.UnRegisterRemoteTalker
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2778,50 +2892,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.CancelFindSessionsCallbackProxy.CancelFindSessions
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UCancelFindSessionsCallbackProxy*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UCancelFindSessionsCallbackProxy* UCancelFindSessionsCallbackProxy::CancelFindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11923);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			class UCancelFindSessionsCallbackProxy*            ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UCancelFindSessionsCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UCancelFindSessionsCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.DestroySessionCallbackProxyAdvanced.DestroySession
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2866,6 +2936,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AAdvancedGameSession.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AAdvancedGameSession::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(81);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.EndSessionCallbackProxy.EndSession
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2904,225 +2988,6 @@ namespace SDK
 	UClass* UEndSessionCallbackProxy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(88);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.FindFriendSessionCallbackProxy.FindFriendSession
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPUniqueNetId                              FriendUniqueNetId                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class UFindFriendSessionCallbackProxy*             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UFindFriendSessionCallbackProxy* UFindFriendSessionCallbackProxy::FindFriendSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& FriendUniqueNetId)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11927);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			struct FBPUniqueNetId                              FriendUniqueNetId;
-			class UFindFriendSessionCallbackProxy*             ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		params.FriendUniqueNetId = FriendUniqueNetId;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UFindFriendSessionCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UFindFriendSessionCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.GetFriendsCallbackProxy.GetAndStoreFriendsList
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UGetFriendsCallbackProxy*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UGetFriendsCallbackProxy* UGetFriendsCallbackProxy::GetAndStoreFriendsList(class UObject* WorldContextObject, class APlayerController* PlayerController)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11930);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			class UGetFriendsCallbackProxy*                    ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGetFriendsCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGetFriendsCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.CreateSessionCallbackProxyAdvanced.CreateAdvancedSession
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FSessionPropertyKeyPair>             ExtraSettings                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            PublicConnections                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            PrivateConnections                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUseLAN                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAllowInvites                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bIsDedicatedServer                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUsePresence                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUseLobbiesIfAvailable                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAllowJoinViaPresence                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAllowJoinViaPresenceFriendsOnly                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAntiCheatProtected                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUsesStats                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bShouldAdvertise                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UCreateSessionCallbackProxyAdvanced*         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UCreateSessionCallbackProxyAdvanced* UCreateSessionCallbackProxyAdvanced::CreateAdvancedSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, class APlayerController* PlayerController, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11924);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			TArray<struct FSessionPropertyKeyPair>             ExtraSettings;
-			class APlayerController*                           PlayerController;
-			int32_t                                            PublicConnections;
-			int32_t                                            PrivateConnections;
-			bool                                               bUseLAN;
-			bool                                               bAllowInvites;
-			bool                                               bIsDedicatedServer;
-			bool                                               bUsePresence;
-			bool                                               bUseLobbiesIfAvailable;
-			bool                                               bAllowJoinViaPresence;
-			bool                                               bAllowJoinViaPresenceFriendsOnly;
-			bool                                               bAntiCheatProtected;
-			bool                                               bUsesStats;
-			bool                                               bShouldAdvertise;
-			unsigned char                                      UnknownData_0000[0x6];
-			class UCreateSessionCallbackProxyAdvanced*         ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.ExtraSettings = ExtraSettings;
-		params.PlayerController = PlayerController;
-		params.PublicConnections = PublicConnections;
-		params.PrivateConnections = PrivateConnections;
-		params.bUseLAN = bUseLAN;
-		params.bAllowInvites = bAllowInvites;
-		params.bIsDedicatedServer = bIsDedicatedServer;
-		params.bUsePresence = bUsePresence;
-		params.bUseLobbiesIfAvailable = bUseLobbiesIfAvailable;
-		params.bAllowJoinViaPresence = bAllowJoinViaPresence;
-		params.bAllowJoinViaPresenceFriendsOnly = bAllowJoinViaPresenceFriendsOnly;
-		params.bAntiCheatProtected = bAntiCheatProtected;
-		params.bUsesStats = bUsesStats;
-		params.bShouldAdvertise = bShouldAdvertise;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UCreateSessionCallbackProxyAdvanced.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UCreateSessionCallbackProxyAdvanced::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.GetRecentPlayersCallbackProxy.GetAndStoreRecentPlayersList
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPUniqueNetId                              UniqueNetId                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class UGetRecentPlayersCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UGetRecentPlayersCallbackProxy* UGetRecentPlayersCallbackProxy::GetAndStoreRecentPlayersList(class UObject* WorldContextObject, const struct FBPUniqueNetId& UniqueNetId)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11931);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			struct FBPUniqueNetId                              UniqueNetId;
-			class UGetRecentPlayersCallbackProxy*              ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.UniqueNetId = UniqueNetId;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGetRecentPlayersCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGetRecentPlayersCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92);
 		return ptr;
 	}
 
@@ -3233,6 +3098,97 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.FindFriendSessionCallbackProxy.FindFriendSession
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPUniqueNetId                              FriendUniqueNetId                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class UFindFriendSessionCallbackProxy*             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UFindFriendSessionCallbackProxy* UFindFriendSessionCallbackProxy::FindFriendSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& FriendUniqueNetId)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11927);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			struct FBPUniqueNetId                              FriendUniqueNetId;
+			class UFindFriendSessionCallbackProxy*             ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		params.FriendUniqueNetId = FriendUniqueNetId;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UFindFriendSessionCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UFindFriendSessionCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.GetRecentPlayersCallbackProxy.GetAndStoreRecentPlayersList
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPUniqueNetId                              UniqueNetId                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class UGetRecentPlayersCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UGetRecentPlayersCallbackProxy* UGetRecentPlayersCallbackProxy::GetAndStoreRecentPlayersList(class UObject* WorldContextObject, const struct FBPUniqueNetId& UniqueNetId)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11931);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			struct FBPUniqueNetId                              UniqueNetId;
+			class UGetRecentPlayersCallbackProxy*              ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.UniqueNetId = UniqueNetId;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGetRecentPlayersCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGetRecentPlayersCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.JoinSessionCallbackProxyAdvanced.JoinSession
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -3274,6 +3230,98 @@ namespace SDK
 	UClass* UJoinSessionCallbackProxyAdvanced::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(94);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.GetUserPrivilegeCallbackProxy.GetUserPrivilege
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EBPUserPrivileges                                  PrivilegeToCheck                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPUniqueNetId                              PlayerUniqueNetID                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class UGetUserPrivilegeCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UGetUserPrivilegeCallbackProxy* UGetUserPrivilegeCallbackProxy::GetUserPrivilege(class UObject* WorldContextObject, EBPUserPrivileges PrivilegeToCheck, const struct FBPUniqueNetId& PlayerUniqueNetID)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11932);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			EBPUserPrivileges                                  PrivilegeToCheck;
+			unsigned char                                      UnknownData_0000[0x7];
+			struct FBPUniqueNetId                              PlayerUniqueNetID;
+			class UGetUserPrivilegeCallbackProxy*              ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PrivilegeToCheck = PrivilegeToCheck;
+		params.PlayerUniqueNetID = PlayerUniqueNetID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGetUserPrivilegeCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGetUserPrivilegeCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(93);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.GetFriendsCallbackProxy.GetAndStoreFriendsList
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UGetFriendsCallbackProxy*                    ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UGetFriendsCallbackProxy* UGetFriendsCallbackProxy::GetAndStoreFriendsList(class UObject* WorldContextObject, class APlayerController* PlayerController)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11930);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			class UGetFriendsCallbackProxy*                    ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UGetFriendsCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UGetFriendsCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91);
 		return ptr;
 	}
 
@@ -3330,54 +3378,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.GetUserPrivilegeCallbackProxy.GetUserPrivilege
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EBPUserPrivileges                                  PrivilegeToCheck                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPUniqueNetId                              PlayerUniqueNetID                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class UGetUserPrivilegeCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UGetUserPrivilegeCallbackProxy* UGetUserPrivilegeCallbackProxy::GetUserPrivilege(class UObject* WorldContextObject, EBPUserPrivileges PrivilegeToCheck, const struct FBPUniqueNetId& PlayerUniqueNetID)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11932);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			EBPUserPrivileges                                  PrivilegeToCheck;
-			unsigned char                                      UnknownData_0000[0x7];
-			struct FBPUniqueNetId                              PlayerUniqueNetID;
-			class UGetUserPrivilegeCallbackProxy*              ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PrivilegeToCheck = PrivilegeToCheck;
-		params.PlayerUniqueNetID = PlayerUniqueNetID;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UGetUserPrivilegeCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UGetUserPrivilegeCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(93);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSessions.LogoutUserCallbackProxy.LogoutUser
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -3416,6 +3416,53 @@ namespace SDK
 	UClass* ULogoutUserCallbackProxy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(96);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSessions.SendFriendInviteCallbackProxy.SendFriendInvite
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPUniqueNetId                              UniqueNetIDInvited                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class USendFriendInviteCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class USendFriendInviteCallbackProxy* USendFriendInviteCallbackProxy::SendFriendInvite(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& UniqueNetIDInvited)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11936);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class APlayerController*                           PlayerController;
+			struct FBPUniqueNetId                              UniqueNetIDInvited;
+			class USendFriendInviteCallbackProxy*              ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.PlayerController = PlayerController;
+		params.UniqueNetIDInvited = UniqueNetIDInvited;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USendFriendInviteCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USendFriendInviteCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(97);
 		return ptr;
 	}
 
@@ -3482,53 +3529,6 @@ namespace SDK
 	UClass* UUpdateSessionCallbackProxyAdvanced::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(98);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSessions.SendFriendInviteCallbackProxy.SendFriendInvite
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class APlayerController*                           PlayerController                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPUniqueNetId                              UniqueNetIDInvited                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class USendFriendInviteCallbackProxy*              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class USendFriendInviteCallbackProxy* USendFriendInviteCallbackProxy::SendFriendInvite(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& UniqueNetIDInvited)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11936);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class APlayerController*                           PlayerController;
-			struct FBPUniqueNetId                              UniqueNetIDInvited;
-			class USendFriendInviteCallbackProxy*              ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.PlayerController = PlayerController;
-		params.UniqueNetIDInvited = UniqueNetIDInvited;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USendFriendInviteCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USendFriendInviteCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(97);
 		return ptr;
 	}
 

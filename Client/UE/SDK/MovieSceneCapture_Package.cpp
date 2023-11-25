@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -75,34 +75,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneAudioCaptureProtocolBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneAudioCaptureProtocolBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2162);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMasterAudioSubmixCaptureProtocol.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMasterAudioSubmixCaptureProtocol::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2164);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMovieSceneImageCaptureProtocolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -145,14 +117,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UCompositionGraphCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_BMP.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UCompositionGraphCaptureProtocol::StaticClass()
+	UClass* UImageSequenceProtocol_BMP::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2166);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2170);
 		return ptr;
 	}
 
@@ -297,6 +269,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_PNG.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UImageSequenceProtocol_PNG::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2171);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -431,28 +417,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_BMP.StaticClass
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_JPG.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UImageSequenceProtocol_BMP::StaticClass()
+	UClass* UImageSequenceProtocol_JPG::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2170);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2172);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_PNG.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneAudioCaptureProtocolBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UImageSequenceProtocol_PNG::StaticClass()
+	UClass* UMovieSceneAudioCaptureProtocolBase::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2171);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2162);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UNullAudioCaptureProtocol.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UNullAudioCaptureProtocol::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2163);
 		return ptr;
 	}
 
@@ -842,14 +842,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_JPG.StaticClass
+	 * 		Name   -> PredefinedFunction UMasterAudioSubmixCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UImageSequenceProtocol_JPG::StaticClass()
+	UClass* UMasterAudioSubmixCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2172);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2164);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_EXR.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UImageSequenceProtocol_EXR::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2173);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UCompositionGraphCaptureProtocol.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UCompositionGraphCaptureProtocol::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2166);
 		return ptr;
 	}
 
@@ -957,34 +985,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UImageSequenceProtocol_EXR.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UImageSequenceProtocol_EXR::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2173);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVideoCaptureProtocol.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVideoCaptureProtocol::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2180);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction IMovieSceneCaptureInterface.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -999,14 +999,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UNullAudioCaptureProtocol.StaticClass
+	 * 		Name   -> PredefinedFunction UVideoCaptureProtocol.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UNullAudioCaptureProtocol::StaticClass()
+	UClass* UVideoCaptureProtocol::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2163);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2180);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_WasPlayerHitFromBack_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(34922);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42685);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_WasPlayerHitFromBack_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(34921);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42684);
 		return ptr;
 	}
 

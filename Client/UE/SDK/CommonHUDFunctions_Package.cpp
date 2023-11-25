@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -25,7 +25,7 @@ namespace SDK
 	 */
 	void UCommonHUDFunctions_C::CenterPrint(const class FName& MessageType, class APlayerCharacter* Other, class UTextBlock* CenterprintText, class AGameStateBase* GameState, class UObject* __WorldContext)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88413);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88393);
 		
 		struct
 		{
@@ -56,7 +56,7 @@ namespace SDK
 	 */
 	UClass* UCommonHUDFunctions_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88412);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88392);
 		return ptr;
 	}
 

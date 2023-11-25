@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool UAG_HasAmmoInCurrentMag_C::CanOpen(const struct FAIActionDecisionContext& Context)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85350);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84230);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	UClass* UAG_HasAmmoInCurrentMag_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85349);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84229);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UBP_Flashlight_MAWL_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54691);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(44022);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::Grow(bool bInstant)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27065);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43725);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::Shrink(bool bInstant)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27064);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43724);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::HideCommandInfo()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27063);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43723);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::ShowCommandSubText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27062);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43722);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetQueueCommandSubText_Rich(const class FString& InText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27061);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43721);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetQueueCommandSubText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27060);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43720);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetCommandNameColorFromTeam(ETeamType InTeam)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27059);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43719);
 		
 		struct
 		{
@@ -183,7 +183,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetCommandSubText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27058);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43718);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetCommandSubText(const class FString& InText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27057);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43717);
 		
 		struct
 		{
@@ -230,7 +230,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::PlayCommandCompleteQueuedAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27056);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43716);
 		
 		struct
 		{
@@ -251,7 +251,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::PlayCommandIssuedAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27055);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43715);
 		
 		struct
 		{
@@ -272,7 +272,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::PlayCommandCompleteAnim()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43714);
 		
 		struct
 		{
@@ -294,7 +294,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::HideCommandStatus(bool bShrinkHeight)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43713);
 		
 		struct
 		{
@@ -318,7 +318,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetPlayerHealthStatus(EPlayerHealthStatus InPlayerHealthStatus)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43712);
 		
 		struct
 		{
@@ -342,7 +342,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetPlayerName(const class FText& InPlayerName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43711);
 		
 		struct
 		{
@@ -370,7 +370,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::SetCurrentCommand(const class FString& InActivityName, const class FText& InCommandText, const class FText& InProgressText, bool bWaiting, bool bIsProgress)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43710);
 		
 		struct
 		{
@@ -404,7 +404,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::UpdateSquadData(const class FText& InText, const struct FLinearColor& InColorAndOpacity)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43709);
 		
 		struct
 		{
@@ -430,7 +430,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::Refresh(ESquadPosition InSquadPosition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27048);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43708);
 		
 		struct
 		{
@@ -454,7 +454,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27047);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43707);
 		
 		struct
 		{
@@ -477,7 +477,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27046);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43706);
 		
 		struct
 		{
@@ -499,7 +499,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::StartHeightChange(float NewHeight)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27045);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43705);
 		
 		struct
 		{
@@ -522,7 +522,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::UpdateDesiredHeight()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27044);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43704);
 		
 		struct
 		{
@@ -543,7 +543,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27043);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43703);
 		
 		struct
 		{
@@ -565,7 +565,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::StartHealthWidthChange(float NewWidth)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27042);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43702);
 		
 		struct
 		{
@@ -588,7 +588,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::UpdateDesiredWidth()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27041);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43701);
 		
 		struct
 		{
@@ -610,7 +610,7 @@ namespace SDK
 	 */
 	void UW_SWATCommandStatus_C::ExecuteUbergraph_W_SWATCommandStatus(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27040);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43700);
 		
 		struct
 		{
@@ -633,7 +633,7 @@ namespace SDK
 	 */
 	UClass* UW_SWATCommandStatus_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27039);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43699);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	float UAC_DistanceToTarget_C::CalculateCurve(float X)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84290);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	float UAC_DistanceToTarget_C::Score(const struct FAIActionDecisionContext& Context, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84289);
 		
 		struct
 		{
@@ -80,7 +80,7 @@ namespace SDK
 	 */
 	UClass* UAC_DistanceToTarget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85408);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84288);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -213,6 +213,456 @@ namespace SDK
 	UClass* UMovieSceneScriptingActorReferenceChannel::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(377);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.SetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		uint8_t                                            InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingByteChannel::SetDefault(uint8_t InDefaultValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13210);
+		
+		struct
+		{
+			uint8_t                                            InDefaultValue;
+		} params;
+		params.InDefaultValue = InDefaultValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.RemoveKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingByteChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13209);
+		
+		struct
+		{
+			class UMovieSceneScriptingKey*                     Key;
+		} params;
+		params.Key = Key;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.RemoveDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingByteChannel::RemoveDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13208);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.HasDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneScriptingByteChannel::HasDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13207);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.GetKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingByteChannel::GetKeys()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13206);
+		
+		struct
+		{
+			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.GetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		uint8_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	uint8_t UMovieSceneScriptingByteChannel::GetDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13205);
+		
+		struct
+		{
+			uint8_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.AddKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		uint8_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EMovieSceneKeyInterpolation                        InInterpolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneScriptingByteKey*                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneScriptingByteKey* UMovieSceneScriptingByteChannel::AddKey(const struct FFrameNumber& InTime, uint8_t NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13204);
+		
+		struct
+		{
+			struct FFrameNumber                                InTime;
+			uint8_t                                            NewValue;
+			unsigned char                                      UnknownData_0000[0x3];
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+			EMovieSceneKeyInterpolation                        InInterpolation;
+			unsigned char                                      UnknownData_0001[0x2];
+			class UMovieSceneScriptingByteKey*                 ReturnValue;
+		} params;
+		params.InTime = InTime;
+		params.NewValue = NewValue;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		params.InInterpolation = InInterpolation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingByteChannel.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingByteChannel::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(381);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingKey.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingKey::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(374);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingBoolKey::SetValue(bool InNewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13189);
+		
+		struct
+		{
+			bool                                               InNewValue;
+		} params;
+		params.InNewValue = InNewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.SetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingBoolKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13188);
+		
+		struct
+		{
+			struct FFrameNumber                                NewFrameNumber;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+		} params;
+		params.NewFrameNumber = NewFrameNumber;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneScriptingBoolKey::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13187);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.GetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FFrameTime UMovieSceneScriptingBoolKey::GetTime(ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13186);
+		
+		struct
+		{
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FFrameTime                                  ReturnValue;
+		} params;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingBoolKey.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingBoolKey::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(378);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneEvent                            InNewValue                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingEventKey::SetValue(const struct FMovieSceneEvent& InNewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13214);
+		
+		struct
+		{
+			struct FMovieSceneEvent                            InNewValue;
+		} params;
+		params.InNewValue = InNewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.SetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingEventKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13213);
+		
+		struct
+		{
+			struct FFrameNumber                                NewFrameNumber;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+		} params;
+		params.NewFrameNumber = NewFrameNumber;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneEvent                            ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FMovieSceneEvent UMovieSceneScriptingEventKey::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13212);
+		
+		struct
+		{
+			struct FMovieSceneEvent                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.GetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FFrameTime UMovieSceneScriptingEventKey::GetTime(ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13211);
+		
+		struct
+		{
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FFrameTime                                  ReturnValue;
+		} params;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingEventKey.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingEventKey::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(382);
 		return ptr;
 	}
 
@@ -725,1153 +1175,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingKey.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingKey::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(374);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		uint8_t                                            InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingByteKey::SetValue(uint8_t InNewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13203);
-		
-		struct
-		{
-			uint8_t                                            InNewValue;
-		} params;
-		params.InNewValue = InNewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.SetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingByteKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13202);
-		
-		struct
-		{
-			struct FFrameNumber                                NewFrameNumber;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-		} params;
-		params.NewFrameNumber = NewFrameNumber;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		uint8_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	uint8_t UMovieSceneScriptingByteKey::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13201);
-		
-		struct
-		{
-			uint8_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.GetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FFrameTime UMovieSceneScriptingByteKey::GetTime(ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13200);
-		
-		struct
-		{
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FFrameTime                                  ReturnValue;
-		} params;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingByteKey.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingByteKey::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(380);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingBoolKey::SetValue(bool InNewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13189);
-		
-		struct
-		{
-			bool                                               InNewValue;
-		} params;
-		params.InNewValue = InNewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.SetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingBoolKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13188);
-		
-		struct
-		{
-			struct FFrameNumber                                NewFrameNumber;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-		} params;
-		params.NewFrameNumber = NewFrameNumber;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingBoolKey::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13187);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolKey.GetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FFrameTime UMovieSceneScriptingBoolKey::GetTime(ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13186);
-		
-		struct
-		{
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FFrameTime                                  ReturnValue;
-		} params;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingBoolKey.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingBoolKey::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(378);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventTriggerSection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneEventTrack*                       InTrack                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneEventTriggerSection*              ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneEventTriggerSection* UMovieSceneEventTrackExtensions::AddEventTriggerSection(class UMovieSceneEventTrack* InTrack)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13155);
-		
-		struct
-		{
-			class UMovieSceneEventTrack*                       InTrack;
-			class UMovieSceneEventTriggerSection*              ReturnValue;
-		} params;
-		params.InTrack = InTrack;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventRepeaterSection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneEventTrack*                       InTrack                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneEventRepeaterSection*             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneEventRepeaterSection* UMovieSceneEventTrackExtensions::AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13154);
-		
-		struct
-		{
-			class UMovieSceneEventTrack*                       InTrack;
-			class UMovieSceneEventRepeaterSection*             ReturnValue;
-		} params;
-		params.InTrack = InTrack;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEventTrackExtensions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneEventTrackExtensions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(371);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.SetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		uint8_t                                            InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingByteChannel::SetDefault(uint8_t InDefaultValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13210);
-		
-		struct
-		{
-			uint8_t                                            InDefaultValue;
-		} params;
-		params.InDefaultValue = InDefaultValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.RemoveKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingByteChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13209);
-		
-		struct
-		{
-			class UMovieSceneScriptingKey*                     Key;
-		} params;
-		params.Key = Key;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.RemoveDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingByteChannel::RemoveDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13208);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.HasDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingByteChannel::HasDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13207);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.GetKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingByteChannel::GetKeys()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13206);
-		
-		struct
-		{
-			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.GetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		uint8_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	uint8_t UMovieSceneScriptingByteChannel::GetDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13205);
-		
-		struct
-		{
-			uint8_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteChannel.AddKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		uint8_t                                            NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EMovieSceneKeyInterpolation                        InInterpolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneScriptingByteKey*                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneScriptingByteKey* UMovieSceneScriptingByteChannel::AddKey(const struct FFrameNumber& InTime, uint8_t NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13204);
-		
-		struct
-		{
-			struct FFrameNumber                                InTime;
-			uint8_t                                            NewValue;
-			unsigned char                                      UnknownData_0000[0x3];
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-			EMovieSceneKeyInterpolation                        InInterpolation;
-			unsigned char                                      UnknownData_0001[0x2];
-			class UMovieSceneScriptingByteKey*                 ReturnValue;
-		} params;
-		params.InTime = InTime;
-		params.NewValue = NewValue;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		params.InInterpolation = InInterpolation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingByteChannel.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingByteChannel::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(381);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingIntegerKey::SetValue(int32_t InNewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13253);
-		
-		struct
-		{
-			int32_t                                            InNewValue;
-		} params;
-		params.InNewValue = InNewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.SetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingIntegerKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13252);
-		
-		struct
-		{
-			struct FFrameNumber                                NewFrameNumber;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-		} params;
-		params.NewFrameNumber = NewFrameNumber;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UMovieSceneScriptingIntegerKey::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13251);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.GetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FFrameTime UMovieSceneScriptingIntegerKey::GetTime(ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13250);
-		
-		struct
-		{
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FFrameTime                                  ReturnValue;
-		} params;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingIntegerKey.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingIntegerKey::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(386);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.SetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMovieSceneEvent                            InNewValue                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingEventKey::SetValue(const struct FMovieSceneEvent& InNewValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13214);
-		
-		struct
-		{
-			struct FMovieSceneEvent                            InNewValue;
-		} params;
-		params.InNewValue = InNewValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.SetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingEventKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13213);
-		
-		struct
-		{
-			struct FFrameNumber                                NewFrameNumber;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-		} params;
-		params.NewFrameNumber = NewFrameNumber;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMovieSceneEvent                            ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FMovieSceneEvent UMovieSceneScriptingEventKey::GetValue()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13212);
-		
-		struct
-		{
-			struct FMovieSceneEvent                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventKey.GetTime
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FFrameTime UMovieSceneScriptingEventKey::GetTime(ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13211);
-		
-		struct
-		{
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FFrameTime                                  ReturnValue;
-		} params;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingEventKey.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingEventKey::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(382);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.SetFolderName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        InFolderName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::SetFolderName(class UMovieSceneFolder* folder, const class FName& InFolderName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13168);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			class FName                                        InFolderName;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InFolderName = InFolderName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.SetFolderColor
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         InFolderColor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::SetFolderColor(class UMovieSceneFolder* folder, const struct PCoreUObject_FColor& InFolderColor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13167);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			struct PCoreUObject_FColor                         InFolderColor;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InFolderColor = InFolderColor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildObjectBinding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FSequencerBindingProxy                      InObjectBinding                                            (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::RemoveChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13166);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			struct FSequencerBindingProxy                      InObjectBinding;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InObjectBinding = InObjectBinding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildMasterTrack
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneTrack*                            InMasterTrack                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::RemoveChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13165);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			class UMovieSceneTrack*                            InMasterTrack;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InMasterTrack = InMasterTrack;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildFolder
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           TargetFolder                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneFolder*                           FolderToRemove                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13164);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           TargetFolder;
-			class UMovieSceneFolder*                           FolderToRemove;
-			bool                                               ReturnValue;
-		} params;
-		params.TargetFolder = TargetFolder;
-		params.FolderToRemove = FolderToRemove;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetFolderName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FName UMovieSceneFolderExtensions::GetFolderName(class UMovieSceneFolder* folder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13163);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			class FName                                        ReturnValue;
-		} params;
-		params.folder = folder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetFolderColor
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct PCoreUObject_FColor UMovieSceneFolderExtensions::GetFolderColor(class UMovieSceneFolder* folder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13162);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			struct PCoreUObject_FColor                         ReturnValue;
-		} params;
-		params.folder = folder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildObjectBindings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FSequencerBindingProxy>              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<struct FSequencerBindingProxy> UMovieSceneFolderExtensions::GetChildObjectBindings(class UMovieSceneFolder* folder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13161);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			TArray<struct FSequencerBindingProxy>              ReturnValue;
-		} params;
-		params.folder = folder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildMasterTracks
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<class UMovieSceneTrack*>                    ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneTrack*> UMovieSceneFolderExtensions::GetChildMasterTracks(class UMovieSceneFolder* folder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13160);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			TArray<class UMovieSceneTrack*>                    ReturnValue;
-		} params;
-		params.folder = folder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildFolders
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<class UMovieSceneFolder*>                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneFolder*> UMovieSceneFolderExtensions::GetChildFolders(class UMovieSceneFolder* folder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13159);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			TArray<class UMovieSceneFolder*>                   ReturnValue;
-		} params;
-		params.folder = folder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildObjectBinding
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FSequencerBindingProxy                      InObjectBinding                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::AddChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13158);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			struct FSequencerBindingProxy                      InObjectBinding;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InObjectBinding = InObjectBinding;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildMasterTrack
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneTrack*                            InMasterTrack                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::AddChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13157);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           folder;
-			class UMovieSceneTrack*                            InMasterTrack;
-			bool                                               ReturnValue;
-		} params;
-		params.folder = folder;
-		params.InMasterTrack = InMasterTrack;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildFolder
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneFolder*                           TargetFolder                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneFolder*                           FolderToAdd                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneFolderExtensions::AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13156);
-		
-		struct
-		{
-			class UMovieSceneFolder*                           TargetFolder;
-			class UMovieSceneFolder*                           FolderToAdd;
-			bool                                               ReturnValue;
-		} params;
-		params.TargetFolder = TargetFolder;
-		params.FolderToAdd = FolderToAdd;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFolderExtensions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneFolderExtensions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(372);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerChannel.SetDefault
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2064,6 +1367,278 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.SetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingBoolChannel::SetDefault(bool InDefaultValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13199);
+		
+		struct
+		{
+			bool                                               InDefaultValue;
+		} params;
+		params.InDefaultValue = InDefaultValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.RemoveKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingBoolChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13198);
+		
+		struct
+		{
+			class UMovieSceneScriptingKey*                     Key;
+		} params;
+		params.Key = Key;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.RemoveDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingBoolChannel::RemoveDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13197);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.HasDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneScriptingBoolChannel::HasDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13196);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetNumKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UMovieSceneScriptingBoolChannel::GetNumKeys()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13195);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingBoolChannel::GetKeys()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13194);
+		
+		struct
+		{
+			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneScriptingBoolChannel::GetDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13193);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.EvaluateKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FFrameRate                                  FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<bool>                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<bool> UMovieSceneScriptingBoolChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13192);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			struct FFrameRate                                  FrameRate;
+			unsigned char                                      UnknownData_0000[0x4];
+			TArray<bool>                                       ReturnValue;
+		} params;
+		params.Range = Range;
+		params.FrameRate = FrameRate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.ComputeEffectiveRange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FSequencerScriptingRange UMovieSceneScriptingBoolChannel::ComputeEffectiveRange()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13191);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.AddKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneScriptingBoolKey*                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneScriptingBoolKey* UMovieSceneScriptingBoolChannel::AddKey(const struct FFrameNumber& InTime, bool NewValue, float SubFrame, ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13190);
+		
+		struct
+		{
+			struct FFrameNumber                                InTime;
+			bool                                               NewValue;
+			unsigned char                                      UnknownData_0001[0x3];
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0002[0x3];
+			class UMovieSceneScriptingBoolKey*                 ReturnValue;
+		} params;
+		params.InTime = InTime;
+		params.NewValue = NewValue;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingBoolChannel.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingBoolChannel::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(379);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingEventChannel.RemoveKey
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -2158,6 +1733,564 @@ namespace SDK
 	UClass* UMovieSceneScriptingEventChannel::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(383);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetPreInfinityExtrapolation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ERichCurveExtrapolation                            InExtrapolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingFloatChannel::SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13249);
+		
+		struct
+		{
+			ERichCurveExtrapolation                            InExtrapolation;
+		} params;
+		params.InExtrapolation = InExtrapolation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetPostInfinityExtrapolation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ERichCurveExtrapolation                            InExtrapolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingFloatChannel::SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13248);
+		
+		struct
+		{
+			ERichCurveExtrapolation                            InExtrapolation;
+		} params;
+		params.InExtrapolation = InExtrapolation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingFloatChannel::SetDefault(float InDefaultValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13247);
+		
+		struct
+		{
+			float                                              InDefaultValue;
+		} params;
+		params.InDefaultValue = InDefaultValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.RemoveKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingFloatChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13246);
+		
+		struct
+		{
+			class UMovieSceneScriptingKey*                     Key;
+		} params;
+		params.Key = Key;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.RemoveDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingFloatChannel::RemoveDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13245);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.HasDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneScriptingFloatChannel::HasDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13244);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetPreInfinityExtrapolation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ERichCurveExtrapolation                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	ERichCurveExtrapolation UMovieSceneScriptingFloatChannel::GetPreInfinityExtrapolation()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13243);
+		
+		struct
+		{
+			ERichCurveExtrapolation                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetPostInfinityExtrapolation
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ERichCurveExtrapolation                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	ERichCurveExtrapolation UMovieSceneScriptingFloatChannel::GetPostInfinityExtrapolation()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13242);
+		
+		struct
+		{
+			ERichCurveExtrapolation                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetNumKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UMovieSceneScriptingFloatChannel::GetNumKeys()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13241);
+		
+		struct
+		{
+			int32_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingFloatChannel::GetKeys()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13240);
+		
+		struct
+		{
+			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetDefault
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UMovieSceneScriptingFloatChannel::GetDefault()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13239);
+		
+		struct
+		{
+			float                                              ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.EvaluateKeys
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FFrameRate                                  FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<float>                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<float> UMovieSceneScriptingFloatChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13238);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			struct FFrameRate                                  FrameRate;
+			unsigned char                                      UnknownData_0000[0x4];
+			TArray<float>                                      ReturnValue;
+		} params;
+		params.Range = Range;
+		params.FrameRate = FrameRate;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.ComputeEffectiveRange
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FSequencerScriptingRange UMovieSceneScriptingFloatChannel::ComputeEffectiveRange()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13237);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.AddKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EMovieSceneKeyInterpolation                        InInterpolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneScriptingFloatKey*                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneScriptingFloatKey* UMovieSceneScriptingFloatChannel::AddKey(const struct FFrameNumber& InTime, float NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13236);
+		
+		struct
+		{
+			struct FFrameNumber                                InTime;
+			float                                              NewValue;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+			EMovieSceneKeyInterpolation                        InInterpolation;
+			unsigned char                                      UnknownData_0001[0x2];
+			class UMovieSceneScriptingFloatKey*                ReturnValue;
+		} params;
+		params.InTime = InTime;
+		params.NewValue = NewValue;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		params.InInterpolation = InInterpolation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingFloatChannel.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingFloatChannel::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(385);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventTriggerSection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneEventTrack*                       InTrack                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneEventTriggerSection*              ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneEventTriggerSection* UMovieSceneEventTrackExtensions::AddEventTriggerSection(class UMovieSceneEventTrack* InTrack)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13155);
+		
+		struct
+		{
+			class UMovieSceneEventTrack*                       InTrack;
+			class UMovieSceneEventTriggerSection*              ReturnValue;
+		} params;
+		params.InTrack = InTrack;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneEventTrackExtensions.AddEventRepeaterSection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneEventTrack*                       InTrack                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneEventRepeaterSection*             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneEventRepeaterSection* UMovieSceneEventTrackExtensions::AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13154);
+		
+		struct
+		{
+			class UMovieSceneEventTrack*                       InTrack;
+			class UMovieSceneEventRepeaterSection*             ReturnValue;
+		} params;
+		params.InTrack = InTrack;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEventTrackExtensions.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEventTrackExtensions::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(371);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingObjectPathKey::SetValue(class UObject* InNewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13264);
+		
+		struct
+		{
+			class UObject*                                     InNewValue;
+		} params;
+		params.InNewValue = InNewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingObjectPathKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13263);
+		
+		struct
+		{
+			struct FFrameNumber                                NewFrameNumber;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+		} params;
+		params.NewFrameNumber = NewFrameNumber;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* UMovieSceneScriptingObjectPathKey::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13262);
+		
+		struct
+		{
+			class UObject*                                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.GetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FFrameTime UMovieSceneScriptingObjectPathKey::GetTime(ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13261);
+		
+		struct
+		{
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FFrameTime                                  ReturnValue;
+		} params;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingObjectPathKey.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingObjectPathKey::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(388);
 		return ptr;
 	}
 
@@ -2620,27 +2753,21 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.SetPropertyNameAndPath
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.SetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        InPropertyName                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      InPropertyPath                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		uint8_t                                            InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieScenePropertyTrackExtensions::SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, const class FName& InPropertyName, const class FString& InPropertyPath)
+	void UMovieSceneScriptingByteKey::SetValue(uint8_t InNewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13174);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13203);
 		
 		struct
 		{
-			class UMovieScenePropertyTrack*                    Track;
-			class FName                                        InPropertyName;
-			class FString                                      InPropertyPath;
+			uint8_t                                            InNewValue;
 		} params;
-		params.Track = Track;
-		params.InPropertyName = InPropertyName;
-		params.InPropertyPath = InPropertyPath;
+		params.InNewValue = InNewValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -2650,401 +2777,76 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.SetObjectPropertyClass
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.SetTime
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UMovieSceneObjectPropertyTrack*              Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     PropertyClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieScenePropertyTrackExtensions::SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UObject* PropertyClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13173);
-		
-		struct
-		{
-			class UMovieSceneObjectPropertyTrack*              Track;
-			class UObject*                                     PropertyClass;
-		} params;
-		params.Track = Track;
-		params.PropertyClass = PropertyClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetUniqueTrackName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FName UMovieScenePropertyTrackExtensions::GetUniqueTrackName(class UMovieScenePropertyTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13172);
-		
-		struct
-		{
-			class UMovieScenePropertyTrack*                    Track;
-			class FName                                        ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyPath
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UMovieScenePropertyTrackExtensions::GetPropertyPath(class UMovieScenePropertyTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13171);
-		
-		struct
-		{
-			class UMovieScenePropertyTrack*                    Track;
-			class FString                                      ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FName UMovieScenePropertyTrackExtensions::GetPropertyName(class UMovieScenePropertyTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13170);
-		
-		struct
-		{
-			class UMovieScenePropertyTrack*                    Track;
-			class FName                                        ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetObjectPropertyClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneObjectPropertyTrack*              Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UMovieScenePropertyTrackExtensions::GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13169);
-		
-		struct
-		{
-			class UMovieSceneObjectPropertyTrack*              Track;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePropertyTrackExtensions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePropertyTrackExtensions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(373);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.SetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingBoolChannel::SetDefault(bool InDefaultValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13199);
-		
-		struct
-		{
-			bool                                               InDefaultValue;
-		} params;
-		params.InDefaultValue = InDefaultValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.RemoveKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingBoolChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13198);
-		
-		struct
-		{
-			class UMovieSceneScriptingKey*                     Key;
-		} params;
-		params.Key = Key;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.RemoveDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingBoolChannel::RemoveDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13197);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.HasDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingBoolChannel::HasDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13196);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetNumKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UMovieSceneScriptingBoolChannel::GetNumKeys()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13195);
-		
-		struct
-		{
-			int32_t                                            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingBoolChannel::GetKeys()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13194);
-		
-		struct
-		{
-			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.GetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingBoolChannel::GetDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13193);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.EvaluateKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct FFrameRate                                  FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<bool>                                       ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<bool> UMovieSceneScriptingBoolChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13192);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-			struct FFrameRate                                  FrameRate;
-			unsigned char                                      UnknownData_0000[0x4];
-			TArray<bool>                                       ReturnValue;
-		} params;
-		params.Range = Range;
-		params.FrameRate = FrameRate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.ComputeEffectiveRange
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FSequencerScriptingRange UMovieSceneScriptingBoolChannel::ComputeEffectiveRange()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13191);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingBoolChannel.AddKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneScriptingBoolKey*                 ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UMovieSceneScriptingBoolKey* UMovieSceneScriptingBoolChannel::AddKey(const struct FFrameNumber& InTime, bool NewValue, float SubFrame, ESequenceTimeUnit TimeUnit)
+	void UMovieSceneScriptingByteKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13190);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13202);
 		
 		struct
 		{
-			struct FFrameNumber                                InTime;
-			bool                                               NewValue;
-			unsigned char                                      UnknownData_0001[0x3];
+			struct FFrameNumber                                NewFrameNumber;
 			float                                              SubFrame;
 			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0002[0x3];
-			class UMovieSceneScriptingBoolKey*                 ReturnValue;
 		} params;
-		params.InTime = InTime;
-		params.NewValue = NewValue;
+		params.NewFrameNumber = NewFrameNumber;
 		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		uint8_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	uint8_t UMovieSceneScriptingByteKey::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13201);
+		
+		struct
+		{
+			uint8_t                                            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingByteKey.GetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FFrameTime UMovieSceneScriptingByteKey::GetTime(ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13200);
+		
+		struct
+		{
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FFrameTime                                  ReturnValue;
+		} params;
 		params.TimeUnit = TimeUnit;
 		
 		auto flags = fn->FunctionFlags;
@@ -3057,14 +2859,403 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingBoolChannel.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingByteKey.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneScriptingBoolChannel::StaticClass()
+	UClass* UMovieSceneScriptingByteKey::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(379);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(380);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.SetFolderName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        InFolderName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::SetFolderName(class UMovieSceneFolder* folder, const class FName& InFolderName)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13168);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			class FName                                        InFolderName;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InFolderName = InFolderName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.SetFolderColor
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         InFolderColor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::SetFolderColor(class UMovieSceneFolder* folder, const struct FColor& InFolderColor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13167);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			struct FColor                         InFolderColor;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InFolderColor = InFolderColor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildObjectBinding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerBindingProxy                      InObjectBinding                                            (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::RemoveChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13166);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			struct FSequencerBindingProxy                      InObjectBinding;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InObjectBinding = InObjectBinding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildMasterTrack
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneTrack*                            InMasterTrack                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::RemoveChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13165);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			class UMovieSceneTrack*                            InMasterTrack;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InMasterTrack = InMasterTrack;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.RemoveChildFolder
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           TargetFolder                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneFolder*                           FolderToRemove                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::RemoveChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToRemove)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13164);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           TargetFolder;
+			class UMovieSceneFolder*                           FolderToRemove;
+			bool                                               ReturnValue;
+		} params;
+		params.TargetFolder = TargetFolder;
+		params.FolderToRemove = FolderToRemove;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetFolderName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FName UMovieSceneFolderExtensions::GetFolderName(class UMovieSceneFolder* folder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13163);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			class FName                                        ReturnValue;
+		} params;
+		params.folder = folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetFolderColor
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FColor UMovieSceneFolderExtensions::GetFolderColor(class UMovieSceneFolder* folder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13162);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			struct FColor                         ReturnValue;
+		} params;
+		params.folder = folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildObjectBindings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FSequencerBindingProxy>              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<struct FSequencerBindingProxy> UMovieSceneFolderExtensions::GetChildObjectBindings(class UMovieSceneFolder* folder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13161);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			TArray<struct FSequencerBindingProxy>              ReturnValue;
+		} params;
+		params.folder = folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildMasterTracks
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class UMovieSceneTrack*>                    ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneTrack*> UMovieSceneFolderExtensions::GetChildMasterTracks(class UMovieSceneFolder* folder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13160);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			TArray<class UMovieSceneTrack*>                    ReturnValue;
+		} params;
+		params.folder = folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.GetChildFolders
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class UMovieSceneFolder*>                   ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneFolder*> UMovieSceneFolderExtensions::GetChildFolders(class UMovieSceneFolder* folder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13159);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			TArray<class UMovieSceneFolder*>                   ReturnValue;
+		} params;
+		params.folder = folder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildObjectBinding
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerBindingProxy                      InObjectBinding                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::AddChildObjectBinding(class UMovieSceneFolder* folder, const struct FSequencerBindingProxy& InObjectBinding)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13158);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			struct FSequencerBindingProxy                      InObjectBinding;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InObjectBinding = InObjectBinding;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildMasterTrack
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           folder                                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneTrack*                            InMasterTrack                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::AddChildMasterTrack(class UMovieSceneFolder* folder, class UMovieSceneTrack* InMasterTrack)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13157);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           folder;
+			class UMovieSceneTrack*                            InMasterTrack;
+			bool                                               ReturnValue;
+		} params;
+		params.folder = folder;
+		params.InMasterTrack = InMasterTrack;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneFolderExtensions.AddChildFolder
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneFolder*                           TargetFolder                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneFolder*                           FolderToAdd                                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UMovieSceneFolderExtensions::AddChildFolder(class UMovieSceneFolder* TargetFolder, class UMovieSceneFolder* FolderToAdd)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13156);
+		
+		struct
+		{
+			class UMovieSceneFolder*                           TargetFolder;
+			class UMovieSceneFolder*                           FolderToAdd;
+			bool                                               ReturnValue;
+		} params;
+		params.TargetFolder = TargetFolder;
+		params.FolderToAdd = FolderToAdd;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneFolderExtensions.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneFolderExtensions::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(372);
 		return ptr;
 	}
 
@@ -3191,19 +3382,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetValue
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.SetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UObject*                                     InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            InNewValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingObjectPathKey::SetValue(class UObject* InNewValue)
+	void UMovieSceneScriptingIntegerKey::SetValue(int32_t InNewValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13264);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13253);
 		
 		struct
 		{
-			class UObject*                                     InNewValue;
+			int32_t                                            InNewValue;
 		} params;
 		params.InNewValue = InNewValue;
 		
@@ -3215,7 +3406,7 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetTime
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.SetTime
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3223,9 +3414,9 @@ namespace SDK
 	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingObjectPathKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	void UMovieSceneScriptingIntegerKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13263);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13252);
 		
 		struct
 		{
@@ -3245,18 +3436,18 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.GetValue
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.GetValue
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UObject* UMovieSceneScriptingObjectPathKey::GetValue()
+	int32_t UMovieSceneScriptingIntegerKey::GetValue()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13262);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13251);
 		
 		struct
 		{
-			class UObject*                                     ReturnValue;
+			int32_t                                            ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -3269,15 +3460,15 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathKey.GetTime
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingIntegerKey.GetTime
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UMovieSceneScriptingObjectPathKey::GetTime(ESequenceTimeUnit TimeUnit)
+	struct FFrameTime UMovieSceneScriptingIntegerKey::GetTime(ESequenceTimeUnit TimeUnit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13261);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13250);
 		
 		struct
 		{
@@ -3297,14 +3488,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingObjectPathKey.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingIntegerKey.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneScriptingObjectPathKey::StaticClass()
+	UClass* UMovieSceneScriptingIntegerKey::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(388);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(386);
 		return ptr;
 	}
 
@@ -3504,21 +3695,27 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetPreInfinityExtrapolation
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.SetPropertyNameAndPath
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		ERichCurveExtrapolation                            InExtrapolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        InPropertyName                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      InPropertyPath                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingFloatChannel::SetPreInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation)
+	void UMovieScenePropertyTrackExtensions::SetPropertyNameAndPath(class UMovieScenePropertyTrack* Track, const class FName& InPropertyName, const class FString& InPropertyPath)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13174);
 		
 		struct
 		{
-			ERichCurveExtrapolation                            InExtrapolation;
+			class UMovieScenePropertyTrack*                    Track;
+			class FName                                        InPropertyName;
+			class FString                                      InPropertyPath;
 		} params;
-		params.InExtrapolation = InExtrapolation;
+		params.Track = Track;
+		params.InPropertyName = InPropertyName;
+		params.InPropertyPath = InPropertyPath;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3528,21 +3725,24 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetPostInfinityExtrapolation
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.SetObjectPropertyClass
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		ERichCurveExtrapolation                            InExtrapolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneObjectPropertyTrack*              Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     PropertyClass                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingFloatChannel::SetPostInfinityExtrapolation(ERichCurveExtrapolation InExtrapolation)
+	void UMovieScenePropertyTrackExtensions::SetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track, class UObject* PropertyClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13173);
 		
 		struct
 		{
-			ERichCurveExtrapolation                            InExtrapolation;
+			class UMovieSceneObjectPropertyTrack*              Track;
+			class UObject*                                     PropertyClass;
 		} params;
-		params.InExtrapolation = InExtrapolation;
+		params.Track = Track;
+		params.PropertyClass = PropertyClass;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3552,88 +3752,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.SetDefault
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetUniqueTrackName
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		float                                              InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UMovieSceneScriptingFloatChannel::SetDefault(float InDefaultValue)
+	class FName UMovieScenePropertyTrackExtensions::GetUniqueTrackName(class UMovieScenePropertyTrack* Track)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13172);
 		
 		struct
 		{
-			float                                              InDefaultValue;
+			class UMovieScenePropertyTrack*                    Track;
+			class FName                                        ReturnValue;
 		} params;
-		params.InDefaultValue = InDefaultValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.RemoveKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingFloatChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13246);
-		
-		struct
-		{
-			class UMovieSceneScriptingKey*                     Key;
-		} params;
-		params.Key = Key;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.RemoveDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingFloatChannel::RemoveDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13245);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.HasDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingFloatChannel::HasDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13244);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
+		params.Track = Track;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3645,19 +3779,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetPreInfinityExtrapolation
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyPath
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		ERichCurveExtrapolation                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ERichCurveExtrapolation UMovieSceneScriptingFloatChannel::GetPreInfinityExtrapolation()
+	class FString UMovieScenePropertyTrackExtensions::GetPropertyPath(class UMovieScenePropertyTrack* Track)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13171);
 		
 		struct
 		{
-			ERichCurveExtrapolation                            ReturnValue;
+			class UMovieScenePropertyTrack*                    Track;
+			class FString                                      ReturnValue;
 		} params;
+		params.Track = Track;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3669,19 +3806,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetPostInfinityExtrapolation
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetPropertyName
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		ERichCurveExtrapolation                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieScenePropertyTrack*                    Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FName                                        ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	ERichCurveExtrapolation UMovieSceneScriptingFloatChannel::GetPostInfinityExtrapolation()
+	class FName UMovieScenePropertyTrackExtensions::GetPropertyName(class UMovieScenePropertyTrack* Track)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13242);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13170);
 		
 		struct
 		{
-			ERichCurveExtrapolation                            ReturnValue;
+			class UMovieScenePropertyTrack*                    Track;
+			class FName                                        ReturnValue;
 		} params;
+		params.Track = Track;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3693,19 +3833,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetNumKeys
+	 * 		Name   -> Function SequencerScripting.MovieScenePropertyTrackExtensions.GetObjectPropertyClass
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneObjectPropertyTrack*              Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UMovieSceneScriptingFloatChannel::GetNumKeys()
+	class UObject* UMovieScenePropertyTrackExtensions::GetObjectPropertyClass(class UMovieSceneObjectPropertyTrack* Track)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13241);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13169);
 		
 		struct
 		{
-			int32_t                                            ReturnValue;
+			class UMovieSceneObjectPropertyTrack*              Track;
+			class UObject*                                     ReturnValue;
 		} params;
+		params.Track = Track;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3717,230 +3860,204 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingFloatChannel::GetKeys()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13240);
-		
-		struct
-		{
-			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.GetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UMovieSceneScriptingFloatChannel::GetDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13239);
-		
-		struct
-		{
-			float                                              ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.EvaluateKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		struct FFrameRate                                  FrameRate                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<float>                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<float> UMovieSceneScriptingFloatChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13238);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-			struct FFrameRate                                  FrameRate;
-			unsigned char                                      UnknownData_0000[0x4];
-			TArray<float>                                      ReturnValue;
-		} params;
-		params.Range = Range;
-		params.FrameRate = FrameRate;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.ComputeEffectiveRange
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FSequencerScriptingRange UMovieSceneScriptingFloatChannel::ComputeEffectiveRange()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13237);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingFloatChannel.AddKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EMovieSceneKeyInterpolation                        InInterpolation                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneScriptingFloatKey*                ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneScriptingFloatKey* UMovieSceneScriptingFloatChannel::AddKey(const struct FFrameNumber& InTime, float NewValue, float SubFrame, ESequenceTimeUnit TimeUnit, EMovieSceneKeyInterpolation InInterpolation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13236);
-		
-		struct
-		{
-			struct FFrameNumber                                InTime;
-			float                                              NewValue;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-			EMovieSceneKeyInterpolation                        InInterpolation;
-			unsigned char                                      UnknownData_0001[0x2];
-			class UMovieSceneScriptingFloatKey*                ReturnValue;
-		} params;
-		params.InTime = InTime;
-		params.NewValue = NewValue;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		params.InInterpolation = InInterpolation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingFloatChannel.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePropertyTrackExtensions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneScriptingFloatChannel::StaticClass()
+	UClass* UMovieScenePropertyTrackExtensions::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(385);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(373);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.SetValue
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetStartSeconds
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FMovieSceneObjectBindingID                  InNewValue                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		float                                              Start                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingActorReferenceKey::SetValue(const struct FMovieSceneObjectBindingID& InNewValue)
+	void USequencerScriptingRangeExtensions::SetStartSeconds(struct FSequencerScriptingRange* Range, float Start)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13178);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13385);
 		
 		struct
 		{
-			struct FMovieSceneObjectBindingID                  InNewValue;
+			struct FSequencerScriptingRange                    Range;
+			float                                              Start;
 		} params;
-		params.InNewValue = InNewValue;
+		params.Start = Start;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.SetTime
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetStartFrame
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            Start                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneScriptingActorReferenceKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	void USequencerScriptingRangeExtensions::SetStartFrame(struct FSequencerScriptingRange* Range, int32_t Start)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13177);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13384);
 		
 		struct
 		{
-			struct FFrameNumber                                NewFrameNumber;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
+			struct FSequencerScriptingRange                    Range;
+			int32_t                                            Start;
 		} params;
-		params.NewFrameNumber = NewFrameNumber;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
+		params.Start = Start;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.GetValue
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetEndSeconds
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FMovieSceneObjectBindingID                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		float                                              End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	struct FMovieSceneObjectBindingID UMovieSceneScriptingActorReferenceKey::GetValue()
+	void USequencerScriptingRangeExtensions::SetEndSeconds(struct FSequencerScriptingRange* Range, float End)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13176);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13383);
 		
 		struct
 		{
-			struct FMovieSceneObjectBindingID                  ReturnValue;
+			struct FSequencerScriptingRange                    Range;
+			float                                              End;
 		} params;
+		params.End = End;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetEndFrame
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USequencerScriptingRangeExtensions::SetEndFrame(struct FSequencerScriptingRange* Range, int32_t End)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13382);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			int32_t                                            End;
+		} params;
+		params.End = End;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.RemoveStart
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USequencerScriptingRangeExtensions::RemoveStart(struct FSequencerScriptingRange* Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13381);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.RemoveEnd
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void USequencerScriptingRangeExtensions::RemoveEnd(struct FSequencerScriptingRange* Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13380);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Range != nullptr)
+			*Range = params.Range;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.HasStart
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool USequencerScriptingRangeExtensions::HasStart(const struct FSequencerScriptingRange& Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13379);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			bool                                               ReturnValue;
+		} params;
+		params.Range = Range;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3952,23 +4069,22 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.GetTime
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.HasEnd
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FFrameTime UMovieSceneScriptingActorReferenceKey::GetTime(ESequenceTimeUnit TimeUnit)
+	bool USequencerScriptingRangeExtensions::HasEnd(const struct FSequencerScriptingRange& Range)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13175);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13378);
 		
 		struct
 		{
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FFrameTime                                  ReturnValue;
+			struct FSequencerScriptingRange                    Range;
+			bool                                               ReturnValue;
 		} params;
-		params.TimeUnit = TimeUnit;
+		params.Range = Range;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -3980,14 +4096,433 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingActorReferenceKey.StaticClass
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetStartSeconds
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USequencerScriptingRangeExtensions::GetStartSeconds(const struct FSequencerScriptingRange& Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13377);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			float                                              ReturnValue;
+		} params;
+		params.Range = Range;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetStartFrame
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t USequencerScriptingRangeExtensions::GetStartFrame(const struct FSequencerScriptingRange& Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13376);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Range = Range;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetEndSeconds
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float USequencerScriptingRangeExtensions::GetEndSeconds(const struct FSequencerScriptingRange& Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13375);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			float                                              ReturnValue;
+		} params;
+		params.Range = Range;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetEndFrame
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t USequencerScriptingRangeExtensions::GetEndFrame(const struct FSequencerScriptingRange& Range)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13374);
+		
+		struct
+		{
+			struct FSequencerScriptingRange                    Range;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Range = Range;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USequencerScriptingRangeExtensions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneScriptingActorReferenceKey::StaticClass()
+	UClass* USequencerScriptingRangeExtensions::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(375);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(396);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetSortingOrder
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            SortingOrder                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneTrackExtensions::SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13371);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			int32_t                                            SortingOrder;
+		} params;
+		params.Track = Track;
+		params.SortingOrder = SortingOrder;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetSectionToKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneSection*                          Section                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneTrackExtensions::SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13370);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class UMovieSceneSection*                          Section;
+		} params;
+		params.Track = Track;
+		params.Section = Section;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetDisplayName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FText                                        InName                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneTrackExtensions::SetDisplayName(class UMovieSceneTrack* Track, const class FText& InName)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13369);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class FText                                        InName;
+		} params;
+		params.Track = Track;
+		params.InName = InName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetColorTint
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         ColorTint                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneTrackExtensions::SetColorTint(class UMovieSceneTrack* Track, const struct FColor& ColorTint)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13368);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			struct FColor                         ColorTint;
+		} params;
+		params.Track = Track;
+		params.ColorTint = ColorTint;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.RemoveSection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneSection*                          Section                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneTrackExtensions::RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13367);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class UMovieSceneSection*                          Section;
+		} params;
+		params.Track = Track;
+		params.Section = Section;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSortingOrder
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UMovieSceneTrackExtensions::GetSortingOrder(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13366);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSectionToKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneSection*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneSection* UMovieSceneTrackExtensions::GetSectionToKey(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13365);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class UMovieSceneSection*                          ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSections
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class UMovieSceneSection*>                  ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	 */
+	TArray<class UMovieSceneSection*> UMovieSceneTrackExtensions::GetSections(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13364);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			TArray<class UMovieSceneSection*>                  ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetDisplayName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UMovieSceneTrackExtensions::GetDisplayName(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13363);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class FText                                        ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetColorTint
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FColor                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FColor UMovieSceneTrackExtensions::GetColorTint(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13362);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			struct FColor                         ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.AddSection
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneSection*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UMovieSceneSection* UMovieSceneTrackExtensions::AddSection(class UMovieSceneTrack* Track)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13361);
+		
+		struct
+		{
+			class UMovieSceneTrack*                            Track;
+			class UMovieSceneSection*                          ReturnValue;
+		} params;
+		params.Track = Track;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneTrackExtensions.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneTrackExtensions::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(394);
 		return ptr;
 	}
 
@@ -4477,510 +5012,6 @@ namespace SDK
 	UClass* UMovieSceneSectionExtensions::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(392);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetSortingOrder
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            SortingOrder                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneTrackExtensions::SetSortingOrder(class UMovieSceneTrack* Track, int32_t SortingOrder)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13371);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			int32_t                                            SortingOrder;
-		} params;
-		params.Track = Track;
-		params.SortingOrder = SortingOrder;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetSectionToKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneSection*                          Section                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneTrackExtensions::SetSectionToKey(class UMovieSceneTrack* Track, class UMovieSceneSection* Section)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13370);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class UMovieSceneSection*                          Section;
-		} params;
-		params.Track = Track;
-		params.Section = Section;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetDisplayName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FText                                        InName                                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneTrackExtensions::SetDisplayName(class UMovieSceneTrack* Track, const class FText& InName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13369);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class FText                                        InName;
-		} params;
-		params.Track = Track;
-		params.InName = InName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.SetColorTint
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         ColorTint                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneTrackExtensions::SetColorTint(class UMovieSceneTrack* Track, const struct PCoreUObject_FColor& ColorTint)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13368);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			struct PCoreUObject_FColor                         ColorTint;
-		} params;
-		params.Track = Track;
-		params.ColorTint = ColorTint;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.RemoveSection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneSection*                          Section                                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneTrackExtensions::RemoveSection(class UMovieSceneTrack* Track, class UMovieSceneSection* Section)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13367);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class UMovieSceneSection*                          Section;
-		} params;
-		params.Track = Track;
-		params.Section = Section;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSortingOrder
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UMovieSceneTrackExtensions::GetSortingOrder(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13366);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			int32_t                                            ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSectionToKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneSection*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneSection* UMovieSceneTrackExtensions::GetSectionToKey(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13365);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class UMovieSceneSection*                          ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetSections
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<class UMovieSceneSection*>                  ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneSection*> UMovieSceneTrackExtensions::GetSections(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13364);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			TArray<class UMovieSceneSection*>                  ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetDisplayName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UMovieSceneTrackExtensions::GetDisplayName(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13363);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class FText                                        ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.GetColorTint
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FColor                         ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct PCoreUObject_FColor UMovieSceneTrackExtensions::GetColorTint(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13362);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			struct PCoreUObject_FColor                         ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneTrackExtensions.AddSection
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneTrack*                            Track                                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneSection*                          ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneSection* UMovieSceneTrackExtensions::AddSection(class UMovieSceneTrack* Track)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13361);
-		
-		struct
-		{
-			class UMovieSceneTrack*                            Track;
-			class UMovieSceneSection*                          ReturnValue;
-		} params;
-		params.Track = Track;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneTrackExtensions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneTrackExtensions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(394);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.SetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingObjectPathChannel::SetDefault(class UObject* InDefaultValue)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13271);
-		
-		struct
-		{
-			class UObject*                                     InDefaultValue;
-		} params;
-		params.InDefaultValue = InDefaultValue;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingObjectPathChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13270);
-		
-		struct
-		{
-			class UMovieSceneScriptingKey*                     Key;
-		} params;
-		params.Key = Key;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneScriptingObjectPathChannel::RemoveDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13269);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.HasDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UMovieSceneScriptingObjectPathChannel::HasDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13268);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.GetKeys
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingObjectPathChannel::GetKeys()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13267);
-		
-		struct
-		{
-			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.GetDefault
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* UMovieSceneScriptingObjectPathChannel::GetDefault()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13266);
-		
-		struct
-		{
-			class UObject*                                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.AddKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UMovieSceneScriptingObjectPathKey*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UMovieSceneScriptingObjectPathKey* UMovieSceneScriptingObjectPathChannel::AddKey(const struct FFrameNumber& InTime, class UObject* NewValue, float SubFrame, ESequenceTimeUnit TimeUnit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13265);
-		
-		struct
-		{
-			struct FFrameNumber                                InTime;
-			unsigned char                                      UnknownData_0000[0x4];
-			class UObject*                                     NewValue;
-			float                                              SubFrame;
-			ESequenceTimeUnit                                  TimeUnit;
-			unsigned char                                      UnknownData_0001[0x3];
-			class UMovieSceneScriptingObjectPathKey*           ReturnValue;
-		} params;
-		params.InTime = InTime;
-		params.NewValue = NewValue;
-		params.SubFrame = SubFrame;
-		params.TimeUnit = TimeUnit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneScriptingObjectPathChannel.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneScriptingObjectPathChannel::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(389);
 		return ptr;
 	}
 
@@ -6725,6 +6756,126 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.SetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneObjectBindingID                  InNewValue                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingActorReferenceKey::SetValue(const struct FMovieSceneObjectBindingID& InNewValue)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13178);
+		
+		struct
+		{
+			struct FMovieSceneObjectBindingID                  InNewValue;
+		} params;
+		params.InNewValue = InNewValue;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.SetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FFrameNumber                                NewFrameNumber                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneScriptingActorReferenceKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13177);
+		
+		struct
+		{
+			struct FFrameNumber                                NewFrameNumber;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+		} params;
+		params.NewFrameNumber = NewFrameNumber;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneObjectBindingID                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FMovieSceneObjectBindingID UMovieSceneScriptingActorReferenceKey::GetValue()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13176);
+		
+		struct
+		{
+			struct FMovieSceneObjectBindingID                  ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingActorReferenceKey.GetTime
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameTime                                  ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FFrameTime UMovieSceneScriptingActorReferenceKey::GetTime(ESequenceTimeUnit TimeUnit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13175);
+		
+		struct
+		{
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FFrameTime                                  ReturnValue;
+		} params;
+		params.TimeUnit = TimeUnit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingActorReferenceKey.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneScriptingActorReferenceKey::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(375);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function SequencerScripting.MovieSceneVectorTrackExtensions.SetNumChannelsUsed
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -6793,190 +6944,88 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetStartSeconds
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.SetDefault
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		float                                              Start                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     InDefaultValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USequencerScriptingRangeExtensions::SetStartSeconds(struct FSequencerScriptingRange* Range, float Start)
+	void UMovieSceneScriptingObjectPathChannel::SetDefault(class UObject* InDefaultValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13385);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13271);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			float                                              Start;
+			class UObject*                                     InDefaultValue;
 		} params;
-		params.Start = Start;
+		params.InDefaultValue = InDefaultValue;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetStartFrame
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveKey
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            Start                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneScriptingKey*                     Key                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USequencerScriptingRangeExtensions::SetStartFrame(struct FSequencerScriptingRange* Range, int32_t Start)
+	void UMovieSceneScriptingObjectPathChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13270);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			int32_t                                            Start;
+			class UMovieSceneScriptingKey*                     Key;
 		} params;
-		params.Start = Start;
+		params.Key = Key;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetEndSeconds
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.RemoveDefault
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		float                                              End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void USequencerScriptingRangeExtensions::SetEndSeconds(struct FSequencerScriptingRange* Range, float End)
+	void UMovieSceneScriptingObjectPathChannel::RemoveDefault()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13269);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			float                                              End;
-		} params;
-		params.End = End;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.SetEndFrame
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            End                                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USequencerScriptingRangeExtensions::SetEndFrame(struct FSequencerScriptingRange* Range, int32_t End)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13382);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-			int32_t                                            End;
-		} params;
-		params.End = End;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.RemoveStart
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USequencerScriptingRangeExtensions::RemoveStart(struct FSequencerScriptingRange* Range)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13381);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.RemoveEnd
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.HasDefault
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void USequencerScriptingRangeExtensions::RemoveEnd(struct FSequencerScriptingRange* Range)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13380);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Range != nullptr)
-			*Range = params.Range;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.HasStart
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	bool USequencerScriptingRangeExtensions::HasStart(const struct FSequencerScriptingRange& Range)
+	bool UMovieSceneScriptingObjectPathChannel::HasDefault()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13379);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13268);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
 			bool                                               ReturnValue;
 		} params;
-		params.Range = Range;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -6988,22 +7037,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.HasEnd
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.GetKeys
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<class UMovieSceneScriptingKey*>             ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	bool USequencerScriptingRangeExtensions::HasEnd(const struct FSequencerScriptingRange& Range)
+	TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingObjectPathChannel::GetKeys()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13378);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13267);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			bool                                               ReturnValue;
+			TArray<class UMovieSceneScriptingKey*>             ReturnValue;
 		} params;
-		params.Range = Range;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -7015,22 +7061,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetStartSeconds
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.GetDefault
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	float USequencerScriptingRangeExtensions::GetStartSeconds(const struct FSequencerScriptingRange& Range)
+	class UObject* UMovieSceneScriptingObjectPathChannel::GetDefault()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13377);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13266);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			float                                              ReturnValue;
+			class UObject*                                     ReturnValue;
 		} params;
-		params.Range = Range;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -7042,22 +7085,33 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetStartFrame
+	 * 		Name   -> Function SequencerScripting.MovieSceneScriptingObjectPathChannel.AddKey
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FFrameNumber                                InTime                                                     (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     NewValue                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              SubFrame                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		ESequenceTimeUnit                                  TimeUnit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UMovieSceneScriptingObjectPathKey*           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t USequencerScriptingRangeExtensions::GetStartFrame(const struct FSequencerScriptingRange& Range)
+	class UMovieSceneScriptingObjectPathKey* UMovieSceneScriptingObjectPathChannel::AddKey(const struct FFrameNumber& InTime, class UObject* NewValue, float SubFrame, ESequenceTimeUnit TimeUnit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13376);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13265);
 		
 		struct
 		{
-			struct FSequencerScriptingRange                    Range;
-			int32_t                                            ReturnValue;
+			struct FFrameNumber                                InTime;
+			unsigned char                                      UnknownData_0000[0x4];
+			class UObject*                                     NewValue;
+			float                                              SubFrame;
+			ESequenceTimeUnit                                  TimeUnit;
+			unsigned char                                      UnknownData_0001[0x3];
+			class UMovieSceneScriptingObjectPathKey*           ReturnValue;
 		} params;
-		params.Range = Range;
+		params.InTime = InTime;
+		params.NewValue = NewValue;
+		params.SubFrame = SubFrame;
+		params.TimeUnit = TimeUnit;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -7069,68 +7123,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetEndSeconds
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float USequencerScriptingRangeExtensions::GetEndSeconds(const struct FSequencerScriptingRange& Range)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13375);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-			float                                              ReturnValue;
-		} params;
-		params.Range = Range;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function SequencerScripting.SequencerScriptingRangeExtensions.GetEndFrame
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSequencerScriptingRange                    Range                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t USequencerScriptingRangeExtensions::GetEndFrame(const struct FSequencerScriptingRange& Range)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13374);
-		
-		struct
-		{
-			struct FSequencerScriptingRange                    Range;
-			int32_t                                            ReturnValue;
-		} params;
-		params.Range = Range;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USequencerScriptingRangeExtensions.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneScriptingObjectPathChannel.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* USequencerScriptingRangeExtensions::StaticClass()
+	UClass* UMovieSceneScriptingObjectPathChannel::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(396);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(389);
 		return ptr;
 	}
 

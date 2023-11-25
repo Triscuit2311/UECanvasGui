@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void AFaction_BoltonSecurity_C::AlertOtherSuspectsInTeam_Blueprint(class ASuspectCharacter* Suspect, class AReadyOrNotCharacter* Enemy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(127118);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112843);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void AFaction_BoltonSecurity_C::OnAIAdded_Blueprint(class ACyberneticCharacter* Character)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(127119);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112844);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void AFaction_BoltonSecurity_C::ExecuteUbergraph_Faction_BoltonSecurity(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(127120);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112845);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	UClass* AFaction_BoltonSecurity_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(127121);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112846);
 		return ptr;
 	}
 

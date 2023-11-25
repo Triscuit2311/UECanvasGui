@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Legend_C::Toggle(bool* IsOpen)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57749);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30962);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Legend_C::Open()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57748);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30961);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Legend_C::Close()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57747);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30960);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_Legend_C::ExecuteUbergraph_W_PreMission_Tablet_Legend(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57746);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30959);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_Legend_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57745);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30958);
 		return ptr;
 	}
 

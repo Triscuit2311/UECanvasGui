@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::SetNameText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27416);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48533);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::UpdateActiveLoadout(const struct FSavedLoadout& ActiveLoadout)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27415);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48532);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::UpdateCurrentSlot(class UW_LoadoutSlot_C* CurrentSlot)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27414);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48531);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::UpdateCurrentItemMap(TMap<EItemCategory, class ABaseItem*> ItemCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27413);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48530);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::SetLoadoutWidget(class UW_Loadout_C* LoadoutWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27412);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48529);
 		
 		struct
 		{
@@ -137,7 +137,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48528);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::BndEvt__W_Loadout_UnitSelect_Option_W_Button_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48527);
 		
 		struct
 		{
@@ -183,7 +183,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::SetSelected(bool IsSelected)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48526);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::Reveal(float Delay)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27408);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48525);
 		
 		struct
 		{
@@ -232,7 +232,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::Hide(float Delay, bool Collapse)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27407);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48524);
 		
 		struct
 		{
@@ -258,7 +258,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::ExecuteUbergraph_W_Loadout_UnitSelect_Option(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27406);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48523);
 		
 		struct
 		{
@@ -282,7 +282,7 @@ namespace SDK
 	 */
 	void UW_Loadout_UnitSelect_Option_C::UnitOptionClicked__DelegateSignature(class UW_Loadout_UnitSelect_Option_C* TriggeringOption)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48522);
 		
 		struct
 		{
@@ -305,7 +305,7 @@ namespace SDK
 	 */
 	UClass* UW_Loadout_UnitSelect_Option_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27404);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48521);
 		return ptr;
 	}
 

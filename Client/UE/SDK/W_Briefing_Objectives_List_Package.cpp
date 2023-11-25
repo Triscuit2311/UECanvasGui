@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_List_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28949);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49198);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_List_C::InitObjectives(TArray<class AObjective*> Objectives)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28948);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49197);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_List_C::InitChallenges(TArray<struct FST_SubObjective_Entry> Challenges)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28947);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49196);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Objectives_List_C::ExecuteUbergraph_W_Briefing_Objectives_List(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28946);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49195);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Objectives_List_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28945);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49194);
 		return ptr;
 	}
 

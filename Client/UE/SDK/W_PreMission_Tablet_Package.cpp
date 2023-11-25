@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_Tablet_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36203);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39885);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::RadialCollapsed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36202);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39884);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::CloseRadial()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36201);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39883);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::RadialMarkerSelected(const class FName& CategoryName, const class FName& MarkerName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36200);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39882);
 		
 		struct
 		{
@@ -120,7 +120,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::OpenRadial(const struct FVector2D& Coordinates)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36199);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39881);
 		
 		struct
 		{
@@ -145,7 +145,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PreMission_Tablet_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36198);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39880);
 		
 		struct
 		{
@@ -174,7 +174,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::UpdateNavigation(class UW_PremissionTablet_Button_C* NewActiveButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36197);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39879);
 		
 		struct
 		{
@@ -198,7 +198,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_btn_Team_K2Node_ComponentBoundEvent_2_OnClicked__DelegateSignature(class UW_PremissionTablet_Button_C* TriggeringButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39878);
 		
 		struct
 		{
@@ -222,7 +222,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_btn_Map_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature(class UW_PremissionTablet_Button_C* TriggeringButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36195);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39877);
 		
 		struct
 		{
@@ -246,7 +246,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_btn_Brief_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature(class UW_PremissionTablet_Button_C* TriggeringButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36194);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39876);
 		
 		struct
 		{
@@ -269,7 +269,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_W_PreMission_Tablet_Messenger_K2Node_ComponentBoundEvent_1_OnMessengerClose__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36193);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39875);
 		
 		struct
 		{
@@ -290,7 +290,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_W_PreMission_Tablet_Messenger_K2Node_ComponentBoundEvent_0_OnMessengerOpen__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36192);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39874);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::BndEvt__W_PreMission_Tablet_btn_Legend_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature(class UW_PremissionTablet_Button_C* TriggeringButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36191);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39873);
 		
 		struct
 		{
@@ -335,7 +335,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::Chat()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36190);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39872);
 		
 		struct
 		{
@@ -357,7 +357,7 @@ namespace SDK
 	 */
 	void UW_PreMission_Tablet_C::ExecuteUbergraph_W_PreMission_Tablet(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36189);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39871);
 		
 		struct
 		{
@@ -381,7 +381,7 @@ namespace SDK
 	 */
 	UClass* UW_PreMission_Tablet_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(36188);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39870);
 		return ptr;
 	}
 

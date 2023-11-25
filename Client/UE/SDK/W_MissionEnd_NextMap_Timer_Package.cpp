@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_NextMap_Timer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88652);
 		
 		struct
 		{
@@ -48,7 +48,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_NextMap_Timer_C::UpdateTimer(float TimeinSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88646);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88651);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_MissionEnd_NextMap_Timer_C::ExecuteUbergraph_W_MissionEnd_NextMap_Timer(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88645);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88650);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	UClass* UW_MissionEnd_NextMap_Timer_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88644);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88649);
 		return ptr;
 	}
 

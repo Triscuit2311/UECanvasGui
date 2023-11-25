@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::SetupWidgetSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52131);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37879);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::SetupFontSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52130);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37878);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::Initialize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52129);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37877);
 		
 		struct
 		{
@@ -83,7 +83,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::StopAnimating()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52128);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37876);
 		
 		struct
 		{
@@ -104,7 +104,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::StartAnimating()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52127);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37875);
 		
 		struct
 		{
@@ -126,7 +126,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52126);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37874);
 		
 		struct
 		{
@@ -151,7 +151,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52125);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37873);
 		
 		struct
 		{
@@ -176,7 +176,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::OnWheelCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52124);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37872);
 		
 		struct
 		{
@@ -197,7 +197,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::OnRefresh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52123);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37871);
 		
 		struct
 		{
@@ -219,7 +219,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_C::ExecuteUbergraph_W_WeaponWheel_ItemStat(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(52122);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37870);
 		
 		struct
 		{
@@ -242,7 +242,7 @@ namespace SDK
 	 */
 	UClass* UW_WeaponWheel_ItemStat_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(52121);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37869);
 		return ptr;
 	}
 

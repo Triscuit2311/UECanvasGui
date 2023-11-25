@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,26 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class MagicLeapPlanes.MagicLeapPlanesFunctionLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UMagicLeapPlanesFunctionLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		void ReorderPlaneFlags(TArray<EMagicLeapPlaneQueryFlags> InPriority, TArray<EMagicLeapPlaneQueryFlags> InFlagsToReorder, TArray<EMagicLeapPlaneQueryFlags>* OutReorderedFlags);
+		bool RemovePersistentQuery(const struct FGuid& Handle);
+		void RemoveFlagsNotInQuery(TArray<EMagicLeapPlaneQueryFlags> InQueryFlags, TArray<EMagicLeapPlaneQueryFlags> InResultFlags, TArray<EMagicLeapPlaneQueryFlags>* OutFlags);
+		bool PlanesQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const class FScriptDelegate& ResultDelegate);
+		bool PlanesPersistentQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const struct FGuid& Handle, const class FScriptDelegate& ResultDelegate);
+		bool IsTrackerValid();
+		struct FTransform GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult);
+		bool DestroyTracker();
+		bool CreateTracker();
+		struct FGuid AddPersistentQuery(EMagicLeapPlaneQueryType PersistentQueryType);
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class MagicLeapPlanes.MagicLeapPlanesComponent
 	 * Size -> 0x0068 (FullSize[0x0260] - InheritedSize[0x01F8])
@@ -38,26 +58,6 @@ namespace SDK
 
 	public:
 		bool RequestPlanesAsync();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MagicLeapPlanes.MagicLeapPlanesFunctionLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UMagicLeapPlanesFunctionLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		void ReorderPlaneFlags(TArray<EMagicLeapPlaneQueryFlags> InPriority, TArray<EMagicLeapPlaneQueryFlags> InFlagsToReorder, TArray<EMagicLeapPlaneQueryFlags>* OutReorderedFlags);
-		bool RemovePersistentQuery(const struct FGuid& Handle);
-		void RemoveFlagsNotInQuery(TArray<EMagicLeapPlaneQueryFlags> InQueryFlags, TArray<EMagicLeapPlaneQueryFlags> InResultFlags, TArray<EMagicLeapPlaneQueryFlags>* OutFlags);
-		bool PlanesQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const class FScriptDelegate& ResultDelegate);
-		bool PlanesPersistentQueryBeginAsync(const struct FMagicLeapPlanesQuery& Query, const struct FGuid& Handle, const class FScriptDelegate& ResultDelegate);
-		bool IsTrackerValid();
-		struct PCoreUObject_FTransform GetContentScale(class AActor* ContentActor, const struct FMagicLeapPlaneResult& PlaneResult);
-		bool DestroyTracker();
-		bool CreateTracker();
-		struct FGuid AddPersistentQuery(EMagicLeapPlaneQueryType PersistentQueryType);
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -403,7 +403,7 @@ namespace SDK
 	 */
 	void UW_ScoreboardFill_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88509);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88473);
 		
 		struct
 		{
@@ -429,7 +429,7 @@ namespace SDK
 	 */
 	void UW_ScoreboardFill_C::ExecuteUbergraph_W_ScoreboardFill(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88508);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88472);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	UClass* UW_ScoreboardFill_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88507);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88471);
 		return ptr;
 	}
 

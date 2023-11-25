@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::UpdateMissionScore()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88858);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88951);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88857);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88950);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::BndEvt__W_WorldMap_MissionSelect_btn_AcceptMission_1_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88856);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88949);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88855);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88948);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::ExecuteUbergraph_W_WorldMap_MissionSelect(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88854);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88947);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_MissionSelect_C::OnSetMissionButtonClicked__DelegateSignature(class UW_WorldMap_MissionSelect_C* BtnClicked)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88853);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88946);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	UClass* UW_WorldMap_MissionSelect_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88852);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88945);
 		return ptr;
 	}
 

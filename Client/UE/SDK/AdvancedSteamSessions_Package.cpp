@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -443,6 +443,50 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function AdvancedSteamSessions.SteamWSRequestUGCDetailsCallbackProxy.GetWorkshopItemDetails
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FBPSteamWorkshopID                          WorkShopID                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		class USteamWSRequestUGCDetailsCallbackProxy*      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class USteamWSRequestUGCDetailsCallbackProxy* USteamWSRequestUGCDetailsCallbackProxy::GetWorkshopItemDetails(class UObject* WorldContextObject, const struct FBPSteamWorkshopID& WorkShopID)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11954);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			struct FBPSteamWorkshopID                          WorkShopID;
+			class USteamWSRequestUGCDetailsCallbackProxy*      ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.WorkShopID = WorkShopID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction USteamWSRequestUGCDetailsCallbackProxy.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* USteamWSRequestUGCDetailsCallbackProxy::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(103);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function AdvancedSteamSessions.AdvancedSteamWorkshopLibrary.GetSubscribedWorkshopItems
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -507,50 +551,6 @@ namespace SDK
 	UClass* UAdvancedSteamWorkshopLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(101);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function AdvancedSteamSessions.SteamWSRequestUGCDetailsCallbackProxy.GetWorkshopItemDetails
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FBPSteamWorkshopID                          WorkShopID                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		class USteamWSRequestUGCDetailsCallbackProxy*      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class USteamWSRequestUGCDetailsCallbackProxy* USteamWSRequestUGCDetailsCallbackProxy::GetWorkshopItemDetails(class UObject* WorldContextObject, const struct FBPSteamWorkshopID& WorkShopID)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(11954);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			struct FBPSteamWorkshopID                          WorkShopID;
-			class USteamWSRequestUGCDetailsCallbackProxy*      ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.WorkShopID = WorkShopID;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction USteamWSRequestUGCDetailsCallbackProxy.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* USteamWSRequestUGCDetailsCallbackProxy::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(103);
 		return ptr;
 	}
 

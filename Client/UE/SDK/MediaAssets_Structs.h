@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,29 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
+	 * Enum MediaAssets.EMediaSoundComponentFFTSize
+	 */
+	enum class EMediaSoundComponentFFTSize : uint8_t
+	{
+		Min    = 0,
+		Small  = 1,
+		Medium = 2,
+		Large  = 3,
+		MAX    = 4
+	};
+
+	/**
+	 * Enum MediaAssets.EMediaSoundChannels
+	 */
+	enum class EMediaSoundChannels : uint8_t
+	{
+		Mono     = 0,
+		Stereo   = 1,
+		Surround = 2,
+		MAX      = 3
+	};
+
+	/**
 	 * Enum MediaAssets.MediaTextureOrientation
 	 */
 	enum class EMediaTextureOrientation : uint8_t
@@ -24,16 +47,6 @@ namespace SDK
 		MTORI_CW180    = 2,
 		MTORI_CW270    = 3,
 		MTORI_MAX      = 4
-	};
-
-	/**
-	 * Enum MediaAssets.MediaTextureOutputFormat
-	 */
-	enum class EMediaTextureOutputFormat : uint8_t
-	{
-		MTOF_Default     = 0,
-		MTOF_SRGB_LINOUT = 1,
-		MTOF_MAX         = 2
 	};
 
 	/**
@@ -76,6 +89,16 @@ namespace SDK
 	};
 
 	/**
+	 * Enum MediaAssets.MediaTextureOutputFormat
+	 */
+	enum class EMediaTextureOutputFormat : uint8_t
+	{
+		MTOF_Default     = 0,
+		MTOF_SRGB_LINOUT = 1,
+		MTOF_MAX         = 2
+	};
+
+	/**
 	 * Enum MediaAssets.EMediaPlayerTrack
 	 */
 	enum class EMediaPlayerTrack : uint8_t
@@ -88,29 +111,6 @@ namespace SDK
 		Text     = 5,
 		Video    = 6,
 		MAX      = 7
-	};
-
-	/**
-	 * Enum MediaAssets.EMediaSoundComponentFFTSize
-	 */
-	enum class EMediaSoundComponentFFTSize : uint8_t
-	{
-		Min    = 0,
-		Small  = 1,
-		Medium = 2,
-		Large  = 3,
-		MAX    = 4
-	};
-
-	/**
-	 * Enum MediaAssets.EMediaSoundChannels
-	 */
-	enum class EMediaSoundChannels : uint8_t
-	{
-		Mono     = 0,
-		Stereo   = 1,
-		Surround = 2,
-		MAX      = 3
 	};
 
 	// --------------------------------------------------

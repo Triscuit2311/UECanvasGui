@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::GetBriefingMainWidget(class UW_BriefingMain_C** BriefingMainWidget, bool* Success)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55001);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57022);
 		
 		struct
 		{
@@ -52,7 +52,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55000);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57021);
 		
 		struct
 		{
@@ -77,7 +77,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54999);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57020);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::BndEvt__MainBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54998);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57019);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::BndEvt__MainBtn_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54997);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31487);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::BndEvt__MainBtn_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54996);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31486);
 		
 		struct
 		{
@@ -166,7 +166,7 @@ namespace SDK
 	 */
 	void UW_BriefingTaskButton_C::ExecuteUbergraph_W_BriefingTaskButton(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54995);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31485);
 		
 		struct
 		{
@@ -190,7 +190,7 @@ namespace SDK
 	 */
 	UClass* UW_BriefingTaskButton_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54994);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31484);
 		return ptr;
 	}
 

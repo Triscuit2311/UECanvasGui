@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,29 +15,16 @@ namespace SDK
 	// # Classes
 	// --------------------------------------------------
 	/**
-	 * Class Modio.ModioImageLibrary
+	 * Class Modio.ModioExampleLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioImageLibrary : public UBlueprintFunctionLibrary
+	class UModioExampleLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void LoadAsync(const struct FModioImageWrapper& Image, const class FScriptDelegate& OnImageLoaded);
-		class UTexture2DDynamic* GetTexture(const struct FModioImageWrapper& Image);
-		EModioImageState GetState(const struct FModioImageWrapper& Image);
-		struct FVector2D GetLogoSize(class UTexture* Logo, EModioLogoSize LogoSize);
-		struct FVector2D GetGallerySize(class UTexture* GalleryImage, EModioGallerySize GallerySize);
-		struct FVector2D GetAvatarSize(class UTexture* Avatar, EModioAvatarSize AvatarSize);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioInstallationOverride
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UModioInstallationOverride : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool OverrideModInstallationDirectory(const class FString& NewInstallPath, const struct FModioInitializeOptions& InitParams);
+		void ListUserSubscriptionAsync(const struct FModioFilterParams& FilterParams, const class FScriptDelegate& Callback);
+		EModioLogoSize GetLogoThumbnailSize();
+		EModioLogoSize GetLogoFullSize();
+		EModioAvatarSize GetAvatarThumbnailSize();
 		static UClass* StaticClass();
 	};
 
@@ -70,16 +57,39 @@ namespace SDK
 	};
 
 	/**
-	 * Class Modio.ModioModCollectionLibrary
+	 * Class Modio.ModioFilterParamsLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioModCollectionLibrary : public UBlueprintFunctionLibrary
+	class UModioFilterParamsLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		class FString GetPath(const struct FModioModCollectionEntry& Entry);
-		EModioModState GetModState(const struct FModioModCollectionEntry& Entry);
-		struct FModioModInfo GetModProfile(const struct FModioModCollectionEntry& Entry);
-		struct FModioModID GetId(const struct FModioModCollectionEntry& Entry);
+		struct FModioFilterParams WithTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags);
+		struct FModioFilterParams WithTag(struct FModioFilterParams* Filter, const class FString& Tag);
+		struct FModioFilterParams WithoutTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags);
+		struct FModioFilterParams WithoutTag(struct FModioFilterParams* Filter, const class FString& Tag);
+		struct FModioFilterParams SortBy(struct FModioFilterParams* Filter, EModioSortFieldType ByField, EModioSortDirection ByDirection);
+		struct FModioFilterParams PagedResults(struct FModioFilterParams* Filter, int64_t PageNumber, int64_t PageSize);
+		struct FModioFilterParams NameContainsStrings(struct FModioFilterParams* Filter, TArray<class FString> SearchStrings);
+		struct FModioFilterParams NameContains(struct FModioFilterParams* Filter, const class FString& SearchString);
+		struct FModioFilterParams MetadataLike(struct FModioFilterParams* Filter, const class FString& SearchString);
+		struct FModioFilterParams MatchingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs);
+		struct FModioFilterParams MarkedLiveBefore(struct FModioFilterParams* Filter, const struct FDateTime& LiveBefore);
+		struct FModioFilterParams MarkedLiveAfter(struct FModioFilterParams* Filter, const struct FDateTime& LiveAfter);
+		struct FModioFilterParams IndexedResults(struct FModioFilterParams* Filter, int64_t StartIndex, int64_t ResultCount);
+		struct FModioFilterParams ExcludingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Modio.ModioErrorCodeLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UModioErrorCodeLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		bool IsError(const struct FModioErrorCode& Error);
+		int32_t GetValue(const struct FModioErrorCode& Error);
+		class FString GetMessage(const struct FModioErrorCode& Error);
 		static UClass* StaticClass();
 	};
 
@@ -116,6 +126,43 @@ namespace SDK
 	};
 
 	/**
+	 * Class Modio.ModioImageLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UModioImageLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		void LoadAsync(const struct FModioImageWrapper& Image, const class FScriptDelegate& OnImageLoaded);
+		class UTexture2DDynamic* GetTexture(const struct FModioImageWrapper& Image);
+		EModioImageState GetState(const struct FModioImageWrapper& Image);
+		struct FVector2D GetLogoSize(class UTexture* Logo, EModioLogoSize LogoSize);
+		struct FVector2D GetGallerySize(class UTexture* GalleryImage, EModioGallerySize GallerySize);
+		struct FVector2D GetAvatarSize(class UTexture* Avatar, EModioAvatarSize AvatarSize);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Modio.ModioSDKLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UModioSDKLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		float Pct_Int64Int64(int64_t Dividend, int64_t Divisor);
+		bool IsValidSecurityCodeFormat(const class FString& String);
+		bool IsValidEmailAddressFormat(const class FString& String);
+		struct FModioInitializeOptions GetProjectInitializeOptionsForSessionId(const class FString& SessionID);
+		struct FModioInitializeOptions GetProjectInitializeOptions();
+		struct FModioGameID GetProjectGameId();
+		EModioEnvironment GetProjectEnvironment();
+		struct FModioApiKey GetProjectApiKey();
+		class FText Filesize_ToString(int64_t Filesize, int32_t MaxDecimals, EFileSizeUnit Unit);
+		class FText Conv_Int64ToText(int64_t Value, bool bAlwaysSign, bool bUseGrouping, int32_t MinimumIntegralDigits, int32_t MaximumIntegralDigits);
+		class FString Conv_Int64ToString(int64_t inInt);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class Modio.ModioModInfoListLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -128,20 +175,23 @@ namespace SDK
 	};
 
 	/**
-	 * Class Modio.ModioEditModLibrary
+	 * Class Modio.ModioInstallationOverride
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioEditModLibrary : public UBlueprintFunctionLibrary
+	class UModioInstallationOverride : public UBlueprintFunctionLibrary
 	{
 	public:
-		void SetVisibility(struct FModioEditModParams* In, bool Visibility);
-		void SetSummary(struct FModioEditModParams* In, const class FString& Summary);
-		void SetNamePath(struct FModioEditModParams* In, const class FString& NamePath);
-		void SetName(struct FModioEditModParams* In, const class FString& Name);
-		void SetMetadataBlob(struct FModioEditModParams* In, const class FString& MetadataBlob);
-		void SetMaturityFlags(struct FModioEditModParams* In, EModioMaturityFlags MaturityFlags);
-		void SetHomepageURL(struct FModioEditModParams* In, const class FString& HomepageURL);
-		void SetDescription(struct FModioEditModParams* In, const class FString& Description);
+		bool OverrideModInstallationDirectory(const class FString& NewInstallPath, const struct FModioInitializeOptions& InitParams);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Modio.ModioTestSettings
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UModioTestSettings : public UObject
+	{
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -164,35 +214,28 @@ namespace SDK
 	};
 
 	/**
-	 * Class Modio.ModioPopupBase
-	 * Size -> 0x0000 (FullSize[0x0260] - InheritedSize[0x0260])
+	 * Class Modio.ModioModTagOptionsLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioPopupBase : public UUserWidget
+	class UModioModTagOptionsLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
+		TArray<struct FModioModTagInfo> GetTags(const struct FModioModTagOptions& ModTags);
+		struct FModioPagedResult GetPagedResult(const struct FModioModTagOptions& ModTags);
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class Modio.ModioTestSettings
+	 * Class Modio.ModioModCollectionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioTestSettings : public UObject
+	class UModioModCollectionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioErrorCodeLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UModioErrorCodeLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool IsError(const struct FModioErrorCode& Error);
-		int32_t GetValue(const struct FModioErrorCode& Error);
-		class FString GetMessage(const struct FModioErrorCode& Error);
+		class FString GetPath(const struct FModioModCollectionEntry& Entry);
+		EModioModState GetModState(const struct FModioModCollectionEntry& Entry);
+		struct FModioModInfo GetModProfile(const struct FModioModCollectionEntry& Entry);
+		struct FModioModID GetId(const struct FModioModCollectionEntry& Entry);
 		static UClass* StaticClass();
 	};
 
@@ -216,42 +259,6 @@ namespace SDK
 		float Conv_FModioUnsigned64ToFloat(const struct FModioUnsigned64& In);
 		void BreakToComponents(const struct FModioUnsigned64& In, int32_t* High, int32_t* Low);
 		struct FModioUnsigned64 Add(const struct FModioUnsigned64& LHS, const struct FModioUnsigned64& RHS);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioReportLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UModioReportLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		struct FModioReportParams MakeReportForUser(const struct FModioUserID& User, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
-		struct FModioReportParams MakeReportForMod(const struct FModioModID& Mod, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
-		struct FModioReportParams MakeReportForGame(const struct FModioGameID& Game, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioModTagOptionsLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UModioModTagOptionsLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		TArray<struct FModioModTagInfo> GetTags(const struct FModioModTagOptions& ModTags);
-		struct FModioPagedResult GetPagedResult(const struct FModioModTagOptions& ModTags);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioErrorConditionLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UModioErrorConditionLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool ErrorCodeMatches(const struct FModioErrorCode& ErrorCode, EModioErrorCondition Condition);
 		static UClass* StaticClass();
 	};
 
@@ -308,39 +315,20 @@ namespace SDK
 	};
 
 	/**
-	 * Class Modio.ModioPopupContainer
-	 * Size -> 0x0020 (FullSize[0x0280] - InheritedSize[0x0260])
-	 */
-	class UModioPopupContainer : public UUserWidget
-	{
-	public:
-		TArray<class UModioPopupBase*>                               PopupStack;                                              // 0x0260(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
-		TArray<class UModioPopupBase*>                               PopupCache;                                              // 0x0270(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
-
-	public:
-		class UModioPopupBase* PushPopup(class UModioPopupBase* PopupClass);
-		class UModioPopupBase* PopPopup(class UModioPopupBase* PopupClass);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Modio.ModioSDKLibrary
+	 * Class Modio.ModioEditModLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioSDKLibrary : public UBlueprintFunctionLibrary
+	class UModioEditModLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		float Pct_Int64Int64(int64_t Dividend, int64_t Divisor);
-		bool IsValidSecurityCodeFormat(const class FString& String);
-		bool IsValidEmailAddressFormat(const class FString& String);
-		struct FModioInitializeOptions GetProjectInitializeOptionsForSessionId(const class FString& SessionID);
-		struct FModioInitializeOptions GetProjectInitializeOptions();
-		struct FModioGameID GetProjectGameId();
-		EModioEnvironment GetProjectEnvironment();
-		struct FModioApiKey GetProjectApiKey();
-		class FText Filesize_ToString(int64_t Filesize, int32_t MaxDecimals, EFileSizeUnit Unit);
-		class FText Conv_Int64ToText(int64_t Value, bool bAlwaysSign, bool bUseGrouping, int32_t MinimumIntegralDigits, int32_t MaximumIntegralDigits);
-		class FString Conv_Int64ToString(int64_t inInt);
+		void SetVisibility(struct FModioEditModParams* In, bool Visibility);
+		void SetSummary(struct FModioEditModParams* In, const class FString& Summary);
+		void SetNamePath(struct FModioEditModParams* In, const class FString& NamePath);
+		void SetName(struct FModioEditModParams* In, const class FString& Name);
+		void SetMetadataBlob(struct FModioEditModParams* In, const class FString& MetadataBlob);
+		void SetMaturityFlags(struct FModioEditModParams* In, EModioMaturityFlags MaturityFlags);
+		void SetHomepageURL(struct FModioEditModParams* In, const class FString& HomepageURL);
+		void SetDescription(struct FModioEditModParams* In, const class FString& Description);
 		static UClass* StaticClass();
 	};
 
@@ -373,40 +361,52 @@ namespace SDK
 	};
 
 	/**
-	 * Class Modio.ModioExampleLibrary
+	 * Class Modio.ModioErrorConditionLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class UModioExampleLibrary : public UBlueprintFunctionLibrary
+	class UModioErrorConditionLibrary : public UBlueprintFunctionLibrary
 	{
 	public:
-		void ListUserSubscriptionAsync(const struct FModioFilterParams& FilterParams, const class FScriptDelegate& Callback);
-		EModioLogoSize GetLogoThumbnailSize();
-		EModioLogoSize GetLogoFullSize();
-		EModioAvatarSize GetAvatarThumbnailSize();
+		bool ErrorCodeMatches(const struct FModioErrorCode& ErrorCode, EModioErrorCondition Condition);
 		static UClass* StaticClass();
 	};
 
 	/**
-	 * Class Modio.ModioFilterParamsLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class Modio.ModioPopupBase
+	 * Size -> 0x0000 (FullSize[0x0260] - InheritedSize[0x0260])
 	 */
-	class UModioFilterParamsLibrary : public UBlueprintFunctionLibrary
+	class UModioPopupBase : public UUserWidget
 	{
 	public:
-		struct FModioFilterParams WithTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags);
-		struct FModioFilterParams WithTag(struct FModioFilterParams* Filter, const class FString& Tag);
-		struct FModioFilterParams WithoutTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags);
-		struct FModioFilterParams WithoutTag(struct FModioFilterParams* Filter, const class FString& Tag);
-		struct FModioFilterParams SortBy(struct FModioFilterParams* Filter, EModioSortFieldType ByField, EModioSortDirection ByDirection);
-		struct FModioFilterParams PagedResults(struct FModioFilterParams* Filter, int64_t PageNumber, int64_t PageSize);
-		struct FModioFilterParams NameContainsStrings(struct FModioFilterParams* Filter, TArray<class FString> SearchStrings);
-		struct FModioFilterParams NameContains(struct FModioFilterParams* Filter, const class FString& SearchString);
-		struct FModioFilterParams MetadataLike(struct FModioFilterParams* Filter, const class FString& SearchString);
-		struct FModioFilterParams MatchingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs);
-		struct FModioFilterParams MarkedLiveBefore(struct FModioFilterParams* Filter, const struct PCoreUObject_FDateTime& LiveBefore);
-		struct FModioFilterParams MarkedLiveAfter(struct FModioFilterParams* Filter, const struct PCoreUObject_FDateTime& LiveAfter);
-		struct FModioFilterParams IndexedResults(struct FModioFilterParams* Filter, int64_t StartIndex, int64_t ResultCount);
-		struct FModioFilterParams ExcludingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Modio.ModioPopupContainer
+	 * Size -> 0x0020 (FullSize[0x0280] - InheritedSize[0x0260])
+	 */
+	class UModioPopupContainer : public UUserWidget
+	{
+	public:
+		TArray<class UModioPopupBase*>                               PopupStack;                                              // 0x0260(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
+		TArray<class UModioPopupBase*>                               PopupCache;                                              // 0x0270(0x0010) ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate
+
+	public:
+		class UModioPopupBase* PushPopup(class UModioPopupBase* PopupClass);
+		class UModioPopupBase* PopPopup(class UModioPopupBase* PopupClass);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Modio.ModioReportLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UModioReportLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		struct FModioReportParams MakeReportForUser(const struct FModioUserID& User, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
+		struct FModioReportParams MakeReportForMod(const struct FModioModID& Mod, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
+		struct FModioReportParams MakeReportForGame(const struct FModioGameID& Game, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact);
 		static UClass* StaticClass();
 	};
 

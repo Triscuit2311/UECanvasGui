@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UBP_Skin_M4Super_Tactical_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(92756);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(92849);
 		return ptr;
 	}
 

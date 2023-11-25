@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_Name_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88259);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88271);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_TextBlock_0_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88258);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88270);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_Score_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88257);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88269);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_Damage_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88256);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88268);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::GetDeathsText()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88255);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88267);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_Arrests_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88254);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88266);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	class FText UW_AG_PlayerList_C::Get_Kills_Text_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88253);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88265);
 		
 		struct
 		{
@@ -188,7 +188,7 @@ namespace SDK
 	 */
 	struct FSlateBrush UW_AG_PlayerList_C::GetBrush_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88252);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88264);
 		
 		struct
 		{
@@ -214,7 +214,7 @@ namespace SDK
 	 */
 	void UW_AG_PlayerList_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88251);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88263);
 		
 		struct
 		{
@@ -240,7 +240,7 @@ namespace SDK
 	 */
 	void UW_AG_PlayerList_C::BndEvt__W_AG_PlayerList_Btn_Ban_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88250);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88262);
 		
 		struct
 		{
@@ -264,7 +264,7 @@ namespace SDK
 	 */
 	void UW_AG_PlayerList_C::BndEvt__W_AG_PlayerList_Btn_Kick_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88261);
 		
 		struct
 		{
@@ -288,7 +288,7 @@ namespace SDK
 	 */
 	void UW_AG_PlayerList_C::ExecuteUbergraph_W_AG_PlayerList(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88260);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	UClass* UW_AG_PlayerList_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88247);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88259);
 		return ptr;
 	}
 

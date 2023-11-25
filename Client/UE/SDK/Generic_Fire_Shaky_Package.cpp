@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UGeneric_Fire_Shaky_C::NewFunction_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37281);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(44584);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* UGeneric_Fire_Shaky_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(37280);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(44583);
 		return ptr;
 	}
 

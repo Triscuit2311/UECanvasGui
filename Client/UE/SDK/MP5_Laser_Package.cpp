@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UMP5_Laser_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54654);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38043);
 		return ptr;
 	}
 

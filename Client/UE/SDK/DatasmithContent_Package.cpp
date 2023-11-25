@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -13,6 +13,34 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ADatasmithAreaLightActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ADatasmithAreaLightActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(282);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithAdditionalData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithAdditionalData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(281);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UDatasmithObjectTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -21,20 +49,6 @@ namespace SDK
 	UClass* UDatasmithObjectTemplate::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(279);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithAreaLightActorTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithAreaLightActorTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(283);
 		return ptr;
 	}
 
@@ -69,6 +83,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithAreaLightActorTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithAreaLightActorTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(283);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -77,20 +105,6 @@ namespace SDK
 	UClass* UDatasmithStaticMeshImportData::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(286);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshCADImportData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithStaticMeshCADImportData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(287);
 		return ptr;
 	}
 
@@ -111,42 +125,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithAdditionalData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshCADImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithAdditionalData::StaticClass()
+	UClass* UDatasmithStaticMeshCADImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(281);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(287);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ADatasmithAreaLightActor.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshIFCImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ADatasmithAreaLightActor::StaticClass()
+	UClass* UDatasmithStaticMeshIFCImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(282);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(300);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithTranslatedSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithGLTFSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithTranslatedSceneImportData::StaticClass()
+	UClass* UDatasmithGLTFSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(289);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(292);
 		return ptr;
 	}
 
@@ -167,14 +181,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithMDLSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshGLTFImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithMDLSceneImportData::StaticClass()
+	UClass* UDatasmithStaticMeshGLTFImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(291);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(293);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithAssetUserData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithAssetUserData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(302);
 		return ptr;
 	}
 
@@ -195,14 +223,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithDeltaGenSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithTranslatedSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithDeltaGenSceneImportData::StaticClass()
+	UClass* UDatasmithTranslatedSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(296);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(289);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithCineCameraActorTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithCineCameraActorTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(303);
 		return ptr;
 	}
 
@@ -223,14 +265,56 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithVREDAssetImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithMDLSceneImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithVREDAssetImportData::StaticClass()
+	UClass* UDatasmithMDLSceneImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(297);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(291);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithCineCameraComponentTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithCineCameraComponentTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(304);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithLandscapeTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithLandscapeTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(312);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithDeltaGenSceneImportData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithDeltaGenSceneImportData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(296);
 		return ptr;
 	}
 
@@ -344,70 +428,70 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithGLTFSceneImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithOptionsBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithGLTFSceneImportData::StaticClass()
+	UClass* UDatasmithOptionsBase::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(292);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(309);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshIFCImportData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCommonTessellationOptions.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithStaticMeshIFCImportData::StaticClass()
+	UClass* UDatasmithCommonTessellationOptions::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(300);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(310);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithAssetUserData.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithVREDAssetImportData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithAssetUserData::StaticClass()
+	UClass* UDatasmithVREDAssetImportData::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(302);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(297);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithCustomActionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithCustomActionBase::StaticClass()
+	UClass* UDatasmithLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(306);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(313);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithCineCameraActorTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithMaterialInstanceTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithCineCameraActorTemplate::StaticClass()
+	UClass* UDatasmithMaterialInstanceTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(303);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(314);
 		return ptr;
 	}
 
@@ -428,28 +512,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithDecalComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithPointLightComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithDecalComponentTemplate::StaticClass()
+	UClass* UDatasmithPointLightComponentTemplate::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(307);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(315);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithCineCameraComponentTemplate.StaticClass
+	 * 		Name   -> PredefinedFunction UDatasmithCustomActionBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UDatasmithCineCameraComponentTemplate::StaticClass()
+	UClass* UDatasmithCustomActionBase::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(304);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(306);
 		return ptr;
 	}
 
@@ -464,6 +548,104 @@ namespace SDK
 	UClass* UDatasmithIFCSceneImportData::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(299);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshComponentTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithStaticMeshComponentTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(322);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithImportOptions.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithImportOptions::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(311);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ADatasmithSceneActor.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ADatasmithSceneActor::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(318);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithPostProcessVolumeTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithPostProcessVolumeTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(316);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithStaticMeshTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(323);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithDecalComponentTemplate.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithDecalComponentTemplate::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(307);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDatasmithScene.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDatasmithScene::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(317);
 		return ptr;
 	}
 
@@ -508,174 +690,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshGLTFImportData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithStaticMeshGLTFImportData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(293);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithOptionsBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithOptionsBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(309);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithCommonTessellationOptions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithCommonTessellationOptions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(310);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithMaterialInstanceTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithMaterialInstanceTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(314);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithImportOptions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithImportOptions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(311);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithPointLightComponentTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithPointLightComponentTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(315);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithLandscapeTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithLandscapeTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(312);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithPostProcessVolumeTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithPostProcessVolumeTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(316);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithLightComponentTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithLightComponentTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(313);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ADatasmithSceneActor.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ADatasmithSceneActor::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(318);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshComponentTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithStaticMeshComponentTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(322);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithScene.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithScene::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(317);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UDatasmithSceneComponentTemplate.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -684,20 +698,6 @@ namespace SDK
 	UClass* UDatasmithSceneComponentTemplate::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(319);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDatasmithStaticMeshTemplate.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDatasmithStaticMeshTemplate::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(323);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::SetLooping(bool IsLooping)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59105);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57009);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::SetState(E_Briefing_Audio_PlayStates AudioPlayState)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59104);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57008);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59103);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57007);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59102);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57006);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Play_K2Node_ComponentBoundEvent_6_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59101);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57005);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Stop_K2Node_ComponentBoundEvent_7_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59100);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57004);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Restart_K2Node_ComponentBoundEvent_8_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59099);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57003);
 		
 		struct
 		{
@@ -182,7 +182,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Rewind_K2Node_ComponentBoundEvent_9_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59098);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57002);
 		
 		struct
 		{
@@ -203,7 +203,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_FastForward_K2Node_ComponentBoundEvent_10_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59097);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57001);
 		
 		struct
 		{
@@ -224,7 +224,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Loop_K2Node_ComponentBoundEvent_11_AudioControlButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59096);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57000);
 		
 		struct
 		{
@@ -245,7 +245,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Rewind_K2Node_ComponentBoundEvent_0_AudioControlButtonPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59095);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56999);
 		
 		struct
 		{
@@ -266,7 +266,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_Rewind_K2Node_ComponentBoundEvent_1_AudioControlButtonReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59094);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56998);
 		
 		struct
 		{
@@ -287,7 +287,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_FastForward_K2Node_ComponentBoundEvent_2_AudioControlButtonPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59093);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56997);
 		
 		struct
 		{
@@ -308,7 +308,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::BndEvt__btn_FastForward_K2Node_ComponentBoundEvent_3_AudioControlButtonReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59092);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56996);
 		
 		struct
 		{
@@ -331,7 +331,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::ButtonHover(class UW_Briefing_AudioControls_Button_C* Button, bool Hovered)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59091);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56995);
 		
 		struct
 		{
@@ -357,7 +357,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::ExecuteUbergraph_W_Briefing_AudioControls(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59090);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56994);
 		
 		struct
 		{
@@ -380,7 +380,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::FastForward__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59089);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56993);
 		
 		struct
 		{
@@ -401,7 +401,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Loop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59088);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56992);
 		
 		struct
 		{
@@ -422,7 +422,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Restart__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59087);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56991);
 		
 		struct
 		{
@@ -443,7 +443,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Rewind__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59086);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56990);
 		
 		struct
 		{
@@ -464,7 +464,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Stop__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54814);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31433);
 		
 		struct
 		{
@@ -485,7 +485,7 @@ namespace SDK
 	 */
 	void UW_Briefing_AudioControls_C::Play__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54813);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31432);
 		
 		struct
 		{
@@ -506,7 +506,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_AudioControls_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54812);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31431);
 		return ptr;
 	}
 

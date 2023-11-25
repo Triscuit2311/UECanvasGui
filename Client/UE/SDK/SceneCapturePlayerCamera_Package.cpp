@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASceneCapturePlayerCamera_C::Stop()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88526);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88522);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void ASceneCapturePlayerCamera_C::Start()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88525);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88521);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void ASceneCapturePlayerCamera_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88524);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88520);
 		
 		struct
 		{
@@ -84,7 +84,7 @@ namespace SDK
 	 */
 	void ASceneCapturePlayerCamera_C::ExecuteUbergraph_SceneCapturePlayerCamera(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88523);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88519);
 		
 		struct
 		{
@@ -107,7 +107,7 @@ namespace SDK
 	 */
 	UClass* ASceneCapturePlayerCamera_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88522);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88518);
 		return ptr;
 	}
 

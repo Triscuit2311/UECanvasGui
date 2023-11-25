@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -55,24 +55,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
-	 * Size -> 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
-	 */
-	class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x38];                                  // 0x0050(0x0038) MISSED OFFSET (PADDING)
-
-	public:
-		class UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class ITurnBasedMatchInterface>& MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
 	 * Size -> 0x0080 (FullSize[0x00A8] - InheritedSize[0x0028])
 	 */
@@ -111,24 +93,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
-	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
-	 */
-	class UInAppPurchaseQueryCallbackProxy2 : public UObject
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0028(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0029(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0038(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0039(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x20];                                  // 0x0048(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		class UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
 	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
 	 */
@@ -143,6 +107,42 @@ namespace SDK
 
 	public:
 		class UInAppPurchaseRestoreCallbackProxy* CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
+	 * Size -> 0x0058 (FullSize[0x0088] - InheritedSize[0x0030])
+	 */
+	class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x38];                                  // 0x0050(0x0038) MISSED OFFSET (PADDING)
+
+	public:
+		class UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class ITurnBasedMatchInterface>& MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
+	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
+	 */
+	class UInAppPurchaseQueryCallbackProxy2 : public UObject
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0028(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0029(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0038(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0039(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x20];                                  // 0x0048(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		class UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString> ProductIdentifiers);
 		static UClass* StaticClass();
 	};
 
@@ -183,32 +183,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
-	{
-	public:
-		bool WriteLeaderboardInteger(class APlayerController* PlayerController, const class FName& StatName, int32_t StatValue);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class OnlineSubsystemUtils.IpConnection
-	 * Size -> 0x00A0 (FullSize[0x1C48] - InheritedSize[0x1BA8])
-	 */
-	class UIpConnection : public UNetConnection
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x50];                                  // 0x1BA8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        SocketErrorDisconnectDelay;                              // 0x1BF8(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0x4C];                                  // 0x1BFC(0x004C) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
 	 * Size -> 0x0040 (FullSize[0x0068] - InheritedSize[0x0028])
 	 */
@@ -223,6 +197,17 @@ namespace SDK
 
 	public:
 		class ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(class APlayerController* PlayerController, const class FName& SessionName);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		bool WriteLeaderboardInteger(class APlayerController* PlayerController, const class FName& StatName, int32_t StatValue);
 		static UClass* StaticClass();
 	};
 
@@ -280,22 +265,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.OnlineBeaconHost
-	 * Size -> 0x00B8 (FullSize[0x0308] - InheritedSize[0x0250])
-	 */
-	class AOnlineBeaconHost : public AOnlineBeacon
-	{
-	public:
-		int32_t                                                      ListenPort;                                              // 0x0250(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0254(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class AOnlineBeaconClient*>                           ClientActors;                                            // 0x0258(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0001[0xA0];                                  // 0x0268(0x00A0) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.OnlineBeaconClient
 	 * Size -> 0x0060 (FullSize[0x02B0] - InheritedSize[0x0250])
 	 */
@@ -309,6 +278,22 @@ namespace SDK
 
 	public:
 		void ClientOnConnected();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.OnlineBeaconHost
+	 * Size -> 0x00B8 (FullSize[0x0308] - InheritedSize[0x0250])
+	 */
+	class AOnlineBeaconHost : public AOnlineBeacon
+	{
+	public:
+		int32_t                                                      ListenPort;                                              // 0x0250(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0254(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class AOnlineBeaconClient*>                           ClientActors;                                            // 0x0258(0x0010) ZeroConstructor, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0xA0];                                  // 0x0268(0x00A0) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -329,26 +314,15 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.IpNetDriver
-	 * Size -> 0x0070 (FullSize[0x07D0] - InheritedSize[0x0760])
+	 * Class OnlineSubsystemUtils.OnlinePIESettings
+	 * Size -> 0x0018 (FullSize[0x0050] - InheritedSize[0x0038])
 	 */
-	class UIpNetDriver : public UNetDriver
+	class UOnlinePIESettings : public UDeveloperSettings
 	{
 	public:
-		bool                                                         LogPortUnreach : 1;                                      // 0x0760(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         AllowPlayerPortUnreach : 1;                              // 0x0760(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0761(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		uint32_t                                                     MaxPortCountToTry;                                       // 0x0764(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xC];                                   // 0x0768(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		uint32_t                                                     ServerDesiredSocketReceiveBufferBytes;                   // 0x0774(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		uint32_t                                                     ServerDesiredSocketSendBufferBytes;                      // 0x0778(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		uint32_t                                                     ClientDesiredSocketReceiveBufferBytes;                   // 0x077C(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		uint32_t                                                     ClientDesiredSocketSendBufferBytes;                      // 0x0780(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0784(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		double                                                       MaxSecondsInReceive;                                     // 0x0788(0x0008) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		int32_t                                                      NbPacketsBetweenReceiveTimeTest;                         // 0x0790(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		float                                                        ResolutionConnectionTimeout;                             // 0x0794(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
-		unsigned char                                                UnknownData_0003[0x38];                                  // 0x0798(0x0038) MISSED OFFSET (PADDING)
+		bool                                                         bOnlinePIEEnabled;                                       // 0x0038(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FPIELoginSettingsInternal>                     Logins;                                                  // 0x0040(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -433,24 +407,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.QuitMatchCallbackProxy
-	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
-	 */
-	class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x28];                                  // 0x0050(0x0028) MISSED OFFSET (PADDING)
-
-	public:
-		class UQuitMatchCallbackProxy* QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32_t TurnTimeoutInSeconds);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.PartyBeaconState
 	 * Size -> 0x0078 (FullSize[0x00A0] - InheritedSize[0x0028])
 	 */
@@ -479,36 +435,20 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.OnlinePIESettings
-	 * Size -> 0x0018 (FullSize[0x0050] - InheritedSize[0x0038])
+	 * Class OnlineSubsystemUtils.QuitMatchCallbackProxy
+	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
 	 */
-	class UOnlinePIESettings : public UDeveloperSettings
+	class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 	{
 	public:
-		bool                                                         bOnlinePIEEnabled;                                       // 0x0038(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FPIELoginSettingsInternal>                     Logins;                                                  // 0x0040(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x28];                                  // 0x0050(0x0028) MISSED OFFSET (PADDING)
 
 	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class OnlineSubsystemUtils.SpectatorBeaconHost
-	 * Size -> 0x0078 (FullSize[0x02C0] - InheritedSize[0x0248])
-	 */
-	class ASpectatorBeaconHost : public AOnlineBeaconHostObject
-	{
-	public:
-		class USpectatorBeaconState*                                 State;                                                   // 0x0248(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x60];                                  // 0x0250(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		bool                                                         bLogoutOnSessionTimeout;                                 // 0x02B0(0x0001) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		float                                                        SessionTimeoutSecs;                                      // 0x02B4(0x0004) ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		float                                                        TravelSessionTimeoutSecs;                                // 0x02B8(0x0004) ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0002[0x4];                                   // 0x02BC(0x0004) MISSED OFFSET (PADDING)
-
-	public:
+		class UQuitMatchCallbackProxy* QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32_t TurnTimeoutInSeconds);
 		static UClass* StaticClass();
 	};
 
@@ -527,37 +467,6 @@ namespace SDK
 
 	public:
 		class UShowLoginUICallbackProxy* ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class OnlineSubsystemUtils.SpectatorBeaconState
-	 * Size -> 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
-	 */
-	class USpectatorBeaconState : public UObject
-	{
-	public:
-		class FName                                                  SessionName;                                             // 0x0028(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                      NumConsumedReservations;                                 // 0x0030(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		int32_t                                                      MaxReservations;                                         // 0x0034(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		bool                                                         bRestrictCrossConsole;                                   // 0x0038(0x0001) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FSpectatorReservation>                         Reservations;                                            // 0x0040(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0001[0x10];                                  // 0x0050(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class OnlineSubsystemUtils.TestBeaconClient
-	 * Size -> 0x0000 (FullSize[0x02B0] - InheritedSize[0x02B0])
-	 */
-	class ATestBeaconClient : public AOnlineBeaconClient
-	{
-	public:
-		void ServerPong();
-		void ClientPing();
 		static UClass* StaticClass();
 	};
 
@@ -587,16 +496,40 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class OnlineSubsystemUtils.SpectatorBeaconState
+	 * Size -> 0x0038 (FullSize[0x0060] - InheritedSize[0x0028])
 	 */
-	class UTurnBasedBlueprintLibrary : public UBlueprintFunctionLibrary
+	class USpectatorBeaconState : public UObject
 	{
 	public:
-		void RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object);
-		void GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t PlayerIndex, class FString* PlayerDisplayName);
-		void GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t* PlayerIndex);
-		void GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn);
+		class FName                                                  SessionName;                                             // 0x0028(0x0008) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int32_t                                                      NumConsumedReservations;                                 // 0x0030(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		int32_t                                                      MaxReservations;                                         // 0x0034(0x0004) ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		bool                                                         bRestrictCrossConsole;                                   // 0x0038(0x0001) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FSpectatorReservation>                         Reservations;                                            // 0x0040(0x0010) ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0001[0x10];                                  // 0x0050(0x0010) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.SpectatorBeaconHost
+	 * Size -> 0x0078 (FullSize[0x02C0] - InheritedSize[0x0248])
+	 */
+	class ASpectatorBeaconHost : public AOnlineBeaconHostObject
+	{
+	public:
+		class USpectatorBeaconState*                                 State;                                                   // 0x0248(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x60];                                  // 0x0250(0x0060) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		bool                                                         bLogoutOnSessionTimeout;                                 // 0x02B0(0x0001) ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x02B1(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        SessionTimeoutSecs;                                      // 0x02B4(0x0004) ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		float                                                        TravelSessionTimeoutSecs;                                // 0x02B8(0x0004) ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x02BC(0x0004) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -611,6 +544,32 @@ namespace SDK
 	};
 
 	/**
+	 * Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UTurnBasedBlueprintLibrary : public UBlueprintFunctionLibrary
+	{
+	public:
+		void RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object);
+		void GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t PlayerIndex, class FString* PlayerDisplayName);
+		void GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, int32_t* PlayerIndex);
+		void GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, bool* bIsMyTurn);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.TestBeaconClient
+	 * Size -> 0x0000 (FullSize[0x02B0] - InheritedSize[0x02B0])
+	 */
+	class ATestBeaconClient : public AOnlineBeaconClient
+	{
+	public:
+		void ServerPong();
+		void ClientPing();
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class OnlineSubsystemUtils.VoipListenerSynthComponent
 	 * Size -> 0x0060 (FullSize[0x0720] - InheritedSize[0x06C0])
 	 */
@@ -621,6 +580,47 @@ namespace SDK
 
 	public:
 		bool IsIdling();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.IpConnection
+	 * Size -> 0x00A0 (FullSize[0x1C48] - InheritedSize[0x1BA8])
+	 */
+	class UIpConnection : public UNetConnection
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x50];                                  // 0x1BA8(0x0050) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		float                                                        SocketErrorDisconnectDelay;                              // 0x1BF8(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0001[0x4C];                                  // 0x1BFC(0x004C) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.IpNetDriver
+	 * Size -> 0x0070 (FullSize[0x07D0] - InheritedSize[0x0760])
+	 */
+	class UIpNetDriver : public UNetDriver
+	{
+	public:
+		bool                                                         LogPortUnreach : 1;                                      // 0x0760(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         AllowPlayerPortUnreach : 1;                              // 0x0760(0x0001) BIT_FIELD Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0761(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		uint32_t                                                     MaxPortCountToTry;                                       // 0x0764(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xC];                                   // 0x0768(0x000C) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		uint32_t                                                     ServerDesiredSocketReceiveBufferBytes;                   // 0x0774(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		uint32_t                                                     ServerDesiredSocketSendBufferBytes;                      // 0x0778(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		uint32_t                                                     ClientDesiredSocketReceiveBufferBytes;                   // 0x077C(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		uint32_t                                                     ClientDesiredSocketSendBufferBytes;                      // 0x0780(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0002[0x4];                                   // 0x0784(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		double                                                       MaxSecondsInReceive;                                     // 0x0788(0x0008) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		int32_t                                                      NbPacketsBetweenReceiveTimeTest;                         // 0x0790(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		float                                                        ResolutionConnectionTimeout;                             // 0x0794(0x0004) ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+		unsigned char                                                UnknownData_0003[0x38];                                  // 0x0798(0x0038) MISSED OFFSET (PADDING)
+
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -656,24 +656,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemUtils.AchievementWriteCallbackProxy
-	 * Size -> 0x0050 (FullSize[0x0080] - InheritedSize[0x0030])
-	 */
-	class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x30];                                  // 0x0050(0x0030) MISSED OFFSET (PADDING)
-
-	public:
-		class UAchievementWriteCallbackProxy* WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementName, float Progress, int32_t UserTag);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemUtils.ConnectionCallbackProxy
 	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
 	 */
@@ -688,6 +670,24 @@ namespace SDK
 
 	public:
 		class UConnectionCallbackProxy* ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemUtils.AchievementWriteCallbackProxy
+	 * Size -> 0x0050 (FullSize[0x0080] - InheritedSize[0x0030])
+	 */
+	class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x30];                                  // 0x0050(0x0030) MISSED OFFSET (PADDING)
+
+	public:
+		class UAchievementWriteCallbackProxy* WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FName& AchievementName, float Progress, int32_t UserTag);
 		static UClass* StaticClass();
 	};
 

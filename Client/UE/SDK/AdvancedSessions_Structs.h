@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,17 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum AdvancedSessions.EBPLoginStatus
-	 */
-	enum class EBPLoginStatus : uint8_t
-	{
-		NotLoggedIn       = 0,
-		UsingLocalProfile = 1,
-		LoggedIn          = 2,
-		MAX               = 3
-	};
-
 	/**
 	 * Enum AdvancedSessions.EBPOnlinePresenceState
 	 */
@@ -40,18 +29,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum AdvancedSessions.EBPUserPrivileges
-	 */
-	enum class EBPUserPrivileges : uint8_t
-	{
-		CanPlay                    = 0,
-		CanPlayOnline              = 1,
-		CanCommunicateOnline       = 2,
-		CanUseUserGeneratedContent = 3,
-		MAX                        = 4
-	};
-
-	/**
 	 * Enum AdvancedSessions.EOnlineComparisonOpRedux
 	 */
 	enum class EOnlineComparisonOpRedux : uint8_t
@@ -63,6 +40,29 @@ namespace SDK
 		LessThan          = 4,
 		LessThanEquals    = 5,
 		MAX               = 6
+	};
+
+	/**
+	 * Enum AdvancedSessions.EBlueprintAsyncResultSwitch
+	 */
+	enum class EBlueprintAsyncResultSwitch : uint8_t
+	{
+		OnSuccess    = 0,
+		AsyncLoading = 1,
+		OnFailure    = 2,
+		MAX          = 3
+	};
+
+	/**
+	 * Enum AdvancedSessions.EBPUserPrivileges
+	 */
+	enum class EBPUserPrivileges : uint8_t
+	{
+		CanPlay                    = 0,
+		CanPlayOnline              = 1,
+		CanCommunicateOnline       = 2,
+		CanUseUserGeneratedContent = 3,
+		MAX                        = 4
 	};
 
 	/**
@@ -82,6 +82,16 @@ namespace SDK
 	};
 
 	/**
+	 * Enum AdvancedSessions.EBlueprintResultSwitch
+	 */
+	enum class EBlueprintResultSwitch : uint8_t
+	{
+		OnSuccess = 0,
+		OnFailure = 1,
+		MAX       = 2
+	};
+
+	/**
 	 * Enum AdvancedSessions.EBPServerPresenceSearchType
 	 */
 	enum class EBPServerPresenceSearchType : uint8_t
@@ -90,27 +100,6 @@ namespace SDK
 		ClientServersOnly    = 1,
 		DedicatedServersOnly = 2,
 		MAX                  = 3
-	};
-
-	/**
-	 * Enum AdvancedSessions.EBlueprintAsyncResultSwitch
-	 */
-	enum class EBlueprintAsyncResultSwitch : uint8_t
-	{
-		OnSuccess    = 0,
-		AsyncLoading = 1,
-		OnFailure    = 2,
-		MAX          = 3
-	};
-
-	/**
-	 * Enum AdvancedSessions.EBlueprintResultSwitch
-	 */
-	enum class EBlueprintResultSwitch : uint8_t
-	{
-		OnSuccess = 0,
-		OnFailure = 1,
-		MAX       = 2
 	};
 
 	/**
@@ -124,19 +113,20 @@ namespace SDK
 		MAX       = 3
 	};
 
+	/**
+	 * Enum AdvancedSessions.EBPLoginStatus
+	 */
+	enum class EBPLoginStatus : uint8_t
+	{
+		NotLoggedIn       = 0,
+		UsingLocalProfile = 1,
+		LoggedIn          = 2,
+		MAX               = 3
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
-	/**
-	 * ScriptStruct AdvancedSessions.BPUniqueNetId
-	 * Size -> 0x0020
-	 */
-	struct FBPUniqueNetId
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
-	};
-
 	/**
 	 * ScriptStruct AdvancedSessions.BPFriendPresenceInfo
 	 * Size -> 0x0018
@@ -155,20 +145,13 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct AdvancedSessions.BPFriendInfo
-	 * Size -> 0x0068
+	 * ScriptStruct AdvancedSessions.BPUniqueNetId
+	 * Size -> 0x0020
 	 */
-	struct FBPFriendInfo
+	struct FBPUniqueNetId
 	{
 	public:
-		class FString                                                DisplayName;                                             // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                RealName;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EBPOnlinePresenceState                                       OnlineState;                                             // 0x0020(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FBPUniqueNetId                                        UniqueNetId;                                             // 0x0028(0x0020) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		bool                                                         bIsPlayingSameGame;                                      // 0x0048(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FBPFriendPresenceInfo                                 PresenceInfo;                                            // 0x0050(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0000(0x0020) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -194,13 +177,20 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct AdvancedSessions.SessionsSearchSetting
-	 * Size -> 0x0028
+	 * ScriptStruct AdvancedSessions.BPFriendInfo
+	 * Size -> 0x0068
 	 */
-	struct FSessionsSearchSetting
+	struct FBPFriendInfo
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
+		class FString                                                DisplayName;                                             // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                RealName;                                                // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EBPOnlinePresenceState                                       OnlineState;                                             // 0x0020(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FBPUniqueNetId                                        UniqueNetId;                                             // 0x0028(0x0020) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		bool                                                         bIsPlayingSameGame;                                      // 0x0048(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x7];                                   // 0x0049(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FBPFriendPresenceInfo                                 PresenceInfo;                                            // 0x0050(0x0018) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -221,6 +211,16 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AdvancedSessions.SessionsSearchSetting
+	 * Size -> 0x0028
+	 */
+	struct FSessionsSearchSetting
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x28];                                  // 0x0000(0x0028) MISSED OFFSET (PADDING)
 	};
 
 }

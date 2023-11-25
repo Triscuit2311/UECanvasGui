@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,34 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UClothConfigNv.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UClothConfigNv::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3095);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UClothingSimulationFactoryNv.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UClothingSimulationFactoryNv::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3096);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -59,34 +87,6 @@ namespace SDK
 	UClass* UClothPhysicalMeshDataNv_Legacy::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3098);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClothConfigNv.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClothConfigNv::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3095);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UClothingSimulationFactoryNv.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UClothingSimulationFactoryNv::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3096);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::UpdateIcon(int32_t SelectionIndex, const struct FSlateBrush& InBrush)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90249);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90342);
 		
 		struct
 		{
@@ -49,7 +49,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::Select(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90248);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90341);
 		
 		struct
 		{
@@ -73,7 +73,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::Previous(bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90247);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90340);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::Next(bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90246);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90339);
 		
 		struct
 		{
@@ -124,7 +124,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::ExecuteRadial()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90245);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90338);
 		
 		struct
 		{
@@ -146,7 +146,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::OnDeselected(bool PlayAnimation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90244);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90337);
 		
 		struct
 		{
@@ -170,7 +170,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::OnSelected(bool PlayAnimation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90243);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90336);
 		
 		struct
 		{
@@ -194,7 +194,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90242);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90335);
 		
 		struct
 		{
@@ -217,7 +217,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::OnWheelCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90241);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90334);
 		
 		struct
 		{
@@ -239,7 +239,7 @@ namespace SDK
 	 */
 	void UW_RadialSelectionBase_C::ExecuteUbergraph_W_RadialSelectionBase(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90240);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90333);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	UClass* UW_RadialSelectionBase_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90239);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90332);
 		return ptr;
 	}
 

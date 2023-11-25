@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -24,7 +24,7 @@ namespace SDK
 	 */
 	void AChemlight_Thrown_C::ReceiveAnyDamage(float Damage, class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90652);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90740);
 		
 		struct
 		{
@@ -54,7 +54,7 @@ namespace SDK
 	 */
 	void AChemlight_Thrown_C::ReceiveDestroyed()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90651);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90739);
 		
 		struct
 		{
@@ -76,7 +76,7 @@ namespace SDK
 	 */
 	void AChemlight_Thrown_C::ExecuteUbergraph_Chemlight_Thrown(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90650);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90738);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	UClass* AChemlight_Thrown_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(90649);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90737);
 		return ptr;
 	}
 

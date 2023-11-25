@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::GoBack()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95411);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95414);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_WorldMap_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95410);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95413);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::SetSelectedMode(const class FName& SelectedMode)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95409);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95412);
 		
 		struct
 		{
@@ -97,7 +97,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_WorldMap_C::On_MapBlurClickable_MouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95408);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95411);
 		
 		struct
 		{
@@ -126,7 +126,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::ShowTooltip(const struct FLevelDataLookupTable& MissionDetails)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95407);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95410);
 		
 		struct
 		{
@@ -150,7 +150,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::SetSelectedMission(const class FName& SelectedMission)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95406);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95409);
 		
 		struct
 		{
@@ -176,7 +176,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95408);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_WorldMap_C::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95404);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95407);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95403);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95406);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::BndEvt__W_WorldMap_btn_Close_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95402);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95405);
 		
 		struct
 		{
@@ -287,7 +287,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::BndEvt__W_WorldMap_btn_AcceptMission_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95401);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95404);
 		
 		struct
 		{
@@ -310,7 +310,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95400);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95403);
 		
 		struct
 		{
@@ -332,7 +332,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::OnSetMissionButtonClicked_Event_1(class UW_WorldMap_MissionSelect_C* BtnClicked)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95399);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95402);
 		
 		struct
 		{
@@ -356,7 +356,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::ExecuteUbergraph_W_WorldMap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95398);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95401);
 		
 		struct
 		{
@@ -380,7 +380,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::NewEventDispatcher_0__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95397);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95400);
 		
 		struct
 		{
@@ -402,7 +402,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::UpdateMapMaterial__DelegateSignature(class UTexture2D* LayoutTexture)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95396);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(95399);
 		
 		struct
 		{
@@ -427,7 +427,7 @@ namespace SDK
 	 */
 	void UW_WorldMap_C::PanMap__DelegateSignature(bool Pressed, const struct FVector2D& CursorPos)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89084);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89177);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	UClass* UW_WorldMap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89083);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89176);
 		return ptr;
 	}
 

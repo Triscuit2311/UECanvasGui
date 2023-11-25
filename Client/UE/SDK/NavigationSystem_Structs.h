@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -118,6 +118,17 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct NavigationSystem.NavGraphNode
+	 * Size -> 0x0018
+	 */
+	struct FNavGraphNode
+	{
+	public:
+		class UObject*                                               Owner;                                                   // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0008(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct NavigationSystem.NavCollisionCylinder
 	 * Size -> 0x0014
 	 */
@@ -138,17 +149,6 @@ namespace SDK
 	public:
 		struct FVector                                  Offset;                                                  // 0x0000(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FVector                                  Extent;                                                  // 0x000C(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct NavigationSystem.NavGraphNode
-	 * Size -> 0x0018
-	 */
-	struct FNavGraphNode
-	{
-	public:
-		class UObject*                                               Owner;                                                   // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0008(0x0010) MISSED OFFSET (PADDING)
 	};
 
 	/**

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void UAC_SuppressionNearBone_C::IsBoneSuppressed(class AReadyOrNotCharacter* Character, bool* ReturnValue, float* SuppressionAmount)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84263);
 		
 		struct
 		{
@@ -56,7 +56,7 @@ namespace SDK
 	 */
 	float UAC_SuppressionNearBone_C::Score(const struct FAIActionDecisionContext& Context, bool* bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85382);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84262);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	UClass* UAC_SuppressionNearBone_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85381);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84261);
 		return ptr;
 	}
 

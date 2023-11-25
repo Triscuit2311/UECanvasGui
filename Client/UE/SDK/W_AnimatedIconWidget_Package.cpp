@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_AnimatedIconWidget_C::SetInteractState(bool bValid)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24788);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40076);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_AnimatedIconWidget_C::ExecuteUbergraph_W_AnimatedIconWidget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24787);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(40075);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_AnimatedIconWidget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24786);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(40074);
 		return ptr;
 	}
 

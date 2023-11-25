@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,42 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum Landscape.ELandscapeLayerBlendType
+	 */
+	enum class ELandscapeLayerBlendType : uint8_t
+	{
+		LB_WeightBlend = 0,
+		LB_AlphaBlend  = 1,
+		LB_HeightBlend = 2,
+		LB_MAX         = 3
+	};
+
+	/**
+	 * Enum Landscape.ELandscapeCustomizedCoordType
+	 */
+	enum class ELandscapeCustomizedCoordType : uint8_t
+	{
+		LCCT_None        = 0,
+		LCCT_CustomUV0   = 1,
+		LCCT_CustomUV1   = 2,
+		LCCT_CustomUV2   = 3,
+		LCCT_WeightMapUV = 4,
+		LCCT_MAX         = 5
+	};
+
+	/**
+	 * Enum Landscape.ETerrainCoordMappingType
+	 */
+	enum class ETerrainCoordMappingType : uint8_t
+	{
+		TCMT_Auto = 0,
+		TCMT_XY   = 1,
+		TCMT_XZ   = 2,
+		TCMT_YZ   = 3,
+		TCMT_MAX  = 4
+	};
+
 	/**
 	 * Enum Landscape.ELandscapeBlendMode
 	 */
@@ -189,57 +225,9 @@ namespace SDK
 		LSMO_MAX = 2
 	};
 
-	/**
-	 * Enum Landscape.ELandscapeLayerBlendType
-	 */
-	enum class ELandscapeLayerBlendType : uint8_t
-	{
-		LB_WeightBlend = 0,
-		LB_AlphaBlend  = 1,
-		LB_HeightBlend = 2,
-		LB_MAX         = 3
-	};
-
-	/**
-	 * Enum Landscape.ELandscapeCustomizedCoordType
-	 */
-	enum class ELandscapeCustomizedCoordType : uint8_t
-	{
-		LCCT_None        = 0,
-		LCCT_CustomUV0   = 1,
-		LCCT_CustomUV1   = 2,
-		LCCT_CustomUV2   = 3,
-		LCCT_WeightMapUV = 4,
-		LCCT_MAX         = 5
-	};
-
-	/**
-	 * Enum Landscape.ETerrainCoordMappingType
-	 */
-	enum class ETerrainCoordMappingType : uint8_t
-	{
-		TCMT_Auto = 0,
-		TCMT_XY   = 1,
-		TCMT_XZ   = 2,
-		TCMT_YZ   = 3,
-		TCMT_MAX  = 4
-	};
-
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
-	/**
-	 * ScriptStruct Landscape.LandscapeProxyMaterialOverride
-	 * Size -> 0x0010
-	 */
-	struct FLandscapeProxyMaterialOverride
-	{
-	public:
-		struct FPerPlatformInt                                       LODIndex;                                                // 0x0000(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UMaterialInterface*                                    Material;                                                // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
 	/**
 	 * ScriptStruct Landscape.GrassVariety
 	 * Size -> 0x0058
@@ -272,41 +260,15 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Landscape.LandscapeComponentMaterialOverride
+	 * ScriptStruct Landscape.LandscapeSplineConnection
 	 * Size -> 0x0010
 	 */
-	struct FLandscapeComponentMaterialOverride
+	struct FLandscapeSplineConnection
 	{
 	public:
-		struct FPerPlatformInt                                       LODIndex;                                                // 0x0000(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class UMaterialInterface*                                    Material;                                                // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Landscape.WeightmapLayerAllocationInfo
-	 * Size -> 0x0010
-	 */
-	struct FWeightmapLayerAllocationInfo
-	{
-	public:
-		class ULandscapeLayerInfoObject*                             LayerInfo;                                               // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      WeightmapTextureIndex;                                   // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		uint8_t                                                      WeightmapTextureChannel;                                 // 0x0009(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.LandscapeSplineSegmentConnection
-	 * Size -> 0x0018
-	 */
-	struct FLandscapeSplineSegmentConnection
-	{
-	public:
-		class ULandscapeSplineControlPoint*                          ControlPoint;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        TangentLen;                                              // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  SocketName;                                              // 0x000C(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+		class ULandscapeSplineSegment*                               Segment;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         End : 1;                                                 // 0x0008(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -340,6 +302,31 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Landscape.LandscapeSplineSegmentConnection
+	 * Size -> 0x0018
+	 */
+	struct FLandscapeSplineSegmentConnection
+	{
+	public:
+		class ULandscapeSplineControlPoint*                          ControlPoint;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        TangentLen;                                              // 0x0008(0x0004) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  SocketName;                                              // 0x000C(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Landscape.LandscapeProxyMaterialOverride
+	 * Size -> 0x0010
+	 */
+	struct FLandscapeProxyMaterialOverride
+	{
+	public:
+		struct FPerPlatformInt                                       LODIndex;                                                // 0x0000(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UMaterialInterface*                                    Material;                                                // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct Landscape.GrassInput
 	 * Size -> 0x0028
 	 */
@@ -370,6 +357,31 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Landscape.LandscapeComponentMaterialOverride
+	 * Size -> 0x0010
+	 */
+	struct FLandscapeComponentMaterialOverride
+	{
+	public:
+		struct FPerPlatformInt                                       LODIndex;                                                // 0x0000(0x0004) Edit, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0004(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class UMaterialInterface*                                    Material;                                                // 0x0008(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Landscape.WeightmapLayerAllocationInfo
+	 * Size -> 0x0010
+	 */
+	struct FWeightmapLayerAllocationInfo
+	{
+	public:
+		class ULandscapeLayerInfoObject*                             LayerInfo;                                               // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      WeightmapTextureIndex;                                   // 0x0008(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		uint8_t                                                      WeightmapTextureChannel;                                 // 0x0009(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x6];                                   // 0x000A(0x0006) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct Landscape.PhysicalMaterialInput
 	 * Size -> 0x0020
 	 */
@@ -379,18 +391,6 @@ namespace SDK
 		class UPhysicalMaterial*                                     PhysicalMaterial;                                        // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FExpressionInput                                      Input;                                                   // 0x0008(0x0014) NoDestructor, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x001C(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.LandscapeSplineConnection
-	 * Size -> 0x0010
-	 */
-	struct FLandscapeSplineConnection
-	{
-	public:
-		class ULandscapeSplineSegment*                               Segment;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         End : 1;                                                 // 0x0008(0x0001) BIT_FIELD NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -421,6 +421,108 @@ namespace SDK
 		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FLandscapeLayerBrush>                          Brushes;                                                 // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		TMap<class ULandscapeLayerInfoObject*, bool>                 WeightmapLayerAllocationBlend;                           // 0x0038(0x0050) NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Landscape.HeightmapData
+	 * Size -> 0x0008
+	 */
+	struct FHeightmapData
+	{
+	public:
+		class UTexture2D*                                            Texture;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Landscape.WeightmapData
+	 * Size -> 0x0030
+	 */
+	struct FWeightmapData
+	{
+	public:
+		TArray<class UTexture2D*>                                    Textures;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FWeightmapLayerAllocationInfo>                 LayerAllocations;                                        // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<class ULandscapeWeightmapUsage*>                      TextureUsages;                                           // 0x0020(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Landscape.LandscapeLayerComponentData
+	 * Size -> 0x0038
+	 */
+	struct FLandscapeLayerComponentData
+	{
+	public:
+		struct FHeightmapData                                        HeightmapData;                                           // 0x0000(0x0008) NoDestructor, NativeAccessSpecifierPublic
+		struct FWeightmapData                                        WeightmapData;                                           // 0x0008(0x0030) NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Landscape.ForeignWorldSplineData
+	 * Size -> 0x0001
+	 */
+	struct FForeignWorldSplineData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Landscape.ForeignSplineSegmentData
+	 * Size -> 0x0001
+	 */
+	struct FForeignSplineSegmentData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Landscape.ForeignControlPointData
+	 * Size -> 0x0001
+	 */
+	struct FForeignControlPointData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Landscape.LandscapeSplineMeshEntry
+	 * Size -> 0x0038
+	 */
+	struct FLandscapeSplineMeshEntry
+	{
+	public:
+		class UStaticMesh*                                           Mesh;                                                    // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class UMaterialInterface*>                            MaterialOverrides;                                       // 0x0008(0x0010) Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic
+		bool                                                         bCenterH : 1;                                            // 0x0018(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector2D                                CenterAdjust;                                            // 0x001C(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bScaleToWidth : 1;                                       // 0x0024(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FVector                                  Scale;                                                   // 0x0028(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ELandscapeSplineMeshOrientation                              Orientation;                                             // 0x0034(0x0001) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESplineMeshAxis                                              ForwardAxis;                                             // 0x0035(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		ESplineMeshAxis                                              UpAxis;                                                  // 0x0036(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0002[0x1];                                   // 0x0037(0x0001) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Landscape.LandscapeEditToolRenderData
+	 * Size -> 0x0038
+	 */
+	struct FLandscapeEditToolRenderData
+	{
+	public:
+		class UMaterialInterface*                                    ToolMaterial;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UMaterialInterface*                                    GizmoMaterial;                                           // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      SelectedType;                                            // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      DebugChannelR;                                           // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      DebugChannelG;                                           // 0x0018(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		int32_t                                                      DebugChannelB;                                           // 0x001C(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            DataTexture;                                             // 0x0020(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            LayerContributionTexture;                                // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UTexture2D*                                            DirtyTexture;                                            // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -465,39 +567,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct Landscape.HeightmapData
-	 * Size -> 0x0008
-	 */
-	struct FHeightmapData
-	{
-	public:
-		class UTexture2D*                                            Texture;                                                 // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Landscape.WeightmapData
-	 * Size -> 0x0030
-	 */
-	struct FWeightmapData
-	{
-	public:
-		TArray<class UTexture2D*>                                    Textures;                                                // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct FWeightmapLayerAllocationInfo>                 LayerAllocations;                                        // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<class ULandscapeWeightmapUsage*>                      TextureUsages;                                           // 0x0020(0x0010) ZeroConstructor, Transient, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Landscape.LandscapeLayerComponentData
-	 * Size -> 0x0038
-	 */
-	struct FLandscapeLayerComponentData
-	{
-	public:
-		struct FHeightmapData                                        HeightmapData;                                           // 0x0000(0x0008) NoDestructor, NativeAccessSpecifierPublic
-		struct FWeightmapData                                        WeightmapData;                                           // 0x0008(0x0030) NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct Landscape.LandscapeEditorLayerSettings
 	 * Size -> 0x0001
 	 */
@@ -505,75 +574,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.ForeignWorldSplineData
-	 * Size -> 0x0001
-	 */
-	struct FForeignWorldSplineData
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.ForeignSplineSegmentData
-	 * Size -> 0x0001
-	 */
-	struct FForeignSplineSegmentData
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.LandscapeEditToolRenderData
-	 * Size -> 0x0038
-	 */
-	struct FLandscapeEditToolRenderData
-	{
-	public:
-		class UMaterialInterface*                                    ToolMaterial;                                            // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UMaterialInterface*                                    GizmoMaterial;                                           // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      SelectedType;                                            // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      DebugChannelR;                                           // 0x0014(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      DebugChannelG;                                           // 0x0018(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		int32_t                                                      DebugChannelB;                                           // 0x001C(0x0004) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            DataTexture;                                             // 0x0020(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            LayerContributionTexture;                                // 0x0028(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UTexture2D*                                            DirtyTexture;                                            // 0x0030(0x0008) ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Landscape.ForeignControlPointData
-	 * Size -> 0x0001
-	 */
-	struct FForeignControlPointData
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Landscape.LandscapeSplineMeshEntry
-	 * Size -> 0x0038
-	 */
-	struct FLandscapeSplineMeshEntry
-	{
-	public:
-		class UStaticMesh*                                           Mesh;                                                    // 0x0000(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class UMaterialInterface*>                            MaterialOverrides;                                       // 0x0008(0x0010) Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic
-		bool                                                         bCenterH : 1;                                            // 0x0018(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x3];                                   // 0x0019(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector2D                                CenterAdjust;                                            // 0x001C(0x0008) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bScaleToWidth : 1;                                       // 0x0024(0x0001) BIT_FIELD Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0x3];                                   // 0x0025(0x0003) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FVector                                  Scale;                                                   // 0x0028(0x000C) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ELandscapeSplineMeshOrientation                              Orientation;                                             // 0x0034(0x0001) ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESplineMeshAxis                                              ForwardAxis;                                             // 0x0035(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		ESplineMeshAxis                                              UpAxis;                                                  // 0x0036(0x0001) Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0002[0x1];                                   // 0x0037(0x0001) MISSED OFFSET (PADDING)
 	};
 
 }

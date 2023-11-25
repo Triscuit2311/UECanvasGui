@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_WasOwningPlayerShot_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35628);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43191);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_WasOwningPlayerShot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35627);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43190);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Taser_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39059);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_Taser_C::AnimNotify_DropSpeedReloadMagazine()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39058);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UANIMBP_Taser_C::AnimNotify_ShowMag()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39057);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UANIMBP_Taser_C::ExecuteUbergraph_ANIMBP_Taser(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(53049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39056);
 		
 		struct
 		{
@@ -112,7 +112,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Taser_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(53048);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39055);
 		return ptr;
 	}
 

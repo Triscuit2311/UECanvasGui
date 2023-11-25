@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_IsWeaponWheelOpen_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56752);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42708);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_IsWeaponWheelOpen_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56751);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42707);
 		return ptr;
 	}
 

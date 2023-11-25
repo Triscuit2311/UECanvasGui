@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -42,6 +42,101 @@ namespace SDK
 	UClass* ACoverGenOverrideVolume::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(348);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.ReleaseCover
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                        InCoverPoint                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UCoverSystem::ReleaseCover(const struct FVector& InCoverPoint)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13085);
+		
+		struct
+		{
+			struct FVector                        InCoverPoint;
+			bool                                               ReturnValue;
+		} params;
+		params.InCoverPoint = InCoverPoint;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.OccupyCover
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                        InCoverPoint                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UCoverSystem::OccupyCover(const struct FVector& InCoverPoint)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13084);
+		
+		struct
+		{
+			struct FVector                        InCoverPoint;
+			bool                                               ReturnValue;
+		} params;
+		params.InCoverPoint = InCoverPoint;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.IsCoverPointOccupied
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FVector                        InCoverLocation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UCoverSystem::IsCoverPointOccupied(const struct FVector& InCoverLocation)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13083);
+		
+		struct
+		{
+			struct FVector                        InCoverLocation;
+			bool                                               ReturnValue;
+		} params;
+		params.InCoverLocation = InCoverLocation;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UCoverSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UCoverSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(353);
 		return ptr;
 	}
 
@@ -223,101 +318,6 @@ namespace SDK
 	UClass* ANotifyingRecastNavMesh::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(357);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.ReleaseCover
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector                        InCoverPoint                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UCoverSystem::ReleaseCover(const struct FVector& InCoverPoint)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13085);
-		
-		struct
-		{
-			struct FVector                        InCoverPoint;
-			bool                                               ReturnValue;
-		} params;
-		params.InCoverPoint = InCoverPoint;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.OccupyCover
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector                        InCoverPoint                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UCoverSystem::OccupyCover(const struct FVector& InCoverPoint)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13084);
-		
-		struct
-		{
-			struct FVector                        InCoverPoint;
-			bool                                               ReturnValue;
-		} params;
-		params.InCoverPoint = InCoverPoint;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function DynamicCoverSystem.CoverSystem.IsCoverPointOccupied
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FVector                        InCoverLocation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UCoverSystem::IsCoverPointOccupied(const struct FVector& InCoverLocation)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13083);
-		
-		struct
-		{
-			struct FVector                        InCoverLocation;
-			bool                                               ReturnValue;
-		} params;
-		params.InCoverLocation = InCoverLocation;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UCoverSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UCoverSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(353);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -483,34 +483,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UAnimSequenceLevelSequenceLink.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UAnimSequenceLevelSequenceLink::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2145);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UDefaultLevelSequenceInstanceData.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UDefaultLevelSequenceInstanceData::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2146);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ILevelSequenceMetaData.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -525,177 +497,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequence.RemoveMetaDataByClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void ULevelSequence::RemoveMetaDataByClass(class UObject* InClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18098);
-		
-		struct
-		{
-			class UObject*                                     InClass;
-		} params;
-		params.InClass = InClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* ULevelSequence::FindOrAddMetaDataByClass(class UObject* InClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18097);
-		
-		struct
-		{
-			class UObject*                                     InClass;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.InClass = InClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequence.FindMetaDataByClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* ULevelSequence::FindMetaDataByClass(class UObject* InClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18096);
-		
-		struct
-		{
-			class UObject*                                     InClass;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.InClass = InClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequence.CopyMetaData
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InMetaData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18095);
-		
-		struct
-		{
-			class UObject*                                     InMetaData;
-			class UObject*                                     ReturnValue;
-		} params;
-		params.InMetaData = InMetaData;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelSequence.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULevelSequence::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2148);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelSequenceBurnInInitSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULevelSequenceBurnInInitSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2149);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FSoftClassPath                              InBurnInClass                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18099);
-		
-		struct
-		{
-			struct FSoftClassPath                              InBurnInClass;
-		} params;
-		params.InBurnInClass = InBurnInClass;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelSequenceBurnInOptions.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULevelSequenceBurnInOptions::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2150);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ULevelSequenceAnimSequenceLink.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -704,68 +505,6 @@ namespace SDK
 	UClass* ULevelSequenceAnimSequenceLink::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2151);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequenceBurnIn.SetSettings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     InSettings                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18101);
-		
-		struct
-		{
-			class UObject*                                     InSettings;
-		} params;
-		params.InSettings = InSettings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class ULevelSequenceBurnInInitSettings*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class ULevelSequenceBurnInInitSettings* ULevelSequenceBurnIn::GetSettingsClass()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18100);
-		
-		struct
-		{
-			class ULevelSequenceBurnInInitSettings*            ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULevelSequenceBurnIn.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULevelSequenceBurnIn::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(2152);
 		return ptr;
 	}
 
@@ -939,6 +678,125 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequence.RemoveMetaDataByClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void ULevelSequence::RemoveMetaDataByClass(class UObject* InClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18098);
+		
+		struct
+		{
+			class UObject*                                     InClass;
+		} params;
+		params.InClass = InClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* ULevelSequence::FindOrAddMetaDataByClass(class UObject* InClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18097);
+		
+		struct
+		{
+			class UObject*                                     InClass;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.InClass = InClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequence.FindMetaDataByClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InClass                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* ULevelSequence::FindMetaDataByClass(class UObject* InClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18096);
+		
+		struct
+		{
+			class UObject*                                     InClass;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.InClass = InClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequence.CopyMetaData
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InMetaData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UObject*                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UObject* ULevelSequence::CopyMetaData(class UObject* InMetaData)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18095);
+		
+		struct
+		{
+			class UObject*                                     InMetaData;
+			class UObject*                                     ReturnValue;
+		} params;
+		params.InMetaData = InMetaData;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelSequence.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelSequence::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2148);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ULegacyLevelSequenceDirectorBlueprint.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1038,6 +896,20 @@ namespace SDK
 	UClass* ULevelSequenceProjectSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2158);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelSequenceBurnInInitSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelSequenceBurnInInitSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2149);
 		return ptr;
 	}
 
@@ -1166,6 +1038,134 @@ namespace SDK
 	UClass* ALevelSequenceMediaController::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(2159);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequenceBurnIn.SetSettings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     InSettings                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18101);
+		
+		struct
+		{
+			class UObject*                                     InSettings;
+		} params;
+		params.InSettings = InSettings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class ULevelSequenceBurnInInitSettings*            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class ULevelSequenceBurnInInitSettings* ULevelSequenceBurnIn::GetSettingsClass()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18100);
+		
+		struct
+		{
+			class ULevelSequenceBurnInInitSettings*            ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelSequenceBurnIn.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelSequenceBurnIn::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2152);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FSoftClassPath                              InBurnInClass                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(18099);
+		
+		struct
+		{
+			struct FSoftClassPath                              InBurnInClass;
+		} params;
+		params.InBurnInClass = InBurnInClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULevelSequenceBurnInOptions.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULevelSequenceBurnInOptions::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2150);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UAnimSequenceLevelSequenceLink.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UAnimSequenceLevelSequenceLink::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2145);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UDefaultLevelSequenceInstanceData.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UDefaultLevelSequenceInstanceData::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(2146);
 		return ptr;
 	}
 

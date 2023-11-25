@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_Maelstrom_Venom_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54618);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38007);
 		return ptr;
 	}
 

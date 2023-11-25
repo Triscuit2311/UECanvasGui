@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,15 +15,82 @@ namespace SDK
 	// # Classes
 	// --------------------------------------------------
 	/**
-	 * Class FMODStudio.FMODAmbientSound
-	 * Size -> 0x0008 (FullSize[0x0228] - InheritedSize[0x0220])
+	 * Class FMODStudio.FMODAsset
+	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
 	 */
-	class AFMODAmbientSound : public AActor
+	class UFMODAsset : public UObject
 	{
 	public:
-		class UFMODAudioComponent*                                   AudioComponent;                                          // 0x0220(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FGuid                                                 AssetGuid;                                               // 0x0028(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class FMODStudio.FMODAnimNotifyPlay
+	 * Size -> 0x0020 (FullSize[0x0058] - InheritedSize[0x0038])
+	 */
+	class UFMODAnimNotifyPlay : public UAnimNotify
+	{
+	public:
+		bool                                                         bFollow : 1;                                             // 0x0038(0x0001) BIT_FIELD Edit, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		class FString                                                AttachName;                                              // 0x0040(0x0010) Edit, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class UFMODEvent*                                            Event;                                                   // 0x0050(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class FMODStudio.FMODBlueprintStatics
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UFMODBlueprintStatics : public UBlueprintFunctionLibrary
+	{
+	public:
+		void VCASetVolume(class UFMODVCA* Vca, float Volume);
+		void UnloadEventSampleData(class UObject* WorldContextObject, class UFMODEvent* Event);
+		void UnloadBankSampleData(class UFMODBank* Bank);
+		void UnloadBank(class UFMODBank* Bank);
+		void SetOutputDriverByName(const class FString& NewDriverName);
+		void SetOutputDriverByIndex(int32_t NewDriverIndex);
+		void SetLocale(const class FString& Locale);
+		void SetGlobalParameterByName(const class FName& Name, float Value);
+		class UFMODAudioComponent* PlayEventAttached(class UFMODEvent* Event, class USceneComponent* AttachToComponent, const class FName& AttachPointName, const struct FVector& Location, EAttachLocation LocationType, bool bStopWhenAttachedToDestroyed, bool bAutoPlay, bool bAutoDestroy);
+		struct FFMODEventInstance PlayEventAtLocation(class UObject* WorldContextObject, class UFMODEvent* Event, const struct FTransform& Location, bool bAutoPlay);
+		struct FFMODEventInstance PlayEvent2D(class UObject* WorldContextObject, class UFMODEvent* Event, bool bAutoPlay);
+		void MixerSuspend();
+		void MixerResume();
+		void LoadEventSampleData(class UObject* WorldContextObject, class UFMODEvent* Event);
+		void LoadBankSampleData(class UFMODBank* Bank);
+		void LoadBank(class UFMODBank* Bank, bool bBlocking, bool bLoadSampleData);
+		bool IsWorldAudible(class UObject* WorldContextObject);
+		bool IsBankLoaded(class UFMODBank* Bank);
+		TArray<class FString> GetOutputDrivers();
+		void GetGlobalParameterValueByName(const class FName& Name, float* UserValue, float* FinalValue);
+		float GetGlobalParameterByName(const class FName& Name);
+		TArray<struct FFMODEventInstance> FindEventInstances(class UObject* WorldContextObject, class UFMODEvent* Event);
+		class UFMODEvent* FindEventByName(const class FString& Name);
+		class UFMODAsset* FindAssetByName(const class FString& Name);
+		void EventInstanceStop(const struct FFMODEventInstance& EventInstance, bool Release);
+		void EventInstanceSetVolume(const struct FFMODEventInstance& EventInstance, float Volume);
+		void EventInstanceSetTransform(const struct FFMODEventInstance& EventInstance, const struct FTransform& Location);
+		void EventInstanceSetProperty(const struct FFMODEventInstance& EventInstance, EFMODEventProperty Property, float Value);
+		void EventInstanceSetPitch(const struct FFMODEventInstance& EventInstance, float Pitch);
+		void EventInstanceSetPaused(const struct FFMODEventInstance& EventInstance, bool paused);
+		void EventInstanceSetParameter(const struct FFMODEventInstance& EventInstance, const class FName& Name, float Value);
+		void EventInstanceRelease(const struct FFMODEventInstance& EventInstance);
+		void EventInstancePlay(const struct FFMODEventInstance& EventInstance);
+		void EventInstanceKeyOff(const struct FFMODEventInstance& EventInstance);
+		bool EventInstanceIsValid(const struct FFMODEventInstance& EventInstance);
+		void EventInstanceGetParameterValue(const struct FFMODEventInstance& EventInstance, const class FName& Name, float* UserValue, float* FinalValue);
+		float EventInstanceGetParameter(const struct FFMODEventInstance& EventInstance, const class FName& Name);
+		void BusStopAllEvents(class UFMODBus* Bus, EFMOD_STUDIO_STOP_MODE stopMode);
+		void BusSetVolume(class UFMODBus* Bus, float Volume);
+		void BusSetPaused(class UFMODBus* Bus, bool bPaused);
+		void BusSetMute(class UFMODBus* Bus, bool bMute);
 		static UClass* StaticClass();
 	};
 
@@ -74,30 +141,11 @@ namespace SDK
 	};
 
 	/**
-	 * Class FMODStudio.FMODAnimNotifyPlay
-	 * Size -> 0x0020 (FullSize[0x0058] - InheritedSize[0x0038])
+	 * Class FMODStudio.FMODBus
+	 * Size -> 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
 	 */
-	class UFMODAnimNotifyPlay : public UAnimNotify
+	class UFMODBus : public UFMODAsset
 	{
-	public:
-		bool                                                         bFollow : 1;                                             // 0x0038(0x0001) BIT_FIELD Edit, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0039(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		class FString                                                AttachName;                                              // 0x0040(0x0010) Edit, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class UFMODEvent*                                            Event;                                                   // 0x0050(0x0008) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class FMODStudio.FMODAsset
-	 * Size -> 0x0010 (FullSize[0x0038] - InheritedSize[0x0028])
-	 */
-	class UFMODAsset : public UObject
-	{
-	public:
-		struct FGuid                                                 AssetGuid;                                               // 0x0028(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-
 	public:
 		static UClass* StaticClass();
 	};
@@ -129,53 +177,28 @@ namespace SDK
 	};
 
 	/**
-	 * Class FMODStudio.FMODBlueprintStatics
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 * Class FMODStudio.FMODEventControlSection
+	 * Size -> 0x0098 (FullSize[0x0180] - InheritedSize[0x00E8])
 	 */
-	class UFMODBlueprintStatics : public UBlueprintFunctionLibrary
+	class UFMODEventControlSection : public UMovieSceneSection
 	{
 	public:
-		void VCASetVolume(class UFMODVCA* Vca, float Volume);
-		void UnloadEventSampleData(class UObject* WorldContextObject, class UFMODEvent* Event);
-		void UnloadBankSampleData(class UFMODBank* Bank);
-		void UnloadBank(class UFMODBank* Bank);
-		void SetOutputDriverByName(const class FString& NewDriverName);
-		void SetOutputDriverByIndex(int32_t NewDriverIndex);
-		void SetLocale(const class FString& Locale);
-		void SetGlobalParameterByName(const class FName& Name, float Value);
-		class UFMODAudioComponent* PlayEventAttached(class UFMODEvent* Event, class USceneComponent* AttachToComponent, const class FName& AttachPointName, const struct FVector& Location, EAttachLocation LocationType, bool bStopWhenAttachedToDestroyed, bool bAutoPlay, bool bAutoDestroy);
-		struct FFMODEventInstance PlayEventAtLocation(class UObject* WorldContextObject, class UFMODEvent* Event, const struct PCoreUObject_FTransform& Location, bool bAutoPlay);
-		struct FFMODEventInstance PlayEvent2D(class UObject* WorldContextObject, class UFMODEvent* Event, bool bAutoPlay);
-		void MixerSuspend();
-		void MixerResume();
-		void LoadEventSampleData(class UObject* WorldContextObject, class UFMODEvent* Event);
-		void LoadBankSampleData(class UFMODBank* Bank);
-		void LoadBank(class UFMODBank* Bank, bool bBlocking, bool bLoadSampleData);
-		bool IsWorldAudible(class UObject* WorldContextObject);
-		bool IsBankLoaded(class UFMODBank* Bank);
-		TArray<class FString> GetOutputDrivers();
-		void GetGlobalParameterValueByName(const class FName& Name, float* UserValue, float* FinalValue);
-		float GetGlobalParameterByName(const class FName& Name);
-		TArray<struct FFMODEventInstance> FindEventInstances(class UObject* WorldContextObject, class UFMODEvent* Event);
-		class UFMODEvent* FindEventByName(const class FString& Name);
-		class UFMODAsset* FindAssetByName(const class FString& Name);
-		void EventInstanceStop(const struct FFMODEventInstance& EventInstance, bool Release);
-		void EventInstanceSetVolume(const struct FFMODEventInstance& EventInstance, float Volume);
-		void EventInstanceSetTransform(const struct FFMODEventInstance& EventInstance, const struct PCoreUObject_FTransform& Location);
-		void EventInstanceSetProperty(const struct FFMODEventInstance& EventInstance, EFMODEventProperty Property, float Value);
-		void EventInstanceSetPitch(const struct FFMODEventInstance& EventInstance, float Pitch);
-		void EventInstanceSetPaused(const struct FFMODEventInstance& EventInstance, bool paused);
-		void EventInstanceSetParameter(const struct FFMODEventInstance& EventInstance, const class FName& Name, float Value);
-		void EventInstanceRelease(const struct FFMODEventInstance& EventInstance);
-		void EventInstancePlay(const struct FFMODEventInstance& EventInstance);
-		void EventInstanceKeyOff(const struct FFMODEventInstance& EventInstance);
-		bool EventInstanceIsValid(const struct FFMODEventInstance& EventInstance);
-		void EventInstanceGetParameterValue(const struct FFMODEventInstance& EventInstance, const class FName& Name, float* UserValue, float* FinalValue);
-		float EventInstanceGetParameter(const struct FFMODEventInstance& EventInstance, const class FName& Name);
-		void BusStopAllEvents(class UFMODBus* Bus, EFMOD_STUDIO_STOP_MODE stopMode);
-		void BusSetVolume(class UFMODBus* Bus, float Volume);
-		void BusSetPaused(class UFMODBus* Bus, bool bPaused);
-		void BusSetMute(class UFMODBus* Bus, bool bMute);
+		struct FFMODEventControlChannel                              ControlKeys;                                             // 0x00E8(0x0098) NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class FMODStudio.FMODAmbientSound
+	 * Size -> 0x0008 (FullSize[0x0228] - InheritedSize[0x0220])
+	 */
+	class AFMODAmbientSound : public AActor
+	{
+	public:
+		class UFMODAudioComponent*                                   AudioComponent;                                          // 0x0220(0x0008) Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+
+	public:
 		static UClass* StaticClass();
 	};
 
@@ -190,11 +213,15 @@ namespace SDK
 	};
 
 	/**
-	 * Class FMODStudio.FMODBus
-	 * Size -> 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
+	 * Class FMODStudio.FMODEventControlTrack
+	 * Size -> 0x0018 (FullSize[0x00A8] - InheritedSize[0x0090])
 	 */
-	class UFMODBus : public UFMODAsset
+	class UFMODEventControlTrack : public UMovieSceneNameableTrack
 	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0090(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<class UMovieSceneSection*>                            ControlSections;                                         // 0x0098(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
+
 	public:
 		static UClass* StaticClass();
 	};
@@ -214,6 +241,16 @@ namespace SDK
 	};
 
 	/**
+	 * Class FMODStudio.FMODSnapshot
+	 * Size -> 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
+	 */
+	class UFMODSnapshot : public UFMODEvent
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class FMODStudio.FMODPort
 	 * Size -> 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
 	 */
@@ -224,27 +261,13 @@ namespace SDK
 	};
 
 	/**
-	 * Class FMODStudio.FMODEventControlSection
-	 * Size -> 0x0098 (FullSize[0x0180] - InheritedSize[0x00E8])
+	 * Class FMODStudio.FMODSnapshotReverb
+	 * Size -> 0x0010 (FullSize[0x0070] - InheritedSize[0x0060])
 	 */
-	class UFMODEventControlSection : public UMovieSceneSection
+	class UFMODSnapshotReverb : public UReverbEffect
 	{
 	public:
-		struct FFMODEventControlChannel                              ControlKeys;                                             // 0x00E8(0x0098) NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class FMODStudio.FMODEventControlTrack
-	 * Size -> 0x0018 (FullSize[0x00A8] - InheritedSize[0x0090])
-	 */
-	class UFMODEventControlTrack : public UMovieSceneNameableTrack
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0090(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<class UMovieSceneSection*>                            ControlSections;                                         // 0x0098(0x0010) ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate
+		struct FGuid                                                 AssetGuid;                                               // 0x0060(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -303,29 +326,6 @@ namespace SDK
 		class FString                                                AmbientLPFParameter;                                     // 0x0150(0x0010) Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		TMap<EFMODPlatforms, struct FFMODPlatformSettings>           Platforms;                                               // 0x0160(0x0050) Edit, Config, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0007[0x10];                                  // 0x01B0(0x0010) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class FMODStudio.FMODSnapshot
-	 * Size -> 0x0000 (FullSize[0x0038] - InheritedSize[0x0038])
-	 */
-	class UFMODSnapshot : public UFMODEvent
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class FMODStudio.FMODSnapshotReverb
-	 * Size -> 0x0010 (FullSize[0x0070] - InheritedSize[0x0060])
-	 */
-	class UFMODSnapshotReverb : public UReverbEffect
-	{
-	public:
-		struct FGuid                                                 AssetGuid;                                               // 0x0060(0x0010) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -23,7 +23,7 @@ namespace SDK
 	 */
 	void UW_Button_C::TruncateText(bool Truncate, int32_t CharacterLimit, const class FString& TruncationCharacters)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28933);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48818);
 		
 		struct
 		{
@@ -52,7 +52,7 @@ namespace SDK
 	 */
 	void UW_Button_C::DisableInteraction(bool Disable)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28932);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48817);
 		
 		struct
 		{
@@ -76,7 +76,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetButtonStyle(E_Style_Buttons SelectButtonStyle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28931);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48816);
 		
 		struct
 		{
@@ -100,7 +100,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Enable(bool Enable)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28930);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48815);
 		
 		struct
 		{
@@ -124,7 +124,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetBackgroundTint(const struct FLinearColor& InBackgroundColor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28929);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48814);
 		
 		struct
 		{
@@ -149,7 +149,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetActive(bool Active, bool DisableInteraction)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28928);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48813);
 		
 		struct
 		{
@@ -175,7 +175,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetTextStyle(const struct FST_Style_Text& FontStyle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28927);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48812);
 		
 		struct
 		{
@@ -199,7 +199,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetButtonText(const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28926);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48811);
 		
 		struct
 		{
@@ -223,7 +223,7 @@ namespace SDK
 	 */
 	void UW_Button_C::SetButtonState(E_ButtonStates ButtonState)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28925);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48810);
 		
 		struct
 		{
@@ -247,7 +247,7 @@ namespace SDK
 	 */
 	void UW_Button_C::InitStyle(E_Style_Buttons ButtonStyle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28924);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48809);
 		
 		struct
 		{
@@ -272,7 +272,7 @@ namespace SDK
 	 */
 	void UW_Button_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28923);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48808);
 		
 		struct
 		{
@@ -295,7 +295,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28922);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48807);
 		
 		struct
 		{
@@ -318,7 +318,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28921);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48806);
 		
 		struct
 		{
@@ -343,7 +343,7 @@ namespace SDK
 	 */
 	void UW_Button_C::BndEvt__btn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28920);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48805);
 		
 		struct
 		{
@@ -364,7 +364,7 @@ namespace SDK
 	 */
 	void UW_Button_C::BndEvt__btn_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28919);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48804);
 		
 		struct
 		{
@@ -385,7 +385,7 @@ namespace SDK
 	 */
 	void UW_Button_C::BndEvt__btn_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28918);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48803);
 		
 		struct
 		{
@@ -406,7 +406,7 @@ namespace SDK
 	 */
 	void UW_Button_C::BndEvt__btn_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28901);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48802);
 		
 		struct
 		{
@@ -427,7 +427,7 @@ namespace SDK
 	 */
 	void UW_Button_C::BndEvt__btn_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28900);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48801);
 		
 		struct
 		{
@@ -448,7 +448,7 @@ namespace SDK
 	 */
 	void UW_Button_C::ForceClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28899);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48800);
 		
 		struct
 		{
@@ -469,7 +469,7 @@ namespace SDK
 	 */
 	void UW_Button_C::ForceDoubleClick()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28898);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48799);
 		
 		struct
 		{
@@ -491,7 +491,7 @@ namespace SDK
 	 */
 	void UW_Button_C::ExecuteUbergraph_W_Button(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28897);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48798);
 		
 		struct
 		{
@@ -515,7 +515,7 @@ namespace SDK
 	 */
 	void UW_Button_C::DoubleClicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28896);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48797);
 		
 		struct
 		{
@@ -538,7 +538,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Released__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28895);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48796);
 		
 		struct
 		{
@@ -559,7 +559,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Pressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28894);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48795);
 		
 		struct
 		{
@@ -580,7 +580,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28893);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48794);
 		
 		struct
 		{
@@ -602,7 +602,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28892);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48793);
 		
 		struct
 		{
@@ -626,7 +626,7 @@ namespace SDK
 	 */
 	void UW_Button_C::Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28891);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48792);
 		
 		struct
 		{
@@ -649,7 +649,7 @@ namespace SDK
 	 */
 	UClass* UW_Button_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28890);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48791);
 		return ptr;
 	}
 

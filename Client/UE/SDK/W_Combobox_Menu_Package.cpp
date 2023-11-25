@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Combobox_Menu_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28261);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38137);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Combobox_Menu_C::ExecuteUbergraph_W_Combobox_Menu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28260);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(38136);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	UClass* UW_Combobox_Menu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28259);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38135);
 		return ptr;
 	}
 

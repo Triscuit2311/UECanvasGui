@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,17 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
+	 * Enum VivoxCore.EAudioFadeModel
+	 */
+	enum class EAudioFadeModel : uint8_t
+	{
+		InverseByDistance     = 0,
+		LinearByDistance      = 1,
+		ExponentialByDistance = 2,
+		MAX                   = 3
+	};
+
+	/**
 	 * Enum VivoxCore.DeviceType
 	 */
 	enum class EDeviceType : uint8_t
@@ -24,17 +35,6 @@ namespace SDK
 		DeviceTypeDefaultSystemDevice        = 2,
 		DeviceTypeDefaultCommunicationDevice = 3,
 		DeviceTypeDeviceType_MAX             = 4
-	};
-
-	/**
-	 * Enum VivoxCore.EAudioFadeModel
-	 */
-	enum class EAudioFadeModel : uint8_t
-	{
-		InverseByDistance     = 0,
-		LinearByDistance      = 1,
-		ExponentialByDistance = 2,
-		MAX                   = 3
 	};
 
 	/**
@@ -74,6 +74,16 @@ namespace SDK
 	};
 
 	/**
+	 * Enum VivoxCore.TTSMessageState
+	 */
+	enum class ETTSMessageState : uint8_t
+	{
+		TTSMessageStatePlaying             = 0,
+		TTSMessageStateEnqueued            = 1,
+		TTSMessageStateTTSMessageState_MAX = 2
+	};
+
+	/**
 	 * Enum VivoxCore.TransmissionMode
 	 */
 	enum class ETransmissionMode : uint8_t
@@ -85,6 +95,22 @@ namespace SDK
 	};
 
 	/**
+	 * Enum VivoxCore.TTSDestination
+	 */
+	enum class ETTSDestination : uint8_t
+	{
+		TTSDestinationDefault                                   = 0,
+		TTSDestinationRemoteTransmission                        = 1,
+		TTSDestinationLocalPlayback                             = 2,
+		TTSDestinationRemoteTransmissionWithLocalPlayback       = 3,
+		TTSDestinationQueuedRemoteTransmission                  = 4,
+		TTSDestinationQueuedLocalPlayback                       = 5,
+		TTSDestinationQueuedRemoteTransmissionWithLocalPlayback = 6,
+		TTSDestinationScreenReader                              = 7,
+		TTSDestinationTTSDestination_MAX                        = 8
+	};
+
+	/**
 	 * Enum VivoxCore.SubscriptionReply
 	 */
 	enum class ESubscriptionReply : uint8_t
@@ -92,6 +118,20 @@ namespace SDK
 		SubscriptionReplyAllow                 = 0,
 		SubscriptionReplyBlock                 = 1,
 		SubscriptionReplySubscriptionReply_MAX = 2
+	};
+
+	/**
+	 * Enum VivoxCore.PresenceStatus
+	 */
+	enum class EPresenceStatus : uint8_t
+	{
+		PresenceStatusUnavailable        = 0,
+		PresenceStatusAvailable          = 1,
+		PresenceStatusChat               = 2,
+		PresenceStatusDoNotDisturb       = 3,
+		PresenceStatusAway               = 4,
+		PresenceStatusExtendedAway       = 5,
+		PresenceStatusPresenceStatus_MAX = 6
 	};
 
 	/**
@@ -115,46 +155,6 @@ namespace SDK
 		LoginStateLoggedIn       = 2,
 		LoginStateLoggingOut     = 3,
 		LoginStateLoginState_MAX = 4
-	};
-
-	/**
-	 * Enum VivoxCore.TTSMessageState
-	 */
-	enum class ETTSMessageState : uint8_t
-	{
-		TTSMessageStatePlaying             = 0,
-		TTSMessageStateEnqueued            = 1,
-		TTSMessageStateTTSMessageState_MAX = 2
-	};
-
-	/**
-	 * Enum VivoxCore.TTSDestination
-	 */
-	enum class ETTSDestination : uint8_t
-	{
-		TTSDestinationDefault                                   = 0,
-		TTSDestinationRemoteTransmission                        = 1,
-		TTSDestinationLocalPlayback                             = 2,
-		TTSDestinationRemoteTransmissionWithLocalPlayback       = 3,
-		TTSDestinationQueuedRemoteTransmission                  = 4,
-		TTSDestinationQueuedLocalPlayback                       = 5,
-		TTSDestinationQueuedRemoteTransmissionWithLocalPlayback = 6,
-		TTSDestinationScreenReader                              = 7,
-		TTSDestinationTTSDestination_MAX                        = 8
-	};
-
-	/**
-	 * Enum VivoxCore.PresenceStatus
-	 */
-	enum class EPresenceStatus : uint8_t
-	{
-		PresenceStatusUnavailable        = 0,
-		PresenceStatusAvailable          = 1,
-		PresenceStatusChat               = 2,
-		PresenceStatusDoNotDisturb       = 3,
-		PresenceStatusAway               = 4,
-		PresenceStatusExtendedAway       = 5,
-		PresenceStatusPresenceStatus_MAX = 6
 	};
 
 }

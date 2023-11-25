@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_MagStatus_C::Unhighlight()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26976);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43613);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_MagStatus_C::Highlight()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26975);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43612);
 		
 		struct
 		{
@@ -62,7 +62,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_MagStatus_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26974);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43611);
 		
 		struct
 		{
@@ -85,7 +85,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_MagStatus_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26973);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43610);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_MagCheck_MagStatus_C::ExecuteUbergraph_W_MagCheck_MagStatus(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26972);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43609);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	UClass* UW_MagCheck_MagStatus_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26971);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43608);
 		return ptr;
 	}
 

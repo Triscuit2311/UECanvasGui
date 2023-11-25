@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UScope_MicroT2_FBI1301_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54614);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38003);
 		return ptr;
 	}
 

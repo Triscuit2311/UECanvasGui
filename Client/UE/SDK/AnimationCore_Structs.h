@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -52,6 +52,108 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct AnimationCore.FilterOptionPerAxis
+	 * Size -> 0x0003
+	 */
+	struct FFilterOptionPerAxis
+	{
+	public:
+		bool                                                         bX;                                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bY;                                                      // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bZ;                                                      // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.TransformFilter
+	 * Size -> 0x0009
+	 */
+	struct FTransformFilter
+	{
+	public:
+		struct FFilterOptionPerAxis                                  TranslationFilter;                                       // 0x0000(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FFilterOptionPerAxis                                  RotationFilter;                                          // 0x0003(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+		struct FFilterOptionPerAxis                                  ScaleFilter;                                             // 0x0006(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.EulerTransform
+	 * Size -> 0x0024
+	 */
+	struct FEulerTransform
+	{
+	public:
+		struct FVector                                  Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FRotator                                 Rotation;                                                // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FVector                                  Scale;                                                   // 0x0018(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.FABRIKChainLink
+	 * Size -> 0x0038
+	 */
+	struct FFABRIKChainLink
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.NodeChain
+	 * Size -> 0x0010
+	 */
+	struct FNodeChain
+	{
+	public:
+		TArray<class FName>                                          Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.NodeObject
+	 * Size -> 0x0010
+	 */
+	struct FNodeObject
+	{
+	public:
+		class FName                                                  Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FName                                                  ParentName;                                              // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.NodeHierarchyData
+	 * Size -> 0x0070
+	 */
+	struct FNodeHierarchyData
+	{
+	public:
+		TArray<struct FNodeObject>                                   Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TArray<struct FTransform>                       Transforms;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+		TMap<class FName, int32_t>                                   NodeNameToIndexMapping;                                  // 0x0020(0x0050) NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.NodeHierarchyWithUserData
+	 * Size -> 0x0078
+	 */
+	struct FNodeHierarchyWithUserData
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FNodeHierarchyData                                    Hierarchy;                                               // 0x0008(0x0070) Protected, NativeAccessSpecifierProtected
+	};
+
+	/**
+	 * ScriptStruct AnimationCore.TransformNoScale
+	 * Size -> 0x0020
+	 */
+	struct FTransformNoScale
+	{
+	public:
+		struct FVector                                  Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FQuat                                    Rotation;                                                // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+	};
+
+	/**
 	 * ScriptStruct AnimationCore.CCDIKChainLink
 	 * Size -> 0x0080
 	 */
@@ -83,20 +185,8 @@ namespace SDK
 		float                                                        Weight;                                                  // 0x0010(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bMaintainOffset;                                         // 0x0014(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0xB];                                   // 0x0015(0x000B) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               Offset;                                                  // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct PCoreUObject_FTransform                               CurrentTransform;                                        // 0x0050(0x0030) Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.FilterOptionPerAxis
-	 * Size -> 0x0003
-	 */
-	struct FFilterOptionPerAxis
-	{
-	public:
-		bool                                                         bX;                                                      // 0x0000(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bY;                                                      // 0x0001(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bZ;                                                      // 0x0002(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FTransform                               Offset;                                                  // 0x0020(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               CurrentTransform;                                        // 0x0050(0x0030) Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -177,100 +267,10 @@ namespace SDK
 	public:
 		struct FVector                                  Translation;                                             // 0x0000(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FQuat                                    Rotation;                                                // 0x0010(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FQuat                                    Rotation;                                                // 0x0010(0x0010) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		struct FVector                                  Scale;                                                   // 0x0020(0x000C) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0001[0x4];                                   // 0x002C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               Parent;                                                  // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.TransformFilter
-	 * Size -> 0x0009
-	 */
-	struct FTransformFilter
-	{
-	public:
-		struct FFilterOptionPerAxis                                  TranslationFilter;                                       // 0x0000(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                  RotationFilter;                                          // 0x0003(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-		struct FFilterOptionPerAxis                                  ScaleFilter;                                             // 0x0006(0x0003) Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.EulerTransform
-	 * Size -> 0x0024
-	 */
-	struct FEulerTransform
-	{
-	public:
-		struct FVector                                  Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FRotator                                 Rotation;                                                // 0x000C(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		struct FVector                                  Scale;                                                   // 0x0018(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.FABRIKChainLink
-	 * Size -> 0x0038
-	 */
-	struct FFABRIKChainLink
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.NodeChain
-	 * Size -> 0x0010
-	 */
-	struct FNodeChain
-	{
-	public:
-		TArray<class FName>                                          Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.NodeObject
-	 * Size -> 0x0010
-	 */
-	struct FNodeObject
-	{
-	public:
-		class FName                                                  Name;                                                    // 0x0000(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FName                                                  ParentName;                                              // 0x0008(0x0008) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.NodeHierarchyData
-	 * Size -> 0x0070
-	 */
-	struct FNodeHierarchyData
-	{
-	public:
-		TArray<struct FNodeObject>                                   Nodes;                                                   // 0x0000(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TArray<struct PCoreUObject_FTransform>                       Transforms;                                              // 0x0010(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-		TMap<class FName, int32_t>                                   NodeNameToIndexMapping;                                  // 0x0020(0x0050) NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.NodeHierarchyWithUserData
-	 * Size -> 0x0078
-	 */
-	struct FNodeHierarchyWithUserData
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FNodeHierarchyData                                    Hierarchy;                                               // 0x0008(0x0070) Protected, NativeAccessSpecifierProtected
-	};
-
-	/**
-	 * ScriptStruct AnimationCore.TransformNoScale
-	 * Size -> 0x0020
-	 */
-	struct FTransformNoScale
-	{
-	public:
-		struct FVector                                  Location;                                                // 0x0000(0x000C) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x000C(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FQuat                                    Rotation;                                                // 0x0010(0x0010) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               Parent;                                                  // 0x0030(0x0030) IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 }

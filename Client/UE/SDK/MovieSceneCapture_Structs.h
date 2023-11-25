@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -43,16 +43,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
-	/**
-	 * ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
-	 * Size -> 0x0010
-	 */
-	struct FCompositionGraphCapturePasses
-	{
-	public:
-		TArray<class FString>                                        Value;                                                   // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
 	/**
 	 * ScriptStruct MovieSceneCapture.CaptureResolution
 	 * Size -> 0x0008
@@ -99,13 +89,13 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct MovieSceneCapture.CapturedPixelsID
-	 * Size -> 0x0050
+	 * ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
+	 * Size -> 0x0010
 	 */
-	struct FCapturedPixelsID
+	struct FCompositionGraphCapturePasses
 	{
 	public:
-		TMap<class FName, class FName>                               Identifiers;                                             // 0x0000(0x0050) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		TArray<class FString>                                        Value;                                                   // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -129,6 +119,16 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x10];                                  // 0x0000(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct MovieSceneCapture.CapturedPixelsID
+	 * Size -> 0x0050
+	 */
+	struct FCapturedPixelsID
+	{
+	public:
+		TMap<class FName, class FName>                               Identifiers;                                             // 0x0000(0x0050) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 	};
 
 }

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::Initialize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54505);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37928);
 		
 		struct
 		{
@@ -43,7 +43,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54504);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37927);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::OnRefresh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54503);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37926);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::OnWheelCreated()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54502);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37925);
 		
 		struct
 		{
@@ -111,7 +111,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54501);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37924);
 		
 		struct
 		{
@@ -135,7 +135,7 @@ namespace SDK
 	 */
 	void UW_WeaponWheel_ItemStat_Accuracy_C::ExecuteUbergraph_W_WeaponWheel_ItemStat_Accuracy(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54500);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37923);
 		
 		struct
 		{
@@ -158,7 +158,7 @@ namespace SDK
 	 */
 	UClass* UW_WeaponWheel_ItemStat_Accuracy_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54499);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37922);
 		return ptr;
 	}
 

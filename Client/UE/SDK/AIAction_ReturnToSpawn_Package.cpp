@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UAIAction_ReturnToSpawn_C::ShouldPerformAction()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85295);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84175);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UAIAction_ReturnToSpawn_C::BeginAction_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85294);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84174);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UAIAction_ReturnToSpawn_C::OnMoveComplete_Blueprint(class AAIController* Controller, int32_t RequestID)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85293);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84173);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UAIAction_ReturnToSpawn_C::ExecuteUbergraph_AIAction_ReturnToSpawn(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85292);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84172);
 		
 		struct
 		{
@@ -117,7 +117,7 @@ namespace SDK
 	 */
 	UClass* UAIAction_ReturnToSpawn_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85291);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84171);
 		return ptr;
 	}
 

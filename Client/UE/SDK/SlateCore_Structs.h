@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -74,6 +74,30 @@ namespace SDK
 	};
 
 	/**
+	 * Enum SlateCore.ECheckBoxState
+	 */
+	enum class ECheckBoxState : uint8_t
+	{
+		Unchecked    = 0,
+		Checked      = 1,
+		Undetermined = 2,
+		MAX          = 3
+	};
+
+	/**
+	 * Enum SlateCore.EWidgetClipping
+	 */
+	enum class EWidgetClipping : uint8_t
+	{
+		Inherit                         = 0,
+		ClipToBounds                    = 1,
+		ClipToBoundsWithoutIntersecting = 2,
+		ClipToBoundsAlways              = 3,
+		OnDemand                        = 4,
+		MAX                             = 5
+	};
+
+	/**
 	 * Enum SlateCore.EUINavigationRule
 	 */
 	enum class EUINavigationRule : uint8_t
@@ -86,6 +110,18 @@ namespace SDK
 		CustomBoundary = 5,
 		Invalid        = 6,
 		MAX            = 7
+	};
+
+	/**
+	 * Enum SlateCore.EFlowDirectionPreference
+	 */
+	enum class EFlowDirectionPreference : uint8_t
+	{
+		Inherit     = 0,
+		Culture     = 1,
+		LeftToRight = 2,
+		RightToLeft = 3,
+		MAX         = 4
 	};
 
 	/**
@@ -117,66 +153,6 @@ namespace SDK
 	};
 
 	/**
-	 * Enum SlateCore.ECheckBoxState
-	 */
-	enum class ECheckBoxState : uint8_t
-	{
-		Unchecked    = 0,
-		Checked      = 1,
-		Undetermined = 2,
-		MAX          = 3
-	};
-
-	/**
-	 * Enum SlateCore.EWidgetClipping
-	 */
-	enum class EWidgetClipping : uint8_t
-	{
-		Inherit                         = 0,
-		ClipToBounds                    = 1,
-		ClipToBoundsWithoutIntersecting = 2,
-		ClipToBoundsAlways              = 3,
-		OnDemand                        = 4,
-		MAX                             = 5
-	};
-
-	/**
-	 * Enum SlateCore.ESelectInfo
-	 */
-	enum class ESelectInfo : uint8_t
-	{
-		OnKeyPress   = 0,
-		OnNavigation = 1,
-		OnMouseClick = 2,
-		Direct       = 3,
-		MAX          = 4
-	};
-
-	/**
-	 * Enum SlateCore.EFlowDirectionPreference
-	 */
-	enum class EFlowDirectionPreference : uint8_t
-	{
-		Inherit     = 0,
-		Culture     = 1,
-		LeftToRight = 2,
-		RightToLeft = 3,
-		MAX         = 4
-	};
-
-	/**
-	 * Enum SlateCore.ETextCommit
-	 */
-	enum class ETextCommit : uint8_t
-	{
-		Default          = 0,
-		OnEnter          = 1,
-		OnUserMovedFocus = 2,
-		OnCleared        = 3,
-		MAX              = 4
-	};
-
-	/**
 	 * Enum SlateCore.EMenuPlacement
 	 */
 	enum class EMenuPlacement : uint8_t
@@ -198,6 +174,30 @@ namespace SDK
 	};
 
 	/**
+	 * Enum SlateCore.ESelectInfo
+	 */
+	enum class ESelectInfo : uint8_t
+	{
+		OnKeyPress   = 0,
+		OnNavigation = 1,
+		OnMouseClick = 2,
+		Direct       = 3,
+		MAX          = 4
+	};
+
+	/**
+	 * Enum SlateCore.ETextCommit
+	 */
+	enum class ETextCommit : uint8_t
+	{
+		Default          = 0,
+		OnEnter          = 1,
+		OnUserMovedFocus = 2,
+		OnCleared        = 3,
+		MAX              = 4
+	};
+
+	/**
 	 * Enum SlateCore.ETextShapingMethod
 	 */
 	enum class ETextShapingMethod : uint8_t
@@ -206,79 +206,6 @@ namespace SDK
 		KerningOnly = 1,
 		FullShaping = 2,
 		MAX         = 3
-	};
-
-	/**
-	 * Enum SlateCore.EFontLayoutMethod
-	 */
-	enum class EFontLayoutMethod : uint8_t
-	{
-		Metrics     = 0,
-		BoundingBox = 1,
-		MAX         = 2
-	};
-
-	/**
-	 * Enum SlateCore.EFontLoadingPolicy
-	 */
-	enum class EFontLoadingPolicy : uint8_t
-	{
-		LazyLoad = 0,
-		Stream   = 1,
-		Inline   = 2,
-		MAX      = 3
-	};
-
-	/**
-	 * Enum SlateCore.EFontHinting
-	 */
-	enum class EFontHinting : uint8_t
-	{
-		Default    = 0,
-		Auto       = 1,
-		AutoLight  = 2,
-		Monochrome = 3,
-		None       = 4,
-		MAX        = 5
-	};
-
-	/**
-	 * Enum SlateCore.EFocusCause
-	 */
-	enum class EFocusCause : uint8_t
-	{
-		Mouse                = 0,
-		Navigation           = 1,
-		SetDirectly          = 2,
-		Cleared              = 3,
-		OtherWidgetLostFocus = 4,
-		WindowActivate       = 5,
-		MAX                  = 6
-	};
-
-	/**
-	 * Enum SlateCore.ESlateDebuggingFocusEvent
-	 */
-	enum class ESlateDebuggingFocusEvent : uint8_t
-	{
-		FocusChanging = 0,
-		FocusLost     = 1,
-		FocusReceived = 2,
-		MAX           = 3
-	};
-
-	/**
-	 * Enum SlateCore.ESlateDebuggingNavigationMethod
-	 */
-	enum class ESlateDebuggingNavigationMethod : uint8_t
-	{
-		Unknown               = 0,
-		Explicit              = 1,
-		CustomDelegateBound   = 2,
-		CustomDelegateUnbound = 3,
-		NextOrPrevious        = 4,
-		HitTestGrid           = 5,
-		MAX                   = 6
 	};
 
 	/**
@@ -467,9 +394,94 @@ namespace SDK
 		MAX                   = 3
 	};
 
+	/**
+	 * Enum SlateCore.EFontLayoutMethod
+	 */
+	enum class EFontLayoutMethod : uint8_t
+	{
+		Metrics     = 0,
+		BoundingBox = 1,
+		MAX         = 2
+	};
+
+	/**
+	 * Enum SlateCore.EFontLoadingPolicy
+	 */
+	enum class EFontLoadingPolicy : uint8_t
+	{
+		LazyLoad = 0,
+		Stream   = 1,
+		Inline   = 2,
+		MAX      = 3
+	};
+
+	/**
+	 * Enum SlateCore.EFontHinting
+	 */
+	enum class EFontHinting : uint8_t
+	{
+		Default    = 0,
+		Auto       = 1,
+		AutoLight  = 2,
+		Monochrome = 3,
+		None       = 4,
+		MAX        = 5
+	};
+
+	/**
+	 * Enum SlateCore.EFocusCause
+	 */
+	enum class EFocusCause : uint8_t
+	{
+		Mouse                = 0,
+		Navigation           = 1,
+		SetDirectly          = 2,
+		Cleared              = 3,
+		OtherWidgetLostFocus = 4,
+		WindowActivate       = 5,
+		MAX                  = 6
+	};
+
+	/**
+	 * Enum SlateCore.ESlateDebuggingFocusEvent
+	 */
+	enum class ESlateDebuggingFocusEvent : uint8_t
+	{
+		FocusChanging = 0,
+		FocusLost     = 1,
+		FocusReceived = 2,
+		MAX           = 3
+	};
+
+	/**
+	 * Enum SlateCore.ESlateDebuggingNavigationMethod
+	 */
+	enum class ESlateDebuggingNavigationMethod : uint8_t
+	{
+		Unknown               = 0,
+		Explicit              = 1,
+		CustomDelegateBound   = 2,
+		CustomDelegateUnbound = 3,
+		NextOrPrevious        = 4,
+		HitTestGrid           = 5,
+		MAX                   = 6
+	};
+
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct SlateCore.SlateColor
+	 * Size -> 0x0028
+	 */
+	struct FSlateColor
+	{
+	public:
+		struct FLinearColor                                          SpecifiedColor;                                          // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		ESlateColorStylingMode                                       ColorUseRule;                                            // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
+		unsigned char                                                UnknownData_0000[0x17];                                  // 0x0011(0x0017) MISSED OFFSET (PADDING)
+	};
+
 	/**
 	 * ScriptStruct SlateCore.Margin
 	 * Size -> 0x0010
@@ -481,18 +493,6 @@ namespace SDK
 		float                                                        Top;                                                     // 0x0004(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        Right;                                                   // 0x0008(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        Bottom;                                                  // 0x000C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct SlateCore.SlateColor
-	 * Size -> 0x0028
-	 */
-	struct FSlateColor
-	{
-	public:
-		struct FLinearColor                                          SpecifiedColor;                                          // 0x0000(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		ESlateColorStylingMode                                       ColorUseRule;                                            // 0x0010(0x0001) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
-		unsigned char                                                UnknownData_0000[0x17];                                  // 0x0011(0x0017) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -517,6 +517,36 @@ namespace SDK
 		bool                                                         bIsDynamicallyLoaded : 1;                                // 0x0080(0x0001) BIT_FIELD NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		bool                                                         bHasUObject : 1;                                         // 0x0080(0x0001) BIT_FIELD Deprecated, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected
 		unsigned char                                                UnknownData_0002[0x7];                                   // 0x0081(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct SlateCore.InputEvent
+	 * Size -> 0x0018
+	 */
+	struct FInputEvent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct SlateCore.PointerEvent
+	 * Size -> 0x0058 (FullSize[0x0070] - InheritedSize[0x0018])
+	 */
+	struct FPointerEvent : public FInputEvent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0018(0x0058) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct SlateCore.Geometry
+	 * Size -> 0x0038
+	 */
+	struct FGeometry
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -562,20 +592,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct SlateCore.EditableTextStyle
-	 * Size -> 0x0218 (FullSize[0x0220] - InheritedSize[0x0008])
-	 */
-	struct FEditableTextStyle : public FSlateWidgetStyle
-	{
-	public:
-		struct FSlateFontInfo                                        Font;                                                    // 0x0008(0x0058) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FSlateColor                                           ColorAndOpacity;                                         // 0x0060(0x0028) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           BackgroundImageSelected;                                 // 0x0088(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           BackgroundImageComposing;                                // 0x0110(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           CaretImage;                                              // 0x0198(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-	};
-
-	/**
 	 * ScriptStruct SlateCore.ScrollBarStyle
 	 * Size -> 0x04C8 (FullSize[0x04D0] - InheritedSize[0x0008])
 	 */
@@ -615,26 +631,6 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct SlateCore.Geometry
-	 * Size -> 0x0038
-	 */
-	struct FGeometry
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct SlateCore.InputEvent
-	 * Size -> 0x0018
-	 */
-	struct FInputEvent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0000(0x0018) MISSED OFFSET (PADDING)
-	};
-
-	/**
 	 * ScriptStruct SlateCore.CharacterEvent
 	 * Size -> 0x0008 (FullSize[0x0020] - InheritedSize[0x0018])
 	 */
@@ -652,6 +648,32 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x20];                                  // 0x0018(0x0020) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct SlateCore.FocusEvent
+	 * Size -> 0x0008
+	 */
+	struct FFocusEvent
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct SlateCore.SpinBoxStyle
+	 * Size -> 0x02E0 (FullSize[0x02E8] - InheritedSize[0x0008])
+	 */
+	struct FSpinBoxStyle : public FSlateWidgetStyle
+	{
+	public:
+		struct FSlateBrush                                           BackgroundBrush;                                         // 0x0008(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           HoveredBackgroundBrush;                                  // 0x0090(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           ActiveFillBrush;                                         // 0x0118(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           InactiveFillBrush;                                       // 0x01A0(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           ArrowsImage;                                             // 0x0228(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateColor                                           ForegroundColor;                                         // 0x02B0(0x0028) NativeAccessSpecifierPublic
+		struct FMargin                                               TextPadding;                                             // 0x02D8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -693,19 +715,13 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct SlateCore.SpinBoxStyle
-	 * Size -> 0x02E0 (FullSize[0x02E8] - InheritedSize[0x0008])
+	 * ScriptStruct SlateCore.MotionEvent
+	 * Size -> 0x0030 (FullSize[0x0048] - InheritedSize[0x0018])
 	 */
-	struct FSpinBoxStyle : public FSlateWidgetStyle
+	struct FMotionEvent : public FInputEvent
 	{
 	public:
-		struct FSlateBrush                                           BackgroundBrush;                                         // 0x0008(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           HoveredBackgroundBrush;                                  // 0x0090(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           ActiveFillBrush;                                         // 0x0118(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           InactiveFillBrush;                                       // 0x01A0(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateBrush                                           ArrowsImage;                                             // 0x0228(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
-		struct FSlateColor                                           ForegroundColor;                                         // 0x02B0(0x0028) NativeAccessSpecifierPublic
-		struct FMargin                                               TextPadding;                                             // 0x02D8(0x0010) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0018(0x0030) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -789,33 +805,17 @@ namespace SDK
 	};
 
 	/**
-	 * ScriptStruct SlateCore.PointerEvent
-	 * Size -> 0x0058 (FullSize[0x0070] - InheritedSize[0x0018])
+	 * ScriptStruct SlateCore.EditableTextStyle
+	 * Size -> 0x0218 (FullSize[0x0220] - InheritedSize[0x0008])
 	 */
-	struct FPointerEvent : public FInputEvent
+	struct FEditableTextStyle : public FSlateWidgetStyle
 	{
 	public:
-		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0018(0x0058) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct SlateCore.FocusEvent
-	 * Size -> 0x0008
-	 */
-	struct FFocusEvent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct SlateCore.MotionEvent
-	 * Size -> 0x0030 (FullSize[0x0048] - InheritedSize[0x0018])
-	 */
-	struct FMotionEvent : public FInputEvent
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0018(0x0030) MISSED OFFSET (PADDING)
+		struct FSlateFontInfo                                        Font;                                                    // 0x0008(0x0058) Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FSlateColor                                           ColorAndOpacity;                                         // 0x0060(0x0028) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           BackgroundImageSelected;                                 // 0x0088(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           BackgroundImageComposing;                                // 0x0110(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
+		struct FSlateBrush                                           CaretImage;                                              // 0x0198(0x0088) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -875,6 +875,18 @@ namespace SDK
 	public:
 		TArray<struct FInt32Range>                                   CharacterRanges;                                         // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 		class FString                                                Cultures;                                                // 0x0028(0x0010) ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct SlateCore.CompositeFont
+	 * Size -> 0x0038
+	 */
+	struct FCompositeFont
+	{
+	public:
+		struct FTypeface                                             DefaultTypeface;                                         // 0x0000(0x0010) NativeAccessSpecifierPublic
+		struct FCompositeFallbackFont                                FallbackTypeface;                                        // 0x0010(0x0018) NativeAccessSpecifierPublic
+		TArray<struct FCompositeSubFont>                             SubTypefaces;                                            // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -997,18 +1009,6 @@ namespace SDK
 		struct FSplitterStyle                                        ColumnSplitterStyle;                                     // 0x09A8(0x0118) Edit, NativeAccessSpecifierPublic
 		struct FSlateBrush                                           BackgroundBrush;                                         // 0x0AC0(0x0088) Edit, NativeAccessSpecifierPublic
 		struct FSlateColor                                           ForegroundColor;                                         // 0x0B48(0x0028) Edit, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct SlateCore.CompositeFont
-	 * Size -> 0x0038
-	 */
-	struct FCompositeFont
-	{
-	public:
-		struct FTypeface                                             DefaultTypeface;                                         // 0x0000(0x0010) NativeAccessSpecifierPublic
-		struct FCompositeFallbackFont                                FallbackTypeface;                                        // 0x0010(0x0018) NativeAccessSpecifierPublic
-		TArray<struct FCompositeSubFont>                             SubTypefaces;                                            // 0x0028(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**

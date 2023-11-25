@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	struct FSlateColor UFriendsList_Entry_C::GetColorAndOpacity_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88386);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88431);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::OnFailure_1CE6F80B4BD85FF7DCF8B89490FF4D7A(TArray<struct FBlueprintSessionResult> SessionInfo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88385);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88430);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::OnSuccess_1CE6F80B4BD85FF7DCF8B89490FF4D7A(TArray<struct FBlueprintSessionResult> SessionInfo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88384);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88429);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::OnFailure_FCAA6E28485271A328483F824CE7E440()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88383);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88428);
 		
 		struct
 		{
@@ -113,7 +113,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::OnSuccess_FCAA6E28485271A328483F824CE7E440()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88382);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88427);
 		
 		struct
 		{
@@ -134,7 +134,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88381);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88426);
 		
 		struct
 		{
@@ -157,7 +157,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88380);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88425);
 		
 		struct
 		{
@@ -183,7 +183,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::RefreshFriend(const struct FFriend& Friend)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88379);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88424);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::BndEvt__FriendsList_Entry_btn_Join_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88378);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88423);
 		
 		struct
 		{
@@ -231,7 +231,7 @@ namespace SDK
 	 */
 	void UFriendsList_Entry_C::ExecuteUbergraph_FriendsList_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88377);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88422);
 		
 		struct
 		{
@@ -254,7 +254,7 @@ namespace SDK
 	 */
 	UClass* UFriendsList_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88376);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88421);
 		return ptr;
 	}
 

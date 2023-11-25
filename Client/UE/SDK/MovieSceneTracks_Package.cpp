@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -41,20 +41,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DConstraintTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene3DConstraintTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1863);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UByteChannelEvaluatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -69,14 +55,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DAttachTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UFloatChannelEvaluatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieScene3DAttachTrack::StaticClass()
+	UClass* UFloatChannelEvaluatorSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1864);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1858);
 		return ptr;
 	}
 
@@ -159,46 +145,18 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UFloatChannelEvaluatorSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UFloatChannelEvaluatorSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1858);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DPathTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene3DPathTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1866);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     ReturnValue                                                (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 */
-	struct PCoreUObject_FTransform IMovieSceneTransformOrigin::BP_GetTransformOrigin()
+	struct FTransform IMovieSceneTransformOrigin::BP_GetTransformOrigin()
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17331);
 		
 		struct
 		{
-			struct PCoreUObject_FTransform                     ReturnValue;
+			struct FTransform                     ReturnValue;
 		} params;
 		
 		auto flags = fn->FunctionFlags;
@@ -225,20 +183,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1867);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UIntegerChannelEvaluatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -253,126 +197,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneComponentAttachmentInvalidatorSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneComponentAttachmentInvalidatorSystem::StaticClass()
+	UClass* UMovieScenePropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1897);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1867);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEventSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DConstraintTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneEventSystem::StaticClass()
+	UClass* UMovieScene3DConstraintTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1910);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1863);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePostEvalEventSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DPathTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieScenePostEvalEventSystem::StaticClass()
+	UClass* UMovieScene3DPathTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1913);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DTransformPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene3DTransformPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1868);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneComponentAttachmentSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneComponentAttachmentSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1898);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEventTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneEventTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1914);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DTransformSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene3DTransformSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1869);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneComponentMobilitySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneComponentMobilitySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1899);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScene3DTransformTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScene3DTransformTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1870);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1866);
 		return ptr;
 	}
 
@@ -393,14 +253,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneComponentTransformSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneByteSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneComponentTransformSystem::StaticClass()
+	UClass* UMovieSceneByteSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1900);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1879);
 		return ptr;
 	}
 
@@ -421,180 +281,42 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEventSectionBase.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DTransformPropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneEventSectionBase::StaticClass()
+	UClass* UMovieScene3DTransformPropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1907);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1868);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEventTriggerSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneByteTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneEventTriggerSection::StaticClass()
+	UClass* UMovieSceneByteTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1915);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1880);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneDeferredComponentMovementSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DAttachTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneDeferredComponentMovementSystem::StaticClass()
+	UClass* UMovieScene3DAttachTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1901);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneIntegerPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneIntegerPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1923);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilityTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneLevelVisibilityTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1929);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ELevelVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneLevelVisibilitySection::SetVisibility(ELevelVisibility InVisibility)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17345);
-		
-		struct
-		{
-			ELevelVisibility                                   InVisibility;
-		} params;
-		params.InVisibility = InVisibility;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class FName>                                InLevelNames                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneLevelVisibilitySection::SetLevelNames(TArray<class FName> InLevelNames)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17344);
-		
-		struct
-		{
-			TArray<class FName>                                InLevelNames;
-		} params;
-		params.InLevelNames = InLevelNames;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		ELevelVisibility                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	ELevelVisibility UMovieSceneLevelVisibilitySection::GetVisibility()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17343);
-		
-		struct
-		{
-			ELevelVisibility                                   ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		TArray<class FName>                                ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<class FName> UMovieSceneLevelVisibilitySection::GetLevelNames()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17342);
-		
-		struct
-		{
-			TArray<class FName>                                ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilitySection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneLevelVisibilitySection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1927);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1864);
 		return ptr;
 	}
 
@@ -615,252 +337,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMaterialTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DTransformSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneMaterialTrack::StaticClass()
+	UClass* UMovieScene3DTransformSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1930);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1869);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilitySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutTrackInstance.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneLevelVisibilitySystem::StaticClass()
+	UClass* UMovieSceneCameraCutTrackInstance::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1928);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFadeSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneFadeSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1916);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneIntegerSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneIntegerSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1924);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneParticleParameterTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneParticleParameterTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1937);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMaterialParameterCollectionTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneMaterialParameterCollectionTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1931);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneParticleSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneParticleSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1938);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneComponentMaterialTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneComponentMaterialTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1932);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneStringSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneStringSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1953);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneParticleTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneParticleTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1939);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFloatTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneFloatTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1917);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneIntegerTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneIntegerTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1925);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseBoolBlenderSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePiecewiseBoolBlenderSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1940);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEnumPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneEnumPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1902);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseByteBlenderSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePiecewiseByteBlenderSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1941);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEnumSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneEnumSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1903);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseEnumBlenderSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePiecewiseEnumBlenderSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1942);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneMotionVectorSimulationSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneMotionVectorSimulationSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1933);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1885);
 		return ptr;
 	}
 
@@ -977,42 +475,28 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneInterrogatedPropertyInstantiatorSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScene3DTransformTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneInterrogatedPropertyInstantiatorSystem::StaticClass()
+	UClass* UMovieScene3DTransformTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1926);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1870);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEnumTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneEnumTrack::StaticClass()
+	UClass* UMovieSceneCameraShakeSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1904);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneObjectPropertySection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneObjectPropertySection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1934);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1886);
 		return ptr;
 	}
 
@@ -1033,28 +517,76 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneEulerTransformPropertySystem.StaticClass
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      InShotDisplayName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneCinematicShotSection::SetShotDisplayName(const class FString& InShotDisplayName)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17341);
+		
+		struct
+		{
+			class FString                                      InShotDisplayName;
+		} params;
+		params.InShotDisplayName = InShotDisplayName;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UMovieSceneCinematicShotSection::GetShotDisplayName()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17340);
+		
+		struct
+		{
+			class FString                                      ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCinematicShotSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneEulerTransformPropertySystem::StaticClass()
+	UClass* UMovieSceneCinematicShotSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1905);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1892);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneObjectPropertyTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceTriggerTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneObjectPropertyTrack::StaticClass()
+	UClass* UMovieSceneCameraShakeSourceTriggerTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1935);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1890);
 		return ptr;
 	}
 
@@ -1075,6 +607,696 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraAnimSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraAnimSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1881);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraShakeTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1891);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCinematicShotTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCinematicShotTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1893);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneComponentAttachmentInvalidatorSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneComponentAttachmentInvalidatorSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1897);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceShakeSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraShakeSourceShakeSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1887);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneBoolPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneBoolPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1876);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneComponentAttachmentSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneComponentAttachmentSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1898);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneColorPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneColorPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1894);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneComponentMobilitySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneComponentMobilitySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1899);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceShakeTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraShakeSourceShakeTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1888);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraAnimTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraAnimTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1882);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneBoolTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneBoolTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1877);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneComponentTransformSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneComponentTransformSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1900);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneColorSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneColorSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1895);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEventSectionBase.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEventSectionBase::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1907);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEventTriggerSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEventTriggerSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1915);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceTriggerSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraShakeSourceTriggerSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1889);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneDeferredComponentMovementSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneDeferredComponentMovementSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1901);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEventSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEventSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1910);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePostEvalEventSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePostEvalEventSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1913);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneObjectBindingID                  InCameraBindingID                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneCameraCutSection::SetCameraBindingID(const struct FMovieSceneObjectBindingID& InCameraBindingID)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17339);
+		
+		struct
+		{
+			struct FMovieSceneObjectBindingID                  InCameraBindingID;
+		} params;
+		params.InCameraBindingID = InCameraBindingID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FMovieSceneObjectBindingID                  ReturnValue                                                (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FMovieSceneObjectBindingID UMovieSceneCameraCutSection::GetCameraBindingID()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17338);
+		
+		struct
+		{
+			struct FMovieSceneObjectBindingID                  ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraCutSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1883);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEnumPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEnumPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1902);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneIntegerTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneIntegerTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1925);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneColorTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneColorTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1896);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneInterrogatedPropertyInstantiatorSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneInterrogatedPropertyInstantiatorSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1926);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEnumSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEnumSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1903);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEventTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEventTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1914);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneBytePropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneBytePropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1878);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ELevelVisibility                                   InVisibility                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneLevelVisibilitySection::SetVisibility(ELevelVisibility InVisibility)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17345);
+		
+		struct
+		{
+			ELevelVisibility                                   InVisibility;
+		} params;
+		params.InVisibility = InVisibility;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class FName>                                InLevelNames                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UMovieSceneLevelVisibilitySection::SetLevelNames(TArray<class FName> InLevelNames)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17344);
+		
+		struct
+		{
+			TArray<class FName>                                InLevelNames;
+		} params;
+		params.InLevelNames = InLevelNames;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		ELevelVisibility                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	ELevelVisibility UMovieSceneLevelVisibilitySection::GetVisibility()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17343);
+		
+		struct
+		{
+			ELevelVisibility                                   ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		TArray<class FName>                                ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<class FName> UMovieSceneLevelVisibilitySection::GetLevelNames()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17342);
+		
+		struct
+		{
+			TArray<class FName>                                ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilitySection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneLevelVisibilitySection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1927);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEnumTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEnumTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1904);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneCameraCutTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1884);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseEnumBlenderSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePiecewiseEnumBlenderSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1942);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneEulerTransformPropertySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneEulerTransformPropertySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1905);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilitySystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneLevelVisibilitySystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1928);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneFadeSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneFadeSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1916);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneLevelVisibilityTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneLevelVisibilityTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1929);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseByteBlenderSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePiecewiseByteBlenderSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1941);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseFloatBlenderSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePiecewiseFloatBlenderSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1943);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePropertyInstantiatorSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePropertyInstantiatorSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1947);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UMovieSceneEulerTransformTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -1083,6 +1305,272 @@ namespace SDK
 	UClass* UMovieSceneEulerTransformTrack::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1906);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMaterialTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMaterialTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1930);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneFloatTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneFloatTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1917);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneSlomoTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneSlomoTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1952);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneSlomoSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneSlomoSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1951);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMaterialParameterCollectionTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMaterialParameterCollectionTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1931);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneQuaternionInterpolationRotationSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneQuaternionInterpolationRotationSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1948);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePrimitiveMaterialTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePrimitiveMaterialTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1946);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneComponentMaterialTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneComponentMaterialTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1932);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneStringSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneStringSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1953);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneMotionVectorSimulationSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneMotionVectorSimulationSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1933);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneVectorSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneVectorSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1958);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseIntegerBlenderSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePiecewiseIntegerBlenderSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1944);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneSkeletalAnimationSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneSkeletalAnimationSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1949);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneObjectPropertySection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneObjectPropertySection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1934);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneVisibilityTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneVisibilityTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1960);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneObjectPropertyTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneObjectPropertyTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1935);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneStringTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneStringTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1954);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieSceneVectorTrack.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieSceneVectorTrack::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1959);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMovieScenePrimitiveMaterialSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMovieScenePrimitiveMaterialSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1945);
 		return ptr;
 	}
 
@@ -1342,10 +1830,10 @@ namespace SDK
 	 * Parameters:
 	 * 		class FName                                        InParameterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		struct FFrameNumber                                InTime                                                     (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FTransform                     InValue                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FTransform                     InValue                                                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UMovieSceneParameterSection::AddTransformParameterKey(const class FName& InParameterName, const struct FFrameNumber& InTime, const struct PCoreUObject_FTransform& InValue)
+	void UMovieSceneParameterSection::AddTransformParameterKey(const class FName& InParameterName, const struct FFrameNumber& InTime, const struct FTransform& InValue)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17349);
 		
@@ -1354,7 +1842,7 @@ namespace SDK
 			class FName                                        InParameterName;
 			struct FFrameNumber                                InTime;
 			unsigned char                                      UnknownData_0000[0x4];
-			struct PCoreUObject_FTransform                     InValue;
+			struct FTransform                     InValue;
 		} params;
 		params.InParameterName = InParameterName;
 		params.InTime = InTime;
@@ -1472,28 +1960,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseFloatBlenderSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneSkeletalAnimationTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieScenePiecewiseFloatBlenderSystem::StaticClass()
+	UClass* UMovieSceneSkeletalAnimationTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1943);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFadeTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneFadeTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1918);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1950);
 		return ptr;
 	}
 
@@ -1514,14 +1988,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseIntegerBlenderSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneParticleParameterTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieScenePiecewiseIntegerBlenderSystem::StaticClass()
+	UClass* UMovieSceneParticleParameterTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1944);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1937);
 		return ptr;
 	}
 
@@ -1542,224 +2016,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFloatPropertySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneHierarchicalEasingInstantiatorSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneFloatPropertySystem::StaticClass()
+	UClass* UMovieSceneHierarchicalEasingInstantiatorSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1919);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePrimitiveMaterialSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePrimitiveMaterialSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1945);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePreSpawnEventSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePreSpawnEventSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1911);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePrimitiveMaterialTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePrimitiveMaterialTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1946);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePostSpawnEventSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePostSpawnEventSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1912);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieScenePropertyInstantiatorSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieScenePropertyInstantiatorSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1947);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneFloatSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneFloatSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1920);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneQuaternionInterpolationRotationSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneQuaternionInterpolationRotationSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1948);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneSkeletalAnimationSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneSkeletalAnimationSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1949);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneBoolPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneBoolPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1876);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneSkeletalAnimationTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneSkeletalAnimationTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1950);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneBoolTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneBoolTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1877);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneSlomoSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneSlomoSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1951);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneHierarchicalBiasSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneHierarchicalBiasSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1921);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneStringTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneStringTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1954);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneSlomoTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneSlomoTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1952);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1961);
 		return ptr;
 	}
 
@@ -1780,230 +2044,56 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneBytePropertySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneFadeTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneBytePropertySystem::StaticClass()
+	UClass* UMovieSceneFadeTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1878);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1918);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneTransformTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePreSpawnEventSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneTransformTrack::StaticClass()
+	UClass* UMovieScenePreSpawnEventSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1956);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1911);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneInitialValueSystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneFloatPropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneInitialValueSystem::StaticClass()
+	UClass* UMovieSceneFloatPropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1922);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1919);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneVectorPropertySystem.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePostSpawnEventSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneVectorPropertySystem::StaticClass()
+	UClass* UMovieScenePostSpawnEventSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1957);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneByteSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneByteSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1879);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneVectorSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneVectorSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1958);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneByteTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneByteTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1880);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneVectorTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneVectorTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1959);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraAnimSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneCameraAnimSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1881);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneVisibilityTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneVisibilityTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1960);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraAnimTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneCameraAnimTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1882);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneHierarchicalEasingInstantiatorSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneHierarchicalEasingInstantiatorSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1961);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMovieSceneObjectBindingID                  InCameraBindingID                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneCameraCutSection::SetCameraBindingID(const struct FMovieSceneObjectBindingID& InCameraBindingID)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17339);
-		
-		struct
-		{
-			struct FMovieSceneObjectBindingID                  InCameraBindingID;
-		} params;
-		params.InCameraBindingID = InCameraBindingID;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FMovieSceneObjectBindingID                  ReturnValue                                                (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FMovieSceneObjectBindingID UMovieSceneCameraCutSection::GetCameraBindingID()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17338);
-		
-		struct
-		{
-			struct FMovieSceneObjectBindingID                  ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneCameraCutSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1883);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1912);
 		return ptr;
 	}
 
@@ -2024,230 +2114,140 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneFloatSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraCutTrack::StaticClass()
+	UClass* UMovieSceneFloatSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1884);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1920);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraCutTrackInstance.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneParticleSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraCutTrackInstance::StaticClass()
+	UClass* UMovieSceneParticleSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1885);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1938);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneTransformTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeSection::StaticClass()
+	UClass* UMovieSceneTransformTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1886);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1956);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceShakeSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneHierarchicalBiasSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeSourceShakeSection::StaticClass()
+	UClass* UMovieSceneHierarchicalBiasSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1887);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1921);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceShakeTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneParticleTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeSourceShakeTrack::StaticClass()
+	UClass* UMovieSceneParticleTrack::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1888);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1939);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceTriggerSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieScenePiecewiseBoolBlenderSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeSourceTriggerSection::StaticClass()
+	UClass* UMovieScenePiecewiseBoolBlenderSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1889);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1940);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeSourceTriggerTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneInitialValueSystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeSourceTriggerTrack::StaticClass()
+	UClass* UMovieSceneInitialValueSystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1890);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1922);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCameraShakeTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneIntegerPropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCameraShakeTrack::StaticClass()
+	UClass* UMovieSceneIntegerPropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1891);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1923);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      InShotDisplayName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UMovieSceneCinematicShotSection::SetShotDisplayName(const class FString& InShotDisplayName)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17341);
-		
-		struct
-		{
-			class FString                                      InShotDisplayName;
-		} params;
-		params.InShotDisplayName = InShotDisplayName;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UMovieSceneCinematicShotSection::GetShotDisplayName()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(17340);
-		
-		struct
-		{
-			class FString                                      ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCinematicShotSection.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneVectorPropertySystem.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCinematicShotSection::StaticClass()
+	UClass* UMovieSceneVectorPropertySystem::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1892);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1957);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneCinematicShotTrack.StaticClass
+	 * 		Name   -> PredefinedFunction UMovieSceneIntegerSection.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UMovieSceneCinematicShotTrack::StaticClass()
+	UClass* UMovieSceneIntegerSection::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1893);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneColorPropertySystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneColorPropertySystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1894);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneColorSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneColorSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1895);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMovieSceneColorTrack.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMovieSceneColorTrack::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1896);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1924);
 		return ptr;
 	}
 

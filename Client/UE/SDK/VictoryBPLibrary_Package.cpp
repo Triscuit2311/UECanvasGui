@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -1077,68 +1077,6 @@ namespace SDK
 	UClass* UTKMathFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(105);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VictoryBPLibrary.VictoryBPHTML.VictoryHTML5_SetCursorVisible
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               MakeVisible                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UVictoryBPHTML::VictoryHTML5_SetCursorVisible(bool MakeVisible)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12233);
-		
-		struct
-		{
-			bool                                               MakeVisible;
-		} params;
-		params.MakeVisible = MakeVisible;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function VictoryBPLibrary.VictoryBPHTML.IsHTML
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UVictoryBPHTML::IsHTML()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12232);
-		
-		struct
-		{
-			bool                                               ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UVictoryBPHTML.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UVictoryBPHTML::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(107);
 		return ptr;
 	}
 
@@ -3666,18 +3604,18 @@ namespace SDK
 	 * 		Name   -> Function VictoryBPLibrary.VictoryBPFunctionLibrary.UTCToLocal
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FDateTime                      UTCTime                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      LocalTime                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      UTCTime                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      LocalTime                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVictoryBPFunctionLibrary::UTCToLocal(const struct PCoreUObject_FDateTime& UTCTime, struct PCoreUObject_FDateTime* LocalTime)
+	void UVictoryBPFunctionLibrary::UTCToLocal(const struct FDateTime& UTCTime, struct FDateTime* LocalTime)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12152);
 		
 		struct
 		{
-			struct PCoreUObject_FDateTime                      UTCTime;
-			struct PCoreUObject_FDateTime                      LocalTime;
+			struct FDateTime                      UTCTime;
+			struct FDateTime                      LocalTime;
 		} params;
 		params.UTCTime = UTCTime;
 		
@@ -6607,10 +6545,10 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		int32_t                                            UnixTimeStamp                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      UTCTime                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      UTCTime                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UVictoryBPFunctionLibrary::GetUTCFromUnixTimeStamp(int32_t UnixTimeStamp, struct PCoreUObject_FDateTime* UTCTime)
+	void UVictoryBPFunctionLibrary::GetUTCFromUnixTimeStamp(int32_t UnixTimeStamp, struct FDateTime* UTCTime)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12062);
 		
@@ -6618,7 +6556,7 @@ namespace SDK
 		{
 			int32_t                                            UnixTimeStamp;
 			unsigned char                                      UnknownData_0034[0x4];
-			struct PCoreUObject_FDateTime                      UTCTime;
+			struct FDateTime                      UTCTime;
 		} params;
 		params.UnixTimeStamp = UnixTimeStamp;
 		
@@ -6678,16 +6616,16 @@ namespace SDK
 	 * 		Name   -> Function VictoryBPLibrary.VictoryBPFunctionLibrary.GetUnixTimeStamp
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct PCoreUObject_FDateTime                      UTCTime                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      UTCTime                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	int32_t UVictoryBPFunctionLibrary::GetUnixTimeStamp(const struct PCoreUObject_FDateTime& UTCTime)
+	int32_t UVictoryBPFunctionLibrary::GetUnixTimeStamp(const struct FDateTime& UTCTime)
 	{
 		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12060);
 		
 		struct
 		{
-			struct PCoreUObject_FDateTime                      UTCTime;
+			struct FDateTime                      UTCTime;
 			int32_t                                            ReturnValue;
 		} params;
 		params.UTCTime = UTCTime;
@@ -9039,6 +8977,68 @@ namespace SDK
 	UClass* UVictoryBPFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(106);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VictoryBPLibrary.VictoryBPHTML.VictoryHTML5_SetCursorVisible
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               MakeVisible                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UVictoryBPHTML::VictoryHTML5_SetCursorVisible(bool MakeVisible)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12233);
+		
+		struct
+		{
+			bool                                               MakeVisible;
+		} params;
+		params.MakeVisible = MakeVisible;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function VictoryBPLibrary.VictoryBPHTML.IsHTML
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UVictoryBPHTML::IsHTML()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(12232);
+		
+		struct
+		{
+			bool                                               ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UVictoryBPHTML.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UVictoryBPHTML::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(107);
 		return ptr;
 	}
 

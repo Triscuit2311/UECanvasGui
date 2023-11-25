@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_BadAIActionReporter_C::IsReportButtonEnabled()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89933);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90026);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_BadAIActionReporter_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89932);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90025);
 		
 		struct
 		{
@@ -67,7 +67,7 @@ namespace SDK
 	 */
 	void UW_BadAIActionReporter_C::BndEvt__W_Button_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89931);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90024);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UW_BadAIActionReporter_C::BndEvt__Cancel_Button_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89930);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90023);
 		
 		struct
 		{
@@ -115,7 +115,7 @@ namespace SDK
 	 */
 	void UW_BadAIActionReporter_C::ExecuteUbergraph_W_BadAIActionReporter(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89929);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90022);
 		
 		struct
 		{
@@ -139,7 +139,7 @@ namespace SDK
 	 */
 	UClass* UW_BadAIActionReporter_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89928);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90021);
 		return ptr;
 	}
 

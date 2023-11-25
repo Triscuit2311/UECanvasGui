@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,69 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum MagicLeapController.EMagicLeapTouchpadGestureDirection
+	 */
+	enum class EMagicLeapTouchpadGestureDirection : uint8_t
+	{
+		None             = 0,
+		Up               = 1,
+		Down             = 2,
+		Left             = 3,
+		Right            = 4,
+		In               = 5,
+		Out              = 6,
+		Clockwise        = 7,
+		CounterClockwise = 8,
+		MAX              = 9
+	};
+
+	/**
+	 * Enum MagicLeapController.EMagicLeapTouchpadGestureType
+	 */
+	enum class EMagicLeapTouchpadGestureType : uint8_t
+	{
+		None            = 0,
+		Tap             = 1,
+		ForceTapDown    = 2,
+		ForceTapUp      = 3,
+		ForceDwell      = 4,
+		SecondForceDown = 5,
+		LongHold        = 6,
+		RadialScroll    = 7,
+		Swipe           = 8,
+		Scroll          = 9,
+		Pinch           = 10,
+		MAX             = 11
+	};
+
+	/**
+	 * Enum MagicLeapController.EMagicLeapControllerLEDPattern
+	 */
+	enum class EMagicLeapControllerLEDPattern : uint8_t
+	{
+		None       = 0,
+		Clock01    = 1,
+		Clock02    = 2,
+		Clock03    = 3,
+		Clock04    = 4,
+		Clock05    = 5,
+		Clock06    = 6,
+		Clock07    = 7,
+		Clock08    = 8,
+		Clock09    = 9,
+		Clock10    = 10,
+		Clock11    = 11,
+		Clock12    = 12,
+		Clock01_07 = 13,
+		Clock02_08 = 14,
+		Clock03_09 = 15,
+		Clock0401  = 16,
+		Clock0501  = 17,
+		Clock0601  = 18,
+		MAX        = 19
+	};
+
 	/**
 	 * Enum MagicLeapController.EMagicLeapControllerTrackingMode
 	 */
@@ -51,6 +114,17 @@ namespace SDK
 		ForceDwell      = 8,
 		SecondForceDown = 9,
 		MAX             = 10
+	};
+
+	/**
+	 * Enum MagicLeapController.EMagicLeapControllerType
+	 */
+	enum class EMagicLeapControllerType : uint8_t
+	{
+		None      = 0,
+		Device    = 1,
+		MobileApp = 2,
+		MAX       = 3
 	};
 
 	/**
@@ -100,80 +174,6 @@ namespace SDK
 		PaintCCW  = 4,
 		Blink     = 5,
 		MAX       = 6
-	};
-
-	/**
-	 * Enum MagicLeapController.EMagicLeapControllerLEDPattern
-	 */
-	enum class EMagicLeapControllerLEDPattern : uint8_t
-	{
-		None       = 0,
-		Clock01    = 1,
-		Clock02    = 2,
-		Clock03    = 3,
-		Clock04    = 4,
-		Clock05    = 5,
-		Clock06    = 6,
-		Clock07    = 7,
-		Clock08    = 8,
-		Clock09    = 9,
-		Clock10    = 10,
-		Clock11    = 11,
-		Clock12    = 12,
-		Clock01_07 = 13,
-		Clock02_08 = 14,
-		Clock03_09 = 15,
-		Clock0401  = 16,
-		Clock0501  = 17,
-		Clock0601  = 18,
-		MAX        = 19
-	};
-
-	/**
-	 * Enum MagicLeapController.EMagicLeapControllerType
-	 */
-	enum class EMagicLeapControllerType : uint8_t
-	{
-		None      = 0,
-		Device    = 1,
-		MobileApp = 2,
-		MAX       = 3
-	};
-
-	/**
-	 * Enum MagicLeapController.EMagicLeapTouchpadGestureDirection
-	 */
-	enum class EMagicLeapTouchpadGestureDirection : uint8_t
-	{
-		None             = 0,
-		Up               = 1,
-		Down             = 2,
-		Left             = 3,
-		Right            = 4,
-		In               = 5,
-		Out              = 6,
-		Clockwise        = 7,
-		CounterClockwise = 8,
-		MAX              = 9
-	};
-
-	/**
-	 * Enum MagicLeapController.EMagicLeapTouchpadGestureType
-	 */
-	enum class EMagicLeapTouchpadGestureType : uint8_t
-	{
-		None            = 0,
-		Tap             = 1,
-		ForceTapDown    = 2,
-		ForceTapUp      = 3,
-		ForceDwell      = 4,
-		SecondForceDown = 5,
-		LongHold        = 6,
-		RadialScroll    = 7,
-		Swipe           = 8,
-		Scroll          = 9,
-		Pinch           = 10,
-		MAX             = 11
 	};
 
 	// --------------------------------------------------

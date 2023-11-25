@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UGoggles_Widget_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56472);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42348);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UGoggles_Widget_C::ExecuteUbergraph_Goggles_Widget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56471);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42347);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UGoggles_Widget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56470);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42346);
 		return ptr;
 	}
 

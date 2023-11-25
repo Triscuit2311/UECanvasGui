@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_B1301_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45731);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33595);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UANIMBP_B1301_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ANIMBP_B1301_AnimGraphNode_BlendListByBool_0E18469B4C827EBA3EDEBB91DA3B0B1E()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45730);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33594);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	void UANIMBP_B1301_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45729);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33593);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UANIMBP_B1301_C::ExecuteUbergraph_ANIMBP_B1301(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(45728);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(33592);
 		
 		struct
 		{
@@ -115,7 +115,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_B1301_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(45727);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(33591);
 		return ptr;
 	}
 

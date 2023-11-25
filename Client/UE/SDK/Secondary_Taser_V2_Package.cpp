@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ASecondary_Taser_V2_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54290);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39338);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ASecondary_Taser_V2_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54289);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39337);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void ASecondary_Taser_V2_C::DestroyPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54288);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39336);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void ASecondary_Taser_V2_C::SpawnPouches_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54287);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39335);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	void ASecondary_Taser_V2_C::ExecuteUbergraph_Secondary_Taser_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54286);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39334);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	UClass* ASecondary_Taser_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54285);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39333);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_TutorialOverviewText_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27084);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43747);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_TutorialOverviewText_C::BndEvt__Button_104_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27083);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43746);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_TutorialOverviewText_C::UpdateMessageContent(TArray<class FText> MessageContent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27082);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43745);
 		
 		struct
 		{
@@ -88,7 +88,7 @@ namespace SDK
 	 */
 	void UW_TutorialOverviewText_C::ShowOverview(const class FText& Title_Text, TArray<class FText>* TitleContent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27081);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43744);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_TutorialOverviewText_C::ExecuteUbergraph_W_TutorialOverviewText(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(27080);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43743);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	UClass* UW_TutorialOverviewText_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(27079);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43742);
 		return ptr;
 	}
 

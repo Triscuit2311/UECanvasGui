@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_BriefingBio_ProfileRight_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55014);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31490);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_BriefingBio_ProfileRight_C::ExecuteUbergraph_W_BriefingBio_ProfileRight(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55013);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31489);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_BriefingBio_ProfileRight_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55012);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31488);
 		return ptr;
 	}
 

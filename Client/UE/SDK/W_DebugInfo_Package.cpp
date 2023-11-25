@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_DebugInfo_C::SetDebugValue(const class FText& DebugText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35925);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39765);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_DebugInfo_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35924);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39764);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_DebugInfo_C::ExecuteUbergraph_W_DebugInfo(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35923);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39763);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	UClass* UW_DebugInfo_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35922);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39762);
 		return ptr;
 	}
 

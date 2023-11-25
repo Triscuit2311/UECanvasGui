@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,18 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
-	/**
-	 * Enum ChaosCloth.EChaosClothTetherMode
-	 */
-	enum class EChaosClothTetherMode : uint8_t
-	{
-		FastTetherFastLength         = 0,
-		AccurateTetherFastLength     = 1,
-		AccurateTetherAccurateLength = 2,
-		MaxChaosClothTetherMode      = 3,
-		MAX                          = 4
-	};
-
 	/**
 	 * Enum ChaosCloth.EChaosWeightMapTarget
 	 */
@@ -39,6 +27,18 @@ namespace SDK
 		AnimDriveDamping   = 5,
 		TetherStiffness    = 6,
 		MAX                = 7
+	};
+
+	/**
+	 * Enum ChaosCloth.EChaosClothTetherMode
+	 */
+	enum class EChaosClothTetherMode : uint8_t
+	{
+		FastTetherFastLength         = 0,
+		AccurateTetherFastLength     = 1,
+		AccurateTetherAccurateLength = 2,
+		MaxChaosClothTetherMode      = 3,
+		MAX                          = 4
 	};
 
 	// --------------------------------------------------

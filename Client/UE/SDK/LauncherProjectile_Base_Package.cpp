@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Base_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48605);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(36368);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	UClass* ALauncherProjectile_Base_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(48604);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(36367);
 		return ptr;
 	}
 

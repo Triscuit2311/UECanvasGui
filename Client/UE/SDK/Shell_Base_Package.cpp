@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::UserConstructionScript()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91798);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91891);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91797);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91890);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91796);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91889);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::BndEvt__CollisionComp_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91795);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91888);
 		
 		struct
 		{
@@ -122,7 +122,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::CustomEvent_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91794);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91887);
 		
 		struct
 		{
@@ -148,7 +148,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::BndEvt__Shell_Base_StaticMesh1_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91793);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91886);
 		
 		struct
 		{
@@ -180,7 +180,7 @@ namespace SDK
 	 */
 	void AShell_Base_C::ExecuteUbergraph_Shell_Base(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91792);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(91885);
 		
 		struct
 		{
@@ -204,7 +204,7 @@ namespace SDK
 	 */
 	UClass* AShell_Base_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(91791);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(91884);
 		return ptr;
 	}
 

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,17 @@ namespace SDK
 	// --------------------------------------------------
 	// # Enums
 	// --------------------------------------------------
+	/**
+	 * Enum GeometryCollectionEngine.ECollectionAttributeEnum
+	 */
+	enum class ECollectionAttributeEnum : uint8_t
+	{
+		Chaos_Active         = 0,
+		Chaos_DynamicState   = 1,
+		Chaos_CollisionGroup = 2,
+		Chaos_Max            = 3
+	};
+
 	/**
 	 * Enum GeometryCollectionEngine.EChaosBreakingSortMethod
 	 */
@@ -74,17 +85,6 @@ namespace SDK
 	{
 		Chaos_Traansform = 0,
 		Chaos_Max        = 1
-	};
-
-	/**
-	 * Enum GeometryCollectionEngine.ECollectionAttributeEnum
-	 */
-	enum class ECollectionAttributeEnum : uint8_t
-	{
-		Chaos_Active         = 0,
-		Chaos_DynamicState   = 1,
-		Chaos_CollisionGroup = 2,
-		Chaos_Max            = 3
 	};
 
 	// --------------------------------------------------
@@ -168,7 +168,7 @@ namespace SDK
 	public:
 		struct FSoftObjectPath                                       SourceGeometryObject;                                    // 0x0000(0x0018) Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0018(0x0008) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct PCoreUObject_FTransform                               LocalTransform;                                          // 0x0020(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		struct FTransform                               LocalTransform;                                          // 0x0020(0x0030) Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		TArray<class UMaterialInterface*>                            SourceMaterial;                                          // 0x0050(0x0010) Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 

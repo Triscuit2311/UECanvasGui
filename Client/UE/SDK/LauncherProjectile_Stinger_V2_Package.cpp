@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Stinger_V2_C::OnDetonate_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(59081);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57768);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Stinger_V2_C::OnMeshHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54581);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37970);
 		
 		struct
 		{
@@ -78,7 +78,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Stinger_V2_C::ExecuteUbergraph_LauncherProjectile_Stinger_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54580);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37969);
 		
 		struct
 		{
@@ -102,7 +102,7 @@ namespace SDK
 	 */
 	UClass* ALauncherProjectile_Stinger_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54579);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37968);
 		return ptr;
 	}
 

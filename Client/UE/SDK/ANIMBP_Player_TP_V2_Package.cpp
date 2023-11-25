@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimGraph(struct FPoseLink* AnimGraph)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57537);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43299);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57536);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43298);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_PlayFootstep()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57535);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43297);
 		
 		struct
 		{
@@ -91,7 +91,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_ToggleRagdoll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57534);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43296);
 		
 		struct
 		{
@@ -112,7 +112,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_StartFullbodyRagdoll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57533);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43295);
 		
 		struct
 		{
@@ -133,7 +133,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_FinishVault()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57532);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43294);
 		
 		struct
 		{
@@ -154,7 +154,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_ShowTPMesh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57531);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43293);
 		
 		struct
 		{
@@ -175,7 +175,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_HideTPMesh()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57530);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43292);
 		
 		struct
 		{
@@ -196,7 +196,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_ToggleTIPRelevance()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57529);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43291);
 		
 		struct
 		{
@@ -217,7 +217,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_ResetTIPRelevancy()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57528);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43290);
 		
 		struct
 		{
@@ -238,7 +238,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_AllowTurnInPlace()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57527);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43289);
 		
 		struct
 		{
@@ -259,7 +259,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_OnFullyBlendedStartState()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57526);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43288);
 		
 		struct
 		{
@@ -280,7 +280,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_OnFullyBlendedMoving()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57525);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43287);
 		
 		struct
 		{
@@ -301,7 +301,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::AnimNotify_DisableTurnInPlace()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57524);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43286);
 		
 		struct
 		{
@@ -323,7 +323,7 @@ namespace SDK
 	 */
 	void UANIMBP_Player_TP_V2_C::ExecuteUbergraph_ANIMBP_Player_TP_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57523);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43285);
 		
 		struct
 		{
@@ -346,7 +346,7 @@ namespace SDK
 	 */
 	UClass* UANIMBP_Player_TP_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57522);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43284);
 		return ptr;
 	}
 

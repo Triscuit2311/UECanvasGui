@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,19 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class Slate.EditableTextBoxWidgetStyle
-	 * Size -> 0x07F8 (FullSize[0x0828] - InheritedSize[0x0030])
-	 */
-	class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
-	{
-	public:
-		struct FEditableTextBoxStyle                                 EditableTextBoxStyle;                                    // 0x0030(0x07F8) Edit, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class Slate.ButtonWidgetStyle
 	 * Size -> 0x0278 (FullSize[0x02A8] - InheritedSize[0x0030])
@@ -54,6 +41,19 @@ namespace SDK
 	};
 
 	/**
+	 * Class Slate.EditableTextBoxWidgetStyle
+	 * Size -> 0x07F8 (FullSize[0x0828] - InheritedSize[0x0030])
+	 */
+	class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
+	{
+	public:
+		struct FEditableTextBoxStyle                                 EditableTextBoxStyle;                                    // 0x0030(0x07F8) Edit, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class Slate.EditableTextWidgetStyle
 	 * Size -> 0x0220 (FullSize[0x0250] - InheritedSize[0x0030])
 	 */
@@ -61,32 +61,6 @@ namespace SDK
 	{
 	public:
 		struct FEditableTextStyle                                    EditableTextStyle;                                       // 0x0030(0x0220) Edit, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Slate.ComboBoxWidgetStyle
-	 * Size -> 0x03F0 (FullSize[0x0420] - InheritedSize[0x0030])
-	 */
-	class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
-	{
-	public:
-		struct FComboBoxStyle                                        ComboBoxStyle;                                           // 0x0030(0x03F0) Edit, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class Slate.ProgressWidgetStyle
-	 * Size -> 0x01A0 (FullSize[0x01D0] - InheritedSize[0x0030])
-	 */
-	class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
-	{
-	public:
-		struct FProgressBarStyle                                     ProgressBarStyle;                                        // 0x0030(0x01A0) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -106,19 +80,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class Slate.ScrollBarWidgetStyle
-	 * Size -> 0x04D0 (FullSize[0x0500] - InheritedSize[0x0030])
-	 */
-	class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
-	{
-	public:
-		struct FScrollBarStyle                                       ScrollBarStyle;                                          // 0x0030(0x04D0) Edit, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class Slate.ScrollBoxWidgetStyle
 	 * Size -> 0x0228 (FullSize[0x0258] - InheritedSize[0x0030])
 	 */
@@ -126,6 +87,19 @@ namespace SDK
 	{
 	public:
 		struct FScrollBoxStyle                                       ScrollBoxStyle;                                          // 0x0030(0x0228) Edit, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Slate.ProgressWidgetStyle
+	 * Size -> 0x01A0 (FullSize[0x01D0] - InheritedSize[0x0030])
+	 */
+	class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
+	{
+	public:
+		struct FProgressBarStyle                                     ProgressBarStyle;                                        // 0x0030(0x01A0) Edit, BlueprintVisible, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();
@@ -140,6 +114,32 @@ namespace SDK
 	public:
 		bool                                                         bExplicitCanvasChildZOrder;                              // 0x0028(0x0001) Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0029(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Slate.ComboBoxWidgetStyle
+	 * Size -> 0x03F0 (FullSize[0x0420] - InheritedSize[0x0030])
+	 */
+	class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
+	{
+	public:
+		struct FComboBoxStyle                                        ComboBoxStyle;                                           // 0x0030(0x03F0) Edit, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class Slate.ScrollBarWidgetStyle
+	 * Size -> 0x04D0 (FullSize[0x0500] - InheritedSize[0x0030])
+	 */
+	class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
+	{
+	public:
+		struct FScrollBarStyle                                       ScrollBarStyle;                                          // 0x0030(0x04D0) Edit, NativeAccessSpecifierPublic
 
 	public:
 		static UClass* StaticClass();

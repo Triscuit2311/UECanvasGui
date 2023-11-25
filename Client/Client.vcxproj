@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -150,12 +156,14 @@
     <ClInclude Include="client_lib.hpp" />
     <ClInclude Include="engine_extensions.hpp" />
     <ClInclude Include="engine_hooks.hpp" />
+    <ClInclude Include="engine_renderer.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="logging.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="UE\Overriden_Types.hpp" />
     <ClInclude Include="UE\SDK.h" />
     <ClInclude Include="engine_data.hpp" />
+    <ClInclude Include="UE\SDK\BasicTypes_Classes.h" />
     <ClInclude Include="UE\SDK\Global_Package.h" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +171,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="engine_extensions.cpp" />
     <ClCompile Include="engine_hooks.cpp" />
+    <ClCompile Include="engine_renderer.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

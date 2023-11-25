@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_TeamView_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89593);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89686);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void UW_TeamView_C::Tick_TeamViewOn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89592);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89685);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void UW_TeamView_C::ExecuteUbergraph_W_TeamView(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89591);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89684);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	UClass* UW_TeamView_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89590);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89683);
 		return ptr;
 	}
 

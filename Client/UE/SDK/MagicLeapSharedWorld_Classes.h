@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -37,6 +37,25 @@ namespace SDK
 	};
 
 	/**
+	 * Class MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController
+	 * Size -> 0x0018 (FullSize[0x0588] - InheritedSize[0x0570])
+	 */
+	class AMagicLeapSharedWorldPlayerController : public APlayerController
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0570(0x0018) MISSED OFFSET (PADDING)
+
+	public:
+		void ServerSetLocalWorldData(const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData);
+		void ServerSetAlignmentTransforms(const struct FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms);
+		bool IsChosenOne();
+		void ClientSetChosenOne(bool bChosenOne);
+		void ClientMarkReadyForSendingLocalData();
+		bool CanSendLocalDataToServer();
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class MagicLeapSharedWorld.MagicLeapSharedWorldGameState
 	 * Size -> 0x0040 (FullSize[0x02D0] - InheritedSize[0x0290])
 	 */
@@ -54,26 +73,7 @@ namespace SDK
 		void OnReplicate_SharedWorldData();
 		void OnReplicate_AlignmentTransforms();
 		void MagicLeapSharedWorldEvent__DelegateSignature();
-		struct PCoreUObject_FTransform CalculateXRCameraRootTransform();
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class MagicLeapSharedWorld.MagicLeapSharedWorldPlayerController
-	 * Size -> 0x0018 (FullSize[0x0588] - InheritedSize[0x0570])
-	 */
-	class AMagicLeapSharedWorldPlayerController : public APlayerController
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x18];                                  // 0x0570(0x0018) MISSED OFFSET (PADDING)
-
-	public:
-		void ServerSetLocalWorldData(const struct FMagicLeapSharedWorldLocalData& LocalWorldReplicationData);
-		void ServerSetAlignmentTransforms(const struct FMagicLeapSharedWorldAlignmentTransforms& InAlignmentTransforms);
-		bool IsChosenOne();
-		void ClientSetChosenOne(bool bChosenOne);
-		void ClientMarkReadyForSendingLocalData();
-		bool CanSendLocalDataToServer();
+		struct FTransform CalculateXRCameraRootTransform();
 		static UClass* StaticClass();
 	};
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_TeamProgressScore_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26997);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43641);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_TeamProgressScore_C::ExecuteUbergraph_W_TeamProgressScore(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(26996);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43640);
 		
 		struct
 		{
@@ -68,7 +68,7 @@ namespace SDK
 	 */
 	UClass* UW_TeamProgressScore_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(26995);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43639);
 		return ptr;
 	}
 

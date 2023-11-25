@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool UAG_CoopGameMode_C::CanOpen(const struct FAIActionDecisionContext& Context)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(128449);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(113121);
 		
 		struct
 		{
@@ -47,7 +47,7 @@ namespace SDK
 	 */
 	UClass* UAG_CoopGameMode_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(128450);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(113122);
 		return ptr;
 	}
 

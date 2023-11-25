@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UBallistic_Widget_C::CustomEvent_2()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56421);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42288);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UBallistic_Widget_C::ExecuteUbergraph_Ballistic_Widget(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56420);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42287);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* UBallistic_Widget_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56419);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42286);
 		return ptr;
 	}
 

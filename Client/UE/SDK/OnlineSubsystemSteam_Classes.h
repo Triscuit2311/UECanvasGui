@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -25,19 +25,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class OnlineSubsystemSteam.SteamNetDriver
-	 * Size -> 0x0008 (FullSize[0x07D8] - InheritedSize[0x07D0])
-	 */
-	class USteamNetDriver : public UIpNetDriver
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x07D0(0x0008) MISSED OFFSET (PADDING)
-
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class OnlineSubsystemSteam.SteamNetConnection
 	 * Size -> 0x0008 (FullSize[0x1C50] - InheritedSize[0x1C48])
 	 */
@@ -46,6 +33,19 @@ namespace SDK
 	public:
 		bool                                                         bIsPassthrough;                                          // 0x1C48(0x0001) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x1C49(0x0007) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class OnlineSubsystemSteam.SteamNetDriver
+	 * Size -> 0x0008 (FullSize[0x07D8] - InheritedSize[0x07D0])
+	 */
+	class USteamNetDriver : public UIpNetDriver
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x07D0(0x0008) MISSED OFFSET (PADDING)
 
 	public:
 		static UClass* StaticClass();

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,17 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs
 	// --------------------------------------------------
+	/**
+	 * ScriptStruct MotoSynth.GrainTableEntry
+	 * Size -> 0x0008
+	 */
+	struct FGrainTableEntry
+	{
+	public:
+		int32_t                                                      SampleIndex;                                             // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		float                                                        RPM;                                                     // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
 	/**
 	 * ScriptStruct MotoSynth.MotoSynthRuntimeSettings
 	 * Size -> 0x0068
@@ -49,17 +60,6 @@ namespace SDK
 		float                                                        StereoWidenerFilterFrequency;                            // 0x005C(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		float                                                        StereoWidenerFilterQ;                                    // 0x0060(0x0004) Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0005[0x4];                                   // 0x0064(0x0004) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct MotoSynth.GrainTableEntry
-	 * Size -> 0x0008
-	 */
-	struct FGrainTableEntry
-	{
-	public:
-		int32_t                                                      SampleIndex;                                             // 0x0000(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		float                                                        RPM;                                                     // 0x0004(0x0004) ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,20 +14,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
-	/**
-	 * Class AnimationSharing.AnimationSharingSetup
-	 * Size -> 0x0020 (FullSize[0x0048] - InheritedSize[0x0028])
-	 */
-	class UAnimationSharingSetup : public UObject
-	{
-	public:
-		TArray<struct FPerSkeletonAnimationSharingSetup>             SkeletonSetups;                                          // 0x0028(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
-		struct FAnimationSharingScalability                          ScalabilitySettings;                                     // 0x0038(0x0010) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
-
-	public:
-		static UClass* StaticClass();
-	};
-
 	/**
 	 * Class AnimationSharing.AnimSharingStateInstance
 	 * Size -> 0x0028 (FullSize[0x02E0] - InheritedSize[0x02B8])
@@ -83,22 +69,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class AnimationSharing.AnimationSharingStateProcessor
-	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
-	 */
-	class UAnimationSharingStateProcessor : public UObject
-	{
-	public:
-		TSoftObjectPtr<class UEnum>                                  AnimationStateEnum;                                      // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
-
-	public:
-		void ProcessActorState(int32_t* OutState, class AActor* InActor, uint8_t CurrentState, uint8_t OnDemandState, bool* bShouldProcess);
-		class UEnum* GetAnimationStateEnum();
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class AnimationSharing.AnimSharingInstance
 	 * Size -> 0x00F0 (FullSize[0x0118] - InheritedSize[0x0028])
 	 */
@@ -135,6 +105,36 @@ namespace SDK
 		class UAnimationSharingManager* GetAnimationSharingManager(class UObject* WorldContextObject);
 		bool CreateAnimationSharingManager(class UObject* WorldContextObject, class UAnimationSharingSetup* Setup);
 		bool AnimationSharingEnabled();
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AnimationSharing.AnimationSharingSetup
+	 * Size -> 0x0020 (FullSize[0x0048] - InheritedSize[0x0028])
+	 */
+	class UAnimationSharingSetup : public UObject
+	{
+	public:
+		TArray<struct FPerSkeletonAnimationSharingSetup>             SkeletonSetups;                                          // 0x0028(0x0010) Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic
+		struct FAnimationSharingScalability                          ScalabilitySettings;                                     // 0x0038(0x0010) Edit, Config, NoDestructor, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AnimationSharing.AnimationSharingStateProcessor
+	 * Size -> 0x0028 (FullSize[0x0050] - InheritedSize[0x0028])
+	 */
+	class UAnimationSharingStateProcessor : public UObject
+	{
+	public:
+		TSoftObjectPtr<class UEnum>                                  AnimationStateEnum;                                      // 0x0028(0x0024) ELEMENT_SIZE_MISMATCH Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x004C(0x0004) FIX WRONG SIZE OF PREVIOUS PROPERTY
+
+	public:
+		void ProcessActorState(int32_t* OutState, class AActor* InActor, uint8_t CurrentState, uint8_t OnDemandState, bool* bShouldProcess);
+		class UEnum* GetAnimationStateEnum();
 		static UClass* StaticClass();
 	};
 

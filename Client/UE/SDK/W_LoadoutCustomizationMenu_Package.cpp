@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UW_LoadoutCustomizationMenu_C::Get_Quatermaster_Box_IsEnabled()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57923);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39583);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::FindIconFromItemClass(class ABaseItem* ItemClass, class UTexture2D** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57922);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39582);
 		
 		struct
 		{
@@ -73,7 +73,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::StopItemInfoCardAnimation()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57921);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39581);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::FadeOutItemInfoCard()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57920);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39580);
 		
 		struct
 		{
@@ -115,7 +115,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::FadeInItemInfoCard()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57919);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39579);
 		
 		struct
 		{
@@ -136,7 +136,7 @@ namespace SDK
 	 */
 	class FText UW_LoadoutCustomizationMenu_C::Get_CurrentMenuDirectory_Text()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57918);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39578);
 		
 		struct
 		{
@@ -161,7 +161,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::CanRenamePreset(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57917);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39577);
 		
 		struct
 		{
@@ -186,7 +186,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::Escape()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57916);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39576);
 		
 		struct
 		{
@@ -207,7 +207,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UnselectLoadoutPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57915);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39575);
 		
 		struct
 		{
@@ -228,7 +228,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SelectLoadoutPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57914);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39574);
 		
 		struct
 		{
@@ -249,7 +249,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UnhoverLoadoutPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57913);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39573);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::HoverLoadoutPreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57912);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39572);
 		
 		struct
 		{
@@ -292,7 +292,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutItemPresetButtonClickedInternal(class UW_LoadoutItem_Preset_C* LoadoutItemPreset)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57911);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39571);
 		
 		struct
 		{
@@ -317,7 +317,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutCustomizationMenu_C::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57910);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39570);
 		
 		struct
 		{
@@ -347,7 +347,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_LoadoutCustomizationMenu_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57909);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39569);
 		
 		struct
 		{
@@ -376,7 +376,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::GetCurrentlyFocusedWidget(class UWidget** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57908);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39568);
 		
 		struct
 		{
@@ -401,7 +401,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_LoadoutCustomizationMenu_C::Get_Quatermaster_Box_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57907);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39567);
 		
 		struct
 		{
@@ -426,7 +426,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::AnyLoadoutCategoryWidgetHovered(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57906);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39566);
 		
 		struct
 		{
@@ -453,7 +453,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::CanUnselect(bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57905);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39565);
 		
 		struct
 		{
@@ -481,7 +481,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ApplyPresetToPreviewCharacterWeapon(class ABaseItem* ItemClass, class UW_LoadoutItem_Preset_C* LoadoutItemPreset, bool bDeselectAll)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57904);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39564);
 		
 		struct
 		{
@@ -509,7 +509,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UpdateFireModeOptions()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57903);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39563);
 		
 		struct
 		{
@@ -530,7 +530,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::RenamePreset()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57902);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39562);
 		
 		struct
 		{
@@ -551,7 +551,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UnhoverAll()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57901);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39561);
 		
 		struct
 		{
@@ -572,7 +572,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_LoadoutCustomizationMenu_C::Get_LoadoutItemInfo_Container_Visibility()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57900);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39560);
 		
 		struct
 		{
@@ -596,7 +596,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UnhoverLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57899);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39559);
 		
 		struct
 		{
@@ -617,7 +617,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::HoverLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57898);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39558);
 		
 		struct
 		{
@@ -638,7 +638,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UnselectLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57897);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39557);
 		
 		struct
 		{
@@ -659,7 +659,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SelectLoadoutCategory()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57896);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39556);
 		
 		struct
 		{
@@ -680,7 +680,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::PreviousColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57895);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39555);
 		
 		struct
 		{
@@ -701,7 +701,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::NextColumn()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57894);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39554);
 		
 		struct
 		{
@@ -722,7 +722,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::PreviousRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57893);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39553);
 		
 		struct
 		{
@@ -743,7 +743,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::NextRow()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57892);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39552);
 		
 		struct
 		{
@@ -765,7 +765,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::UpdateItemInfoCard(class ABaseItem* ItemClass)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57891);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39551);
 		
 		struct
 		{
@@ -789,7 +789,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::FocusOnWidget(class UWidget* WidgetToFocus)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57890);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39550);
 		
 		struct
 		{
@@ -813,7 +813,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ScrollIntoView(class UWidget* WidgetToFind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57889);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39549);
 		
 		struct
 		{
@@ -837,7 +837,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ScrollIntoTop(class UWidget* WidgetToFind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39548);
 		
 		struct
 		{
@@ -861,7 +861,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ScrollIntoCenter(class UWidget* WidgetToFind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39547);
 		
 		struct
 		{
@@ -884,7 +884,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ScrollToBottom()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57886);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39546);
 		
 		struct
 		{
@@ -905,7 +905,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ScrollToTop()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57885);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39545);
 		
 		struct
 		{
@@ -934,7 +934,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutItemButtonClickedInternal(EItemClass ItemClass, class ABaseItem* ItemObjectClass, bool bIsTactical, int32_t TacticalSlot, bool bIsMultipleTacticalSlots, int32_t MaxTacticalSlots, int32_t StartingTacticalSlot, class UW_LoadoutItem_C* LastSelectedLoadoutItem)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57884);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39544);
 		
 		struct
 		{
@@ -976,7 +976,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutCategoryButtonHoveredInternal(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57883);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39543);
 		
 		struct
 		{
@@ -1000,7 +1000,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutCategoryButtonClickedInternal(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57882);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39542);
 		
 		struct
 		{
@@ -1024,7 +1024,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutCategoryButtonClicked(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57881);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39541);
 		
 		struct
 		{
@@ -1048,7 +1048,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutCategoryButtonHovered(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57880);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39540);
 		
 		struct
 		{
@@ -1071,7 +1071,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::InitializeWidget()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57879);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39539);
 		
 		struct
 		{
@@ -1092,7 +1092,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57878);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39538);
 		
 		struct
 		{
@@ -1113,7 +1113,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::BndEvt__GoToQuartermaster_Button_K2Node_ComponentBoundEvent_11_OnPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57877);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39537);
 		
 		struct
 		{
@@ -1134,7 +1134,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::BndEvt__GoToQuartermaster_Button_K2Node_ComponentBoundEvent_12_OnReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57876);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39536);
 		
 		struct
 		{
@@ -1156,7 +1156,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::BndEvt__GoToQuartermaster_Button_K2Node_ComponentBoundEvent_16_OnClicked__DelegateSignature(class UW_StandardButton_C* CallingButton)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57875);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39535);
 		
 		struct
 		{
@@ -1179,7 +1179,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ResetAttachments()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57874);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39534);
 		
 		struct
 		{
@@ -1208,7 +1208,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutItemButtonClicked(EItemClass ItemClass, class ABaseItem* ItemObjectClass, bool bIsTactical, int32_t TacticalSlot, bool bIsMultipleTacticalSlots, int32_t MaxTacticalSlots, int32_t StartingTacticalSlot, class UW_LoadoutItem_C* LoadoutItemWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57873);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39533);
 		
 		struct
 		{
@@ -1249,7 +1249,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnPresetsLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57872);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39532);
 		
 		struct
 		{
@@ -1270,7 +1270,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::Anim_OnSlideInFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57871);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39531);
 		
 		struct
 		{
@@ -1291,7 +1291,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::Anim_OnSlideOutFinished()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57870);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39530);
 		
 		struct
 		{
@@ -1313,7 +1313,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::BndEvt__DefaultFireMode_ComboBox_K2Node_ComponentBoundEvent_0_OnNewOptionSelected__DelegateSignature(int32_t NewOption)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57869);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39529);
 		
 		struct
 		{
@@ -1336,7 +1336,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnDefaultWeaponFireModesLoaded()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57868);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39528);
 		
 		struct
 		{
@@ -1359,7 +1359,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57867);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39527);
 		
 		struct
 		{
@@ -1385,7 +1385,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::OnLoadoutCategoryButtonUnhovered(class UW_LoadoutCategory_C* LoadoutCategory)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57866);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39526);
 		
 		struct
 		{
@@ -1408,7 +1408,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::InitializeTeammatebuttons()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57865);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39525);
 		
 		struct
 		{
@@ -1430,7 +1430,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapSelectedEquippingCharacter(EEquippingSwat NewEquippingSwat)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57864);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39524);
 		
 		struct
 		{
@@ -1454,7 +1454,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapPlayer(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57863);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39523);
 		
 		struct
 		{
@@ -1478,7 +1478,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapAlpha(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57862);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39522);
 		
 		struct
 		{
@@ -1502,7 +1502,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapBeta(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57861);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39521);
 		
 		struct
 		{
@@ -1526,7 +1526,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapCharlie(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57860);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39520);
 		
 		struct
 		{
@@ -1550,7 +1550,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::SwapDelta(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57859);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39519);
 		
 		struct
 		{
@@ -1574,7 +1574,7 @@ namespace SDK
 	 */
 	void UW_LoadoutCustomizationMenu_C::ExecuteUbergraph_W_LoadoutCustomizationMenu(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57858);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39518);
 		
 		struct
 		{
@@ -1598,7 +1598,7 @@ namespace SDK
 	 */
 	UClass* UW_LoadoutCustomizationMenu_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(57857);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39517);
 		return ptr;
 	}
 

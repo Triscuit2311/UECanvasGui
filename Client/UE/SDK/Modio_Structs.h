@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,6 +15,98 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
+	 * Enum Modio.EModioMaturityFlags
+	 */
+	enum class EModioMaturityFlags : uint8_t
+	{
+		None     = 0,
+		Alcohol  = 1,
+		Drugs    = 2,
+		Violence = 3,
+		Explicit = 4,
+		MAX      = 5
+	};
+
+	/**
+	 * Enum Modio.EModioModfilePlatform
+	 */
+	enum class EModioModfilePlatform : uint8_t
+	{
+		Windows     = 0,
+		Mac         = 1,
+		Linux       = 2,
+		Android     = 3,
+		iOS         = 4,
+		XboxOne     = 5,
+		XboxSeriesX = 6,
+		PS4         = 7,
+		PS5         = 8,
+		Switch      = 9,
+		Oculus      = 10,
+		MAX         = 11
+	};
+
+	/**
+	 * Enum Modio.EModioPortal
+	 */
+	enum class EModioPortal : uint8_t
+	{
+		None           = 0,
+		Apple          = 1,
+		EpicGamesStore = 2,
+		GOG            = 3,
+		Google         = 4,
+		Itchio         = 5,
+		Nintendo       = 6,
+		PSN            = 7,
+		Steam          = 8,
+		XboxLive       = 9,
+		MAX            = 10
+	};
+
+	/**
+	 * Enum Modio.EModioEnvironment
+	 */
+	enum class EModioEnvironment : uint8_t
+	{
+		Test = 0,
+		Live = 1,
+		MAX  = 2
+	};
+
+	/**
+	 * Enum Modio.EModioRating
+	 */
+	enum class EModioRating : uint8_t
+	{
+		Neutral  = 0,
+		Positive = 1,
+		Negative = 2,
+		MAX      = 3
+	};
+
+	/**
+	 * Enum Modio.EModioErrorCondition
+	 */
+	enum class EModioErrorCondition : uint8_t
+	{
+		NoError                       = 0,
+		NetworkError                  = 1,
+		ConfigurationError            = 2,
+		InvalidArgsError              = 3,
+		FilesystemError               = 4,
+		InternalError                 = 5,
+		EntityNotFoundError           = 6,
+		UserTermsOfUseError           = 7,
+		SubmitReportError             = 8,
+		UserNotAuthenticatedError     = 9,
+		SDKNotInitialized             = 10,
+		UserAlreadyAuthenticatedError = 11,
+		SystemError                   = 12,
+		MAX                           = 13
+	};
+
+	/**
 	 * Enum Modio.EModioVirusStatus
 	 */
 	enum class EModioVirusStatus : uint8_t
@@ -22,6 +114,16 @@ namespace SDK
 		NoThreat  = 0,
 		Malicious = 1,
 		MAX       = 2
+	};
+
+	/**
+	 * Enum Modio.EModioSortDirection
+	 */
+	enum class EModioSortDirection : uint8_t
+	{
+		Ascending  = 0,
+		Descending = 1,
+		MAX        = 2
 	};
 
 	/**
@@ -39,32 +141,59 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Modio.EModioMaturityFlags
+	 * Enum Modio.EModioReportType
 	 */
-	enum class EModioMaturityFlags : uint8_t
+	enum class EModioReportType : uint8_t
 	{
-		None     = 0,
-		Alcohol  = 1,
-		Drugs    = 2,
-		Violence = 3,
-		Explicit = 4,
-		MAX      = 5
+		Generic          = 0,
+		DMCA             = 1,
+		NotWorking       = 2,
+		RudeContent      = 3,
+		IllegalContent   = 4,
+		StolenContent    = 5,
+		FalseInformation = 6,
+		Other            = 7,
+		MAX              = 8
 	};
 
 	/**
-	 * Enum Modio.EModioModManagementEventType
+	 * Enum Modio.EModioSortFieldType
 	 */
-	enum class EModioModManagementEventType : uint8_t
+	enum class EModioSortFieldType : uint8_t
 	{
-		Installed      = 0,
-		Uninstalled    = 1,
-		Updated        = 2,
-		Uploaded       = 3,
-		BeginInstall   = 4,
-		BeginUninstall = 5,
-		BeginUpdate    = 6,
-		BeginUpload    = 7,
-		MAX            = 8
+		ID              = 0,
+		DownloadsToday  = 1,
+		SubscriberCount = 2,
+		Rating          = 3,
+		DateMarkedLive  = 4,
+		DateUpdated     = 5,
+		DownloadsTotal  = 6,
+		MAX             = 7
+	};
+
+	/**
+	 * Enum Modio.EModioImageState
+	 */
+	enum class EModioImageState : uint8_t
+	{
+		OnDisc            = 0,
+		LoadingIntoMemory = 1,
+		InMemory          = 2,
+		Corrupted         = 3,
+		MAX               = 4
+	};
+
+	/**
+	 * Enum Modio.EFileSizeUnit
+	 */
+	enum class EFileSizeUnit : uint8_t
+	{
+		Largest = 0,
+		B       = 1,
+		KB      = 2,
+		MB      = 3,
+		GB      = 4,
+		MAX     = 5
 	};
 
 	/**
@@ -79,6 +208,20 @@ namespace SDK
 		Switch   = 4,
 		Discord  = 5,
 		MAX      = 6
+	};
+
+	/**
+	 * Enum Modio.EModioModState
+	 */
+	enum class EModioModState : uint8_t
+	{
+		InstallationPending = 0,
+		Installed           = 1,
+		UpdatePending       = 2,
+		Downloading         = 3,
+		Extracting          = 4,
+		UninstallPending    = 5,
+		MAX                 = 6
 	};
 
 	/**
@@ -150,162 +293,19 @@ namespace SDK
 	};
 
 	/**
-	 * Enum Modio.EModioModfilePlatform
+	 * Enum Modio.EModioModManagementEventType
 	 */
-	enum class EModioModfilePlatform : uint8_t
+	enum class EModioModManagementEventType : uint8_t
 	{
-		Windows     = 0,
-		Mac         = 1,
-		Linux       = 2,
-		Android     = 3,
-		iOS         = 4,
-		XboxOne     = 5,
-		XboxSeriesX = 6,
-		PS4         = 7,
-		PS5         = 8,
-		Switch      = 9,
-		Oculus      = 10,
-		MAX         = 11
-	};
-
-	/**
-	 * Enum Modio.EModioPortal
-	 */
-	enum class EModioPortal : uint8_t
-	{
-		None           = 0,
-		Apple          = 1,
-		EpicGamesStore = 2,
-		GOG            = 3,
-		Google         = 4,
-		Itchio         = 5,
-		Nintendo       = 6,
-		PSN            = 7,
-		Steam          = 8,
-		XboxLive       = 9,
-		MAX            = 10
-	};
-
-	/**
-	 * Enum Modio.EModioEnvironment
-	 */
-	enum class EModioEnvironment : uint8_t
-	{
-		Test = 0,
-		Live = 1,
-		MAX  = 2
-	};
-
-	/**
-	 * Enum Modio.EModioErrorCondition
-	 */
-	enum class EModioErrorCondition : uint8_t
-	{
-		NoError                       = 0,
-		NetworkError                  = 1,
-		ConfigurationError            = 2,
-		InvalidArgsError              = 3,
-		FilesystemError               = 4,
-		InternalError                 = 5,
-		EntityNotFoundError           = 6,
-		UserTermsOfUseError           = 7,
-		SubmitReportError             = 8,
-		UserNotAuthenticatedError     = 9,
-		SDKNotInitialized             = 10,
-		UserAlreadyAuthenticatedError = 11,
-		SystemError                   = 12,
-		MAX                           = 13
-	};
-
-	/**
-	 * Enum Modio.EModioSortDirection
-	 */
-	enum class EModioSortDirection : uint8_t
-	{
-		Ascending  = 0,
-		Descending = 1,
-		MAX        = 2
-	};
-
-	/**
-	 * Enum Modio.EModioSortFieldType
-	 */
-	enum class EModioSortFieldType : uint8_t
-	{
-		ID              = 0,
-		DownloadsToday  = 1,
-		SubscriberCount = 2,
-		Rating          = 3,
-		DateMarkedLive  = 4,
-		DateUpdated     = 5,
-		DownloadsTotal  = 6,
-		MAX             = 7
-	};
-
-	/**
-	 * Enum Modio.EModioImageState
-	 */
-	enum class EModioImageState : uint8_t
-	{
-		OnDisc            = 0,
-		LoadingIntoMemory = 1,
-		InMemory          = 2,
-		Corrupted         = 3,
-		MAX               = 4
-	};
-
-	/**
-	 * Enum Modio.EModioModState
-	 */
-	enum class EModioModState : uint8_t
-	{
-		InstallationPending = 0,
-		Installed           = 1,
-		UpdatePending       = 2,
-		Downloading         = 3,
-		Extracting          = 4,
-		UninstallPending    = 5,
-		MAX                 = 6
-	};
-
-	/**
-	 * Enum Modio.EModioRating
-	 */
-	enum class EModioRating : uint8_t
-	{
-		Neutral  = 0,
-		Positive = 1,
-		Negative = 2,
-		MAX      = 3
-	};
-
-	/**
-	 * Enum Modio.EModioReportType
-	 */
-	enum class EModioReportType : uint8_t
-	{
-		Generic          = 0,
-		DMCA             = 1,
-		NotWorking       = 2,
-		RudeContent      = 3,
-		IllegalContent   = 4,
-		StolenContent    = 5,
-		FalseInformation = 6,
-		Other            = 7,
-		MAX              = 8
-	};
-
-	/**
-	 * Enum Modio.EFileSizeUnit
-	 */
-	enum class EFileSizeUnit : uint8_t
-	{
-		Largest = 0,
-		B       = 1,
-		KB      = 2,
-		MB      = 3,
-		GB      = 4,
-		MAX     = 5
+		Installed      = 0,
+		Uninstalled    = 1,
+		Updated        = 2,
+		Uploaded       = 3,
+		BeginInstall   = 4,
+		BeginUninstall = 5,
+		BeginUpdate    = 6,
+		BeginUpload    = 7,
+		MAX            = 8
 	};
 
 	// --------------------------------------------------
@@ -329,17 +329,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x1];                                   // 0x0000(0x0001) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioMetadata
-	 * Size -> 0x0020
-	 */
-	struct FModioMetadata
-	{
-	public:
-		class FString                                                Key;                                                     // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                Value;                                                   // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -385,7 +374,7 @@ namespace SDK
 	public:
 		struct FModioUserID                                          UserID;                                                  // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                Username;                                                // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                DateOnline;                                              // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                DateOnline;                                              // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                ProfileUrl;                                              // 0x0020(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
@@ -408,7 +397,7 @@ namespace SDK
 	public:
 		struct FModioFileMetadataID                                  MetadataId;                                              // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FModioModID                                           ModId;                                                   // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                DateAdded;                                               // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                DateAdded;                                               // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EModioVirusScanStatus                                        CurrentVirusScanStatus;                                  // 0x0018(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EModioVirusStatus                                            CurrentVirusStatus;                                      // 0x0019(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x6];                                   // 0x001A(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
@@ -417,6 +406,17 @@ namespace SDK
 		class FString                                                Version;                                                 // 0x0038(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                Changelog;                                               // 0x0048(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                MetadataBlob;                                            // 0x0058(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioMetadata
+	 * Size -> 0x0020
+	 */
+	struct FModioMetadata
+	{
+	public:
+		class FString                                                Key;                                                     // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                Value;                                                   // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -463,9 +463,9 @@ namespace SDK
 		class FString                                                ProfileDescriptionPlaintext;                             // 0x0038(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		class FString                                                ProfileUrl;                                              // 0x0048(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		struct FModioUser                                            ProfileSubmittedBy;                                      // 0x0058(0x0030) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                ProfileDateAdded;                                        // 0x0088(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                ProfileDateUpdated;                                      // 0x0090(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct PCoreUObject_FDateTime                                ProfileDateLive;                                         // 0x0098(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                ProfileDateAdded;                                        // 0x0088(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                ProfileDateUpdated;                                      // 0x0090(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FDateTime                                ProfileDateLive;                                         // 0x0098(0x0008) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EModioMaturityFlags                                          ProfileMaturityOption;                                   // 0x00A0(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bVisible;                                                // 0x00A1(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x6];                                   // 0x00A2(0x0006) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
@@ -492,74 +492,6 @@ namespace SDK
 		struct FModioPagedResult                                     PagedResult;                                             // 0x0000(0x0014) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
 		TArray<struct FModioModInfo>                                 InternalList;                                            // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioErrorCode
-	 * Size -> 0x0008
-	 */
-	struct FModioErrorCode
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModManagementEvent
-	 * Size -> 0x0018
-	 */
-	struct FModioModManagementEvent
-	{
-	public:
-		struct FModioModID                                           ID;                                                      // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		EModioModManagementEventType                                 Event;                                                   // 0x0008(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		struct FModioErrorCode                                       Status;                                                  // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioOptionalModInfoList
-	 * Size -> 0x0030
-	 */
-	struct FModioOptionalModInfoList
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioOptionalModInfo
-	 * Size -> 0x01C8
-	 */
-	struct FModioOptionalModInfo
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x1C8];                                 // 0x0000(0x01C8) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModTagInfo
-	 * Size -> 0x0028
-	 */
-	struct FModioModTagInfo
-	{
-	public:
-		class FString                                                TagGroupName;                                            // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		TArray<class FString>                                        TagGroupValues;                                          // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-		bool                                                         bAllowMultipleSelection;                                 // 0x0020(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModTagOptions
-	 * Size -> 0x0028
-	 */
-	struct FModioModTagOptions
-	{
-	public:
-		struct FModioPagedResult                                     PagedResult;                                             // 0x0000(0x0014) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FModioModTagInfo>                              InternalList;                                            // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -613,6 +545,74 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Modio.ModioModTagInfo
+	 * Size -> 0x0028
+	 */
+	struct FModioModTagInfo
+	{
+	public:
+		class FString                                                TagGroupName;                                            // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		TArray<class FString>                                        TagGroupValues;                                          // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
+		bool                                                         bAllowMultipleSelection;                                 // 0x0020(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModTagOptions
+	 * Size -> 0x0028
+	 */
+	struct FModioModTagOptions
+	{
+	public:
+		struct FModioPagedResult                                     PagedResult;                                             // 0x0000(0x0014) ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FModioModTagInfo>                              InternalList;                                            // 0x0018(0x0010) ZeroConstructor, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioErrorCode
+	 * Size -> 0x0008
+	 */
+	struct FModioErrorCode
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModManagementEvent
+	 * Size -> 0x0018
+	 */
+	struct FModioModManagementEvent
+	{
+	public:
+		struct FModioModID                                           ID;                                                      // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		EModioModManagementEventType                                 Event;                                                   // 0x0008(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0009(0x0007) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		struct FModioErrorCode                                       Status;                                                  // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioOptionalModInfoList
+	 * Size -> 0x0030
+	 */
+	struct FModioOptionalModInfoList
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioOptionalModInfo
+	 * Size -> 0x01C8
+	 */
+	struct FModioOptionalModInfo
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x1C8];                                 // 0x0000(0x01C8) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct Modio.ModioModCollectionEntry
 	 * Size -> 0x01F0
 	 */
@@ -620,133 +620,6 @@ namespace SDK
 	{
 	public:
 		unsigned char                                                UnknownData_0000[0x1F0];                                 // 0x0000(0x01F0) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModCreationHandle
-	 * Size -> 0x0008
-	 */
-	struct FModioModCreationHandle
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModDependency
-	 * Size -> 0x0018
-	 */
-	struct FModioModDependency
-	{
-	public:
-		struct FModioModID                                           ModId;                                                   // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                ModName;                                                 // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModDependencyList
-	 * Size -> 0x0028
-	 */
-	struct FModioModDependencyList
-	{
-	public:
-		struct FModioPagedResult                                     PagedResult;                                             // 0x0000(0x0014) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
-		TArray<struct FModioModDependency>                           InternalList;                                            // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioLink
-	 * Size -> 0x0028
-	 */
-	struct FModioLink
-	{
-	public:
-		class FString                                                Text;                                                    // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                URL;                                                     // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		bool                                                         bRequired;                                               // 0x0020(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioTerms
-	 * Size -> 0x00D0
-	 */
-	struct FModioTerms
-	{
-	public:
-		class FString                                                AgreeButtonText;                                         // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                DisagreeButtonText;                                      // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		struct FModioLink                                            WebsiteLink;                                             // 0x0020(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		struct FModioLink                                            TermsLink;                                               // 0x0048(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		struct FModioLink                                            PrivacyLink;                                             // 0x0070(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		struct FModioLink                                            ManageLink;                                              // 0x0098(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0x10];                                  // 0x00C0(0x0010) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioOptionalModProgressInfo
-	 * Size -> 0x0030
-	 */
-	struct FModioOptionalModProgressInfo
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioUnsigned64
-	 * Size -> 0x0008
-	 */
-	struct FModioUnsigned64
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioModProgressInfo
-	 * Size -> 0x0028
-	 */
-	struct FModioModProgressInfo
-	{
-	public:
-		struct FModioUnsigned64                                      TotalDownloadSize;                                       // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		struct FModioUnsigned64                                      CurrentlyDownloadedBytes;                                // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		struct FModioUnsigned64                                      TotalExtractedSizeOnDisk;                                // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		struct FModioUnsigned64                                      CurrentlyExtractedBytes;                                 // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
-		struct FModioModID                                           ID;                                                      // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioReportParams
-	 * Size -> 0x0058
-	 */
-	struct FModioReportParams
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0000(0x0058) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioOptionalUser
-	 * Size -> 0x0038
-	 */
-	struct FModioOptionalUser
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
-	};
-
-	/**
-	 * ScriptStruct Modio.ModioValidationError
-	 * Size -> 0x0020
-	 */
-	struct FModioValidationError
-	{
-	public:
-		class FString                                                FieldName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic
-		class FString                                                ValidationFailureDescription;                            // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -760,6 +633,16 @@ namespace SDK
 		class FString                                                UserEmail;                                               // 0x0010(0x0010) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		bool                                                         bUserHasAcceptedTerms;                                   // 0x0020(0x0001) Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModCreationHandle
+	 * Size -> 0x0008
+	 */
+	struct FModioModCreationHandle
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
 	};
 
 	/**
@@ -790,6 +673,29 @@ namespace SDK
 	{
 	public:
 		class FString                                                ApiKey;                                                  // 0x0000(0x0010) Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModDependency
+	 * Size -> 0x0018
+	 */
+	struct FModioModDependency
+	{
+	public:
+		struct FModioModID                                           ModId;                                                   // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                ModName;                                                 // 0x0008(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModDependencyList
+	 * Size -> 0x0028
+	 */
+	struct FModioModDependencyList
+	{
+	public:
+		struct FModioPagedResult                                     PagedResult;                                             // 0x0000(0x0014) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x4];                                   // 0x0014(0x0004) MISSED OFFSET (FIX SPACE BETWEEN PREVIOUS PROPERTY)
+		TArray<struct FModioModDependency>                           InternalList;                                            // 0x0018(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic
 	};
 
 	/**
@@ -847,6 +753,16 @@ namespace SDK
 	};
 
 	/**
+	 * ScriptStruct Modio.ModioOptionalModProgressInfo
+	 * Size -> 0x0030
+	 */
+	struct FModioOptionalModProgressInfo
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x30];                                  // 0x0000(0x0030) MISSED OFFSET (PADDING)
+	};
+
+	/**
 	 * ScriptStruct Modio.ModioImageWrapper
 	 * Size -> 0x0010
 	 */
@@ -868,6 +784,90 @@ namespace SDK
 		EModioEnvironment                                            GameEnvironment;                                         // 0x0018(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		EModioPortal                                                 PortalInUse;                                             // 0x0019(0x0001) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
 		unsigned char                                                UnknownData_0000[0x1E];                                  // 0x001A(0x001E) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioUnsigned64
+	 * Size -> 0x0008
+	 */
+	struct FModioUnsigned64
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0000(0x0008) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioModProgressInfo
+	 * Size -> 0x0028
+	 */
+	struct FModioModProgressInfo
+	{
+	public:
+		struct FModioUnsigned64                                      TotalDownloadSize;                                       // 0x0000(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		struct FModioUnsigned64                                      CurrentlyDownloadedBytes;                                // 0x0008(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		struct FModioUnsigned64                                      TotalExtractedSizeOnDisk;                                // 0x0010(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		struct FModioUnsigned64                                      CurrentlyExtractedBytes;                                 // 0x0018(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic
+		struct FModioModID                                           ID;                                                      // 0x0020(0x0008) BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioReportParams
+	 * Size -> 0x0058
+	 */
+	struct FModioReportParams
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x58];                                  // 0x0000(0x0058) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioLink
+	 * Size -> 0x0028
+	 */
+	struct FModioLink
+	{
+	public:
+		class FString                                                Text;                                                    // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                URL;                                                     // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		bool                                                         bRequired;                                               // 0x0020(0x0001) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x7];                                   // 0x0021(0x0007) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioTerms
+	 * Size -> 0x00D0
+	 */
+	struct FModioTerms
+	{
+	public:
+		class FString                                                AgreeButtonText;                                         // 0x0000(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                DisagreeButtonText;                                      // 0x0010(0x0010) BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		struct FModioLink                                            WebsiteLink;                                             // 0x0020(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		struct FModioLink                                            TermsLink;                                               // 0x0048(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		struct FModioLink                                            PrivacyLink;                                             // 0x0070(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		struct FModioLink                                            ManageLink;                                              // 0x0098(0x0028) BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0x10];                                  // 0x00C0(0x0010) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioOptionalUser
+	 * Size -> 0x0038
+	 */
+	struct FModioOptionalUser
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x38];                                  // 0x0000(0x0038) MISSED OFFSET (PADDING)
+	};
+
+	/**
+	 * ScriptStruct Modio.ModioValidationError
+	 * Size -> 0x0020
+	 */
+	struct FModioValidationError
+	{
+	public:
+		class FString                                                FieldName;                                               // 0x0000(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic
+		class FString                                                ValidationFailureDescription;                            // 0x0010(0x0010) Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic
 	};
 
 }

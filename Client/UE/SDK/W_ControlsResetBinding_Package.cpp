@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::RemoveKeyBind(class UW_ControlsBind_C* ControlBind)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28313);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30536);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::UpdateInputMappings()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28312);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30535);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::ClearTempInputMappings()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28311);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30534);
 		
 		struct
 		{
@@ -87,7 +87,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::CheckifNoneKeyIsAssignedAction(bool* IsNoneKeyAssigned)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28310);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30533);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::CheckifNoneKeyIsAssignedAxis(bool* IsNoneKeyAssigned)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28309);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30532);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::SetDisabled(bool Disabled)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28308);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30531);
 		
 		struct
 		{
@@ -164,7 +164,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28307);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30530);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28306);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30529);
 		
 		struct
 		{
@@ -206,7 +206,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28305);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30528);
 		
 		struct
 		{
@@ -227,7 +227,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28304);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30527);
 		
 		struct
 		{
@@ -248,7 +248,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28303);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30526);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::ExecuteUbergraph_W_ControlsResetBinding(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28302);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30525);
 		
 		struct
 		{
@@ -293,7 +293,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::OnResetReleased__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28301);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30524);
 		
 		struct
 		{
@@ -314,7 +314,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::OnResetPressed__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28300);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30523);
 		
 		struct
 		{
@@ -335,7 +335,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::OnResetUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28299);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30522);
 		
 		struct
 		{
@@ -356,7 +356,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::OnResetHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28298);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30521);
 		
 		struct
 		{
@@ -378,7 +378,7 @@ namespace SDK
 	 */
 	void UW_ControlsResetBinding_C::OnResetClicked__DelegateSignature(class UW_ControlsResetBinding_C* CallingWidget)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28297);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30520);
 		
 		struct
 		{
@@ -401,7 +401,7 @@ namespace SDK
 	 */
 	UClass* UW_ControlsResetBinding_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28296);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30519);
 		return ptr;
 	}
 

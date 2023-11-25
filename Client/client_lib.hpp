@@ -2,6 +2,9 @@
 
 #include "pch.h"
 
+#include "engine_data.hpp"
+#include "engine_renderer.hpp"
+
 namespace client_lib
 {
     namespace globals
@@ -11,7 +14,11 @@ namespace client_lib
         extern std::atomic_bool running;
         void exit();
     }
-
+    namespace modules
+    {
+	    inline std::unique_ptr<engine_data> ue;
+        inline std::unique_ptr<engine_renderer> renderer;
+    }
     struct p_thread
     {
         static DWORD WINAPI func(LPVOID lp_param);

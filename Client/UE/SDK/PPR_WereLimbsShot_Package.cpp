@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_WereLimbsShot_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35624);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43187);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_WereLimbsShot_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35623);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43186);
 		return ptr;
 	}
 

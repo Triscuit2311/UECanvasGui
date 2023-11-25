@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetTextJustification(ETextJustify Justification)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28888);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49134);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetOutline(const struct FFontOutlineSettings& FontOutlineSettings)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28887);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49133);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetFont(const struct FSlateFontInfo& Font)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28886);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49132);
 		
 		struct
 		{
@@ -93,7 +93,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetFontSize(int32_t FontSize)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28885);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49131);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetTextTransform(ETextTransformPolicy TextTransform)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28884);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49130);
 		
 		struct
 		{
@@ -143,7 +143,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetTextShadow(const struct FVector2D& ShadowOffset, const struct FLinearColor& ShadowColor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28883);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49129);
 		
 		struct
 		{
@@ -169,7 +169,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetTextLetterSpacing(int32_t LetterSpacing)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28882);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49128);
 		
 		struct
 		{
@@ -194,7 +194,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetTextColor(const struct FLinearColor& Color)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28881);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49127);
 		
 		struct
 		{
@@ -218,7 +218,7 @@ namespace SDK
 	 */
 	void UW_Text_C::GetText(class FText* CurrentText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28880);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49126);
 		
 		struct
 		{
@@ -244,7 +244,7 @@ namespace SDK
 	 */
 	void UW_Text_C::UpdateText(const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28879);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49125);
 		
 		struct
 		{
@@ -271,7 +271,7 @@ namespace SDK
 	 */
 	void UW_Text_C::TruncateText(bool Truncate, int32_t CharacterLimit, const class FString& TruncationCharacters, class FText* TruncatedText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28878);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49124);
 		
 		struct
 		{
@@ -304,7 +304,7 @@ namespace SDK
 	 */
 	void UW_Text_C::UpdateFont(const struct FSlateFontInfo& Font)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28877);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49123);
 		
 		struct
 		{
@@ -328,7 +328,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetStyle(const struct FST_Style_Text& TextStyle)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28876);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49122);
 		
 		struct
 		{
@@ -352,7 +352,7 @@ namespace SDK
 	 */
 	void UW_Text_C::SetText(const class FText& Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28875);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49121);
 		
 		struct
 		{
@@ -376,7 +376,7 @@ namespace SDK
 	 */
 	void UW_Text_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28874);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49120);
 		
 		struct
 		{
@@ -399,7 +399,7 @@ namespace SDK
 	 */
 	void UW_Text_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28873);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49119);
 		
 		struct
 		{
@@ -421,7 +421,7 @@ namespace SDK
 	 */
 	void UW_Text_C::ExecuteUbergraph_W_Text(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28872);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(49118);
 		
 		struct
 		{
@@ -444,7 +444,7 @@ namespace SDK
 	 */
 	UClass* UW_Text_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28871);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(49117);
 		return ptr;
 	}
 

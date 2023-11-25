@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_MagazineAmmoCheck_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89979);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90072);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_MagazineAmmoCheck_C::ExecuteUbergraph_W_MagazineAmmoCheck(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89978);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(90071);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	UClass* UW_MagazineAmmoCheck_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(89977);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(90070);
 		return ptr;
 	}
 

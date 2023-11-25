@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	bool UPPR_IsNotWearingFlashGoggles_C::EnablePostProcessEffect()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(35634);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43197);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* UPPR_IsNotWearingFlashGoggles_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(35633);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(43196);
 		return ptr;
 	}
 

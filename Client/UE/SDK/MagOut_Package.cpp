@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	bool UMagOut_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(24603);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(48086);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	UClass* UMagOut_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(24602);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(48085);
 		return ptr;
 	}
 

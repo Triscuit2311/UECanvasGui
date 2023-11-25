@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWaveElement_C::SetStyle(bool IsTimelineEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43468);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31351);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWaveElement_C::SetWaveLength(float Length)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43467);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31350);
 		
 		struct
 		{
@@ -69,7 +69,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWaveElement_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43466);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31349);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWaveElement_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43465);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31348);
 		
 		struct
 		{
@@ -114,7 +114,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Timeline_TrackWaveElement_C::ExecuteUbergraph_W_Briefing_Timeline_TrackWaveElement(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43464);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31347);
 		
 		struct
 		{
@@ -138,7 +138,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Timeline_TrackWaveElement_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43463);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31346);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	ESlateVisibility UW_SwatCommandEntry_C::GetVisibility_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88981);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89074);
 		
 		struct
 		{
@@ -45,7 +45,7 @@ namespace SDK
 	 */
 	void UW_SwatCommandEntry_C::GetTeamColor(struct FLinearColor* TeamColor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88980);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89073);
 		
 		struct
 		{
@@ -70,7 +70,7 @@ namespace SDK
 	 */
 	struct FLinearColor UW_SwatCommandEntry_C::GetBrushColor_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88979);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89072);
 		
 		struct
 		{
@@ -95,7 +95,7 @@ namespace SDK
 	 */
 	void UW_SwatCommandEntry_C::SetCommandText(const class FText& InText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88978);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89071);
 		
 		struct
 		{
@@ -119,7 +119,7 @@ namespace SDK
 	 */
 	void UW_SwatCommandEntry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88977);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89070);
 		
 		struct
 		{
@@ -144,7 +144,7 @@ namespace SDK
 	 */
 	void UW_SwatCommandEntry_C::UpdateCommandEntry(const struct FSwatCommand& SwatCommand, ETeamType ActiveTeamType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88976);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89069);
 		
 		struct
 		{
@@ -170,7 +170,7 @@ namespace SDK
 	 */
 	void UW_SwatCommandEntry_C::ExecuteUbergraph_W_SwatCommandEntry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88975);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(89068);
 		
 		struct
 		{
@@ -193,7 +193,7 @@ namespace SDK
 	 */
 	UClass* UW_SwatCommandEntry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88974);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(89067);
 		return ptr;
 	}
 

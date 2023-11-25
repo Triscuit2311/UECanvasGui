@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -14,6 +14,29 @@ namespace SDK
 	// --------------------------------------------------
 	// # Classes
 	// --------------------------------------------------
+	/**
+	 * Class ClothingSystemRuntimeInterface.ClothConfigBase
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
+	 */
+	class UClothConfigBase : public UObject
+	{
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class ClothingSystemRuntimeInterface.ClothingInteractor
+	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
+	 */
+	class UClothingInteractor : public UObject
+	{
+	public:
+		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
+
+	public:
+		static UClass* StaticClass();
+	};
+
 	/**
 	 * Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
 	 * Size -> 0x0068 (FullSize[0x0090] - InheritedSize[0x0028])
@@ -48,29 +71,6 @@ namespace SDK
 	 */
 	class UClothingSimulationFactory : public UObject
 	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ClothingSystemRuntimeInterface.ClothConfigBase
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class UClothConfigBase : public UObject
-	{
-	public:
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class ClothingSystemRuntimeInterface.ClothingInteractor
-	 * Size -> 0x0008 (FullSize[0x0030] - InheritedSize[0x0028])
-	 */
-	class UClothingInteractor : public UObject
-	{
-	public:
-		unsigned char                                                UnknownData_0000[0x8];                                   // 0x0028(0x0008) MISSED OFFSET (PADDING)
-
 	public:
 		static UClass* StaticClass();
 	};

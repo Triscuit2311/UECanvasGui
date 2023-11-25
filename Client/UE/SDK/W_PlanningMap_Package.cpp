@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	struct FVector2D UW_PlanningMap_C::GetDetailPanePosition(const struct FVector2D& PointScreenPosition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58056);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57936);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::GetSpawnPointInfo(class UW_PlanningMap_BreachPoint_C* BreachPointButton, struct FSpawnPoints* SpawnPointInfo, int32_t* Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58055);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57935);
 		
 		struct
 		{
@@ -82,7 +82,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::RefreshSpawns(float ZoomValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58054);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57934);
 		
 		struct
 		{
@@ -105,7 +105,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::OpenPlanningMarker()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58053);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57933);
 		
 		struct
 		{
@@ -128,7 +128,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PlanningMap_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58052);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57932);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58051);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57931);
 		
 		struct
 		{
@@ -190,7 +190,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PlanningMap_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58050);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57930);
 		
 		struct
 		{
@@ -220,7 +220,7 @@ namespace SDK
 	 */
 	struct FEventReply UW_PlanningMap_C::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58049);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57929);
 		
 		struct
 		{
@@ -248,7 +248,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58048);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57928);
 		
 		struct
 		{
@@ -270,7 +270,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::UpdateMap(int32_t FloorIndex)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58047);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57927);
 		
 		struct
 		{
@@ -293,7 +293,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::BndEvt__Button_115_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58046);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57926);
 		
 		struct
 		{
@@ -314,7 +314,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::BndEvt__MapInteraction_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58045);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57925);
 		
 		struct
 		{
@@ -337,7 +337,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::OnDragCancelled(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58044);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57924);
 		
 		struct
 		{
@@ -363,7 +363,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::UpdateSpawns(TArray<class UBP_UI_PlanningMap_SpawnPoint_C*> SpawnPointComponents)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58043);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57923);
 		
 		struct
 		{
@@ -387,7 +387,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::InitPlanningMap(class ABP_UI_PlanningMap_C* PlanningMapActor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58042);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57922);
 		
 		struct
 		{
@@ -411,7 +411,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::ChangeFloor(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58041);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57921);
 		
 		struct
 		{
@@ -435,7 +435,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::MapFloorUpdated(int32_t Floor)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58040);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57920);
 		
 		struct
 		{
@@ -459,7 +459,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::PointHovered(class UW_PlanningMap_BreachPoint_C* HoveredPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58039);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57919);
 		
 		struct
 		{
@@ -483,7 +483,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::PointClicked(class UW_PlanningMap_BreachPoint_C* ClickedPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58038);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57918);
 		
 		struct
 		{
@@ -506,7 +506,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::BndEvt__SpawnDetailsPanel_K2Node_ComponentBoundEvent_3_OnSetSpawnButtonClicked__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58037);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57917);
 		
 		struct
 		{
@@ -527,7 +527,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::BndEvt__SpawnDetailsPanel_K2Node_ComponentBoundEvent_4_OnDetailPanelHide__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58036);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57916);
 		
 		struct
 		{
@@ -548,7 +548,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::ExitMap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58035);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57915);
 		
 		struct
 		{
@@ -570,7 +570,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::ExecuteUbergraph_W_PlanningMap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58034);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57914);
 		
 		struct
 		{
@@ -594,7 +594,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::NewEventDispatcher_0__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58033);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(57913);
 		
 		struct
 		{
@@ -616,7 +616,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::UpdateMapMaterial__DelegateSignature(class UTexture2D* LayoutTexture)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58032);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39699);
 		
 		struct
 		{
@@ -641,7 +641,7 @@ namespace SDK
 	 */
 	void UW_PlanningMap_C::PanMap__DelegateSignature(bool Pressed, const struct FVector2D& CursorPos)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58031);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39698);
 		
 		struct
 		{
@@ -667,7 +667,7 @@ namespace SDK
 	 */
 	UClass* UW_PlanningMap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(58030);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39697);
 		return ptr;
 	}
 

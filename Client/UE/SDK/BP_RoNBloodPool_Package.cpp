@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABP_RoNBloodPool_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56405);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42238);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ABP_RoNBloodPool_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56404);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42237);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ABP_RoNBloodPool_C::ExecuteUbergraph_BP_RoNBloodPool(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(56403);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(42236);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* ABP_RoNBloodPool_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(56402);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(42235);
 		return ptr;
 	}
 

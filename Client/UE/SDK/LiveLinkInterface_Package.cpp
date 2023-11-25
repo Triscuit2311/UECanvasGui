@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -55,20 +55,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULiveLinkAnimationRole.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULiveLinkAnimationRole::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3446);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ULiveLinkTransformRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -83,20 +69,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULiveLinkCameraRole.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* ULiveLinkCameraRole::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3448);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction ULiveLinkController.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -105,6 +77,20 @@ namespace SDK
 	UClass* ULiveLinkController::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3449);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULiveLinkCameraRole.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULiveLinkCameraRole::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3448);
 		return ptr;
 	}
 
@@ -133,6 +119,20 @@ namespace SDK
 	UClass* ULiveLinkCurveRemapSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(3451);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction ULiveLinkVirtualSubject.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* ULiveLinkVirtualSubject::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3457);
 		return ptr;
 	}
 
@@ -209,14 +209,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction ULiveLinkVirtualSubject.StaticClass
+	 * 		Name   -> PredefinedFunction ULiveLinkAnimationRole.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* ULiveLinkVirtualSubject::StaticClass()
+	UClass* ULiveLinkAnimationRole::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(3457);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(3446);
 		return ptr;
 	}
 

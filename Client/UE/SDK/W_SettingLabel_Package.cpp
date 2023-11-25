@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28289);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30512);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28288);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30511);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::BndEvt__HighlightButton_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28287);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30510);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::BndEvt__HighlightButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28286);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30509);
 		
 		struct
 		{
@@ -108,7 +108,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::ExecuteUbergraph_W_SettingLabel(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28285);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30508);
 		
 		struct
 		{
@@ -131,7 +131,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::OnLabelUnhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28284);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30507);
 		
 		struct
 		{
@@ -152,7 +152,7 @@ namespace SDK
 	 */
 	void UW_SettingLabel_C::OnLabelHovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(28283);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(30506);
 		
 		struct
 		{
@@ -173,7 +173,7 @@ namespace SDK
 	 */
 	UClass* UW_SettingLabel_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(28282);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(30505);
 		return ptr;
 	}
 

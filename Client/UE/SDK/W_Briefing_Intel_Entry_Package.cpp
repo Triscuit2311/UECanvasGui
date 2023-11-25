@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::SetActive(bool Active)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58864);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31241);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::SetHovered(bool IsHovered)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58863);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31240);
 		
 		struct
 		{
@@ -71,7 +71,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::BndEvt__btn_Document_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58862);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31239);
 		
 		struct
 		{
@@ -94,7 +94,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58861);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31238);
 		
 		struct
 		{
@@ -116,7 +116,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58860);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31237);
 		
 		struct
 		{
@@ -140,7 +140,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::BndEvt__btn_Document_K2Node_ComponentBoundEvent_1_Hovered__DelegateSignature(class UW_Button_C* Button)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(58859);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31236);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::BndEvt__btn_Document_K2Node_ComponentBoundEvent_2_Unhovered__DelegateSignature()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43363);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31235);
 		
 		struct
 		{
@@ -185,7 +185,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::ExecuteUbergraph_W_Briefing_Intel_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43362);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31234);
 		
 		struct
 		{
@@ -211,7 +211,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::MediaIntelClicked__DelegateSignature(class UW_Briefing_Intel_Entry_C* ClickedEntry, const struct FST_Briefing_Evidence& Media)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43361);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31233);
 		
 		struct
 		{
@@ -238,7 +238,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Intel_Entry_C::BioIntelClicked__DelegateSignature(class UW_Briefing_Intel_Entry_C* ClickedEntry, const struct FCharacterBio& Bio)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(43360);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31232);
 		
 		struct
 		{
@@ -263,7 +263,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Intel_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(43359);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31231);
 		return ptr;
 	}
 

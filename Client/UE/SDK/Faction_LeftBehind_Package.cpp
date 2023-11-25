@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void AFaction_LeftBehind_C::ExecuteUbergraph_Faction_LeftBehind(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(127158);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112870);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	UClass* AFaction_LeftBehind_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(127159);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112871);
 		return ptr;
 	}
 

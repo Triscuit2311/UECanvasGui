@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,20 +10,6 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UEditableTextBoxWidgetStyle.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UEditableTextBoxWidgetStyle::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1644);
-		return ptr;
-	}
-
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -55,6 +41,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UEditableTextBoxWidgetStyle.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UEditableTextBoxWidgetStyle::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1644);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UEditableTextWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -63,34 +63,6 @@ namespace SDK
 	UClass* UEditableTextWidgetStyle::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1645);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UComboBoxWidgetStyle.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UComboBoxWidgetStyle::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1642);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UProgressWidgetStyle.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UProgressWidgetStyle::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1646);
 		return ptr;
 	}
 
@@ -111,20 +83,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UScrollBarWidgetStyle.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UScrollBarWidgetStyle::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(1647);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UScrollBoxWidgetStyle.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -139,6 +97,20 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UProgressWidgetStyle.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UProgressWidgetStyle::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1646);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction USlateSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -147,6 +119,34 @@ namespace SDK
 	UClass* USlateSettings::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(1649);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UComboBoxWidgetStyle.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UComboBoxWidgetStyle::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1642);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UScrollBarWidgetStyle.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UScrollBarWidgetStyle::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(1647);
 		return ptr;
 	}
 

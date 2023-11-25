@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void AGM_COOP_C::OnMatchStarted_Event_1()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(101818);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112303);
 		
 		struct
 		{
@@ -41,7 +41,7 @@ namespace SDK
 	 */
 	void AGM_COOP_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(102149);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112304);
 		
 		struct
 		{
@@ -63,7 +63,7 @@ namespace SDK
 	 */
 	void AGM_COOP_C::ExecuteUbergraph_GM_COOP(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(102150);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(112305);
 		
 		struct
 		{
@@ -86,7 +86,7 @@ namespace SDK
 	 */
 	UClass* AGM_COOP_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(136679);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(112306);
 		return ptr;
 	}
 

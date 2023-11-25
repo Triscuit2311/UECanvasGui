@@ -25,14 +25,11 @@
     <Filter Include="client_framework\UE\SDK">
       <UniqueIdentifier>{d719197d-c375-41e6-b576-e463c74f28ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{9df830db-5d01-49c1-bed9-0d76efce5d59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="client_lib.hpp">
       <Filter>client_framework</Filter>
     </ClInclude>
@@ -57,12 +54,21 @@
     <ClInclude Include="UE\SDK\Global_Package.h">
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\BasicTypes_Classes.h">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_renderer.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="client_lib.cpp">
@@ -84,6 +90,12 @@
       <Filter>client_framework\UE</Filter>
     </ClCompile>
     <ClCompile Include="engine_data.cpp">
+      <Filter>client_framework\UE</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_renderer.cpp">
       <Filter>client_framework\UE</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UBP_357_Snubnose_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54701);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38085);
 		return ptr;
 	}
 

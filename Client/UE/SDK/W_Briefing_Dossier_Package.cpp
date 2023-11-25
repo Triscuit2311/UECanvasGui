@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void UW_Briefing_Dossier_C::SetInfo(struct FCharacterBio* Bio)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54817);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31436);
 		
 		struct
 		{
@@ -46,7 +46,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_Dossier_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54816);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31435);
 		return ptr;
 	}
 

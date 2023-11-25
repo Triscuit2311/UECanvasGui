@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	bool USeekPlayerCombatMove_C::OverrideFocalPoint_Blueprint(struct FVector* FocalPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84106);
 		
 		struct
 		{
@@ -51,7 +51,7 @@ namespace SDK
 	 */
 	void USeekPlayerCombatMove_C::RequestCombatMove_Blueprint(float DeltaTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84105);
 		
 		struct
 		{
@@ -75,7 +75,7 @@ namespace SDK
 	 */
 	void USeekPlayerCombatMove_C::StartActivity_Blueprint(class AAIController* Owner)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84104);
 		
 		struct
 		{
@@ -99,7 +99,7 @@ namespace SDK
 	 */
 	void USeekPlayerCombatMove_C::FinishedActivity_Blueprint(bool bSuccess)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84103);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void USeekPlayerCombatMove_C::ExecuteUbergraph_SeekPlayerCombatMove(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(85222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(84102);
 		
 		struct
 		{
@@ -147,7 +147,7 @@ namespace SDK
 	 */
 	UClass* USeekPlayerCombatMove_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(85221);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(84101);
 		return ptr;
 	}
 

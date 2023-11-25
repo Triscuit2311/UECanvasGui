@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -21,7 +21,7 @@ namespace SDK
 	 */
 	void APrimary_RPD_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86654);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86479);
 		
 		struct
 		{
@@ -44,7 +44,7 @@ namespace SDK
 	 */
 	void APrimary_RPD_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86653);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86478);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void APrimary_RPD_C::ExecuteUbergraph_Primary_RPD(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86652);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(86477);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* APrimary_RPD_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(86651);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(86476);
 		return ptr;
 	}
 

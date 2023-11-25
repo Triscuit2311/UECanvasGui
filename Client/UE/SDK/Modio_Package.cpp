@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -13,24 +13,24 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.LoadAsync
+	 * 		Name   -> Function Modio.ModioExampleLibrary.ListUserSubscriptionAsync
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              OnImageLoaded                                              (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          FilterParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              Callback                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	 * 		void                                               ReturnValue
 	 */
-	void UModioImageLibrary::LoadAsync(const struct FModioImageWrapper& Image, const class FScriptDelegate& OnImageLoaded)
+	void UModioExampleLibrary::ListUserSubscriptionAsync(const struct FModioFilterParams& FilterParams, const class FScriptDelegate& Callback)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13617);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13597);
 		
 		struct
 		{
-			struct FModioImageWrapper                          Image;
-			class FScriptDelegate                              OnImageLoaded;
+			struct FModioFilterParams                          FilterParams;
+			class FScriptDelegate                              Callback;
 		} params;
-		params.Image = Image;
-		params.OnImageLoaded = OnImageLoaded;
+		params.FilterParams = FilterParams;
+		params.Callback = Callback;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -40,22 +40,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.GetTexture
+	 * 		Name   -> Function Modio.ModioExampleLibrary.GetLogoThumbnailSize
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class UTexture2DDynamic*                           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioLogoSize                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	class UTexture2DDynamic* UModioImageLibrary::GetTexture(const struct FModioImageWrapper& Image)
+	EModioLogoSize UModioExampleLibrary::GetLogoThumbnailSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13616);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13596);
 		
 		struct
 		{
-			struct FModioImageWrapper                          Image;
-			class UTexture2DDynamic*                           ReturnValue;
+			EModioLogoSize                                     ReturnValue;
 		} params;
-		params.Image = Image;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -67,22 +64,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.GetState
+	 * 		Name   -> Function Modio.ModioExampleLibrary.GetLogoFullSize
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		EModioImageState                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioLogoSize                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	EModioImageState UModioImageLibrary::GetState(const struct FModioImageWrapper& Image)
+	EModioLogoSize UModioExampleLibrary::GetLogoFullSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13615);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13595);
 		
 		struct
 		{
-			struct FModioImageWrapper                          Image;
-			EModioImageState                                   ReturnValue;
+			EModioLogoSize                                     ReturnValue;
 		} params;
-		params.Image = Image;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -94,26 +88,19 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.GetLogoSize
+	 * 		Name   -> Function Modio.ModioExampleLibrary.GetAvatarThumbnailSize
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UTexture*                                    Logo                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioLogoSize                                     LogoSize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioAvatarSize                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	struct FVector2D UModioImageLibrary::GetLogoSize(class UTexture* Logo, EModioLogoSize LogoSize)
+	EModioAvatarSize UModioExampleLibrary::GetAvatarThumbnailSize()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13614);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13594);
 		
 		struct
 		{
-			class UTexture*                                    Logo;
-			EModioLogoSize                                     LogoSize;
-			unsigned char                                      UnknownData_0000[0x3];
-			struct FVector2D                      ReturnValue;
+			EModioAvatarSize                                   ReturnValue;
 		} params;
-		params.Logo = Logo;
-		params.LogoSize = LogoSize;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -125,120 +112,14 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.GetGallerySize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UTexture*                                    GalleryImage                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioGallerySize                                  GallerySize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UModioImageLibrary::GetGallerySize(class UTexture* GalleryImage, EModioGallerySize GallerySize)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13613);
-		
-		struct
-		{
-			class UTexture*                                    GalleryImage;
-			EModioGallerySize                                  GallerySize;
-			unsigned char                                      UnknownData_0001[0x3];
-			struct FVector2D                      ReturnValue;
-		} params;
-		params.GalleryImage = GalleryImage;
-		params.GallerySize = GallerySize;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioImageLibrary.GetAvatarSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UTexture*                                    Avatar                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioAvatarSize                                   AvatarSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FVector2D UModioImageLibrary::GetAvatarSize(class UTexture* Avatar, EModioAvatarSize AvatarSize)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13612);
-		
-		struct
-		{
-			class UTexture*                                    Avatar;
-			EModioAvatarSize                                   AvatarSize;
-			unsigned char                                      UnknownData_0002[0x3];
-			struct FVector2D                      ReturnValue;
-		} params;
-		params.Avatar = Avatar;
-		params.AvatarSize = AvatarSize;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioImageLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModioExampleLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioImageLibrary::StaticClass()
+	UClass* UModioExampleLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(446);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioInstallationOverride.OverrideModInstallationDirectory
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      NewInstallPath                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioInitializeOptions                     InitParams                                                 (Parm, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UModioInstallationOverride::OverrideModInstallationDirectory(const class FString& NewInstallPath, const struct FModioInitializeOptions& InitParams)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13618);
-		
-		struct
-		{
-			class FString                                      NewInstallPath;
-			struct FModioInitializeOptions                     InitParams;
-			bool                                               ReturnValue;
-		} params;
-		params.NewInstallPath = NewInstallPath;
-		params.InitParams = InitParams;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioInstallationOverride.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioInstallationOverride::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(447);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(444);
 		return ptr;
 	}
 
@@ -775,26 +656,31 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetPath
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithTags
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<class FString>                              NewTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	class FString UModioModCollectionLibrary::GetPath(const struct FModioModCollectionEntry& Entry)
+	struct FModioFilterParams UModioFilterParamsLibrary::WithTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13622);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13611);
 		
 		struct
 		{
-			struct FModioModCollectionEntry                    Entry;
-			class FString                                      ReturnValue;
+			struct FModioFilterParams                          Filter;
+			TArray<class FString>                              NewTags;
+			struct FModioFilterParams                          ReturnValue;
 		} params;
-		params.Entry = Entry;
+		params.NewTags = NewTags;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
 		
 		return params.ReturnValue;
 	}
@@ -802,26 +688,31 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetModState
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithTag
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		EModioModState                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Tag                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	EModioModState UModioModCollectionLibrary::GetModState(const struct FModioModCollectionEntry& Entry)
+	struct FModioFilterParams UModioFilterParamsLibrary::WithTag(struct FModioFilterParams* Filter, const class FString& Tag)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13621);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13610);
 		
 		struct
 		{
-			struct FModioModCollectionEntry                    Entry;
-			EModioModState                                     ReturnValue;
+			struct FModioFilterParams                          Filter;
+			class FString                                      Tag;
+			struct FModioFilterParams                          ReturnValue;
 		} params;
-		params.Entry = Entry;
+		params.Tag = Tag;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
 		
 		return params.ReturnValue;
 	}
@@ -829,26 +720,31 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetModProfile
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithoutTags
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioModInfo                               ReturnValue                                                (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<class FString>                              NewTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	struct FModioModInfo UModioModCollectionLibrary::GetModProfile(const struct FModioModCollectionEntry& Entry)
+	struct FModioFilterParams UModioFilterParamsLibrary::WithoutTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13620);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13609);
 		
 		struct
 		{
-			struct FModioModCollectionEntry                    Entry;
-			struct FModioModInfo                               ReturnValue;
+			struct FModioFilterParams                          Filter;
+			TArray<class FString>                              NewTags;
+			struct FModioFilterParams                          ReturnValue;
 		} params;
-		params.Entry = Entry;
+		params.NewTags = NewTags;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
 		
 		return params.ReturnValue;
 	}
@@ -856,26 +752,31 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetId
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithoutTag
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioModID                                 ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Tag                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 	 */
-	struct FModioModID UModioModCollectionLibrary::GetId(const struct FModioModCollectionEntry& Entry)
+	struct FModioFilterParams UModioFilterParamsLibrary::WithoutTag(struct FModioFilterParams* Filter, const class FString& Tag)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13619);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13608);
 		
 		struct
 		{
-			struct FModioModCollectionEntry                    Entry;
-			struct FModioModID                                 ReturnValue;
+			struct FModioFilterParams                          Filter;
+			class FString                                      Tag;
+			struct FModioFilterParams                          ReturnValue;
 		} params;
-		params.Entry = Entry;
+		params.Tag = Tag;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
 		
 		return params.ReturnValue;
 	}
@@ -883,14 +784,439 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioModCollectionLibrary.StaticClass
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.SortBy
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		EModioSortFieldType                                ByField                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioSortDirection                                ByDirection                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::SortBy(struct FModioFilterParams* Filter, EModioSortFieldType ByField, EModioSortDirection ByDirection)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13607);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			EModioSortFieldType                                ByField;
+			EModioSortDirection                                ByDirection;
+			unsigned char                                      UnknownData_0000[0x6];
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.ByField = ByField;
+		params.ByDirection = ByDirection;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.PagedResults
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		int64_t                                            PageNumber                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int64_t                                            PageSize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::PagedResults(struct FModioFilterParams* Filter, int64_t PageNumber, int64_t PageSize)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13606);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			int64_t                                            PageNumber;
+			int64_t                                            PageSize;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.PageNumber = PageNumber;
+		params.PageSize = PageSize;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.NameContainsStrings
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<class FString>                              SearchStrings                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::NameContainsStrings(struct FModioFilterParams* Filter, TArray<class FString> SearchStrings)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13605);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			TArray<class FString>                              SearchStrings;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.SearchStrings = SearchStrings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.NameContains
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      SearchString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::NameContains(struct FModioFilterParams* Filter, const class FString& SearchString)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13604);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			class FString                                      SearchString;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.SearchString = SearchString;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MetadataLike
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      SearchString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::MetadataLike(struct FModioFilterParams* Filter, const class FString& SearchString)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13603);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			class FString                                      SearchString;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.SearchString = SearchString;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MatchingIDs
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FModioModID>                         IDs                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::MatchingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13602);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			TArray<struct FModioModID>                         IDs;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.IDs = IDs;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MarkedLiveBefore
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      LiveBefore                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::MarkedLiveBefore(struct FModioFilterParams* Filter, const struct FDateTime& LiveBefore)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13601);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			struct FDateTime                      LiveBefore;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.LiveBefore = LiveBefore;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MarkedLiveAfter
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FDateTime                      LiveAfter                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::MarkedLiveAfter(struct FModioFilterParams* Filter, const struct FDateTime& LiveAfter)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13600);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			struct FDateTime                      LiveAfter;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.LiveAfter = LiveAfter;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.IndexedResults
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		int64_t                                            StartIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int64_t                                            ResultCount                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::IndexedResults(struct FModioFilterParams* Filter, int64_t StartIndex, int64_t ResultCount)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13599);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			int64_t                                            StartIndex;
+			int64_t                                            ResultCount;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.StartIndex = StartIndex;
+		params.ResultCount = ResultCount;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.ExcludingIDs
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FModioModID>                         IDs                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioFilterParams UModioFilterParamsLibrary::ExcludingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13598);
+		
+		struct
+		{
+			struct FModioFilterParams                          Filter;
+			TArray<struct FModioModID>                         IDs;
+			struct FModioFilterParams                          ReturnValue;
+		} params;
+		params.IDs = IDs;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (Filter != nullptr)
+			*Filter = params.Filter;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioFilterParamsLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioModCollectionLibrary::StaticClass()
+	UClass* UModioFilterParamsLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(448);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(445);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.IsError
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UModioErrorCodeLibrary::IsError(const struct FModioErrorCode& Error)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13592);
+		
+		struct
+		{
+			struct FModioErrorCode                             Error;
+			bool                                               ReturnValue;
+		} params;
+		params.Error = Error;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.GetValue
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	int32_t UModioErrorCodeLibrary::GetValue(const struct FModioErrorCode& Error)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13591);
+		
+		struct
+		{
+			struct FModioErrorCode                             Error;
+			int32_t                                            ReturnValue;
+		} params;
+		params.Error = Error;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.GetMessage
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UModioErrorCodeLibrary::GetMessage(const struct FModioErrorCode& Error)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13590);
+		
+		struct
+		{
+			struct FModioErrorCode                             Error;
+			class FString                                      ReturnValue;
+		} params;
+		params.Error = Error;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioErrorCodeLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioErrorCodeLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(442);
 		return ptr;
 	}
 
@@ -1271,6 +1597,517 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.LoadAsync
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FScriptDelegate                              OnImageLoaded                                              (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioImageLibrary::LoadAsync(const struct FModioImageWrapper& Image, const class FScriptDelegate& OnImageLoaded)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13617);
+		
+		struct
+		{
+			struct FModioImageWrapper                          Image;
+			class FScriptDelegate                              OnImageLoaded;
+		} params;
+		params.Image = Image;
+		params.OnImageLoaded = OnImageLoaded;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.GetTexture
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class UTexture2DDynamic*                           ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UTexture2DDynamic* UModioImageLibrary::GetTexture(const struct FModioImageWrapper& Image)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13616);
+		
+		struct
+		{
+			struct FModioImageWrapper                          Image;
+			class UTexture2DDynamic*                           ReturnValue;
+		} params;
+		params.Image = Image;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.GetState
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioImageWrapper                          Image                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		EModioImageState                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	EModioImageState UModioImageLibrary::GetState(const struct FModioImageWrapper& Image)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13615);
+		
+		struct
+		{
+			struct FModioImageWrapper                          Image;
+			EModioImageState                                   ReturnValue;
+		} params;
+		params.Image = Image;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.GetLogoSize
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UTexture*                                    Logo                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioLogoSize                                     LogoSize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UModioImageLibrary::GetLogoSize(class UTexture* Logo, EModioLogoSize LogoSize)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13614);
+		
+		struct
+		{
+			class UTexture*                                    Logo;
+			EModioLogoSize                                     LogoSize;
+			unsigned char                                      UnknownData_0000[0x3];
+			struct FVector2D                      ReturnValue;
+		} params;
+		params.Logo = Logo;
+		params.LogoSize = LogoSize;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.GetGallerySize
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UTexture*                                    GalleryImage                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioGallerySize                                  GallerySize                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UModioImageLibrary::GetGallerySize(class UTexture* GalleryImage, EModioGallerySize GallerySize)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13613);
+		
+		struct
+		{
+			class UTexture*                                    GalleryImage;
+			EModioGallerySize                                  GallerySize;
+			unsigned char                                      UnknownData_0001[0x3];
+			struct FVector2D                      ReturnValue;
+		} params;
+		params.GalleryImage = GalleryImage;
+		params.GallerySize = GallerySize;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioImageLibrary.GetAvatarSize
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UTexture*                                    Avatar                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioAvatarSize                                   AvatarSize                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FVector2D                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FVector2D UModioImageLibrary::GetAvatarSize(class UTexture* Avatar, EModioAvatarSize AvatarSize)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13612);
+		
+		struct
+		{
+			class UTexture*                                    Avatar;
+			EModioAvatarSize                                   AvatarSize;
+			unsigned char                                      UnknownData_0002[0x3];
+			struct FVector2D                      ReturnValue;
+		} params;
+		params.Avatar = Avatar;
+		params.AvatarSize = AvatarSize;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioImageLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioImageLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(446);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.Pct_Int64Int64
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int64_t                                            Dividend                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int64_t                                            Divisor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	float UModioSDKLibrary::Pct_Int64Int64(int64_t Dividend, int64_t Divisor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13662);
+		
+		struct
+		{
+			int64_t                                            Dividend;
+			int64_t                                            Divisor;
+			float                                              ReturnValue;
+		} params;
+		params.Dividend = Dividend;
+		params.Divisor = Divisor;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.IsValidSecurityCodeFormat
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UModioSDKLibrary::IsValidSecurityCodeFormat(const class FString& String)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13661);
+		
+		struct
+		{
+			class FString                                      String;
+			bool                                               ReturnValue;
+		} params;
+		params.String = String;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.IsValidEmailAddressFormat
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	bool UModioSDKLibrary::IsValidEmailAddressFormat(const class FString& String)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13660);
+		
+		struct
+		{
+			class FString                                      String;
+			bool                                               ReturnValue;
+		} params;
+		params.String = String;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectInitializeOptionsForSessionId
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class FString                                      SessionID                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioInitializeOptions                     ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioInitializeOptions UModioSDKLibrary::GetProjectInitializeOptionsForSessionId(const class FString& SessionID)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13659);
+		
+		struct
+		{
+			class FString                                      SessionID;
+			struct FModioInitializeOptions                     ReturnValue;
+		} params;
+		params.SessionID = SessionID;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectInitializeOptions
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioInitializeOptions                     ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioInitializeOptions UModioSDKLibrary::GetProjectInitializeOptions()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13658);
+		
+		struct
+		{
+			struct FModioInitializeOptions                     ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectGameId
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioGameID                                ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FModioGameID UModioSDKLibrary::GetProjectGameId()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13657);
+		
+		struct
+		{
+			struct FModioGameID                                ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectEnvironment
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		EModioEnvironment                                  ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	EModioEnvironment UModioSDKLibrary::GetProjectEnvironment()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13656);
+		
+		struct
+		{
+			EModioEnvironment                                  ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectApiKey
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioApiKey                                ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioApiKey UModioSDKLibrary::GetProjectApiKey()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13655);
+		
+		struct
+		{
+			struct FModioApiKey                                ReturnValue;
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.Filesize_ToString
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int64_t                                            Filesize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            MaxDecimals                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EFileSizeUnit                                      Unit                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UModioSDKLibrary::Filesize_ToString(int64_t Filesize, int32_t MaxDecimals, EFileSizeUnit Unit)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13654);
+		
+		struct
+		{
+			int64_t                                            Filesize;
+			int32_t                                            MaxDecimals;
+			EFileSizeUnit                                      Unit;
+			unsigned char                                      UnknownData_0000[0x3];
+			class FText                                        ReturnValue;
+		} params;
+		params.Filesize = Filesize;
+		params.MaxDecimals = MaxDecimals;
+		params.Unit = Unit;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.Conv_Int64ToText
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int64_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bAlwaysSign                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               bUseGrouping                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            MinimumIntegralDigits                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		int32_t                                            MaximumIntegralDigits                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	class FText UModioSDKLibrary::Conv_Int64ToText(int64_t Value, bool bAlwaysSign, bool bUseGrouping, int32_t MinimumIntegralDigits, int32_t MaximumIntegralDigits)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13653);
+		
+		struct
+		{
+			int64_t                                            Value;
+			bool                                               bAlwaysSign;
+			bool                                               bUseGrouping;
+			unsigned char                                      UnknownData_0001[0x2];
+			int32_t                                            MinimumIntegralDigits;
+			int32_t                                            MaximumIntegralDigits;
+			unsigned char                                      UnknownData_0002[0x4];
+			class FText                                        ReturnValue;
+		} params;
+		params.Value = Value;
+		params.bAlwaysSign = bAlwaysSign;
+		params.bUseGrouping = bUseGrouping;
+		params.MinimumIntegralDigits = MinimumIntegralDigits;
+		params.MaximumIntegralDigits = MaximumIntegralDigits;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioSDKLibrary.Conv_Int64ToString
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		int64_t                                            inInt                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UModioSDKLibrary::Conv_Int64ToString(int64_t inInt)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13652);
+		
+		struct
+		{
+			int64_t                                            inInt;
+			class FString                                      ReturnValue;
+		} params;
+		params.inInt = inInt;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioSDKLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioSDKLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(457);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> Function Modio.ModioModInfoListLibrary.GetPagedResult
 	 * 		Flags  -> ()
 	 * Parameters:
@@ -1339,274 +2176,44 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetVisibility
+	 * 		Name   -> Function Modio.ModioInstallationOverride.OverrideModInstallationDirectory
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		bool                                               Visibility                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		class FString                                      NewInstallPath                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioInitializeOptions                     InitParams                                                 (Parm, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModioEditModLibrary::SetVisibility(struct FModioEditModParams* In, bool Visibility)
+	bool UModioInstallationOverride::OverrideModInstallationDirectory(const class FString& NewInstallPath, const struct FModioInitializeOptions& InitParams)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13589);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13618);
 		
 		struct
 		{
-			struct FModioEditModParams                         In;
-			bool                                               Visibility;
+			class FString                                      NewInstallPath;
+			struct FModioInitializeOptions                     InitParams;
+			bool                                               ReturnValue;
 		} params;
-		params.Visibility = Visibility;
+		params.NewInstallPath = NewInstallPath;
+		params.InitParams = InitParams;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		if (In != nullptr)
-			*In = params.In;
+		return params.ReturnValue;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetSummary
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Summary                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetSummary(struct FModioEditModParams* In, const class FString& Summary)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13588);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      Summary;
-		} params;
-		params.Summary = Summary;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetNamePath
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      NamePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetNamePath(struct FModioEditModParams* In, const class FString& NamePath)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13587);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      NamePath;
-		} params;
-		params.NamePath = NamePath;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetName
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetName(struct FModioEditModParams* In, const class FString& Name)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13586);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      Name;
-		} params;
-		params.Name = Name;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetMetadataBlob
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      MetadataBlob                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetMetadataBlob(struct FModioEditModParams* In, const class FString& MetadataBlob)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13585);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      MetadataBlob;
-		} params;
-		params.MetadataBlob = MetadataBlob;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetMaturityFlags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		EModioMaturityFlags                                MaturityFlags                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetMaturityFlags(struct FModioEditModParams* In, EModioMaturityFlags MaturityFlags)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13584);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			EModioMaturityFlags                                MaturityFlags;
-		} params;
-		params.MaturityFlags = MaturityFlags;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetHomepageURL
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      HomepageURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetHomepageURL(struct FModioEditModParams* In, const class FString& HomepageURL)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13583);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      HomepageURL;
-		} params;
-		params.HomepageURL = HomepageURL;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioEditModLibrary.SetDescription
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void UModioEditModLibrary::SetDescription(struct FModioEditModParams* In, const class FString& Description)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13582);
-		
-		struct
-		{
-			struct FModioEditModParams                         In;
-			class FString                                      Description;
-		} params;
-		params.Description = Description;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (In != nullptr)
-			*In = params.In;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioEditModLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModioInstallationOverride.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioEditModLibrary::StaticClass()
+	UClass* UModioInstallationOverride::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(441);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(458);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioPopupBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioPopupBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(454);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(447);
 		return ptr;
 	}
 
@@ -1627,95 +2234,204 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.IsError
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UModioErrorCodeLibrary::IsError(const struct FModioErrorCode& Error)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13592);
-		
-		struct
-		{
-			struct FModioErrorCode                             Error;
-			bool                                               ReturnValue;
-		} params;
-		params.Error = Error;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.GetValue
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	int32_t UModioErrorCodeLibrary::GetValue(const struct FModioErrorCode& Error)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13591);
-		
-		struct
-		{
-			struct FModioErrorCode                             Error;
-			int32_t                                            ReturnValue;
-		} params;
-		params.Error = Error;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioErrorCodeLibrary.GetMessage
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioErrorCode                             Error                                                      (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UModioErrorCodeLibrary::GetMessage(const struct FModioErrorCode& Error)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13590);
-		
-		struct
-		{
-			struct FModioErrorCode                             Error;
-			class FString                                      ReturnValue;
-		} params;
-		params.Error = Error;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioErrorCodeLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModioSettings.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioErrorCodeLibrary::StaticClass()
+	UClass* UModioSettings::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(442);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(458);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModTagOptionsLibrary.GetTags
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModTagOptions                         ModTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		TArray<struct FModioModTagInfo>                    ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	TArray<struct FModioModTagInfo> UModioModTagOptionsLibrary::GetTags(const struct FModioModTagOptions& ModTags)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13628);
+		
+		struct
+		{
+			struct FModioModTagOptions                         ModTags;
+			TArray<struct FModioModTagInfo>                    ReturnValue;
+		} params;
+		params.ModTags = ModTags;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModTagOptionsLibrary.GetPagedResult
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModTagOptions                         ModTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioPagedResult                           ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	 */
+	struct FModioPagedResult UModioModTagOptionsLibrary::GetPagedResult(const struct FModioModTagOptions& ModTags)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13627);
+		
+		struct
+		{
+			struct FModioModTagOptions                         ModTags;
+			struct FModioPagedResult                           ReturnValue;
+		} params;
+		params.ModTags = ModTags;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioModTagOptionsLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioModTagOptionsLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(451);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetPath
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class FString UModioModCollectionLibrary::GetPath(const struct FModioModCollectionEntry& Entry)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13622);
+		
+		struct
+		{
+			struct FModioModCollectionEntry                    Entry;
+			class FString                                      ReturnValue;
+		} params;
+		params.Entry = Entry;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetModState
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		EModioModState                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	EModioModState UModioModCollectionLibrary::GetModState(const struct FModioModCollectionEntry& Entry)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13621);
+		
+		struct
+		{
+			struct FModioModCollectionEntry                    Entry;
+			EModioModState                                     ReturnValue;
+		} params;
+		params.Entry = Entry;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetModProfile
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioModInfo                               ReturnValue                                                (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioModInfo UModioModCollectionLibrary::GetModProfile(const struct FModioModCollectionEntry& Entry)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13620);
+		
+		struct
+		{
+			struct FModioModCollectionEntry                    Entry;
+			struct FModioModInfo                               ReturnValue;
+		} params;
+		params.Entry = Entry;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioModCollectionLibrary.GetId
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModCollectionEntry                    Entry                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		struct FModioModID                                 ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	struct FModioModID UModioModCollectionLibrary::GetId(const struct FModioModCollectionEntry& Entry)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13619);
+		
+		struct
+		{
+			struct FModioModCollectionEntry                    Entry;
+			struct FModioModID                                 ReturnValue;
+		} params;
+		params.Entry = Entry;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioModCollectionLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioModCollectionLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(448);
 		return ptr;
 	}
 
@@ -2120,252 +2836,6 @@ namespace SDK
 	UClass* UModioUnsigned64Library::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(463);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForUser
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioUserID                                User                                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioReportParams UModioReportLibrary::MakeReportForUser(const struct FModioUserID& User, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13651);
-		
-		struct
-		{
-			struct FModioUserID                                User;
-			EModioReportType                                   Type;
-			unsigned char                                      UnknownData_0000[0x7];
-			class FString                                      ReportDescription;
-			class FString                                      ReporterName;
-			class FString                                      ReporterContact;
-			struct FModioReportParams                          ReturnValue;
-		} params;
-		params.User = User;
-		params.Type = Type;
-		params.ReportDescription = ReportDescription;
-		params.ReporterName = ReporterName;
-		params.ReporterContact = ReporterContact;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForMod
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioModID                                 Mod                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioReportParams UModioReportLibrary::MakeReportForMod(const struct FModioModID& Mod, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13650);
-		
-		struct
-		{
-			struct FModioModID                                 Mod;
-			EModioReportType                                   Type;
-			unsigned char                                      UnknownData_0001[0x7];
-			class FString                                      ReportDescription;
-			class FString                                      ReporterName;
-			class FString                                      ReporterContact;
-			struct FModioReportParams                          ReturnValue;
-		} params;
-		params.Mod = Mod;
-		params.Type = Type;
-		params.ReportDescription = ReportDescription;
-		params.ReporterName = ReporterName;
-		params.ReporterContact = ReporterContact;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForGame
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioGameID                                Game                                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioReportParams UModioReportLibrary::MakeReportForGame(const struct FModioGameID& Game, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13649);
-		
-		struct
-		{
-			struct FModioGameID                                Game;
-			EModioReportType                                   Type;
-			unsigned char                                      UnknownData_0002[0x7];
-			class FString                                      ReportDescription;
-			class FString                                      ReporterName;
-			class FString                                      ReporterContact;
-			struct FModioReportParams                          ReturnValue;
-		} params;
-		params.Game = Game;
-		params.Type = Type;
-		params.ReportDescription = ReportDescription;
-		params.ReporterName = ReporterName;
-		params.ReporterContact = ReporterContact;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioReportLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioReportLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(456);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModTagOptionsLibrary.GetTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioModTagOptions                         ModTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FModioModTagInfo>                    ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 */
-	TArray<struct FModioModTagInfo> UModioModTagOptionsLibrary::GetTags(const struct FModioModTagOptions& ModTags)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13628);
-		
-		struct
-		{
-			struct FModioModTagOptions                         ModTags;
-			TArray<struct FModioModTagInfo>                    ReturnValue;
-		} params;
-		params.ModTags = ModTags;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioModTagOptionsLibrary.GetPagedResult
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioModTagOptions                         ModTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioPagedResult                           ReturnValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	 */
-	struct FModioPagedResult UModioModTagOptionsLibrary::GetPagedResult(const struct FModioModTagOptions& ModTags)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13627);
-		
-		struct
-		{
-			struct FModioModTagOptions                         ModTags;
-			struct FModioPagedResult                           ReturnValue;
-		} params;
-		params.ModTags = ModTags;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioModTagOptionsLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioModTagOptionsLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(451);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioErrorConditionLibrary.ErrorCodeMatches
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioErrorCode                             ErrorCode                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioErrorCondition                               Condition                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UModioErrorConditionLibrary::ErrorCodeMatches(const struct FModioErrorCode& ErrorCode, EModioErrorCondition Condition)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13593);
-		
-		struct
-		{
-			struct FModioErrorCode                             ErrorCode;
-			EModioErrorCondition                               Condition;
-			bool                                               ReturnValue;
-		} params;
-		params.ErrorCode = ErrorCode;
-		params.Condition = Condition;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioErrorConditionLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioErrorConditionLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(443);
 		return ptr;
 	}
 
@@ -3423,391 +3893,246 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioPopupContainer.PushPopup
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetVisibility
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UModioPopupBase*                             PopupClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UModioPopupBase*                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		bool                                               Visibility                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UModioPopupBase* UModioPopupContainer::PushPopup(class UModioPopupBase* PopupClass)
+	void UModioEditModLibrary::SetVisibility(struct FModioEditModParams* In, bool Visibility)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13648);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13589);
 		
 		struct
 		{
-			class UModioPopupBase*                             PopupClass;
-			class UModioPopupBase*                             ReturnValue;
+			struct FModioEditModParams                         In;
+			bool                                               Visibility;
 		} params;
-		params.PopupClass = PopupClass;
+		params.Visibility = Visibility;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		return params.ReturnValue;
+		if (In != nullptr)
+			*In = params.In;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioPopupContainer.PopPopup
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetSummary
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		class UModioPopupBase*                             PopupClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UModioPopupBase*                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Summary                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
 	 */
-	class UModioPopupBase* UModioPopupContainer::PopPopup(class UModioPopupBase* PopupClass)
+	void UModioEditModLibrary::SetSummary(struct FModioEditModParams* In, const class FString& Summary)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13647);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13588);
 		
 		struct
 		{
-			class UModioPopupBase*                             PopupClass;
-			class UModioPopupBase*                             ReturnValue;
+			struct FModioEditModParams                         In;
+			class FString                                      Summary;
 		} params;
-		params.PopupClass = PopupClass;
+		params.Summary = Summary;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
 		fn->FunctionFlags = flags;
 		
-		return params.ReturnValue;
+		if (In != nullptr)
+			*In = params.In;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioPopupContainer.StaticClass
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetNamePath
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      NamePath                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetNamePath(struct FModioEditModParams* In, const class FString& NamePath)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13587);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			class FString                                      NamePath;
+		} params;
+		params.NamePath = NamePath;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetName
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Name                                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetName(struct FModioEditModParams* In, const class FString& Name)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13586);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			class FString                                      Name;
+		} params;
+		params.Name = Name;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetMetadataBlob
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      MetadataBlob                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetMetadataBlob(struct FModioEditModParams* In, const class FString& MetadataBlob)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13585);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			class FString                                      MetadataBlob;
+		} params;
+		params.MetadataBlob = MetadataBlob;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetMaturityFlags
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		EModioMaturityFlags                                MaturityFlags                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetMaturityFlags(struct FModioEditModParams* In, EModioMaturityFlags MaturityFlags)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13584);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			EModioMaturityFlags                                MaturityFlags;
+		} params;
+		params.MaturityFlags = MaturityFlags;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetHomepageURL
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      HomepageURL                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetHomepageURL(struct FModioEditModParams* In, const class FString& HomepageURL)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13583);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			class FString                                      HomepageURL;
+		} params;
+		params.HomepageURL = HomepageURL;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioEditModLibrary.SetDescription
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioEditModParams                         In                                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	 * 		class FString                                      Description                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void UModioEditModLibrary::SetDescription(struct FModioEditModParams* In, const class FString& Description)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13582);
+		
+		struct
+		{
+			struct FModioEditModParams                         In;
+			class FString                                      Description;
+		} params;
+		params.Description = Description;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (In != nullptr)
+			*In = params.In;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioEditModLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioPopupContainer::StaticClass()
+	UClass* UModioEditModLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(455);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.Pct_Int64Int64
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int64_t                                            Dividend                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int64_t                                            Divisor                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		float                                              ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	float UModioSDKLibrary::Pct_Int64Int64(int64_t Dividend, int64_t Divisor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13662);
-		
-		struct
-		{
-			int64_t                                            Dividend;
-			int64_t                                            Divisor;
-			float                                              ReturnValue;
-		} params;
-		params.Dividend = Dividend;
-		params.Divisor = Divisor;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.IsValidSecurityCodeFormat
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UModioSDKLibrary::IsValidSecurityCodeFormat(const class FString& String)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13661);
-		
-		struct
-		{
-			class FString                                      String;
-			bool                                               ReturnValue;
-		} params;
-		params.String = String;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.IsValidEmailAddressFormat
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      String                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	bool UModioSDKLibrary::IsValidEmailAddressFormat(const class FString& String)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13660);
-		
-		struct
-		{
-			class FString                                      String;
-			bool                                               ReturnValue;
-		} params;
-		params.String = String;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectInitializeOptionsForSessionId
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class FString                                      SessionID                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioInitializeOptions                     ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioInitializeOptions UModioSDKLibrary::GetProjectInitializeOptionsForSessionId(const class FString& SessionID)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13659);
-		
-		struct
-		{
-			class FString                                      SessionID;
-			struct FModioInitializeOptions                     ReturnValue;
-		} params;
-		params.SessionID = SessionID;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectInitializeOptions
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioInitializeOptions                     ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioInitializeOptions UModioSDKLibrary::GetProjectInitializeOptions()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13658);
-		
-		struct
-		{
-			struct FModioInitializeOptions                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectGameId
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioGameID                                ReturnValue                                                (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	struct FModioGameID UModioSDKLibrary::GetProjectGameId()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13657);
-		
-		struct
-		{
-			struct FModioGameID                                ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectEnvironment
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EModioEnvironment                                  ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	EModioEnvironment UModioSDKLibrary::GetProjectEnvironment()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13656);
-		
-		struct
-		{
-			EModioEnvironment                                  ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.GetProjectApiKey
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioApiKey                                ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioApiKey UModioSDKLibrary::GetProjectApiKey()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13655);
-		
-		struct
-		{
-			struct FModioApiKey                                ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.Filesize_ToString
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int64_t                                            Filesize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            MaxDecimals                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EFileSizeUnit                                      Unit                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UModioSDKLibrary::Filesize_ToString(int64_t Filesize, int32_t MaxDecimals, EFileSizeUnit Unit)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13654);
-		
-		struct
-		{
-			int64_t                                            Filesize;
-			int32_t                                            MaxDecimals;
-			EFileSizeUnit                                      Unit;
-			unsigned char                                      UnknownData_0000[0x3];
-			class FText                                        ReturnValue;
-		} params;
-		params.Filesize = Filesize;
-		params.MaxDecimals = MaxDecimals;
-		params.Unit = Unit;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.Conv_Int64ToText
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int64_t                                            Value                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bAlwaysSign                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		bool                                               bUseGrouping                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            MinimumIntegralDigits                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int32_t                                            MaximumIntegralDigits                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FText                                        ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	class FText UModioSDKLibrary::Conv_Int64ToText(int64_t Value, bool bAlwaysSign, bool bUseGrouping, int32_t MinimumIntegralDigits, int32_t MaximumIntegralDigits)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13653);
-		
-		struct
-		{
-			int64_t                                            Value;
-			bool                                               bAlwaysSign;
-			bool                                               bUseGrouping;
-			unsigned char                                      UnknownData_0001[0x2];
-			int32_t                                            MinimumIntegralDigits;
-			int32_t                                            MaximumIntegralDigits;
-			unsigned char                                      UnknownData_0002[0x4];
-			class FText                                        ReturnValue;
-		} params;
-		params.Value = Value;
-		params.bAlwaysSign = bAlwaysSign;
-		params.bUseGrouping = bUseGrouping;
-		params.MinimumIntegralDigits = MinimumIntegralDigits;
-		params.MaximumIntegralDigits = MaximumIntegralDigits;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioSDKLibrary.Conv_Int64ToString
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		int64_t                                            inInt                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class FString                                      ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class FString UModioSDKLibrary::Conv_Int64ToString(int64_t inInt)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13652);
-		
-		struct
-		{
-			int64_t                                            inInt;
-			class FString                                      ReturnValue;
-		} params;
-		params.inInt = inInt;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioSDKLibrary.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UModioSDKLibrary::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(457);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(441);
 		return ptr;
 	}
 
@@ -4359,46 +4684,25 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioExampleLibrary.ListUserSubscriptionAsync
+	 * 		Name   -> Function Modio.ModioErrorConditionLibrary.ErrorCodeMatches
 	 * 		Flags  -> ()
 	 * Parameters:
-	 * 		struct FModioFilterParams                          FilterParams                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FScriptDelegate                              Callback                                                   (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
+	 * 		struct FModioErrorCode                             ErrorCode                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioErrorCondition                               Condition                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		bool                                               ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	 */
-	void UModioExampleLibrary::ListUserSubscriptionAsync(const struct FModioFilterParams& FilterParams, const class FScriptDelegate& Callback)
+	bool UModioErrorConditionLibrary::ErrorCodeMatches(const struct FModioErrorCode& ErrorCode, EModioErrorCondition Condition)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13597);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13593);
 		
 		struct
 		{
-			struct FModioFilterParams                          FilterParams;
-			class FScriptDelegate                              Callback;
+			struct FModioErrorCode                             ErrorCode;
+			EModioErrorCondition                               Condition;
+			bool                                               ReturnValue;
 		} params;
-		params.FilterParams = FilterParams;
-		params.Callback = Callback;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioExampleLibrary.GetLogoThumbnailSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EModioLogoSize                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	EModioLogoSize UModioExampleLibrary::GetLogoThumbnailSize()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13596);
-		
-		struct
-		{
-			EModioLogoSize                                     ReturnValue;
-		} params;
+		params.ErrorCode = ErrorCode;
+		params.Condition = Condition;
 		
 		auto flags = fn->FunctionFlags;
 		UObject::ProcessEvent(fn, &params);
@@ -4410,534 +4714,230 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioExampleLibrary.GetLogoFullSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EModioLogoSize                                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	EModioLogoSize UModioExampleLibrary::GetLogoFullSize()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13595);
-		
-		struct
-		{
-			EModioLogoSize                                     ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioExampleLibrary.GetAvatarThumbnailSize
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		EModioAvatarSize                                   ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	EModioAvatarSize UModioExampleLibrary::GetAvatarThumbnailSize()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13594);
-		
-		struct
-		{
-			EModioAvatarSize                                   ReturnValue;
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioExampleLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModioErrorConditionLibrary.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioExampleLibrary::StaticClass()
+	UClass* UModioErrorConditionLibrary::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(444);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(443);
 		return ptr;
 	}
 
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<class FString>                              NewTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::WithTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13611);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			TArray<class FString>                              NewTags;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.NewTags = NewTags;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithTag
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Tag                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::WithTag(struct FModioFilterParams* Filter, const class FString& Tag)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13610);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			class FString                                      Tag;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.Tag = Tag;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithoutTags
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<class FString>                              NewTags                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::WithoutTags(struct FModioFilterParams* Filter, TArray<class FString> NewTags)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13609);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			TArray<class FString>                              NewTags;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.NewTags = NewTags;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.WithoutTag
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      Tag                                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::WithoutTag(struct FModioFilterParams* Filter, const class FString& Tag)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13608);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			class FString                                      Tag;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.Tag = Tag;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.SortBy
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		EModioSortFieldType                                ByField                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		EModioSortDirection                                ByDirection                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::SortBy(struct FModioFilterParams* Filter, EModioSortFieldType ByField, EModioSortDirection ByDirection)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13607);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			EModioSortFieldType                                ByField;
-			EModioSortDirection                                ByDirection;
-			unsigned char                                      UnknownData_0000[0x6];
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.ByField = ByField;
-		params.ByDirection = ByDirection;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.PagedResults
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		int64_t                                            PageNumber                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int64_t                                            PageSize                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::PagedResults(struct FModioFilterParams* Filter, int64_t PageNumber, int64_t PageSize)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13606);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			int64_t                                            PageNumber;
-			int64_t                                            PageSize;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.PageNumber = PageNumber;
-		params.PageSize = PageSize;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.NameContainsStrings
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<class FString>                              SearchStrings                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::NameContainsStrings(struct FModioFilterParams* Filter, TArray<class FString> SearchStrings)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13605);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			TArray<class FString>                              SearchStrings;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.SearchStrings = SearchStrings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.NameContains
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      SearchString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::NameContains(struct FModioFilterParams* Filter, const class FString& SearchString)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13604);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			class FString                                      SearchString;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.SearchString = SearchString;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MetadataLike
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		class FString                                      SearchString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::MetadataLike(struct FModioFilterParams* Filter, const class FString& SearchString)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13603);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			class FString                                      SearchString;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.SearchString = SearchString;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MatchingIDs
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FModioModID>                         IDs                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::MatchingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13602);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			TArray<struct FModioModID>                         IDs;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.IDs = IDs;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MarkedLiveBefore
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      LiveBefore                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::MarkedLiveBefore(struct FModioFilterParams* Filter, const struct PCoreUObject_FDateTime& LiveBefore)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13601);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			struct PCoreUObject_FDateTime                      LiveBefore;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.LiveBefore = LiveBefore;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.MarkedLiveAfter
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct PCoreUObject_FDateTime                      LiveAfter                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::MarkedLiveAfter(struct FModioFilterParams* Filter, const struct PCoreUObject_FDateTime& LiveAfter)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13600);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			struct PCoreUObject_FDateTime                      LiveAfter;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.LiveAfter = LiveAfter;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.IndexedResults
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		int64_t                                            StartIndex                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		int64_t                                            ResultCount                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::IndexedResults(struct FModioFilterParams* Filter, int64_t StartIndex, int64_t ResultCount)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13599);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			int64_t                                            StartIndex;
-			int64_t                                            ResultCount;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.StartIndex = StartIndex;
-		params.ResultCount = ResultCount;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function Modio.ModioFilterParamsLibrary.ExcludingIDs
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		struct FModioFilterParams                          Filter                                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		TArray<struct FModioModID>                         IDs                                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	 * 		struct FModioFilterParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	 */
-	struct FModioFilterParams UModioFilterParamsLibrary::ExcludingIDs(struct FModioFilterParams* Filter, TArray<struct FModioModID> IDs)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13598);
-		
-		struct
-		{
-			struct FModioFilterParams                          Filter;
-			TArray<struct FModioModID>                         IDs;
-			struct FModioFilterParams                          ReturnValue;
-		} params;
-		params.IDs = IDs;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (Filter != nullptr)
-			*Filter = params.Filter;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UModioFilterParamsLibrary.StaticClass
+	 * 		Name   -> PredefinedFunction UModioPopupBase.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
 	 * 		UClass*                                            ReturnValue
 	 */
-	UClass* UModioFilterParamsLibrary::StaticClass()
+	UClass* UModioPopupBase::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(445);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(454);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioPopupContainer.PushPopup
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UModioPopupBase*                             PopupClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UModioPopupBase*                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UModioPopupBase* UModioPopupContainer::PushPopup(class UModioPopupBase* PopupClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13648);
+		
+		struct
+		{
+			class UModioPopupBase*                             PopupClass;
+			class UModioPopupBase*                             ReturnValue;
+		} params;
+		params.PopupClass = PopupClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioPopupContainer.PopPopup
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UModioPopupBase*                             PopupClass                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UModioPopupBase*                             ReturnValue                                                (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UModioPopupBase* UModioPopupContainer::PopPopup(class UModioPopupBase* PopupClass)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13647);
+		
+		struct
+		{
+			class UModioPopupBase*                             PopupClass;
+			class UModioPopupBase*                             ReturnValue;
+		} params;
+		params.PopupClass = PopupClass;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioPopupContainer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioPopupContainer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(455);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForUser
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioUserID                                User                                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioReportParams UModioReportLibrary::MakeReportForUser(const struct FModioUserID& User, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13651);
+		
+		struct
+		{
+			struct FModioUserID                                User;
+			EModioReportType                                   Type;
+			unsigned char                                      UnknownData_0000[0x7];
+			class FString                                      ReportDescription;
+			class FString                                      ReporterName;
+			class FString                                      ReporterContact;
+			struct FModioReportParams                          ReturnValue;
+		} params;
+		params.User = User;
+		params.Type = Type;
+		params.ReportDescription = ReportDescription;
+		params.ReporterName = ReporterName;
+		params.ReporterContact = ReporterContact;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForMod
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioModID                                 Mod                                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioReportParams UModioReportLibrary::MakeReportForMod(const struct FModioModID& Mod, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13650);
+		
+		struct
+		{
+			struct FModioModID                                 Mod;
+			EModioReportType                                   Type;
+			unsigned char                                      UnknownData_0001[0x7];
+			class FString                                      ReportDescription;
+			class FString                                      ReporterName;
+			class FString                                      ReporterContact;
+			struct FModioReportParams                          ReturnValue;
+		} params;
+		params.Mod = Mod;
+		params.Type = Type;
+		params.ReportDescription = ReportDescription;
+		params.ReporterName = ReporterName;
+		params.ReporterContact = ReporterContact;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function Modio.ModioReportLibrary.MakeReportForGame
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		struct FModioGameID                                Game                                                       (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		EModioReportType                                   Type                                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReportDescription                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class FString                                      ReporterContact                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FModioReportParams                          ReturnValue                                                (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	 */
+	struct FModioReportParams UModioReportLibrary::MakeReportForGame(const struct FModioGameID& Game, EModioReportType Type, const class FString& ReportDescription, const class FString& ReporterName, const class FString& ReporterContact)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13649);
+		
+		struct
+		{
+			struct FModioGameID                                Game;
+			EModioReportType                                   Type;
+			unsigned char                                      UnknownData_0002[0x7];
+			class FString                                      ReportDescription;
+			class FString                                      ReporterName;
+			class FString                                      ReporterContact;
+			struct FModioReportParams                          ReturnValue;
+		} params;
+		params.Game = Game;
+		params.Type = Type;
+		params.ReportDescription = ReportDescription;
+		params.ReporterName = ReporterName;
+		params.ReporterContact = ReporterContact;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UModioReportLibrary.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UModioReportLibrary::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(456);
 		return ptr;
 	}
 

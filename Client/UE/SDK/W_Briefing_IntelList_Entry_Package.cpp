@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::ClearActive()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54838);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31457);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::AddToGrid(class UWidget* Content)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54837);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31456);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::InitMedia(TArray<struct FST_Briefing_Evidence>* Media)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54836);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31455);
 		
 		struct
 		{
@@ -92,7 +92,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::InitBios(TArray<struct FCharacterBio>* Bios)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54835);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31454);
 		
 		struct
 		{
@@ -118,7 +118,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::PreConstruct(bool IsDesignTime)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54834);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31453);
 		
 		struct
 		{
@@ -141,7 +141,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::Construct()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54833);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31452);
 		
 		struct
 		{
@@ -163,7 +163,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::ForceClick(int32_t Index)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54832);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31451);
 		
 		struct
 		{
@@ -188,7 +188,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::MediaClicked(class UW_Briefing_Intel_Entry_C* ClickedEntry, const struct FST_Briefing_Evidence& Media)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54831);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31450);
 		
 		struct
 		{
@@ -215,7 +215,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::BioClicked(class UW_Briefing_Intel_Entry_C* ClickedEntry, const struct FCharacterBio& Bio)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54830);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31449);
 		
 		struct
 		{
@@ -241,7 +241,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::ExecuteUbergraph_W_Briefing_IntelList_Entry(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54829);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31448);
 		
 		struct
 		{
@@ -265,7 +265,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::MediaIntelClicked__DelegateSignature(const struct FST_Briefing_Evidence& Media)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54828);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31447);
 		
 		struct
 		{
@@ -289,7 +289,7 @@ namespace SDK
 	 */
 	void UW_Briefing_IntelList_Entry_C::BioIntelClicked__DelegateSignature(const struct FCharacterBio& Bio)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54827);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(31446);
 		
 		struct
 		{
@@ -312,7 +312,7 @@ namespace SDK
 	 */
 	UClass* UW_Briefing_IntelList_Entry_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54826);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(31445);
 		return ptr;
 	}
 

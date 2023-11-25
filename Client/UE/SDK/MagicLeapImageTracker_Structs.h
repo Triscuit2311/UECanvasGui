@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -15,16 +15,6 @@ namespace SDK
 	// # Enums
 	// --------------------------------------------------
 	/**
-	 * Enum MagicLeapImageTracker.EMagicLeapImageTargetOrientation
-	 */
-	enum class EMagicLeapImageTargetOrientation : uint8_t
-	{
-		ForwardAxisAsNormal = 0,
-		UpAxisAsNormal      = 1,
-		MAX                 = 2
-	};
-
-	/**
 	 * Enum MagicLeapImageTracker.EMagicLeapImageTargetStatus
 	 */
 	enum class EMagicLeapImageTargetStatus : uint8_t
@@ -33,6 +23,16 @@ namespace SDK
 		Unreliable = 1,
 		NotTracked = 2,
 		MAX        = 3
+	};
+
+	/**
+	 * Enum MagicLeapImageTracker.EMagicLeapImageTargetOrientation
+	 */
+	enum class EMagicLeapImageTargetOrientation : uint8_t
+	{
+		ForwardAxisAsNormal = 0,
+		UpAxisAsNormal      = 1,
+		MAX                 = 2
 	};
 
 	// --------------------------------------------------

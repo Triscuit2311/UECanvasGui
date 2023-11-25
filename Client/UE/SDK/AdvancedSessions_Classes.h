@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 /**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #ifdef _MSC_VER
@@ -54,21 +54,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class AdvancedSessions.AdvancedFriendsInterface
-	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
-	 */
-	class IAdvancedFriendsInterface : public IInterface
-	{
-	public:
-		void OnSessionInviteReceived(const struct FBPUniqueNetId& PersonInviting, const struct FBlueprintSessionResult& SearchResult);
-		void OnSessionInviteAccepted(const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SearchResult);
-		void OnPlayerVoiceStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking);
-		void OnPlayerLoginStatusChanged(EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, const struct FBPUniqueNetId& PlayerUniqueNetID);
-		void OnPlayerLoginChanged(int32_t PlayerNum);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class AdvancedSessions.AdvancedFriendsLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -85,15 +70,17 @@ namespace SDK
 	};
 
 	/**
-	 * Class AdvancedSessions.AdvancedGameSession
-	 * Size -> 0x0050 (FullSize[0x0288] - InheritedSize[0x0238])
+	 * Class AdvancedSessions.AdvancedFriendsInterface
+	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
-	class AAdvancedGameSession : public AGameSession
+	class IAdvancedFriendsInterface : public IInterface
 	{
 	public:
-		TMap<struct FUniqueNetIdRepl, class FText>                   BanList;                                                 // 0x0238(0x0050) Transient, NativeAccessSpecifierPublic
-
-	public:
+		void OnSessionInviteReceived(const struct FBPUniqueNetId& PersonInviting, const struct FBlueprintSessionResult& SearchResult);
+		void OnSessionInviteAccepted(const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SearchResult);
+		void OnPlayerVoiceStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking);
+		void OnPlayerLoginStatusChanged(EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, const struct FBPUniqueNetId& PlayerUniqueNetID);
+		void OnPlayerLoginChanged(int32_t PlayerNum);
 		static UClass* StaticClass();
 	};
 
@@ -166,6 +153,42 @@ namespace SDK
 	};
 
 	/**
+	 * Class AdvancedSessions.CancelFindSessionsCallbackProxy
+	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
+	 */
+	class UCancelFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x28];                                  // 0x0050(0x0028) MISSED OFFSET (PADDING)
+
+	public:
+		class UCancelFindSessionsCallbackProxy* CancelFindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AdvancedSessions.CreateSessionCallbackProxyAdvanced
+	 * Size -> 0x0088 (FullSize[0x00B8] - InheritedSize[0x0030])
+	 */
+	class UCreateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x68];                                  // 0x0050(0x0068) MISSED OFFSET (PADDING)
+
+	public:
+		class UCreateSessionCallbackProxyAdvanced* CreateAdvancedSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, class APlayerController* PlayerController, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class AdvancedSessions.AdvancedVoiceLibrary
 	 * Size -> 0x0000 (FullSize[0x0028] - InheritedSize[0x0028])
 	 */
@@ -192,24 +215,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class AdvancedSessions.CancelFindSessionsCallbackProxy
-	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
-	 */
-	class UCancelFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x28];                                  // 0x0050(0x0028) MISSED OFFSET (PADDING)
-
-	public:
-		class UCancelFindSessionsCallbackProxy* CancelFindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class AdvancedSessions.DestroySessionCallbackProxyAdvanced
 	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
 	 */
@@ -228,6 +233,19 @@ namespace SDK
 	};
 
 	/**
+	 * Class AdvancedSessions.AdvancedGameSession
+	 * Size -> 0x0050 (FullSize[0x0288] - InheritedSize[0x0238])
+	 */
+	class AAdvancedGameSession : public AGameSession
+	{
+	public:
+		TMap<struct FUniqueNetIdRepl, class FText>                   BanList;                                                 // 0x0238(0x0050) Transient, NativeAccessSpecifierPublic
+
+	public:
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class AdvancedSessions.EndSessionCallbackProxy
 	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
 	 */
@@ -242,78 +260,6 @@ namespace SDK
 
 	public:
 		class UEndSessionCallbackProxy* EndSession(class UObject* WorldContextObject, class APlayerController* PlayerController);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AdvancedSessions.FindFriendSessionCallbackProxy
-	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
-	 */
-	class UFindFriendSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
-
-	public:
-		class UFindFriendSessionCallbackProxy* FindFriendSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& FriendUniqueNetId);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AdvancedSessions.GetFriendsCallbackProxy
-	 * Size -> 0x0040 (FullSize[0x0070] - InheritedSize[0x0030])
-	 */
-	class UGetFriendsCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x20];                                  // 0x0050(0x0020) MISSED OFFSET (PADDING)
-
-	public:
-		class UGetFriendsCallbackProxy* GetAndStoreFriendsList(class UObject* WorldContextObject, class APlayerController* PlayerController);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AdvancedSessions.CreateSessionCallbackProxyAdvanced
-	 * Size -> 0x0088 (FullSize[0x00B8] - InheritedSize[0x0030])
-	 */
-	class UCreateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x68];                                  // 0x0050(0x0068) MISSED OFFSET (PADDING)
-
-	public:
-		class UCreateSessionCallbackProxyAdvanced* CreateAdvancedSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, class APlayerController* PlayerController, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bIsDedicatedServer, bool bUsePresence, bool bUseLobbiesIfAvailable, bool bAllowJoinViaPresence, bool bAllowJoinViaPresenceFriendsOnly, bool bAntiCheatProtected, bool bUsesStats, bool bShouldAdvertise);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AdvancedSessions.GetRecentPlayersCallbackProxy
-	 * Size -> 0x0060 (FullSize[0x0090] - InheritedSize[0x0030])
-	 */
-	class UGetRecentPlayersCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x40];                                  // 0x0050(0x0040) MISSED OFFSET (PADDING)
-
-	public:
-		class UGetRecentPlayersCallbackProxy* GetAndStoreRecentPlayersList(class UObject* WorldContextObject, const struct FBPUniqueNetId& UniqueNetId);
 		static UClass* StaticClass();
 	};
 
@@ -337,6 +283,42 @@ namespace SDK
 	};
 
 	/**
+	 * Class AdvancedSessions.FindFriendSessionCallbackProxy
+	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
+	 */
+	class UFindFriendSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
+
+	public:
+		class UFindFriendSessionCallbackProxy* FindFriendSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& FriendUniqueNetId);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AdvancedSessions.GetRecentPlayersCallbackProxy
+	 * Size -> 0x0060 (FullSize[0x0090] - InheritedSize[0x0030])
+	 */
+	class UGetRecentPlayersCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x40];                                  // 0x0050(0x0040) MISSED OFFSET (PADDING)
+
+	public:
+		class UGetRecentPlayersCallbackProxy* GetAndStoreRecentPlayersList(class UObject* WorldContextObject, const struct FBPUniqueNetId& UniqueNetId);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class AdvancedSessions.JoinSessionCallbackProxyAdvanced
 	 * Size -> 0x0150 (FullSize[0x0180] - InheritedSize[0x0030])
 	 */
@@ -351,24 +333,6 @@ namespace SDK
 
 	public:
 		class UJoinSessionCallbackProxyAdvanced* JoinSession(class UWorld* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult);
-		static UClass* StaticClass();
-	};
-
-	/**
-	 * Class AdvancedSessions.LoginUserCallbackProxy
-	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
-	 */
-	class ULoginUserCallbackProxy : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
-
-	public:
-		class ULoginUserCallbackProxy* LoginUser(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& UserID, const class FString& UserToken);
 		static UClass* StaticClass();
 	};
 
@@ -391,6 +355,42 @@ namespace SDK
 	};
 
 	/**
+	 * Class AdvancedSessions.GetFriendsCallbackProxy
+	 * Size -> 0x0040 (FullSize[0x0070] - InheritedSize[0x0030])
+	 */
+	class UGetFriendsCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x20];                                  // 0x0050(0x0020) MISSED OFFSET (PADDING)
+
+	public:
+		class UGetFriendsCallbackProxy* GetAndStoreFriendsList(class UObject* WorldContextObject, class APlayerController* PlayerController);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AdvancedSessions.LoginUserCallbackProxy
+	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
+	 */
+	class ULoginUserCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
+
+	public:
+		class ULoginUserCallbackProxy* LoginUser(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& UserID, const class FString& UserToken);
+		static UClass* StaticClass();
+	};
+
+	/**
 	 * Class AdvancedSessions.LogoutUserCallbackProxy
 	 * Size -> 0x0048 (FullSize[0x0078] - InheritedSize[0x0030])
 	 */
@@ -409,24 +409,6 @@ namespace SDK
 	};
 
 	/**
-	 * Class AdvancedSessions.UpdateSessionCallbackProxyAdvanced
-	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
-	 */
-	class UUpdateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase
-	{
-	public:
-		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
-		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
-		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
-
-	public:
-		class UUpdateSessionCallbackProxyAdvanced* UpdateSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bAllowJoinInProgress, bool bRefreshOnlineData, bool bIsDedicatedServer);
-		static UClass* StaticClass();
-	};
-
-	/**
 	 * Class AdvancedSessions.SendFriendInviteCallbackProxy
 	 * Size -> 0x0060 (FullSize[0x0090] - InheritedSize[0x0030])
 	 */
@@ -441,6 +423,24 @@ namespace SDK
 
 	public:
 		class USendFriendInviteCallbackProxy* SendFriendInvite(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBPUniqueNetId& UniqueNetIDInvited);
+		static UClass* StaticClass();
+	};
+
+	/**
+	 * Class AdvancedSessions.UpdateSessionCallbackProxyAdvanced
+	 * Size -> 0x0068 (FullSize[0x0098] - InheritedSize[0x0030])
+	 */
+	class UUpdateSessionCallbackProxyAdvanced : public UOnlineBlueprintCallProxyBase
+	{
+	public:
+		class UMulticastInlineDelegate                               OnSuccess;                                               // 0x0030(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0000[0xF];                                   // 0x0031(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		class UMulticastInlineDelegate                               OnFailure;                                               // 0x0040(0x0001) ELEMENT_SIZE_MISMATCH ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic
+		unsigned char                                                UnknownData_0001[0xF];                                   // 0x0041(0x000F) FIX WRONG SIZE OF PREVIOUS PROPERTY
+		unsigned char                                                UnknownData_0002[0x48];                                  // 0x0050(0x0048) MISSED OFFSET (PADDING)
+
+	public:
+		class UUpdateSessionCallbackProxyAdvanced* UpdateSession(class UObject* WorldContextObject, TArray<struct FSessionPropertyKeyPair> ExtraSettings, int32_t PublicConnections, int32_t PrivateConnections, bool bUseLAN, bool bAllowInvites, bool bAllowJoinInProgress, bool bRefreshOnlineData, bool bIsDedicatedServer);
 		static UClass* StaticClass();
 	};
 

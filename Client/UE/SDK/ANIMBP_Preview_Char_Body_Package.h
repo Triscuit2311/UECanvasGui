@@ -1,0 +1,22 @@
+﻿#pragma once
+
+/**
+ * Name: ReadyOrNot
+ * Version: 2
+ */
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x01)
+#endif
+
+namespace SDK
+{
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
+
+#include "ANIMBP_Preview_Char_Body_Structs.h"
+#include "ANIMBP_Preview_Char_Body_Classes.h"
+

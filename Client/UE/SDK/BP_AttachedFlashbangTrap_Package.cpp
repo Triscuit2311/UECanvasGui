@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -22,7 +22,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::CanApplyDamage(class UDamageType* InDamageType, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88227);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88239);
 		
 		struct
 		{
@@ -50,7 +50,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::ExplodeTrap()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88226);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88238);
 		
 		struct
 		{
@@ -72,7 +72,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::Server_ApplyDamage(class AReadyOrNotCharacter* InTriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88225);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88237);
 		
 		struct
 		{
@@ -96,7 +96,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::OnTrapTriggered(class AReadyOrNotCharacter* TriggeredBy)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88224);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88236);
 		
 		struct
 		{
@@ -129,7 +129,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::ReceivePointDamage(float Damage, class UDamageType* DamageType, const struct FVector& HitLocation, const struct FVector& HitNormal, class UPrimitiveComponent* HitComponent, const class FName& BoneName, const struct FVector& ShotFromDirection, class AController* InstigatedBy, class AActor* DamageCauser, const struct FHitResult& HitInfo)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88223);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88235);
 		
 		struct
 		{
@@ -178,7 +178,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::ReceiveRadialDamage(float DamageReceived, class UDamageType* DamageType, const struct FVector& Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88222);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88234);
 		
 		struct
 		{
@@ -214,7 +214,7 @@ namespace SDK
 	 */
 	void ABP_AttachedFlashbangTrap_C::ExecuteUbergraph_BP_AttachedFlashbangTrap(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88221);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(88233);
 		
 		struct
 		{
@@ -237,7 +237,7 @@ namespace SDK
 	 */
 	UClass* ABP_AttachedFlashbangTrap_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(88220);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(88232);
 		return ptr;
 	}
 

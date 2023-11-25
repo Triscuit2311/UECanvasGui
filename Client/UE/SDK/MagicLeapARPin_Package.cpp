@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -10,6 +10,41 @@ namespace SDK
 	// --------------------------------------------------
 	// # Structs Functions
 	// --------------------------------------------------
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		void                                               ReturnValue
+	 */
+	void AMagicLeapARPinInfoActorBase::OnUpdateARPinState()
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14168);
+		
+		struct
+		{
+		} params;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AMagicLeapARPinInfoActorBase.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AMagicLeapARPinInfoActorBase::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(696);
+		return ptr;
+	}
+
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
@@ -448,6 +483,86 @@ namespace SDK
 	UClass* UMagicLeapARPinComponent::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(694);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinContentBindings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapARPinContentBindings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(700);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		bool                                               InVisibilityOverride                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		void                                               ReturnValue
+	 */
+	void AMagicLeapARPinRenderer::SetVisibilityOverride(bool InVisibilityOverride)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14169);
+		
+		struct
+		{
+			bool                                               InVisibilityOverride;
+		} params;
+		params.InVisibilityOverride = InVisibilityOverride;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction AMagicLeapARPinRenderer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* AMagicLeapARPinRenderer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(697);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinSettings.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapARPinSettings::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(698);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UMagicLeapARPinSaveGame.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UMagicLeapARPinSaveGame::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(699);
 		return ptr;
 	}
 
@@ -1059,121 +1174,6 @@ namespace SDK
 	UClass* UMagicLeapARPinFunctionLibrary::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(695);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapARPin.MagicLeapARPinInfoActorBase.OnUpdateARPinState
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		void                                               ReturnValue
-	 */
-	void AMagicLeapARPinInfoActorBase::OnUpdateARPinState()
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14168);
-		
-		struct
-		{
-		} params;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AMagicLeapARPinInfoActorBase.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AMagicLeapARPinInfoActorBase::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(696);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function MagicLeapARPin.MagicLeapARPinRenderer.SetVisibilityOverride
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		bool                                               InVisibilityOverride                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		void                                               ReturnValue
-	 */
-	void AMagicLeapARPinRenderer::SetVisibilityOverride(bool InVisibilityOverride)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(14169);
-		
-		struct
-		{
-			bool                                               InVisibilityOverride;
-		} params;
-		params.InVisibilityOverride = InVisibilityOverride;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction AMagicLeapARPinRenderer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* AMagicLeapARPinRenderer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(697);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapARPinSettings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapARPinSettings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(698);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapARPinSaveGame.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapARPinSaveGame::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(699);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UMagicLeapARPinContentBindings.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UMagicLeapARPinContentBindings::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(700);
 		return ptr;
 	}
 

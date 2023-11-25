@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	UClass* UBP_Rifle_Laser_UMP45_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54637);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(38026);
 		return ptr;
 	}
 

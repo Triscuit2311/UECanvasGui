@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Gas_V2_C::OnDetonate_Blueprint()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54584);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37973);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ALauncherProjectile_Gas_V2_C::ExecuteUbergraph_LauncherProjectile_Gas_V2(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(54583);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(37972);
 		
 		struct
 		{
@@ -65,7 +65,7 @@ namespace SDK
 	 */
 	UClass* ALauncherProjectile_Gas_V2_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(54582);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(37971);
 		return ptr;
 	}
 

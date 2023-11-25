@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -24,7 +24,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::FindIconFromItemClass(class APlayerController* PlayerController, class ABaseItem* ItemClass, class UObject* __WorldContext, class UTexture2D** ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55203);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39384);
 		
 		struct
 		{
@@ -58,7 +58,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::IsFactorySkin(class USkinComponent* SkinClass, class UObject* __WorldContext, bool* ReturnValue)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55202);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39383);
 		
 		struct
 		{
@@ -90,7 +90,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetCharacterDataFromHandle(const class FName& Handle, class UObject* __WorldContext, struct FCharacterData* Data)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55201);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39382);
 		
 		struct
 		{
@@ -123,7 +123,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::PlayerStatusToText(EPlayerStatus Status, class APlayerCharacter* PlayerState, class UObject* __WorldContext, class FText* StatusText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55200);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39381);
 		
 		struct
 		{
@@ -159,7 +159,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetAmmoDescriptionForWeaponAndAmmo(class ABaseMagazineWeapon* Weapon, uint8_t AmmoType, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55199);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39380);
 		
 		struct
 		{
@@ -195,7 +195,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetAmmoTypeNameForWeaponAndAmmo(class ABaseMagazineWeapon* WeaponClass, uint8_t AmmoType, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55198);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39379);
 		
 		struct
 		{
@@ -229,7 +229,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetNonDefaultLoadouts(class UObject* __WorldContext, TArray<class FString>* Loadouts)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55197);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39378);
 		
 		struct
 		{
@@ -259,7 +259,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::CanCustomizeWeaponData(const struct FWeaponData& WeaponClass, class UObject* __WorldContext, bool* CanCustomize)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55196);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39377);
 		
 		struct
 		{
@@ -292,7 +292,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::CanCustomizeWeaponClass(class ABaseMagazineWeapon* WeaponClass, class UObject* __WorldContext, bool* CanCustomize)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55195);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39376);
 		
 		struct
 		{
@@ -326,7 +326,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetArmorCoverageText(EArmourCoverage Coverage, uint8_t Level, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55194);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39375);
 		
 		struct
 		{
@@ -362,7 +362,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetAttachmentTextData(class UWeaponAttachment* Attachment, class UObject* __WorldContext, ESlateVisibility* Visibility, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55193);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39374);
 		
 		struct
 		{
@@ -399,7 +399,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::ConstructEquipmentOverviewAmmoString(uint8_t AmmoType, int32_t MagazineCount, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55192);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39373);
 		
 		struct
 		{
@@ -435,7 +435,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::ItemWeightToText(float Weight, bool Fractional, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55191);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39372);
 		
 		struct
 		{
@@ -470,7 +470,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::MuzzleVelocityToText(float MuzzleVelocity, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55190);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39371);
 		
 		struct
 		{
@@ -503,7 +503,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetCaliberFromBlueprint(TSoftClassPtr<class ABaseItem> WeaponBlueprint, class UObject* __WorldContext, class FText* CaliberText)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55189);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39370);
 		
 		struct
 		{
@@ -535,7 +535,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetWeaponTypeLocalizedName(EWeaponType WeaponType, class UObject* __WorldContext, class FText* LocalizedName)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55188);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39369);
 		
 		struct
 		{
@@ -568,7 +568,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetFirstWeaponType(TArray<EWeaponType>* WeaponTypes, class UObject* __WorldContext, EWeaponType* WeaponType)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55187);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39368);
 		
 		struct
 		{
@@ -603,7 +603,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::FormatSpawnPoint(const class FText& SpawnPointFormat, const struct FSpawnPoints& Spawn, bool DoubleCost, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55186);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39367);
 		
 		struct
 		{
@@ -639,7 +639,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetActiveDeployablesText(class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55185);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39366);
 		
 		struct
 		{
@@ -669,7 +669,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::CreateOverviewDeployableListText(TArray<int32_t>* Deployables, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55184);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39365);
 		
 		struct
 		{
@@ -701,7 +701,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetActivePersonnelText(class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55183);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39364);
 		
 		struct
 		{
@@ -731,7 +731,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::CreateOverviewPersonnelListText(TArray<int32_t>* PersonnelList, class UObject* __WorldContext, class FText* Text)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55182);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39363);
 		
 		struct
 		{
@@ -764,7 +764,7 @@ namespace SDK
 	 */
 	void UBpPlanningMenuLibrary_C::GetSpawnForEntryNum(uint8_t SpawnNum, class UObject* __WorldContext, struct FSpawnPoints* OutSpawn)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(55181);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(39362);
 		
 		struct
 		{
@@ -794,7 +794,7 @@ namespace SDK
 	 */
 	UClass* UBpPlanningMenuLibrary_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(55180);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(39361);
 		return ptr;
 	}
 

@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -20,7 +20,7 @@ namespace SDK
 	 */
 	void ABaseImpactMesh_C::ReceiveBeginPlay()
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(25030);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46566);
 		
 		struct
 		{
@@ -42,7 +42,7 @@ namespace SDK
 	 */
 	void ABaseImpactMesh_C::ReceiveTick(float DeltaSeconds)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(25029);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46565);
 		
 		struct
 		{
@@ -66,7 +66,7 @@ namespace SDK
 	 */
 	void ABaseImpactMesh_C::ExecuteUbergraph_BaseImpactMesh(int32_t EntryPoint)
 	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(25028);
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(46564);
 		
 		struct
 		{
@@ -89,7 +89,7 @@ namespace SDK
 	 */
 	UClass* ABaseImpactMesh_C::StaticClass()
 	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(25027);
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(46563);
 		return ptr;
 	}
 

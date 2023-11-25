@@ -1,6 +1,6 @@
 ﻿/**
- * Name: ron
- * Version: 25346
+ * Name: ReadyOrNot
+ * Version: 2
  */
 
 #include "../SDK.h"
@@ -41,73 +41,6 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
-	 * 		Name   -> Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
-	 * 		Flags  -> ()
-	 * Parameters:
-	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UTemplateSequence*                           TemplateSequence                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		struct FMovieSceneSequencePlaybackSettings         Settings                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
-	 * 		class ATemplateSequenceActor*                      OutActor                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 * 		class UTemplateSequencePlayer*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	 */
-	class UTemplateSequencePlayer* UTemplateSequencePlayer::CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor)
-	{
-		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13435);
-		
-		struct
-		{
-			class UObject*                                     WorldContextObject;
-			class UTemplateSequence*                           TemplateSequence;
-			struct FMovieSceneSequencePlaybackSettings         Settings;
-			unsigned char                                      UnknownData_0000[0x4];
-			class ATemplateSequenceActor*                      OutActor;
-			class UTemplateSequencePlayer*                     ReturnValue;
-		} params;
-		params.WorldContextObject = WorldContextObject;
-		params.TemplateSequence = TemplateSequence;
-		params.Settings = Settings;
-		
-		auto flags = fn->FunctionFlags;
-		UObject::ProcessEvent(fn, &params);
-		fn->FunctionFlags = flags;
-		
-		if (OutActor != nullptr)
-			*OutActor = params.OutActor;
-		
-		return params.ReturnValue;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTemplateSequencePlayer.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTemplateSequencePlayer::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(407);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTemplateSequencePropertyScalingInstantiatorSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTemplateSequencePropertyScalingInstantiatorSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(412);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction USequenceCameraShakeCameraStandIn.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -116,34 +49,6 @@ namespace SDK
 	UClass* USequenceCameraShakeCameraStandIn::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(401);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTemplateSequencePropertyScalingEvaluatorSystem.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTemplateSequencePropertyScalingEvaluatorSystem::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(413);
-		return ptr;
-	}
-
-	/**
-	 * Function:
-	 * 		RVA    -> 0x00000000
-	 * 		Name   -> PredefinedFunction UTemplateSequenceSection.StaticClass
-	 * 		Flags  -> (Predefined, Static)
-	 * Parameters:
-	 * 		UClass*                                            ReturnValue
-	 */
-	UClass* UTemplateSequenceSection::StaticClass()
-	{
-		static UClass* ptr = UObject::GetObjectCasted<UClass>(409);
 		return ptr;
 	}
 
@@ -172,6 +77,20 @@ namespace SDK
 	UClass* USequenceCameraShakeSequencePlayer::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(404);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTemplateSequencePropertyScalingInstantiatorSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTemplateSequencePropertyScalingInstantiatorSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(412);
 		return ptr;
 	}
 
@@ -315,6 +234,73 @@ namespace SDK
 	/**
 	 * Function:
 	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTemplateSequencePropertyScalingEvaluatorSystem.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTemplateSequencePropertyScalingEvaluatorSystem::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(413);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
+	 * 		Flags  -> ()
+	 * Parameters:
+	 * 		class UObject*                                     WorldContextObject                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UTemplateSequence*                           TemplateSequence                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		struct FMovieSceneSequencePlaybackSettings         Settings                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
+	 * 		class ATemplateSequenceActor*                      OutActor                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 * 		class UTemplateSequencePlayer*                     ReturnValue                                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	 */
+	class UTemplateSequencePlayer* UTemplateSequencePlayer::CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor)
+	{
+		static UFunction* fn = UObject::GetObjectCasted<UFunction>(13435);
+		
+		struct
+		{
+			class UObject*                                     WorldContextObject;
+			class UTemplateSequence*                           TemplateSequence;
+			struct FMovieSceneSequencePlaybackSettings         Settings;
+			unsigned char                                      UnknownData_0000[0x4];
+			class ATemplateSequenceActor*                      OutActor;
+			class UTemplateSequencePlayer*                     ReturnValue;
+		} params;
+		params.WorldContextObject = WorldContextObject;
+		params.TemplateSequence = TemplateSequence;
+		params.Settings = Settings;
+		
+		auto flags = fn->FunctionFlags;
+		UObject::ProcessEvent(fn, &params);
+		fn->FunctionFlags = flags;
+		
+		if (OutActor != nullptr)
+			*OutActor = params.OutActor;
+		
+		return params.ReturnValue;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTemplateSequencePlayer.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTemplateSequencePlayer::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(407);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
 	 * 		Name   -> PredefinedFunction UTemplateSequenceTrack.StaticClass
 	 * 		Flags  -> (Predefined, Static)
 	 * Parameters:
@@ -337,6 +323,20 @@ namespace SDK
 	UClass* UTemplateSequenceSystem::StaticClass()
 	{
 		static UClass* ptr = UObject::GetObjectCasted<UClass>(411);
+		return ptr;
+	}
+
+	/**
+	 * Function:
+	 * 		RVA    -> 0x00000000
+	 * 		Name   -> PredefinedFunction UTemplateSequenceSection.StaticClass
+	 * 		Flags  -> (Predefined, Static)
+	 * Parameters:
+	 * 		UClass*                                            ReturnValue
+	 */
+	UClass* UTemplateSequenceSection::StaticClass()
+	{
+		static UClass* ptr = UObject::GetObjectCasted<UClass>(409);
 		return ptr;
 	}
 
