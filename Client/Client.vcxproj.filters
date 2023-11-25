@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="client_framework">
+      <UniqueIdentifier>{96bd2ef2-8745-419e-ab44-43abae5b444a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client_framework\utilities">
+      <UniqueIdentifier>{d820983c-c357-4b2d-ba44-55e3da5733dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client_framework\UE">
+      <UniqueIdentifier>{408daa50-3088-46e1-be30-c4b09a7529e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client_framework\UE\SDK">
+      <UniqueIdentifier>{d719197d-c375-41e6-b576-e463c74f28ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="client_lib.hpp">
+      <Filter>client_framework</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>client_framework\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\Overriden_Types.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK.h">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_extensions.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_hooks.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_data.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Global_Package.h">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="client_lib.cpp">
+      <Filter>client_framework</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\BasicTypes_Package.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\CoreUObject_Package.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\Engine_Package.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_extensions.cpp">
+      <Filter>client_framework\UE</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_hooks.cpp">
+      <Filter>client_framework\UE</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_data.cpp">
+      <Filter>client_framework\UE</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
