@@ -6,13 +6,12 @@
 
 namespace client_lib
 {
-
-
 	namespace globals
 	{
 		HMODULE h_module{nullptr};
 		std::atomic_bool interrupt{false};
 		std::atomic_bool running{true};
+
 		void exit()
 		{
 			running = false;
@@ -29,10 +28,12 @@ namespace client_lib
 		LOG("Initializing global modules");
 		modules::ue = std::make_unique<engine_data>();
 		modules::renderer = std::make_unique<engine_renderer>();
+		modules::ui = std::make_unique<engine_ui>();
 
 		LOG("Setting up game data");
 		modules::ue->init();
 		modules::renderer->init();
+		modules::ui->init();
 
 
 		LOG("Initializing UE4 Hooks");
@@ -40,17 +41,13 @@ namespace client_lib
 		INF("Initialized UE4 Hooks");
 
 
-		LOG("Syncing settings");
+		//LOG("Syncing settings");
 		// Load default or saved
 
 
-		LOG("Starting worker threads");
+		//LOG("Starting worker threads");
 		// spawn thread
 		// maybe use a pool
-
-
-
-		
 
 
 		LOG("Entering main loop");

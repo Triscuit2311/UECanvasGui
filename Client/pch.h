@@ -17,7 +17,6 @@
 #include <cstdint>
 
 #include "UE/SDK.h"
-
 #include "../Shared/logging.h"
 #include "client_lib.hpp"
 

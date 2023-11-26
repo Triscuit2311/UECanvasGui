@@ -13,21 +13,30 @@ public:
 
 	void init();
 
+	
 
+	void draw_text(SDK::UCanvas* canvas, const wchar_t* text, const SDK::FVector2D& pos, SDK::FLinearColor color) const;
+	void draw_text_f(SDK::UCanvas* canvas, const SDK::FString& text, const SDK::FVector2D& pos,
+	                 SDK::FLinearColor color) const;
+	void draw_text_outlined(SDK::UCanvas* canvas, const wchar_t* text, const SDK::FVector2D& pos, SDK::FLinearColor color) const;
+	void draw_text_c(SDK::UCanvas* canvas, const wchar_t* text, const SDK::FVector2D& pos, SDK::FLinearColor color, bool centered_x, bool centered_y, bool outlined) const;
+
+
+	void draw_filled_rect(SDK::UCanvas* canvas, const SDK::FVector2D& pos, float w, float h, SDK::FLinearColor color);
 
 	struct colors
 	{
 		SDK::FLinearColor none{ 0,0,0,0 };
-		SDK::FLinearColor red{1.0f, 0, 0, 1.0f};
-		SDK::FLinearColor l_red{1.0f, 0.3f, 0.3f, 1.0f};
-		SDK::FLinearColor green{0, 1.0f, 0, 1.0f};
-		SDK::FLinearColor l_green{0.3f, 1.0f, 0.3f, 1.0f};
-		SDK::FLinearColor blue{0, 0, 1.0f, 1.0f};
-		SDK::FLinearColor l_blue{0.3f, 0.3f, 1.0f, 1.0f};
+		SDK::FLinearColor red{ 1.0f, 0, 0, 1.0f };
+		SDK::FLinearColor l_red{ 1.0f, 0.3f, 0.3f, 1.0f };
+		SDK::FLinearColor green{ 0, 1.0f, 0, 1.0f };
+		SDK::FLinearColor l_green{ 0.3f, 1.0f, 0.3f, 1.0f };
+		SDK::FLinearColor blue{ 0, 0, 1.0f, 1.0f };
+		SDK::FLinearColor l_blue{ 0.3f, 0.3f, 1.0f, 1.0f };
 		SDK::FLinearColor black{ 0, 0, 0, 1.0f };
-		SDK::FLinearColor white{1.0f,1.0f,1.0f, 1.0f};
-		SDK::FLinearColor l_gray{0.7f, 0.7f, 0.7f, 1.0f};
-		SDK::FLinearColor d_gray{0.3f, 0.3f, 0.3f, 1.0f};
+		SDK::FLinearColor white{ 1.0f,1.0f,1.0f, 1.0f };
+		SDK::FLinearColor l_gray{ 0.7f, 0.7f, 0.7f, 1.0f };
+		SDK::FLinearColor d_gray{ 0.3f, 0.3f, 0.3f, 1.0f };
 		SDK::FLinearColor yellow{ 1.0f, 1.0f, 0, 1.0f };
 		SDK::FLinearColor l_yellow{ 1.0f, 1.0f, 0.3f, 1.0f };
 		SDK::FLinearColor cyan{ 0, 1.0f, 1.0f, 1.0f };
@@ -79,5 +88,4 @@ public:
 		SDK::FLinearColor slate_gray{ 0.4f, 0.5f, 0.6f, 1.0f };
 		SDK::FLinearColor l_slate_gray{ 0.5f, 0.6f, 0.7f, 1.0f };
 	} col;
-
 };

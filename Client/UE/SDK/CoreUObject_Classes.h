@@ -98,11 +98,13 @@ namespace SDK
 			return ret;
 		}
 		static UClass* FindClass(const std::string& name);
+#pragma warning(disable:4267)
 		template<typename T>
 		static T* GetObjectCasted(size_t index)
 		{
 			return static_cast<T*>(UObject::GetGlobalObjects().GetByIndex(index));
 		}
+#pragma warning(default:4267)
 		bool IsA(UClass* cmp) const;
 		void ExecuteUbergraph(int32_t EntryPoint);
 		void ProcessEvent(class UFunction* function, void* parms);

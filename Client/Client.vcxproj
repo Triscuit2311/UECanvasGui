@@ -153,18 +153,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Shared\logging.h" />
+    <ClInclude Include="animation.h" />
     <ClInclude Include="client_lib.hpp" />
     <ClInclude Include="engine_extensions.hpp" />
     <ClInclude Include="engine_hooks.hpp" />
     <ClInclude Include="engine_renderer.hpp" />
+    <ClInclude Include="engine_ui_elements.hpp" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="logging.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="string_utils.h" />
     <ClInclude Include="UE\Overriden_Types.hpp" />
     <ClInclude Include="UE\SDK.h" />
     <ClInclude Include="engine_data.hpp" />
     <ClInclude Include="UE\SDK\BasicTypes_Classes.h" />
     <ClInclude Include="UE\SDK\Global_Package.h" />
+    <ClInclude Include="engine_ui.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client_lib.cpp" />
@@ -172,6 +176,7 @@
     <ClCompile Include="engine_extensions.cpp" />
     <ClCompile Include="engine_hooks.cpp" />
     <ClCompile Include="engine_renderer.cpp" />
+    <ClCompile Include="engine_ui_elements.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -182,6 +187,7 @@
     <ClCompile Include="UE\SDK\CoreUObject_Package.cpp" />
     <ClCompile Include="UE\SDK\Engine_Package.cpp" />
     <ClCompile Include="engine_data.cpp" />
+    <ClCompile Include="engine_ui.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

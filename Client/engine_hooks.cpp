@@ -93,6 +93,11 @@ namespace engine_hooks
 			return;
 		}
 
+		client_lib::modules::ui->render_frame(canvas);
+		return;
+
+
+
 		// auto cw = float(canvas->SizeX / 2);
 		// auto ch = float(canvas->SizeY / 2);
 		// canvas->K2_DrawLine({ cw - 2,ch }, { cw + 2,ch }, 1, { 0,1,1,255 });
@@ -118,7 +123,6 @@ namespace engine_hooks
 		// 	canvas->K2_DrawText(kvp.second, ws.c_str() , pos_a, { 1,1 }, color_1, 1, color_2, { 5,5 }, false, false, false, color_2);
 		// 	//pos_a.Y += 30;
 		// }
-
 
 
 		if(client_lib::modules::renderer->default_font != nullptr)

@@ -16,9 +16,6 @@
     <Filter Include="client_framework">
       <UniqueIdentifier>{96bd2ef2-8745-419e-ab44-43abae5b444a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="client_framework\utilities">
-      <UniqueIdentifier>{d820983c-c357-4b2d-ba44-55e3da5733dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="client_framework\UE">
       <UniqueIdentifier>{408daa50-3088-46e1-be30-c4b09a7529e9}</UniqueIdentifier>
     </Filter>
@@ -28,13 +25,16 @@
     <Filter Include="pch">
       <UniqueIdentifier>{9df830db-5d01-49c1-bed9-0d76efce5d59}</UniqueIdentifier>
     </Filter>
+    <Filter Include="client_framework\utils">
+      <UniqueIdentifier>{d820983c-c357-4b2d-ba44-55e3da5733dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client_framework\UE\UI">
+      <UniqueIdentifier>{0dd03291-22ef-4986-9ba2-8b6639afc09e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client_lib.hpp">
       <Filter>client_framework</Filter>
-    </ClInclude>
-    <ClInclude Include="logging.h">
-      <Filter>client_framework\utilities</Filter>
     </ClInclude>
     <ClInclude Include="UE\Overriden_Types.hpp">
       <Filter>client_framework\UE</Filter>
@@ -65,6 +65,21 @@
     </ClInclude>
     <ClInclude Include="engine_renderer.hpp">
       <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\logging.h">
+      <Filter>client_framework\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="string_utils.h">
+      <Filter>client_framework\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>client_framework\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_ui.hpp">
+      <Filter>client_framework\UE\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_ui_elements.hpp">
+      <Filter>client_framework\UE\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +112,12 @@
     </ClCompile>
     <ClCompile Include="engine_renderer.cpp">
       <Filter>client_framework\UE</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_ui.cpp">
+      <Filter>client_framework\UE\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_ui_elements.cpp">
+      <Filter>client_framework\UE\UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
