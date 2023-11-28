@@ -81,6 +81,9 @@
     <ClInclude Include="engine_ui_elements.hpp">
       <Filter>client_framework\UE\UI</Filter>
     </ClInclude>
+    <ClInclude Include="ui_style.h">
+      <Filter>client_framework\UE\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

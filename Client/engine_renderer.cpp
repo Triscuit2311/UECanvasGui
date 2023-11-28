@@ -4,6 +4,11 @@
 
 engine_renderer::engine_renderer() = default;
 
+void engine_renderer::set_canvas(SDK::UCanvas* canvas)
+{
+	canvas_ = canvas;
+}
+
 engine_renderer& engine_renderer::operator=(const engine_renderer& other)
 {
 	if (this == &other)
@@ -45,9 +50,8 @@ void engine_renderer::init()
 	}
 
 	LOG("Setting default fonts");
-	try {
-
-
+	try
+	{
 		// default_font = fonts_map.find("Default__Font")->second;
 		// default_font = fonts_map.find("RobotoDistanceField")->second;
 		// default_font = fonts_map.find("TeutonNormal - Bold_Font")->second;
@@ -56,107 +60,145 @@ void engine_renderer::init()
 		// default_font = fonts_map.find("Roboto")->second;
 		// default_font = fonts_map.find("VCR_OSD_MONO_1_001_Font")->second;
 		// default_font = fonts_map.find("TeutonNormal_Font")->second;
-		//default_font = fonts_map.find("Louis_George_Cafe_Bold_Font")->second;
+		default_font = fonts_map.find("Louis_George_Cafe_Bold_Font")->second;
 		//default_font = fonts_map.find("Tungsten")->second;
 		// default_font = fonts_map.find("BebasNeue - Regular_Font")->second;
 		// default_font = fonts_map.find("rajdhani")->second;
 		// default_font = fonts_map.find("Arial")->second;
 		//default_font = fonts_map.find("Expressway")->second;
 		// default_font = fonts_map.find("Sarpanch")->second;
-		default_font = fonts_map.find("Barlow")->second;
+		//default_font = fonts_map.find("Barlow")->second;
 		// default_font = fonts_map.find("wwDigital")->second;
-
-	}catch (...)
+	}
+	catch (...)
 	{
 		ERR("Could not set default fonts");
 	}
 }
 
-void engine_renderer::draw_text(SDK::UCanvas* canvas, const wchar_t* text, 
-	const SDK::FVector2D& pos, const SDK::FLinearColor color) const
+void engine_renderer::draw_text(const wchar_t* text,
+                                const SDK::FVector2D& pos, const SDK::FLinearColor color) const
 {
-canvas->K2_DrawText(
-	default_font,	//font
-	text,			// wstr/ FString
-	pos,			// pos
-	{ 1.0f,1.0f },	// scale
-	color,			// col
-	1,				// kerning
-	col.none,		// shadow col
-	{ 0,0 },	// shadow offset
-	false,			// center on X axis
-	false,			// center on Y axis
-	false,			// outlined
-	col.black		// outline col
+	canvas_->K2_DrawText(
+		default_font, //font
+		text, // wstr/ FString
+		pos, // pos
+		{1.0f, 1.0f}, // scale
+		color, // col
+		1, // kerning
+		col.none, // shadow col
+		{0, 0}, // shadow offset
+		false, // center on X axis
+		false, // center on Y axis
+		false, // outlined
+		col.black // outline col
 	);
 }
 
-void engine_renderer::draw_text_f(SDK::UCanvas* canvas, const SDK::FString& text,
-	const SDK::FVector2D& pos, const SDK::FLinearColor color) const
+void engine_renderer::draw_text_f(const SDK::FString& text,
+                                  const SDK::FVector2D& pos, const SDK::FLinearColor color) const
 {
-	canvas->K2_DrawText(
-		default_font,	//font
-		text,			// wstr/ FString
-		pos,			// pos
-		{ 1.0f,1.0f },	// scale
-		color,			// col
-		1,				// kerning
-		col.none,		// shadow col
-		{ 0,0 },	// shadow offset
-		false,			// center on X axis
-		false,			// center on Y axis
-		false,			// outlined
-		col.black		// outline col
+	canvas_->K2_DrawText(
+		default_font, //font
+		text, // wstr/ FString
+		pos, // pos
+		{1.0f, 1.0f}, // scale
+		color, // col
+		1, // kerning
+		col.none, // shadow col
+		{0, 0}, // shadow offset
+		false, // center on X axis
+		false, // center on Y axis
+		false, // outlined
+		col.black // outline col
 	);
 }
 
-void engine_renderer::draw_text_outlined(SDK::UCanvas* canvas,
-	const wchar_t* text, const SDK::FVector2D& pos, const SDK::FLinearColor color) const
+void engine_renderer::draw_text_outlined(
+	const wchar_t* text, const SDK::FVector2D& pos,
+	const SDK::FLinearColor color) const
 {
-	canvas->K2_DrawText(
-		default_font,	//font
-		text,			// wstr/ FString
-		pos,			// pos
-		{ 1.0f,1.0f },	// scale
-		color,			// col
-		1,				// kerning
-		col.none,		// shadow col
-		{ 0,0 },	// shadow offset
-		false,			// center on X axis
-		false,			// center on Y axis
-		true,			// outlined
-		col.black		// outline col
+	canvas_->K2_DrawText(
+		default_font, //font
+		text, // wstr/ FString
+		pos, // pos
+		{1.0f, 1.0f}, // scale
+		color, // col
+		1, // kerning
+		col.none, // shadow col
+		{0, 0}, // shadow offset
+		false, // center on X axis
+		false, // center on Y axis
+		true, // outlined
+		col.black // outline col
 	);
 }
 
-void engine_renderer::draw_text_c(SDK::UCanvas* canvas, const wchar_t* text,
-	const SDK::FVector2D& pos, const SDK::FLinearColor color,
-	const bool centered_x, const bool centered_y,
-	const bool outlined) const
+void engine_renderer::draw_text_c(const wchar_t* text,
+                                  const SDK::FVector2D& pos, const SDK::FLinearColor color,
+                                  const bool centered_x, const bool centered_y,
+                                  const bool outlined) const
 {
-	canvas->K2_DrawText(
-		default_font,	//font
-		text,			// wstr/ FString
-		pos,			// pos
-		{ 1.0f,1.0f },	// scale
-		color,			// col
-		1,				// kerning
-		col.none,		// shadow col
-		{ 0,0 },	// shadow offset
-		centered_x,			// center on X axis
-		centered_y,			// center on Y axis
-		outlined,			// outlined
-		col.black		// outline col
+	canvas_->K2_DrawText(
+		default_font, //font
+		text, // wstr/ FString
+		pos, // pos
+		{1.0f, 1.0f}, // scale
+		color, // col
+		1, // kerning
+		col.none, // shadow col
+		{0, 0}, // shadow offset
+		centered_x, // center on X axis
+		centered_y, // center on Y axis
+		outlined, // outlined
+		col.black // outline col
 	);
 }
 
-void engine_renderer::draw_filled_rect(SDK::UCanvas* canvas, const SDK::FVector2D& pos, 
-	const float w, const float h, const SDK::FLinearColor color)
+void engine_renderer::draw_filled_rect(const SDK::FVector2D& pos,
+                                       const float w, const float h, const SDK::FLinearColor color) const
 {
-	for (float i = 0.0f; i < h; i += 1.0f) {
-		canvas->K2_DrawLine(
-			SDK::FVector2D{ pos.X, pos.Y + i },
-			SDK::FVector2D{ pos.X + w, pos.Y + i },
+	for (float i = 0.0f; i < h; i += 1.0f)
+	{
+		canvas_->K2_DrawLine(
+			SDK::FVector2D{pos.X, pos.Y + i},
+			SDK::FVector2D{pos.X + w, pos.Y + i},
 			1.0f, color);
 	}
+}
+
+void engine_renderer::draw_filled_rect(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b,
+                                       const SDK::FLinearColor color) const
+{
+	for (float i = 0.0f; i < abs(pos_a.Y - pos_b.Y); i += 1.0f)
+	{
+		canvas_->K2_DrawLine(
+			SDK::FVector2D{pos_a.X, pos_a.Y + i},
+			SDK::FVector2D{pos_a.X + abs(pos_a.X - pos_b.X), pos_a.Y + i},
+			1.0f, color);
+	}
+}
+
+void engine_renderer::draw_rect(
+	const SDK::FVector2D& pos, const float w, const float h,
+	const float thickness, const SDK::FLinearColor color) const
+{
+	canvas_->K2_DrawBox(pos, {w, h}, thickness, color);
+}
+
+void engine_renderer::draw_rect(
+	const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b,
+	const float thickness, const SDK::FLinearColor color) const
+{
+	canvas_->K2_DrawBox(pos_a, pos_b, thickness, color);
+}
+
+void engine_renderer::draw_line(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b,
+                                const float thickness, const SDK::FLinearColor color) const
+{
+	canvas_->K2_DrawLine(
+		pos_a,
+		pos_b,
+		thickness,
+		color);
 }

@@ -8,6 +8,8 @@ namespace client_lib
 {
 	namespace globals
 	{
+		std::atomic<float> cursor_x = 0;
+		std::atomic<float> cursor_y = 0;
 		HMODULE h_module{nullptr};
 		std::atomic_bool interrupt{false};
 		std::atomic_bool running{true};
@@ -59,7 +61,11 @@ namespace client_lib
 
 			if (GetAsyncKeyState(VK_END) & 1) { break; }
 
-			// top-level interface toggle   
+
+			POINT cursor_pos;
+			GetCursorPos(&cursor_pos);
+			globals::cursor_x = static_cast<float>(cursor_pos.x);
+			globals::cursor_y = static_cast<float>(cursor_pos.y);
 		}
 		LOG("Exited main loop");
 

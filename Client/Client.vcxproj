@@ -169,6 +169,7 @@
     <ClInclude Include="UE\SDK\BasicTypes_Classes.h" />
     <ClInclude Include="UE\SDK\Global_Package.h" />
     <ClInclude Include="engine_ui.hpp" />
+    <ClInclude Include="ui_style.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client_lib.cpp" />

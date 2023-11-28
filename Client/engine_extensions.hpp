@@ -27,5 +27,19 @@ namespace engine_extensions
 	template<typename T, typename Func>
 	void ForEach(const SDK::TArray<T>& array, Func function);
 
+
+
+	SDK::FLinearColor rgb_to_flinear(int r, int g, int b);
+	SDK::FLinearColor hex_to_flinear(const std::string& hex);
+
+
+	struct FRect
+	{
+		float TL;
+		float TR;
+		float BL;
+		float BR;
+	};
+
 }
 

@@ -234,5 +234,19 @@ namespace engine_extensions
 		);
 	}
 
+	SDK::FLinearColor rgb_to_flinear(int r, int g, int b)
+	{
+		return { float(r) / 255.0f,float(g) / 255.0f,float(b) / 255.0f ,1.0f };
+	}
 
+	SDK::FLinearColor hex_to_flinear(const std::string& hex)
+	{
+		if (hex.size() != 7 || hex[0] != '#')
+		{
+			return {0,0,0,1};
+		}
+		int r, g, b;
+		std::sscanf(hex.c_str(), "#%02x%02x%02x", &r, &g, &b);
+		return SDK::FLinearColor(float(r) / 255.0f, float(g) / 255.0f, float(b) / 255.0f, 1.0f);
+	}
 }

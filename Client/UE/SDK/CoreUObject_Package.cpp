@@ -717,7 +717,7 @@ namespace SDK
 	 * 		Flags  -> ()
 	 * Parameters:
 	 * 		                                                   ReturnValue
-	 * 		float                                              r
+	 * 		float                                              lr
 	 * 		float                                              g
 	 * 		float                                              b
 	 * 		float                                              a
