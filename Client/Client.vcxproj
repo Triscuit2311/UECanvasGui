@@ -155,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="..\Shared\logging.h" />
     <ClInclude Include="animation.h" />
+    <ClInclude Include="animations.h" />
     <ClInclude Include="client_lib.hpp" />
     <ClInclude Include="engine_extensions.hpp" />
     <ClInclude Include="engine_hooks.hpp" />

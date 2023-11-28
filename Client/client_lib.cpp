@@ -10,6 +10,9 @@ namespace client_lib
 	{
 		std::atomic<float> cursor_x = 0;
 		std::atomic<float> cursor_y = 0;
+		std::atomic<bool> mouse_down = false;
+
+
 		HMODULE h_module{nullptr};
 		std::atomic_bool interrupt{false};
 		std::atomic_bool running{true};
@@ -64,8 +67,12 @@ namespace client_lib
 
 			POINT cursor_pos;
 			GetCursorPos(&cursor_pos);
+
+
 			globals::cursor_x = static_cast<float>(cursor_pos.x);
 			globals::cursor_y = static_cast<float>(cursor_pos.y);
+			globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
+
 		}
 		LOG("Exited main loop");
 

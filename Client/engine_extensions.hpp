@@ -5,6 +5,8 @@ namespace engine_extensions
 	// This is the Pi val used in the engine from 4.1 -> 5+
 	static constexpr double UE4_PI = 3.1415926535897932384626433832795;
 
+
+	SDK::FVector2D lerp(const SDK::FVector2D& start, const SDK::FVector2D& end, const float alpha);
 	SDK::FVector get_bone_world_pos(SDK::USkeletalMeshComponent* mesh, int32_t bone_id);
 
 	SDK::FVector offset(const SDK::FVector& origin, const SDK::FVector& direction, float distance);
@@ -32,14 +34,6 @@ namespace engine_extensions
 	SDK::FLinearColor rgb_to_flinear(int r, int g, int b);
 	SDK::FLinearColor hex_to_flinear(const std::string& hex);
 
-
-	struct FRect
-	{
-		float TL;
-		float TR;
-		float BL;
-		float BR;
-	};
-
+	bool is_point_in_rect(const SDK::FVector2D& pt, const SDK::FVector2D& origin, const SDK::FVector2D& size);
 }
 

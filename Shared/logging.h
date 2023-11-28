@@ -9,8 +9,10 @@
 
 class ConsoleLogger {
 public:
-    ConsoleLogger() {
+    ConsoleLogger(): console_hdl(nullptr), console_saved_attrs(0)
+    {
     }
+
     void init()
     {
         if constexpr (USE_CONSOLE) {

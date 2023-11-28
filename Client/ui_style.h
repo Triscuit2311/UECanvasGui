@@ -25,11 +25,7 @@ namespace ui_style
 		SDK::FLinearColor cursor_outline{ engine_extensions::hex_to_flinear("#aec3b0") };
 	} colors;
 
-	inline struct control_dimensions
-	{
-		float w = 75;
-		float h = 15;
-	} control_dimensions;
+	inline SDK::FVector2D control_size = { 75, 15 };
 
 }
 

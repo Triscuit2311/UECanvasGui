@@ -3,8 +3,11 @@
 
 namespace engine_extensions
 {
+	SDK::FVector2D lerp(const SDK::FVector2D& start, const SDK::FVector2D& end, const float alpha) {
+		return { start.X + alpha * (end.X - start.X) ,start.Y + alpha * (end.Y - start.Y) };
+	}
 
-	SDK::FVector get_bone_world_pos(SDK::USkeletalMeshComponent* mesh, int32_t bone_id)
+	SDK::FVector get_bone_world_pos(SDK::USkeletalMeshComponent* mesh, const int32_t bone_id)
 	{
 		return mesh->GetSocketLocation(mesh->GetBoneName(bone_id));
 	}
@@ -76,14 +79,11 @@ namespace engine_extensions
 	//
 
 
-	SDK::FVector offset(const SDK::FVector& origin, const SDK::FVector& direction, float distance) {
+	SDK::FVector offset(const SDK::FVector& origin, const SDK::FVector& direction, const float distance) {
 		SDK::FVector vec;
-
-		// Calculate the new x, y, and z coordinates
 		vec.X = origin.X + direction.X * distance;
 		vec.Y = origin.Y + direction.Y * distance;
 		vec.Z = origin.Z + direction.Z * distance;
-
 		return vec;
 	}
 
@@ -99,15 +99,15 @@ namespace engine_extensions
 	}
 
 	SDK::FVector subtract(const SDK::FVector& a, const SDK::FVector& b) {
-		return SDK::FVector(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+		return { a.X - b.X, a.Y - b.Y, a.Z - b.Z };
 	}
 
 	SDK::FVector add(const SDK::FVector& a, const SDK::FVector& b) {
-		return SDK::FVector(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+		return { a.X + b.X, a.Y + b.Y, a.Z + b.Z };
 	}
 
-	SDK::FVector multiply(const SDK::FVector& v, float scalar) {
-		return SDK::FVector(v.X * scalar, v.Y * scalar, v.Z * scalar);
+	SDK::FVector multiply(const SDK::FVector& v, const float scalar) {
+		return { v.X * scalar, v.Y * scalar, v.Z * scalar };
 	}
 
 	float dot(const SDK::FVector& a, const SDK::FVector& b) {
@@ -115,51 +115,51 @@ namespace engine_extensions
 	}
 
 	SDK::FVector cross(const SDK::FVector& a, const SDK::FVector& b) {
-		return SDK::FVector(
+		return {
 			a.Y * b.Z - a.Z * b.Y,
 			a.Z * b.X - a.X * b.Z,
 			a.X * b.Y - a.Y * b.X
-		);
+		};
 	}
 
 	SDK::FVector normalize(const SDK::FVector& v) {
-		float length = sqrt(v.X * v.X + v.Y * v.Y + v.Z * v.Z);
-		return SDK::FVector(v.X / length, v.Y / length, v.Z / length);
+		const float length = sqrt(v.X * v.X + v.Y * v.Y + v.Z * v.Z);
+		return {v.X / length, v.Y / length, v.Z / length};
 	}
 
 
-	SDK::FRotator Subtract(const SDK::FRotator& a, const SDK::FRotator& b) {
-		return SDK::FRotator(a.Pitch - b.Pitch, a.Yaw - b.Yaw, a.Roll - b.Roll);
+	SDK::FRotator subtract(const SDK::FRotator& a, const SDK::FRotator& b) {
+		return {a.Pitch - b.Pitch, a.Yaw - b.Yaw, a.Roll - b.Roll};
 	}
 
-	SDK::FRotator Add(const SDK::FRotator& a, const SDK::FRotator& b) {
-		return SDK::FRotator(a.Pitch + b.Pitch, a.Yaw + b.Yaw, a.Roll + b.Roll);
+	SDK::FRotator add(const SDK::FRotator& a, const SDK::FRotator& b) {
+		return {a.Pitch + b.Pitch, a.Yaw + b.Yaw, a.Roll + b.Roll};
 	}
 
-	SDK::FRotator Multiply(const SDK::FRotator& r, float scalar) {
-		return SDK::FRotator(r.Pitch * scalar, r.Yaw * scalar, r.Roll * scalar);
+	SDK::FRotator multiply(const SDK::FRotator& r, const float scalar) {
+		return {r.Pitch * scalar, r.Yaw * scalar, r.Roll * scalar};
 	}
 
-	float Dot(const SDK::FRotator& a, const SDK::FRotator& b) {
-		// This might not make much sense for rotations
+	float dot(const SDK::FRotator& a, const SDK::FRotator& b) {
+		// this might not make much sense for rotations
 		return a.Pitch * b.Pitch + a.Yaw * b.Yaw + a.Roll * b.Roll;
 	}
 
-	SDK::FRotator Cross(const SDK::FRotator& a, const SDK::FRotator& b) {
+	SDK::FRotator cross(const SDK::FRotator& a, const SDK::FRotator& b) {
 		// Cross product is not defined for rotations in the same way as it is for vectors
 		return SDK::FRotator();
 	}
 
-	SDK::FRotator Normalize(const SDK::FRotator& r) {
+	SDK::FRotator normalize(const SDK::FRotator& r) {
 		// Normalizing a rotation might mean ensuring all angles are within a certain range
 		return SDK::FRotator(fmod(r.Pitch, 360.0f), fmod(r.Yaw, 360.0f), fmod(r.Roll, 360.0f));
 	}
 
-	SDK::FRotator Lerp(const SDK::FRotator& start, const SDK::FRotator& end, float t) {
+	SDK::FRotator lerp(const SDK::FRotator& start, const SDK::FRotator& end, float t) {
 		SDK::FRotator result;
 
 		// Helper function to compute the shortest angle difference
-		auto shortest_angle = [](float start, float end) {
+		auto shortest_angle = [](const float start, const float end) {
 			float diff = fmodf(end - start, 360.0f);
 			if (diff > 180.0f) {
 				diff -= 360.0f;
@@ -194,15 +194,15 @@ namespace engine_extensions
 	}
 
 
-	float CalculateRotationDistance(const SDK::FRotator& start, const SDK::FRotator& end) {
-		SDK::FRotator delta = end - start;
+	float calculate_rotation_distance(const SDK::FRotator& start, const SDK::FRotator& end) {
+		const SDK::FRotator delta = end - start;
 		return abs(delta.Pitch) + abs(delta.Yaw) + abs(delta.Roll);
 	}
 
-	SDK::FRotator SmoothRotateDistanceBased(const SDK::FRotator& start, const SDK::FRotator& end, float maxDegreesPerFrame) {
-		float distance = CalculateRotationDistance(start, end);
-		float t = min(maxDegreesPerFrame / distance, 1.0f);
-		return Lerp(start, end, t);
+	SDK::FRotator smooth_rotate_distance_based(const SDK::FRotator& start, const SDK::FRotator& end, float maxDegreesPerFrame) {
+		const float distance = calculate_rotation_distance(start, end);
+		const float t = min(maxDegreesPerFrame / distance, 1.0f);
+		return lerp(start, end, t);
 	}
 
 
@@ -219,24 +219,24 @@ namespace engine_extensions
 		return std::sqrt((b.X - a.X) * (b.X - a.X) + (b.Y - a.Y) * (b.Y - a.Y) + (b.Z - a.Z) * (b.Z - a.Z));
 	}
 
-	constexpr float DegreesToRadians(float degrees) {
+	constexpr float degrees_to_radians(const float degrees) {
 		return degrees * static_cast<float>(UE4_PI) / 180.0f;
 	}
 
 	SDK::FVector forward_vector(const SDK::FRotator& rot)
 	{
-		float pitchRad = DegreesToRadians(rot.Pitch);
-		float yawRad = DegreesToRadians(rot.Yaw);
-		return SDK::FVector(
-			cos(pitchRad) * cos(yawRad),
-			cos(pitchRad) * sin(yawRad),
-			sin(-pitchRad)
-		);
+		const float pitch_rad = degrees_to_radians(rot.Pitch);
+		const float yaw_rad = degrees_to_radians(rot.Yaw);
+		return {
+			cos(pitch_rad) * cos(yaw_rad),
+			cos(pitch_rad) * sin(yaw_rad),
+			sin(-pitch_rad)
+		};
 	}
 
-	SDK::FLinearColor rgb_to_flinear(int r, int g, int b)
+	SDK::FLinearColor rgb_to_flinear(const int r, const int g, const int b)
 	{
-		return { float(r) / 255.0f,float(g) / 255.0f,float(b) / 255.0f ,1.0f };
+		return { static_cast<float>(r) / 255.0f,static_cast<float>(g) / 255.0f,static_cast<float>(b) / 255.0f ,1.0f };
 	}
 
 	SDK::FLinearColor hex_to_flinear(const std::string& hex)
@@ -247,6 +247,15 @@ namespace engine_extensions
 		}
 		int r, g, b;
 		std::sscanf(hex.c_str(), "#%02x%02x%02x", &r, &g, &b);
-		return SDK::FLinearColor(float(r) / 255.0f, float(g) / 255.0f, float(b) / 255.0f, 1.0f);
+		return {static_cast<float>(r) / 255.0f, static_cast<float>(g) / 255.0f, static_cast<float>(b) / 255.0f, 1.0f};
+	}
+
+	bool is_point_in_rect(const SDK::FVector2D& pt, const SDK::FVector2D& origin, const SDK::FVector2D & size)
+	{
+		if (pt.X < origin.X) return false;
+		if (pt.X > origin.X + size.X) return false;
+		if (pt.Y < origin.Y) return false;
+		if (pt.Y > origin.Y + size.Y) return false;
+		return true;
 	}
 }

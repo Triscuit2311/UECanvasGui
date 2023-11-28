@@ -6,6 +6,14 @@
 void engine_ui::inc_tick()
 {
 	tick_ += 1;
+
+	const auto current_time = std::chrono::steady_clock::now();
+	fps_ct_ += 1;
+	if (current_time - last_time_ >= std::chrono::seconds(1)) {
+		fps = fps_ct_;
+		fps_ct_ = 0;
+		last_time_ = current_time;
+	}
 }
 
 unsigned long long engine_ui::tick() const
@@ -50,7 +58,7 @@ void engine_ui::render_frame(SDK::UCanvas* canvas)
 
 	try
 	{
-		window.render(cursor_pos_);
+		window.render(cursor_pos_, fps);
 	}
 	catch (...)
 	{
@@ -108,4 +116,10 @@ void engine_ui::debug_info_panel() const
 
 	client_lib::modules::renderer->draw_text(buffer, {110, 110},
 	                                         client_lib::modules::renderer->col.gold);
+
+	wchar_t buffer_a[100];
+	swprintf(buffer_a, std::size(buffer_a), L"FPS: %f.0", fps);
+
+	client_lib::modules::renderer->draw_text(buffer_a, { 110, 130 },
+		client_lib::modules::renderer->col.gold);
 }

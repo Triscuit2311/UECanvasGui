@@ -84,6 +84,9 @@
     <ClInclude Include="ui_style.h">
       <Filter>client_framework\UE\UI</Filter>
     </ClInclude>
+    <ClInclude Include="animations.h">
+      <Filter>client_framework\UE\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
