@@ -22,8 +22,8 @@ public:
 	                 SDK::FLinearColor color) const;
 	void draw_text_outlined(const wchar_t* text, const SDK::FVector2D& pos,
 	                        SDK::FLinearColor color) const;
-	void draw_text_c(const wchar_t* text, const SDK::FVector2D& pos,
-	                 SDK::FLinearColor color, bool centered_x, bool centered_y, bool outlined) const;
+	void draw_text_c(const SDK::FString text, const SDK::FVector2D& pos,
+	                 const SDK::FLinearColor color, const bool centered_x, const bool centered_y, const bool outlined) const;
 
 	void draw_filled_rect(const SDK::FVector2D& pos, float w, float h,
 	                      SDK::FLinearColor color) const;
@@ -38,6 +38,10 @@ public:
 	void draw_line(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b,
 	               const float thickness, const SDK::
 	               FLinearColor color) const;
+	void draw_triangle(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b, const SDK::FVector2D& pos_c,
+	                   SDK::FLinearColor color, float thickness) const;
+	void draw_filled_triangle(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b, const SDK::FVector2D& pos_c,
+	                          SDK::FLinearColor color) const;
 
 
 	struct colors

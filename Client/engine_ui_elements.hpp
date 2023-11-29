@@ -6,41 +6,77 @@ class engine_ui;
 
 struct Control
 {
-	SDK::FVector2D offset;
-	SDK::FVector2D size;
+	SDK::FVector2D offset ={};
+	SDK::FVector2D size = {};
 	SDK::FString label;
-
-	bool hovered = false;
-
+	bool interactable_hovered = false;
+	int slots = 1;
 
 	// Constructor
-	Control(const SDK::FString text, const SDK::FVector2D& pos, const SDK::FVector2D& sz) : offset(pos), size(sz),
-		label(text)
+	Control(const SDK::FString text): label(text)
 	{
 	}
 
 	// Virtual render function - can be omitted if not needed
-	virtual void render(const SDK::FVector2D& root_pos) = 0;
-	virtual bool is_hovered(const SDK::FVector2D& cursor_pos) = 0;
+	virtual void render(const SDK::FVector2D& root_pos, bool mouse_down) = 0;
+	virtual bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) = 0;
+};
 
-	static SDK::FVector2D get_default_size()
+struct Label : public Control
+{
+	Label(const SDK::FString label)
+		: Control(label)
 	{
-		return ui_style::control_size;
 	}
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
 };
 
 struct Toggle : public Control
 {
 	std::atomic<bool>& val;
+	bool was_just_toggled;
+	bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos);
 
-	Toggle(const SDK::FString label, std::atomic<bool>& val, const SDK::FVector2D& pos, const SDK::FVector2D& sz)
-		: Control(label, pos, sz), val(val)
+	Toggle(const SDK::FString label, std::atomic<bool>& val)
+		: Control(label), val(val)
 	{
 	}
 
-	void render(const SDK::FVector2D& root_pos) override;
-	bool is_hovered(const SDK::FVector2D& cursor_pos) override;
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
 };
+
+struct Button : public Control
+{
+	std::function<void()>& func;
+	bool was_just_used = false;
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) override;
+	Button(const SDK::FString label, std::function<void()>& action)
+		: Control(label), func(action)
+	{
+	}
+};
+
+
+struct IntSlider : public Control
+{
+	std::atomic<int>& val;
+	int min_val;
+	int max_val;
+	bool was_just_used = false;
+	SDK::FVector2D last_mouse_pos = {};
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) override;
+	IntSlider(const SDK::FString label, std::atomic<int>& val, const int min_v, const int max_v)
+		: Control(label), val(val), min_val(min_v), max_val(max_v)
+	{
+		slots = 2;
+	}
+};
+
 
 
 //todo: determine max control width
@@ -59,6 +95,7 @@ private:
 	SDK::FVector2D next_control_position_;
 
 	bool window_hovered_ = false;
+	bool window_selected_ = false;
 	bool header_hovered_ = false;
 	bool header_grabbed_ = false;
 	bool can_use_controls_ = true;
@@ -80,20 +117,34 @@ public:
 	template <typename T, typename... Args>
 	void add_control(Args&&... args)
 	{
-		auto control = std::make_shared<T>(std::forward<Args>(args)..., next_control_position_, T::get_default_size());
-		controls_.push_back(control);
-		next_control_position_.Y += T::get_default_size().Y + ui_style::spacing;
+		auto control = std::make_shared<T>(std::forward<Args>(args)...);
+		control->offset = next_control_position_;
+		control->size.Y = control->slots * ui_style::control_size.Y;
+		control->size.X = ui_style::control_size.X;
 
+		controls_.push_back(control);
+
+
+		next_control_position_.Y += (control->slots * ui_style::control_size.Y)  + ui_style::spacing;
 
 		// controls size + 1 because of header
-		size.Y =
-			((controls_.size() + 1) * ui_style::control_size.Y) +
-			((controls_.size()) * ui_style::spacing) +
-			ui_style::margins.tb;
+
+		size.Y = ui_style::control_size.Y + ui_style::margins.tb; // min size for header
+		for (const auto & c: controls_)
+		{
+			size.Y += ui_style::control_size.Y * c->slots;
+			size.Y += ui_style::spacing;
+		}
+
+		// size.Y =
+		// 	((controls_.size() + 1) * ui_style::control_size.Y) +
+		// 	((controls_.size()) * ui_style::spacing) +
+		// 	ui_style::margins.tb;
 
 		size.X = ui_style::control_size.X + (ui_style::margins.lr * 2);
 
 	}
+
 
 	
 

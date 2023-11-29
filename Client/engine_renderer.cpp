@@ -134,7 +134,7 @@ void engine_renderer::draw_text_outlined(
 	);
 }
 
-void engine_renderer::draw_text_c(const wchar_t* text,
+void engine_renderer::draw_text_c(const SDK::FString text,
                                   const SDK::FVector2D& pos, const SDK::FLinearColor color,
                                   const bool centered_x, const bool centered_y,
                                   const bool outlined) const
@@ -201,4 +201,45 @@ void engine_renderer::draw_line(const SDK::FVector2D& pos_a, const SDK::FVector2
 		pos_b,
 		thickness,
 		color);
+}
+
+void engine_renderer::draw_triangle(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b,
+	const SDK::FVector2D& pos_c,
+	const SDK::FLinearColor color, const float thickness) const
+{
+	canvas_->K2_DrawLine(
+		pos_a,
+		pos_b,
+		thickness,
+		color);
+	canvas_->K2_DrawLine(
+		pos_a,
+		pos_c,
+		thickness,
+		color);
+	canvas_->K2_DrawLine(
+		pos_c,
+		pos_b,
+		thickness,
+		color);
+}
+void engine_renderer::draw_filled_triangle(const SDK::FVector2D& pos_a, const SDK::FVector2D& pos_b, 
+	const SDK::FVector2D& pos_c,
+	 const SDK::FLinearColor color) const
+{
+	const int num_lines = max(abs(pos_b.X - pos_c.X), abs(pos_b.Y - pos_c.Y));
+
+	for (int i = 0; i <= num_lines; ++i) {
+		const float lerp_factor = static_cast<float>(i) / num_lines;
+
+		// Interpolate between pos_b and pos_c
+		SDK::FVector2D intermediate_point;
+		intermediate_point.X = pos_b.X + lerp_factor * (pos_c.X - pos_b.X);
+		intermediate_point.Y = pos_b.Y + lerp_factor * (pos_c.Y - pos_b.Y);
+		canvas_->K2_DrawLine(
+			pos_a,
+			intermediate_point,
+			1,
+			color);
+	}
 }

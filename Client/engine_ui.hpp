@@ -26,11 +26,15 @@ public:
 
 	Window window;
 
-	std::atomic<bool> toggleValue = false;
-	std::atomic<int> sliderIntValue = 0;
+
+	std::atomic<bool> toggled_1 = true;
+	std::atomic<bool> toggled_2 = false;
+	std::atomic<bool> toggled_3 = false;
+
+	std::atomic<int> sliderIntValue = 43;
 	std::atomic<float> sliderFloatValue = 0.0f;
 	std::atomic<size_t> comboBoxIndex = 0;
-	//std::atomic<std::function<void>> = { []() { std::cout << "Button pressed!\n"; } };
+	std::function<void()> test_func = []() { SPE("Button pressed!"); };
 };
 
 

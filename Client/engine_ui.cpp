@@ -26,16 +26,16 @@ void engine_ui::init()
 	tick_ = 0;
 	cursor_pos_ = {0, 0};
 
-	std::atomic<bool> toggleVal = true;
-	std::atomic<int> sliderVal = 0;
-
 	window.init(L"Winduh");
-	window.add_control<Toggle>(L"L1", toggleVal);
-	window.add_control<Toggle>(L"L2", toggleVal);
-	window.add_control<Toggle>(L"L3", toggleVal);
+	window.add_control<Toggle>(L"Aimbot", toggled_1);
 
+	window.add_control<Button>(L"Banana", test_func);
+	window.add_control<IntSlider>(L"Slippy: %d", sliderIntValue, 0, 100);
+	window.add_control<Toggle>(L"Penis Enlargement", toggled_2);
+	window.add_control<Toggle>(L"Snuffaluffgus", toggled_3);
 
 	window.position.X = 400;
+
 }
 
 
@@ -59,11 +59,11 @@ void engine_ui::render_frame(SDK::UCanvas* canvas)
 	try
 	{
 		window.render(cursor_pos_, fps);
+
 	}
 	catch (...)
 	{
 	}
-
 
 	draw_cursor();
 }
@@ -118,7 +118,7 @@ void engine_ui::debug_info_panel() const
 	                                         client_lib::modules::renderer->col.gold);
 
 	wchar_t buffer_a[100];
-	swprintf(buffer_a, std::size(buffer_a), L"FPS: %f.0", fps);
+	swprintf(buffer_a, std::size(buffer_a), L"FPS: %0.f", fps);
 
 	client_lib::modules::renderer->draw_text(buffer_a, { 110, 130 },
 		client_lib::modules::renderer->col.gold);
