@@ -21,20 +21,55 @@ public:
 	void init();
 	void render_frame(SDK::UCanvas* canvas);
 	void draw_cursor() const;
-
 	void debug_info_panel() const;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	Window window;
 
-
+	
 	std::atomic<bool> toggled_1 = true;
 	std::atomic<bool> toggled_2 = false;
-	std::atomic<bool> toggled_3 = false;
 
-	std::atomic<int> sliderIntValue = 43;
-	std::atomic<float> sliderFloatValue = 0.0f;
+	std::atomic<int> sliderIntValue = 4;
+	std::atomic<int> sliderIntValue2 = 4;
+	std::atomic<float> sliderFloatValue = 8.5f;
 	std::atomic<size_t> comboBoxIndex = 0;
 	std::function<void()> test_func = []() { SPE("Button pressed!"); };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 

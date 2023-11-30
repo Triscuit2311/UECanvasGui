@@ -51,8 +51,11 @@ namespace ui_style
 		SDK::FLinearColor text{ engine_extensions::hex_to_flinear(WISTERIA_LIGHT_PURPLE) };
 		SDK::FLinearColor text_highlight{ engine_extensions::hex_to_flinear(SELECTIVE_YELLOW) };
 
+
 		SDK::FLinearColor window_bg{ engine_extensions::hex_to_flinear(BLACK_1) };
 		SDK::FLinearColor window_fg{ engine_extensions::hex_to_flinear(CHARCOAL_GRAY) };
+		SDK::FLinearColor seperator{ engine_extensions::hex_to_flinear(CHARCOAL_GRAY) };
+
 
 		SDK::FLinearColor control_bg{ engine_extensions::hex_to_flinear(SILVER_GRAY) };
 		SDK::FLinearColor control_fg{ engine_extensions::hex_to_flinear(BLACK_1) };

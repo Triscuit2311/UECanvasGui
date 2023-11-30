@@ -4,6 +4,7 @@
 #include "animations.h"
 
 
+
 void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 {
 	const SDK::FVector2D line_left = {
@@ -21,6 +22,110 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 
 
 	const float val_in_percent_range = (float(val - min_val) / float(max_val - min_val)) * 100.0f;
+	const float slider_x_pos = line_left.X + ((size.X - (ui_style::margins.lr * 4)) / 100.0f) * val_in_percent_range;
+
+	const SDK::FVector2D tri_root = {
+		 slider_x_pos, line_right.Y
+	};
+
+	client_lib::modules::renderer->draw_filled_triangle(
+		tri_root,
+		{ tri_root.X - (size.Y / 6), tri_root.Y + (size.Y / 4) },
+		{ tri_root.X + (size.Y / 6), tri_root.Y + (size.Y / 4) },
+		ui_style::colors.control_fg);
+	client_lib::modules::renderer->draw_triangle(
+		tri_root,
+		{ tri_root.X - (size.Y / 6), tri_root.Y + (size.Y / 4) },
+		{ tri_root.X + (size.Y / 6), tri_root.Y + (size.Y / 4) },
+		ui_style::colors.control_bg, 1);
+
+
+	if (interactable_hovered)
+	{
+		client_lib::modules::renderer->draw_rect({ line_left.X - 1, line_left.Y - 1 },
+			line_right.X - line_left.X + 2, 2, 1,
+			ui_style::colors.control_hovered_outline);
+		client_lib::modules::renderer->draw_triangle(
+			tri_root,
+			{ tri_root.X - (size.Y / 6), tri_root.Y + (size.Y / 4) },
+			{ tri_root.X + (size.Y / 6), tri_root.Y + (size.Y / 4) },
+			ui_style::colors.control_bg, 1);
+
+
+
+
+		if (mouse_down)
+		{
+			client_lib::modules::renderer->draw_rect({ line_left.X - 1, line_left.Y - 1 },
+				line_right.X - line_left.X + 2, 2, 1,
+				ui_style::colors.control_selected_outline);
+			client_lib::modules::renderer->draw_triangle(
+				tri_root,
+				{ tri_root.X - (size.Y / 6), tri_root.Y + (size.Y / 4) },
+				{ tri_root.X + (size.Y / 6), tri_root.Y + (size.Y / 4) },
+				ui_style::colors.control_bg, 1);
+
+
+			// FIX ME: Slider does not allow val to get to max_val. the last 10-20% of the slider does not work as expected.
+
+
+			float new_slider_pos = animation::lerp<float>(slider_x_pos, last_mouse_pos.X, 0.75f);
+
+			const float slider_percentage = ((new_slider_pos - line_left.X) / (size.X - (ui_style::margins.lr * 4))) * 100.0f;
+
+			const float val_from_slider = min_val + ((slider_percentage / 100.0f) * (max_val - min_val));
+
+			val = static_cast<int>(max(min_val, min(val_from_slider, max_val)));
+
+			// END FIX ME
+		}
+	}
+
+	interactable_hovered = false;
+
+
+	wchar_t label_buffer[100];
+	swprintf(label_buffer, std::size(label_buffer), label.wc_str(), val.load());
+
+	client_lib::modules::renderer->draw_text_c(label_buffer,
+		{
+			root_pos.X + offset.X + (size.X / 2) - ui_style::margins.lr,
+			root_pos.Y + offset.Y
+		},
+		ui_style::colors.text, true, false, false);
+}
+
+bool IntSlider::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
+{
+	interactable_hovered = engine_extensions::is_point_in_rect(cursor_pos,
+		{
+			root_pos.X + offset.X,
+			root_pos.Y + offset.Y + (size.Y / 2)
+		},
+		{ size.X, size.Y / 2 }
+	);
+	last_mouse_pos = cursor_pos;
+	return interactable_hovered;
+}
+
+
+void FloatSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
+{
+	const SDK::FVector2D line_left = {
+		root_pos.X + offset.X + (ui_style::margins.lr * 2), root_pos.Y + offset.Y + (size.Y / 2)
+	};
+	const SDK::FVector2D line_right = {
+		root_pos.X + offset.X + size.X - (ui_style::margins.lr * 2), root_pos.Y + offset.Y + (size.Y / 2)
+	};
+
+
+	client_lib::modules::renderer->draw_line(
+		line_left,
+		line_right,
+		2, ui_style::colors.control_bg);
+
+
+	const float val_in_percent_range = ((val - min_val) / (max_val - min_val)) * 100.0f;
 	const float slider_x_pos = line_left.X + ((size.X - (ui_style::margins.lr * 4)) / 100.0f) * val_in_percent_range;
 
 	const SDK::FVector2D tri_root = {
@@ -50,9 +155,6 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 			{tri_root.X + (size.Y / 6), tri_root.Y + (size.Y / 4)},
 			ui_style::colors.control_bg, 1);
 
-
-
-
 		if (mouse_down)
 		{
 			client_lib::modules::renderer->draw_rect({ line_left.X - 1, line_left.Y - 1 },
@@ -65,13 +167,13 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 				ui_style::colors.control_bg, 1);
 
 
-			const float new_slider_pos = animation::lerp<float>(slider_x_pos, last_mouse_pos.X, 0.5f);
+			const float new_slider_pos = animation::lerp<float>(slider_x_pos, last_mouse_pos.X, 0.55f);
 
 			const float slider_percentage = ((new_slider_pos - line_left.X) / (size.X - (ui_style::margins.lr * 4))) * 100.0f;
 
 			const float val_from_slider = min_val + ((slider_percentage / 100.0f) * (max_val - min_val));
 
-			val = int(max(min_val, min(val_from_slider, max_val)));
+			val = max(min_val, min(val_from_slider, max_val));
 		}
 	}
 
@@ -89,7 +191,7 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 	                                           ui_style::colors.text, true, false, false);
 }
 
-bool IntSlider::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
+bool FloatSlider::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
 {
 	interactable_hovered = engine_extensions::is_point_in_rect(cursor_pos,
 	                                                           {
@@ -153,6 +255,15 @@ bool Button::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK
 }
 
 
+void Empty::render(const SDK::FVector2D& root_pos, bool mouse_down)
+{
+}
+
+bool Empty::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
+{
+	return false;
+}
+
 void Label::render(const SDK::FVector2D& root_pos, bool mouse_down)
 {
 	client_lib::modules::renderer->draw_text_c(label,
@@ -161,6 +272,32 @@ void Label::render(const SDK::FVector2D& root_pos, bool mouse_down)
 		                                           root_pos.Y + offset.Y + (size.Y / 2)
 	                                           },
 	                                           ui_style::colors.text, true, true, false);
+}
+
+bool Label::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
+{
+	return false;
+}
+
+void Seperator::render(const SDK::FVector2D& root_pos, bool mouse_down)
+{
+	const SDK::FVector2D line_left = {
+	root_pos.X + offset.X + (ui_style::margins.lr), root_pos.Y + offset.Y + (size.Y / 2)
+	};
+	const SDK::FVector2D line_right = {
+		root_pos.X + offset.X + size.X - (ui_style::margins.lr), root_pos.Y + offset.Y + (size.Y / 2)
+	};
+
+	client_lib::modules::renderer->draw_line(
+		line_left,
+		line_right,
+		1, ui_style::colors.seperator);
+
+}
+
+bool Seperator::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)
+{
+	return false;
 }
 
 bool Toggle::is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos)

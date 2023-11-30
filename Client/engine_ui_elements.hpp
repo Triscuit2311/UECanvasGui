@@ -22,6 +22,19 @@ struct Control
 	virtual bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) = 0;
 };
 
+struct Empty : public Control
+{
+	Empty(const int slots)
+		: Control(L"")
+	{
+		this->slots = slots;
+	}
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	virtual bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos);
+
+};
+
 struct Label : public Control
 {
 	Label(const SDK::FString label)
@@ -30,7 +43,20 @@ struct Label : public Control
 	}
 
 	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	virtual bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos);
 };
+
+struct Seperator : public Control
+{
+	Seperator(const SDK::FString label)
+		: Control(label)
+	{
+	}
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	virtual bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos);
+};
+
 
 struct Toggle : public Control
 {
@@ -71,6 +97,23 @@ struct IntSlider : public Control
 	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
 	bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) override;
 	IntSlider(const SDK::FString label, std::atomic<int>& val, const int min_v, const int max_v)
+		: Control(label), val(val), min_val(min_v), max_val(max_v)
+	{
+		slots = 2;
+	}
+};
+
+struct FloatSlider : public Control
+{
+	std::atomic<float>& val;
+	float min_val;
+	float max_val;
+	bool was_just_used = false;
+	SDK::FVector2D last_mouse_pos = {};
+
+	void render(const SDK::FVector2D& root_pos, bool mouse_down) override;
+	bool is_interactable_hovered(const SDK::FVector2D& cursor_pos, const SDK::FVector2D& root_pos) override;
+	FloatSlider(const SDK::FString label, std::atomic<float>& val, const float min_v, const float max_v)
 		: Control(label), val(val), min_val(min_v), max_val(max_v)
 	{
 		slots = 2;

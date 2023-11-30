@@ -26,16 +26,23 @@ void engine_ui::init()
 	tick_ = 0;
 	cursor_pos_ = {0, 0};
 
-	window.init(L"Winduh");
-	window.add_control<Toggle>(L"Aimbot", toggled_1);
+	window.init(L"Smoothie Machine");
 
-	window.add_control<Button>(L"Banana", test_func);
-	window.add_control<IntSlider>(L"Slippy: %d", sliderIntValue, 0, 100);
-	window.add_control<Toggle>(L"Penis Enlargement", toggled_2);
-	window.add_control<Toggle>(L"Snuffaluffgus", toggled_3);
+	window.add_control<Label>(L"Ingredients:");
+	window.add_control<Toggle>(L"Use Strawberry", toggled_1);
+	window.add_control<Toggle>(L"Use Banana", toggled_2);
+	window.add_control<IntSlider>(L"You have %d of blueberries", sliderIntValue, 0, 10);
+
+	window.add_control<Seperator>(L"");
+
+	window.add_control<IntSlider>(L"Power Setting: %d", sliderIntValue2, -30, 30);
+	window.add_control<FloatSlider>(L"Ice Amount: %.1f", sliderFloatValue, 0.0f, 20.0f);
+
+	window.add_control<Seperator>(L"");
+
+	window.add_control<Button>(L"Make Smoothie", test_func);
 
 	window.position.X = 400;
-
 }
 
 
