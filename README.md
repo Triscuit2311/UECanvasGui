@@ -29,7 +29,7 @@ window.init(L"Smoothie Machine");
 window.add_control<Label>(L"Ingredients:");
 window.add_control<Toggle>(L"Use Strawberry", toggled_1);
 window.add_control<Toggle>(L"Use Banana", toggled_2);
-window.add_control<IntSlider>(L"You have %d of blueberries", sliderIntValue, 0, 10);
+window.add_control<IntSlider>(L"%d blueberries", sliderIntValue, 0, 10);
 window.add_control<Seperator>(L"");
 window.add_control<IntSlider>(L"Power Setting: %d", sliderIntValue2, -30, 30);
 window.add_control<FloatSlider>(L"Ice Amount: %.1f", sliderFloatValue, 0.0f, 20.0f);
