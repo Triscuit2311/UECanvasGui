@@ -37,15 +37,5 @@ window.add_control<Seperator>(L"");
 window.add_control<Button>(L"Make Smoothie", test_func);
 ```
 
-## Installation
-*Instructions for installing and setting up the UE_InternalFramework.*
-
-## Contributing
-*Guidelines for contributing to the UE_InternalFramework.*
-
 ## License
-*Specify the license under which the project is released.*
-
----
-
-This `README.md` is structured to provide clear and concise information about your project, its features, and how it can be used. You can further expand each section with more details, installation instructions, contribution guidelines, and license information.
+[Licenced under the MIT License](LICENSE)
