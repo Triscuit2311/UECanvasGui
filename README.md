@@ -1,7 +1,6 @@
 # UECanvasGui
 
-UECanvasGui is a sophisticated internal mod framework for Unreal Engine (versions 4 & 5). It leverages a post-render function hook to utilize the game's canvas rendering system for drawing. The framework is built using modern C++20 features, emphasizing efficient and streamlined game modding.
-
+UECanvasGui is a sophisticated internal mod framework for Unreal Engine (versions 4 & 5). It leverages a post-render function hook to utilize the game's canvas rendering system for drawing. The framework is built using C++20 features.
 ## Features
 - **Modular Windows:** Create customizable windows containing various controls, complete with a heading. These windows can be easily moved around the screen using the cursor, which is also rendered by the framework.
 - **Control Types:** 
