@@ -82,8 +82,6 @@ namespace engine_hooks
 
 	PVOID PostRenderHook::hook_func(SDK::UGameViewportClient* viewport, SDK::UCanvas* canvas)
 	{
-		LOG("HOOK CALLED");
-
 		pre_func(viewport, canvas);
 		PVOID pv = original_post_render(viewport, canvas);
 		post_func(viewport, canvas);

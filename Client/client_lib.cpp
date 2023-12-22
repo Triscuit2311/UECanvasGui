@@ -35,17 +35,17 @@ namespace client_lib
 		modules::ue = std::make_unique<engine_data>();
 		modules::renderer = std::make_unique<engine_renderer>();
 		modules::ui = std::make_unique<engine_ui>();
+		modules::features = std::make_unique<engine_features>();
 
 		LOG("Setting up game data");
 		modules::ue->init();
 		modules::renderer->init();
 		modules::ui->init();
+		modules::features->init();
 
 
 		LOG("Initializing UE4 Hooks");
-
 		engine_hooks::PostRenderHook::apply_hook();
-
 		INF("Initialized UE4 Hooks");
 
 
@@ -53,7 +53,9 @@ namespace client_lib
 		// Load default or saved
 
 
-		//LOG("Starting worker threads");
+		LOG("Starting worker threads");
+		modules::features->start_threads();
+		
 		// spawn thread
 		// maybe use a pool
 
@@ -61,12 +63,12 @@ namespace client_lib
 		 LOG("Entering main loop");
 		 while (globals::running)
 		 {
-		 	// Ensure local player vars & engine statics
-		 	if (!modules::ue->lp.ensure()) { ERR("Can't Ensure LP"); }
-		 	if (!modules::ue->statics.ensure()) { ERR("Can't Ensure statics"); }
-		
-		 	if (GetAsyncKeyState(VK_END) & 1) { break; }
-		
+			if (GetAsyncKeyState(VK_END) & 1) { break; }
+			if (GetAsyncKeyState(VK_INSERT) & 1)
+			{
+				modules::ui->show_windows = !modules::ui->show_windows;
+				modules::ui->show_cursor = !modules::ui->show_cursor;
+			}
 		
 		 	POINT cursor_pos;
 		 	GetCursorPos(&cursor_pos);
@@ -74,7 +76,7 @@ namespace client_lib
 		 	globals::cursor_x = static_cast<float>(cursor_pos.x);
 		 	globals::cursor_y = static_cast<float>(cursor_pos.y);
 		 	globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
-		
+
 		 }
 		 LOG("Exited main loop");
 
@@ -85,6 +87,7 @@ namespace client_lib
 
 		 INF("Removed UE4 Hooks");
 
+		 modules::features->join_threads();
 
 
 		EXIT_CONSOLE();

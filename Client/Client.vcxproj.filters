@@ -31,6 +31,9 @@
     <Filter Include="client_framework\UE\UI">
       <UniqueIdentifier>{0dd03291-22ef-4986-9ba2-8b6639afc09e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="client_framework\UE\features">
+      <UniqueIdentifier>{ea649e15-e154-4d6d-b9ca-19b5ec197cea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client_lib.hpp">
@@ -102,6 +105,9 @@
     <ClInclude Include="UE\SDK\Engine_classes.hpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
+    <ClInclude Include="engine_features.hpp">
+      <Filter>client_framework\UE\features</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -142,6 +148,9 @@
     </ClCompile>
     <ClCompile Include="UE\SDK\Engine_functions.cpp">
       <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_features.cpp">
+      <Filter>client_framework\UE\features</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

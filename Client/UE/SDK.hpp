@@ -35,7 +35,10 @@ namespace Offsets
 
 #define GWORLD SDK::UWorld::GetWorld()
 
-#include "Overriden_Types.hpp"
+
+#pragma warning(disable: 4309)
+#pragma warning(disable: 4369)
+
 #include "PropertyFixup.hpp"
 
 #include "SDK/Basic.hpp"
@@ -4545,3 +4548,7 @@ static_assert(offsetof(SDK::FField, Owner) == 0x10, "FField::Owner has a wrong o
 static_assert(offsetof(SDK::FField, Next) == 0x20, "FField::Next has a wrong offset!");
 static_assert(offsetof(SDK::FField, Name) == 0x28, "FField::Name has a wrong offset!");
 static_assert(offsetof(SDK::FField, Flags) == 0x30, "FField::Flags has a wrong offset!");
+
+
+#pragma warning(default: 4309)
+#pragma warning(default: 4369)

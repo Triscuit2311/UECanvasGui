@@ -36,10 +36,30 @@ public:
 		bool ensure();
 		bool update();
 	} lp;
-	
+
+	struct current_game_data
+	{
+		SDK::AReadyOrNotGameMode* game_mode = nullptr;
+		SDK::AReadyOrNotGameState* game_state = nullptr;
+		bool ensure();
+		bool update();
+	} game;
+
+
+	static SDK::AReadyOrNotGameState* GetGameState();
+	static SDK::AReadyOrNotGameMode* GetGameMode();
+
+	static SDK::ULocalPlayer* GetLocalPlayer();
+	static SDK::AReadyOrNotPlayerController* GetLocalPlayerController();
+	static SDK::APlayerCharacter* GetLocalPlayerCharacter();
 
 public:
-	engine_data() = default;
+
+
+	SDK::TArray<SDK::EFireMode> fire_modes_unlocked;
+
+
+	engine_data();
 
 	engine_data(const engine_data& other)
 	{

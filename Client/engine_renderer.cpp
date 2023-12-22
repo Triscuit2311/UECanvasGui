@@ -227,7 +227,9 @@ void engine_renderer::draw_filled_triangle(const SDK::FVector2D& pos_a, const SD
 	const SDK::FVector2D& pos_c,
 	 const SDK::FLinearColor color) const
 {
+#pragma warning(disable : 4244)
 	const int num_lines = max(abs(pos_b.X - pos_c.X), abs(pos_b.Y - pos_c.Y));
+#pragma warning(default : 4244)
 
 	for (int i = 0; i <= num_lines; ++i) {
 		const float lerp_factor = static_cast<float>(i) / num_lines;

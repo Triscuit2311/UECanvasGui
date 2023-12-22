@@ -2,6 +2,9 @@
 #define PCH_H
 
 #define _CRT_SECURE_NO_WARNINGS 1
+
+
+#pragma warning(disable : 26495)
 #include "framework.h"
 
 #include <atomic>

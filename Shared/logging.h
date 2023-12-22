@@ -131,3 +131,8 @@ inline ConsoleLogger global_logger;
 #define SPE(...) global_logger.logSpecial(__VA_ARGS__)
 #define EXIT_CONSOLE(...) ((void)0)
 #define LOGNULL(ptr, ...) global_logger.logNull(ptr, __VA_ARGS__)
+
+#define VARLOG_F(var) LOG("%s: %.8f", #var, var)
+#define VARLOG_D(var) LOG("%s: %d", #var, var)
+#define VARLOG_FVEC(var)LOG("%s: [%.8f, %.8f, %.8f]", #var, var.X, var.Y, var.Z)
+#define VARLOG_FROT(var) LOG("%s: [%.8f, %.8f, %.8f]", #var, var.Yaw, var.Pitch, var.Roll)

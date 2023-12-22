@@ -161,6 +161,7 @@
     <ClInclude Include="engine_hooks.hpp" />
     <ClInclude Include="engine_renderer.hpp" />
     <ClInclude Include="engine_ui_elements.hpp" />
+    <ClInclude Include="engine_features.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_utils.h" />
@@ -184,6 +185,7 @@
     <ClCompile Include="engine_hooks.cpp" />
     <ClCompile Include="engine_renderer.cpp" />
     <ClCompile Include="engine_ui_elements.cpp" />
+    <ClCompile Include="engine_features.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

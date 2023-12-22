@@ -5,6 +5,7 @@
 #include "engine_data.hpp"
 #include "engine_renderer.hpp"
 #include "engine_ui.hpp"
+#include "engine_features.hpp"
 
 namespace client_lib
 {
@@ -26,6 +27,7 @@ namespace client_lib
 	    inline std::unique_ptr<engine_data> ue;
         inline std::unique_ptr<engine_renderer> renderer;
         inline std::unique_ptr<engine_ui> ui;
+        inline std::unique_ptr<engine_features> features;
     }
     struct p_thread
     {

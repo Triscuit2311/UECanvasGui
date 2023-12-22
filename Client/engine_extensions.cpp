@@ -3,6 +3,9 @@
 
 namespace engine_extensions
 {
+
+
+
 	SDK::FVector2D lerp(const SDK::FVector2D& start, const SDK::FVector2D& end, const float alpha) {
 		return { start.X + alpha * (end.X - start.X) ,start.Y + alpha * (end.Y - start.Y) };
 	}

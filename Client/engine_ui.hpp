@@ -12,10 +12,16 @@ private:
 	int fps_ct_ = 0;
 	std::chrono::time_point<std::chrono::steady_clock> last_time_;
 	SDK::FVector2D cursor_pos_;
+	
 	void inc_tick();
 	unsigned long long tick() const;
 
 public:
+	bool show_windows = true;
+	bool show_debug = true;
+	bool show_other = true;
+	bool show_cursor = true;
+
 	float fps = 0;
 
 	void init();
@@ -26,38 +32,7 @@ public:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	Window window;
-
-	
-	std::atomic<bool> toggled_1 = true;
-	std::atomic<bool> toggled_2 = false;
-
-	std::atomic<int> sliderIntValue = 4;
-	std::atomic<int> sliderIntValue2 = 4;
-	std::atomic<float> sliderFloatValue = 8.5f;
-	std::atomic<size_t> comboBoxIndex = 0;
-	std::function<void()> test_func = []() { SPE("Button pressed!"); };
-
-
-
-
 
 
 
