@@ -165,11 +165,16 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_utils.h" />
     <ClInclude Include="UE\Overriden_Types.hpp" />
-    <ClInclude Include="UE\SDK.h" />
     <ClInclude Include="engine_data.hpp" />
-    <ClInclude Include="UE\SDK\BasicTypes_Classes.h" />
-    <ClInclude Include="UE\SDK\Global_Package.h" />
+    <ClInclude Include="UE\SDK.hpp" />
     <ClInclude Include="engine_ui.hpp" />
+    <ClInclude Include="UE\SDK\Basic.hpp" />
+    <ClInclude Include="UE\SDK\CoreUObject_classes.hpp" />
+    <ClInclude Include="UE\SDK\Engine_classes.hpp" />
+    <ClInclude Include="UE\SDK\Engine_parameters.hpp" />
+    <ClInclude Include="UE\SDK\Engine_structs.hpp" />
+    <ClInclude Include="UE\SDK\ReadyOrNot_classes.hpp" />
+    <ClInclude Include="UE\SDK\ReadyOrNot_structs.hpp" />
     <ClInclude Include="ui_style.h" />
   </ItemGroup>
   <ItemGroup>
@@ -185,11 +190,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="UE\SDK\BasicTypes_Package.cpp" />
-    <ClCompile Include="UE\SDK\CoreUObject_Package.cpp" />
-    <ClCompile Include="UE\SDK\Engine_Package.cpp" />
     <ClCompile Include="engine_data.cpp" />
     <ClCompile Include="engine_ui.cpp" />
+    <ClCompile Include="UE\SDK\Basic.cpp" />
+    <ClCompile Include="UE\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="UE\SDK\Engine_functions.cpp" />
+    <ClCompile Include="UE\SDK\ReadyOrNot_functions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

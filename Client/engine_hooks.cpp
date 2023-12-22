@@ -3,12 +3,13 @@
 #include "client_lib.hpp"
 #include "engine_renderer.hpp"
 
+
 namespace engine_hooks
 {
 	bool PostRenderHook::apply_hook()
 	{
 		LOG("Starting postrender hook");
-		if (GWORLD->OwningGameInstance && GWORLD->OwningGameInstance->LocalPlayers.Count() > 0)
+		if (GWORLD->OwningGameInstance && GWORLD->OwningGameInstance->LocalPlayers.Num() > 0)
 		{
 			LOG("\tWorld exists | player exists");
 
@@ -27,7 +28,7 @@ namespace engine_hooks
 
 					LOG("\tvTable created");
 
-					PVOID func_obj = (PVOID)&VTable[POST_RENDER_INDEX];
+					PVOID func_obj = (PVOID)&VTable[Offsets::PostRenderIdx];
 
 					LOG("\tPerforming vTable ptr swap");
 
@@ -48,7 +49,7 @@ namespace engine_hooks
 	{
 		LOG("Starting unhooking postrender");
 
-		if (GWORLD->OwningGameInstance && GWORLD->OwningGameInstance->LocalPlayers.Count() > 0)
+		if (GWORLD->OwningGameInstance && GWORLD->OwningGameInstance->LocalPlayers.Num() > 0)
 		{
 			LOG("\tWorld exists/player exists");
 
@@ -61,7 +62,7 @@ namespace engine_hooks
 
 				LOG("\tvTable casted");
 
-				PVOID PostRenderObject = (PVOID)&VTable[POST_RENDER_INDEX];
+				PVOID PostRenderObject = (PVOID)&VTable[Offsets::PostRenderIdx];
 
 				LOG("\tPerforming vtable swap back");
 
@@ -81,11 +82,12 @@ namespace engine_hooks
 
 	PVOID PostRenderHook::hook_func(SDK::UGameViewportClient* viewport, SDK::UCanvas* canvas)
 	{
+		LOG("HOOK CALLED");
+
 		pre_func(viewport, canvas);
 		PVOID pv = original_post_render(viewport, canvas);
 		post_func(viewport, canvas);
 		return pv;
-
 	}
 	void PostRenderHook::pre_func(SDK::UGameViewportClient* viewport, SDK::UCanvas* canvas)
 	{

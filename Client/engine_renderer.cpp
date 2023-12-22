@@ -30,16 +30,16 @@ void engine_renderer::init()
 	LOG("Populating fonts map");
 	try
 	{
-		auto& objs = SDK::UObject::GetGlobalObjects();
-		for (int i = 0; i < objs.Count(); i++)
+		auto& objs = SDK::UObject::GObjects;
+		for (int i = 0; i < objs->Num(); i++)
 		{
-			if (auto item = objs.GetByIndex(i))
+			if (auto item = objs->GetByIndex(i))
 			{
 				if (item && item->IsA(SDK::UFont::StaticClass()))
 				{
-					auto name = objs.GetByIndex(i)->GetName();
+					auto name = objs->GetByIndex(i)->GetName();
 					engine_renderer::fonts_map[name] = reinterpret_cast<SDK::UFont*>(item);
-					//LOG("Font Found: %s", name.c_str());
+					LOG("Font Found: %s", name.c_str());
 				}
 			}
 		}

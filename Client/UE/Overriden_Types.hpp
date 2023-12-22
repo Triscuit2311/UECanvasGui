@@ -9,48 +9,60 @@ namespace SDK
 	template<typename T>
 	class TArray
 	{
-	private:
-		T* _data;                                                   // 0x0000(0x0000)
-		int32_t                                                    _count;                                                  // 0x0000(0x0000)
-		int32_t                                                    _max;                                                    // 0x0000(0x0000)
+	protected:
+		T* Data;
+		int32 NumElements;
+		int32 MaxElements;
 
-		friend class FString;
 	public:
-		TArray()
+
+		inline TArray()
+			:NumElements(0), MaxElements(0), Data(nullptr)
 		{
-			_data = nullptr;
-			_count = 0;
-			_max = 0;
 		}
 
-		T* Data() const
+		inline TArray(int32 Size)
+			: NumElements(0), MaxElements(Size), Data(reinterpret_cast<T*>(malloc(sizeof(T)* Size)))
 		{
-			return _data;
 		}
 
-		int32_t Count() const
+		inline T& operator[](uint32 Index)
 		{
-			return _count;
+			return Data[Index];
+		}
+		inline const T& operator[](uint32 Index) const
+		{
+			return Data[Index];
 		}
 
-		int32_t Max() const
+		inline int32 Num()
 		{
-			return _max;
+			return NumElements;
 		}
 
-		bool IsValidIndex(int32_t i) const
+		inline int32 Max()
 		{
-			return i < _count;
+			return MaxElements;
 		}
 
-		T& operator[](int32_t i)
+		inline int32 GetSlack()
 		{
-			return _data[i];
+			return MaxElements - NumElements;
 		}
 
-		const T& operator[](int32_t i) const
+		inline bool IsValid()
 		{
-			return _data[i];
+			return Data != nullptr;
+		}
+
+		inline bool IsValidIndex(int32 Index)
+		{
+			return Index >= 0 && Index < NumElements;
+		}
+
+		inline void ResetNum()
+		{
+			NumElements = 0;
 		}
 
 		// Adding iterator functionality
@@ -76,8 +88,8 @@ namespace SDK
 			pointer _ptr;
 		};
 
-		iterator begin() const { return iterator(_data); }
-		iterator end() const { return iterator(_data + _count); }
+		iterator begin() const { return iterator(Data); }
+		iterator end() const { return iterator(Data + NumElements); }
 
 	};
 }

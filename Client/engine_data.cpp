@@ -32,7 +32,7 @@ bool engine_data::local_player_data::ensure()
 	if(!player || !controller || !character)
 	{
 		update();
-		if (!player || !controller || !character)
+		if (!player || !controller  || !character)
 		{
 			return false;
 		}
@@ -45,7 +45,7 @@ bool engine_data::local_player_data::update()
 	try {
 		player = (SDK::ULocalPlayer*)GWORLD->OwningGameInstance->LocalPlayers[0];
 		controller = (SDK::AReadyOrNotPlayerController*)player->PlayerController;
-		character = (SDK::APlayerCharacter*)controller->AcknowledgedPawn;
+		character = (SDK::APlayerCharacter*)controller->Character;
 	}
 	catch (...)
 	{

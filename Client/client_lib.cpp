@@ -26,6 +26,7 @@ namespace client_lib
 
 	p_thread main_thread;
 
+
 	DWORD p_thread::func(LPVOID lp_param)
 	{
 		INIT_CONSOLE();
@@ -42,7 +43,9 @@ namespace client_lib
 
 
 		LOG("Initializing UE4 Hooks");
+
 		engine_hooks::PostRenderHook::apply_hook();
+
 		INF("Initialized UE4 Hooks");
 
 
@@ -55,28 +58,33 @@ namespace client_lib
 		// maybe use a pool
 
 
-		LOG("Entering main loop");
-		while (globals::running)
-		{
-			// Ensure local player vars & engine statics
-			if (!modules::ue->lp.ensure()) { ERR("Can't Ensure LP"); }
-			if (!modules::ue->statics.ensure()) { ERR("Can't Ensure statics"); }
+		 LOG("Entering main loop");
+		 while (globals::running)
+		 {
+		 	// Ensure local player vars & engine statics
+		 	if (!modules::ue->lp.ensure()) { ERR("Can't Ensure LP"); }
+		 	if (!modules::ue->statics.ensure()) { ERR("Can't Ensure statics"); }
+		
+		 	if (GetAsyncKeyState(VK_END) & 1) { break; }
+		
+		
+		 	POINT cursor_pos;
+		 	GetCursorPos(&cursor_pos);
 
-			if (GetAsyncKeyState(VK_END) & 1) { break; }
+		 	globals::cursor_x = static_cast<float>(cursor_pos.x);
+		 	globals::cursor_y = static_cast<float>(cursor_pos.y);
+		 	globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
+		
+		 }
+		 LOG("Exited main loop");
 
 
-			POINT cursor_pos;
-			GetCursorPos(&cursor_pos);
+		 INF("Removing UE4 Hooks");
 
+		 engine_hooks::PostRenderHook::remove_hook();
 
-			globals::cursor_x = static_cast<float>(cursor_pos.x);
-			globals::cursor_y = static_cast<float>(cursor_pos.y);
-			globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
+		 INF("Removed UE4 Hooks");
 
-		}
-		LOG("Exited main loop");
-
-		engine_hooks::PostRenderHook::remove_hook();
 
 
 		EXIT_CONSOLE();

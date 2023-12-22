@@ -85,7 +85,7 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 
 
 	wchar_t label_buffer[100];
-	swprintf(label_buffer, std::size(label_buffer), label.wc_str(), val.load());
+	swprintf(label_buffer, std::size(label_buffer), label.ToWString().c_str(), val.load());
 
 	client_lib::modules::renderer->draw_text_c(label_buffer,
 		{
@@ -181,7 +181,7 @@ void FloatSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 
 
 	wchar_t label_buffer[100];
-	swprintf(label_buffer, std::size(label_buffer), label.wc_str(), val.load());
+	swprintf(label_buffer, std::size(label_buffer), label.ToWString().c_str(), val.load());
 
 	client_lib::modules::renderer->draw_text_c(label_buffer,
 	                                           {

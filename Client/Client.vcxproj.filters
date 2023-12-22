@@ -39,9 +39,6 @@
     <ClInclude Include="UE\Overriden_Types.hpp">
       <Filter>client_framework\UE</Filter>
     </ClInclude>
-    <ClInclude Include="UE\SDK.h">
-      <Filter>client_framework\UE</Filter>
-    </ClInclude>
     <ClInclude Include="engine_extensions.hpp">
       <Filter>client_framework\UE</Filter>
     </ClInclude>
@@ -51,17 +48,11 @@
     <ClInclude Include="engine_data.hpp">
       <Filter>client_framework\UE</Filter>
     </ClInclude>
-    <ClInclude Include="UE\SDK\Global_Package.h">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>pch</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
       <Filter>pch</Filter>
-    </ClInclude>
-    <ClInclude Include="UE\SDK\BasicTypes_Classes.h">
-      <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
     <ClInclude Include="engine_renderer.hpp">
       <Filter>client_framework\UE</Filter>
@@ -87,6 +78,30 @@
     <ClInclude Include="animations.h">
       <Filter>client_framework\UE\UI</Filter>
     </ClInclude>
+    <ClInclude Include="UE\SDK.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Basic.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\CoreUObject_classes.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\ReadyOrNot_classes.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\ReadyOrNot_structs.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Engine_structs.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Engine_parameters.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Engine_classes.hpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -94,15 +109,6 @@
     </ClCompile>
     <ClCompile Include="client_lib.cpp">
       <Filter>client_framework</Filter>
-    </ClCompile>
-    <ClCompile Include="UE\SDK\BasicTypes_Package.cpp">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="UE\SDK\CoreUObject_Package.cpp">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="UE\SDK\Engine_Package.cpp">
-      <Filter>client_framework\UE\SDK</Filter>
     </ClCompile>
     <ClCompile Include="engine_extensions.cpp">
       <Filter>client_framework\UE</Filter>
@@ -124,6 +130,18 @@
     </ClCompile>
     <ClCompile Include="engine_ui_elements.cpp">
       <Filter>client_framework\UE\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\Basic.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\CoreUObject_functions.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\ReadyOrNot_functions.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="UE\SDK\Engine_functions.cpp">
+      <Filter>client_framework\UE\SDK</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

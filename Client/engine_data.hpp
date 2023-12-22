@@ -5,16 +5,17 @@ public:
 	static void init()
 	{
 		LOG("Initializing SDK");
-		SDK::InitSdk();
+		SDK::InitGObjects();
+		SDK::FName::InitGNames();
 		LOG("SDK Init Complete");
 		SPE("\t> GObjects: 0x%011X", SDK::UObject::GObjects);
 		SPE("\t> GNames: 0x%011X", SDK::FName::GNames);
-		SPE("\t> GWorld: 0x%011X", SDK::UWorld::GWorld);
+		SPE("\t> GWorld: 0x%011X", GWORLD);
 	}
 
 	static bool world_ok()
 	{
-		if (!SDK::UWorld::GWorld || !*SDK::UWorld::GWorld) {
+		if (!GWORLD) {
 			return false;
 		}
 		return true;
