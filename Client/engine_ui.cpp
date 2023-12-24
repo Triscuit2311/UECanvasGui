@@ -109,12 +109,13 @@ void engine_ui::ToggleMenu()
 	show_cursor = !show_cursor;
 
 	// Toggle player's inputs as well
-	if(show_cursor)
+	const auto player_character = engine_data::GetLocalPlayerCharacter();
+	if (show_cursor && player_character)
 	{
-
 		engine_data::GetLocalPlayerCharacter()->bActionsLocked = true;
 		engine_data::GetLocalPlayerCharacter()->bAimLocked = true;
-	}else
+	}
+	else if (player_character)
 	{
 		engine_data::GetLocalPlayerCharacter()->bActionsLocked = false;
 		engine_data::GetLocalPlayerCharacter()->bAimLocked = false;
@@ -149,10 +150,14 @@ void engine_ui::render_frame(SDK::UCanvas* canvas)
 		{
 		}
 	}
-	if (show_cursor) {
-		engine_data::GetLocalPlayerController()->GetMousePosition(&cursor_pos_.X, &cursor_pos_.Y);
+
+
+	const auto player_character = engine_data::GetLocalPlayerController();
+	if (show_cursor && player_character) {
+		player_character->GetMousePosition(&cursor_pos_.X, &cursor_pos_.Y);
 		draw_cursor();
 	}
+
 
 
 	try

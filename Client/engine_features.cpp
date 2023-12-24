@@ -8,11 +8,11 @@ void engine_features::exec_thread_func()
 {
 	while (!thread_exit_signal) {
 		std::this_thread::sleep_for(exec_thread_sleep_time);
+		try{
 		///////////////////////////////////////////////////
 		// Features that execute quickly/constantly
 		///////////////////////////////////////////////////
 		const auto player_character = engine_data::GetLocalPlayerCharacter();
-
 
 
 		if (keep_mags_full.enabled && player_character)
@@ -27,6 +27,8 @@ void engine_features::exec_thread_func()
 
 
 		///////////////////////////////////////////////////
+		
+		}catch(...){}
 	}
 	INF("features->exec_thread exiting");
 
@@ -116,9 +118,6 @@ void engine_features::lazy_thread_func()
 			// Speed (Ref: P90 is 0.060, Revolver is 0.30)
 			last_weapon->FireRate = custom_fire_rate.val;
 		}
-
-
-
 
 
 		///////////////////////////////////////////////////
