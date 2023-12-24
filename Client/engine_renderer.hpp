@@ -16,6 +16,8 @@ public:
 
 	void init();
 
+	float get_font_size();
+
 	void draw_text(const wchar_t* text, const SDK::FVector2D& pos,
 	               SDK::FLinearColor color) const;
 	void draw_text_f(const SDK::FString& text, const SDK::FVector2D& pos,

@@ -170,16 +170,215 @@ namespace SDK
 		}
 	};
 
+	/**
+ * PredefinedClass BasicTypes.FNameEntryHeader
+ * Size -> 0x0000
+ */
+	class FNameEntryHeader
+	{
+	public:
+		static const constexpr uint32_t                              ProbeHashBits = 5;                                       // 0x0000(0x0000)
+		uint16_t                                                     bIsWide : 1;                                             // 0x0000(0x0000)
+		uint16_t                                                     LowercaseProbeHash : ProbeHashBits;                      // 0x0000(0x0000)
+		uint16_t                                                     Len : 10;                                                // 0x0000(0x0000)
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.FNameEntry
+	 * Size -> 0x0000
+	 */
+	class FNameEntry
+	{
+	public:
+		FNameEntryHeader                                             Header;                                                  // 0x0000(0x0000)
+		union
+		{
+			char                                                         AnsiName[1024];                                          // 0x0000(0x0000)
+			wchar_t                                                      WideName[1024];                                          // 0x0000(0x0000)
+		};
+
+	public:
+
+		inline int32_t GetLength() const
+		{
+			return Header.Len;
+		}
+
+		inline bool IsWide() const
+		{
+			return Header.bIsWide;
+		}
+
+		inline int32_t GetId() const
+		{
+			throw std::exception("This game doesn't use 'FNAME_POOL_WITH_CASE_PRESERVING_NAME' so 'ComparisonId' not stored in 'FNameEntry'");
+		}
+
+		inline std::string GetAnsiName() const
+		{
+			uint32_t len = GetLength();
+			if (len > 1024) return "[Error: Overflow]";
+			return std::string((const char*)AnsiName, len);
+		}
+
+		inline std::wstring GetWideName() const
+		{
+			uint32_t len = GetLength();
+			return std::wstring((const wchar_t*)WideName, len);
+		}
+
+		inline std::string GetName() const
+		{
+			return GetAnsiName();
+		}
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.FNameEntryAllocator
+	 * Size -> 0x0000
+	 */
+	class FNameEntryAllocator
+	{
+	private:
+		uint8_t                                                      FrwLock[0x8];                                            // 0x0000(0x0000)
+	public:
+		static const constexpr int32_t                               Stride = 0x02;                                           // 0x0000(0x0000)
+		static const constexpr int32_t                               MaxOffset = Stride * (1 << 16);                          // 0x0000(0x0000)
+		int32_t                                                      CurrentBlock;                                            // 0x0000(0x0000)
+		int32_t                                                      CurrentByteCursor;                                       // 0x0000(0x0000)
+		uint8_t* Blocks[8192];                                            // 0x0000(0x0000)
+
+	public:
+
+
+		inline int32_t NumBlocks() const
+		{
+			return CurrentBlock + 1;
+		}
+
+
+		inline FNameEntry* GetById(int32_t key) const
+		{
+			int block = key >> 16;
+			int offset = (uint16_t)key;
+			if (!IsValidIndex(key, block, offset))
+				return reinterpret_cast<FNameEntry*>(Blocks[0] + 0); // "None"
+			return reinterpret_cast<FNameEntry*>(Blocks[block] + ((uint64_t)offset * Stride));
+		}
+
+		inline bool IsValidIndex(int32_t key) const
+		{
+			uint32_t block = key >> 16;
+			uint16_t offset = key;
+			return IsValidIndex(key, block, offset);
+		}
+
+		inline bool IsValidIndex(int32_t key, uint32_t block, uint16_t offset) const
+		{
+			return (key >= 0 && block < static_cast<uint32_t>(NumBlocks()) && offset * Stride < MaxOffset);
+		}
+	};
+
+	/**
+	 * PredefinedClass BasicTypes.FNamePool
+	 * Size -> 0x0000
+	 */
+	class FNamePool
+	{
+	public:
+		FNameEntryAllocator                                          Allocator;                                               // 0x0000(0x0000)
+		int32_t                                                      AnsiCount;                                               // 0x0000(0x0000)
+		int32_t                                                      WideCount;                                               // 0x0000(0x0000)
+
+	public:
+		// FNameEntry* GetNext(uintptr_t& nextFNameAddress, uint32_t* comparisonId) const;
+		// int32_t Count() const;
+		// bool IsValidIndex(int32_t index) const;
+		// FNameEntry* GetById(int32_t id) const;
+		// FNameEntry* operator[](int32_t id) const;
+
+
+		inline FNameEntry* GetNext(uintptr_t& nextFNameAddress, uint32_t* comparisonId) const
+		{
+			static int lastBlock = 0;
+			if (!nextFNameAddress)
+			{
+				lastBlock = 0;
+				nextFNameAddress = reinterpret_cast<uintptr_t>(Allocator.Blocks[0]);
+			}
+		RePlay:
+			int32_t nextFNameComparisonId = MAKELONG((uint16_t)((nextFNameAddress - reinterpret_cast<uintptr_t>(Allocator.Blocks[lastBlock])) / 2), (uint16_t)lastBlock);
+			int32_t block = nextFNameComparisonId >> 16;
+			int32_t offset = (uint16_t)nextFNameComparisonId;
+			int32_t offsetFromBlock = static_cast<int32_t>(nextFNameAddress - reinterpret_cast<uintptr_t>(Allocator.Blocks[lastBlock]));
+
+			// Get entry information
+			const uintptr_t entryOffset = nextFNameAddress;
+			const int toAdd = 0x00 + 0x02; // HeaderOffset + HeaderSize
+			const uint16_t nameHeader = *reinterpret_cast<uint16_t*>(entryOffset);
+			int nameLength = nameHeader >> 6;
+			bool isWide = (nameHeader & 1) != 0;
+			if (isWide)
+				nameLength += nameLength;
+
+			// if odd number (odd numbers are aligned with 0x00)
+			if (!isWide && nameLength % 2 != 0)
+				nameLength += 1;
+
+			// Block end ?
+			if (offsetFromBlock + toAdd + (nameLength * 2) >= 0xFFFF * FNameEntryAllocator::Stride || nameHeader == 0x00 || block == Allocator.CurrentBlock && offset >= Allocator.CurrentByteCursor)
+			{
+				nextFNameAddress = reinterpret_cast<uintptr_t>(Allocator.Blocks[++lastBlock]);
+				goto RePlay;
+			}
+
+			// We hit last Name in last Block
+			if (lastBlock > Allocator.CurrentBlock)
+				return nullptr;
+
+			// Get next name address
+			nextFNameAddress = entryOffset + toAdd + nameLength;
+
+			// Get name
+			FNameEntry* ret = Allocator.GetById(nextFNameComparisonId);
+
+			if (comparisonId)
+				*comparisonId = nextFNameComparisonId;
+
+			return ret;
+		}
+
+		inline int32_t Count() const
+		{
+			return AnsiCount;
+		}
+
+		inline bool IsValidIndex(int32_t index) const
+		{
+			return Allocator.IsValidIndex(static_cast<int32_t>(index));
+		}
+
+
+		inline FNameEntry* GetById(int32_t id) const
+		{
+			return Allocator.GetById(id);
+		}
+
+		inline FNameEntry* operator[](int32_t id) const
+		{
+			return GetById(id);
+		}
+	};
+
 	class FName
 	{
 	public:
 		// GNames - either of type TNameEntryArray [<4.23] or FNamePool [>=4.23]
-		static inline void* GNames = nullptr;
+		static inline SDK::FNamePool* GNames = nullptr;
 
 		// Members of FName - depending on configuration [WITH_CASE_PRESERVING_NAME | FNAME_OUTLINE_NUMBER]
 		int32 ComparisonIndex;
 		int32 Number;
-
 
 		// GetDisplayIndex - returns the Id of the string depending on the configuration [default: ComparisonIndex, WITH_CASE_PRESERVING_NAME: DisplayIndex]
 		inline int32 GetDisplayIndex() const
@@ -206,7 +405,7 @@ namespace SDK
 
 		static inline void InitGNames()
 		{
-			GNames = reinterpret_cast<void*>(uint64(GetModuleHandle(0)) + Offsets::GNames);
+			GNames = reinterpret_cast<SDK::FNamePool*>(uint64(GetModuleHandle(0)) + Offsets::GNames);
 		}
 
 		// ToString - returns an edited string as it's used by most SDKs ["/Script/CoreUObject" -> "CoreUObject"]
@@ -230,6 +429,44 @@ namespace SDK
 		inline bool operator!=(const FName& Other) const
 		{
 			return ComparisonIndex != Other.ComparisonIndex || Number != Other.Number;
+		}
+
+		FName(const wchar_t* nameToFind)
+		{
+			Number = 0;
+			for (int32_t i = 0; i < GNames->Count(); ++i)
+			{
+				if ((*GNames)[i]->GetWideName() == nameToFind)
+				{
+					ComparisonIndex = i;
+					return;
+				}
+			}
+		}
+
+		FName(const char* nameToFind)
+		{
+			Number = 0;
+			for (int32_t i = 0; i < GNames->Count(); ++i)
+			{
+				if ((*GNames)[i]->GetAnsiName() == nameToFind)
+				{
+					ComparisonIndex = i;
+					return;
+				}
+			}
+		}
+
+		FName()
+		{
+			ComparisonIndex = 0;
+			Number = 0;
+		}
+
+		FName(int32_t i)
+		{
+			ComparisonIndex = i;
+			Number = 0;
 		}
 	};
 

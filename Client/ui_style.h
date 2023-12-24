@@ -3,7 +3,6 @@
 
 namespace ui_style
 {
-
 	inline float spacing = 5;
 
 	inline struct margin_set
@@ -70,6 +69,9 @@ namespace ui_style
 
 		SDK::FLinearColor control_selected_outline{ engine_extensions::hex_to_flinear(SELECTIVE_YELLOW) };
 		SDK::FLinearColor control_hovered_outline{ engine_extensions::hex_to_flinear(PHLOX_PURPLE) };
+
+
+		SDK::FLinearColor notif_error_border{ engine_extensions::hex_to_flinear(IMPERIAL_RED) };
 
 	} colors;
 

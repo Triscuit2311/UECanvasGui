@@ -5,7 +5,7 @@ namespace engine_extensions
 	// This is the Pi val used in the engine from 4.1 -> 5+
 	static constexpr double UE4_PI = 3.1415926535897932384626433832795;
 
-
+	float delta(const SDK::FVector2D& a, const SDK::FVector2D& b);
 	SDK::FVector2D lerp(const SDK::FVector2D& start, const SDK::FVector2D& end, const float alpha);
 	SDK::FVector get_bone_world_pos(SDK::USkeletalMeshComponent* mesh, int32_t bone_id);
 

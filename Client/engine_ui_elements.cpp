@@ -2,7 +2,7 @@
 #include "engine_ui_elements.hpp"
 
 #include "animations.h"
-
+#include "client_lib.hpp"
 
 
 void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
@@ -75,7 +75,7 @@ void IntSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 
 			const float val_from_slider = min_val + ((slider_percentage / 100.0f) * (max_val - min_val));
 
-			val = static_cast<int>(max(min_val, min(val_from_slider, max_val)));
+			val = static_cast<int>(std::max(min_val, std::min((int)val_from_slider, max_val)));
 
 			// END FIX ME
 		}
@@ -173,7 +173,7 @@ void FloatSlider::render(const SDK::FVector2D& root_pos, bool mouse_down)
 
 			const float val_from_slider = min_val + ((slider_percentage / 100.0f) * (max_val - min_val));
 
-			val = max(min_val, min(val_from_slider, max_val));
+			val = std::max(min_val, std::min(val_from_slider, max_val));
 		}
 	}
 

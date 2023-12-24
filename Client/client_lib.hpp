@@ -12,8 +12,6 @@ namespace client_lib
     namespace globals
     {
 
-        extern std::atomic<float> cursor_x;
-        extern std::atomic<float> cursor_y;
         extern std::atomic<bool> mouse_down;
 
 

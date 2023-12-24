@@ -1,4 +1,6 @@
 #pragma once
+#include <functional>
+
 #include "engine_extensions.hpp"
 #include "ui_style.h"
 

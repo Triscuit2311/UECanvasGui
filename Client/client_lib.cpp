@@ -1,15 +1,16 @@
 #include "pch.h"
 #include "client_lib.hpp"
+
 #include "engine_data.hpp"
 #include "engine_hooks.hpp"
 #include "engine_renderer.hpp"
+#include "windows_utils.hpp"
 
 namespace client_lib
 {
 	namespace globals
 	{
-		std::atomic<float> cursor_x = 0;
-		std::atomic<float> cursor_y = 0;
+
 		std::atomic<bool> mouse_down = false;
 
 
@@ -27,6 +28,7 @@ namespace client_lib
 	p_thread main_thread;
 
 
+
 	DWORD p_thread::func(LPVOID lp_param)
 	{
 		INIT_CONSOLE();
@@ -36,28 +38,31 @@ namespace client_lib
 		modules::renderer = std::make_unique<engine_renderer>();
 		modules::ui = std::make_unique<engine_ui>();
 		modules::features = std::make_unique<engine_features>();
+		LOG("Initialized global modules");
 
-		LOG("Setting up game data");
+
+		LOG("Initializing game data");
 		modules::ue->init();
 		modules::renderer->init();
 		modules::ui->init();
 		modules::features->init();
+		LOG("Initialized game data");
 
 
-		LOG("Initializing UE4 Hooks");
+		LOG("Initializing Engine Hooks");
 		engine_hooks::PostRenderHook::apply_hook();
-		INF("Initialized UE4 Hooks");
+		INF("Initialized Engine Hooks");
+
+
 
 
 		//LOG("Syncing settings");
 		// Load default or saved
 
-
 		LOG("Starting worker threads");
 		modules::features->start_threads();
-		
-		// spawn thread
-		// maybe use a pool
+		LOG("Worker threads runnning");
+
 
 
 		 LOG("Entering main loop");
@@ -66,28 +71,21 @@ namespace client_lib
 			if (GetAsyncKeyState(VK_END) & 1) { break; }
 			if (GetAsyncKeyState(VK_INSERT) & 1)
 			{
-				modules::ui->show_windows = !modules::ui->show_windows;
-				modules::ui->show_cursor = !modules::ui->show_cursor;
+				modules::ui->ToggleMenu();
 			}
-		
-		 	POINT cursor_pos;
-		 	GetCursorPos(&cursor_pos);
 
-		 	globals::cursor_x = static_cast<float>(cursor_pos.x);
-		 	globals::cursor_y = static_cast<float>(cursor_pos.y);
 		 	globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
-
 		 }
 		 LOG("Exited main loop");
 
 
-		 INF("Removing UE4 Hooks");
-
+		 INF("Removing Engine Hooks");
 		 engine_hooks::PostRenderHook::remove_hook();
+		 INF("Removed Engine Hooks");
 
-		 INF("Removed UE4 Hooks");
-
+		 LOG("Stopping worker threads");
 		 modules::features->join_threads();
+		 LOG("Stopped worker threads");
 
 
 		EXIT_CONSOLE();

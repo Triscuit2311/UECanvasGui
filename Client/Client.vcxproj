@@ -177,6 +177,7 @@
     <ClInclude Include="UE\SDK\ReadyOrNot_classes.hpp" />
     <ClInclude Include="UE\SDK\ReadyOrNot_structs.hpp" />
     <ClInclude Include="ui_style.h" />
+    <ClInclude Include="windows_utils.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client_lib.cpp" />

@@ -39,7 +39,7 @@ void engine_renderer::init()
 				{
 					auto name = objs->GetByIndex(i)->GetName();
 					engine_renderer::fonts_map[name] = reinterpret_cast<SDK::UFont*>(item);
-					LOG("Font Found: %s", name.c_str());
+					//LOG("Font Found: %s", name.c_str());
 				}
 			}
 		}
@@ -52,28 +52,55 @@ void engine_renderer::init()
 	LOG("Setting default fonts");
 	try
 	{
+
+
+		// All these are working and usable
 		// default_font = fonts_map.find("Default__Font")->second;
 		// default_font = fonts_map.find("RobotoDistanceField")->second;
-		// default_font = fonts_map.find("TeutonNormal - Bold_Font")->second;
+		default_font = fonts_map.find("TeutonNormal_Font")->second;
 		// default_font = fonts_map.find("DuntonWriting_Font")->second;
-		// default_font = fonts_map.find("Irregularis - raa9_Font")->second;
+		// default_font = fonts_map.find("Expressway")->second;
 		// default_font = fonts_map.find("Roboto")->second;
 		// default_font = fonts_map.find("VCR_OSD_MONO_1_001_Font")->second;
-		// default_font = fonts_map.find("TeutonNormal_Font")->second;
-		default_font = fonts_map.find("Louis_George_Cafe_Bold_Font")->second;
-		//default_font = fonts_map.find("Tungsten")->second;
-		// default_font = fonts_map.find("BebasNeue - Regular_Font")->second;
-		// default_font = fonts_map.find("rajdhani")->second;
+		// default_font = fonts_map.find("Tungsten")->second;
+		// default_font = fonts_map.find("Louis_George_Cafe_Bold_Font")->second;
 		// default_font = fonts_map.find("Arial")->second;
-		//default_font = fonts_map.find("Expressway")->second;
+		// default_font = fonts_map.find("rajdhani")->second;
 		// default_font = fonts_map.find("Sarpanch")->second;
-		//default_font = fonts_map.find("Barlow")->second;
+		// default_font = fonts_map.find("Barlow")->second;
 		// default_font = fonts_map.find("wwDigital")->second;
+		// default_font = fonts_map.find("VRText_RobotoLarge")->second;
+
+		// DEBUG
+		// VARLOG_D(default_font->Characters.Num());
+		// VARLOG_D(default_font->Characters);
+		//
+		// VARLOG_D(default_font->Characters.Num());//                       
+		// VARLOG_D(default_font->Textures.Num());//                         
+		// VARLOG_D(default_font->IsRemapped);//;                            
+		// VARLOG_F(default_font->EmScale);                                  
+		// VARLOG_F(default_font->Ascent);                                   
+		// VARLOG_F(default_font->Descent);                                  
+		// VARLOG_F(default_font->Leading);                                  
+		// VARLOG_F(default_font->Kerning);                                  
+		// VARLOG_D(default_font->NumCharacters);                            
+		// VARLOG_D(default_font->MaxCharHeight.Num());                      
+		// VARLOG_F(default_font->ScalingFactor);                            
+		// VARLOG_D(default_font->LegacyFontSize);
+		// VARLOG_D(default_font->MaxCharHeight[0]);
+
+		//struct FCompositeFont                        CompositeFont;     
 	}
 	catch (...)
 	{
 		ERR("Could not set default fonts");
 	}
+}
+
+float engine_renderer::get_font_size()
+{
+	if (default_font == nullptr) { return 0.0f; }
+	return (float)default_font->LegacyFontSize;
 }
 
 void engine_renderer::draw_text(const wchar_t* text,
@@ -228,7 +255,7 @@ void engine_renderer::draw_filled_triangle(const SDK::FVector2D& pos_a, const SD
 	 const SDK::FLinearColor color) const
 {
 #pragma warning(disable : 4244)
-	const int num_lines = max(abs(pos_b.X - pos_c.X), abs(pos_b.Y - pos_c.Y));
+	const int num_lines = std::max(abs(pos_b.X - pos_c.X), abs(pos_b.Y - pos_c.Y));
 #pragma warning(default : 4244)
 
 	for (int i = 0; i <= num_lines; ++i) {

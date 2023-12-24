@@ -5,6 +5,10 @@ namespace engine_extensions
 {
 
 
+	float delta(const SDK::FVector2D & a, const SDK::FVector2D& b)
+	{
+		return (a.X - b.X) + (a.Y - b.Y);
+	}
 
 	SDK::FVector2D lerp(const SDK::FVector2D& start, const SDK::FVector2D& end, const float alpha) {
 		return { start.X + alpha * (end.X - start.X) ,start.Y + alpha * (end.Y - start.Y) };
@@ -204,7 +208,7 @@ namespace engine_extensions
 
 	SDK::FRotator smooth_rotate_distance_based(const SDK::FRotator& start, const SDK::FRotator& end, float maxDegreesPerFrame) {
 		const float distance = calculate_rotation_distance(start, end);
-		const float t = min(maxDegreesPerFrame / distance, 1.0f);
+		const float t = std::min(maxDegreesPerFrame / distance, 1.0f);
 		return lerp(start, end, t);
 	}
 
