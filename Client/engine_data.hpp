@@ -21,37 +21,13 @@ public:
 		return true;
 	}
 
-	struct static_objects
-	{
-		SDK::UKismetSystemLibrary* KismetSystemLibrary = nullptr;
-		bool ensure();
-		bool update();
-	} statics;
-
-	struct local_player_data
-	{
-		SDK::ULocalPlayer* player = nullptr;
-		SDK::AReadyOrNotPlayerController* controller = nullptr;
-		SDK::APlayerCharacter* character = nullptr;
-		bool ensure();
-		bool update();
-	} lp;
-
-	struct current_game_data
-	{
-		SDK::AReadyOrNotGameMode* game_mode = nullptr;
-		SDK::AReadyOrNotGameState* game_state = nullptr;
-		bool ensure();
-		bool update();
-	} game;
-
-
 	static SDK::AReadyOrNotGameState* GetGameState();
 	static SDK::AReadyOrNotGameMode* GetGameMode();
-
 	static SDK::ULocalPlayer* GetLocalPlayer();
 	static SDK::AReadyOrNotPlayerController* GetLocalPlayerController();
 	static SDK::APlayerCharacter* GetLocalPlayerCharacter();
+	static bool LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*)> func, bool exit_on_error);
+
 
 public:
 
