@@ -36,97 +36,94 @@ void engine_features::lazy_thread_func()
 {
 	while (!thread_exit_signal) {
 		std::this_thread::sleep_for(lazy_thread_sleep_time);
-		try {
-			///////////////////////////////////////////////////
-			// Features that execute lazily
-			///////////////////////////////////////////////////
+		try{
+		///////////////////////////////////////////////////
+		// Features that execute lazily
+		///////////////////////////////////////////////////
+		
+		const SDK::AReadyOrNotGameState* game_state = engine_data::GetGameState();
+		const auto player_character = engine_data::GetLocalPlayerCharacter();
 
-			const SDK::AReadyOrNotGameState* game_state = engine_data::GetGameState();
-			const auto player_character = engine_data::GetLocalPlayerCharacter();
+		if(score_grace.enabled && game_state)
+		{
+			if (game_state == nullptr || !game_state) { continue; }
+			if (game_state->ScoringManager == nullptr) { continue; }
 
-			if (score_grace.enabled && game_state)
+			if (game_state->ScoringManager->TotalScorePool != score_grace.last_modified_score)
 			{
-				if (game_state == nullptr || !game_state) { continue; }
-				if (game_state->ScoringManager == nullptr) { continue; }
-
-				if (game_state->ScoringManager->TotalScorePool != score_grace.last_modified_score)
-				{
-					int32 t = game_state->ScoringManager->TotalScorePool;
-					game_state->ScoringManager->TotalScorePool -= score_grace.delta_score_threshold;
-					score_grace.last_modified_score = game_state->ScoringManager->TotalScorePool;
-					LOG("Updated Score From: %d -> %d", t, score_grace.last_modified_score.load());
-				}
+				int32 t = game_state->ScoringManager->TotalScorePool;
+				game_state->ScoringManager->TotalScorePool -= score_grace.delta_score_threshold;
+				score_grace.last_modified_score = game_state->ScoringManager->TotalScorePool;
+				LOG("Updated Score From: %d -> %d", t, score_grace.last_modified_score.load());
 			}
-
-			if (player_god_mode.enabled && player_character)
-			{
-				player_character->bCanBeDamaged = false;
-			}
-			else if (!player_god_mode.enabled && player_character)
-			{
-				player_character->bCanBeDamaged = true;
-			}
-
-			if (crouch_super_speed.enabled && player_character)
-			{
-				player_character->SpeedModifier_Crouch = 1000.0f;
-			}
-			else if (!crouch_super_speed.enabled && player_character)
-			{
-				player_character->SpeedModifier_Crouch = 0.5f;
-			}
-
-
-			const auto last_weapon = player_character->InventoryComp->LastEquippedWeapon;
-
-			if (no_recoil.enabled && player_character)
-			{
-				last_weapon->FirstShotRecoil = 0;
-				last_weapon->RecoilFireStrength = 0;
-				last_weapon->RecoilFireStrengthFirst = 0;
-				for (int i = 0; i < last_weapon->RecoilPattern.Num(); ++i) {
-					if (!last_weapon->RecoilPattern.IsValidIndex(i)) { continue; }
-					last_weapon->RecoilPattern[i].Yaw = 0;
-					last_weapon->RecoilPattern[i].Pitch = 0;
-					last_weapon->RecoilPattern[i].Roll = 0;
-				}
-			}
-
-
-			if (no_spread.enabled && player_character)
-			{
-				last_weapon->SpreadPattern.Pitch = 0;
-				last_weapon->SpreadPattern.Yaw = 0;
-				last_weapon->SpreadPattern.Roll = 0;
-				last_weapon->RecoilRandomness = 0;
-				last_weapon->bIgnoreAmmoTypeSpread = true;
-				last_weapon->SpreadReturnRate = 100.0f;
-				last_weapon->FirstShotSpread = 0;
-				last_weapon->VelocitySpreadMultiplier = 0;
-				last_weapon->ADSSpreadMultiplier = 0;
-			}
-
-
-			if (always_full_auto.enabled && player_character)
-			{
-				last_weapon->CurrentFireMode = SDK::EFireMode::FM_Auto;
-			}
-
-
-			if (custom_fire_rate.enabled && player_character)
-			{
-				// Speed (Ref: P90 is 0.060, Revolver is 0.30)
-				last_weapon->FireRate = custom_fire_rate.val;
-			}
-
-
-
-
-
-			///////////////////////////////////////////////////
-
 		}
-		catch (...) {}
+
+		if (player_god_mode.enabled && player_character)
+		{
+			player_character->bCanBeDamaged = false;
+		}else if(!player_god_mode.enabled && player_character)
+		{
+			player_character->bCanBeDamaged = true;
+		}
+
+		if (crouch_super_speed.enabled && player_character)
+		{
+			player_character->SpeedModifier_Crouch = 1000.0f;
+		}else if(!crouch_super_speed.enabled && player_character)
+		{
+			player_character->SpeedModifier_Crouch = 0.5f;
+		}
+
+
+		const auto last_weapon = player_character->InventoryComp->LastEquippedWeapon;
+
+		if (no_recoil.enabled && player_character)
+		{
+			last_weapon->FirstShotRecoil = 0;
+			last_weapon->RecoilFireStrength = 0;
+			last_weapon->RecoilFireStrengthFirst = 0;
+			for (int i = 0; i < last_weapon->RecoilPattern.Num(); ++i) {
+				if (!last_weapon->RecoilPattern.IsValidIndex(i)) { continue; }
+				last_weapon->RecoilPattern[i].Yaw = 0;
+				last_weapon->RecoilPattern[i].Pitch = 0;
+				last_weapon->RecoilPattern[i].Roll = 0;
+			}
+		}
+
+
+		if (no_spread.enabled && player_character)
+		{
+			last_weapon->SpreadPattern.Pitch = 0;
+			last_weapon->SpreadPattern.Yaw = 0;
+			last_weapon->SpreadPattern.Roll = 0;
+			last_weapon->RecoilRandomness = 0;
+			last_weapon->bIgnoreAmmoTypeSpread = true;
+			last_weapon->SpreadReturnRate = 100.0f;
+			last_weapon->FirstShotSpread = 0;
+			last_weapon->VelocitySpreadMultiplier = 0;
+			last_weapon->ADSSpreadMultiplier = 0;
+		}
+
+
+		if (always_full_auto.enabled && player_character)
+		{
+			last_weapon->CurrentFireMode = SDK::EFireMode::FM_Auto;
+		}
+
+
+		if (custom_fire_rate.enabled && player_character)
+		{
+			// Speed (Ref: P90 is 0.060, Revolver is 0.30)
+			last_weapon->FireRate = custom_fire_rate.val;
+		}
+
+
+
+
+
+		///////////////////////////////////////////////////
+		
+		}catch(...){}
 	}
 	INF("features->lazy_thread exiting");
 }
@@ -163,19 +160,19 @@ void engine_features::init()
 				{
 					try {
 						if (!ai_arr.IsValidIndex(i)) { continue; }
-
+			
 						auto ai = ai_arr[i];
 
 						LOG("\t%s", ai->Name.ToString().c_str());
 
-
+			
 						if (ai == nullptr) { continue; }
-
+			
 						auto team = ai->GetTeam();
-
+			
 						if (ai->Archetype == nullptr || ai->Controller == nullptr) { continue; }
 
-
+			
 						if (team == SDK::ETeamType::TT_SUSPECT)
 						{
 							ai->Surrender();
@@ -185,8 +182,7 @@ void engine_features::init()
 					{
 					}
 				}
-			}
-			catch (...)
+			}catch(...)
 			{
 			}
 		};
@@ -204,7 +200,7 @@ void engine_features::init()
 					if (item && item->IsA(SDK::UMaterial::StaticClass()))
 					{
 						auto name = objs->GetByIndex(i)->GetName();
-						all_mats.emplace_back(name, (SDK::UMaterial*)item);
+						all_mats.emplace_back(name, (SDK::UMaterial*)item );
 					}
 				}
 			}
@@ -214,10 +210,10 @@ void engine_features::init()
 			ERR("Could not Get Material");
 		}
 
-		};
+	};
 
 	test_feature.on_exec = [this]()
-		{
+			{
 
 			SDK::UMaterial* xray = nullptr;
 
@@ -341,7 +337,7 @@ void engine_features::init()
 
 				auto last_weapon = engine_data::GetLocalPlayerCharacter()->InventoryComp->LastEquippedWeapon;
 
-
+				
 				// set available modes
 				// works but there is probably a better way
 				// VARLOG_D(last_weapon->AvailableFireModes.Num());
@@ -364,8 +360,7 @@ void engine_features::init()
 
 				SPE("TEST FUNC COMPLETED WITHOUT ERROR");
 				client_lib::modules::ui->Notify(L"Test Feature Ran Successfully", 1);
-			}
-			catch (...)
+			}catch(...)
 			{
 				ERR("Threw on test feature");
 				client_lib::modules::ui->Notify(L"Error in Test Feature", 1, true);
