@@ -21,9 +21,16 @@ void engine_ui::init()
 		client_lib::modules::features->score_grace.delta_score_threshold, 0, 3000);
 
 	lobby_window.add_control<Seperator>(L"");
-
 	lobby_window.add_control<Button>(L"Surrender Suspects",
 		client_lib::modules::features->force_surrender.on_exec);
+	lobby_window.add_control<Button>(L"Color Models",
+		client_lib::modules::features->color_models.on_exec);
+
+	lobby_window.add_control<Seperator>(L"");
+	lobby_window.add_control<Toggle>(L"Civilian GodMode",
+		client_lib::modules::features->civ_godmode.enabled);
+	lobby_window.add_control<Toggle>(L"AI Squad GodMode",
+		client_lib::modules::features->squad_godmode.enabled);
 
 
 
@@ -63,13 +70,8 @@ void engine_ui::init()
 
 	dev_window.init(L"Development");
 	dev_window.position = {200, 500};
-	dev_window.add_control<Button>(L"Setup Mats",
-		client_lib::modules::features->setup_mats.on_exec);
-	dev_window.add_control<Button>(L"Run Test",
-		client_lib::modules::features->test_feature.on_exec);
-	dev_window.add_control<Seperator>(L"");
-		dev_window.add_control<Button>(L"Thow Error", fake_err);
-	dev_window.add_control<Button>(L"Show Long Notif", fake_notif);
+	dev_window.add_control<Button>(L"Test Error Notif", fake_err);
+	dev_window.add_control<Button>(L"Test Long Notif", fake_notif);
 
 
 	windows_.emplace_back(lobby_window);
@@ -221,7 +223,7 @@ void engine_ui::render_notifications()
 		notif_system.last_notif_start_time_ = last_time_;
 	}
 
-	// TODO: adjust size based on text size
+
 	float width = (ui_style::margins.lr * 2) + notif_system.notification_queue.front().text.Num() * client_lib::modules::renderer->get_font_size();
 	client_lib::modules::renderer->draw_filled_rect(
 		notif_system.current_notification_pos,

@@ -120,6 +120,35 @@ void engine_features::lazy_thread_func()
 		}
 
 
+
+		engine_data::LoopAICharacters([this](SDK::ACyberneticCharacter* ai)
+			{
+				if (!ai) { return; }
+				switch(const auto team = ai->GetTeam())
+				{
+				case SDK::ETeamType::TT_NONE:
+					break;
+				case SDK::ETeamType::TT_SERT_RED:
+					lazy_loop_squad(ai);
+					break;
+				case SDK::ETeamType::TT_SERT_BLUE:
+					lazy_loop_squad(ai);
+					break;
+				case SDK::ETeamType::TT_SUSPECT:
+					lazy_loop_suspect(ai);
+					break;
+				case SDK::ETeamType::TT_CIVILIAN:
+					lazy_loop_civ(ai);
+					break;
+				case SDK::ETeamType::TT_SQUAD:
+					lazy_loop_squad(ai);
+					break;
+				case SDK::ETeamType::TT_MAX:
+					break;
+				}
+			}, false);
+
+
 		///////////////////////////////////////////////////
 		
 		}catch(...){}
@@ -143,227 +172,109 @@ void engine_features::join_threads()
 void engine_features::init()
 {
 
-
 	force_surrender.on_exec = []()
 		{
-
-			try {
-				const auto game_state = engine_data::GetGameState();
-				if (!game_state) { ERR("Error getting game state for force surrender!");  return; }
-
-				SDK::TArray<SDK::ACyberneticCharacter*>ai_arr = game_state->AllAICharacters;
-
-				LOG("Found %d Ai", ai_arr.Num());
-
-				for (int i = 0; i < ai_arr.Num(); ++i)
-				{
-					try {
-						if (!ai_arr.IsValidIndex(i)) { continue; }
-			
-						auto ai = ai_arr[i];
-
-						LOG("\t%s", ai->Name.ToString().c_str());
-
-			
-						if (ai == nullptr) { continue; }
-			
-						auto team = ai->GetTeam();
-			
-						if (ai->Archetype == nullptr || ai->Controller == nullptr) { continue; }
-
-			
-						if (team == SDK::ETeamType::TT_SUSPECT)
-						{
-							ai->Surrender();
-						}
-					}
-					catch (...)
-					{
-					}
-				}
-			}catch(...)
+		engine_data::LoopAICharacters([](SDK::ACyberneticCharacter* ai)
 			{
-			}
+				if(const auto team = ai->GetTeam(); team == SDK::ETeamType::TT_SUSPECT)
+				{
+					ai->Surrender();
+				}
+			}, false);
 		};
 
+	color_models.on_exec = [this]() {
 
-	setup_mats.on_exec = [this]() {
-
-		try
-		{
-			auto& objs = SDK::UObject::GObjects;
-			for (int i = 0; i < objs->Num(); i++)
-			{
-				if (auto item = objs->GetByIndex(i))
-				{
-					if (item && item->IsA(SDK::UMaterial::StaticClass()))
-					{
-						auto name = objs->GetByIndex(i)->GetName();
-						all_mats.emplace_back(name, (SDK::UMaterial*)item );
-					}
-				}
-			}
-		}
-		catch (...)
-		{
-			ERR("Could not Get Material");
-		}
-
-	};
-
-	test_feature.on_exec = [this]()
-			{
-
-			SDK::UMaterial* xray = nullptr;
-
+		if (!color_models.red_mat || !color_models.green_mat || !color_models.blue_mat) {
 			try
 			{
-				auto& objs = SDK::UObject::GObjects;
-				for (int i = 0; i < objs->Num(); i++)
+				auto& all_objects = SDK::UObject::GObjects;
+				for (int i = 0; i < all_objects->Num(); i++)
 				{
-					if (auto item = objs->GetByIndex(i))
+					if (const auto curr_object = all_objects->GetByIndex(i))
 					{
-						if (item && item->IsA(SDK::UMaterial::StaticClass()))
+						if (curr_object && curr_object->IsA(SDK::UMaterial::StaticClass()))
 						{
-							auto name = objs->GetByIndex(i)->GetName();
-							if (name == "Blue1") {
-								xray = (SDK::UMaterial*)item;
-							}
+							auto name = all_objects->GetByIndex(i)->GetName();
+							if (name == "Red") { color_models.red_mat = (SDK::UMaterial*)curr_object; }
+							if (name == "Green") { color_models.green_mat = (SDK::UMaterial*)curr_object; }
+							if (name == "Blue") { color_models.blue_mat = (SDK::UMaterial*)curr_object; }
 						}
 					}
 				}
 			}
 			catch (...)
 			{
-				ERR("Could not Get Material");
+				ERR("Error Getting Materials For Color Models");
 			}
+		}
 
-			auto character = engine_data::GetLocalPlayerCharacter();
-			// Full Godmode (can bleed but does not damage or kill player)
+		engine_data::LoopAICharacters([this](SDK::ACyberneticCharacter* ai)
 			{
-				character->bCanBeDamaged = false;
-			}
-
-			INF("Using Mat: %s", all_mats.at(mat_idx).first.c_str());
-
-
-			try {
-				const auto game_state = engine_data::GetGameState();
-				if (!game_state) { ERR("Error getting game state for force surrender!");  return; }
-
-				SDK::TArray<SDK::ACyberneticCharacter*>ai_arr = game_state->AllAICharacters;
-
-				LOG("Found %d Ai", ai_arr.Num());
-
-				for (int i = 0; i < ai_arr.Num(); ++i)
+				if (!ai) { return; }
+				SDK::UMaterial* mat_to_use = nullptr;
+				switch (const auto team = ai->GetTeam())
 				{
-					try {
-						if (!ai_arr.IsValidIndex(i)) { continue; }
-
-						auto ai = ai_arr[i];
-
-						LOG("\t%s", ai->Name.ToString().c_str());
-
-
-						if (ai == nullptr) { continue; }
-
-						auto team = ai->GetTeam();
-
-						if (ai->Archetype == nullptr || ai->Controller == nullptr) { continue; }
-
-						//SDK::ACyberneticController* controller = (SDK::ACyberneticController*)ai->Controller;
-
-						auto materials = ai->Mesh->GetMaterials();
-						int set = 0;
-						for (int i = 0; i < materials.Num(); i++) {
-							auto mat = materials[i];
-							if (!materials.IsValidIndex(i))// || mat == nullptr)
-								continue;
-
-							//ai->Mesh->GetMaterials()[i]->GetBaseMaterial()->BlendMode = SDK::EBlendMode::BLEND_Additive;
-							ai->Mesh->SetMaterial(i, xray);
-
-						}
-						LOG("SET %d MATS", set);
-
-					}
-					catch (...)
-					{
-					}
+				case SDK::ETeamType::TT_NONE:
+					mat_to_use = color_models.blue_mat;
+					break;
+				case SDK::ETeamType::TT_SERT_RED:
+					mat_to_use = color_models.blue_mat;
+					break;
+				case SDK::ETeamType::TT_SERT_BLUE:
+					mat_to_use = color_models.blue_mat;
+					break;
+				case SDK::ETeamType::TT_SUSPECT:
+					mat_to_use = color_models.red_mat;
+					break;
+				case SDK::ETeamType::TT_CIVILIAN:
+					mat_to_use = color_models.green_mat;
+					break;
+				case SDK::ETeamType::TT_SQUAD:
+					mat_to_use = color_models.blue_mat;
+					break;
+				case SDK::ETeamType::TT_MAX:
+					break;
 				}
-			}
-			catch (...)
-			{
-			}
+				if (mat_to_use == nullptr) { return; }
+				auto materials = ai->Mesh->GetMaterials();
+				int set = 0;
+				for (int i = 0; i < materials.Num(); i++) {
+					auto mat = materials[i];
+					if (!materials.IsValidIndex(i) || mat == nullptr) {
+						continue;
+					}
+					ai->Mesh->SetMaterial(i, mat_to_use);
+				}
 
-			mat_idx++;
-			return;
+			}, false);
 
+	};
+}
 
+void engine_features::lazy_loop_squad(SDK::ACyberneticCharacter* ai) const
+{
+	if(squad_godmode.enabled)
+	{
+		ai->bCanBeDamaged = false;
+	}else
+	{
+		ai->bCanBeDamaged = true;
+	}
+}
 
-			SDK::UReadyOrNotDebugSubsystem* dbg = nullptr;
-			try {
-				// try
-				// {
-				//
-				// 	auto& objs = SDK::UObject::GObjects;
-				// 	for (int i = 0; i < objs->Num(); i++)
-				// 	{
-				// 		if (auto item = objs->GetByIndex(i))
-				// 		{
-				// 			if (item && item->IsA(SDK::UReadyOrNotDebugSubsystem::StaticClass()))
-				// 			{
-				// 				if (item == SDK::UReadyOrNotDebugSubsystem::GetDefaultObj()) { continue; }
-				// 				auto name = objs->GetByIndex(i)->GetName();
-				// 				LOG("Found: %s", name.c_str());
-				// 				dbg = (SDK::UReadyOrNotDebugSubsystem*)item;
-				// 			}
-				// 		}
-				// 	}
-				// }
-				// catch (...)
-				// {
-				// 	ERR("Could not iterate all objects");
-				// }
+void engine_features::lazy_loop_civ(SDK::ACyberneticCharacter* ai) const
+{
+	if (civ_godmode.enabled)
+	{
+		ai->bCanBeDamaged = false;
+	}
+	else
+	{
+		ai->bCanBeDamaged = true;
+	}
+}
 
-
-				//PlayerTakenDamage(class AReadyOrNotCharacter* InstigatorCharacter, class AReadyOrNotCharacter* DamagedCharacter, class AActor* DamageCauser, float Damage, float HealthRemaining);
-
-
-
-				//LOG("%.4f", engine_data::GetLocalPlayerCharacter()->InventoryComp->LastEquippedWeapon->FireRate);
-				//engine_data::GetLocalPlayerCharacter()->InventoryComp->LastEquippedWeapon->FireRate = 0.001f;
-
-				auto last_weapon = engine_data::GetLocalPlayerCharacter()->InventoryComp->LastEquippedWeapon;
-
-				
-				// set available modes
-				// works but there is probably a better way
-				// VARLOG_D(last_weapon->AvailableFireModes.Num());
-				// last_weapon->AvailableFireModes.Data = reinterpret_cast<SDK::EFireMode*>(malloc(sizeof(uint8) * 3));
-				// last_weapon->AvailableFireModes[0] = SDK::EFireMode::FM_Single;
-				// last_weapon->AvailableFireModes[1] = SDK::EFireMode::FM_Auto;
-				// last_weapon->AvailableFireModes[2] = SDK::EFireMode::FM_Burst;
-				// last_weapon->AvailableFireModes.NumElements = 3;
-				// last_weapon->AvailableFireModes.MaxElements = 3;
-
-
-				auto character = engine_data::GetLocalPlayerCharacter();
-
-				// I think this works but it doesnt play the effects.
-				// character->QuickThrowItem->RedotonateCount = 5;
-				// character->QuickThrowItem->ReDetonationTime = 0.5f;
-				// character->QuickThrowItem->GrenadeSpeed = 100.0f;
-
-
-
-				SPE("TEST FUNC COMPLETED WITHOUT ERROR");
-				client_lib::modules::ui->Notify(L"Test Feature Ran Successfully", 1);
-			}catch(...)
-			{
-				ERR("Threw on test feature");
-				client_lib::modules::ui->Notify(L"Error in Test Feature", 1, true);
-
-			}
-		};
+void engine_features::lazy_loop_suspect(SDK::ACyberneticCharacter* ai)
+{
 }
