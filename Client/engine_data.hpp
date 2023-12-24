@@ -27,7 +27,8 @@ public:
 	static SDK::AReadyOrNotPlayerController* GetLocalPlayerController();
 	static SDK::APlayerCharacter* GetLocalPlayerCharacter();
 	static bool LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*)> func, bool exit_on_error);
-
+	static bool LoopItems(std::function<void(SDK::ABaseItem*)> func, bool exit_on_error);
+	static bool LoopReportables(std::function<void(SDK::AReportableActor*)> func, bool exit_on_error);
 
 public:
 

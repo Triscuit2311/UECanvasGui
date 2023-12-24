@@ -64,6 +64,7 @@ public:
 	color_models_s color_models;
 	feature civ_godmode;
 	feature squad_godmode;
+	exec_feature collect_evidence;
 
 
 	// Player

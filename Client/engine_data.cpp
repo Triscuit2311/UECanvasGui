@@ -39,13 +39,13 @@ engine_data::engine_data()
 
 bool engine_data::LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*)> func, bool exit_on_error)
 {
-	SDK::TArray<SDK::ACyberneticCharacter*> ai_arr = GetGameState()->AllAICharacters;
-	for (int i = 0; i < ai_arr.Num(); ++i)
+	SDK::TArray<SDK::ACyberneticCharacter*> arr = GetGameState()->AllAICharacters;
+	for (int i = 0; i < arr.Num(); ++i)
 	{
 		try
 		{
-			if (!ai_arr.IsValidIndex(i)) { continue; }
-			func(ai_arr[i]);
+			if (!arr.IsValidIndex(i)) { continue; }
+			func(arr[i]);
 		}
 		catch (...)
 		{
@@ -54,3 +54,40 @@ bool engine_data::LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*
 	}
 	return true;
 }
+
+bool engine_data::LoopItems(std::function<void(SDK::ABaseItem*)> func, bool exit_on_error)
+{
+	SDK::TArray<SDK::ABaseItem*> arr = GetGameState()->AllItems;
+	for (int i = 0; i < arr.Num(); ++i)
+	{
+		try
+		{
+			if (!arr.IsValidIndex(i)) { continue; }
+			func(arr[i]);
+		}
+		catch (...)
+		{
+			if (exit_on_error) { return false; }
+		}
+	}
+	return true;
+}
+
+bool engine_data::LoopReportables(std::function<void(SDK::AReportableActor*)> func, bool exit_on_error)
+{
+	SDK::TArray<SDK::AReportableActor*> arr = GetGameState()->AllReportableActors;
+	for (int i = 0; i < arr.Num(); ++i)
+	{
+		try
+		{
+			if (!arr.IsValidIndex(i)) { continue; }
+			func(arr[i]);
+		}
+		catch (...)
+		{
+			if (exit_on_error) { return false; }
+		}
+	}
+	return true;
+}
+

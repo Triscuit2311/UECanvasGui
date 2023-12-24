@@ -182,6 +182,27 @@ void engine_features::init()
 				}
 			}, false);
 		};
+	collect_evidence.on_exec = []()
+		{
+
+			engine_data::LoopItems([](SDK::ABaseItem* item)
+				{
+				if (item->bIsEvidence)
+				{
+					engine_data::GetLocalPlayerCharacter()->Server_CollectEvidence(item);
+
+				}
+				}, false);
+
+			client_lib::modules::ui->Notify(L"Collected Evidence", 3);
+		};
+
+	test_feature.on_exec = []()
+		{
+
+
+			client_lib::modules::ui->Notify(L"TEST FEATURE RAN", 3);
+		};
 
 	color_models.on_exec = [this]() {
 
