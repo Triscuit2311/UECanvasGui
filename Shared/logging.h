@@ -34,6 +34,14 @@ public:
         }
     }
 
+    void free(){
+        if constexpr (USE_CONSOLE) {
+            logSpecial("Console Freed");
+            FreeConsole();
+        }
+    }
+
+
     template<typename... Args>
     void log(const char* format, Args... args) {
         log_with_color("+", FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, format, args...);
@@ -129,7 +137,7 @@ inline ConsoleLogger global_logger;
 #define INF(...) global_logger.info(__VA_ARGS__)
 #define ERR(...) global_logger.error(__VA_ARGS__)
 #define SPE(...) global_logger.logSpecial(__VA_ARGS__)
-#define EXIT_CONSOLE(...) ((void)0)
+#define EXIT_CONSOLE(...) global_logger.free()
 #define LOGNULL(ptr, ...) global_logger.logNull(ptr, __VA_ARGS__)
 
 #define VARLOG_F(var) LOG("%s: %.8f", #var, var)
