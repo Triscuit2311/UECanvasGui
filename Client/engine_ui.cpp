@@ -23,8 +23,6 @@ void engine_ui::init()
 	lobby_window.add_control<Seperator>(L"");
 	lobby_window.add_control<Button>(L"Surrender Suspects",
 		client_lib::modules::features->force_surrender.on_exec);
-	lobby_window.add_control<Button>(L"Color Models",
-		client_lib::modules::features->color_models.on_exec);
 
 	lobby_window.add_control<Seperator>(L"");
 	lobby_window.add_control<Toggle>(L"Civilian GodMode",
@@ -72,6 +70,8 @@ void engine_ui::init()
 	dev_window.position = {200, 500};
 	dev_window.add_control<Button>(L"Test Error Notif", fake_err);
 	dev_window.add_control<Button>(L"Test Long Notif", fake_notif);
+	dev_window.add_control<Button>(L"Color Models",
+		client_lib::modules::features->color_models.on_exec);
 
 
 	windows_.emplace_back(lobby_window);
