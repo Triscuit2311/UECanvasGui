@@ -23,8 +23,8 @@ class engine_features
 
 		float_feature(const float min, const float max, const float val)
 			: min_v(min),
-			  max_v(max),
-			  val(val)
+			max_v(max),
+			val(val)
 		{
 		}
 
@@ -38,6 +38,12 @@ class engine_features
 		std::atomic<int> delta_score_threshold = 100;
 	};
 
+	struct color_models_s : exec_feature
+	{
+		SDK::UMaterial* red_mat = nullptr;
+		SDK::UMaterial* blue_mat = nullptr;
+		SDK::UMaterial* green_mat = nullptr;
+	};
 
 
 	std::atomic<bool> thread_exit_signal = false;
@@ -55,6 +61,9 @@ public:
 	// Lobby
 	score_grace_s score_grace;
 	exec_feature force_surrender;
+	color_models_s color_models;
+	feature civ_godmode;
+	feature squad_godmode;
 
 
 	// Player
@@ -68,7 +77,7 @@ public:
 	feature always_full_auto;
 	feature no_recoil;
 	feature no_spread;
-	float_feature custom_fire_rate = float_feature{ 0.0001f,0.3f, 0.1f};
+	float_feature custom_fire_rate = float_feature{ 0.0001f,0.3f, 0.1f };
 
 
 
@@ -84,5 +93,8 @@ public:
 	void join_threads();
 
 	void init();
+	void lazy_loop_squad(SDK::ACyberneticCharacter* ai) const;
+	void lazy_loop_civ(SDK::ACyberneticCharacter* ai) const;
+	static void lazy_loop_suspect(SDK::ACyberneticCharacter* ai);
 };
 

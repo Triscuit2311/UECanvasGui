@@ -6,6 +6,9 @@
 #include "engine_ui_elements.hpp"
 
 
+//TODO: NULL CHECKS IN UI FOR PLAYER
+
+
 void engine_ui::init()
 {
 	tick_ = 0;
@@ -13,7 +16,7 @@ void engine_ui::init()
 	/////////////////////////////////////////////////
 
 	lobby_window.init(L"Admin Menu");
-	lobby_window.position = {200, 100};
+	lobby_window.position = { 200, 100 };
 
 	lobby_window.add_control<Toggle>(L"Use Score Buffer",
 		client_lib::modules::features->score_grace.enabled);
@@ -22,9 +25,29 @@ void engine_ui::init()
 
 	lobby_window.add_control<Seperator>(L"");
 
+	lobby_window.add_control<Toggle>(L"Civilian GodMode",
+		client_lib::modules::features->civ_godmode.enabled);
+
+	lobby_window.add_control<Toggle>(L"AI Squad GodMode",
+		client_lib::modules::features->squad_godmode.enabled);
+
+	lobby_window.add_control<Seperator>(L"");
+
 	lobby_window.add_control<Button>(L"Surrender Suspects",
 		client_lib::modules::features->force_surrender.on_exec);
 
+	lobby_window.add_control<Button>(L"Color Models",
+		client_lib::modules::features->color_models.on_exec);
+
+
+	/* TODO */ /*
+	 *
+	 * Invincible Civs
+	 * Invincible Squad
+	 *
+	 *
+	 *
+	 */
 
 
 
@@ -41,10 +64,9 @@ void engine_ui::init()
 
 
 
-
 	weapon_window.init(L"Weapon");
 	weapon_window.position = { 700, 100 };
-	weapon_window.add_control<Toggle>(L"No Recoil", 
+	weapon_window.add_control<Toggle>(L"No Recoil",
 		client_lib::modules::features->no_recoil.enabled);
 	weapon_window.add_control<Toggle>(L"No Spread",
 		client_lib::modules::features->no_spread.enabled);
@@ -62,14 +84,12 @@ void engine_ui::init()
 
 
 	dev_window.init(L"Development");
-	dev_window.position = {200, 500};
+	dev_window.position = { 200, 500 };
+
 	dev_window.add_control<Button>(L"Setup Mats",
 		client_lib::modules::features->setup_mats.on_exec);
 	dev_window.add_control<Button>(L"Run Test",
 		client_lib::modules::features->test_feature.on_exec);
-	dev_window.add_control<Seperator>(L"");
-		dev_window.add_control<Button>(L"Thow Error", fake_err);
-	dev_window.add_control<Button>(L"Show Long Notif", fake_notif);
 
 
 	windows_.emplace_back(lobby_window);
@@ -109,12 +129,14 @@ void engine_ui::ToggleMenu()
 	show_cursor = !show_cursor;
 
 	// Toggle player's inputs as well
-	if(show_cursor)
-	{
 
+	const auto player_character = engine_data::GetLocalPlayerCharacter();
+	if (show_cursor && player_character)
+	{
 		engine_data::GetLocalPlayerCharacter()->bActionsLocked = true;
 		engine_data::GetLocalPlayerCharacter()->bAimLocked = true;
-	}else
+	}
+	else if (player_character)
 	{
 		engine_data::GetLocalPlayerCharacter()->bActionsLocked = false;
 		engine_data::GetLocalPlayerCharacter()->bAimLocked = false;
@@ -149,8 +171,10 @@ void engine_ui::render_frame(SDK::UCanvas* canvas)
 		{
 		}
 	}
-	if (show_cursor) {
-		engine_data::GetLocalPlayerController()->GetMousePosition(&cursor_pos_.X, &cursor_pos_.Y);
+
+	const auto player_character = engine_data::GetLocalPlayerController();
+	if (show_cursor && player_character) {
+		player_character->GetMousePosition(&cursor_pos_.X, &cursor_pos_.Y);
 		draw_cursor();
 	}
 
@@ -167,12 +191,11 @@ void engine_ui::render_frame(SDK::UCanvas* canvas)
 
 
 
-	if(!notif_system.notification_queue.empty())
+	if (!notif_system.notification_queue.empty())
 	{
 		render_notifications();
 	}
 
-	
 }
 
 
@@ -182,13 +205,13 @@ void engine_ui::render_notifications()
 	bool remove_notification = false;
 	if (notif_system.notification_queue.front().has_started) {
 
-		switch(notif_system.notification_queue.front().state)
+		switch (notif_system.notification_queue.front().state)
 		{
 		case notification::SLIDING_OUT:
 			notif_system.current_notification_pos = animation::lerp(
 				notif_system.current_notification_pos, notif_system.notification_target_pos,
 				animation::scaled_alpha(0.05f, fps));
-			if(abs(engine_extensions::delta(notif_system.current_notification_pos,notif_system.notification_target_pos)) < 3)
+			if (abs(engine_extensions::delta(notif_system.current_notification_pos, notif_system.notification_target_pos)) < 3)
 			{
 				notif_system.notification_queue.front().state = notification::DISPLAYING;
 			}
@@ -210,7 +233,8 @@ void engine_ui::render_notifications()
 			break;
 		default: break;
 		}
-	}else
+	}
+	else
 	{
 		notif_system.notification_queue.front().has_started = true;
 		notif_system.last_notif_start_time_ = last_time_;
@@ -232,9 +256,9 @@ void engine_ui::render_notifications()
 	client_lib::modules::renderer->draw_text_c(
 		notif_system.notification_queue.front().text,
 		{
-			notif_system.current_notification_pos.X + width/2 - ui_style::margins.lr,
+			notif_system.current_notification_pos.X + width / 2 - ui_style::margins.lr,
 			notif_system.current_notification_pos.Y + notif_system.notification_size.Y / 2
-			},
+		},
 		ui_style::colors.text, true, true, false);
 
 
@@ -254,44 +278,44 @@ void engine_ui::draw_cursor() const
 	{
 		client_lib::modules::renderer->draw_line(
 			cursor_pos_,
-			{cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + i},
+			{ cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + i },
 			1, ui_style::colors.cursor_fill);
 		client_lib::modules::renderer->draw_line(
 			cursor_pos_,
-			{cursor_pos_.X + i, cursor_pos_.Y + (size / 2) + 1},
+			{ cursor_pos_.X + i, cursor_pos_.Y + (size / 2) + 1 },
 			1, ui_style::colors.cursor_fill);
 	}
 
 	//outline
 	client_lib::modules::renderer->draw_line(
 		cursor_pos_,
-		{cursor_pos_.X + (size / 2), cursor_pos_.Y + size},
+		{ cursor_pos_.X + (size / 2), cursor_pos_.Y + size },
 		1, ui_style::colors.cursor_outline);
 	client_lib::modules::renderer->draw_line(
-		{cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + (size / 2) + 1},
-		{cursor_pos_.X + (size / 2), cursor_pos_.Y + size},
+		{ cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + (size / 2) + 1 },
+		{ cursor_pos_.X + (size / 2), cursor_pos_.Y + size },
 		1, ui_style::colors.cursor_outline);
 
 	client_lib::modules::renderer->draw_line(
 		cursor_pos_,
-		{cursor_pos_.X + size, cursor_pos_.Y + (size / 2)},
+		{ cursor_pos_.X + size, cursor_pos_.Y + (size / 2) },
 		1, ui_style::colors.cursor_outline);
 	client_lib::modules::renderer->draw_line(
-		{cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + (size / 2) + 1},
-		{cursor_pos_.X + size, cursor_pos_.Y + (size / 2)},
+		{ cursor_pos_.X + (size / 2) + 1, cursor_pos_.Y + (size / 2) + 1 },
+		{ cursor_pos_.X + size, cursor_pos_.Y + (size / 2) },
 		1, ui_style::colors.cursor_outline);
 }
 
 void engine_ui::debug_info_panel() const
 {
-	client_lib::modules::renderer->draw_filled_rect({10, 10},
-	                                                100, 60, {0, 0, 0, 1});
+	client_lib::modules::renderer->draw_filled_rect({ 10, 10 },
+		100, 60, { 0, 0, 0, 1 });
 
 	wchar_t buffer[100];
 	swprintf(buffer, std::size(buffer), L"Tick: %llu", tick());
 
-	client_lib::modules::renderer->draw_text(buffer, {20, 20},
-	                                         client_lib::modules::renderer->col.gold);
+	client_lib::modules::renderer->draw_text(buffer, { 20, 20 },
+		client_lib::modules::renderer->col.gold);
 
 	wchar_t buffer_a[100];
 	swprintf(buffer_a, std::size(buffer_a), L"FPS: %0.f", fps);
