@@ -81,9 +81,15 @@ void engine_features::lazy_thread_func()
 
 		if (no_recoil.enabled && player_character)
 		{
+			// this keeps the actual recoil the same even when the animation of the weapon changes
+			last_weapon->bCalculateProcRecoil = false;
+
+			// first shot not included in  recoil pattern
 			last_weapon->FirstShotRecoil = 0;
 			last_weapon->RecoilFireStrength = 0;
 			last_weapon->RecoilFireStrengthFirst = 0;
+
+			// main recoil pattern is an array
 			for (int i = 0; i < last_weapon->RecoilPattern.Num(); ++i) {
 				if (!last_weapon->RecoilPattern.IsValidIndex(i)) { continue; }
 				last_weapon->RecoilPattern[i].Yaw = 0;
@@ -91,7 +97,6 @@ void engine_features::lazy_thread_func()
 				last_weapon->RecoilPattern[i].Roll = 0;
 			}
 		}
-
 
 		if (no_spread.enabled && player_character)
 		{
@@ -106,7 +111,6 @@ void engine_features::lazy_thread_func()
 			last_weapon->ADSSpreadMultiplier = 0;
 		}
 
-
 		if (always_full_auto.enabled && player_character)
 		{
 			last_weapon->CurrentFireMode = SDK::EFireMode::FM_Auto;
@@ -115,8 +119,22 @@ void engine_features::lazy_thread_func()
 
 		if (custom_fire_rate.enabled && player_character)
 		{
+			last_weapon->RefireDelay = 0;
 			// Speed (Ref: P90 is 0.060, Revolver is 0.30)
 			last_weapon->FireRate = custom_fire_rate.val;
+		}
+
+		if (instant_ads.enabled && player_character)
+		{
+			if (last_weapon->ScopeAttachment != nullptr) {
+				last_weapon->ScopeAttachment->ADS_Speed_Multiplier = 100;
+			}
+		}
+
+
+		if (no_brass_spawn.enabled && player_character)
+		{
+			last_weapon->ShellMesh = nullptr;
 		}
 
 
@@ -171,9 +189,27 @@ void engine_features::join_threads()
 
 void engine_features::init()
 {
+	test_feature.on_exec = []()
+		{
+			try {
+				
+
+
+				client_lib::modules::ui->Notify(L"TEST FEATURE RAN WITHOUT ERROR", 3);
+			}
+			catch (...)
+			{
+				ERR("TEST FEATURE THREW");
+			}
+
+		};
+
+
+
 
 	force_surrender.on_exec = []()
 		{
+			client_lib::modules::ui->Notify(L"FORCING SUSPECTS TO SURRENDER", 3);
 		engine_data::LoopAICharacters([](SDK::ACyberneticCharacter* ai)
 			{
 				if(const auto team = ai->GetTeam(); team == SDK::ETeamType::TT_SUSPECT)
@@ -182,9 +218,44 @@ void engine_features::init()
 				}
 			}, false);
 		};
+
+	tp_civs.on_exec = []()
+		{
+			client_lib::modules::ui->Notify(L"TELEPORTING CIVILIANS", 3);
+
+			auto loc = engine_data::GetLocalPlayerCharacter()->GetTransform().Translation;
+			engine_data::LoopAICharacters([loc](SDK::ACyberneticCharacter* ai)
+				{
+					if (const auto team = ai->GetTeam(); team == SDK::ETeamType::TT_CIVILIAN)
+					{
+						ai->K2_TeleportTo(loc, { 0,0,0 });
+						LOG("TELEPORTED Civilian: %s", ai->GetName().c_str());
+					}
+				}, false);
+
+			
+		};
+
+	tp_suspects.on_exec = []()
+		{
+			client_lib::modules::ui->Notify(L"TELEPORTING SUSPECTS", 3);
+
+			auto loc = engine_data::GetLocalPlayerCharacter()->GetTransform().Translation;
+			engine_data::LoopAICharacters([loc](SDK::ACyberneticCharacter* ai)
+				{
+					if (const auto team = ai->GetTeam(); team == SDK::ETeamType::TT_SUSPECT)
+					{
+						ai->K2_TeleportTo(loc, { 0,0,0 });
+						LOG("TELEPORTED Suspect: %s", ai->GetName().c_str());
+					}
+				}, false);
+
+
+		};
+
 	collect_evidence.on_exec = []()
 		{
-
+			client_lib::modules::ui->Notify(L"Collecting Evidence", 3);
 			engine_data::LoopItems([](SDK::ABaseItem* item)
 				{
 				if (item->bIsEvidence)
@@ -195,13 +266,6 @@ void engine_features::init()
 				}, false);
 
 			client_lib::modules::ui->Notify(L"Collected Evidence", 3);
-		};
-
-	test_feature.on_exec = []()
-		{
-
-
-			client_lib::modules::ui->Notify(L"TEST FEATURE RAN", 3);
 		};
 
 	color_models.on_exec = [this]() {

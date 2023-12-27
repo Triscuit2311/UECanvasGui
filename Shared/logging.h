@@ -7,6 +7,7 @@
 #define USE_CONSOLE true
 
 
+
 class ConsoleLogger {
 public:
     ConsoleLogger(): console_hdl(nullptr), console_saved_attrs(0)

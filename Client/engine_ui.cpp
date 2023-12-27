@@ -25,6 +25,10 @@ void engine_ui::init()
 		client_lib::modules::features->force_surrender.on_exec);
 	lobby_window.add_control<Button>(L"Collect Evidence",
 		client_lib::modules::features->collect_evidence.on_exec);
+	lobby_window.add_control<Button>(L"TP Civs To Player",
+		client_lib::modules::features->tp_civs.on_exec);
+	lobby_window.add_control<Button>(L"TP Suspects To Player",
+		client_lib::modules::features->tp_suspects.on_exec);
 	lobby_window.add_control<Seperator>(L"");
 	lobby_window.add_control<Toggle>(L"Civilian GodMode",
 		client_lib::modules::features->civ_godmode.enabled);
@@ -56,6 +60,10 @@ void engine_ui::init()
 		client_lib::modules::features->no_spread.enabled);
 	weapon_window.add_control<Toggle>(L"Full Auto",
 		client_lib::modules::features->always_full_auto.enabled);
+	weapon_window.add_control<Toggle>(L"Instant ADS",
+		client_lib::modules::features->instant_ads.enabled);
+	weapon_window.add_control<Toggle>(L"No Brass Spawn",
+		client_lib::modules::features->no_brass_spawn.enabled);
 	weapon_window.add_control<Seperator>(L"");
 	weapon_window.add_control<Toggle>(L"Custom Fire Rate",
 		client_lib::modules::features->custom_fire_rate.enabled);
@@ -73,7 +81,7 @@ void engine_ui::init()
 	dev_window.add_control<Button>(L"Test Long Notif", fake_notif);
 	dev_window.add_control<Button>(L"Color Models",
 		client_lib::modules::features->color_models.on_exec);
-	lobby_window.add_control<Button>(L"TEST FEATURE",
+	dev_window.add_control<Button>(L"TEST FEATURE",
 		client_lib::modules::features->test_feature.on_exec);
 
 

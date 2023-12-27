@@ -61,6 +61,8 @@ public:
 	// Lobby
 	score_grace_s score_grace;
 	exec_feature force_surrender;
+	exec_feature tp_civs;
+	exec_feature tp_suspects;
 	color_models_s color_models;
 	feature civ_godmode;
 	feature squad_godmode;
@@ -78,6 +80,8 @@ public:
 	feature always_full_auto;
 	feature no_recoil;
 	feature no_spread;
+	feature instant_ads;
+	feature no_brass_spawn;
 	float_feature custom_fire_rate = float_feature{ 0.0001f,0.3f, 0.1f };
 
 
