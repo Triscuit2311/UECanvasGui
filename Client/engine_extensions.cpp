@@ -200,17 +200,17 @@ namespace engine_extensions
 		return { pitch, yaw, roll };
 	}
 
+	//
+	// float calculate_rotation_distance(const SDK::FRotator& start, const SDK::FRotator& end) {
+	// 	const SDK::FRotator delta = end - start;
+	// 	return abs(delta.Pitch) + abs(delta.Yaw) + abs(delta.Roll);
+	// }
 
-	float calculate_rotation_distance(const SDK::FRotator& start, const SDK::FRotator& end) {
-		const SDK::FRotator delta = end - start;
-		return abs(delta.Pitch) + abs(delta.Yaw) + abs(delta.Roll);
-	}
-
-	SDK::FRotator smooth_rotate_distance_based(const SDK::FRotator& start, const SDK::FRotator& end, float maxDegreesPerFrame) {
-		const float distance = calculate_rotation_distance(start, end);
-		const float t = std::min(maxDegreesPerFrame / distance, 1.0f);
-		return lerp(start, end, t);
-	}
+	// SDK::FRotator smooth_rotate_distance_based(const SDK::FRotator& start, const SDK::FRotator& end, float maxDegreesPerFrame) {
+	// 	const float distance = calculate_rotation_distance(start, end);
+	// 	const float t = std::min(maxDegreesPerFrame / distance, 1.0f);
+	// 	return lerp(start, end, t);
+	// }
 
 
 

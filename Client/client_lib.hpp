@@ -3,9 +3,6 @@
 #include "pch.h"
 
 #include "engine_data.hpp"
-#include "engine_renderer.hpp"
-#include "engine_ui.hpp"
-#include "engine_features.hpp"
 
 namespace client_lib
 {
@@ -13,7 +10,6 @@ namespace client_lib
     {
 
         extern std::atomic<bool> mouse_down;
-
 
         extern HMODULE h_module;
         extern std::atomic_bool interrupt;
@@ -23,9 +19,6 @@ namespace client_lib
     namespace modules
     {
 	    inline std::unique_ptr<engine_data> ue;
-        inline std::unique_ptr<engine_renderer> renderer;
-        inline std::unique_ptr<engine_ui> ui;
-        inline std::unique_ptr<engine_features> features;
     }
     struct p_thread
     {

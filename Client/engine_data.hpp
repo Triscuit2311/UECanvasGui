@@ -1,15 +1,13 @@
 #pragma once
+
 class engine_data
 {
 public:
 	static void init()
 	{
 		LOG("Initializing SDK");
-		SDK::InitGObjects();
-		SDK::FName::InitGNames();
 		LOG("SDK Init Complete");
-		SPE("\t> GObjects: 0x%011X", SDK::UObject::GObjects);
-		SPE("\t> GNames: 0x%011X", SDK::FName::GNames);
+		SPE("\t> GObjects: 0x%011X", SDK::UObject::GObjects.GetTypedPtr());
 		SPE("\t> GWorld: 0x%011X", GWORLD);
 	}
 
@@ -21,20 +19,16 @@ public:
 		return true;
 	}
 
-	static SDK::AReadyOrNotGameState* GetGameState();
-	static SDK::AReadyOrNotGameMode* GetGameMode();
+	// static SDK::AReadyOrNotGameState* GetGameState();
+	// static SDK::AReadyOrNotGameMode* GetGameMode();
 	static SDK::ULocalPlayer* GetLocalPlayer();
-	static SDK::AReadyOrNotPlayerController* GetLocalPlayerController();
-	static SDK::APlayerCharacter* GetLocalPlayerCharacter();
-	static bool LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*)> func, bool exit_on_error);
-	static bool LoopItems(std::function<void(SDK::ABaseItem*)> func, bool exit_on_error);
-	static bool LoopReportables(std::function<void(SDK::AReportableActor*)> func, bool exit_on_error);
+	static SDK::AValPlayerController* GetLocalPlayerController();
+	static SDK::AValCharacter* GetLocalPlayerCharacter();
+	// static bool LoopAICharacters(std::function<void(SDK::ACyberneticCharacter*)> func, bool exit_on_error);
+	// static bool LoopItems(std::function<void(SDK::ABaseItem*)> func, bool exit_on_error);
+	// static bool LoopReportables(std::function<void(SDK::AReportableActor*)> func, bool exit_on_error);
 
 public:
-
-
-	SDK::TArray<SDK::EFireMode> fire_modes_unlocked;
-
 
 	engine_data();
 

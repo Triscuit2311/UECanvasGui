@@ -28,9 +28,6 @@
     <Filter Include="client_framework\utils">
       <UniqueIdentifier>{d820983c-c357-4b2d-ba44-55e3da5733dd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="client_framework\UE\UI">
-      <UniqueIdentifier>{0dd03291-22ef-4986-9ba2-8b6639afc09e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="client_framework\UE\features">
       <UniqueIdentifier>{ea649e15-e154-4d6d-b9ca-19b5ec197cea}</UniqueIdentifier>
     </Filter>
@@ -57,9 +54,6 @@
     <ClInclude Include="framework.h">
       <Filter>pch</Filter>
     </ClInclude>
-    <ClInclude Include="engine_renderer.hpp">
-      <Filter>client_framework\UE</Filter>
-    </ClInclude>
     <ClInclude Include="..\Shared\logging.h">
       <Filter>client_framework\utils</Filter>
     </ClInclude>
@@ -69,18 +63,6 @@
     <ClInclude Include="animation.h">
       <Filter>client_framework\utils</Filter>
     </ClInclude>
-    <ClInclude Include="engine_ui.hpp">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="engine_ui_elements.hpp">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_style.h">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="animations.h">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClInclude>
     <ClInclude Include="UE\SDK.hpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
@@ -88,12 +70,6 @@
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
     <ClInclude Include="UE\SDK\CoreUObject_classes.hpp">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="UE\SDK\ReadyOrNot_classes.hpp">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="UE\SDK\ReadyOrNot_structs.hpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
     <ClInclude Include="UE\SDK\Engine_structs.hpp">
@@ -105,11 +81,17 @@
     <ClInclude Include="UE\SDK\Engine_classes.hpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClInclude>
-    <ClInclude Include="engine_features.hpp">
-      <Filter>client_framework\UE\features</Filter>
-    </ClInclude>
     <ClInclude Include="windows_utils.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Valhalla_classes.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Valhalla_parameters.hpp">
+      <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="UE\SDK\Valhalla_structs.hpp">
+      <Filter>client_framework\UE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -131,29 +113,17 @@
     <ClCompile Include="pch.cpp">
       <Filter>pch</Filter>
     </ClCompile>
-    <ClCompile Include="engine_renderer.cpp">
-      <Filter>client_framework\UE</Filter>
-    </ClCompile>
-    <ClCompile Include="engine_ui.cpp">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="engine_ui_elements.cpp">
-      <Filter>client_framework\UE\UI</Filter>
-    </ClCompile>
     <ClCompile Include="UE\SDK\Basic.cpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClCompile>
     <ClCompile Include="UE\SDK\CoreUObject_functions.cpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClCompile>
-    <ClCompile Include="UE\SDK\ReadyOrNot_functions.cpp">
-      <Filter>client_framework\UE\SDK</Filter>
-    </ClCompile>
     <ClCompile Include="UE\SDK\Engine_functions.cpp">
       <Filter>client_framework\UE\SDK</Filter>
     </ClCompile>
-    <ClCompile Include="engine_features.cpp">
-      <Filter>client_framework\UE\features</Filter>
+    <ClCompile Include="UE\SDK\Valhalla_functions.cpp">
+      <Filter>client_framework\UE</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

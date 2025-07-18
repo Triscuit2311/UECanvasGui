@@ -155,28 +155,23 @@
   <ItemGroup>
     <ClInclude Include="..\Shared\logging.h" />
     <ClInclude Include="animation.h" />
-    <ClInclude Include="animations.h" />
     <ClInclude Include="client_lib.hpp" />
     <ClInclude Include="engine_extensions.hpp" />
     <ClInclude Include="engine_hooks.hpp" />
-    <ClInclude Include="engine_renderer.hpp" />
-    <ClInclude Include="engine_ui_elements.hpp" />
-    <ClInclude Include="engine_features.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="string_utils.h" />
     <ClInclude Include="UE\Overriden_Types.hpp" />
     <ClInclude Include="engine_data.hpp" />
     <ClInclude Include="UE\SDK.hpp" />
-    <ClInclude Include="engine_ui.hpp" />
     <ClInclude Include="UE\SDK\Basic.hpp" />
     <ClInclude Include="UE\SDK\CoreUObject_classes.hpp" />
     <ClInclude Include="UE\SDK\Engine_classes.hpp" />
     <ClInclude Include="UE\SDK\Engine_parameters.hpp" />
     <ClInclude Include="UE\SDK\Engine_structs.hpp" />
-    <ClInclude Include="UE\SDK\ReadyOrNot_classes.hpp" />
-    <ClInclude Include="UE\SDK\ReadyOrNot_structs.hpp" />
-    <ClInclude Include="ui_style.h" />
+    <ClInclude Include="UE\SDK\Valhalla_classes.hpp" />
+    <ClInclude Include="UE\SDK\Valhalla_parameters.hpp" />
+    <ClInclude Include="UE\SDK\Valhalla_structs.hpp" />
     <ClInclude Include="windows_utils.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -184,9 +179,6 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="engine_extensions.cpp" />
     <ClCompile Include="engine_hooks.cpp" />
-    <ClCompile Include="engine_renderer.cpp" />
-    <ClCompile Include="engine_ui_elements.cpp" />
-    <ClCompile Include="engine_features.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -194,11 +186,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="engine_data.cpp" />
-    <ClCompile Include="engine_ui.cpp" />
     <ClCompile Include="UE\SDK\Basic.cpp" />
     <ClCompile Include="UE\SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="UE\SDK\Engine_functions.cpp" />
-    <ClCompile Include="UE\SDK\ReadyOrNot_functions.cpp" />
+    <ClCompile Include="UE\SDK\Valhalla_functions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
