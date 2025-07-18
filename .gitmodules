@@ -1,0 +1,4 @@
+
+[submodule "lib/log"]
+	path = lib/log
+	url = git@github.com:Triscuit2311/log.git
