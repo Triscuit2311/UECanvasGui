@@ -54,9 +54,6 @@
     <ClInclude Include="framework.h">
       <Filter>pch</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\logging.h">
-      <Filter>client_framework\utils</Filter>
-    </ClInclude>
     <ClInclude Include="string_utils.h">
       <Filter>client_framework\utils</Filter>
     </ClInclude>
@@ -92,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="UE\SDK\Valhalla_structs.hpp">
       <Filter>client_framework\UE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\log\log.hpp">
+      <Filter>client_framework\utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

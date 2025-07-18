@@ -39,8 +39,7 @@
 #pragma warning(pop)
 
 
-#include "../Shared/logging.h"
-//#include "client_lib.hpp"
+#include "../lib/log/log.hpp"
 
 
 #endif //PCH_H

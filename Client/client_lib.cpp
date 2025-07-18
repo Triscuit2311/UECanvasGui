@@ -30,39 +30,39 @@ namespace client_lib
 
 	DWORD p_thread::func(LPVOID lp_param)
 	{
-		INIT_CONSOLE();
+		logger::con.init();
 
-		LOG("Initializing global modules");
+		logger::con.log("Initializing global modules");
 		modules::ue = std::make_unique<engine_data>();
 
-		LOG("Initialized global modules");
+		logger::con.log("Initialized global modules");
 
 
-		LOG("Initializing game data");
+		logger::con.log("Initializing game data");
 		modules::ue->init();
 
-		LOG("Initialized game data");
+		logger::con.log("Initialized game data");
 
 
 
-		//LOG("Syncing settings");
+		//logger::con.log("Syncing settings");
 		// Load default or saved
 
-		LOG("Starting worker threads");
+		logger::con.log("Starting worker threads");
 		//modules::features->start_threads();
-		LOG("Worker threads runnning");
+		logger::con.log("Worker threads runnning");
 
 
 
-		 LOG("Entering main loop");
+		 logger::con.log("Entering main loop");
 		 while (globals::running)
 		 {
 			if (GetAsyncKeyState(VK_END) & 1) { break; }
 			if (GetAsyncKeyState(VK_INSERT) & 1)
 			{
-				LOG("LPs: %d", GWORLD->OwningGameInstance->LocalPlayers.Num());
+				logger::con.log("LPs: %d", GWORLD->OwningGameInstance->LocalPlayers.Num());
 				auto lpc = modules::ue->GetLocalPlayerCharacter();
-				SPE("HP: %d", lpc->GetHealth());
+				logger::con.special("HP: %d", lpc->GetHealth());
 
 				auto set_attr = [](SDK::FGameplayAttributeData* attr, float val)
 				{
@@ -83,14 +83,14 @@ namespace client_lib
 
 		 	globals::mouse_down = GetAsyncKeyState(VK_LBUTTON) & 0x8000;
 		 }
-		 LOG("Exited main loop");
+		 logger::con.log("Exited main loop");
 
-		 LOG("Stopping worker threads");
+		 logger::con.log("Stopping worker threads");
 		 //modules::features->join_threads();
-		 LOG("Stopped worker threads");
+		 logger::con.log("Stopped worker threads");
 
 
-		EXIT_CONSOLE();
+		 logger::con.free();
 		FreeLibraryAndExitThread(globals::h_module, 0);
 		return 0; // NOLINT(clang-diagnostic-unreachable-code-return)
 	}

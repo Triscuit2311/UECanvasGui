@@ -5,10 +5,11 @@ class engine_data
 public:
 	static void init()
 	{
-		LOG("Initializing SDK");
-		LOG("SDK Init Complete");
-		SPE("\t> GObjects: 0x%011X", SDK::UObject::GObjects.GetTypedPtr());
-		SPE("\t> GWorld: 0x%011X", GWORLD);
+		logger::con.log("Initializing SDK");
+		logger::con.log("SDK Init Complete");
+		
+		logger::con.special("\t> GObjects: 0x%011X", SDK::UObject::GObjects.GetTypedPtr());
+		logger::con.special("\t> GWorld: 0x%011X", GWORLD);
 	}
 
 	static bool world_ok()
