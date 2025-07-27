@@ -70,11 +70,21 @@ namespace client_lib
 						attr->BaseValue = val;
 				};
 
-				set_attr(&lpc->Attributes->AttackRateMultiplier, 10);
-				set_attr(&lpc->Attributes->AmmoUsedPerShot, 0);
-				set_attr(&lpc->Attributes->DashCooldownModifier, 6);
+				set_attr(&lpc->Attributes->AttackRateMultiplier, 1.5f);
+				set_attr(&lpc->Attributes->AmmoUsedPerShot, 1);
+				set_attr(&lpc->Attributes->FullyAimedDamageModifier, 4.5f);
 
-				set_attr(&lpc->Attributes->ElementProcChanceMultiplier, 10);
+				set_attr(&lpc->Attributes->DashCooldownModifier, 3);
+
+				set_attr(&lpc->Attributes->ElementProcChanceMultiplier, 2);
+				set_attr(&lpc->Attributes->GrenadeDamageMultiplier, 100);
+
+				set_attr(&lpc->Attributes->ChargeTimeModifier, 100);
+
+
+
+				lpc->ClientSetSmartBulletsEnabled(false);
+
 
 
 
